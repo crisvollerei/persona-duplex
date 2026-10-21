@@ -1,0 +1,7 @@
+# 统一换行符，避免 Windows 上提交 CRLF 污染 diff
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ttf binary
+*.ttc binary
