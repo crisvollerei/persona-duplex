@@ -59,13 +59,18 @@ def _make_session(args, *, streaming: bool) -> Session:
 
     # 话题判定单独走一个轻模型：不开思考、temperature=0、输出极短。
     # 它异步跑，和主生成并行，所以永远不会拖慢对话。
+    #
+    # 注意这里给的是 HTTP 超时，不是 grace：
+    #   grace   = 主链路愿意等它多久（很短，0.35s）
+    #   timeout = 这个请求本身允许跑多久（可以长一些）
+    # 判定慢一点没关系，只要主链路不等它就行。
     fast_llm = None
     if not args.no_judge:
         fast_llm = openai_compatible(
             args.judge_model or args.model,
             temperature=0.0,
             max_tokens=120,
-            timeout=cfg.judge_timeout,
+            timeout=max(8.0, cfg.judge_grace * 10),
         )
 
     return Session(
