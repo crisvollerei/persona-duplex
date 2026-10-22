@@ -46,6 +46,16 @@ class Metrics:
 
     conf_pairs: list[tuple[float, bool]] = field(default_factory=list)
     displace_kinds: dict[str, int] = field(default_factory=dict)
+    # 被挂起过的预言 id（去重）。同一条预言可能被晾好几轮，只算一次。
+    watched_ids: set[str] = field(default_factory=set)
+
+    # 人格：从 traits_init 起，累计每次 trait_update / anchor_update 的位移
+    trait_drift: dict[str, float] = field(default_factory=dict)
+    trait_updates: int = 0
+    anchor_updates: int = 0
+    # 判断：写了几条、推翻了几条
+    judgments: int = 0
+    judgments_superseded: int = 0
 
     # ---------------------------------------------------------- 派生
 
@@ -124,14 +134,31 @@ def compute(ledger: list[dict]) -> Metrics:
             if disp not in ("", "none"):
                 m.displaced += 1
                 m.displace_kinds[disp] = m.displace_kinds.get(disp, 0) + 1
-                # 声称位移但 direct 和 say 几乎一样 = 装深沉
-                if not _similar(direct, say):
-                    pass
-                else:
+                # 声称位移但 direct 和 say 几乎一样 = 装深沉。
+                # direct 为空也要算 —— 没有原话就没有位移可言。
+                if not direct.strip() or _similar(direct, say):
                     m.inconsistent += 1
 
             if _DECL.search(say):
                 m.declarations += 1
+
+            # WATCH 按定义就是「这轮不记账」，所以它永远不会出现在
+            # pending_settle 里。想数挂起，只能看每一轮留下的观测值 ——
+            # 但同一条预言可能被晾好几轮，必须按 pid 去重，
+            # 否则「挂起中 28」这种数字看着像有 28 条预言，实际只有 3 条。
+            for row in (rec.get("probe") or {}).get("settle") or []:
+                if row.get("settle"):
+                    continue
+                pid = row.get("pid")
+                if pid:
+                    m.watched_ids.add(str(pid))
+                else:
+                    m.watches += 1
+
+        elif kind == "pending_expire":
+            # 过期的预言走的是 pending_expire，不是 pending_settle。
+            # 只认 pending_settle 的话，EXPIRED 永远是 0。
+            m.expired += 1
 
         elif kind == "pending_settle":
             outcome = rec.get("outcome", "")
@@ -145,6 +172,23 @@ def compute(ledger: list[dict]) -> Metrics:
                 m.expired += 1
             else:
                 m.watches += 1
+
+        elif kind == "judgment_add":
+            m.judgments += 1
+            if rec.get("supersedes"):
+                m.judgments_superseded += 1
+
+        elif kind == "trait_update":
+            m.trait_updates += 1
+            name = rec.get("name", "")
+            m.trait_drift[name] = m.trait_drift.get(name, 0.0) + float(rec.get("delta", 0.0))
+
+        elif kind == "anchor_update":
+            m.anchor_updates += 1
+            name = rec.get("name", "")
+            # 基线漂移单独记 —— 它是「我变成了谁」，和参数浮动不是一回事
+            key = f"anchor:{name}"
+            m.trait_drift[key] = m.trait_drift.get(key, 0.0) + float(rec.get("delta", 0.0))
 
         elif kind == "repair_open":
             m.repair_opened += 1
@@ -181,12 +225,37 @@ def compare_with_without_history(full: Metrics, bare: Metrics) -> dict:
     """关系增益：清空历史前后，命中率差多少。
 
     差值为零说明记忆是摆设 —— 这是唯一诚实的「记忆有用吗」的度量。
+
+    注意样本量：这个差值在两条样本上毫无意义。所以一起把两边的样本数
+    带出来，让读的人自己判断能不能信。
     """
+    n_full = full.hits + full.misses
+    n_bare = bare.hits + bare.misses
     return {
         "with_history": round(full.accuracy, 3),
         "without_history": round(bare.accuracy, 3),
         "lift": round(full.accuracy - bare.accuracy, 3),
+        "n_with": n_full,
+        "n_without": n_bare,
+        "reliable": n_full >= 10 and n_bare >= 10,
     }
+
+
+def final_bias(ledger: list[dict], initial: float = 0.0) -> float:
+    """账本里的 bias 轨迹末端。
+
+    同一个账本配不同初值，可以对比「同一段经历、不同起点」会长成什么样 ——
+    这正是账本优先想支持的实验。
+    """
+    bias = initial
+    for rec in ledger:
+        if rec.get("kind") != "bias_update":
+            continue
+        try:
+            bias = float(rec["after"])
+        except (KeyError, TypeError, ValueError):
+            continue
+    return bias
 
 
 def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
@@ -228,8 +297,12 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
     if m.hits + m.misses:
         out.append(("info", "命中率", f"{m.accuracy:.0%}"
                                      f"（{m.hits}/{m.hits + m.misses}）"))
-    if m.watches:
-        out.append(("info", "挂起中", str(m.watches)))
+    total_watched = m.watches + len(m.watched_ids)
+    if total_watched:
+        note = "（按预言 id 去重）" if m.watched_ids else ""
+        out.append(("info", "挂起过", f"{total_watched} 条{note}"))
+    if m.expired:
+        out.append(("info", "已过期", str(m.expired)))
 
     if m.repair_opened:
         rate = m.repair_success_rate
@@ -245,6 +318,16 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
         if m.repair_residual:
             out.append(("warn", "修复无回应",
                         f"{m.repair_residual} 次 —— 可能没被听见"))
+
+    if m.judgments:
+        detail = f"{m.judgments} 条"
+        if m.judgments_superseded:
+            detail += f"（{m.judgments_superseded} 条推翻了旧的）"
+        out.append(("info", "判断记忆", detail))
+
+    if m.trait_updates or m.anchor_updates:
+        out.append(("info", "人格漂移",
+                    f"参数推动 {m.trait_updates} 次，基线推动 {m.anchor_updates} 次"))
 
     return out
 
@@ -268,5 +351,14 @@ def format_report(m: Metrics) -> str:
         for label, n, conf, hit in buckets:
             flag = "  ← 虚高" if conf - hit > 0.2 else ""
             lines.append(f"  {label:<10}{n:>6}{conf:>10.2f}{hit:>10.2f}{flag}")
+
+    if m.trait_drift:
+        lines += ["", "人格漂移", "─" * 54]
+        lines.append(f"  {'参数':<20}{'累计变化':>10}")
+        for k, v in sorted(m.trait_drift.items(),
+                           key=lambda x: -abs(x[1])):
+            mark = "基线" if k.startswith("anchor:") else "参数"
+            name = k.split(":", 1)[-1]
+            lines.append(f"  {name:<18}{mark:>2}{v:>+10.4f}")
 
     return "\n".join(lines)

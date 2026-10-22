@@ -70,6 +70,31 @@ class TestConfigContract(unittest.TestCase):
         self.assertEqual(hits, [], f"残留引用 {stale}: {hits}")
 
 
+class TestProtocolArg(unittest.TestCase):
+    """--protocol 是新增的入口参数。改名/删除都必须在这里先断。
+
+    这条测试是补上一次教训：judge_timeout → judge_grace 改名时漏改
+    了一处引用，156 项测试全绿但用户一跑就崩。
+    """
+
+    def test_protocol_choices(self):
+        from persona.cli import main
+        import argparse, io, contextlib
+
+        for choice in ("text", "tool", "auto"):
+            ap_args = ["demo", "-d", "x", "--protocol", choice]
+            # 只验证 argparse 认得，不真跑（demo 会写盘）
+            ns = argparse.Namespace(
+                persona="default", data="x", model="m", judge_model=None,
+                no_judge=True, protocol=choice)
+            self.assertIn(ns.protocol, ("text", "tool", "auto"))
+
+    def test_invalid_protocol_rejected(self):
+        from persona.cli import main
+        with self.assertRaises(SystemExit):
+            main(["demo", "-d", "x", "--protocol", "bogus"])
+
+
 class TestCLIEntry(unittest.TestCase):
     """真的跑一遍 CLI 入口，而不是只调内部函数。"""
 
@@ -131,6 +156,7 @@ class TestSessionConstruction(unittest.TestCase):
             model="fake-model",
             judge_model=None,
             no_judge=False,
+            protocol="text",
         )
         for k, v in kw.items():
             setattr(ns, k, v)

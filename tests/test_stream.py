@@ -38,14 +38,19 @@ class TestNoMarkerLeak(unittest.TestCase):
         self.assertNotIn("TAIL", joined)
 
     def test_partial_marker_held_back(self):
-        """缓冲区末尾是标记前半截时，必须扣住不吐。"""
+        """缓冲区末尾是标记前半截时，必须扣住不吐。
+
+        SAY 是按句放行的（要整句才能判「是不是在读人」），
+        所以这里用一个完整的句子，再验证半个标记不会被当成正文。
+        """
         sp = StreamParser()
         out = []
-        out.extend(sp.feed("<<<SAY>>>你好"))
+        out.extend(sp.feed("<<<SAY>>>你好。"))
         out.extend(sp.feed("<<<TA"))          # 半个标记
-        self.assertEqual("".join(out), "你好", "半个标记被吐出去了")
+        self.assertEqual("".join(out), "你好。", "半个标记被吐出去了")
         out.extend(sp.feed("IL>>>"))
-        self.assertEqual("".join(out), "你好")
+        self.assertEqual("".join(out), "你好。")
+        self.assertNotIn("<", sp.finish().say)
 
     def test_finish_returns_tail(self):
         raw = make_reply("need: a\nconfidence: 0.5\ndirect: x\ndisplace: none",

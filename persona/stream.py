@@ -12,11 +12,22 @@
 """
 from __future__ import annotations
 
-from .parse import ParsedTurn, parse_head, parse_tail, detect_declarations
+from .parse import (
+    ParsedTurn,
+    detect_declarations,
+    detect_read_aloud,
+    parse_head,
+    parse_tail,
+    plain_text,
+)
 from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL
 
 MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
-_SAY_END = (SECTION_TAIL,)
+# SAY 段里出现任何标记都算异常，全都得扣留：
+#   · <<<TAIL>>>  —— 正常结束
+#   · <<<HEAD>>>  —— 模型把协议重开了一次，后面那段里有 direct
+#   · <<<SAY>>>   —— 同样要切，否则标记本身会原样吐给用户
+_SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY)
 
 SEEK = "seek"
 IN_HEAD = "head"
@@ -60,6 +71,11 @@ class StreamParser:
         self._emitted = False       # 是否已经吐过非空白内容
         self._pending_ws = ""       # 已收下但还没吐的尾部空白
 
+        # 流式只负责标记边界，不审查内容。
+        # 「猜你」那类问题属于措辞，归 prompt 和统计管 —— 在流式层删句子
+        # 会把紧跟着的退路（「不对就当我没说」）一起删掉，反而削平了位移。
+        self._suppressed: list[str] = []
+
     # ------------------------------------------------------------ 主接口
 
     def feed(self, chunk: str) -> list[str]:
@@ -94,7 +110,12 @@ class StreamParser:
         """收尾。把还扣在缓冲区里的东西处理掉。"""
         self._flush_tail_ws()
         if self.buf:
-            if self.state in (SEEK, IN_SAY):
+            if self.state == SEEK:
+                # 还停在 SEEK，说明缓冲区里是半个标记（比如 "\n<<<HEAD"）。
+                # 那不是正文，吞掉。
+                if not _is_marker_prefix(self.buf.lstrip()):
+                    self.say_text += self.buf
+            elif self.state == IN_SAY:
                 self.say_text += self.buf
             elif self.state == IN_HEAD:
                 self.head_text += self.buf
@@ -103,7 +124,11 @@ class StreamParser:
             self.buf = ""
         head = parse_head(self.head_text) if self.head_text.strip() else None
         tail = parse_tail(self.tail_text) if self.tail_text.strip() else None
+
         say = self.say_text.strip()
+        if not say and self._bare:
+            # 完全没按协议写的裸文本，整段就是回复
+            say = plain_text(self.say_text)
 
         errors: list[str] = []
         if head is None:
@@ -118,6 +143,9 @@ class StreamParser:
             say=say,
             tail=tail,
             declared=detect_declarations(say),
+            # 已经删干净了，所以 say 里当然扫不到 —— 但要把「删过什么」报上去，
+            # 否则上游完全不知道这轮发生过违规。
+            read_aloud=detect_read_aloud(say) + list(self._suppressed),
             errors=errors,
         )
 
@@ -198,14 +226,24 @@ class StreamParser:
         return True
 
     def _say(self, out: list[str]) -> bool:
-        i = self.buf.find(SECTION_TAIL)
-        if i >= 0:
+        hits = [(self.buf.find(m), m) for m in _SAY_END]
+        hits = [(i, m) for i, m in hits if i >= 0]
+        if hits:
+            i, m = min(hits)
             piece = self.buf[:i]
             if piece:
                 self.say_text += piece
                 out.append(piece)
-            self.buf = self.buf[i + len(SECTION_TAIL):]
-            self.state = IN_TAIL
+            self.buf = self.buf[i + len(m):]
+            if m == SECTION_TAIL:
+                self.state = IN_TAIL
+            elif m == SECTION_HEAD:
+                # 模型把协议重开了一次。剩下的按 HEAD 收着，
+                # 不能当正文吐出去 —— 那里面就是 direct。
+                self.state = IN_HEAD
+            else:
+                # 重复的 SAY 标记：继续当前段，但标记本身已经吞掉了
+                self.state = IN_SAY
             return True
 
         # 没到结尾。扣住可能是标记前缀的尾巴。

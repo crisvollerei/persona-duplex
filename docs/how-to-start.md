@@ -20,7 +20,7 @@ set PERSONA_BASE_URL=https://api.deepseek.com/v1
 
 ```bash
 python -m persona demo          # 离线，验证安装
-python -m unittest discover -s tests -t .    # 156 项应该全绿
+python -m unittest discover -s tests -t .    # 359 项应该全绿
 ```
 
 ---
@@ -34,11 +34,16 @@ python -m unittest discover -s tests -t .    # 156 项应该全绿
 | `default` | 第一次跑，什么都试 | 中 |
 | `guarded` | 想看「读得到但不敢猜」 | 高（bias 负值，位移少） |
 | `service` | **对照组** | 高（几乎不位移，用来对比） |
+| `shorekeeper` | 看「完整人设 + 参数化」 | 高（有长文本、九个参数、分场景句式） |
+| `ache` | `shorekeeper` 的对照 | 高（参数处处相反） |
 
-**建议：先跑 `default` 一轮，再用 `guarded` 跑一轮。** 两次对比能看出 `bias` 到底有没有用。
+前三个只有 `bias / attention / legibility` 三个数。后两个带完整人格参数
+（`anchor / plasticity / drift`），会随对话漂移。
 
 ```bash
-python -m persona chat -d data/run1
+python -m persona chat -d data/session                      # 默认人格
+python -m persona chat -p shorekeeper -d data/sk            # 完整人设
+python -m persona chat -p shorekeeper --protocol persona -d data/sk
 ```
 
 ---
@@ -126,9 +131,21 @@ python -m persona calibrate -d data/run1   # default
 python -m persona calibrate -d data/run2   # guarded
 ```
 
-如果 `guarded` 的位移率明显低于 `default`，说明 `bias` 这个旋钮是有效的 —— 这是 P1 的验收点。
+如果 `guarded` 的位移率明显低于 `default`，说明 `bias` 这个旋钮是有效的。
 
 如果两个差不多，说明**人格旋钮没起作用**，那得回头查 prompt 是不是没把 bias 传进去。
+
+### 人格参数是不是真的在漂
+
+跑 `shorekeeper` 几十轮之后看这两个：
+
+```bash
+python -m persona stats     -d data/sk   # 末尾有「人格漂移」，列出每个参数累计变了多少
+python -m persona calibrate -d data/sk   # 「人格漂移」一行给出走了 drift 的百分之多少
+```
+
+参数几乎不动，可能是判断产出太少（`calibrate` 会报「判断产出」）。
+动得太快贴到边界，说明 `plasticity` 给高了。
 
 ---
 

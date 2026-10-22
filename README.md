@@ -77,11 +77,18 @@ persona-duplex/
 │   ├── store.py        # 账本 + 视图 + 重放
 │   ├── consolidate.py  # 后台固化
 │   ├── metrics.py      # 从账本算指标
-│   ├── llm.py          # 零依赖 HTTP（含流式）+ mock
+│   ├── calibrate.py    # 从账本反推阈值该怎么调
+│   ├── protocol.py     # tool / persona 协议的 schema 与阶段组装
+│   ├── term.py         # 终端颜色，自动降级
+│   ├── llm.py          # 零依赖 HTTP（含流式、tool call）+ mock
 │   └── cli.py
-├── personas/*.toml     # 三套人格配置
-└── tests/              # 140 项测试
+├── personas/           # 人格配置，数据包随 wheel 分发
+├── docs/               # 使用文档
+├── tests/              # 359 项测试
+└── notes/              # 本地笔记，不进仓库
 ```
+
+`notes/` 是本地设计推导和调研，已写进 `.gitignore`，不随仓库分发。
 
 ---
 
@@ -94,6 +101,13 @@ persona-duplex/
 | `default` | +0.00 | subtle | 2 | 完整人格 |
 | `service` | +0.15 | surface | 0 | 客服型，永远对，没人味 |
 | `guarded` | −0.28 | subtle | 1 | 很懂你，但隔着玻璃 |
+
+还有两个不常改但会生效的旋钮：
+
+- `watch.confidence_floor` —— 把握度的硬地板。低于它的把握度不许直接下结论，
+  一律退回「只问」。换一套更敢说的站位表时，这条仍然拦得住。
+- `limits.pending_max` 是**每轮**最多挂几条；`limits.pending_total_max`
+  是同时挂着的总闸（默认 8），防止 WATCH 堆到天上去。
 
 ```bash
 python -m persona trace -p service    # 对照
@@ -209,7 +223,8 @@ python -m persona chat -j gpt-4o-mini # 判定单独用轻模型
 | 中层 | relation / pending | 模型，受限 |
 | 慢层 | judgments / self-story | 只有后台线程 |
 
-`relation.closeness` 每轮最多 ±0.05，`pending` 每轮最多 1 条，慢层字段在线不可写。
+`relation.closeness` 每轮最多 ±0.05，`pending` 每轮最多 1 条（同时挂着的总数另有总闸），
+慢层字段在线不可写。
 
 ### 账本优先
 
@@ -223,6 +238,16 @@ data/
 ```
 
 `state/` 坏了不要紧：`python -m persona rebuild`。也可以拿同一份账本、不同版本的代码重放，对比参数策略。
+
+这条承诺要成立，**所有会跨轮累积的量都必须落账**，否则重建出来的只是半个系统：
+
+| 累积量 | 记录类型 | 不落账的后果 |
+|---|---|---|
+| `relation.*` | `turn.relation_delta` | 关系清零 |
+| `pending` | `pending_add` / `pending_settle` / `pending_expire` | 预言全部丢失 |
+| 修复账本 | `repair_open` / `repair_attempt` / `repair_healed` … | 受伤之后再也不会修复 |
+| 语域基线 | `style_update` | 「受伤」的尺子退回默认值，检测整体失效 |
+| `role.bias` | `bias_update` | 校准只活在内存里，进程一退就归零 |
 
 ### 一致性是尺子，不是目标
 
@@ -250,6 +275,16 @@ data/
 
 样本少于 4 条时不报校准偏差；只有「高把握 + 低命中」才算在读空气，反过来是保守，不该报警。
 
+关系增益单独一条命令：
+
+```bash
+python -m persona lift -d data/session
+```
+
+它拿同一份账本做**首见 vs 有积累**的切分：同一个 claim 第一次出现时系统还没有任何
+关于它的积累，之后才有。差值就是积累的增量。两侧各不足 10 条时它会直接说「还不能当结论」——
+两条样本算出来的增益是噪声，不是诊断。
+
 ---
 
 ## 扩展
@@ -267,6 +302,72 @@ sess = Session(cfg, store, llm, similarity=sim)
 
 ---
 
+## 三种协议
+
+`--protocol` 选择单轮怎么生成：
+
+| | 生成方式 | 延迟 | 保证 |
+|---|---|---|---|
+| `text`（默认） | 一次生成三段 | 1.7s | 靠 prompt 与解析 |
+| `tool` | 两次调用 | 3.9s | direct 结构上先于 say |
+| `persona` | 三次调用 | 3.5s | direct 层完全不看人设 |
+
+**text** — 一次生成产出 `<<<HEAD>>> / <<<SAY>>> / <<<TAIL>>>`。
+
+**tool** — phase 1 用 tool call 只产出 `need / confidence / direct / displace`，
+没有任何输出可见文本的途径；phase 2 纯文本流式，只拿 direct 产出 say；
+phase 3 用 tool call 结算旧预言、挂新预言。
+
+拆开的理由是因果：文本协议里 direct 和 say 是同一次生成的两个字段，
+token 顺序保证 direct 写在前面，但不保证它真的是 say 的上游。
+phase 1 的时候 say 还不存在，那个 direct 不可能是为了配某句话倒推的。
+
+**persona** — 在 tool 的基础上，把第一层再隔离一次：素回复的调用
+**完全看不到人设**，只回答「按事实和逻辑这句话该怎么接」。
+第二层才带人设，把素回复变成这个角色会说的话。
+
+```bash
+python -m persona chat --protocol tool
+python -m persona chat --protocol persona
+python -m persona chat --protocol auto     # text 连续失效时自动升级到 tool
+```
+
+---
+
+## 人格参数与记忆三层
+
+人格不只是几个数字，它是**记忆的一种形态**：参数会随经历漂移，
+基线可以被长期叙事改写。两者都记在账本里，可重放。
+
+```
+短期（1~10 轮）    pending / style / relation      引擎在线写，每轮
+中期（~30 轮）     judgments / traits.value        固化线程，多条判断一致才动
+长期（100+ 轮）    self-story / traits.anchor      固化线程，必须有叙事依据
+```
+
+每个参数四元组：
+
+```toml
+[params.warmth]
+anchor = 0.70        # 初始值
+plasticity = 0.20    # 每次经历能推动多少
+drift = 0.12         # 总共能偏离多远
+lo = 0.40  hi = 0.92 # 物理边界
+```
+
+推动量 = 记忆信号 × plasticity × 余弦退火 × 基础步长。
+退火让参数越接近边界推得越慢 —— 人格在边界附近变硬，而不是撞上去停住。
+
+基线（`anchor`）的改动必须带 `reason`，否则 `store.update_anchor` 直接拒绝。
+这是把「防止人格漂移」从数值约束升级成语义约束。
+
+```bash
+python -m persona stats      # 含人格漂移累计
+python -m persona calibrate  # 含「参数走了 drift 的百分之多少」诊断
+```
+
+---
+
 ## 已知限制
 
 | 限制 | 现状 | 影响 |
@@ -274,9 +375,11 @@ sess = Session(cfg, store, llm, similarity=sim)
 | 话题判定要一次额外调用 | 已接轻模型，异步 + grace 兜底 | 模型慢时退化为字面，判定延到下一轮 |
 | 受伤检测是启发式 | 看语域、语气词、句长 | 沉默寡言的人基线低，容易误判 |
 | 修复只有一次机会 | 两次没回应就转雷区 | 故意的：反复道歉是二次伤害 |
-| 后台提炼无模型时很笨 | 只认重复出现的行为倾向 | 接 LLM 才会提炼有洞察的判断 |
+| 后台提炼默认走 HTTP 模型 | 失败静默退回启发式 | 端点不通时退化成「数 need 出现几次」 |
+| 极短回应要两轮才结账 | `嗯/算了/唉` 连续两次判 refuted | 单次仍挂起，最多拖一轮 |
+| 中长期记忆依赖 LLM 判断 | 判断质量受模型能力限制 | 弱模型下判断会含糊，中期层推不动参数 |
+| 人格漂移不可逆 | 参数只增不回头，除非重放账本 | 想回退只能换账本或改配置重来 |
 | 没有多用户 | 单 store 单用户 | 多用户需给 store 加命名空间 |
-| bias 校准幅度极小 | 每次 ±0.005 | 需要很多轮才见效，但这是对的 |
 
 ---
 

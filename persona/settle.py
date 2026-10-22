@@ -98,30 +98,46 @@ class TurnFeatures:
     is_question: bool
     has_filler: bool              # 语气词 / 表情
     gap_hours: float = 0.0
+    # 这条预言已经被「极短回应」晾过几轮了。连续两次就够判 refuted 了。
+    minimal_streak: int = 0
     semantic: str | None = None   # 模型自己在 TAIL 里给的判定
     topic: str | None = None      # 异步判定的结果：returned / left / unclear
     topic_why: str = ""
 
     @property
     def mentions_topic(self) -> bool:
-        """话题有没有回来。
+        """预言有没有被证实。
 
         语义判定优先于字面重合 —— 这就是接 LLM 的目的：
         「投了两家简历」和「会说出具体方案」字面几乎不重合，语义上完全对上。
+
+        注意 unclear 的语义：**「还没说到」，不是「说反了」**。
+        以前 unclear 会掉进字面兜底，而字面重合低就判 topic_left，
+        等于把「用户还没提这件事」当成「预言错了」——
+        这是命中率被压到 40% 上下最主要的原因。
         """
         if self.topic == "returned":
             return True
         if self.topic == "left":
             return False
+        if self.topic == "unclear":
+            # 明确判了「没涉及」—— 不能当证实，也不能当否证
+            return False
         return self.overlap >= OVERLAP_KEEP
 
     @property
     def topic_left(self) -> bool:
-        if self.topic == "left":
-            return True
-        if self.topic == "returned":
-            return False
-        return self.overlap < OVERLAP_DROP
+        """预言有没有被**否证**（不是「有没有换题」）。
+
+        只有语义判定明确说 left 才算。字面重合低一律不算 ——
+        用户换个话题聊别的，不等于他把这条预言否掉了。
+        """
+        return self.topic == "left"
+
+    @property
+    def topic_undetermined(self) -> bool:
+        """预言还没被验证 —— 该挂起，不该记账。"""
+        return self.topic == "unclear" or self.topic is None
 
 
 def extract_features(
@@ -137,6 +153,7 @@ def extract_features(
     similarity=None,
     topic: str | None = None,
     topic_why: str = "",
+    minimal_streak: int = 0,
 ) -> TurnFeatures:
     text = user_text or ""
 
@@ -159,6 +176,7 @@ def extract_features(
         semantic=semantic,
         topic=topic,
         topic_why=topic_why,
+        minimal_streak=minimal_streak,
     )
 
 
@@ -207,6 +225,35 @@ def judge(
             relation_signal={"suspected_hurt": True},
         )
 
+    # ②.5 「嗯」「算了」「唉」这种极短回应 —— 它不是换题，是不表态。
+    #
+    # 这一条是真实数据逼出来的：20 轮里有一半的挂起来自这类回复。
+    # 它们和「换了话题」在字面重合度上看起来一样（都是 0），但语义完全不同：
+    #   换题   = 用户主动把话题带走 → 三种含义不可区分 → 该挂起
+    #   极短回应 = 用户还在这个对话里，只是没接住 → 这是信息，不是噪声
+    #
+    # 把「不表态」也算成 WATCH 的后果很严重：pending 永远关不掉，
+    # 十几轮后堆到 8 条，判定器每轮要判 8 句，warning 爆炸，
+    # 而且真正该学的（这条预言提得对不对）一条都没学到。
+    #
+    # 处理：一次「嗯/算了/唉」不构成反驳也不构成证实，但**连续两次**就是。
+    # 单次仍挂起（保留原设计），但要知道它不是「换题」。
+    if _is_minimal_reply(feat):
+        # 一次可以再看看，连续两次就是明确的「这条预言没说到点上」——
+        # 用户连着两轮只回一个「嗯」，说明他既不认同也不反驳，是没被说中。
+        # 再挂下去只会让 pending 越堆越多，而一条也学不到。
+        if feat.minimal_streak >= 1:
+            return Verdict(
+                kind=REFUTED,
+                reason="连续两轮极短回应 —— 这条预言没说到点上",
+                settle=True,
+            )
+        return Verdict(
+            kind=WATCH,
+            reason="极短回应，不构成证实或反驳，但也不是换题 —— 再挂一轮看看",
+            settle=False,
+        )
+
     # ③ 话题明显断了 —— 三种含义不可区分，挂起。
     if feat.topic_left:
         why = feat.topic_why or "没接话题"
@@ -216,7 +263,7 @@ def judge(
             settle=False,
         )
 
-    # ④ 话题接住了。再排除「接了但话突然变很短」。
+    # ④ 预言被证实了。再排除「接了但话突然变很短」。
     if feat.mentions_topic:
         if baseline_length is not None and baseline_length > 8 \
                 and feat.length < baseline_length * 0.5:
@@ -228,10 +275,16 @@ def judge(
         why = feat.topic_why or "接住了话题"
         return Verdict(kind=CONFIRMED, reason=why, settle=True)
 
-    # ⑤ 中间地带：不判。
+    # ⑤ 还没验证到 —— 挂起，不记账。
+    if feat.topic_undetermined:
+        return Verdict(
+            kind=WATCH,
+            reason=feat.topic_why or "这一句还没涉及这条预言，等它出现",
+            settle=False,
+        )
     return Verdict(
         kind=WATCH,
-        reason=feat.topic_why or "话题重合度模棱两可，不猜",
+        reason=feat.topic_why or "信息不足，不猜",
         settle=False,
     )
 
@@ -239,6 +292,25 @@ def judge(
 def _looks_hurt(feat: TurnFeatures, baseline_formality: float) -> bool:
     rise = feat.formality - baseline_formality
     return rise > 0.3 and not feat.has_filler
+
+
+# 「嗯」「算了」「唉」「……」「可能吧」——没有内容，但也没有离开对话。
+_MINIMAL = re.compile(
+    r"^[\s，。、,.!?！？~～…]*(?:嗯+|哦+|噢+|啊+|唉+|诶+|呃+|额+|"
+    r"算了|好吧|行吧|可能吧|也许吧|是吧|随便|不知道|没什么|"
+    r"嗯嗯|对对|是是|哦哦|好好|行行)[\s，。、,.!?！？~～…]*$"
+)
+
+
+def _is_minimal_reply(feat: TurnFeatures) -> bool:
+    """这句话是不是「极短、不表态、但也没换题」。
+
+    注意只认**纯**极短回应。一旦带内容（「算了不说了。你觉得我该不该换个工作」）
+    就不是这一档了 —— 那里面有真问题，得按正常流程判。
+    """
+    if feat.length > 6:
+        return False
+    return bool(_MINIMAL.match((feat.text or "").strip()))
 
 
 def judge_delayed(feat: TurnFeatures, *, expired: bool) -> Verdict:

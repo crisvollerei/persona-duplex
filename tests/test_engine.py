@@ -92,12 +92,31 @@ class TestLimits(Base):
         e.turn("hi")
         self.assertFalse((self.store.root / "judgments.jsonl").exists())
 
-    def test_pending_capped(self):
+    def test_pending_capped_per_turn(self):
+        """pending_max 是「每轮最多挂几条」，不是总数。
+
+        按总数卡的话，只要还有一条 WATCH 挂在 72 小时窗口里，
+        预测链路就整个停摆 —— 那就再也不会产生新的校准样本了。
+        """
         cfg = _cfg()
         p1 = self.store.add_pending("a", 0.6, "x", "t1", cfg.limits)
-        p2 = self.store.add_pending("b", 0.6, "y", "t2", cfg.limits)
+        p2 = self.store.add_pending("b", 0.6, "y", "t1", cfg.limits)
         self.assertIsNotNone(p1)
-        self.assertIsNone(p2, "pending 应该被限额挡住")
+        self.assertIsNone(p2, "同一轮挂第二条应该被挡住")
+
+        p3 = self.store.add_pending("c", 0.6, "z", "t2", cfg.limits)
+        self.assertIsNotNone(p3, "下一轮应该还能挂")
+
+    def test_pending_total_capped(self):
+        """但总量要有闸，不能让 WATCH 无限堆积。"""
+        cfg = _cfg()
+        added = [
+            self.store.add_pending(f"c{i}", 0.6, "p", f"t{i}", cfg.limits)
+            for i in range(cfg.limits.pending_total_max + 3)
+        ]
+        self.assertEqual(len(self.store.pendings()), cfg.limits.pending_total_max)
+        self.assertTrue(all(added[:cfg.limits.pending_total_max]))
+        self.assertIsNone(added[-1])
 
 
 class TestSettle(Base):
@@ -196,7 +215,12 @@ class TestWarningConsistency(Base):
 
 class TestConsolidator(Base):
     def test_heuristic_needs_repetition(self):
-        """出现一次不算倾向。"""
+        """出现一次不算倾向。
+
+        必须显式指定活跃度：3 条事件在「中等」档要 3 次重复才认，
+        在「稀疏」档 2 次就够。不指定的话测的就不是「重复」而是「档位」。
+        这里用 sparse（阈值 2）来验「1 次不够、2 次够」这个核心逻辑。
+        """
         cfg = _cfg()
         e = TurnEngine(cfg, self.store, ScriptedLLM([
             make_reply("need: 只想被听\nconfidence: 0.6\ndirect: x\ndisplace: none", "嗯。"),
@@ -205,7 +229,8 @@ class TestConsolidator(Base):
         ]))
         for t in ("a啊", "b啊", "c啊"):
             e.turn(t)
-        out = Consolidator(self.store).run_once()
+        out = Consolidator(self.store, gap_hours=48).run_once()
+        self.assertEqual(out["activity"], "sparse")
         self.assertGreaterEqual(out["judgments"], 1)
         joined = " ".join(j["judgment"] for j in self.store.judgments())
         self.assertIn("只想被听", joined)

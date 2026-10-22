@@ -16,7 +16,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Callable
 
-from .store import Store, append_judgment, now_iso
+from .store import Store, now_iso
 
 SELF_STORY_HEADER = """# 我如何变成现在这样
 
@@ -26,89 +26,274 @@ SELF_STORY_HEADER = """# 我如何变成现在这样
 """
 
 
+# 活跃度分档。判断容量和「认一条倾向需要几次重复」都随它变。
+#
+# 为什么密集时要更高的触发阈值：
+#   短时间大量对话里，同一个人会反复说同一件事（情绪宣泄）。
+#   那不是「稳定倾向」，是「这一阵子的状态」。
+#   要求更多次重复，才能把状态和倾向分开。
+#
+# 为什么稀疏时用下限：
+#   隔几天聊几句的人，一次重复就已经很说明问题了 ——
+#   他本就没多少话，能反复提到的必然重要。
+ACTIVITY_DENSE_HOURS = 1.0        # <= 1h 两次固化之间 -> 密集
+ACTIVITY_SPARSE_HOURS = 24.0      # > 24h -> 稀疏
+
+ACTIVITY_PROFILES = {
+    "dense":  {"capacity": 12, "threshold": 5},
+    "medium": {"capacity": 8,  "threshold": 3},
+    "sparse": {"capacity": 5,  "threshold": 2},
+}
+
+
+def activity_of(events: list[dict], *, gap_hours: float | None = None) -> str:
+    """这批事件属于哪一档活跃度。
+
+    优先用两批事件之间的间隔（gap_hours），没有就用事件内部的时间跨度。
+
+    都没有时**按 sparse（最宽松）处理**，不是 medium。理由：
+      · 这是保守选择 —— 阈值低，更容易形成判断，不会把该记的漏掉
+      · 没有时间信息通常意味着「离线补跑」或「首次导入」，
+        这种场景本来就该把已有证据都用上
+      · 默认 medium 会让「两条事件的离线测试」永远出不了判断，
+        这不是设计意图，是 bug
+
+    真正的活跃度判断依赖真实时间戳，那在线上总是有的。
+    """
+    if gap_hours is not None:
+        if gap_hours <= ACTIVITY_DENSE_HOURS:
+            return "dense"
+        if gap_hours > ACTIVITY_SPARSE_HOURS:
+            return "sparse"
+        return "medium"
+
+    stamps = [e.get("_t") for e in events if e.get("_t")]
+    if len(stamps) >= 2:
+        from .store import parse_iso
+        try:
+            span = (parse_iso(stamps[-1]) - parse_iso(stamps[0])).total_seconds() / 3600
+        except Exception:
+            return "sparse"
+        if span <= ACTIVITY_DENSE_HOURS:
+            return "dense"
+        if span > ACTIVITY_SPARSE_HOURS:
+            return "sparse"
+        return "medium"
+    return "sparse"
+
+
 @dataclass
 class Consolidator:
-    """把积压事件压成判断，再重写自我叙事。"""
+    """把积压事件压成判断，再重写自我叙事。
+
+    llm 是「一段文本 → 一段文本」的函数，跟主对话的 messages 接口不同。
+    传 openai_compatible(...) 的话用 text_prompt() 包一层。
+
+    max_judgments_per_run / min_repeat 是**上限和下限**，实际值由活跃度决定。
+    """
 
     store: Store
     llm: Callable[[str], str] | None = None
-    max_judgments_per_run: int = 3
+    max_judgments_per_run: int = 3      # 单次硬上限（防止一次写太多）
     max_evidence: int = 8
+    # 长期层单次推基线的幅度：drift 的这个比例。
+    # 5% 意味着要走 20 次才用完全部余量 —— 基线是尺子，动它要极慢。
+    ANCHOR_FRACTION: float = 0.05
+    # 上一次固化到现在过了多久（小时）。None = 不知道，按 medium 处理。
+    gap_hours: float | None = None
 
     _stop: threading.Event = field(default_factory=threading.Event, repr=False)
     _thread: threading.Thread | None = field(default=None, repr=False)
+    _last_run_at: float = field(default=0.0, repr=False)
+
+    # ------------------------------------------------------------ 活跃度
+
+    def profile(self) -> dict:
+        """当前活跃度档位对应的容量与阈值。
+
+        优先用显式给的 gap_hours；其次用「上次固化到现在」；
+        **首次运行没有上一次**，此时看 buffer 里积压了多少轮 ——
+        积压多说明刚聊完一批，那就是密集。
+        """
+        gap = self.gap_hours
+        if gap is None and self._last_run_at:
+            import time as _t
+            gap = (_t.time() - self._last_run_at) / 3600.0
+        if gap is None:
+            # 首次运行：按积压量估。没积压 = 没有证据，走 sparse。
+            pending = len(list(self.store.buffer_dir.glob("*.json")))
+            if pending >= 8:
+                gap = 0.5        # 一次积了 8 轮以上 -> 刚聊完
+            elif pending >= 3:
+                gap = 6.0        # 中等
+            else:
+                gap = 48.0       # 零星几条 -> 稀疏
+        return ACTIVITY_PROFILES[activity_of([], gap_hours=gap)]
 
     # ------------------------------------------------------------ 主逻辑
 
     def run_once(self) -> dict:
+        # 活跃度必须在 drain **之前**判 —— drain 会把 buffer 清空，
+        # 之后再数积压永远是 0，于是永远走 sparse。
+        # 这是个顺序 bug：逻辑没错，调用顺序错了。
+        prof = self.profile()
+        activity = self._current_activity()
+
         events = self.store.drain_buffer(max_items=self.max_evidence)
         if not events:
             return {"judgments": 0, "self_story": False, "reason": "no events"}
 
-        added = self._consolidate(events)
+        added = self._consolidate(events, prof)
         story = self._rewrite_story(events, added) if added else False
-        return {"judgments": len(added), "self_story": story}
+        # 中期层：判断 -> 参数推动。多条一致才动，单条不动。
+        pushed = self.push_traits()
+        # 长期层：叙事 -> 基线推动。极慢，且必须有依据。
+        anchored = self.push_anchors()
+        import time as _t
+        self._last_run_at = _t.time()
+        return {"judgments": len(added), "self_story": story,
+                "traits": pushed, "anchors": anchored,
+                "activity": activity, "threshold": prof["threshold"]}
 
-    def _consolidate(self, events: list[dict]) -> list[dict]:
-        """从事件里提炼判断。没有 llm 就走启发式，保证离线可跑。"""
+    def _current_activity(self) -> str:
+        """和 profile() 用同一套判断，只是返回档位名。"""
+        gap = self.gap_hours
+        if gap is None and self._last_run_at:
+            import time as _t
+            gap = (_t.time() - self._last_run_at) / 3600.0
+        if gap is None:
+            pending = len(list(self.store.buffer_dir.glob("*.json")))
+            gap = 0.5 if pending >= 8 else (6.0 if pending >= 3 else 48.0)
+        return activity_of([], gap_hours=gap)
+
+    def _consolidate(self, events: list[dict], prof: dict | None = None) -> list[dict]:
+        """从事件里提炼判断。
+
+        **两条路径的阈值语义不同，这是刻意的**：
+
+          · LLM 路径：阈值只是**参考**。判断质量靠模型自己，
+            它在 prompt 里能看到「这一批有几条、要求是什么」，
+            但最终由它决定哪些够格。机械计数比它差得远。
+
+          · 启发式路径：阈值是**硬规则**。没有模型可依靠，
+            只能数次数。这时候阈值就是唯一依据。
+
+        以前两条路径混用同一套阈值，导致 LLM 被阈值绑住（几乎出不了判断）、
+        启发式又过于机械。分开之后各司其职。
+        """
+        prof = prof or self.profile()
         if self.llm is None:
-            return self._heuristic_consolidate(events)
+            return self._heuristic_consolidate(events, prof)
 
-        prompt = self._consolidation_prompt(events)
+        prompt = self._consolidation_prompt(events, prof)
         try:
             raw = self.llm(prompt)
             items = json.loads(_extract_json(raw))
         except Exception:
             # 后台失败不能影响任何东西，静默降级
-            return self._heuristic_consolidate(events)
+            return self._heuristic_consolidate(events, prof)
 
-        existing = {j["judgment"] for j in self.store.judgments(limit=50)}
+        cap = min(self.max_judgments_per_run, prof["capacity"])
         out = []
-        for it in items[: self.max_judgments_per_run]:
+        for it in items[:cap]:
             txt = str(it.get("judgment", "")).strip()
-            if not txt or txt in existing:
+            if not txt:
                 continue
-            rec = append_judgment(
-                self.store.judgments_path,
+            # 语义去重：字符串相等太松，换个说法就绕过去了。
+            # 实测：跑两次固化，产出的判断一半是同一件事的复述。
+            dup = self._find_similar(txt)
+            if dup is not None:
+                continue
+            rec = self.store.add_judgment(
                 judgment=txt,
                 confidence=float(it.get("confidence", 0.5)),
                 supersedes=it.get("supersedes"),
+                affects=it.get("affects"),
             )
             out.append(rec)
         return out
 
-    def _heuristic_consolidate(self, events: list[dict]) -> list[dict]:
-        """无模型兜底：只提炼最稳的那种判断 —— 重复出现的行为倾向。"""
+    def _find_similar(self, text: str, threshold: float = 0.55) -> dict | None:
+        """找一条已有的、和 text 说的是同一件事的判断。
+
+        为什么不用「字符串相等」：LLM 换个说法就绕过去了。
+        实测两次固化产出 6 条判断，其中 3 条是同一件事的复述 ——
+        这些会被中期层误当成「多次一致」，把参数推过头。
+
+        用 bigram 相似度做粗筛。阈值 0.55 是保守选择：
+        宁可漏掉一条重复，也不要把两条不同的判断误合并。
+        """
+        from .similarity import bigram_similarity
+        best = None
+        best_sim = 0.0
+        for j in self.store.judgments(limit=500):
+            sim = bigram_similarity(text, j["judgment"])
+            if sim > best_sim:
+                best_sim, best = sim, j
+        return best if best_sim >= threshold else None
+
+    def _heuristic_consolidate(self, events: list[dict],
+                               prof: dict | None = None) -> list[dict]:
+        """无模型兜底：只提炼最稳的那种判断 —— 重复出现的行为倾向。
+
+        触发阈值由活跃度决定：密集对话要见 5 次，稀疏对话见 2 次就够。
+        """
+        prof = prof or self.profile()
+        need_min = prof["threshold"]
         counts: dict[str, int] = {}
         for e in events:
             need = (e.get("need") or "").strip()
             if need:
                 counts[need] = counts.get(need, 0) + 1
         out = []
-        existing = {j["judgment"] for j in self.store.judgments(limit=50)}
+        existing = {j["judgment"] for j in self.store.judgments(limit=500)}
+        cap = min(self.max_judgments_per_run, prof["capacity"])
         for need, n in sorted(counts.items(), key=lambda x: -x[1]):
-            if n < 2:
-                continue                      # 出现一次不算倾向
+            if n < need_min:
+                continue                      # 没到这一档的阈值
             txt = f"这种时候更可能是「{need}」"
             if txt in existing:
                 continue
-            rec = append_judgment(
-                self.store.judgments_path, txt,
+            rec = self.store.add_judgment(
+                judgment=txt,
                 confidence=min(0.8, 0.4 + 0.1 * n),
             )
+            existing.add(txt)
             out.append(rec)
-            if len(out) >= self.max_judgments_per_run:
+            if len(out) >= cap:
                 break
         return out
 
-    def _consolidation_prompt(self, events: list[dict]) -> str:
+    def _consolidation_prompt(self, events: list[dict],
+                              prof: dict | None = None) -> str:
+        """固化提示词。
+
+        两个和以前不同的点：
+
+        1. **批量**。一次给多少条事件、最多产出几条判断，由活跃度决定。
+           密集对话里事件多但重复多，所以要更严的阈值。
+
+        2. **affects**。判断要能指向人格参数 —— 这是中期层推动 traits 的唯一依据。
+           没有 affects 的判断只进 prompt，不影响人格。
+        """
+        prof = prof or self.profile()
+        cap = min(self.max_judgments_per_run, prof["capacity"])
         lines = [
-            "下面是最近几轮对话里，AI 当时读到的需求和它真正想说的话。",
-            "请提炼 1-3 条关于这个人稳定倾向的判断。",
+            f"下面是最近 {len(events)} 条对话事件，每条含用户说的、AI 读到的需求、"
+            f"AI 当时真正想说的话。",
+            f"请提炼 1-{cap} 条关于这个人稳定倾向的判断。",
             "要求：",
-            "  · 只写有重复证据的，一次不算",
+            "  · 只写有重复证据的。同类迹象只出现一次就别写",
             "  · 写倾向，不写事实（「倾向于先自我否定」而不是「他昨天辞职了」）",
+            "  · **不要重复已有判断**。已经有判断说了这件事就跳过；",
+            "    如果新证据推翻了它，用 supersedes 填那条 id",
             "  · 如果与已有判断冲突，在 supersedes 里填那条判断的 id",
+            "",
+            "[affects · 可选但很重要]",
+            "  如果这条判断指向某个可调的人格参数，写出来。格式：{\"参数名\": 方向}",
+            "  方向 +1 = 该参数应变大，-1 = 应变小。不要猜，没把握就不写。",
+            "  可用参数：initiative / intervention / self_disclosure / brevity /",
+            "            warmth / formality / affect_range / imagery / learning_openness",
             "",
             "已有判断：",
         ]
@@ -121,10 +306,200 @@ class Consolidator:
             lines.append(f"    真正想说的: {e.get('direct', '')[:80]}")
         lines += [
             "",
-            '只输出 JSON 数组，形如：',
-            '[{"judgment": "...", "confidence": 0.6, "supersedes": null}]',
+            "只输出 JSON 数组，形如：",
+            '[{"judgment": "...", "confidence": 0.6, "supersedes": null,'
+            ' "affects": {"intervention": -1}}]',
+            "affects 可以省略或写空对象 {}。",
         ]
         return "\n".join(lines)
+
+
+
+    # ------------------------------------------------------------ 人格推动
+
+    def push_traits(self, *, min_consensus: int = 2) -> list[dict]:
+        """把判断聚合成人格参数的推动。
+
+        这是中期层的核心：**多条判断指向同一方向才动**，单条不动。
+
+        为什么需要共识：
+            一条「他不想被建议」可能只是那一轮的情境。
+            三条都说，才是倾向。这和激活度阈值是同一个思路 ——
+            区分「状态」和「倾向」。
+
+        返回实际发生的变更列表。
+        """
+        from .config import Trait
+
+        live = self.store.judgments(limit=500)
+        if not live:
+            return []
+
+        # 按 (参数名, 方向) 聚合
+        votes: dict[tuple[str, int], list[dict]] = {}
+        for j in live:
+            for name, direction in (j.get("affects") or {}).items():
+                try:
+                    d = 1 if float(direction) > 0 else (-1 if float(direction) < 0 else 0)
+                except (TypeError, ValueError):
+                    continue
+                if d:
+                    votes.setdefault((name, d), []).append(j)
+
+        state = self.store.traits()
+        changes: list[dict] = []
+        for (name, direction), supporters in votes.items():
+            # 反向的判断也算反对票：如果 3 条说 -1、2 条说 +1，净方向是 -1
+            opp = votes.get((name, -direction), [])
+            net = len(supporters) - len(opp)
+            if net < min_consensus * 0 or net <= 0:
+                continue
+            if abs(net) < min_consensus:
+                continue
+
+            spec = state.get(name)
+            if spec is None:
+                continue
+            trait = Trait.from_state(spec)
+            if trait.plasticity <= 0 or trait.drift <= 0:
+                continue
+
+            # 信号强度 = 净票数 / 阈值，夹到 1.0
+            signal = min(1.0, net / max(1, min_consensus))
+            before = trait.value
+            delta = trait.nudge(direction * signal)
+            if abs(delta) < 1e-6:
+                continue
+
+            reason = f"{net} 条判断指向 {name} {'+' if direction > 0 else '-'}"
+            self.store.update_trait(name, delta, reason=reason)
+            state[name]["value"] = trait.value
+            changes.append({"name": name, "delta": round(delta, 5),
+                            "value": round(trait.value, 4), "reason": reason})
+
+        # 没有实际变化也要把状态刷回去（可能被 clamp 过）
+        self.store.save_view("traits", {"traits": state})
+        return changes
+
+
+
+    # ------------------------------------------------------------ 基线推动
+
+    def push_anchors(self, *, min_rounds: int = 3) -> list[dict]:
+        """长期层：让自我叙事推动基线。
+
+        和中期层的区别：
+            中期看**多条判断是否一致** —— 证据够了就动 value
+            长期看**叙事里有没有说「我变了」** —— 说清楚了才动 anchor
+
+        这就是「改基线必须有依据」的落点：
+        没有对应叙事的 anchor 改动，store.update_anchor 会直接拒绝（返回 None）。
+
+        幅度极小：一次最多 `drift × ANCHOR_FRACTION`。
+        基线是尺子的刻度，动它就是换了一把尺子。
+        """
+        from .config import Trait
+
+        story = self._read_story()
+        if not story.strip():
+            return []
+        # 叙事要够长才值得读 —— 太短说明还没形成「变化」的叙述
+        if len(story) < 400:
+            return []
+
+        state = self.store.traits()
+        if not state:
+            return []
+
+        # 只读**上次处理之后**新增的那段叙事。
+        #
+        # 不这么做的话，同一段叙事会被反复使用 —— 实测一次跑下来，
+        # 同一条「我原来累了会说，现在话到嘴边就缩回去」
+        # 被用了两次，self_disclosure 的基线被推了两遍。
+        # 叙事是「一次事件」，不能当常驻依据反复消费。
+        seen = self.store.load_view("story_cursor", {"offset": 0}).get("offset", 0)
+        fresh = story[seen:]
+        if len(fresh.strip()) < 200:
+            return []      # 新增叙事太短，还不足以说明「我变了」
+
+        recent = fresh[-1800:]
+        lines = [
+            "下面是你过去的自我叙述，和当前的人格参数。",
+            "判断：这段叙述里，有没有明确说到「我变了」？",
+            "如果有，指出变化的**方向**和**依据原句**。没有就返回空数组。",
+            "",
+            "[当前参数]",
+        ]
+        for name, spec in state.items():
+            lines.append(f"  {name}: {spec.get('value', 0):.3f} "
+                         f"(anchor {spec.get('anchor', 0):.3f})")
+        lines += ["", "[自我叙述]", recent, "",
+                  "只输出 JSON 数组，形如：",
+                  '[{"name": "warmth", "direction": 1, "evidence": "原句"}]',
+                  "没有明确变化就输出 []。不要为了有输出而编。"]
+        prompt = "\n".join(lines)
+
+        try:
+            raw = self.llm(prompt) if self.llm else ""
+            items = json.loads(_extract_json(raw)) if raw else []
+        except Exception:
+            return []
+        if not isinstance(items, list):
+            return []
+
+        changes: list[dict] = []
+        for it in items[:3]:
+            if not isinstance(it, dict):
+                continue
+            name = str(it.get("name", "")).strip()
+            spec = state.get(name)
+            if spec is None:
+                continue
+            try:
+                direction = 1 if float(it.get("direction", 0)) > 0 else -1
+            except (TypeError, ValueError):
+                continue
+            evidence = str(it.get("evidence", "")).strip()
+            if not evidence:
+                continue          # 没依据不动
+
+            trait = Trait.from_state(spec)
+            if trait.drift <= 0:
+                continue
+            step = trait.drift * self.ANCHOR_FRACTION
+            before = trait.anchor
+            trait.anchor = before + direction * step
+            # value 保持相对位置
+            trait.value = trait.value + (trait.anchor - before)
+            trait.clamp()
+
+            # store.update_anchor 会拒绝没有 reason 的改动
+            rec = self.store.update_anchor(
+                name, trait.anchor - before,
+                reason=f"{evidence[:80]}（叙事驱动）")
+            if rec is None:
+                continue
+            state[name]["anchor"] = trait.anchor
+            state[name]["value"] = trait.value
+            changes.append({"name": name, "delta": round(trait.anchor - before, 5),
+                            "anchor": round(trait.anchor, 4),
+                            "evidence": evidence[:60]})
+        if changes:
+            self.store.save_view("traits", {"traits": state})
+        # 记下读到哪儿了 —— 下次只看新增的部分。
+        # 注意：**无论有没有推动都要记**。否则一段「读过了但没判出变化」
+        # 的叙事会在下次固化时被重复读一遍，浪费调用还可能被重复判。
+        self.store.save_view("story_cursor", {"offset": len(story)})
+        return changes
+
+    def _read_story(self) -> str:
+        p = self.store.self_story_path
+        if not p.exists():
+            return ""
+        try:
+            return p.read_text(encoding="utf-8")
+        except OSError:
+            return ""
 
     # ------------------------------------------------------------ 自传
 

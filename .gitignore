@@ -8,6 +8,9 @@ self-story.md
 judgments.jsonl
 ledger.jsonl
 
+# 本地设计笔记 —— 推导过程和调研，只作本地参考，不进仓库
+notes/
+
 # Python
 __pycache__/
 *.py[cod]

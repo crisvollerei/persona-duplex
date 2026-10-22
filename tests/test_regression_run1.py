@@ -53,9 +53,38 @@ class TestReadAloudDetection(unittest.TestCase):
             self.assertEqual(detect_read_aloud(line), [], f"误报: {line}")
 
     def test_guess_in_middle_is_fine(self):
-        """「猜」出现在句子中间可能是正常用词，只在句首算违规。"""
+        """判定标准不是「猜」的位置，是**猜的对象**。
+
+        猜第三方（他/她/它）是正常说话；
+        猜对方（你/这句话）才是把解读过程摆上台面。
+        """
         self.assertEqual(detect_read_aloud("我猜他也不会来。"), [])
-        self.assertTrue(detect_read_aloud("猜他也不会来。"))
+        self.assertEqual(detect_read_aloud("猜她大概不会来了。"), [])
+        self.assertTrue(detect_read_aloud("猜你也不会来。"))
+        self.assertTrue(detect_read_aloud("我猜你也不会来。"))
+
+    def test_wo_cai_ni_is_caught(self):
+        """真实数据里 7 条是「我猜你……」开头 —— 旧规则一条都没抓到。
+
+        旧规则只认行首的「猜」，而这些句子以「我猜」开头，
+        等于漏掉了实际最高频的那种违规。
+        """
+        for line in (
+            "我猜“感觉还行”这四个字，是你在给自己留后路。",
+            "我猜这个“不该”不是你自己想出来的。",
+            "我猜这声叹气后面还有半句，你自己咽了。",
+            "我猜你这句“先睡了”不是真困，是想收尾。",
+            "先猜一个：你说“那会儿”，指的是某件具体的事。",
+        ):
+            self.assertTrue(detect_read_aloud(line), f"漏判: {line}")
+
+    def test_guessing_about_third_party_is_fine(self):
+        """别把「猜」一刀切禁掉 —— 那句话会变得不会说话。"""
+        for line in (
+            "我猜她大概不会来了，你也不必等。",
+            "别猜了，他就是在拖。",
+        ):
+            self.assertEqual(detect_read_aloud(line), [], f"误报: {line}")
 
     def test_only_first_line_reported(self):
         text = "猜你不想说。\n\n换个话题吧。"

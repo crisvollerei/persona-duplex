@@ -90,9 +90,19 @@ class TestBigramFallback(unittest.TestCase):
         out = BigramJudge().judge(req)
         self.assertEqual(out["p_1"].verdict, RETURNED)
 
-    def test_left_when_unrelated(self):
+    def test_unclear_when_unrelated(self):
+        """字面完全不重合 → unclear，不是 left。
+
+        「用户没说这件事」和「用户说的和预言相反」是两回事。
+        旧版把前者判成 left，等于把「还没验证」当成「否证」，
+        实跑里把命中率压到 40% 上下。
+        """
         req = _req(user="今天天气不错", claim="辞职", predicts="会说出方案")
-        self.assertEqual(BigramJudge().judge(req)["p_1"].verdict, LEFT)
+        self.assertEqual(BigramJudge().judge(req)["p_1"].verdict, UNCLEAR)
+
+    def test_returned_when_literal_overlap(self):
+        req = _req(user="今天路上堵了一个半小时，好累", claim="很累", predicts="会说路上堵")
+        self.assertEqual(BigramJudge().judge(req)["p_1"].verdict, RETURNED)
 
     def test_empty_pendings(self):
         self.assertEqual(BigramJudge().judge(JudgeRequest(user_text="hi")), {})
@@ -118,7 +128,8 @@ class TestAsyncJudge(unittest.TestCase):
         elapsed = time.monotonic() - t0
         self.assertLess(elapsed, 0.5, "超时后还在等")
         self.assertEqual(source, "late")
-        self.assertEqual(verdicts["p_1"].verdict, LEFT)
+        # 兜底判不出「否证」，只能判「没验证」
+        self.assertEqual(verdicts["p_1"].verdict, UNCLEAR)
 
     def test_exception_falls_back(self):
         def boom(req):

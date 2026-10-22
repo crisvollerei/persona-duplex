@@ -86,7 +86,10 @@ class BigramJudge:
             if overlap >= OVERLAP_KEEP:
                 out[p["id"]] = TopicVerdict(RETURNED, f"字面重合 {overlap:.2f}")
             elif overlap < OVERLAP_DROP:
-                out[p["id"]] = TopicVerdict(LEFT, f"字面重合 {overlap:.2f}")
+                # 字面重合低 ≠ 预言被否证。它也可能只是「还没说到」。
+                # 退回 UNCLEAR 而不是 LEFT —— 让启发式判 WATCH 而不是 REFUTED。
+                # 这是修命中率的关键：以前字面兜底把「没提」当成「说反了」。
+                out[p["id"]] = TopicVerdict(UNCLEAR, f"字面重合 {overlap:.2f}")
             else:
                 out[p["id"]] = TopicVerdict(UNCLEAR, f"字面重合 {overlap:.2f}")
         return out
@@ -95,7 +98,7 @@ class BigramJudge:
 # ---------------------------------------------------------------- LLM 判定
 
 
-_PROMPT = """判断用户这一轮有没有回到之前那个话题。只输出 JSON，不要解释。
+_PROMPT = """判断：用户这一句，是否**证实或否证**了下面这几条预言。只输出 JSON。
 
 [AI 上一轮说的] {prev_ai}
 [用户这一轮说的] {user}
@@ -103,10 +106,25 @@ _PROMPT = """判断用户这一轮有没有回到之前那个话题。只输出 
 待判断的预言：
 {pending_lines}
 
-verdict 只能三选一：
-  returned —— 用户确实回到了那个话题
-  left     —— 用户明显换题、回避、或者没接
-  unclear  —— 信息不足，判不了
+对每一条，问自己一个问题：**用户这句话说出来的事，和这条预言描述的一致吗？**
+
+verdict 三选一：
+  returned —— 一致。用户说的正是预言预计会出现的那个东西。
+  left     —— 不一致。用户说的事和预言预计的明显是两回事。
+  unclear  —— 用户这一句根本没涉及这条预言说的内容（换题、太短、
+              只回应了别的部分）。这种不是「不一致」，是「还没发生」。
+
+关键区别 —— 这一条最容易判错：
+  · 用户换了个话题 → unclear，不是 left。
+    「话题变了」不等于「预言错了」；预言可能只是还没被验证。
+  · 用户说了别的、但和预言不矛盾 → unclear。
+  · 只有用户说的事**明确指向相反**，才是 left。
+
+例：
+  预言：「对方会报一个具体的入睡时间」
+  用户：「我最近老失眠」        -> unclear（还没说时间，不代表不说）
+  用户：「两三点才睡着」        -> returned（就是这么个时间）
+  用户：「我不困，开始干活了」  -> left（明确顶回来）
 
 格式：[{{"id":"p_0001","verdict":"returned","why":"十五字以内"}}]"""
 
@@ -125,8 +143,29 @@ class LLMJudge:
 
     name = "llm"
 
-    def __init__(self, llm: Callable[[list[dict]], str]):
+    def __init__(self, llm: Callable[..., str]):
         self.llm = llm
+
+    def _call(self, messages: list[dict], *, max_tokens: int) -> str:
+        """尽量把 max_tokens 传下去。
+
+        openai_compatible 产出的闭包接受 (messages, *, max_tokens=...)；
+        但测试和自定义判定器常常只接受 messages 一个参数。两种都要能跑。
+        """
+        try:
+            return self.llm(messages, max_tokens=max_tokens)
+        except TypeError:
+            return self.llm(messages)
+
+    # 每条预言大约要 40 个 token 的 JSON（id + verdict + why）。
+    # 固定 120 的预算只够判 2-3 条；挂到 8 条时输出会被截断，
+    # JSON 尾部断掉 → 整批解析失败 → 全部退回「模型输出无法解析」。
+    # 实测过：挂 8 条时 max_tokens=120 的输出停在 '"id":"p' 半截。
+    _TOKENS_PER_PENDING = 48
+    _TOKENS_BASE = 80
+
+    def _budget(self, n: int) -> int:
+        return self._TOKENS_BASE + self._TOKENS_PER_PENDING * max(1, n)
 
     def judge(self, req: JudgeRequest) -> dict[str, TopicVerdict]:
         if not req.pendings:
@@ -141,7 +180,8 @@ class LLMJudge:
             user=_clip(req.user_text) or "（无）",
             pending_lines=lines,
         )
-        raw = self.llm([{"role": "user", "content": prompt}])
+        raw = self._call([{"role": "user", "content": prompt}],
+                         max_tokens=self._budget(len(req.pendings)))
         return self._parse(raw, req)
 
     def _parse(self, raw: str, req: JudgeRequest) -> dict[str, TopicVerdict]:
@@ -192,6 +232,7 @@ class JudgeHandle:
     grace: float
     started: float
     fallback: TopicJudge
+    finished_at: float | None = None
     _thread: threading.Thread | None = None
     _result: dict[str, TopicVerdict] | None = None
     _error: BaseException | None = None
@@ -239,6 +280,10 @@ class AsyncJudge:
                 handle._result = fn(req) if callable(fn) else inner(req)
             except BaseException as e:      # 网络错误、解析错误，一律兜底
                 handle._error = e
+            finally:
+                # 记录判定器真正完成的时刻。整轮耗时不能拿来比 grace：
+                # 主生成慢 ≠ 判定慢，两者必须分开量。
+                handle.finished_at = time.monotonic()
 
         t = threading.Thread(target=work, daemon=True, name="topic-judge")
         handle._thread = t

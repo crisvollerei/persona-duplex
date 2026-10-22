@@ -26,7 +26,9 @@ Homepage = "https://github.com/crisvollerei/persona-duplex"
 persona-duplex = "persona.cli:main"
 
 [tool.setuptools]
-packages = ["persona"]
+# personas 是数据包：人格配置要随 wheel 分发，而 package-data 只认包内路径
+# （"../personas/*.toml" 这种父目录 glob 是无效的，装了包就没有人格可用）。
+packages = ["persona", "personas"]
 
 [tool.setuptools.package-data]
-persona = ["../personas/*.toml"]
+personas = ["*.toml"]

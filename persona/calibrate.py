@@ -44,8 +44,19 @@ class SettleSample:
 @dataclass
 class Calibration:
     samples: list[SettleSample] = field(default_factory=list)
+    # 判定器自己的耗时。只有真的量到了才进来 —— 老账本里的 elapsed 是
+    # 整轮耗时，拿它比 grace 会把「生成慢」误报成「判定超时」。
     judge_elapsed: list[float] = field(default_factory=list)
     judge_sources: dict[str, int] = field(default_factory=dict)
+    # 有多少轮账本只有旧的 elapsed 字段（无法区分判定耗时和生成耗时）
+    legacy_elapsed: int = 0
+
+    # 人格：参数从 anchor 漂了多远、基线动了几次
+    trait_state: dict[str, dict] = field(default_factory=dict)
+    anchor_updates: int = 0
+    # 判断记忆的产出速率
+    judgments: int = 0
+    turns: int = 0
 
     # ---------------------------------------------------------- 统计
 
@@ -62,14 +73,27 @@ class Calibration:
         return values[i]
 
     def judge_success_rate(self) -> float | None:
-        total = sum(self.judge_sources.values())
+        """语义判定在**真的需要判定**的轮次里占多少。
+
+        分母里不能有 source="none" —— 那是「这轮没有预言要判」，
+        不是「判定失败」。算进去的话，覆盖率会被没有判定任务的轮次稀释。
+        """
+        active = {k: v for k, v in self.judge_sources.items() if k != "none"}
+        total = sum(active.values())
         if not total:
             return None
-        return self.judge_sources.get("llm", 0) / total
+        return active.get("llm", 0) / total
 
 
 def collect(ledger: list[dict]) -> Calibration:
+    from .store import replay_traits
+
     cal = Calibration()
+    cal.trait_state = replay_traits(ledger)
+    cal.anchor_updates = sum(1 for r in ledger if r.get("kind") == "anchor_update")
+    cal.judgments = sum(1 for r in ledger if r.get("kind") == "judgment_add")
+    cal.turns = sum(1 for r in ledger if r.get("kind") == "turn")
+
     for rec in ledger:
         if rec.get("kind") != "turn":
             continue
@@ -80,9 +104,15 @@ def collect(ledger: list[dict]) -> Calibration:
             src = j.get("source")
             if src:
                 cal.judge_sources[src] = cal.judge_sources.get(src, 0) + 1
-            el = j.get("elapsed")
-            if isinstance(el, (int, float)):
-                cal.judge_elapsed.append(float(el))
+            # judge_elapsed 才是判定器自己的耗时。老账本只有 elapsed
+            # （整轮耗时，绝大部分是主生成）—— 那种样本不能拿来比 grace，
+            # 否则每条都「超时」，报告永远在报一个假警。
+            if "judge_elapsed" in j:
+                el = j.get("judge_elapsed")
+                if isinstance(el, (int, float)):
+                    cal.judge_elapsed.append(float(el))
+            elif isinstance(j.get("elapsed"), (int, float)):
+                cal.legacy_elapsed += 1
 
         for row in probe.get("settle") or []:
             try:
@@ -186,6 +216,12 @@ def findings(cal: Calibration) -> list[Finding]:
                 "ok", "grace",
                 f"中位 {cal.pct(el, 0.5):.2f}s，超时率 {rate:.0%}"
             ))
+    elif cal.legacy_elapsed:
+        out.append(Finding(
+            "info", "grace",
+            f"{cal.legacy_elapsed} 轮只有旧的 elapsed（整轮耗时，含生成），"
+            f"量不出判定本身的花费 —— 再跑一轮就有准确数据了"
+        ))
 
     # ---- 4. 语义判定是否真的在起作用
     rate = cal.judge_success_rate()
@@ -201,6 +237,45 @@ def findings(cal: Calibration) -> list[Finding]:
                 "ok", "语义判定", f"{rate:.0%} 的轮次用上了语义判定"
             ))
 
+    # ---- 5. 人格漂移
+    #
+    # 「这个角色有没有变成另一个人」不能只看数值，要看它离自己的起点有多远。
+    # 用 drift 当分母 —— 因为 drift 就是「这个人格允许自己走多远」。
+    if cal.trait_state:
+        moved = []
+        for name, spec in cal.trait_state.items():
+            drift = float(spec.get("drift", 0.0))
+            if drift <= 0:
+                continue
+            offset = abs(float(spec.get("value", 0.0)) - float(spec.get("anchor", 0.0)))
+            if offset > 1e-9:
+                moved.append((name, offset / drift, offset))
+        if moved:
+            moved.sort(key=lambda x: -x[1])
+            worst = moved[0]
+            detail = (f"{len(moved)} 个参数偏离起点，最远的 {worst[0]} "
+                      f"走了 {worst[1]:.0%}（{worst[2]:+.3f}）")
+            level = "warn" if worst[1] > 0.8 else "ok"
+            if worst[1] > 0.8:
+                detail += " —— 快贴到漂移边界了"
+            out.append(Finding(level, "人格漂移", detail))
+        else:
+            out.append(Finding("ok", "人格漂移", "所有参数都还在起点"))
+        if cal.anchor_updates:
+            out.append(Finding("info", "基线变动",
+                               f"{cal.anchor_updates} 次 —— 人格的材质被改过"))
+
+    # ---- 6. 判断产出速率
+    if cal.turns >= 10:
+        rate = cal.judgments / cal.turns
+        if rate < 0.05:
+            out.append(Finding("warn", "判断产出",
+                               f"{cal.judgments} 条 / {cal.turns} 轮 —— 太少了，"
+                               f"中期层没有证据可用"))
+        else:
+            out.append(Finding("ok", "判断产出",
+                               f"{cal.judgments} 条 / {cal.turns} 轮（{rate:.2f}/轮）"))
+
     if not cal.samples:
         out.append(Finding(
             "info", "样本", "还没有结算样本。先聊几轮，等预言被结算了再来看"
@@ -212,7 +287,9 @@ def findings(cal: Calibration) -> list[Finding]:
 def format_report(cal: Calibration) -> str:
     lines = ["", "校准报告", "─" * 60]
 
-    n_turn = len(cal.judge_elapsed) or sum(cal.judge_sources.values())
+    n_turn = len(cal.judge_elapsed) + cal.legacy_elapsed
+    if not n_turn:
+        n_turn = sum(cal.judge_sources.values())
     lines.append(f"  样本：{len(cal.samples)} 次结算判定，{n_turn} 轮有判定记录")
 
     if cal.samples:

@@ -41,10 +41,25 @@ class Session:
         similarity=None,
         judge=None,
         fast_llm: Callable[[list[dict]], str] | None = None,
+        consolidate_llm: Callable[[str], str] | None = None,
+        tool_llm=None,
+        protocol: str = "text",   # text | tool | auto | persona
         options: SessionConfig | None = None,
     ):
         self.opts = options or SessionConfig()
         self.store = store
+
+        # 人格参数：账本里有快照就用快照，没有就用人格配置初始化。
+        #
+        # 为什么不能直接用 cfg.role.traits 的 anchor 当活状态：
+        # 那样重启一次就把跑了几百轮的人格漂移丢了 ——
+        # 参数是记忆，不是配置。
+        _state = store.traits()
+        if _state:
+            cfg.role.load_traits_state(_state)
+        else:
+            store.init_traits(cfg.role.traits_state())
+
         self.engine = TurnEngine(
             cfg, store, llm,
             similarity=similarity if similarity is not None else _default_sim(),
@@ -52,8 +67,12 @@ class Session:
             judge=judge if judge is not None else build_judge(
                 cfg, fast_llm, similarity=similarity
             ),
+            protocol=protocol,
+            tool_llm=tool_llm,
         )
-        self.consolidator = Consolidator(store)
+        # 慢层固化也走模型：没有 llm 时它只会数 need 出现几次，
+        # 那不是「判断」，只是计数。给了模型才可能提炼出有洞察的判断。
+        self.consolidator = Consolidator(store, llm=consolidate_llm)
         self._closed = False
         self._lock = threading.Lock()
 
@@ -70,17 +89,14 @@ class Session:
         self.engine.update_style_baseline(text)
         return res
 
-    def say_stream(self, text: str) -> Iterator[str]:
-        """流式说一句，逐字吐。返回的迭代器耗尽后，结果在 .result 上。"""
-        chunks: list[str] = []
-        result_box: list[TurnResult] = []
+    def say_stream(self, text: str) -> "_StreamedTurn":
+        """流式说一句，逐片吐。返回的对象迭代耗尽后，本轮结果在 .result 上。
 
-        def sink(piece: str) -> None:
-            chunks.append(piece)
-
-        res = self.say(text, on_delta=sink)
-        result_box.append(res)
-        yield from chunks
+        返回的不是 generator 而是实现了迭代协议的对象 —— generator 上
+        挂不了属性，而调用方需要拿到这一轮的 TurnResult（结算了什么、
+        有没有受伤）才能做后续决策。
+        """
+        return _StreamedTurn(self, text)
 
     def chat(self, text: str, on_delta: Callable[[str], None] | None = None) -> str:
         return self.say(text, on_delta=on_delta).say
@@ -111,6 +127,28 @@ class Session:
 
     def __exit__(self, *exc) -> None:
         self.close()
+
+
+class _StreamedTurn:
+    """一次流式轮次。迭代时逐片吐 SAY，结束后 .result 可用。"""
+
+    def __init__(self, session: "Session", text: str):
+        self._session = session
+        self._text = text
+        self._pieces: list[str] = []
+        self._started = False
+        self.result: TurnResult | None = None
+
+    def __iter__(self) -> "_StreamedTurn":
+        return self
+
+    def __next__(self) -> str:
+        if not self._started:
+            self._started = True
+            self.result = self._session.say(self._text, on_delta=self._pieces.append)
+        if self._pieces:
+            return self._pieces.pop(0)
+        raise StopIteration
 
 
 def _default_sim():

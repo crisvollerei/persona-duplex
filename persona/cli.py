@@ -15,7 +15,14 @@ import sys
 from pathlib import Path
 
 from .config import PersonaConfig
-from .llm import ScriptedLLM, make_reply, openai_compatible, openai_stream
+from .llm import (
+    ScriptedLLM,
+    make_reply,
+    openai_compatible,
+    openai_stream,
+    openai_tool_call,
+    text_prompt,
+)
 from .session import Session, SessionConfig
 from .store import Store, rebuild_views
 from .term import bold, cyan, dim, red, yellow
@@ -26,10 +33,31 @@ ROOT = Path(__file__).resolve().parent.parent
 # ---------------------------------------------------------------- 载入
 
 
+def _config_dirs() -> list[Path]:
+    """人格配置的搜索路径。
+
+    装成包之后 personas 是可导入的数据包；直接跑源码时就在仓库根目录。
+    两条都留着，哪种跑法都能找到文件。
+    """
+    dirs: list[Path] = []
+    try:
+        import personas as pkg          # type: ignore[import-not-found]
+        dirs.append(Path(pkg.__file__).resolve().parent)
+    except Exception:
+        pass
+    dirs.append(ROOT / "personas")
+    dirs.append(Path(__file__).resolve().parent / "personas")
+    return dirs
+
+
 def _load_cfg(name: str) -> PersonaConfig:
     p = Path(name)
     if not p.exists():
-        p = ROOT / "personas" / f"{name}.toml"
+        for d in _config_dirs():
+            cand = d / f"{name}.toml"
+            if cand.exists():
+                p = cand
+                break
     if not p.exists():
         raise SystemExit(f"找不到人格配置: {name}")
     return PersonaConfig.load(p)
@@ -57,10 +85,30 @@ def _make_session(args, *, streaming: bool) -> Session:
             timeout=max(8.0, cfg.judge_grace * 10),
         )
 
+    # 慢层固化：没有模型时只会数 need 出现几次，那不是判断，是计数。
+    # 用同一个端点，但温度低、输出短 —— 它做的是提炼，不是创作。
+    consolidate_llm = None
+    if not args.no_judge:
+        consolidate_llm = text_prompt(openai_compatible(
+            args.judge_model or args.model,
+            temperature=0.3,
+            max_tokens=400,
+            timeout=30.0,
+        ))
+
+    # tool 协议需要「填 schema」的调用方式，跟纯文本的 llm 接口不同。
+    tool_llm = None
+    if args.protocol in ("tool", "auto", "persona"):
+        tool_llm = openai_tool_call(args.model, temperature=0.9,
+                                    max_tokens=600, timeout=60.0)
+
     return Session(
         cfg, store, llm,
         stream_llm=stream_llm,
         fast_llm=fast_llm,
+        consolidate_llm=consolidate_llm,
+        tool_llm=tool_llm,
+        protocol=args.protocol,
         options=SessionConfig(stream=streaming),
     )
 
@@ -206,6 +254,14 @@ def cmd_demo(args) -> int:
             tail="settle: -\npending:\n  claim: 用户需要被推一把\n"
                  "  confidence: 0.55\n  predicts: 会反驳，或者沉默",
         ),
+        # 修复不在受伤的当轮发。所以第 7 轮先说别的，第 8 轮才道歉 ——
+        # 这个间隔本身就是设计的一部分，演示里也要演出来。
+        make_reply(
+            head="need: 只是想说说话\nconfidence: 0.8\n"
+                 "direct: 那就好\ndisplace: none",
+            say="嗯，那两家都是做什么的？",
+            tail="settle: -",
+        ),
         make_reply(
             head="need: 认同\nconfidence: 0.7\n"
                  "direct: 我可能说得太直了\ndisplace: 降级",
@@ -214,8 +270,8 @@ def cmd_demo(args) -> int:
         ),
         make_reply(
             head="need: 只是想说说话\nconfidence: 0.8\n"
-                 "direct: 那就好\ndisplace: none",
-            say="嗯，那两家都是做什么的？",
+                 "direct: 她没事了\ndisplace: none",
+            say="嗯，那就好。",
             tail="settle: -",
         ),
     ]
@@ -232,8 +288,12 @@ def cmd_demo(args) -> int:
             "其实我已经投了两家简历了。",
             "有一家是做工业软件的，感觉还行。",
             "……算了，说这些干嘛。",
+            # 语域变正式 → 判成受伤。当轮不修复（当场道歉是在处理自己的尴尬）
             "谢谢，我自己想想吧。",
+            # 第二拍：这才是该修复的时候
             "嗯，两家都还行。",
+            # 接住修复 → 销账
+            "没事，我也没往心里去，哈哈。",
         ]
         for text in turns:
             print(f"\n{cyan('你')}  {text}")
@@ -293,6 +353,58 @@ def cmd_stats(args) -> int:
     return 0
 
 
+def cmd_lift(args) -> int:
+    """关系增益：有历史 vs 无历史，命中率差多少。
+
+    无历史那一侧不能靠「清空数据再跑一遍」—— 那样样本永远凑不齐，
+    而且两次对话不是同一段经历，差值没有意义。
+
+    这里用同一份账本做**首见 vs 非首见**的切分：同一个 claim 第一次出现时
+    系统还没有关于它的任何积累，之后才逐步有。差值就是积累的增量。
+    """
+    from .metrics import compare_with_without_history, compute
+
+    store = Store(args.data)
+    ledger = store.read_ledger()
+    if not ledger:
+        print(f"{store.root} 里还没有账本。先跑 python -m persona demo")
+        return 1
+
+    conf_by_id = {r["pending_id"]: r for r in ledger
+                  if r.get("kind") == "pending_add"}
+    seen_claims: set[str] = set()
+    first: list[dict] = []
+    later: list[dict] = []
+
+    for rec in ledger:
+        if rec.get("kind") != "pending_settle":
+            continue
+        add = conf_by_id.get(rec.get("pending_id"))
+        if add is None:
+            continue
+        claim = (add.get("claim") or "").strip()
+        bucket = later if claim in seen_claims else first
+        bucket.append({"kind": "pending_add", "pending_id": rec["pending_id"],
+                       "confidence": add.get("confidence", 0.0)})
+        bucket.append(rec)
+        if claim:
+            seen_claims.add(claim)
+
+    full = compute(first + later)
+    bare = compute(first)
+    out = compare_with_without_history(full, bare)
+    print()
+    print("关系增益")
+    print("─" * 54)
+    print(f"  有积累（全部）  {out['with_history']:.0%}  （{out['n_with']} 条）")
+    print(f"  首见（无积累）  {out['without_history']:.0%}  （{out['n_without']} 条）")
+    print(f"  增益            {out['lift']:+.0%}")
+    if not out["reliable"]:
+        print("  · 样本不足（两侧各需 ≥10 条），这个数字还不能当结论")
+    print()
+    return 0
+
+
 def cmd_calibrate(args) -> int:
     """从账本反推阈值该往哪调。只读，不改。"""
     from .calibrate import collect, format_report
@@ -327,6 +439,12 @@ def main(argv: list[str] | None = None) -> int:
                        help="话题判定用的轻模型（默认跟随主模型）")
         p.add_argument("--no-judge", action="store_true",
                        help="关掉 LLM 话题判定，退回字面")
+        p.add_argument("--protocol", default="text",
+                       choices=["text", "tool", "auto", "persona"],
+                       help="text=单次生成三段（默认）；"
+                            "tool=两阶段，direct 结构上先于 say；"
+                            "persona=三层，素回复无人设、人设化单独一步；"
+                            "auto=文本失效时自动升级")
         return p
 
     chat = common(sub.add_parser("chat", help="普通对话"))
@@ -344,6 +462,10 @@ def main(argv: list[str] | None = None) -> int:
     st = sub.add_parser("stats", help="从账本算指标")
     st.add_argument("-d", "--data", default="data")
     st.set_defaults(func=cmd_stats)
+
+    lf = sub.add_parser("lift", help="关系增益：有积累 vs 首见")
+    lf.add_argument("-d", "--data", default="data")
+    lf.set_defaults(func=cmd_lift)
 
     ca = sub.add_parser("calibrate", help="从账本反推阈值该怎么调")
     ca.add_argument("-d", "--data", default="data")

@@ -14,6 +14,30 @@ from typing import Callable, Iterator
 Message = dict[str, str]
 
 
+def _endpoint(base_url: str | None, api_key: str | None,
+              timeout: float) -> tuple[str, str, float]:
+    base = (base_url or os.environ.get("PERSONA_BASE_URL")
+            or "https://api.openai.com/v1").rstrip("/")
+    key = api_key or os.environ.get("PERSONA_API_KEY") or ""
+    return base + "/chat/completions", key, timeout
+
+
+def _post(url: str, key: str, body: dict, timeout: float) -> dict:
+    """一次非流式调用。所有后端共用，避免四份重复的 urllib 代码。"""
+    req = urllib.request.Request(
+        url, data=json.dumps(body).encode("utf-8"),
+        headers={"Content-Type": "application/json",
+                 "Authorization": f"Bearer {key}"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")[:400]
+        raise RuntimeError(f"LLM HTTP {e.code}: {detail}") from e
+
+
 def openai_compatible(
     model: str,
     *,
@@ -24,36 +48,80 @@ def openai_compatible(
     timeout: float = 60.0,
     extra: dict | None = None,
 ) -> Callable[[list[Message]], str]:
-    base = (base_url or os.environ.get("PERSONA_BASE_URL")
-            or "https://api.openai.com/v1").rstrip("/")
-    key = api_key or os.environ.get("PERSONA_API_KEY") or ""
-    url = base + "/chat/completions"
+    url, key, timeout = _endpoint(base_url, api_key, timeout)
+    _default_max = max_tokens
 
-    def call(messages: list[Message]) -> str:
+    def call(messages: list[Message], *, max_tokens: int | None = None) -> str:
+        """max_tokens 可以在每次调用时覆盖。
+
+        判定器需要按待判条数动态给预算 —— 固定值在挂满预言时会把
+        JSON 输出截断，整批解析失败。主对话用默认值即可。
+        """
         body = {
             "model": model,
             "messages": messages,
             "temperature": temperature,
-            "max_tokens": max_tokens,
+            "max_tokens": max_tokens or _default_max,
         }
         if extra:
             body.update(extra)
-        data = json.dumps(body).encode("utf-8")
-        req = urllib.request.Request(
-            url, data=data,
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {key}",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                payload = json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            detail = e.read().decode("utf-8", "replace")[:400]
-            raise RuntimeError(f"LLM HTTP {e.code}: {detail}") from e
+        payload = _post(url, key, body, timeout)
         return payload["choices"][0]["message"]["content"]
+
+    return call
+
+
+def openai_tool_call(
+    model: str,
+    *,
+    base_url: str | None = None,
+    api_key: str | None = None,
+    temperature: float = 0.9,
+    max_tokens: int = 900,
+    timeout: float = 60.0,
+    extra: dict | None = None,
+) -> Callable[..., dict]:
+    """强制模型把输出填进一个函数的参数里，返回解析后的 dict。
+
+    这是「兜底协议」的底层：结构由 JSON Schema 保证，
+    字段不可能缺失、类型不可能错、也不会有标记藏在正文里。
+
+    用法：
+        fn = openai_tool_call("deepseek-chat")
+        data = fn(messages, tool=TOOL_SPEC, max_tokens=400)
+
+    失败（模型不调工具 / JSON 坏）一律抛 RuntimeError ——
+    由上层决定要不要退回文本协议。
+    """
+    url, key, timeout = _endpoint(base_url, api_key, timeout)
+    _default_max = max_tokens
+
+    def call(messages: list[Message], *, tool: dict,
+             max_tokens: int | None = None) -> dict:
+        body = {
+            "model": model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens or _default_max,
+            "tools": [tool],
+            "tool_choice": {"type": "function",
+                            "function": {"name": tool["function"]["name"]}},
+        }
+        if extra:
+            body.update(extra)
+        payload = _post(url, key, body, timeout)
+        msg = payload["choices"][0]["message"]
+        calls = msg.get("tool_calls") or []
+        if not calls:
+            raise RuntimeError("模型没有调用工具")
+        raw = calls[0]["function"]["arguments"]
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError as e:
+            raise RuntimeError(f"工具参数不是合法 JSON：{raw[:120]}") from e
+        if not isinstance(data, dict):
+            raise RuntimeError(f"工具参数不是对象：{type(data).__name__}")
+        return data
 
     return call
 
@@ -115,9 +183,23 @@ def openai_stream(
     return call
 
 
-def text_prompt(fn: Callable[[str], str]) -> Callable[[str], str]:
-    """把「一段文本 → 文本」的函数包装成后台用的接口。"""
-    return fn
+def text_prompt(fn: Callable[..., str]) -> Callable[[str], str]:
+    """把「messages 列表 → 文本」的调用，包装成「一段文本 → 文本」。
+
+    背景：主对话的 llm 接口是 openai_compatible(...)，它收的是
+    [{"role": "user", "content": ...}]。但后台固化只想传一段 prompt 字符串。
+
+    这个函数原本是个空实现（直接 return fn），导致固化线程拿到字符串后
+    原样塞进 messages 字段，HTTP 422。因为所有测试都用假 LLM，这个 bug
+    一直没暴露 —— 直到真实跑了一次 20 轮对话。
+
+    现在真的做转换：把字符串包成单条 user message。
+    """
+
+    def call(prompt: str) -> str:
+        return fn([{"role": "user", "content": prompt}])
+
+    return call
 
 
 # ---------------------------------------------------------------- mock
