@@ -101,6 +101,7 @@ class TurnEngine:
         warnings: list[str] = []
         self._turn_seq += 1
         turn_started = time.monotonic()
+        self._probe = {}       # 本轮原始观测值，落账用
 
         # ---- 1. 修复反应判定。这个必须同步：它决定上下文里要不要放
         #        「你伤到对方了」的提示。但它只看语域，不调模型。
@@ -140,15 +141,18 @@ class TurnEngine:
         # ---- 4. 生成（流式或整段）。话题判定就在这段时间里跑完了。
         raw, parsed = self._generate(messages, on_delta)
 
-        # ---- 5. 收判定。deadline 从这一轮开始算，所以如果生成已经
-        #        用光了预算，这里会立刻返回字面兜底，绝不额外加延迟。
+        # ---- 5. 收判定。grace 很短，拿不到就立刻用字面兜底，
+        #        所以这里不会拖慢对话。
         topic_verdicts, topic_source = self._collect_topic_judge(
             judge_handle, user_text, pendings_snapshot, turn_started
         )
-        if topic_source == "timeout":
-            warnings.append("话题判定超时，退回字面判定")
-        elif topic_source == "bigram":
-            warnings.append("话题判定不可用，退回字面判定")
+        self._probe["judge"] = {
+            "source": topic_source,
+            "elapsed": round(time.monotonic() - turn_started, 3),
+            "verdicts": {k: v.verdict for k, v in topic_verdicts.items()},
+        }
+        if topic_source == "late":
+            warnings.append("话题判定未在 grace 内返回，本轮用字面兜底")
 
         # ---- 6. 结算（用刚收到的语义判定）
         settled = self._settle_with(user_text, warnings, topic_verdicts)
@@ -202,6 +206,8 @@ class TurnEngine:
             "settled": [{k: s.get(k) for k in ("id", "outcome")} for s in settled],
             "repair": {"opened": bool(repair_opened), "closed": bool(repair_closed)},
             "warnings": warnings,
+            # 观测：没有这些数值，聊三十轮也不知道该把阈值往哪调
+            "probe": self._probe,
         })
 
         if head and head.need:
@@ -399,6 +405,8 @@ class TurnEngine:
 
         semantic: dict[str, str] = {}
         baseline_len = self._baseline_length()
+        baseline_formality = self._baseline_formality()
+        self._probe["settle"] = []
 
         for p in pendings:
             gap = _hours_since(p.get("created", ""))
@@ -418,12 +426,24 @@ class TurnEngine:
                 topic_why=tv.why if tv else "",
             )
 
-            verdict = judge(feat, baseline_formality=self._baseline_formality(),
+            verdict = judge(feat, baseline_formality=baseline_formality,
                             baseline_length=baseline_len)
 
             if verdict.kind == WATCH and gap > self.cfg.watch_ttl_hours / 3 \
                     and feat.mentions_topic:
                 verdict = judge_delayed(feat, expired=False)
+
+            # 把算这个结论用的原始数值留下 —— 调阈值全靠它
+            self._probe["settle"].append({
+                "pid": p["id"],
+                "overlap": round(feat.overlap, 3),
+                "formality": round(feat.formality, 3),
+                "formality_base": round(baseline_formality, 3),
+                "length": feat.length,
+                "topic": feat.topic,
+                "verdict": verdict.kind,
+                "settle": verdict.settle,
+            })
 
             if not verdict.settle:
                 warnings.append(f"预言 {p['id']} 挂起观察：{verdict.reason}")

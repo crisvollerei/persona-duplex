@@ -234,6 +234,19 @@ def cmd_stats(args) -> int:
     return 0
 
 
+def cmd_calibrate(args) -> int:
+    """从账本反推阈值该往哪调。只读，不改。"""
+    from .calibrate import collect, format_report
+
+    store = Store(args.data)
+    ledger = store.read_ledger()
+    if not ledger:
+        print(f"{store.root} 里还没有账本。先聊几轮再来。")
+        return 1
+    print(format_report(collect(ledger)))
+    return 0
+
+
 def _banner(sess: Session, online: bool) -> None:
     cfg = sess.engine.cfg
     r = cfg.role
@@ -312,6 +325,10 @@ def main(argv: list[str] | None = None) -> int:
     st = sub.add_parser("stats", help="从账本算指标")
     st.add_argument("-d", "--data", default="data")
     st.set_defaults(func=cmd_stats)
+
+    ca = sub.add_parser("calibrate", help="从账本反推阈值该怎么调")
+    ca.add_argument("-d", "--data", default="data")
+    ca.set_defaults(func=cmd_calibrate)
 
     args = ap.parse_args(argv)
     return args.func(args)
