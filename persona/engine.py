@@ -13,6 +13,7 @@ from .config import DISPLACE_NONE, PersonaConfig
 from .parse import ParsedTurn, parse
 from .prompt import (
     build_context_block,
+    build_history_entry,
     build_system_prompt,
     build_user_turn,
     stance_hint,
@@ -160,6 +161,9 @@ class TurnEngine:
         warnings.extend(parsed.errors)
         if parsed.declared:
             warnings.append("位移被声明了（硬失败）：" + " / ".join(parsed.declared[:2]))
+        if parsed.read_aloud:
+            warnings.append("「读」被说出口了（硬失败）："
+                            + " / ".join(parsed.read_aloud[:2]))
         if not parsed.is_consistent():
             warnings.append("HEAD 说有位移，但 direct 与 say 无法区分 —— 疑似装深沉")
 
@@ -220,9 +224,12 @@ class TurnEngine:
                 "displace": head.displace,
             })
 
+        # 历史里存带格式的版本，而不是纯 say。
+        # 只存 say 会让模型看到「前几轮我都在说大白话」，然后跟着不守协议 ——
+        # 这是 13 轮里 9 轮丢格式的直接原因。
         self.history.extend([
             {"role": "user", "content": user_text},
-            {"role": "assistant", "content": say},
+            {"role": "assistant", "content": build_history_entry(say, head)},
         ])
         self._last_user = user_text
         self._last_say = say

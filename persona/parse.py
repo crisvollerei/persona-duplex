@@ -26,6 +26,39 @@ _DECLARATION_PATTERNS = [
     r"我欲言又止",
 ]
 
+# 「声明读」——把「我在解读你」摆到台面上。
+# 被读懂的感觉来自你说得对，不来自你说你读懂了。
+# 一旦说出来，对方要处理的是你的洞察力，而不是他自己的事。
+_READ_ALOUD_PATTERNS = [
+    r"^猜",                 # 以「猜」开头 —— 真实数据里全中的是这一条
+    r"^听起来你",
+    r"^感觉你(?:其实|可能|好像)",
+    r"^我觉得你(?:其实|可能)",
+    r"^我读到你",
+    r"^你这不是在说",
+    r"^你不是在说.{1,20}，是",
+    r"^你其实(?:不是|并不)",
+    r"^(?:这|那)不像是在说",
+]
+
+
+def detect_read_aloud(text: str) -> list[str]:
+    """找出「猜你是……」这类把解读过程说出口的句子。
+
+    只在句首匹配：句中出现「猜」可能只是正常用词，
+    但一句话以「猜你」开头，几乎一定是在展示洞察。
+    """
+    hits: list[str] = []
+    for raw_line in (text or "").splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        for pat in _READ_ALOUD_PATTERNS:
+            if re.search(pat, line):
+                hits.append(line[:40])
+                break
+    return hits
+
 
 @dataclass
 class Head:
@@ -62,6 +95,7 @@ class ParsedTurn:
     say: str
     tail: Tail | None
     declared: list[str] = field(default_factory=list)   # 命中的声明句式
+    read_aloud: list[str] = field(default_factory=list)  # 命中的「猜你是……」句式
     errors: list[str] = field(default_factory=list)
 
     @property
@@ -291,5 +325,7 @@ def parse(raw: str) -> ParsedTurn:
 
     # 声明检查只看 SAY，因为那才是用户会看到的
     declared = detect_declarations(say_raw)
+    read_aloud = detect_read_aloud(say_raw)
 
-    return ParsedTurn(head=head, say=say_raw, tail=tail, declared=declared, errors=errors)
+    return ParsedTurn(head=head, say=say_raw, tail=tail, declared=declared,
+                      read_aloud=read_aloud, errors=errors)
