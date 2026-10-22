@@ -99,10 +99,29 @@ class TurnFeatures:
     has_filler: bool              # 语气词 / 表情
     gap_hours: float = 0.0
     semantic: str | None = None   # 模型自己在 TAIL 里给的判定
+    topic: str | None = None      # 异步判定的结果：returned / left / unclear
+    topic_why: str = ""
 
     @property
     def mentions_topic(self) -> bool:
+        """话题有没有回来。
+
+        语义判定优先于字面重合 —— 这就是接 LLM 的目的：
+        「投了两家简历」和「会说出具体方案」字面几乎不重合，语义上完全对上。
+        """
+        if self.topic == "returned":
+            return True
+        if self.topic == "left":
+            return False
         return self.overlap >= OVERLAP_KEEP
+
+    @property
+    def topic_left(self) -> bool:
+        if self.topic == "left":
+            return True
+        if self.topic == "returned":
+            return False
+        return self.overlap < OVERLAP_DROP
 
 
 def extract_features(
@@ -116,6 +135,8 @@ def extract_features(
     gap_hours: float = 0.0,
     semantic: str | None = None,
     similarity=None,
+    topic: str | None = None,
+    topic_why: str = "",
 ) -> TurnFeatures:
     text = user_text or ""
 
@@ -136,6 +157,8 @@ def extract_features(
         has_filler=any(e in text for e in _FILLERS),
         gap_hours=gap_hours,
         semantic=semantic,
+        topic=topic,
+        topic_why=topic_why,
     )
 
 
@@ -185,15 +208,16 @@ def judge(
         )
 
     # ③ 话题明显断了 —— 三种含义不可区分，挂起。
-    if feat.overlap < OVERLAP_DROP:
+    if feat.topic_left:
+        why = feat.topic_why or "没接话题"
         return Verdict(
             kind=WATCH,
-            reason="没接话题。可能只是不关注，可能回避，可能被冒犯 —— 现在判不了",
+            reason=f"{why}。可能只是不关注，可能回避，可能被冒犯 —— 现在判不了",
             settle=False,
         )
 
     # ④ 话题接住了。再排除「接了但话突然变很短」。
-    if feat.overlap >= OVERLAP_KEEP:
+    if feat.mentions_topic:
         if baseline_length is not None and baseline_length > 8 \
                 and feat.length < baseline_length * 0.5:
             return Verdict(
@@ -201,12 +225,13 @@ def judge(
                 reason="接了话题但话变很短，可能读准了但说早了，先挂起",
                 settle=False,
             )
-        return Verdict(kind=CONFIRMED, reason="接住了话题", settle=True)
+        why = feat.topic_why or "接住了话题"
+        return Verdict(kind=CONFIRMED, reason=why, settle=True)
 
     # ⑤ 中间地带：不判。
     return Verdict(
         kind=WATCH,
-        reason="话题重合度模棱两可，不猜",
+        reason=feat.topic_why or "话题重合度模棱两可，不猜",
         settle=False,
     )
 

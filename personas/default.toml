@@ -37,3 +37,9 @@ pending_max = 1         # 每轮最多挂起几条预言
 [watch]
 ttl_hours = 72.0        # WATCH 挂起多久。三天。
 confidence_floor = 0.25 # 低于此的把握度一律降级为问句
+
+[judge]
+# 话题判定：接 LLM 做语义判断。
+# 异步跑、和主生成并行，所以不会拖慢对话；超时立刻退回字面判定。
+enabled = true
+grace = 0.35            # 秒。收集时最多等这么久，超了立刻用字面兜底。

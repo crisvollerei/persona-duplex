@@ -56,9 +56,22 @@ def _make_session(args, *, streaming: bool) -> Session:
     store = Store(args.data)
     llm = openai_compatible(args.model)
     stream_llm = openai_stream(args.model) if streaming else None
+
+    # 话题判定单独走一个轻模型：不开思考、temperature=0、输出极短。
+    # 它异步跑，和主生成并行，所以永远不会拖慢对话。
+    fast_llm = None
+    if not args.no_judge:
+        fast_llm = openai_compatible(
+            args.judge_model or args.model,
+            temperature=0.0,
+            max_tokens=120,
+            timeout=cfg.judge_timeout,
+        )
+
     return Session(
         cfg, store, llm,
         stream_llm=stream_llm,
+        fast_llm=fast_llm,
         options=SessionConfig(stream=streaming),
     )
 
@@ -279,6 +292,10 @@ def main(argv: list[str] | None = None) -> int:
                        help="人格配置名或 toml 路径")
         p.add_argument("-d", "--data", default="data", help="数据目录")
         p.add_argument("-m", "--model", default="gpt-4o-mini")
+        p.add_argument("-j", "--judge-model", default=None,
+                       help="话题判定用的轻模型（默认跟随主模型）")
+        p.add_argument("--no-judge", action="store_true",
+                       help="关掉 LLM 话题判定，退回字面")
         return p
 
     common(sub.add_parser("chat", help="普通对话")).set_defaults(func=cmd_chat)

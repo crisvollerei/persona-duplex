@@ -27,3 +27,7 @@ pending_max = 1
 [watch]
 ttl_hours = 72.0
 confidence_floor = 0.25
+
+[judge]
+enabled = true
+grace = 0.35

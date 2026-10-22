@@ -18,6 +18,7 @@ from .config import PersonaConfig
 from .consolidate import Consolidator
 from .engine import TurnEngine, TurnResult
 from .store import Store
+from .topicjudge import build_judge
 
 
 @dataclass
@@ -38,6 +39,8 @@ class Session:
         *,
         stream_llm: Callable[[list[dict]], Iterator[str]] | None = None,
         similarity=None,
+        judge=None,
+        fast_llm: Callable[[list[dict]], str] | None = None,
         options: SessionConfig | None = None,
     ):
         self.opts = options or SessionConfig()
@@ -46,6 +49,9 @@ class Session:
             cfg, store, llm,
             similarity=similarity if similarity is not None else _default_sim(),
             stream_llm=stream_llm,
+            judge=judge if judge is not None else build_judge(
+                cfg, fast_llm, similarity=similarity
+            ),
         )
         self.consolidator = Consolidator(store)
         self._closed = False

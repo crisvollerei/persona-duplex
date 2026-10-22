@@ -5,6 +5,7 @@
 """
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass, field
 from typing import Callable, Iterator
 
@@ -73,12 +74,14 @@ class TurnEngine:
         *,
         similarity=DEFAULT_SIMILARITY,
         stream_llm: Callable[[list[dict]], Iterator[str]] | None = None,
+        judge=None,
     ):
         self.cfg = cfg
         self.store = store
         self.llm = llm
         self.stream_llm = stream_llm
         self.sim = similarity
+        self.judge = judge
         self.history: list[dict] = []
         self._last_user = ""
         self._last_say = ""
@@ -97,18 +100,21 @@ class TurnEngine:
         turn_id = self.store.next_id("t")
         warnings: list[str] = []
         self._turn_seq += 1
+        turn_started = time.monotonic()
 
-        # ---- 1. 先结算，再组装上下文。顺序不能反：
-        #        受伤是用「用户刚说的这句话」判出来的，
-        #        判完才知道这一轮要不要修复。如果先组装上下文，
-        #        模型就永远晚一轮才知道自己伤到人了。
+        # ---- 1. 修复反应判定。这个必须同步：它决定上下文里要不要放
+        #        「你伤到对方了」的提示。但它只看语域，不调模型。
         repair_closed = self._judge_repair_response(user_text, warnings)
-        settled = self._settle_with(user_text, warnings)
 
-        # ---- 2. 组装上下文。此时预言都还挂着 —— 模型需要在上下文里
+        # ---- 2. 把话题判定发射出去。注意这里只是发射，不等 ——
+        #        它会在主模型生成的同时并行跑，生成完再收。
+        pendings_snapshot = self.store.pendings()
+        judge_handle = self._submit_topic_judge(user_text, pendings_snapshot)
+
+        # ---- 3. 组装上下文。此时预言都还挂着 —— 模型需要在上下文里
         #        看见它们，才能在 TAIL 里给出自己的判定。
         relation = self.store.relation()
-        pendings = self.store.pendings()
+        pendings = pendings_snapshot
         judgments = self.store.judgments()
 
         sys_prompt = build_system_prompt(self.cfg)
@@ -131,8 +137,21 @@ class TurnEngine:
                                     + "\n\n" + build_user_turn(user_text)},
         ]
 
-        # ---- 3. 生成（流式或整段）
+        # ---- 4. 生成（流式或整段）。话题判定就在这段时间里跑完了。
         raw, parsed = self._generate(messages, on_delta)
+
+        # ---- 5. 收判定。deadline 从这一轮开始算，所以如果生成已经
+        #        用光了预算，这里会立刻返回字面兜底，绝不额外加延迟。
+        topic_verdicts, topic_source = self._collect_topic_judge(
+            judge_handle, user_text, pendings_snapshot, turn_started
+        )
+        if topic_source == "timeout":
+            warnings.append("话题判定超时，退回字面判定")
+        elif topic_source == "bigram":
+            warnings.append("话题判定不可用，退回字面判定")
+
+        # ---- 6. 结算（用刚收到的语义判定）
+        settled = self._settle_with(user_text, warnings, topic_verdicts)
 
         warnings.extend(parsed.errors)
         if parsed.declared:
@@ -230,6 +249,39 @@ class TurnEngine:
 
         raw = self.llm(messages)
         return raw, parse(raw)
+
+    # ------------------------------------------------------------ 话题判定
+
+    def _submit_topic_judge(self, user_text: str, pendings: list[dict]):
+        """发射一次异步判定。没有判定器就返回 None。"""
+        if self.judge is None or not pendings:
+            return None
+        from .topicjudge import JudgeRequest
+
+        extra = {p["id"]: list(self._pending_topic.get(p["id"], []))
+                 for p in pendings}
+        req = JudgeRequest(
+            user_text=user_text,
+            prev_ai_say=self._last_say,
+            prev_user_text=self._last_user,
+            pendings=pendings,
+            extra_refs=extra,
+        )
+        try:
+            return self.judge.submit(req)
+        except Exception:
+            return None
+
+    def _collect_topic_judge(self, handle, user_text: str,
+                             pendings: list[dict], turn_started: float):
+        """收判定。超时或失败一律退回字面，绝不让对话变慢。"""
+        if handle is None:
+            return {}, "none"
+        try:
+            verdicts, source = handle.collect()
+            return verdicts, source
+        except Exception:
+            return {}, "bigram"
 
     # ------------------------------------------------------------ 修复
 
@@ -331,9 +383,11 @@ class TurnEngine:
 
     # ------------------------------------------------------------ 结算
 
-    def _settle_with(self, user_text: str, warnings: list[str]) -> list[dict]:
+    def _settle_with(self, user_text: str, warnings: list[str],
+                     topic_verdicts: dict | None = None) -> list[dict]:
         """拿用户这一句话，去核对上一轮的预言。"""
         out: list[dict] = []
+        topic_verdicts = topic_verdicts or {}
         pendings = self.store.pendings()
         if not pendings:
             return out
@@ -349,6 +403,7 @@ class TurnEngine:
         for p in pendings:
             gap = _hours_since(p.get("created", ""))
             extra = list(self._pending_topic.get(p["id"], []))
+            tv = topic_verdicts.get(p["id"])
             feat = extract_features(
                 user_text,
                 pending_claim=p.get("claim", ""),
@@ -359,6 +414,8 @@ class TurnEngine:
                 gap_hours=gap,
                 semantic=semantic.get(p["id"]),
                 similarity=self.sim,
+                topic=tv.verdict if tv else None,
+                topic_why=tv.why if tv else "",
             )
 
             verdict = judge(feat, baseline_formality=self._baseline_formality(),
@@ -380,6 +437,7 @@ class TurnEngine:
                 self.store.append("pending_settle", {
                     "pending_id": p["id"], "outcome": outcome,
                     "evidence": verdict.reason,
+                    "topic_source": tv.verdict if tv else None,
                 })
                 out.append({**closed, "label": OUTCOME_LABEL.get(outcome, "校准账本")})
                 self._apply_outcome(p, outcome)

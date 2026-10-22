@@ -76,6 +76,10 @@ class PersonaConfig:
     watch_ttl_hours: float = 72.0
     confidence_floor: float = 0.25
 
+    # 话题判定：接 LLM 做语义判断，异步跑，不开思考模式
+    judge_enabled: bool = True
+    judge_grace: float = 0.35
+
     # ---------------------------------------------------------- 判定
 
     def stance_for(self, confidence: float) -> str:
@@ -143,6 +147,7 @@ class PersonaConfig:
         )
 
         watch = raw.get("watch", {})
+        judge = raw.get("judge", {})
         return cls(
             role=role,
             needs=needs,
@@ -150,4 +155,6 @@ class PersonaConfig:
             limits=limits,
             watch_ttl_hours=float(watch.get("ttl_hours", 72.0)),
             confidence_floor=float(watch.get("confidence_floor", 0.25)),
+            judge_enabled=bool(judge.get("enabled", True)),
+            judge_grace=float(judge.get("grace", 0.35)),
         )
