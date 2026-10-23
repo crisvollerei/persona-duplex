@@ -41,7 +41,8 @@ from __future__ import annotations
 import re
 
 from .config import DISPLACE_KINDS, DISPLACE_NONE
-from .parse import Head, ParsedTurn, PendingDraft, SettleItem, Tail, _similar
+from .parse import (Head, ParsedTurn, PendingDraft, SettleItem, Tail,
+                    _similar, detect_declarations, detect_read_aloud, safe_say)
 
 # ---------------------------------------------------------------- schema
 
@@ -354,9 +355,12 @@ class StreamCleanPhase2:
 
             # 没有换行符
             cur = self.buf
-            if self._could_be_field(cur) or self._FIELD_INLINE.search(cur):
+            if self._could_be_field(cur, final=final) or self._FIELD_INLINE.search(cur):
                 if final:
+                    # 收尾时还被扣着的内容必须放行 —— 此时不可能再长出字段行。
+                    # 旧实现直接 self.buf = "" 丢掉，实测 "yes" 只输出 "ye"。
                     self.buf = ""
+                    return out_len + len(cur) if cur else (out_len or None)
                 return out_len or None
             if final:
                 return out_len + len(cur) if cur else (out_len or None)
@@ -385,16 +389,67 @@ class StreamCleanPhase2:
         return "".join(keep)
 
     @staticmethod
-    def _could_be_field(line: str) -> bool:
-        """这一行有没有可能正在长成「settle: ...」这样的字段行。"""
+    def _could_be_field(line: str, *, final: bool = False) -> bool:
+        """这一行有没有可能正在长成「settle: ...」这样的字段行。
+
+        **必须要求冒号存在或行还没写完** —— 只做前缀匹配会吞掉正常句子：
+        "Sounds good" 逐字喂进来时 "Sounds goo" 的前缀 "s" 以 settle/..."
+        这些词开头的话就会被扣住不放。实测英文被吞字、中文正常
+        （中文前缀不会撞上字段名），所以中文测试抓不到。
+
+        判据：
+          · 已经出现冒号     -> 可能是字段行，扣住
+          · 有冒号但字段名不在前面 -> 是正文，放行
+          · 完全还没冒号且前缀像字段名 -> 再等等（final 时无条件放行）
+        """
         s = line.lstrip()
         if not s:
             return True
+        # 已有冒号 = 这一行已经成形，看字段名是否在冒号前
+        if ":" in s or "：" in s:
+            head = re.split(r"[:：]", s, maxsplit=1)[0].strip().lower()
+            return head in ("settle", "delta", "pending", "need",
+                            "confidence", "direct", "displace")
+        if final:
+            # 收尾了还没冒号 —— 不可能是字段行
+            return False
+        # 还没冒号：只有「整行都还是字段名的前缀」才值得等
+        low = s.lower()
         for word in ("settle", "delta", "pending", "need", "confidence",
                      "direct", "displace"):
-            if word.startswith(s.lower()) or s.lower().startswith(word):
+            if word.startswith(low) and low:
                 return True
         return False
+
+
+def _looks_like_head_fields(text: str) -> bool:
+    """这段文本像不像 HEAD 的字段内容（而不是正常回复）。
+
+    用于 clean_phase2 切分之后 —— 即使标记切对了，
+    切出来的「最后一段」也可能是 HEAD 的残片：
+        "正文。<<<HEAD>>>秘密想法"  ->  '秘密想法'
+    这时候只能靠内容判断：极短、无标点、不像人说的话。
+    """
+    t = (text or "").strip()
+    if not t:
+        return False
+    # 含字段名直接判
+    if re.search(r"(need|confidence|direct|displace)\s*[:：]", t, re.IGNORECASE):
+        return True
+    # 极短且不含任何句末标点 —— 正常的 SAY 不会这么写
+    return len(t) <= 20 and not re.search(r"[。！？.!?，,~…]", t)
+
+
+def _split_head_fields(text: str) -> list[str]:
+    """把一段疑似 HEAD 的内容按字段名切开，返回各字段的值。
+
+    用于判断「标记之后切出来的这段」是不是某个 HEAD 字段的残片：
+        "正文。<<<HEAD>>>秘密想法"  ->  切出的 '秘密想法'
+    单独看它像正常句子，只有和 HEAD 字段值比对才认得出。
+    """
+    parts = re.split(r"(?:need|confidence|direct|displace)\s*[:：]",
+                     text or "", flags=re.IGNORECASE)
+    return [p.strip() for p in parts if p.strip()]
 
 
 def clean_phase2(say: str) -> str:  # noqa: D401
@@ -410,10 +465,18 @@ def clean_phase2(say: str) -> str:  # noqa: D401
     text = re.sub(r"^[ \t]*(settle|delta|pending)[ \t]*[:：].*$", "",
                   text, flags=re.MULTILINE).strip()
     if not _ANY_MARKER.search(text):
-        return text
+        # 没有标记也要过安全闸 —— 模型可能只写字段块不写标记，
+        # 那种「整段就是回复」的兜底会把 direct 送出去。
+        return safe_say(text)
     # 优先保留最后一个标记之后的内容（那才是真正的 SAY）
     parts = _ANY_MARKER.split(text)
     tail = parts[-1].strip()
+
+    # 标记之前如果有 HEAD 字段，说明这是「正文 + 重新写了一遍 HEAD」。
+    # 那标记之后的 tail 就是 HEAD 的残片，不是回复 —— 整段作废。
+    before = "".join(parts[:-1])
+    if _split_head_fields(before):
+        return ""
     if tail:
         # 去掉可能残留的字段行（need: / confidence: / direct: / displace:）
         lines = [ln for ln in tail.splitlines()
@@ -422,9 +485,22 @@ def clean_phase2(say: str) -> str:  # noqa: D401
                      r"[ \t]*[:：]", ln, re.IGNORECASE)]
         cleaned = "\n".join(lines).strip()
         if cleaned:
-            return cleaned
-    # 兜底：标记之前的部分
-    return parts[0].strip()
+            # 切出来的这段仍要过安全闸。
+            # 实测 "正文。<<<HEAD>>>秘密想法" 会切出 '秘密想法' ——
+            # 标记之后的「最后一段」也可能是 HEAD 的残片。
+            guarded = safe_say(cleaned)
+            if guarded and not _looks_like_head_fields(guarded):
+                return guarded
+
+    # **不要**退回「标记之前的部分」。
+    #
+    # 那段通常正是 HEAD 的四个字段（含 direct）。实测：
+    #   clean_phase2("direct: 秘密想法\n<<<SAY>>>") -> 'direct: 秘密想法'
+    # tool 协议下这个值直接变成 res.say 发给用户，warnings 还是空的。
+    #
+    # 空回复是可接受的失败 —— 用户会再问一句；
+    # direct 泄露他可能就再也不说了。
+    return ""
 
 
 
@@ -472,6 +548,29 @@ def tail_tool(pendings: list[dict]) -> dict:
                             "predicts": {"type": "string"},
                         },
                         "required": ["claim", "confidence", "predicts"],
+                        "additionalProperties": False,
+                    },
+                    # delta：关系增量。
+                    #
+                    # 少了这个通道，tool / persona 协议下的关系账本永远
+                    # 停在初始值 —— 实测 3 轮后 relation 仍是默认的
+                    # {closeness: 0.3, unresolved: [], ...}，
+                    # ledger 里 relation_delta 全是 {}。
+                    # 而 text 协议是有的，三个协议行为不一致。
+                    "delta": {
+                        "type": ["object", "null"],
+                        "description": "这一轮的关系增量。没有就给 null。",
+                        "properties": {
+                            "closeness": {"type": "number"},
+                            "unresolved": {"type": "array",
+                                           "items": {"type": "string"}},
+                            "sore_points": {"type": "array",
+                                            "items": {"type": "string"}},
+                            "inside_jokes": {"type": "array",
+                                             "items": {"type": "string"}},
+                        },
+                        "required": ["closeness", "unresolved",
+                                     "sore_points", "inside_jokes"],
                         "additionalProperties": False,
                     },
                 },
@@ -526,9 +625,21 @@ def parse_tail(data: dict) -> Tail:
         if not pid or outcome not in ("confirmed", "refuted", "watch"):
             continue
         if outcome == "watch":
-            # watch 不结算 —— 预言继续挂着，等下一轮
+            # watch 不结算，但**要记住模型说过 watch** ——
+            # 引擎靠它避免退回字面判定。
+            tail.watch.append(pid)
             continue
         tail.settle.append(SettleItem(pid, outcome, str(item.get("evidence", "") or "")))
+    # delta：关系增量。engine 会再过一遍白名单 + 限额。
+    d = data.get("delta")
+    if isinstance(d, dict):
+        got = {}
+        for key in ("closeness", "unresolved", "sore_points", "inside_jokes"):
+            if key in d and d[key] not in (None, ""):
+                got[key] = d[key]
+        if got:
+            tail.delta = got
+
     p = data.get("pending")
     if isinstance(p, dict):
         claim = str(p.get("claim", "") or "").strip()
@@ -548,13 +659,27 @@ def to_parsed(inner: Head, say: str) -> ParsedTurn:
     tail 给一个空骨架 —— 这一步不产出 settle / pending，
     那是引擎在 phase 2 之后单独补的（见 engine._tool_turn）。
     """
+    # declared / read_aloud 必须真的检测 —— 写死空列表会让「硬失败」
+    # 在 tool / persona 协议下完全失效。
+    # 实测同一句话 "我猜你早就想辞职了。我本来想说你该走了。"：
+    #   text   协议 -> declared=2, warnings=[硬失败…]
+    #   tool   协议 -> declared=[], read_aloud=[], warnings=[]
+    # 也就是 README 的硬约束在结构化协议里等于不存在。
+    final_say = safe_say(say)
+    declared_hits = detect_declarations(final_say)
+    read_hits = detect_read_aloud(final_say)
+
+    errors: list[str] = []
+    if not final_say and (say or "").strip():
+        errors.append("SAY 被安全闸清空（疑似协议残留）")
+
     return ParsedTurn(
         head=inner,
-        say=(say or "").strip(),
+        say=final_say,
         tail=Tail(),
-        declared=[],
-        read_aloud=[],
-        errors=[],
+        declared=declared_hits,
+        read_aloud=read_hits,
+        errors=errors,
     )
 
 

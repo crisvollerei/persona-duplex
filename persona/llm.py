@@ -66,7 +66,14 @@ def openai_compatible(
         if extra:
             body.update(extra)
         payload = _post(url, key, body, timeout)
-        return payload["choices"][0]["message"]["content"]
+        # content 可能是 None —— 模型只回了 tool_calls、被 content_filter
+        # 拦下、或者拒答。直接返回 None 会让下游 parse 里 text.find 崩。
+        # 返回空串，让 parse 走「缺少 SAY」的正常失败路径。
+        try:
+            content = payload["choices"][0]["message"].get("content")
+        except (KeyError, IndexError, TypeError):
+            return ""
+        return content if isinstance(content, str) else ""
 
     return call
 

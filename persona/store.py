@@ -112,14 +112,22 @@ class Store:
     def _view_path(self, name: str) -> Path:
         return self.state_dir / f"{name}.json"
 
-    def load_view(self, name: str, default: dict | None = None) -> dict:
+    def load_view(self, name: str, default: dict | None = None) -> dict | None:
+        """读一个 state 视图。
+
+        default=None 时，文件不存在/损坏就返回 None —— 调用方靠它
+        区分「这个视图确实不存在」和「存在但是空的」。
+        比如 pendings() 要用这个信号触发从账本重放。
+        """
         p = self._view_path(name)
         if not p.exists():
-            return dict(default or {})
+            return None if default is None else dict(default)
         try:
-            return json.loads(p.read_text(encoding="utf-8"))
+            got = json.loads(p.read_text(encoding="utf-8"))
+            return got if isinstance(got, dict) else (None if default is None
+                                                      else dict(default))
         except (OSError, json.JSONDecodeError):
-            return dict(default or {})
+            return None if default is None else dict(default)
 
     def save_view(self, name: str, data: dict) -> None:
         p = self._view_path(name)
@@ -189,7 +197,19 @@ class Store:
     # ------------------------------------------------------------ 挂起
 
     def pendings(self) -> list[dict]:
-        return self.load_view("pending", {"items": []}).get("items", [])
+        """读挂起的预言。文件坏了就从账本重放。
+
+        不重建的话，state/pending.json 一损坏就静默返回 []，
+        而账本里 pending_add 还在 —— 预言凭空消失，没有任何提示。
+        """
+        data = self.load_view("pending", None)
+        if data is None:
+            # 文件不存在 —— 试着从账本重放
+            rebuilt = replay_pendings(self.read_ledger())
+            if rebuilt:
+                self._save_pendings(rebuilt)
+            return rebuilt
+        return data.get("items", [])
 
     def _save_pendings(self, items: list[dict]) -> None:
         self.save_view("pending", {"items": items})
@@ -482,15 +502,54 @@ class Store:
         p = self.buffer_dir / f"{stamp}_{seq:06d}.json"
         p.write_text(json.dumps(rec, ensure_ascii=False), encoding="utf-8")
 
+    @property
+    def processing_dir(self) -> Path:
+        d = self.buffer_dir / "processing"
+        d.mkdir(parents=True, exist_ok=True)
+        return d
+
     def drain_buffer(self, max_items: int = 20) -> list[dict]:
-        out = []
+        """把积压的事件取出来。
+
+        **不直接删除** —— 先移到 buffer/processing/，等调用方确认处理完
+        再调 commit_drained()。处理失败就调 restore_drained() 放回去。
+        """
+        out, moved = [], []
         for p in sorted(self.buffer_dir.glob("*.json"))[:max_items]:
             try:
-                out.append(json.loads(p.read_text(encoding="utf-8")))
+                rec = json.loads(p.read_text(encoding="utf-8"))
             except (OSError, json.JSONDecodeError):
+                p.unlink(missing_ok=True)      # 坏文件丢掉，没别的办法
+                continue
+            try:
+                p.rename(self.processing_dir / p.name)
+                moved.append(p.name)
+            except OSError:
                 pass
-            p.unlink(missing_ok=True)
+            out.append(rec)
+        self._drained = moved
         return out
+
+    def commit_drained(self) -> None:
+        """处理成功，把 staging 里的删掉。"""
+        for name in getattr(self, "_drained", []):
+            (self.processing_dir / name).unlink(missing_ok=True)
+        self._drained = []
+
+    def restore_drained(self) -> None:
+        """处理失败，把事件放回 buffer。
+
+        不这么做的话，drain 之后任何异常都会让那批对话永久丢失 ——
+        实测 OSError 之后 buffer 3 -> 0，事件没了，判断也没产出。
+        """
+        for name in getattr(self, "_drained", []):
+            src = self.processing_dir / name
+            if src.exists():
+                try:
+                    src.rename(self.buffer_dir / name)
+                except OSError:
+                    pass
+        self._drained = []
 
 
 # ---------------------------------------------------------------- 判断记忆
@@ -510,6 +569,30 @@ def append_judgment(path: Path, judgment: str, confidence: float,
     with path.open("a", encoding="utf-8") as f:
         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
     return rec
+
+
+def replay_pendings(ledger: list[dict]) -> list[dict]:
+    """从账本重放出「还在挂着的预言」。
+
+    pending_add 之后没有对应 pending_settle / pending_expire 的，
+    就是还挂着的。用来在 state/pending.json 损坏时重建。
+    """
+    live: dict[str, dict] = {}
+    for r in ledger:
+        k = r.get("kind")
+        if k == "pending_add":
+            pid = r.get("pending_id")
+            if pid:
+                live[str(pid)] = {
+                    "id": str(pid),
+                    "claim": r.get("claim", ""),
+                    "predicts": r.get("predicts", ""),
+                    "created": r.get("t", ""),
+                    "turn_id": r.get("turn_id", ""),
+                }
+        elif k in ("pending_settle", "pending_expire"):
+            live.pop(str(r.get("pending_id") or ""), None)
+    return list(live.values())
 
 
 def replay_traits(ledger: list[dict]) -> dict:

@@ -13,7 +13,8 @@ if TYPE_CHECKING:
     from .parse import SettleItem
 
 from .config import DISPLACE_NONE, PersonaConfig
-from .parse import ParsedTurn, Tail, has_exit_offer, parse, plain_text
+from .parse import (ParsedTurn, Tail, has_exit_offer, parse, plain_text,
+                    safe_say)
 from .prompt import (
     build_context_block,
     build_history_entry,
@@ -247,20 +248,29 @@ class TurnEngine:
         # ---- 6. 结算。模型自己的 TAIL 判定是主路径，必须和启发式一起送进去，
         #        否则启发式先关掉 pending，模型判定就无处生效。
         model_settle = {it.pending_id: it for it in (parsed.tail.settle if parsed.tail else [])}
+        model_watch = set(parsed.tail.watch) if parsed.tail else set()
         settled = self._settle_with(user_text, warnings, topic_verdicts,
-                                    model_settle=model_settle)
+                                    model_settle=model_settle,
+                                    model_watch=model_watch)
 
         warnings.extend(parsed.errors)
 
-        # auto 模式：这一轮协议失效了就升级到 tool 协议，之后不再降级回来。
-        # 只在 text 路径生效 —— tool 路径失败时已经自己退回过 text 了。
-        if self.protocol == "auto" and not parsed.errors and parsed.head is not None:
-            pass
-        elif self.protocol == "auto" and parsed.head is None:
-            self._protocol_failures += 1
-        if self.protocol == "auto" and self._protocol_failures >= 2:
-            self.protocol = "tool"
-            warnings.append("文本协议连续失效，已切换到 tool 协议（两阶段）")
+        # auto 模式：协议失效就升级到 tool，之后不再降级回来。
+        #
+        # 两条修过的判据：
+        #  · 失效 = parsed.errors 非空（不只 head is None）。
+        #    README 明说「缺 TAIL」算失效，而 tool 协议本来就是因为
+        #    「缺 TAIL」才需要兜底的 —— 旧判据永远升不了级。
+        #  · 成功一轮要清零，否则 fail->success->fail 也会升级，
+        #    那不是「连续」失效。
+        if self.protocol == "auto":
+            if parsed.errors:
+                self._protocol_failures += 1
+            else:
+                self._protocol_failures = 0
+            if self._protocol_failures >= 2:
+                self.protocol = "tool"
+                warnings.append("文本协议连续失效，已切换到 tool 协议（两阶段）")
 
         if parsed.declared:
             warnings.append("位移被声明了（硬失败）：" + " / ".join(parsed.declared[:2]))
@@ -471,15 +481,31 @@ class TurnEngine:
                 say_raw = self.llm(msgs2)
                 say = protocol.clean_phase2(say_raw)
         except Exception as e:
-            warnings.append(f"人设化阶段失败（{e}），退回文本协议")
             self._protocol_failures += 1
-            return self._generate(fallback_messages, on_delta)
+            # 已经吐给用户的内容不能再吐一遍 —— 否则用户看到两遍，
+            # 而账本只记一遍（账本在说谎）。
+            # 实测：人设化吐了半句后连接断，退回文本协议 ->
+            # 用户看到「你都想过哪些了。你都想过哪些了。」
+            if say_raw.strip():
+                warnings.append(f"人设化阶段失败（{e}），已输出的部分就地收尾")
+                say = protocol.clean_phase2(say_raw)
+                if not say:
+                    return self._generate(fallback_messages, on_delta)
+            else:
+                warnings.append(f"人设化阶段失败（{e}），退回文本协议")
+                return self._generate(fallback_messages, on_delta)
 
         if not say:
             self._probe.setdefault("persona", {})["say_raw"] = say_raw[:300]
-            warnings.append("人设化产出为空，退回文本协议")
             self._protocol_failures += 1
-            return self._generate(fallback_messages, on_delta)
+            if say_raw.strip():
+                warnings.append("人设化产出被清洗为空，已输出的部分就地收尾")
+                say = safe_say(say_raw)
+                if not say:
+                    return self._generate(fallback_messages, on_delta)
+            else:
+                warnings.append("人设化产出为空，退回文本协议")
+                return self._generate(fallback_messages, on_delta)
 
         # ---- 3. 结算
         tail = self._tool_tail(parsed=protocol.to_parsed(head, say),
@@ -546,16 +572,29 @@ class TurnEngine:
                 say_raw = self.llm(msgs2)
                 say = protocol.clean_phase2(say_raw)
         except Exception as e:
-            warnings.append(f"两阶段 phase 2 失败（{e}），退回文本协议")
             self._protocol_failures += 1
-            return self._generate(fallback_messages, on_delta)
+            # 同上：已经吐过的不能重来。
+            if say_raw.strip():
+                warnings.append(f"两阶段 phase 2 失败（{e}），已输出的部分就地收尾")
+                say = protocol.clean_phase2(say_raw)
+                if not say:
+                    return self._generate(fallback_messages, on_delta)
+            else:
+                warnings.append(f"两阶段 phase 2 失败（{e}），退回文本协议")
+                return self._generate(fallback_messages, on_delta)
 
         if not say:
             # 把原始输出留在 probe 里，否则「为什么为空」永远查不出来
             self._probe.setdefault("protocol", {})["phase2_raw"] = say_raw[:400]
-            warnings.append(f"phase 2 产出为空（原始 {len(say_raw)} 字），退回文本协议")
             self._protocol_failures += 1
-            return self._generate(fallback_messages, on_delta)
+            if say_raw.strip():
+                warnings.append("phase 2 产出被清洗为空，已输出的部分就地收尾")
+                say = safe_say(say_raw)
+                if not say:
+                    return self._generate(fallback_messages, on_delta)
+            else:
+                warnings.append(f"phase 2 产出为空（原始 0 字），退回文本协议")
+                return self._generate(fallback_messages, on_delta)
 
         ok, why = protocol.displacement_ok(inner, say)
         if not ok:
@@ -737,7 +776,8 @@ class TurnEngine:
 
     def _settle_with(self, user_text: str, warnings: list[str],
                      topic_verdicts: dict | None = None,
-                     model_settle: dict[str, "SettleItem"] | None = None) -> list[dict]:
+                     model_settle: dict[str, "SettleItem"] | None = None,
+                     model_watch: set[str] | None = None) -> list[dict]:
         """拿用户这一句话，去核对上一轮的预言。
 
         判定优先级（见 settle.py 模块 docstring）：
@@ -752,6 +792,7 @@ class TurnEngine:
         out: list[dict] = []
         topic_verdicts = topic_verdicts or {}
         model_settle = model_settle or {}
+        model_watch = model_watch or set()
 
         # 先清扫过期，再读剩下的。顺序反了会把过期的那条也送进判定循环，
         # 在 probe 里留下一条并不存在的 WATCH 样本。
@@ -788,6 +829,15 @@ class TurnEngine:
                 topic_why=tv.why if tv else "",
                 minimal_streak=self._minimal_streak.get(p["id"], 0),
             )
+
+            # 模型明确说 watch -> 直接 WATCH，不要退回字面判定。
+            # 丢掉这个意图的话，「只是附和没接话题」可能被判成 CONFIRMED，
+            # 凭空提高命中率、污染校准账本。
+            if p["id"] in model_watch:
+                results.append({"pid": p["id"], "verdict": "WATCH",
+                                "settle": False,
+                                "why": "模型判 watch（再等等）"})
+                continue
 
             verdict = judge(feat, baseline_formality=baseline_formality,
                             baseline_length=baseline_len)

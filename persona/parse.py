@@ -151,6 +151,9 @@ class Tail:
     settle: list[SettleItem] = field(default_factory=list)
     delta: dict = field(default_factory=dict)
     pending: PendingDraft | None = None
+    # 模型明确说「再等等」的预言 id。必须保留 ——
+    # 丢掉的话引擎会退回字面判定，可能把「只是附和」判成 CONFIRMED。
+    watch: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -208,6 +211,12 @@ def _similar(a: str, b: str, threshold: float = 0.9) -> bool:
         return True
     shorter, longer = (na, nb) if len(na) <= len(nb) else (nb, na)
     if len(shorter) < 4:
+        # 短句不能直接判「非复述」。
+        # 实测 direct='别走' say='别走啊' —— 明显是复述，但旧逻辑
+        # 因为 shorter 只有 2 字就 return False，装深沉完全抓不到。
+        # 短句改用「包含」判断：短的整个出现在长的里面就是复述。
+        if len(shorter) >= 2 and shorter in longer:
+            return len(shorter) / len(longer) > 0.5
         return False
     common = sum(1 for c in set(shorter) if c in longer)
     return common / max(1, len(set(shorter))) >= threshold and \
@@ -244,16 +253,101 @@ def _after_head_fields(block: str) -> str:
     return "".join(lines[last_field + 1:])
 
 
+# 宽松的标记识别：容忍大小写、空格、少写一个 ">"
+_SECTION_LOOSE = re.compile(
+    r"<<\s*\^?\s*(HEAD|SAY|TAIL)\s*>>+", re.IGNORECASE
+)
+
+# HEAD 字段行：允许前后空白、全角冒号、大小写
+_FIELD_LINE = re.compile(
+    r"^[ \t]*(need|confidence|direct|displace)[ \t]*[:：]",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+# 模型有时不写字段名，而是用脚手架式的括号回显：
+#   （内心：……／位移方式：降级）
+_SCAFFOLD = re.compile(
+    r"[（(]\s*(内心|心里话|素回复|原始回复|位移方式|判断)[^）)]*[）)]"
+)
+
+
+def _looks_like_protocol(text: str) -> bool:
+    """这段文本像不像「协议残留」而不是正常回复。
+
+    判据取最宽的那种 —— 宁可误杀也不要漏放：
+      · 任何形式的段落标记（容忍写错大小写/空格/少个 >）
+      · 出现 HEAD 字段行（need:/confidence:/direct:/displace:）
+      · 出现脚手架式回显（（内心：…））
+
+    为什么要这么宽：DIRECT 永不进入输出是硬约束，
+    而模型漏写标记是很常见的漂移。实测四种漏法：
+        1. 完全不写标记，只写四个字段
+        2. 标记写错（<<<SAY>> 少一个 >）
+        3. 流式解析走另一条路，没经过分段的 guard
+        4. tool/persona 的 clean_phase2 把标记之前当正文
+    逐处打补丁总会漏一处，所以统一在这里判。
+    """
+    t = text or ""
+    if not t.strip():
+        return False
+    return bool(_SECTION_LOOSE.search(t) or _FIELD_LINE.search(t)
+                or _SCAFFOLD.search(t))
+
+
+# 模型把内部特殊 token 当正文写出来了。
+# 实测 DeepSeek 会在回复末尾带上 "<｜end▁of▁sentence｜>" ——
+# 这个给用户看是明显的 bug。用正则通吃各家写法：
+#   <|endoftext|>  <｜end▁of▁sentence｜>  <end_of_turn>  [INST] ...
+_SPECIAL_TOKEN = re.compile(
+    r"<[|｜]?[\w▁\s]{1,40}[|｜]?>\s*$"      # 结尾的特殊 token
+    r"|<[|｜][^>]{1,40}[|｜]>"                  # 任何位置的 <|...|> 形式
+)
+
+
+def strip_special_tokens(text: str) -> str:
+    """去掉模型漏出来的特殊 token。
+
+    这些不该出现在用户可见文本里。注意只在**结尾**或**明确的
+    <|...|> 形式**上动手 —— 不能把正常的尖括号内容（比如
+    「<3」或者代码片段）也删了。
+    """
+    t = text or ""
+    prev = None
+    while prev != t:
+        prev = t
+        t = _SPECIAL_TOKEN.sub("", t).rstrip()
+    return t
+
+
+def safe_say(text: str) -> str:
+    """最后一道闸：用户可见的文本必须过这里。
+
+    这是硬约束的落点，**所有出口**都要过：
+        parse 的 SAY 段、stream 的最终文本、clean_phase2 的结果。
+
+    做两件事：
+      1. 去掉漏出来的特殊 token（<｜end▁of▁sentence｜> 之类）
+      2. 看起来像协议残留就整段清空 —— 宁可这轮没回复，
+         也不能把内心独白发出去。空回复用户会再问一句，
+         direct 泄露他可能就再也不说了。
+    """
+    t = strip_special_tokens((text or "").strip())
+    if not t:
+        return ""
+    if _looks_like_protocol(t):
+        return ""
+    return t
+
+
 def plain_text(raw: str) -> str:
     """没有任何协议标记时，整段就是回复。
 
-    一旦出现标记，说明这轮解析失败 —— 此时**不能**拿原文兜底，
+    一旦出现标记 —— 或者看起来像协议残留 —— 就不能拿原文兜底，
     否则 HEAD 里的 direct 会被当成回复发给用户。宁可空着。
     """
-    text = raw or ""
-    if any(m in text for m in (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)):
+    if _looks_like_protocol(raw or ""):
         return ""
-    return text.strip()
+    return (raw or "").strip()
 
 
 def _split_sections(raw: str) -> tuple[str, str, str]:
@@ -305,7 +399,7 @@ def _split_sections(raw: str) -> tuple[str, str, str]:
         # 正确做法：只取 HEAD 之后、且**位置大于 i_head** 的标记。
         after = [x for x in (i_say, i_tail) if x != -1 and x > i_head]
         end = min(after) if after else len(text)
-        head_raw = text[i_head + len(SECTION_HEAD):end]
+        head_raw = text[i_head + len(SECTION_HEAD):end]  # noqa: E501
 
     if i_say != -1:
         end = i_tail if i_tail != -1 else len(text)
@@ -385,21 +479,35 @@ def parse_tail(block: str) -> Tail:
         return tail
 
     # settle: id | outcome | evidence
-    m = re.search(rf"{_LEAD}settle{_SEP}(.+)$", block, re.MULTILINE | re.IGNORECASE)
-    if m:
+    #
+    # 用 finditer 而不是 search —— 模型常写成一行一条：
+    #     settle: p_0001 | confirmed | a
+    #     settle: p_0002 | refuted | b
+    # 只取第一条的话，第二条的判定被静默丢掉，它继续挂着，
+    # 下一轮可能被字面判成 CONFIRMED（污染校准账本）。
+    for m in re.finditer(rf"{_LEAD}settle{_SEP}(.+)$", block,
+                         re.MULTILINE | re.IGNORECASE):
         raw = m.group(1).strip()
-        if raw not in ("-", "无", "none", ""):
-            for piece in re.split(r"[;；][ \t]*(?=p_)", raw):
-                parts = [p.strip() for p in piece.split("|")]
-                if len(parts) < 2:
-                    continue
-                pid = parts[0].strip(",， ")
-                outcome = parts[1].strip().lower()
-                if outcome not in ("confirmed", "refuted"):
-                    continue
-                tail.settle.append(
-                    SettleItem(pid, outcome, parts[2] if len(parts) > 2 else "")
-                )
+        if raw in ("-", "无", "none", ""):
+            continue
+        for piece in re.split(r"[;；][ \t]*(?=p_)", raw):
+            parts = [p.strip() for p in piece.split("|")]
+            if len(parts) < 2:
+                continue
+            pid = parts[0].strip(",， ")
+            outcome = parts[1].strip().lower()
+            if outcome == "watch":
+                # 模型明确说「再等等」——必须保留这个意图。
+                # 旧实现直接 continue 丢掉，引擎拿不到 model_item，
+                # 就退回字面判定，可能把「只是附和」判成 CONFIRMED。
+                # 那不接话题记成 refuted 更糟（凭空提高命中率）。
+                tail.watch.append(pid)
+                continue
+            if outcome not in ("confirmed", "refuted"):
+                continue
+            tail.settle.append(
+                SettleItem(pid, outcome, parts[2] if len(parts) > 2 else "")
+            )
 
     # delta
     m = re.search(rf"{_LEAD}delta{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
@@ -463,9 +571,17 @@ def parse(raw: str) -> ParsedTurn:
     if not say_raw:
         errors.append("缺少 SAY")
 
-    # 声明检查只看 SAY，因为那才是用户会看到的
-    declared = detect_declarations(say_raw)
-    read_aloud = detect_read_aloud(say_raw)
+    # 最后一道闸：像协议残留就清空。
+    # 这一步必须在这里，不能只在上游各处判 —— 实测有四种漏法
+    # （无标记只写字段块 / 标记写错 / 流式走另一条路 / clean_phase2 兜底），
+    # 逐处打补丁总会漏。
+    say = safe_say(say_raw)
+    if not say and say_raw:
+        errors.append("SAY 被安全闸清空（疑似协议残留）")
 
-    return ParsedTurn(head=head, say=say_raw, tail=tail, declared=declared,
+    # 声明检查只看 SAY，因为那才是用户会看到的
+    declared = detect_declarations(say)
+    read_aloud = detect_read_aloud(say)
+
+    return ParsedTurn(head=head, say=say, tail=tail, declared=declared,
                       read_aloud=read_aloud, errors=errors)

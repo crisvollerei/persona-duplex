@@ -12,6 +12,8 @@
 """
 from __future__ import annotations
 
+import re
+
 from .parse import (
     ParsedTurn,
     detect_declarations,
@@ -19,7 +21,12 @@ from .parse import (
     parse_head,
     parse_tail,
     plain_text,
+    safe_say,
 )
+
+# 宽松识别协议残留（和 parse 里那份一致）。
+# 单独 import 一个名字，避免 stream 依赖 parse 的私有函数。
+from .parse import _looks_like_protocol as _looks_like_protocol_full
 from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL
 
 MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
@@ -28,6 +35,25 @@ MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
 #   · <<<HEAD>>>  —— 模型把协议重开了一次，后面那段里有 direct
 #   · <<<SAY>>>   —— 同样要切，否则标记本身会原样吐给用户
 _SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY)
+
+# 逐字流式时，缓冲区里至少要攒这么多字符才判「是不是裸文本」——
+# 否则只看到 "n" 就判，既判不出字段行也判不出正文。
+_FIELD_PEEK = 12
+
+# 第一行是不是 HEAD 的字段行
+_HEAD_LINE = re.compile(
+    r"^[ \t]*(need|confidence|direct|displace)[ \t]*[:：]", re.IGNORECASE
+)
+
+_HEAD_WORDS = ("need", "confidence", "direct", "displace")
+
+
+def _any_field_prefix(text: str) -> bool:
+    """这段文本是不是某个 HEAD 字段名的前缀（还在长）。"""
+    t = (text or "").strip().lower()
+    if not t:
+        return False
+    return any(w.startswith(t) for w in _HEAD_WORDS)
 
 SEEK = "seek"
 IN_HEAD = "head"
@@ -66,6 +92,8 @@ class StreamParser:
         self.state = SEEK
         self.head_text = ""
         self.say_text = ""
+        # 整段被判为协议残留 —— 什么都不输出
+        self._dead = False
         self.tail_text = ""
         self._bare = False          # 模型完全没按协议来，整段都是回复
         self._emitted = False       # 是否已经吐过非空白内容
@@ -81,6 +109,9 @@ class StreamParser:
     def feed(self, chunk: str) -> list[str]:
         """返回这一片里可以立刻发出去的文本。"""
         if not chunk:
+            return []
+        if self._dead:
+            # 已经判定整段是协议残留 —— 后续内容一律不吐
             return []
         self.buf += chunk
         raw: list[str] = []
@@ -116,7 +147,17 @@ class StreamParser:
                 if not _is_marker_prefix(self.buf.lstrip()):
                     self.say_text += self.buf
             elif self.state == IN_SAY:
-                self.say_text += self.buf
+                # 缓冲区里可能是半截标记（"你好<<<HE"）。
+                # 无条件并进 say_text 的话，用户看到「你好」，
+                # 而账本里记的是「你好<<<HE」。实测踩过。
+                hold = 0
+                for marker in _SAY_END:
+                    for k in range(1, len(marker)):
+                        if self.buf.endswith(marker[:k]):
+                            hold = max(hold, k)
+                keep = self.buf[:-hold] if hold else self.buf
+                if keep:
+                    self.say_text += keep
             elif self.state == IN_HEAD:
                 self.head_text += self.buf
             elif self.state == IN_TAIL:
@@ -125,10 +166,22 @@ class StreamParser:
         head = parse_head(self.head_text) if self.head_text.strip() else None
         tail = parse_tail(self.tail_text) if self.tail_text.strip() else None
 
+        if self._dead:
+            # 整段是协议残留（比如模型只写字段不写标记）—— 一个字都不出
+            self.say_text = ""
+
         say = self.say_text.strip()
-        if not say and self._bare:
+        if not say and self._bare and not self._dead:
             # 完全没按协议写的裸文本，整段就是回复
             say = plain_text(self.say_text)
+
+        # 流式这条出口也必须过安全闸。
+        #
+        # 实测踩过：同一份字节（前四行是字段块 + <<<SAY>>>）
+        #   非流式 parse -> '你都想过哪些了。'
+        #   流式 StreamParser -> 'need: ...\ndirect: 你其实早就想辞职了\n...'
+        # 而 chat 默认走流式 —— 也就是线上走的正是会泄漏的那条。
+        say = safe_say(say)
 
         errors: list[str] = []
         if head is None:
@@ -188,7 +241,11 @@ class StreamParser:
     # ------------------------------------------------------------ 各状态
 
     def _seek(self, out: list[str]) -> bool:
-        """找第一个标记。找不到就当整段都是回复。"""
+        """找第一个标记。找不到就当整段都是回复。
+
+        注意：判「裸文本」之前必须先排除协议残留 —— 否则模型漏写标记时，
+        这里会绕过 parse 的安全闸，把 direct 直接吐给用户。
+        """
         hits = [(self.buf.find(m), m) for m in MARKERS]
         hits = [(i, m) for i, m in hits if i >= 0]
         if hits:
@@ -207,6 +264,26 @@ class StreamParser:
         # 还没出现标记。判断它到底是在拼标记，还是压根没按协议写。
         t = self.buf.lstrip()
         if t and not _is_marker_prefix(t):
+            # 判「裸文本」之前先等等 —— 逐字流式时缓冲区里可能只有一个
+            # "n"，那时候既判不出「是字段行」也判不出「是正文」。
+            #
+            # 判据：等到出现换行，或者攒够一行字段的长度。
+            # 一到换行就知道第一行是什么了：是 need:/direct: 这种
+            # 字段行就整段作废；否则就是正常裸文本。
+            # 逐字流式：还没换行时不能立刻判，否则看到 "n" 就判成裸文本，
+            # 后面补上 "eed: ..." 才发现在写字段。
+            # 但也**不能无限等** —— 正常回复同样没换行。
+            # 判据：只有「当前内容仍是某个字段名的前缀」才值得等。
+            if chr(10) not in t and len(t) < _FIELD_PEEK and _any_field_prefix(t):
+                return False
+            line1 = t.split(chr(10), 1)[0]
+            if _HEAD_LINE.match(line1) or _looks_like_protocol_full(t):
+                # 模型只写了字段没写标记 —— 整段是协议残留，一个字都不出。
+                # 实测：非流式 parse 已经被 guard 拦下，
+                # 流式这里却把整段当 SAY 吐出去，而 chat 默认走流式。
+                self._dead = True
+                self.state = IN_SAY
+                return True
             self._bare = True
             self.state = IN_SAY
             return True

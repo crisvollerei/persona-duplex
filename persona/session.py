@@ -128,8 +128,17 @@ class Session:
             if self.opts.consolidate_on_exit:
                 try:
                     self.consolidator.run_once()
-                except Exception:
-                    pass
+                except Exception as e:
+                    # 不能完全静默 —— 但 close 是收尾路径，也不该抛出去
+                    # 盖掉调用方真正的错误。记到 stderr 和账本。
+                    import sys as _sys
+                    print(f"[persona] 退出时固化失败：{e}", file=_sys.stderr)
+                    try:
+                        self.store.append("consolidate_error", {
+                            "where": "close", "error": f"{type(e).__name__}: {e}"[:300],
+                        })
+                    except Exception:
+                        pass
 
     def __enter__(self) -> "Session":
         return self

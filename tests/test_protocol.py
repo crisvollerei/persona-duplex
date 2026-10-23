@@ -299,10 +299,17 @@ class TestTailPhase(unittest.TestCase):
                          [(p["id"], "CONFIRMED")])
 
     def test_settle_tool_has_no_say_channel(self):
-        """第三阶段也不该有输出可见文本的通道。"""
+        """第三阶段也不该有输出可见文本的通道。
+
+        delta 是关系增量（数字/列表），不是文本通道，可以存在 ——
+        没有它的话 tool 协议的关系账本永远停在初始值。
+        """
         tool = protocol.tail_tool([{"id": "p_0001", "claim": "c", "predicts": "p"}])
         props = set(tool["function"]["parameters"]["properties"])
-        self.assertEqual(props, {"settle", "pending"})
+        self.assertEqual(props, {"settle", "pending", "delta"})
+        # 关键：不能有地方能塞一段自由文本当回复
+        self.assertNotIn("say", props)
+        self.assertNotIn("text", props)
 
     def test_settle_id_limited_to_existing(self):
         """模型编一个不存在的 id 是最常见的失败 —— schema 层挡住。"""

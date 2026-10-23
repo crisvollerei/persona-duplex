@@ -157,12 +157,23 @@ class Consolidator:
                     "anchors": [], "activity": activity,
                     "threshold": prof["threshold"], "reason": "no events"}
 
+        try:
+            return self._run_stages(events, prof, activity)
+        except Exception:
+            # 处理失败 -> 把事件放回去，别丢
+            self.store.restore_drained()
+            raise
+
+    def _run_stages(self, events: list[dict], prof: dict, activity: str) -> dict:
         added = self._consolidate(events, prof)
         story = self._rewrite_story(events, added) if added else False
         # 中期层：判断 -> 参数推动。多条一致才动，单条不动。
         pushed = self.push_traits()
         # 长期层：叙事 -> 基线推动。极慢，且必须有依据。
         anchored = self.push_anchors()
+        # 全部处理成功，才把 staging 里的事件删掉。
+        # 反过来的话（先删后处理），中间任何异常都会让那批对话永久丢失。
+        self.store.commit_drained()
         import time as _t
         self._last_run_at = _t.time()
         return {"judgments": len(added), "self_story": story,
