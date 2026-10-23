@@ -1,64 +1,13 @@
-"""多阶段协议：tool call 两步 / persona 三步。
+"""多阶段协议：内部素回答与人格表达分工。
 
-## 为什么需要它
+text 一次生成 direct/baseline/displace、SAY、TAIL。
+tool 分三次调用：内部参考工具、带人格/关系上下文的纯文本 SAY、可选观察工具。
+persona 分三次调用：不直接注入人设的 raw、人格层 HEAD+SAY、可选观察工具。
+raw 不决定位移，历史只保留用户原话和可解析的 direct；这不是完全中性保证。
 
-文本协议里，direct 和 say 是同一次生成的两个字段。token 顺序保证了
-direct 写在前面，但**不保证它真的是 say 的上游** —— 模型完全可以先
-想好一句漂亮话，再倒推一个 direct 填进字段。输出上看两者自洽，
-但那个 direct 是事后编的理由。
-
-多阶段把这两件事拆成独立调用，各自拿到不同的保证。
-
-## tool 协议（两步 + 结算）
-
-    phase 1  （tool call）  只产出 need / confidence / direct / displace
-                            没有任何输出可见文本的途径
-    phase 2  （纯文本流式）  只拿 direct 和 displace，产出 say
-    phase 3  （tool call）  结算旧预言 + 挂新预言 + 关系增量
-
-phase 1 的时候 say 还不存在，所以那个 direct 不可能是为了配某句话
-倒推出来的。这不是格式约束，是**因果约束**。
-
-## persona 协议（三步）
-
-    raw      （tool call）  产出 HEAD。**完全看不到人设**
-    人设化   （纯文本流式）  拿 raw 的 direct，产出这个角色会说的话
-    结算     （tool call）  TAIL
-
-raw 层不带人设，是为了直接观测「没有这个角色时，这句话本来会怎么回」——
-那正是 direct 的定义（见设计文档 §4.1）。
-
-**但它放弃了因果顺序**：raw 和 say 是两次独立调用，第二次读到的是一段
-文本，不是上游状态。所以 persona 协议下不能声称「say 是 direct 的上游」，
-只能说两者相关。它是**另一个实验**，不是「更好的 text」。
-
-## 硬约束（三种协议都适用）
-
-**direct 永远不能出现在用户可见的输出里。**
-所以每个出口都要过 parse.safe_say —— 包括 clean_phase2 的兜底、
-以及流式清洗层。实测有四种漏法（漏写标记 / 标记写错 / 流式路径 /
-兜底把「标记之前」当正文），逐处补丁总会漏，所以要有一个统一出口。
-空回复是可接受的失败，泄露内心不是。
-
-## 为什么 phase 2 不用 tool call
-
-试过全 tool call（两阶段都填 schema），延迟 1.27s + 1.42s = 2.69s。
-phase 2 改成纯文本流式后，首字延迟降到 2.08s，而且有两个额外好处：
-
-  · 整段输出**就是** say —— 没有标记要解析，也就不存在「模型漏写
-    <<<TAIL>>>」这类问题（文本协议里这个坑曾导致 95% 的轮次丢 TAIL）
-  · 可以真流式。tool call 的 arguments 是 JSON 片段，要等结构完整
-    才能解析，用户体验上等于没有流式。
-
-也就是说：**该结构化的地方（内心）结构化，该自由的地方（说话）自由。**
-把 say 也塞进 schema 反而是过度约束 —— 说话本来就不该有形状。
-
-## 什么时候用哪个
-
-默认仍是文本协议（单次生成，因果顺序靠 token 位置保证）。
-
-  · tool    文本协议连续丢 TAIL / 丢 HEAD 时的自动升级目标
-  · persona 想分离「人格污染」做实验时手动开
+位移以当前人格的常态表达 baseline 为参照，普通人格化不算额外位移。
+内部字段不直接展示，已经发出的内容不得在失败回退时重复生成。
+结构与输入边界可测试，但不因此宣称模型内部心理因果或参数效果已获验证。
 """
 from __future__ import annotations
 
@@ -79,7 +28,7 @@ def inner_tool(cfg) -> dict:
         "function": {
             "name": "inner",
             "strict": True,
-            "description": "说出你此刻真正想说的话。这一句永远不会发给对方。",
+            "description": "记录素回答、当前人格的常态表达和相对该基准的额外位移。内部字段不直接展示。",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -92,13 +41,17 @@ def inner_tool(cfg) -> dict:
                         "type": "string",
                         "description": "一个没有性格的助手会给出的素回复。有用的、具体的、中性的。没有人格色彩。",
                     },
+                    "baseline": {
+                        "type": "string",
+                        "description": "当前人格在本情境下的常态表达；保留人格，不刻意遮掩或反说。",
+                    },
                     "displace": {
                         "type": "string",
                         "enum": list(DISPLACE_KINDS),
-                        "description": "你打算怎么把素回复变成角色会说的话。none 是常态。",
+                        "description": "相对于人格 baseline 的额外位移，不是相对于 direct。none 是常态。",
                     },
                 },
-                "required": ["need", "confidence", "direct", "displace"],
+                "required": ["need", "confidence", "direct", "baseline", "displace"],
                 "additionalProperties": False,
             },
         },
@@ -108,25 +61,35 @@ def inner_tool(cfg) -> dict:
 PHASE1_SYSTEM_SUFFIX = """
 
 [这一轮分两步走]
-现在只做第一步：只回答「你此刻真正想说的是什么」，用 inner 工具。
-这一步**不产出任何发给对方的话** —— direct 永远不会被对方看到，
-所以它可以难看、可以直接、可以不留情面。
-不要在这里考虑措辞。措辞是下一步的事。"""
+现在只做第一步，使用 inner 工具记录内部参考，不输出正文。
+direct 是中性的素回答，不是隐秘真心话；baseline 是当前人格通常会说的话。
+displace 仅标记相对 baseline 的额外变化。正常人格化不算位移。"""
 
-PHASE2_SYSTEM = """你要把一句内心话，说成实际发出去的样子。
+PHASE2_SYSTEM = """现在只输出这个人格实际说出口的 say，覆盖前文的三段输出格式。
 
 规则：
-- 你会收到「内心」和「位移方式」。说出来的那句话，是同一件事的另一种说法。
-- 意思还在，但**不要说透**。长度不是标准：可以更短，也可以更长。
-  关键是核心意思没有被直接讲出来。
+- direct 是中性的内容参考，不是隐秘真心话，不要求隐藏它的核心意思。
+- baseline 是当前人格的常态表达；完整遵循所给人格与关系上下文。
+- displace 仅指偏离 baseline 的情境性位移。none 时正常人格化，不退回无人格口吻。
 - 不许出现「我本来想说」「其实我差点说」「我没说出口」这类声明 ——
   那是在索取信用，比直接说更糟。
 - 不许出现「我猜你……」「先猜一个……」来引出内容 —— 那是在展示洞察。
-  内心自己知道就够了。
+  读法只作为内容生成参考，允许不确定，不必展示解读过程。
 - 位移方式是 none 时，就正常说，别绕。
 - 只输出要发出去的那句话本身。不要加引号、不要加解释、不要写「好，我说：」。
 - **不要写任何标记符**（no <<<HEAD>>> / <<<SAY>>> / <<<TAIL>>>，no need/confidence/
-  direct/displace 字段）。你不是在填表，你就是在说话。"""
+  direct/baseline/displace 字段）。你不是在填表，你就是在说话。"""
+
+PERSONA_PHASE2_SUFFIX = """
+[本阶段输出格式 · 覆盖之前的格式]
+素回答已经由独立步骤给出，不要重写 direct。
+先记录当前人格的常态表达及额外位移，再输出实际说的话：
+<<<HEAD>>>
+baseline: 当前人格通常会怎样回应，保留人格但不刻意遮掩或反说
+displace: 相对于 baseline 的额外位移类型；none 是常态，普通人格化不算位移
+<<<SAY>>>
+给对方的实际回复
+本阶段不要输出 TAIL。内部字段不要出现在 SAY 中。"""
 
 
 # ---------------------------------------------------------------- 结果
@@ -178,7 +141,7 @@ RAW_SYSTEM = """你是一个没有性格的助手。只回答一件事：按事�
 
 
 def raw_tool(cfg=None) -> dict:
-    """素回复 + 需求判断 + 位移方式，一次产出。
+    """素回复 + 可选读法；无人格的层不能判断人格基准或位移。
 
     关于 need 的词表：它来自人格配置，不同人格给的词表不一样
     （守岸人 6 个、阿澈 5 个）。这看起来像污染，但**不是**：
@@ -188,7 +151,7 @@ def raw_tool(cfg=None) -> dict:
         「要被逗」，那对她是无效选项。
 
     所以词表随人格变是**对的**：它描述的是这个人格的注意力范围。
-    direct 本身（raw 字段）仍然完全中立，那才是要紧的。
+    raw 的目标仍是中性回答，但中性程度需另行检验。
     """
     needs = list(cfg.needs) if (cfg is not None and cfg.needs) else ["只是想说说话"]
     return {
@@ -205,12 +168,8 @@ def raw_tool(cfg=None) -> dict:
                     "confidence": {"type": "number"},
                     "raw": {"type": "string",
                             "description": "素回复：最有用的那句，不带任何人格色彩"},
-                    "displace": {
-                        "type": "string", "enum": list(DISPLACE_KINDS),
-                        "description": "打算用哪种方式把它变成角色的话",
-                    },
                 },
-                "required": ["need", "confidence", "raw", "displace"],
+                "required": ["need", "confidence", "raw"],
                 "additionalProperties": False,
             },
         },
@@ -218,17 +177,27 @@ def raw_tool(cfg=None) -> dict:
 
 
 def build_raw_messages(history: list[dict], user_text: str) -> list[dict]:
-    """素回复的输入：只有对话历史，没有人设、没有参数。"""
+    """去掉历史中的人格化 SAY 和协议字段；无法中性化的助手消息不转发。
+
+    用户原话仍可能提到角色，因此这不是形式化的完全隔离保证。
+    """
+    from .parse import parse
+
+    neutral = []
+    for msg in history[-12:]:
+        if msg.get("role") == "user":
+            neutral.append({"role": "user", "content": msg.get("content", "")})
+        elif msg.get("role") == "assistant":
+            head = parse(msg.get("content", "")).head
+            if head and head.direct.strip():
+                neutral.append({"role": "assistant", "content": head.direct})
     return [{"role": "system", "content": RAW_SYSTEM},
-            *history[-12:],
+            *neutral,
             {"role": "user", "content": user_text}]
 
 
 def to_head(data: dict) -> Head:
     """把素回复调用的产物转成 Head（direct 就是 raw）。"""
-    displace = str(data.get("displace", "") or "").strip().lower()
-    if displace not in DISPLACE_KINDS:
-        displace = DISPLACE_NONE
     try:
         conf = float(data.get("confidence", 0.0))
     except (TypeError, ValueError):
@@ -237,23 +206,25 @@ def to_head(data: dict) -> Head:
         need=str(data.get("need", "") or "").strip(),
         confidence=max(0.0, min(1.0, conf)),
         direct=str(data.get("raw", "") or "").strip(),
-        displace=displace,
+        displace=DISPLACE_NONE,
     )
 
 
 def build_phase2_messages(inner: Head, history: list[dict],
-                          user_text: str) -> list[dict]:
+                          user_text: str, *, system_prompt: str = "",
+                          context: str = "") -> list[dict]:
     """phase 2 的输入：把 direct 和 displace 明确交给它。
 
     这里**不**再给三段协议说明 —— 它只需要输出一句话。
     给了反而会让它想写标记。
     """
     return [
-        {"role": "system", "content": PHASE2_SYSTEM},
+        {"role": "system", "content": system_prompt + "\n\n" + context
+                                     + "\n\n" + PHASE2_SYSTEM},
         *history[-12:],
         {"role": "user", "content": user_text},
         {"role": "assistant",
-         "content": f"（内心：{inner.direct}／位移方式：{inner.displace}）"},
+         "content": f"（素回复：{inner.direct}／人格基准：{inner.baseline}／位移方式：{inner.displace}）"},
         {"role": "user", "content": "说出口。"},
     ]
 
@@ -276,7 +247,8 @@ class StreamCleanPhase2:
     """
 
     _FIELD = re.compile(
-        r"^[ \t]*(need|confidence|direct|displace|settle|delta|pending)[ \t]*[:：]"
+        r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)[ \t]*[:：]",
+        re.IGNORECASE,
     )
 
     def __init__(self) -> None:
@@ -310,12 +282,13 @@ class StreamCleanPhase2:
 
     _FIELD_INLINE = re.compile(
         r"(?:^|[。！？；，\s])(?:settle|delta|pending|need|confidence|"
-        r"direct|displace)[ \t]*[:：]"
+        r"direct|baseline|displace)[ \t]*[:：]", re.IGNORECASE
     )
 
     # 字段名（不带前导条件）—— 用来判断「这一行会不会变成字段行」
     _FIELD_START = re.compile(
-        r"^[ \t]*(settle|delta|pending|need|confidence|direct|displace)[ \t]*[:：]"
+        r"^[ \t]*(settle|delta|pending|need|confidence|direct|baseline|displace)[ \t]*[:：]",
+        re.IGNORECASE,
     )
 
     def _safe_cut(self, *, final: bool) -> int | None:
@@ -343,19 +316,18 @@ class StreamCleanPhase2:
                 before = self.buf[:m.start()]
                 marker = m.group(0)
                 self.buf = self.buf[m.end():]
-                # 标记之前的内容按当前状态决定要不要
-                if before and not self._in_head:
-                    kept = self._keep_lines(before)
-                    if kept:
-                        self.buf = kept + self.buf
-                        out_len += len(kept)
-                        continue
+                kept = self._keep_lines(before) if not self._in_head else ""
                 if marker == "<<<HEAD>>>":
                     self._in_head = True
                 elif marker == "<<<SAY>>>":
                     self._in_head = False
                 else:
                     self._done = True
+                if kept:
+                    # 先切换标记状态，再单独放行前缀；否则同一片里的 HEAD
+                    # 会被跳过，后面的 baseline/direct 可能一起被放行。
+                    self.buf = kept + self.buf
+                    return len(kept)
                 continue
 
             if self._in_head:
@@ -374,11 +346,16 @@ class StreamCleanPhase2:
                 line = self.buf[:nl]
                 if self._FIELD_START.match(line) or self._FIELD_INLINE.search(line):
                     self.buf = self.buf[nl + 1:]
+                    self._in_head = True
                     continue
                 return out_len + nl + 1
 
             # 没有换行符
             cur = self.buf
+            if self._FIELD_INLINE.search(cur):
+                if final:
+                    self.buf = ""
+                return out_len or None
             if self._could_be_field(cur, final=final) or self._FIELD_INLINE.search(cur):
                 if final:
                     # 收尾时还被扣着的内容必须放行 —— 此时不可能再长出字段行。
@@ -408,7 +385,7 @@ class StreamCleanPhase2:
         keep = []
         for ln in text.splitlines(keepends=True):
             if self._FIELD_START.match(ln) or self._FIELD_INLINE.search(ln):
-                continue
+                break  # 字段的续行同样属于内部内容，直到下一个明确标记
             keep.append(ln)
         return "".join(keep)
 
@@ -433,14 +410,14 @@ class StreamCleanPhase2:
         if ":" in s or "：" in s:
             head = re.split(r"[:：]", s, maxsplit=1)[0].strip().lower()
             return head in ("settle", "delta", "pending", "need",
-                            "confidence", "direct", "displace")
+                            "confidence", "direct", "baseline", "displace")
         if final:
             # 收尾了还没冒号 —— 不可能是字段行
             return False
         # 还没冒号：只有「整行都还是字段名的前缀」才值得等
         low = s.lower()
         for word in ("settle", "delta", "pending", "need", "confidence",
-                     "direct", "displace"):
+                     "direct", "baseline", "displace"):
             if word.startswith(low) and low:
                 return True
         return False
@@ -458,7 +435,7 @@ def _looks_like_head_fields(text: str) -> bool:
     if not t:
         return False
     # 含字段名直接判
-    if re.search(r"(need|confidence|direct|displace)\s*[:：]", t, re.IGNORECASE):
+    if re.search(r"(need|confidence|direct|baseline|displace)\s*[:：]", t, re.IGNORECASE):
         return True
     # 极短且不含任何句末标点 —— 正常的 SAY 不会这么写
     return len(t) <= 20 and not re.search(r"[。！？.!?，,~…]", t)
@@ -471,7 +448,7 @@ def _split_head_fields(text: str) -> list[str]:
         "正文。<<<HEAD>>>秘密想法"  ->  切出的 '秘密想法'
     单独看它像正常句子，只有和 HEAD 字段值比对才认得出。
     """
-    parts = re.split(r"(?:need|confidence|direct|displace)\s*[:：]",
+    parts = re.split(r"(?:need|confidence|direct|baseline|displace)\s*[:：]",
                      text or "", flags=re.IGNORECASE)
     return [p.strip() for p in parts if p.strip()]
 
@@ -505,7 +482,7 @@ def clean_phase2(say: str) -> str:  # noqa: D401
         # 去掉可能残留的字段行（need: / confidence: / direct: / displace:）
         lines = [ln for ln in tail.splitlines()
                  if not re.match(
-                     r"^[ \t]*(need|confidence|direct|displace|settle|delta|pending)"
+                     r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)"
                      r"[ \t]*[:：]", ln, re.IGNORECASE)]
         cleaned = "\n".join(lines).strip()
         if cleaned:
@@ -605,21 +582,18 @@ def tail_tool(pendings: list[dict]) -> dict:
     }
 
 
-TAIL_SYSTEM = """你在结算上一轮的预言，并决定要不要为下一轮挂一条新的。
+TAIL_SYSTEM = """你在记录可选读法的后续证据，并决定是否值得新增一个假设。
 
 规则：
-- settle：逐条判断「用户这一句」是否证实了你上一轮的预言。
-    confirmed = 用户的表现和预言一致
-    refuted   = 用户的表现和预言不一致
-    watch     = 用户根本没接这个话题 —— **三种含义不可区分**，
-                可能只是不关注、可能回避、可能被冒犯。
-                这种不能记成 refuted，那会污染校准账本。
+- settle：只在用户内容提供明确证据时核对，不要求立即完成。
+    confirmed = 用户明确提供所预测的具体内容，必须附证据
+    refuted   = 用户明确反驳所预测的内容，必须附证据
+    watch     = 无法判断。换题、同话题、短回复和时间经过都不足以结算。
   没有待结算的预言就给空数组 []。
-- pending：你对**下一轮**的预言。必须是可观察的具体行为，不是感受。
+- pending：可选的后续观察假设。必须是可观察的具体行为，不是感受。
   好：「下一句会继续描述今天发生的事」 坏：「他需要被理解」
-  只要这一轮你对这个人形成了一个可验证的判断，就挂一条 ——
-  这是整个系统唯一的学习信号，不挂就等于这一轮白聊。
-  但一条就够，且必须能在下一句话里看出真假。"""
+  读法主要用于生成 say，不是预测考试或人格成长分数。
+  大多数轮次给 null；不要为凑学习信号而挂假设，也不要为了清空而结算。"""
 
 
 def build_tail_messages(*, user_text: str, say: str, pendings: list[dict],
@@ -633,7 +607,7 @@ def build_tail_messages(*, user_text: str, say: str, pendings: list[dict],
         {"role": "system", "content": TAIL_SYSTEM},
         {"role": "user",
          "content": f"[用户这一轮说的]\n{user_text}\n\n"
-                    f"[你上一轮回的]\n{say}\n\n"
+                    f"[角色本轮回复]\n{say}\n\n"
                     f"[待结算的预言]\n{block}"},
     ]
 
@@ -714,27 +688,17 @@ def to_parsed(inner: Head, say: str) -> ParsedTurn:
 
 
 def displacement_ok(inner: Head, say: str) -> tuple[bool, str]:
-    """这一轮的 say 是不是真的位移了 direct。
+    """诊断声称的额外位移是否只是人格基准的字面复述。
 
-    两阶段协议**不能**保证这一点 —— phase 2 仍然是个自由生成，
-    它完全可能把 direct 原样复述一遍。所以这里要验一次。
-
-    判据沿用 parse.is_consistent 的思路，但更严格：
-      · displace=none     → say 应该接近 direct（没位移是对的）
-      · displace≠none     → say 不能是 direct 的复述
-
-    **这个函数只判定，不负责回退。**
-    早期版本是「不合格就退回文本协议重来」，但那样用户会看到两遍
-    （phase 2 可能已经流式吐了一部分），而账本只记一遍 ——
-    账本在说谎，比不给回复更糟。
-    现在由 engine 决定：没吐过才重来，吐过就就地收尾。
+    缺基准时返回未发现冲突及“未知”说明，不等于已经验证。
+    不判断人格质量，不负责重新生成，语义位移仍需独立检验。
     """
-    direct = (inner.direct or "").strip()
+    baseline = (inner.baseline or "").strip()
     say = (say or "").strip()
     if not say:
         return False, "phase 2 没产出任何文本"
-    if not direct:
-        return False, "phase 1 没产出 direct，位移无从谈起"
+    if not baseline:
+        return True, "缺少人格基准，不能检查位移（未知，不算已验证）"
 
     if inner.displace in ("", DISPLACE_NONE):
         return True, ""          # 说了不位移，怎么写都算合规
@@ -743,8 +707,8 @@ def displacement_ok(inner: Head, say: str) -> tuple[bool, str]:
     # 用 parse._similar（字符集覆盖率 + 长度比），不用 bigram ——
     # bigram 抓不到同义改写：「是不是矫情」→「怀疑自己矫情」重合度很低，
     # 但意思一模一样。这正是第一轮就记录在案的已知盲区。
-    if _similar(direct, say):
-        return False, f"声称 {inner.displace} 但 say 基本是 direct 的复述"
+    if _similar(baseline, say):
+        return False, f"声称 {inner.displace} 但 say 基本是 baseline 的复述"
     return True, ""
 
 
@@ -766,4 +730,5 @@ def parse_inner(data: dict) -> Head:
         confidence=max(0.0, min(1.0, conf)),
         direct=str(data.get("direct", "") or "").strip(),
         displace=displace,
+        baseline=str(data.get("baseline", "") or "").strip(),
     )

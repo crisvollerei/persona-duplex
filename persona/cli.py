@@ -5,7 +5,7 @@
     demo      离线演示，不需要 API key
     rebuild   从账本重建 state/
     stats     从账本算指标
-    lift      关系增益：有无历史时的命中率差
+    lift      首见/重复命中率的描述性差值（非因果）
     calibrate 从账本反推阈值该怎么调
 
 除 demo 外都要 -d 指定数据目录，也都要 -p 指定人格。
@@ -125,6 +125,7 @@ def _print_trace(res) -> None:
     if h:
         print(f"{cyan('need')}      {h.need}   {cyan('conf')} {h.confidence}")
         print(f"{cyan('direct')}    {h.direct}")
+        print(f"{cyan('baseline')}  {h.baseline or '（未知）'}")
         print(f"{cyan('displace')}  {h.displace}")
     print(f"{cyan('stance')}    {res.stance}")
     for s in res.settled:
@@ -215,16 +216,16 @@ def cmd_demo(args) -> int:
     replies = [
         make_reply(
             head="need: 只想被听\nconfidence: 0.72\n"
-                 "direct: 你根本不是在问我，你只是想让人知道你有多累\n"
-                 "displace: 降级",
+                 "direct: 今天忙了一天，可以先休息。\n"
+                 "baseline: 今天是不是特别长啊。\ndisplace: none",
             say="今天是不是特别长啊。",
             tail="settle: -\npending:\n  claim: 用户此刻只想被听\n"
                  "  confidence: 0.7\n  predicts: 下一句会继续描述细节，不会问怎么办",
         ),
         make_reply(
             head="need: 要被推一把\nconfidence: 0.62\n"
-                 "direct: 你其实早就想辞了，只是在等一个人说可以\n"
-                 "displace: 悬置",
+                 "direct: 可以先梳理辞职的原因和可行方案。\n"
+                 "baseline: 先算算还能撑多久，再决定要不要辞。\ndisplace: 降级",
             say="那你是想听我说「辞了吧」，还是想让我帮你算算还能撑多久？",
             tail="settle: p_0001 | refuted | 用户直接问怎么办，不是想被听\n"
                  "pending:\n  claim: 用户已经有倾向，需要的是被允许\n"
@@ -232,48 +233,55 @@ def cmd_demo(args) -> int:
         ),
         make_reply(
             head="need: 想被拦住\nconfidence: 0.45\n"
-                 "direct: 你每次说到这一步就跑\n"
+                 "direct: 可以先聊吃饭的事。\n"
+                 "baseline: 我还想听听工作那件事。吃过了，你呢。\n"
                  "displace: 截断",
             say="……嗯。吃过了，你呢。",
             tail="settle: -",
         ),
         make_reply(
             head="need: 要被推一把\nconfidence: 0.66\n"
-                 "direct: 你看，你又绕回来了\ndisplace: 多余",
+                 "direct: 可以继续了解这两家公司的情况。\n"
+                 "baseline: 两家都是做什么的？\ndisplace: 多余",
             say="吃了。不过你刚才那句「先不说这个了」，我记着。",
             tail="settle: p_0002 | confirmed | 用户绕了一轮还是回到这件事\n"
                  "delta:\n  closeness: 0.03\n  unresolved: 辞职这件事还没说完",
         ),
         make_reply(
             head="need: 只是想说说话\nconfidence: 0.85\n"
-                 "direct: 那挺好的\ndisplace: none",
+                 "direct: 可以了解这两家公司的业务。\n"
+                 "baseline: 两家都是做哪块的？\ndisplace: none",
             say="两家都是做哪块的？",
             tail="settle: -",
         ),
         make_reply(
             head="need: 要被推一把\nconfidence: 0.55\n"
-                 "direct: 你就是不敢跟人正面说话\ndisplace: none",
+                 "direct: 可以暂停，不必勉强继续。\n"
+                 "baseline: 你每次都这样，话说一半就缩回去。\ndisplace: none",
             say="你每次都这样，话说一半就缩回去。",
             tail="settle: -\npending:\n  claim: 用户需要被推一把\n"
-                 "  confidence: 0.55\n  predicts: 会反驳，或者沉默",
+                 "  confidence: 0.55\n  predicts: 会明确反驳我对他说话习惯的判断",
         ),
         # 修复不在受伤的当轮发。所以第 7 轮先说别的，第 8 轮才道歉 ——
         # 这个间隔本身就是设计的一部分，演示里也要演出来。
         make_reply(
             head="need: 只是想说说话\nconfidence: 0.8\n"
-                 "direct: 那就好\ndisplace: none",
+                 "direct: 可以继续了解两家公司的情况。\n"
+                 "baseline: 嗯，那两家都是做什么的？\ndisplace: none",
             say="嗯，那两家都是做什么的？",
             tail="settle: -",
         ),
         make_reply(
             head="need: 认同\nconfidence: 0.7\n"
-                 "direct: 我可能说得太直了\ndisplace: 降级",
+                 "direct: 可以简短询问刚才的表达是否让对方不舒服。\n"
+                 "baseline: 我刚才那句说重了。\ndisplace: 降级",
             say="刚才那句……是不是有点重。",
             tail="settle: -",
         ),
         make_reply(
             head="need: 只是想说说话\nconfidence: 0.8\n"
-                 "direct: 她没事了\ndisplace: none",
+                 "direct: 接受对方表示没事的回应。\n"
+                 "baseline: 嗯，那就好。\ndisplace: none",
             say="嗯，那就好。",
             tail="settle: -",
         ),
@@ -332,9 +340,9 @@ def cmd_demo(args) -> int:
     print(dim("\n—— 指标 ——"))
     from .metrics import compute, format_report
     print(format_report(compute(store.read_ledger())))
-    print(dim("\n注：这个脚本刻意演示了五种位移和一次受伤-修复，"
-              "\n    所以位移率和受伤数都偏高。"
-              "\n    真实对话里绝大多数轮次是 displace: none。"))
+    print(dim("\n注：这是手写脚本，只演示人格基准、可选位移和疑似受伤-修复。"
+              "\n    这些数据不证明参数有效、人格成长或用户认可度提升。"
+              "\n    相对人格基准无额外位移是常态，并不表示没有人格。"))
     return 0
 
 
@@ -357,14 +365,7 @@ def cmd_stats(args) -> int:
 
 
 def cmd_lift(args) -> int:
-    """关系增益：有历史 vs 无历史，命中率差多少。
-
-    无历史那一侧不能靠「清空数据再跑一遍」—— 那样样本永远凑不齐，
-    而且两次对话不是同一段经历，差值没有意义。
-
-    这里用同一份账本做**首见 vs 非首见**的切分：同一个 claim 第一次出现时
-    系统还没有关于它的任何积累，之后才逐步有。差值就是积累的增量。
-    """
+    """按 claim 原文首次/重复出现分组；不等价于有/无记忆实验。"""
     from .metrics import compare_with_without_history, compute
 
     store = Store(args.data)
@@ -400,11 +401,13 @@ def cmd_lift(args) -> int:
     bare = compute(first)
     out = compare_with_without_history(accumulated, bare)
     print()
-    print("关系增益")
+    print("首见/重复命中率对照（描述性统计）")
     print("─" * 54)
-    print(f"  有积累（非首见）{out['with_history']:.0%}  （{out['n_with']} 条）")
-    print(f"  首见（无积累）  {out['without_history']:.0%}  （{out['n_without']} 条）")
-    print(f"  增益            {out['lift']:+.0%}")
+    print(f"  重复出现        {out['with_history']:.0%}  （{out['n_with']} 条）")
+    print(f"  首次出现        {out['without_history']:.0%}  （{out['n_without']} 条）")
+    print(f"  差值            {out['lift']:+.0%}")
+    print("  · 按 claim 原文分组；首见也有其他历史，不是有/无记忆的受控实验。")
+    print("  · 差值不证明记忆有效或无效，也不代表用户认可度。")
     if not out["reliable"]:
         print("  · 样本不足（两侧各需 ≥10 条），这个数字还不能当结论")
     print()
@@ -469,7 +472,7 @@ def main(argv: list[str] | None = None) -> int:
     st.add_argument("-d", "--data", default="data")
     st.set_defaults(func=cmd_stats)
 
-    lf = sub.add_parser("lift", help="关系增益：有积累 vs 首见")
+    lf = sub.add_parser("lift", help="首见/重复命中率的描述性对照（非因果）")
     lf.add_argument("-d", "--data", default="data")
     lf.set_defaults(func=cmd_lift)
 

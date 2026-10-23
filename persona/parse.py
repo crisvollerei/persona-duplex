@@ -147,6 +147,7 @@ class Head:
     confidence: float = 0.0
     direct: str = ""
     displace: str = DISPLACE_NONE
+    baseline: str = ""  # 当前人格在本情境下的常态表达，不是 neutral direct
 
 
 @dataclass
@@ -198,17 +199,17 @@ class ParsedTurn:
         return self.head is None and self.tail is None
 
     def is_consistent(self) -> bool:
-        """HEAD 里说有位移，但 direct 和 say 几乎一样 → 在装。
+        """只检查相对人格基准的位移；旧记录缺基准时不作推断。
 
-        反过来 direct 为空也算不一致：没写真心话就没有位移可谈。
+        字面相似只是格式诊断，不证明语义位移真的成立。
         """
         if self.head is None:
             return True
         if self.head.displace in ("", DISPLACE_NONE):
             return True
-        if not self.head.direct.strip():
-            return False
-        return not _similar(self.head.direct, self.say)
+        if not self.head.baseline.strip():
+            return True
+        return not _similar(self.head.baseline, self.say)
 
 
 def _norm(s: str) -> str:
@@ -240,7 +241,7 @@ def _similar(a: str, b: str, threshold: float = 0.9) -> bool:
         len(shorter) / len(longer) > 0.6
 
 
-_HEAD_FIELDS = ("need", "confidence", "direct", "displace")
+_HEAD_FIELDS = ("need", "confidence", "direct", "baseline", "displace")
 _HEAD_FIELD_RE = re.compile(
     r"^[ \t]*(" + "|".join(_HEAD_FIELDS) + r")[ \t]*[:：]", re.IGNORECASE
 )
@@ -277,14 +278,14 @@ _SECTION_LOOSE = re.compile(
 
 # HEAD 字段行：允许前后空白、全角冒号、大小写
 _FIELD_LINE = re.compile(
-    r"^[ \t]*(need|confidence|direct|displace)[ \t]*[:：]",
+    r"^[ \t]*(need|confidence|direct|baseline|displace)[ \t]*[:：]",
     re.IGNORECASE | re.MULTILINE,
 )
 
 # 模型有时不写字段名，而是用脚手架式的括号回显：
 #   （内心：……／位移方式：降级）
 _SCAFFOLD = re.compile(
-    r"[（(]\s*(内心|心里话|素回复|原始回复|位移方式|判断)[^）)]*[）)]"
+    r"[（(]\s*(内心|心里话|素回复|原始回复|人格基准|位移方式|判断)[^）)]*[）)]"
 )
 
 
@@ -487,6 +488,7 @@ def parse_head(block: str) -> Head:
         confidence=_to_float(_get_field(block, "confidence")),
         direct=_get_field(block, "direct"),
         displace=displace,
+        baseline=_get_field(block, "baseline"),
     )
 
 

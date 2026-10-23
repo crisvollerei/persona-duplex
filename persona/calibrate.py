@@ -194,77 +194,14 @@ def findings(cal: Calibration) -> list[Finding]:
     """
     out: list[Finding] = []
 
-    # ---- 1. 字面重合度阈值
-    #
-    # 只看**字面判定真正参与了决策**的样本：
-    #   · by="model" 的样本是模型自己判的，overlap 只是顺手记的观测值，
-    #     拿它评字面阈值等于用无关数据反推
-    #   · topic="left" 的 WATCH 在 settle 里是**先**判的，overlap 根本没被读
-    # 不筛这两类的话，报告会拿无关样本报「阈值偏高」的假警。
-    eligible = [s for s in cal.samples
-                if s.by != "model" and s.topic not in ("left", "returned")]
-    settled = [s for s in eligible if s.settle and s.verdict == "CONFIRMED"]
-    watched = [s for s in eligible if s.verdict == "WATCH"]
-
-    if len(cal.samples) >= 5:
-        w = sorted(s.overlap for s in watched)
-        if w:
-            hi = cal.pct(w, 0.9)
-            if hi >= OVERLAP_KEEP:
-                out.append(Finding(
-                    "warn", "OVERLAP_KEEP",
-                    f"被挂起的样本里有 {sum(1 for x in w if x >= OVERLAP_KEEP)} 条"
-                    f"字面重合 ≥ {OVERLAP_KEEP}（最高 {hi:.2f}）—— "
-                    f"阈值可能偏高，把该结算的判成挂起了"
-                ))
-            elif hi < OVERLAP_DROP:
-                out.append(Finding(
-                    "ok", "OVERLAP_KEEP",
-                    f"挂起的样本字面重合都在 {hi:.2f} 以下，阈值分得开"
-                ))
-
-        s_over = sorted(s.overlap for s in settled)
-        if s_over and cal.pct(s_over, 0.1) < OVERLAP_DROP:
-            out.append(Finding(
-                "warn", "OVERLAP_DROP",
-                f"已结算的样本里最低重合只有 {cal.pct(s_over, 0.1):.2f}，"
-                f"低于 DROP 阈值 —— 说明这些是靠语义判定结的，字面阈值在拖后腿"
-            ))
-
-    # ---- 2. 受伤检测的语域阈值
-    hurt = cal.by_verdict("SUSPECTED_HURT")
-    normal = [s for s in cal.samples
-              if s.verdict not in ("SUSPECTED_HURT",) and s.settle]
-    # 语域阈值：受伤样本至少 3 条、正常样本至少 5 条才下结论。
-    # 1 条受伤样本就说「间隔 0.45，分得开」是噪声。
-    if len(hurt) < 3 or len(normal) < 5:
-        if hurt or normal:
-            out.append(Finding(
-                "info", "语域阈值",
-                f"受伤 {len(hurt)} 条 / 正常 {len(normal)} 条 —— "
-                f"样本不足（需受伤≥3、正常≥5），先不下结论"))
-    elif hurt and normal:
-        h_rise = min(s.rise for s in hurt)
-        n_rise = max(s.rise for s in normal)
-        if n_rise >= h_rise:
-            out.append(Finding(
-                "warn", "语域阈值",
-                f"判为受伤的最小升幅 {h_rise:.2f}，"
-                f"但正常结算里最大升幅有 {n_rise:.2f} —— 两者重叠，会误判"
-            ))
-        else:
-            gap = h_rise - n_rise
-            out.append(Finding(
-                "ok" if gap > 0.1 else "warn", "语域阈值",
-                f"受伤最小升幅 {h_rise:.2f} vs 正常最大 {n_rise:.2f}，"
-                f"间隔 {gap:.2f}"
-                + ("（偏窄，样本再多可能就撞上了）" if gap <= 0.1 else "")
-            ))
-    elif hurt:
+    # 没有独立人工标签，不能用判定器自己的结果验证自己的阈值。
+    if cal.samples:
+        out.append(Finding(
+            "info", "字面相关性",
+            "重合度仅作观测，不用于证实/否证读法，也不据此推荐降低结算阈值"))
         out.append(Finding(
             "info", "语域阈值",
-            f"有 {len(hurt)} 次受伤判定，但没有可对照的正常样本"
-        ))
+            "疑似受伤是启发式观测；需独立用户反馈/人工标注后才能验证阈值"))
 
     # ---- 3. grace 预算
     if len(cal.judge_elapsed) < 10:
@@ -300,8 +237,8 @@ def findings(cal: Calibration) -> list[Finding]:
         if rate < 0.5:
             out.append(Finding(
                 "warn", "语义判定",
-                f"只有 {rate:.0%} 的轮次用上了语义判定，其余都是字面兜底 —— "
-                f"接 LLM 的意义被抵消了大半"
+                f"只有 {rate:.0%} 的轮次用上了语义判定，其余无法取得语义判定 —— "
+                f"未明确的假设继续保留；覆盖率不代表判定准确度"
             ))
         else:
             out.append(Finding(
@@ -336,16 +273,11 @@ def findings(cal: Calibration) -> list[Finding]:
             out.append(Finding("info", "基线变动",
                                f"{cal.anchor_updates} 次 —— 人格的材质被改过"))
 
-    # ---- 6. 判断产出速率
+    # 判断数量不是陪伴质量，也不作为人格自动成长的依据。
     if cal.turns >= 10:
         rate = cal.judgments / cal.turns
-        if rate < 0.05:
-            out.append(Finding("warn", "判断产出",
-                               f"{cal.judgments} 条 / {cal.turns} 轮 —— 太少了，"
-                               f"中期层没有证据可用"))
-        else:
-            out.append(Finding("ok", "判断产出",
-                               f"{cal.judgments} 条 / {cal.turns} 轮（{rate:.2f}/轮）"))
+        out.append(Finding("info", "判断产出",
+                           f"{cal.judgments} 条 / {cal.turns} 轮（{rate:.2f}/轮）；不设产出配额"))
 
     if not cal.samples:
         out.append(Finding(
@@ -362,7 +294,7 @@ def format_report(cal: Calibration) -> str:
     第一段是「有多少样本」，因为后面所有结论都受它限制 ——
     读者应该先看到样本量再看到结论，而不是反过来。
     """
-    lines = ["", "校准报告", "─" * 60]
+    lines = ["", "校准报告", "─" * 60, "  模型判定不是独立真值；本报告不证明参数有效、人格成长或用户认可度提升。"]
 
     n_turn = cal.turns or sum(cal.judge_sources.values())
     lines.append(f"  样本：{len(cal.samples)} 次结算判定，{n_turn} 轮有判定记录")

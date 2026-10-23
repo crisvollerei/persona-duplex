@@ -1,10 +1,7 @@
-"""账本 + 物化视图。
+"""追加式账本与状态视图。
 
-ledger.jsonl 是唯一真相源：只追加，不改写。
-state/ 是从账本重放出来的视图，随时可删可重建。
-
-好处不只是「变化有账」字面成立，还在于可以拿同一份账本、
-不同版本的代码重放，对比参数策略 —— 调 bias 和位移率时非常有用。
+已入账的观测和变更可以恢复；未记录的进程内上下文不能凭空重建。
+rebuild_views 只恢复既有结果，不会按新参数重跑模型或重新判定，不是反事实实验。
 """
 from __future__ import annotations
 
@@ -79,6 +76,19 @@ class Store:
                     # 半行 = 上次写到一半被杀了。跳过，不让它毒化重放。
                     continue
         return out
+
+    def rebuild_story(self) -> bool:
+        """恢复有账本依据的叙事；没有新记录时保留旧版独立文件。"""
+        parts = []
+        for rec in self.read_ledger():
+            if rec.get("kind") == "story_seed":
+                parts = [rec.get("text", "")]
+            elif rec.get("kind") == "story_entry":
+                parts.append(f"\n## {rec['t']}\n\n{rec.get('entry', '')}\n")
+        if not parts:
+            return False
+        self.self_story_path.write_text("".join(parts), encoding="utf-8")
+        return True
 
     # ------------------------------------------------------------ ID
 
@@ -571,6 +581,16 @@ def append_judgment(path: Path, judgment: str, confidence: float,
     return rec
 
 
+def replay_anchor_pushes(ledger: list[dict]) -> list[str]:
+    """频率状态也能恢复；旧版每次 anchor_update 的时间作保守回退。"""
+    times = [r.get("at") or r.get("t") for r in ledger if r.get("kind") == "anchor_push"]
+    times = [t for t in times if isinstance(t, str) and t]
+    if not times:
+        times = sorted({r["t"] for r in ledger
+                        if r.get("kind") == "anchor_update" and isinstance(r.get("t"), str)})
+    return times
+
+
 def replay_pendings(ledger: list[dict]) -> list[dict]:
     """从账本重放出「还在挂着的预言」。
 
@@ -586,9 +606,11 @@ def replay_pendings(ledger: list[dict]) -> list[dict]:
                 live[str(pid)] = {
                     "id": str(pid),
                     "claim": r.get("claim", ""),
+                    "confidence": r.get("confidence", 0.0),
                     "predicts": r.get("predicts", ""),
                     "created": r.get("t", ""),
                     "turn_id": r.get("turn_id", ""),
+                    "turn_seq": r.get("turn_seq", 0),
                 }
         elif k in ("pending_settle", "pending_expire"):
             live.pop(str(r.get("pending_id") or ""), None)
@@ -714,7 +736,7 @@ def load_judgments(path: Path, limit: int = 5) -> list[dict]:
 def rebuild_views(store: "Store", limits=None) -> dict:
     """从账本重放，重建 state/。
 
-    state 坏了就用它。也是「同一份账本换策略重放」的入口。
+    只恢复已记录的结果，不会按新参数重新运行模型或决策，不是反事实实验。
 
     limits 用运行时的同一份限额。不传就按默认（unresolved_max=3）——
     重放和运行时必须用同一套限幅，否则重建出来的状态和原来不一样。
@@ -822,8 +844,10 @@ def rebuild_views(store: "Store", limits=None) -> dict:
         store.save_view(f"{name}_cursor", {key: value})
     # 人格参数同样。
     store.save_view("traits", {"traits": replay_traits(ledger)})
+    store.save_view("anchor_pushes", {"times": replay_anchor_pushes(ledger)})
     # repair 从第一版就在写 repair_open，所以空列表就是真空 —— 一律覆盖。
     store.save_view("repair", {"items": repairs})
+    store.rebuild_story()
     # style_update 是后加的：老账本里没有，此时保留现有基线而不是抹成空。
     if style:
         store.save_view("style", style)

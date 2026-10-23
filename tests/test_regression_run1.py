@@ -144,7 +144,7 @@ class TestLengthIsNotASignal(unittest.TestCase):
         """但它抓「原样复制」是准的 —— 这是它该管的窄范围。"""
         raw = make_reply(
             "need: 只是想说说\nconfidence: 0.5\n"
-            "direct: 今天真长\ndisplace: 降级",
+            "direct: 今天很累\nbaseline: 今天真长\ndisplace: 降级",
             "今天真长",
         )
         self.assertFalse(parse(raw).is_consistent())

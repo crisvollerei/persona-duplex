@@ -263,7 +263,7 @@ class TestPersonaProtocol(unittest.TestCase):
         cfg = PersonaConfig.load(ROOT / "personas" / "shorekeeper.toml")
         tool = protocol.raw_tool(cfg)
         props = set(tool["function"]["parameters"]["properties"])
-        self.assertEqual(props, {"need", "confidence", "raw", "displace"})
+        self.assertEqual(props, {"need", "confidence", "raw"})
         self.assertNotIn("say", props)
 
     def test_raw_tool_need_enum_from_config(self):
@@ -280,7 +280,8 @@ class TestPersonaProtocol(unittest.TestCase):
         msgs = protocol.build_raw_messages(
             [{"role": "user", "content": "hi"},
              {"role": "assistant", "content": "嗯。"}], "今天好累")
-        self.assertEqual(len(msgs), 4)
+        self.assertEqual(len(msgs), 3)
+        self.assertNotIn("嗯。", str(msgs))
         self.assertEqual(msgs[-1]["role"], "user")
 
 

@@ -1,34 +1,9 @@
-"""从账本算指标。
+"""只读账本的描述性指标。
 
-README 里那张评测表如果不落到代码上，它就只是文档。
-这里全部从 ledger.jsonl 重放计算 —— 不改账本，只读。
-
-按用途分四组：
-
-**评测表的四项**（设计文档 §14）
-    位移率      direct ≠ say 的比例。太低客服，太高谜语人
-    校准        confidence 和实际命中率的偏差。差值 > 0.2 = 在读空气
-    声明违规    输出里出现「我本来想 / 没说出口」。出现即失败
-    关系增益    有无历史时的命中率差。差值为零 = 记忆是摆设
-
-**预言账本**
-    命中/未命中  按预言 id 结算出的结果
-    挂起过      被晾着的预言（按 id 去重 —— 一条挂 17 轮只算一条）
-    已过期      超过 TTL 没结论的，不算证实也不算证伪
-
-**修复链路**
-    开了几次 / 尝试几次 / 治愈 / 被拒 / 无回应
-    成功率的分母是**开了几次**，不是已结案的几次 ——
-    否则 10 次受伤里 9 次没人理会报成 100%
-
-**人格与判断**
-    参数漂移 / 基线漂移 / 推动次数
-    判断条数 / 被推翻的条数
-
-注意几个口径容易错的地方，都在字段注释里写了原因：
-  · 校准的分子分母都只能用有配对的样本
-  · 位移率的分母要排除解析失败的轮次（那是「不知道」，不是「没位移」）
-  · 过期要按 pid 去重（同一条可能两种记录都有）
+位移率只计明确标记 persona_baseline 且有基准的轮次，旧口径和缺失基准另列未知。
+无额外位移是常态，不用位移率推断有没有人格。字面相似检查不是语义证明。
+校准只用有配对的预测样本；模型结算不是独立真值，更不等于用户认可度。
+首见/重复的命中差异不能证明记忆的因果收益。人格变化只报告记录，不等同成长。
 """
 from __future__ import annotations
 
@@ -59,6 +34,7 @@ class Metrics:
     hurts: int = 0
     # 解析失败（没有 displace 字段）的轮次 —— 不进位移率分母
     unparsed: int = 0
+    unknown_basis: int = 0  # 旧口径或缺人格基准，不能混入新位移率
 
     repair_opened: int = 0
     repair_attempted: int = 0
@@ -95,7 +71,7 @@ class Metrics:
         分母只算**成功解析出 displace 的轮次** —— 解析失败（displace 为空）
         的那些轮不是「没有位移」，是「不知道」，算进分母会拉低比率。
         """
-        known = self.turns - self.unparsed
+        known = self.turns - self.unparsed - self.unknown_basis
         return self.displaced / known if known > 0 else 0.0
 
     @property
@@ -193,7 +169,7 @@ def compute(ledger: list[dict]) -> Metrics:
         if kind == "turn":
             m.turns += 1
             say = rec.get("say") or ""
-            direct = rec.get("direct") or ""
+            baseline = rec.get("baseline") or ""
             # 不能写 `or "none"` —— 那会把解析失败（空串）和
             # 「明确没位移」（none）混成一个，unparsed 永远是 0。
             disp = rec.get("displace")
@@ -201,12 +177,14 @@ def compute(ledger: list[dict]) -> Metrics:
             if disp is None or disp == "":
                 # 解析失败：不知道有没有位移，不进分母
                 m.unparsed += 1
+            elif rec.get("displacement_basis") != "persona_baseline" or not baseline.strip():
+                m.unknown_basis += 1
             elif disp != "none":
                 m.displaced += 1
                 m.displace_kinds[disp] = m.displace_kinds.get(disp, 0) + 1
                 # 声称位移但 direct 和 say 几乎一样 = 装深沉。
                 # direct 为空也要算 —— 没有原话就没有位移可言。
-                if not direct.strip() or _similar(direct, say):
+                if _similar(baseline, say):
                     m.inconsistent += 1
 
             if _DECL.search(say):
@@ -271,6 +249,8 @@ def compute(ledger: list[dict]) -> Metrics:
             m.anchor_drift[name] = m.anchor_drift.get(name, 0.0) \
                 + float(rec.get("delta", 0.0))
 
+        elif kind == "relation_observation" and rec.get("suspected_hurt"):
+            m.hurts += 1
         elif kind == "repair_open":
             m.repair_opened += 1
         elif kind == "repair_attempt":
@@ -303,13 +283,7 @@ def compute(ledger: list[dict]) -> Metrics:
 
 
 def compare_with_without_history(full: Metrics, bare: Metrics) -> dict:
-    """关系增益：清空历史前后，命中率差多少。
-
-    差值为零说明记忆是摆设 —— 这是唯一诚实的「记忆有用吗」的度量。
-
-    注意样本量：这个差值在两条样本上毫无意义。所以一起把两边的样本数
-    带出来，让读的人自己判断能不能信。
-    """
+    """两组命中率的描述性差异；本函数不能判定记忆的因果效果。"""
     n_full = full.hits + full.misses
     n_bare = bare.hits + bare.misses
     return {
@@ -319,15 +293,12 @@ def compare_with_without_history(full: Metrics, bare: Metrics) -> dict:
         "n_with": n_full,
         "n_without": n_bare,
         "reliable": n_full >= 10 and n_bare >= 10,
+        "causal": False,
     }
 
 
 def final_bias(ledger: list[dict], initial: float = 0.0) -> float:
-    """账本里的 bias 轨迹末端。
-
-    同一个账本配不同初值，可以对比「同一段经历、不同起点」会长成什么样 ——
-    这正是账本优先想支持的实验。
-    """
+    """历史记录的 bias 末值，不按新初值重新计算旧决策。"""
     bias = initial
     for rec in ledger:
         if rec.get("kind") != "bias_update":
@@ -343,14 +314,11 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
     """把指标翻译成诊断。返回 (等级, 项目, 说明)。"""
     out: list[tuple[str, str, str]] = []
 
-    if m.turns:
+    if m.turns - m.unparsed - m.unknown_basis:
         rate = m.displacement_rate
-        if rate < 0.05:
-            out.append(("warn", "位移率", f"{rate:.0%} —— 几乎不位移，像客服"))
-        elif rate > 0.6:
-            out.append(("warn", "位移率", f"{rate:.0%} —— 每句都留白，是谜语人"))
-        else:
-            out.append(("ok", "位移率", f"{rate:.0%}"))
+        out.append(("info", "位移率", f"{rate:.0%}（相对人格基准，模型自报；低不等于无人格）"))
+    if m.unknown_basis:
+        out.append(("info", "口径未知", f"{m.unknown_basis} 轮旧口径/缺人格基准，不计新位移率"))
 
     if m.declarations:
         out.append(("fail", "声明违规",
@@ -359,8 +327,8 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
         out.append(("ok", "声明违规", "无"))
 
     if m.inconsistent:
-        out.append(("warn", "装深沉",
-                    f"{m.inconsistent} 次声称位移但 direct≈say"))
+        out.append(("warn", "位移待核对",
+                    f"{m.inconsistent} 次声称位移但 baseline≈say（字面诊断，不是语义定论）"))
 
     if m.conf_pairs:
         gap = m.calibration_gap()

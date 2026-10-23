@@ -136,22 +136,24 @@ class TestSettlePriority(Base):
         self.assertEqual([(s["id"], s["outcome"]) for s in res.settled],
                          [("p_0001", "CONFIRMED")])
 
-    def test_hurt_still_overrides_model(self):
-        """但语域突变要压过模型判定：关系受损比读得准不准重要。"""
+    def test_hurt_observation_does_not_override_model_evidence(self):
+        """关系观测独立记录，不再关闭或覆盖预测。"""
         e = self._seed()
         e.llm = ScriptedLLM([make_reply(
             "need: a\nconfidence: 0.7\ndirect: y\ndisplace: none", "嗯。",
             "settle: p_0001 | confirmed | 用户说没事")])
         res = e.turn("谢谢，我知道了。")
-        self.assertEqual(res.settled[0]["outcome"], "SUSPECTED_HURT")
+        self.assertEqual(res.settled[0]["outcome"], "CONFIRMED")
+        self.assertTrue(e._repair_book().active())
 
-    def test_no_model_settle_falls_back_to_heuristic(self):
+    def test_no_semantic_evidence_keeps_watching(self):
         e = self._seed()
         e.llm = ScriptedLLM([make_reply(
             "need: a\nconfidence: 0.7\ndirect: y\ndisplace: none", "嗯。",
             "settle: -")])
         res = e.turn("是啊，路上堵了一个半小时")
-        self.assertEqual(res.settled[0]["outcome"], "CONFIRMED")
+        self.assertEqual(res.settled, [])
+        self.assertEqual(len(self.store.pendings()), 1)
 
     def test_probe_records_who_settled(self):
         """账本要能分清「模型判的」和「启发式判的」—— 否则调阈值时看不清。"""
@@ -329,7 +331,7 @@ class TestRebuildFidelity(Base):
 
 
 class TestBiasPersistence(Base):
-    """bias 是唯一跨轮累积的学习量，进程一退就归零等于没学。"""
+    """预测命中不再充当人格成长分数，历史变更仍可分析。"""
 
     def _learn(self, store: Store, cfg: PersonaConfig):
         e = TurnEngine(cfg, store, ScriptedLLM([
@@ -342,30 +344,29 @@ class TestBiasPersistence(Base):
         e.turn("我很累。")
         e.turn("对，就是这样，我也是这么想的")
 
-    def test_bias_written_to_ledger(self):
+    def test_prediction_success_does_not_change_bias(self):
         cfg = _cfg()
         self._learn(self.store, cfg)
         recs = [r for r in self.store.read_ledger() if r["kind"] == "bias_update"]
-        self.assertTrue(recs, "bias 变了却没落账")
-        self.assertAlmostEqual(recs[-1]["after"], cfg.role.bias, places=4)
+        self.assertEqual(recs, [])
+        self.assertEqual(cfg.role.bias, 0.0)
 
-    def test_bias_restored_on_new_engine(self):
+    def test_legacy_bias_update_not_silently_applied(self):
         cfg = _cfg()
         self._learn(self.store, cfg)
-        learned = cfg.role.bias
-        self.assertNotEqual(learned, 0.0)
+        self.store.append("bias_update", {"before": 0.0, "after": 0.005})
         fresh = _cfg()
         TurnEngine(fresh, Store(self.store.root), ScriptedLLM([]))
-        self.assertAlmostEqual(fresh.role.bias, learned, places=4)
+        self.assertEqual(fresh.role.bias, 0.0)
 
     def test_ledger_replays_to_same_bias(self):
-        """「同一份账本换策略重放」要成立，bias 必须能从账本算出来。"""
+        """历史 bias 末值仍可查，但不会按新初值重算。"""
         from persona.metrics import final_bias
 
         cfg = _cfg()
         self._learn(self.store, cfg)
-        self.assertAlmostEqual(final_bias(self.store.read_ledger()), cfg.role.bias,
-                               places=4)
+        self.store.append("bias_update", {"before": 0.0, "after": 0.005})
+        self.assertAlmostEqual(final_bias(self.store.read_ledger(), initial=0.2), 0.005)
 
 
 class TestMetricsCounters(Base):
@@ -379,11 +380,12 @@ class TestMetricsCounters(Base):
         ])).turn("嗯")
         self.assertEqual(compute(self.store.read_ledger()).expired, 1)
 
-    def test_empty_direct_counts_as_inconsistent(self):
-        """声称位移但没有 direct —— 没有原话就没有位移可言。"""
+    def test_legacy_missing_baseline_is_unknown(self):
+        """不能用旧 direct 冒充人格基准。"""
         m = compute([{"kind": "turn", "say": "嗯", "direct": "",
                       "displace": "降级"}])
-        self.assertEqual(m.inconsistent, 1)
+        self.assertEqual(m.inconsistent, 0)
+        self.assertEqual(m.unknown_basis, 1)
 
 
 class TestRepairTiming(Base):
@@ -398,7 +400,8 @@ class TestRepairTiming(Base):
         ]))
         e.turn("我很累。")
         res = e.turn("谢谢，我知道了。")
-        self.assertEqual(res.settled[0]["outcome"], "SUSPECTED_HURT")
+        self.assertEqual(res.settled, [])
+        self.assertEqual(len(self.store.pendings()), 1)
         self.assertIsNone(res.repair_opened, "受伤当轮就认领了修复")
         self.assertEqual(e._repair_book().items[0].state, "open")
 

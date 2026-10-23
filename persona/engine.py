@@ -100,7 +100,7 @@ class TurnEngine:
         """protocol: "text"（默认）| "tool" | "auto"
 
         "auto" = 先用 text，一旦这一轮出现协议失效（缺 HEAD/缺 TAIL/
-        direct 与 say 无法区分），自动切到 tool 并记住，之后都用 tool。
+        baseline 与 say 无法区分），自动切到 tool 并记住，之后都用 tool。
         这是「兜底」的实现方式：正常情况不多付延迟，出问题才升级。
         """
         self.cfg = cfg
@@ -121,13 +121,12 @@ class TurnEngine:
         self._last_formality_rise = 0.0
         # 上一轮的 need，用来触发下一轮的分场景句式注入
         self._last_need = ""
-        # 每条预言被「极短回应」晾过几次。连续两次就判 refuted ——
-        # 否则「嗯」「算了」这种回复会让预言永远关不掉。
+        # 极短回应次数仅供观测，不参与预测真假判定。
         self._minimal_streak: dict[str, int] = {}
         # 上一轮开出修复的轮次号。同一轮只开一条 —— 用户被伤到一次，
         # 不是每条预言伤一次。
         self._repair_opened_turn = -1
-        self._restore_bias()
+        self._restore_turn_seq()
 
     def _sync_traits(self) -> None:
         """把账本里的人格参数同步到内存配置。
@@ -142,20 +141,11 @@ class TurnEngine:
         if state:
             self.cfg.role.load_traits_state(state)
 
-    def _restore_bias(self) -> None:
-        """把上次会话学到的 bias 和轮次接回来。
+    def _restore_turn_seq(self) -> None:
+        """恢复轮次，不把历史预测校准当成人格成长。
 
-        bias 是唯一会跨轮累积的学习量。不恢复的话，每次启动都退回 TOML 里的
-        初值，校准永远在头几轮原地打转。
+        旧 bias_update 留作历史分析；当前 bias 使用明确的人格配置。
         """
-        for rec in reversed(self.store.read_ledger()):
-            if rec.get("kind") != "bias_update":
-                continue
-            try:
-                self.cfg.role.bias = float(rec["after"])
-            except (KeyError, TypeError, ValueError):
-                pass
-            break
         # turn_seq 只在内存里，重启归零会让「延迟结算」永远判不成立
         self._turn_seq = sum(
             1 for r in self.store.read_ledger() if r.get("kind") == "turn"
@@ -317,7 +307,7 @@ class TurnEngine:
         self._probe["read_aloud"] = parsed.read_aloud
 
         if not parsed.is_consistent():
-            warnings.append("HEAD 说有位移，但 direct 与 say 无法区分 —— 疑似装深沉")
+            warnings.append("HEAD 声称额外位移，但 baseline 与 say 字面相似；需核对语义")
 
         # ---- 7. 这一句是不是修复动作。
         #        修复不能在受伤的当轮发 —— 当场道歉往往是在处理自己的尴尬。
@@ -343,7 +333,17 @@ class TurnEngine:
             "need": head.need if head else "",
             "confidence": head.confidence if head else None,
             "direct": head.direct if head else "",
+            "baseline": head.baseline if head else "",
             "displace": head.displace if head else DISPLACE_NONE,
+            "displacement_basis": "persona_baseline" if head and head.baseline else "unknown",
+            "design_version": 2,
+            "persona": self.cfg.role.name,
+            "parameters": {
+                "bias": self.cfg.role.bias,
+                "attention": self.cfg.role.attention,
+                "legibility_max": self.cfg.role.legibility_max,
+                "traits": self.cfg.role.traits_state(),
+            },
             "stance": stance,
             "relation_delta": relation_changed,
             "settled": [{k: s.get(k) for k in ("id", "outcome")} for s in settled],
@@ -359,6 +359,8 @@ class TurnEngine:
                 "user": user_text,
                 "say": say,
                 "direct": head.direct,
+                "baseline": head.baseline,
+                "persona": self.cfg.role.name,
                 "need": head.need,
                 "displace": head.displace,
             })
@@ -431,9 +433,9 @@ class TurnEngine:
         """三层协议：素回复（无人设）→ 人设化（带人设）→ 结算。
 
         和 "tool" 的区别：tool 的 phase 1 仍然看得到人设（只是要求它别用），
-        这一条的素回复调用**完全看不到人设**。实测前者会被污染。
+        这一条不直接注入人设，并中性化历史助手消息；仍可能受用户原话影响。
 
-        素回复这层只多一次调用，代价约 1.2s；但它是「人格可控」的前提。
+        正常共三次调用。输入边界可检验，但不保证素回答绝对中性。
         """
         from . import protocol
 
@@ -454,8 +456,7 @@ class TurnEngine:
             self._protocol_failures += 1
             return self._generate(fallback_messages, on_delta)
 
-        self._probe["persona"] = {"raw": head.direct[:120],
-                                  "need": head.need, "displace": head.displace}
+        self._probe["persona"] = {"raw": head.direct[:120], "need": head.need}
 
         # ---- 2. 人设化：把素回复变成这个角色会说的话
         # 末尾重申长度 —— 实测：brevity 的提示在第 25 行，而中间隔着几十行
@@ -469,56 +470,42 @@ class TurnEngine:
                          "说完就停。")
             elif brev.value <= 0.40:
                 guard = "\n\n[这一轮的长度]\n可以说完整，不限句数。"
-        msgs2 = [{"role": "system", "content": sys_prompt + "\n\n" + ctx + guard},
+        msgs2 = [{"role": "system", "content": sys_prompt + "\n\n" + ctx + guard
+                                                    + protocol.PERSONA_PHASE2_SUFFIX},
                  *self.history[-12:],
                  {"role": "user", "content": user_text},
                  {"role": "assistant",
-                  "content": f"（素回复：{head.direct}／位移方式：{head.displace}）"},
+                  "content": f"（素回复：{head.direct}）"},
                  {"role": "user", "content": "用你的方式说出口。"}]
 
-        say = ""
-        say_raw = ""
+        # 此阶段才有资格确定人格基准和位移；direct 始终锁定为 raw 层结果。
+        emitted = False
+
+        def forward(piece):
+            nonlocal emitted
+            emitted = emitted or bool(piece.strip())
+            on_delta(piece)
+
         try:
-            if on_delta is not None and self.stream_llm is not None:
-                sp = protocol.StreamCleanPhase2()
-                for piece in self.stream_llm(msgs2):
-                    if not piece:
-                        continue
-                    say_raw += piece
-                    for clean in sp.feed(piece):
-                        on_delta(clean)
-                for clean in sp.finish():
-                    on_delta(clean)
-                say = sp.text
-            else:
-                say_raw = self.llm(msgs2)
-                say = protocol.clean_phase2(say_raw)
+            say_raw, persona_turn = self._generate(msgs2, forward if on_delta else None)
+            say = persona_turn.say
         except Exception as e:
             self._protocol_failures += 1
-            # 已经吐给用户的内容不能再吐一遍 —— 否则用户看到两遍，
-            # 而账本只记一遍（账本在说谎）。
-            # 实测：人设化吐了半句后连接断，退回文本协议 ->
-            # 用户看到「你都想过哪些了。你都想过哪些了。」
-            if say_raw.strip():
-                warnings.append(f"人设化阶段失败（{e}），已输出的部分就地收尾")
-                say = protocol.clean_phase2(say_raw)
-                if not say:
-                    return self._generate(fallback_messages, on_delta)
-            else:
-                warnings.append(f"人设化阶段失败（{e}），退回文本协议")
-                return self._generate(fallback_messages, on_delta)
+            warnings.append(f"人设化阶段失败（{e}），退回文本协议")
+            return self._generate(fallback_messages, on_delta)
 
         if not say:
             self._probe.setdefault("persona", {})["say_raw"] = say_raw[:300]
             self._protocol_failures += 1
-            if say_raw.strip():
-                warnings.append("人设化产出被清洗为空，已输出的部分就地收尾")
-                say = safe_say(say_raw)
-                if not say:
-                    return self._generate(fallback_messages, on_delta)
-            else:
+            if not emitted:
                 warnings.append("人设化产出为空，退回文本协议")
                 return self._generate(fallback_messages, on_delta)
+            warnings.append("人设化已输出部分文本，不重新生成")
+
+        if persona_turn.head:
+            head.baseline = persona_turn.head.baseline
+            head.displace = persona_turn.head.displace
+        self._probe["persona"]["displace"] = head.displace
 
         # ---- 3. 结算
         tail = self._tool_tail(parsed=protocol.to_parsed(head, say),
@@ -544,7 +531,7 @@ class TurnEngine:
             warnings.append("未配置 tool_llm，退回文本协议")
             return self._generate(fallback_messages, on_delta)
 
-        # ---- phase 1：只要内心
+        # ---- phase 1：内部参考（素回答、人格基准、额外位移）
         msgs1 = protocol.build_phase1_messages(
             sys_prompt, ctx, self.history, user_text, stance)
         try:
@@ -561,9 +548,17 @@ class TurnEngine:
         self._probe["protocol"] = {"mode": "tool", "direct": inner.direct[:120]}
 
         # ---- phase 2：把 direct 说成 say
-        msgs2 = protocol.build_phase2_messages(inner, self.history, user_text)
+        msgs2 = protocol.build_phase2_messages(
+            inner, self.history, user_text, system_prompt=sys_prompt, context=ctx)
         say = ""
         say_raw = ""
+        emitted: list[str] = []
+
+        def forward(piece):
+            if piece:
+                emitted.append(piece)
+                on_delta(piece)
+
         try:
             if on_delta is not None and self.stream_llm is not None:
                 # 流式时不能「先吐完再清理」—— 用户已经看到标记了。
@@ -577,9 +572,9 @@ class TurnEngine:
                         continue
                     say_raw += piece
                     for clean in sp.feed(piece):
-                        on_delta(clean)
+                        forward(clean)
                 for clean in sp.finish():
-                    on_delta(clean)
+                    forward(clean)
                 say = sp.text
             else:
                 say_raw = self.llm(msgs2)
@@ -587,11 +582,9 @@ class TurnEngine:
         except Exception as e:
             self._protocol_failures += 1
             # 同上：已经吐过的不能重来。
-            if say_raw.strip():
+            if any(p.strip() for p in emitted):
                 warnings.append(f"两阶段 phase 2 失败（{e}），已输出的部分就地收尾")
-                say = protocol.clean_phase2(say_raw)
-                if not say:
-                    return self._generate(fallback_messages, on_delta)
+                say = safe_say("".join(emitted))
             else:
                 warnings.append(f"两阶段 phase 2 失败（{e}），退回文本协议")
                 return self._generate(fallback_messages, on_delta)
@@ -600,18 +593,16 @@ class TurnEngine:
             # 把原始输出留在 probe 里，否则「为什么为空」永远查不出来
             self._probe.setdefault("protocol", {})["phase2_raw"] = say_raw[:400]
             self._protocol_failures += 1
-            if say_raw.strip():
+            if any(p.strip() for p in emitted):
                 warnings.append("phase 2 产出被清洗为空，已输出的部分就地收尾")
-                say = safe_say(say_raw)
-                if not say:
-                    return self._generate(fallback_messages, on_delta)
+                say = safe_say("".join(emitted))
             else:
-                warnings.append(f"phase 2 产出为空（原始 0 字），退回文本协议")
+                warnings.append("phase 2 无可见产出，退回文本协议")
                 return self._generate(fallback_messages, on_delta)
 
         ok, why = protocol.displacement_ok(inner, say)
         if not ok:
-            # phase 2 复述了 direct —— 这一轮已经吐给用户了，不能重来。
+            # phase 2 复述了人格基准却声称额外位移 —— 这一轮已经吐给用户了，不能重来。
             # 记下来，下一轮升级到 tool 之后的重复检查会更严。
             warnings.append(f"两阶段产出不合格：{why}")
             self._protocol_failures += 1
@@ -804,19 +795,26 @@ class TurnEngine:
                      model_watch: set[str] | None = None) -> list[dict]:
         """拿用户这一句话，去核对上一轮的预言。
 
-        判定优先级（见 settle.py 模块 docstring）：
-            1. 模型自己在 TAIL 里给的判定 —— 主路径
-            2. 语域突变 → SUSPECTED_HURT
-            3. 话题延续度
-            4. 都不确定 → WATCH
-
-        所以模型判定必须作为 semantic **传进** judge()，而不是等启发式
-        判完之后再补一刀 —— 那时候 pending 已经关了，补也补不上。
+        明确的模型/语义证据可结算；没有证据则保留未知。
+        关系信号独立记录，不覆盖预测真假；过期只结束保留。
         """
         out: list[dict] = []
         topic_verdicts = topic_verdicts or {}
         model_settle = model_settle or {}
         model_watch = model_watch or set()
+
+        if self._last_user:
+            observation = judge(extract_features(user_text),
+                                baseline_formality=self._baseline_formality())
+            if observation.relation_signal:
+                self._probe["relation_signal"] = observation.relation_signal
+                self.store.append("relation_observation", {
+                    "turn_seq": self._turn_seq, "suspected_hurt": True,
+                    "status": "tentative", "basis": "formality_shift",
+                })
+                self._last_formality_rise = (
+                    formality_score(user_text) - self._baseline_formality())
+                self._apply_outcome({}, SUSPECTED_HURT)
 
         # 先清扫过期，再读剩下的。顺序反了会把过期的那条也送进判定循环，
         # 在 probe 里留下一条并不存在的 WATCH 样本。
@@ -847,7 +845,7 @@ class TurnEngine:
                 prev_user_text=self._last_user,
                 extra_refs=extra,
                 gap_hours=gap,
-                semantic=model_item.outcome if model_item else None,
+                semantic=model_item.outcome if model_item and model_item.evidence.strip() else None,
                 similarity=self.sim,
                 topic=tv.verdict if tv else None,
                 topic_why=tv.why if tv else "",
@@ -858,16 +856,16 @@ class TurnEngine:
             # 丢掉这个意图的话，「只是附和没接话题」可能被判成 CONFIRMED，
             # 凭空提高命中率、污染校准账本。
             if p["id"] in model_watch:
-                results.append({"pid": p["id"], "verdict": "WATCH",
-                                "settle": False,
-                                "why": "模型判 watch（再等等）"})
+                self._probe["settle"].append({"pid": p["id"], "verdict": WATCH,
+                                              "settle": False,
+                                              "why": "模型判 watch（再等等）"})
                 continue
 
             verdict = judge(feat, baseline_formality=baseline_formality,
                             baseline_length=baseline_len)
 
             # 模型判了就以模型为准，证据也用模型写的
-            if model_item is not None and verdict.kind not in (SUSPECTED_HURT,):
+            if model_item is not None and feat.semantic and verdict.settle:
                 delayed = self._is_delayed(p)
                 outcome = model_item.outcome.upper()
                 if delayed and outcome in ("CONFIRMED", "REFUTED"):
@@ -892,8 +890,7 @@ class TurnEngine:
                     })
                 continue
 
-            if verdict.kind == WATCH and gap > self.cfg.watch_ttl_hours / 3 \
-                    and feat.mentions_topic:
+            if verdict.kind in (CONFIRMED, REFUTED) and self._is_delayed(p):
                 verdict = judge_delayed(feat, expired=False)
 
             # 把算这个结论用的原始数值留下 —— 调阈值全靠它
@@ -953,7 +950,7 @@ class TurnEngine:
         return CONFIRMED
 
     def _apply_outcome(self, p: dict, outcome: str) -> None:
-        """结算之后的两件事：调 bias（校准）、记关系（受伤）。"""
+        """保留关系修复；预测命中率不是用户认可度，不自动调人格。"""
         if outcome == SUSPECTED_HURT:
             # 同一轮只开一条修复 —— 用户被伤到一次，不是每条预言伤一次。
             if self._repair_opened_turn != self._turn_seq:
@@ -961,27 +958,8 @@ class TurnEngine:
                 self._open_repair(p)
             return
 
-        try:
-            conf = float(p.get("confidence", 0.0))
-        except (TypeError, ValueError):
-            return
-        before = self.cfg.role.bias
-        if outcome in (CONFIRMED, CONFIRMED_DELAYED) and conf < 0.4:
-            self.cfg.role.bias = min(0.4, self.cfg.role.bias + 0.005)
-        elif outcome in (REFUTED, REFUTED_DELAYED) and conf > 0.7:
-            self.cfg.role.bias = max(-0.4, self.cfg.role.bias - 0.005)
-        after = self.cfg.role.bias
-        if after != before:
-            # bias 是唯一会跨轮累积的学习量。不落账的话，进程一退就归零，
-            # 「同一份账本换策略重放」也就不成立 —— 重放出来的起点是错的。
-            self.store.append("bias_update", {
-                "before": round(before, 4), "after": round(after, 4),
-                "delta": round(after - before, 4),
-                "pending_id": p.get("id"), "outcome": outcome,
-            })
-
     def _open_repair(self, p: dict) -> None:
-        """检测到受伤：记进未解决 + 开一条修复。
+        """观测到疑似受伤：记进未解决 + 开一条修复。
 
         关键：**受伤是「用户」的状态，不是「预言」的状态。**
         一轮里可能有好几条预言同时判成 SUSPECTED_HURT（说话的人只有一个，

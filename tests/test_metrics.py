@@ -11,9 +11,10 @@ sys.path.insert(0, str(ROOT))
 from persona.metrics import compute, compare_with_without_history, verdicts  # noqa: E402
 
 
-def _turn(say="嗯。", direct="好", displace="none", need="认同"):
+def _turn(say="嗯。", direct="好", displace="none", need="认同", baseline=None):
     return {"kind": "turn", "say": say, "direct": direct,
-            "displace": displace, "need": need}
+            "baseline": direct if baseline is None else baseline,
+            "displacement_basis": "persona_baseline", "displace": displace, "need": need}
 
 
 class TestDisplacementRate(unittest.TestCase):
@@ -27,16 +28,16 @@ class TestDisplacementRate(unittest.TestCase):
         m = compute([_turn() for _ in range(5)])
         self.assertEqual(m.displacement_rate, 0.0)
 
-    def test_high_rate_warns(self):
+    def test_rate_is_descriptive(self):
         ledger = [_turn(displace="降级", say="你最近挺忙的？", direct="我需要你")
                   for _ in range(10)]
         levels = {name: lv for lv, name, _ in verdicts(compute(ledger))}
-        self.assertEqual(levels["位移率"], "warn")
+        self.assertEqual(levels["位移率"], "info")
 
-    def test_low_rate_warns(self):
+    def test_low_rate_does_not_imply_no_personality(self):
         ledger = [_turn(displace="none") for _ in range(10)]
         levels = {name: lv for lv, name, _ in verdicts(compute(ledger))}
-        self.assertEqual(levels["位移率"], "warn", "几乎不位移要提示，像客服")
+        self.assertEqual(levels["位移率"], "info")
 
 
 class TestDeclaration(unittest.TestCase):
@@ -55,7 +56,7 @@ class TestDeclaration(unittest.TestCase):
 
 class TestInconsistency(unittest.TestCase):
     def test_claimed_but_identical(self):
-        """声称位移，但 direct 和 say 一样 —— 装深沉。"""
+        """声称位移，但 baseline 和 say 一样。"""
         m = compute([_turn(say="今天真长", direct="今天真长", displace="降级")])
         self.assertEqual(m.inconsistent, 1)
 
@@ -112,11 +113,12 @@ class TestHistoryLift(unittest.TestCase):
         out = compare_with_without_history(full, bare)
         self.assertGreater(out["lift"], 0)
 
-    def test_zero_lift_means_memory_is_decoration(self):
+    def test_zero_difference_does_not_prove_memory_is_useless(self):
         same = [{"kind": "pending_add", "pending_id": "a", "confidence": 0.7},
                 {"kind": "pending_settle", "pending_id": "a", "outcome": "CONFIRMED"}]
         out = compare_with_without_history(compute(same), compute(same))
         self.assertEqual(out["lift"], 0.0)
+        self.assertFalse(out["causal"])
 
 
 if __name__ == "__main__":

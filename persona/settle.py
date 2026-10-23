@@ -1,21 +1,8 @@
-"""结算：把用户下一轮的实际反应，判成对上一轮预言的结果。
+"""可选读法的证据结算，与关系观测分离。
 
-这里是「不需要裁判」的落点：ground truth 不在这一轮里，
-而在用户下一句里。所以判不了就挂起，不硬猜。
-
-「不接话题」有三种心理含义，当轮不可区分：
-    ① 只是不关注        → 无信息
-    ② 回避（碰到沉重记忆）→ 有信息，但现在不能说
-    ③ 被冒犯但选择忍耐   → 关系已受损，且没有说出口
-
-所以不能塞进 confirmed / refuted —— 那测的不是读得准不准，
-是这段关系有没有被碰伤。
-
-判定优先级（重要）：
-    1. 模型自己在 TAIL 里给出的 settle（它读得懂语义，这是主路径）
-    2. 语域突变 → SUSPECTED_HURT（关系信号，优先于校准）
-    3. 话题延续度 → 能判就判
-    4. 都不确定 → WATCH，不记账
+读法主要服务于 direct -> say，不要求本轮或下一轮验证。
+明确语义证据可结算；相关性、连续短回复、换题和时间经过都不构成真值。
+语域变化仅给出暂定关系信号，不关闭预测。过期表示停止保留而非读错。
 """
 from __future__ import annotations
 
@@ -98,7 +85,7 @@ class TurnFeatures:
     is_question: bool
     has_filler: bool              # 语气词 / 表情
     gap_hours: float = 0.0
-    # 这条预言已经被「极短回应」晾过几轮了。连续两次就够判 refuted 了。
+    # 极短回应次数只供观测，不构成证实或反驳。
     minimal_streak: int = 0
     semantic: str | None = None   # 模型自己在 TAIL 里给的判定
     topic: str | None = None      # 异步判定的结果：returned / left / unclear
@@ -123,7 +110,7 @@ class TurnFeatures:
         if self.topic == "unclear":
             # 明确判了「没涉及」—— 不能当证实，也不能当否证
             return False
-        return self.overlap >= OVERLAP_KEEP
+        return False  # 话题重合不等于预测被证实
 
     @property
     def topic_left(self) -> bool:
@@ -218,113 +205,28 @@ def judge(
     baseline_formality: float = 0.3,
     baseline_length: float | None = None,
 ) -> Verdict:
-    """把一轮用户输入判成一个结果。
+    """读法可一直未知。只有明确语义证据才能结算，相关性不是真值。
 
-    判定优先级（和模块 docstring 对应，这里给实现细节）：
-
-        ① 模型在 TAIL 里判了     —— 主路径。它读得懂语义，启发式只是兜底
-        ② 语域突变               —— SUSPECTED_HURT，**压过模型判定**
-        ③ 话题延续度（语义/字面）—— 能判就判
-        ④ 都不确定               —— WATCH，不记账
-
-    为什么 ② 能压过 ①：受伤是关系信号，比「读没读准」重要。
-    模型说「我读对了」但用户的语域突然变了（句子变短、不再反问、
-    语气变客气），那时候该处理的是关系，不是校准。
-
-    为什么 ④ 是 WATCH 而不是 REFUTED：
-    「不接话题」有三种心理含义（不关注 / 回避 / 被冒犯），当轮不可区分。
-    记成 refuted 会污染校准账本 —— 那测的不是读得准不准，
-    是这段关系有没有被碰伤。
-
-    这个函数**只判定，不写账本**。写账本在 engine._settle_with 里。
+    语域变化另作暂定关系观测，既不覆盖证据，也不关闭预言。
     """
-
-    # ① 模型自己判了 —— 主路径。它读得懂语义，启发式只是兜底。
+    signal = ({"suspected_hurt": True}
+              if _looks_hurt(feat, baseline_formality) else None)
     if feat.semantic in ("confirmed", "refuted"):
-        # 但语域突变要压过它：受伤比读没读准重要。
-        if _looks_hurt(feat, baseline_formality):
-            return Verdict(
-                kind=SUSPECTED_HURT,
-                reason="模型认为读对了，但语域变了 —— 关系信号优先",
-                settle=True,
-                relation_signal={"suspected_hurt": True},
-            )
         return Verdict(
             kind=CONFIRMED if feat.semantic == "confirmed" else REFUTED,
-            reason="模型在 TAIL 里自己判的",
-            settle=True,
+            reason="模型依据用户内容给出的暂定语义判定",
+            settle=True, relation_signal=signal,
         )
-
-    # ② 语域突变。最贵、最容易漏的信号。
-    if _looks_hurt(feat, baseline_formality):
+    if feat.topic in ("returned", "left"):
         return Verdict(
-            kind=SUSPECTED_HURT,
-            reason="语域变正式、不再用语气词 —— 更可能是受伤，不是没兴趣",
-            settle=True,
-            relation_signal={"suspected_hurt": True},
-        )
-
-    # ②.5 「嗯」「算了」「唉」这种极短回应 —— 它不是换题，是不表态。
-    #
-    # 这一条是真实数据逼出来的：20 轮里有一半的挂起来自这类回复。
-    # 它们和「换了话题」在字面重合度上看起来一样（都是 0），但语义完全不同：
-    #   换题   = 用户主动把话题带走 → 三种含义不可区分 → 该挂起
-    #   极短回应 = 用户还在这个对话里，只是没接住 → 这是信息，不是噪声
-    #
-    # 把「不表态」也算成 WATCH 的后果很严重：pending 永远关不掉，
-    # 十几轮后堆到 8 条，判定器每轮要判 8 句，warning 爆炸，
-    # 而且真正该学的（这条预言提得对不对）一条都没学到。
-    #
-    # 处理：一次「嗯/算了/唉」不构成反驳也不构成证实，但**连续两次**就是。
-    # 单次仍挂起（保留原设计），但要知道它不是「换题」。
-    if _is_minimal_reply(feat):
-        # 一次可以再看看，连续两次就是明确的「这条预言没说到点上」——
-        # 用户连着两轮只回一个「嗯」，说明他既不认同也不反驳，是没被说中。
-        # 再挂下去只会让 pending 越堆越多，而一条也学不到。
-        if feat.minimal_streak >= 1:
-            return Verdict(
-                kind=REFUTED,
-                reason="连续两轮极短回应 —— 这条预言没说到点上",
-                settle=True,
-            )
-        return Verdict(
-            kind=WATCH,
-            reason="极短回应，不构成证实或反驳，但也不是换题 —— 再挂一轮看看",
-            settle=False,
-        )
-
-    # ③ 话题明显断了 —— 三种含义不可区分，挂起。
-    if feat.topic_left:
-        why = feat.topic_why or "没接话题"
-        return Verdict(
-            kind=WATCH,
-            reason=f"{why}。可能只是不关注，可能回避，可能被冒犯 —— 现在判不了",
-            settle=False,
-        )
-
-    # ④ 预言被证实了。再排除「接了但话突然变很短」。
-    if feat.mentions_topic:
-        if baseline_length is not None and baseline_length > 8 \
-                and feat.length < baseline_length * 0.5:
-            return Verdict(
-                kind=WATCH,
-                reason="接了话题但话变很短，可能读准了但说早了，先挂起",
-                settle=False,
-            )
-        why = feat.topic_why or "接住了话题"
-        return Verdict(kind=CONFIRMED, reason=why, settle=True)
-
-    # ⑤ 还没验证到 —— 挂起，不记账。
-    if feat.topic_undetermined:
-        return Verdict(
-            kind=WATCH,
-            reason=feat.topic_why or "这一句还没涉及这条预言，等它出现",
-            settle=False,
+            kind=CONFIRMED if feat.topic == "returned" else REFUTED,
+            reason=feat.topic_why or "语义判定认为存在明确证据",
+            settle=True, relation_signal=signal,
         )
     return Verdict(
         kind=WATCH,
-        reason=feat.topic_why or "信息不足，不猜",
-        settle=False,
+        reason=feat.topic_why or "没有明确证实或反驳；同话题、短回复和时间经过都不足以结算",
+        settle=False, relation_signal=signal,
     )
 
 
@@ -353,16 +255,14 @@ def _is_minimal_reply(feat: TurnFeatures) -> bool:
 
 
 def judge_delayed(feat: TurnFeatures, *, expired: bool) -> Verdict:
-    """挂起的预言后来怎么收尾。"""
+    """延迟不改变证据标准；过期只代表停止保留，不代表读错。"""
     if expired:
-        return Verdict(kind=EXPIRED, reason="超时。这条信息对这个人本就不重要",
-                       settle=True)
-    if feat.mentions_topic:
-        return Verdict(kind=CONFIRMED_DELAYED,
-                       reason="话题后来回来了，说明读对了，只是当时说早了",
-                       settle=True, delayed=True)
-    return Verdict(kind=REFUTED_DELAYED,
-                   reason="话题回来了但版本对不上", settle=True, delayed=True)
+        return Verdict(kind=EXPIRED, reason="保留期结束，仍无结论", settle=True)
+    verdict = judge(feat)
+    if verdict.kind in (CONFIRMED, REFUTED):
+        verdict.kind = CONFIRMED_DELAYED if verdict.kind == CONFIRMED else REFUTED_DELAYED
+        verdict.delayed = True
+    return verdict
 
 
 # 这张表要跟 pending_table.png 对得上

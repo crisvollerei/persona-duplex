@@ -98,8 +98,8 @@ class TestDeclaration(unittest.TestCase):
 
 class TestConsistency(unittest.TestCase):
     def test_claiming_displacement_but_identical_is_exposed(self):
-        """说自己在位移，但 direct 和 say 一模一样 → 在装。"""
-        raw = make_reply("need: a\nconfidence: 0.5\ndirect: 今天真长\ndisplace: 降级",
+        """声称额外位移，但人格基准和 say 一样。"""
+        raw = make_reply("need: a\nconfidence: 0.5\ndirect: 今天很累\nbaseline: 今天真长\ndisplace: 降级",
                          "今天真长")
         self.assertFalse(parse(raw).is_consistent())
 
@@ -111,9 +111,9 @@ class TestConsistency(unittest.TestCase):
         )
         self.assertTrue(parse(raw).is_consistent())
 
-    def test_empty_direct_is_inconsistent(self):
+    def test_missing_baseline_is_unknown_not_inconsistent(self):
         raw = make_reply("need: a\nconfidence: 0.5\ndirect: \ndisplace: 截断", "……算了。")
-        self.assertFalse(parse(raw).is_consistent())
+        self.assertTrue(parse(raw).is_consistent())
 
 
 class TestConfidenceParsing(unittest.TestCase):

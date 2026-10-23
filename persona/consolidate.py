@@ -1,23 +1,9 @@
-"""后台线程：低频、异步、不占对话链路。
+"""后台提炼用户的暂定倾向和角色的陪伴记录。
 
-负责**中/长期层**的两件事 —— 也就是「人格怎么被经历改变」：
-
-    中期  判断 -> 参数。多条判断指向同一方向才推 traits.value
-          （见 push_traits。单条不动，因为一轮的情境可能只是偶然）
-    长期  叙事 -> 基线。从 self-story 里读「我变了」才推 traits.anchor
-          （见 push_anchors。幅度极小，且必须有原句作依据）
-
-也负责 judgments 和 self-story 本身的产出 —— 前者是中期层的证据，
-后者是长期层的依据。会话期间用的是旧版 self-story，这是对的：
-人也不会边说话边改写自我概念。
-
-限幅：
-  · 每次最多产出 M 条判断
-  · 参数推动需要可信度累积够阈值（不是数条数）
-  · 每条判断/每段叙事只能被消费一次 —— 但**不够阈值的不能标记**，
-    否则它永远凑不齐，中期层就彻底不动了
-  · 未处理完的积压进 buffer；处理失败要能放回去，不能丢
-  · 基线改动必须有 reason，没有依据的直接被 store 拒绝
+常规固化不把用户判断、预测命中率或角色自述当作人格成长依据。
+不自动推 traits.value / anchor；push_traits、push_anchors 仅保留为显式实验接口，
+其旧式映射策略未经效果验证。人格允许未来成长，但信号与策略仍待研究。
+失败时保留积压，已发生的记忆与显式实验变更落账以便恢复。
 """
 from __future__ import annotations
 
@@ -39,10 +25,10 @@ from .store import now_iso as _now_iso_str
 def _now_dt():
     return _parse_dt(_now_iso_str())
 
-SELF_STORY_HEADER = """# 我如何变成现在这样
+SELF_STORY_HEADER = """# 人格的陪伴记录
 
-> 这个文件只记录变化，以及变化的原因。
-> 覆盖会显得善变，并排会像个数据库，只有「原来 X，现在 Y，因为 Z」才像成长。
+> 「我」是系统扮演的人格，不是用户。记录有依据的认识，不强求每次都发生变化。
+> 这些文字不是已验证的成长证据，默认不据此自动修改人格参数或基线。
 
 """
 
@@ -215,10 +201,10 @@ class Consolidator:
     def _run_stages(self, events: list[dict], prof: dict, activity: str) -> dict:
         added = self._consolidate(events, prof)
         story = self._rewrite_story(events, added) if added else False
-        # 中期层：判断 -> 参数推动。多条一致才动，单条不动。
-        pushed = self.push_traits()
-        # 长期层：叙事 -> 基线推动。极慢，且必须有依据。
-        anchored = self.push_anchors()
+        # 成长依据尚待研究。用户倾向/模型自述不自动转成人格改变。
+        # push_traits / push_anchors 仅保留为显式调用的实验接口。
+        pushed = []
+        anchored = []
         # 全部处理成功，才把 staging 里的事件删掉。
         # 反过来的话（先删后处理），中间任何异常都会让那批对话永久丢失。
         self.store.commit_drained()
@@ -296,7 +282,7 @@ class Consolidator:
                 conf = 0.5
             rec = self.store.add_judgment(
                 judgment=txt, confidence=conf, supersedes=sup,
-                affects=it.get("affects"),
+                affects=None,
             )
             out.append(rec)
         return out
@@ -394,22 +380,13 @@ class Consolidator:
 
     def _consolidation_prompt(self, events: list[dict],
                               prof: dict | None = None) -> str:
-        """固化提示词。
-
-        两个和以前不同的点：
-
-        1. **批量**。一次给多少条事件、最多产出几条判断，由活跃度决定。
-           密集对话里事件多但重复多，所以要更严的阈值。
-
-        2. **affects**。判断要能指向人格参数 —— 这是中期层推动 traits 的唯一依据。
-           没有 affects 的判断只进 prompt，不影响人格。
-        """
+        """批量提炼关于用户的暂定认识，不从用户倾向推导角色参数变更。"""
         prof = prof or self.profile()
         cap = min(self.max_judgments_per_run, prof["capacity"])
         lines = [
             f"下面是最近 {len(events)} 条对话事件，每条含用户说的、AI 读到的需求、"
-            f"AI 当时真正想说的话。",
-            f"请提炼 1-{cap} 条关于这个人稳定倾向的判断。",
+            f"中性的素回答和角色实际说的话。",
+            f"请提炼 0-{cap} 条关于用户稳定倾向的暂定判断；不是关于角色自身的判断。",
             "要求：",
             "  · 只写有重复证据的。同类迹象只出现一次就别写",
             "  · 写倾向，不写事实（「倾向于先自我否定」而不是「他昨天辞职了」）",
@@ -417,11 +394,8 @@ class Consolidator:
             "    如果新证据推翻了它，用 supersedes 填那条 id",
             "  · 如果与已有判断冲突，在 supersedes 里填那条判断的 id",
             "",
-            "[affects · 可选但很重要]",
-            "  如果这条判断指向某个可调的人格参数，写出来。格式：{\"参数名\": 方向}",
-            "  方向 +1 = 该参数应变大，-1 = 应变小。不要猜，没把握就不写。",
-            "  可用参数：initiative / intervention / self_disclosure / brevity /",
-            "            warmth / formality / affect_range / imagery / learning_openness",
+            "用户的性格、状态不等于角色的性格，不要输出 affects 或建议修改人格参数。",
+            "没有可靠的重复证据就输出 []，不要凑判断。",
             "",
             "已有判断：",
         ]
@@ -446,13 +420,12 @@ class Consolidator:
         for e in events:
             lines.append(f"  - 用户: {e.get('user', '')[:80]}")
             lines.append(f"    当时读成: {e.get('need', '')}")
-            lines.append(f"    真正想说的: {e.get('direct', '')[:80]}")
+            lines.append(f"    素回答参考: {e.get('direct', '')[:80]}")
+            lines.append(f"    角色实际说: {e.get('say', '')[:80]}")
         lines += [
             "",
             "只输出 JSON 数组，形如：",
-            '[{"judgment": "...", "confidence": 0.6, "supersedes": null,'
-            ' "affects": {"intervention": -1}}]',
-            "affects 可以省略或写空对象 {}。",
+            '[{"judgment": "...", "confidence": 0.6, "supersedes": null}]',
         ]
         return "\n".join(lines)
 
@@ -463,7 +436,7 @@ class Consolidator:
     def push_traits(self, *, min_consensus: float = 1.4) -> list[dict]:
         """把判断聚合成人格参数的推动。
 
-        这是中期层的核心：**证据够才动**，单条不动。
+        仅供显式实验调用，常规后台不使用；下述旧策略未经成长效果验证。
 
         为什么需要共识：
             一条「他不想被建议」可能只是那一轮的情境。
@@ -606,7 +579,10 @@ class Consolidator:
 
         返回 <= ANCHOR_MIN_EFFECT 时调用方直接跳过，不写账本。
         """
-        state = self.store.load_view("anchor_pushes", {"times": []}) or {"times": []}
+        state = self.store.load_view("anchor_pushes")
+        if state is None:
+            from .store import replay_anchor_pushes
+            state = {"times": replay_anchor_pushes(self.store.read_ledger())}
         times = [t for t in (state.get("times") or []) if isinstance(t, str)]
 
         now = _now_dt()
@@ -637,10 +613,11 @@ class Consolidator:
         cutoff = 7 * 24 * 3600
         times = [t for t in times if (now - _parse_dt(t)).total_seconds() <= cutoff]
         times.append(now.isoformat(timespec="seconds"))
+        self.store.append("anchor_push", {"at": times[-1]})
         self.store.save_view("anchor_pushes", {"times": times})
 
     def push_anchors(self, *, min_rounds: int = 3) -> list[dict]:
-        """长期层：让自我叙事推动基线。
+        """显式实验接口：让自我叙事推动基线，默认不自动调用。
 
         和中期层的区别：
             中期看**多条判断是否一致** —— 证据够了就动 value
@@ -806,7 +783,8 @@ class Consolidator:
         """把新判断写进自传。带原因，不是覆盖。"""
         path = self.store.self_story_path
         if not path.exists():
-            path.write_text(SELF_STORY_HEADER, encoding="utf-8")
+            if not self.store.rebuild_story():
+                path.write_text(SELF_STORY_HEADER, encoding="utf-8")
 
         if self.llm is not None and added:
             entry = self._story_entry_llm(events, added)
@@ -815,8 +793,12 @@ class Consolidator:
         if not entry:
             return False
 
-        with path.open("a", encoding="utf-8") as f:
-            f.write(f"\n## {now_iso()}\n\n{entry}\n")
+        ledger = self.store.read_ledger()
+        if not any(r.get("kind") == "story_seed" for r in ledger):
+            self.store.append("story_seed", {"text": path.read_text(encoding="utf-8")})
+        self.store.append("story_entry", {"entry": entry,
+                                          "persona": self.store.persona_name()})
+        self.store.rebuild_story()
         return True
 
     def _story_entry_template(self, added: list[dict]) -> str:
@@ -832,14 +814,17 @@ class Consolidator:
     def _story_entry_llm(self, events: list[dict], added: list[dict]) -> str:
         prev = self.store.self_story_path.read_text(encoding="utf-8")[-1500:]
         prompt = (
-            "你是同一个人的内心。下面是你最近新形成的几个判断，以及你过去的自我叙述。\n"
-            "请用第一人称写一小段（不超过 120 字），说明「我原来是怎样的，"
-            "现在变成怎样，因为什么」。\n"
-            "不要写成总结报告，要像一个人在回想。\n\n"
+            f"你是系统扮演的人格「{self.store.persona_name() or '当前角色'}」。\n"
+            "第一人称的「我」只能指这个人格；用户是「对方」，不是你。\n"
+            "用户的疲惫、退缩、经历和偏好不能改写成你自己的经历或性格。\n"
+            "下面的判断是关于用户的暂定认识，不证明你自己发生了成长。\n"
+            "请写不超过 120 字的陪伴记录，只写有对话依据的认识。\n"
+            "不必套用「我原来/现在变成」；没有真实变化时不要编造变化。\n\n"
             f"[过去的自我叙述]\n{prev}\n\n"
             f"[新形成的判断]\n" + "\n".join(f"- {j['judgment']}" for j in added) + "\n\n"
             f"[触发的事件]\n" + "\n".join(
-                f"- {e.get('user', '')[:60]}" for e in events[:5]
+                f"- 用户：{e.get('user', '')[:60]}\n  角色：{e.get('say', '')[:60]}"
+                for e in events[:5]
             )
         )
         try:

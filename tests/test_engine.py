@@ -127,17 +127,19 @@ class TestSettle(Base):
         self.assertEqual(v.kind, "WATCH")
         self.assertFalse(v.settle, "不接话题不能记账")
 
-    def test_confidence_when_topic_kept(self):
+    def test_same_topic_without_evidence_stays_unknown(self):
         feat = extract_features("是啊，路上堵了一个半小时，还没吃饭",
                                 prev_ai_say="路上堵吗")
         v = judge(feat, baseline_formality=0.3)
-        self.assertEqual(v.kind, "CONFIRMED")
+        self.assertEqual(v.kind, "WATCH")
 
     def test_hurt_detected_by_register(self):
         """用户不说被冒犯，但语域变了 —— 这是全系统最贵的信号。"""
         feat = extract_features("谢谢，我会自己处理的。")
         v = judge(feat, baseline_formality=0.2)
-        self.assertEqual(v.kind, "SUSPECTED_HURT")
+        self.assertEqual(v.kind, "WATCH")
+        self.assertFalse(v.settle)
+        self.assertTrue(v.relation_signal["suspected_hurt"])
 
     def test_semantic_settle_wins(self):
         """模型自己在 TAIL 里判了 —— 那是主路径，优先于启发式。"""
@@ -147,11 +149,12 @@ class TestSettle(Base):
         self.assertEqual(v.kind, "CONFIRMED")
         self.assertTrue(v.settle)
 
-    def test_hurt_overrides_semantic(self):
-        """但语域突变要压过它：受伤比读没读准重要。"""
+    def test_hurt_signal_is_independent_of_prediction(self):
+        """疑似受伤不覆盖预测判定。"""
         feat = extract_features("谢谢，我知道了。", semantic="confirmed")
         v = judge(feat, baseline_formality=0.2)
-        self.assertEqual(v.kind, "SUSPECTED_HURT")
+        self.assertEqual(v.kind, "CONFIRMED")
+        self.assertTrue(v.relation_signal["suspected_hurt"])
 
     def test_expire(self):
         cfg = _cfg()
@@ -251,8 +254,8 @@ class TestConsolidator(Base):
             e.turn(t)
         Consolidator(self.store).run_once()
         story = (self.store.root / "self-story.md").read_text(encoding="utf-8")
-        self.assertIn("我如何变成现在这样", story)
-        self.assertIn("原来", story + "原来")     # 有原因，不是罗列
+        self.assertIn("人格的陪伴记录", story)
+        self.assertIn("原因", story)
 
 
 if __name__ == "__main__":

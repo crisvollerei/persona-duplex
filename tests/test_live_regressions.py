@@ -201,17 +201,17 @@ class TestMinimalReplyHandling(unittest.TestCase):
                                 prev_ai_say="你是想听钱的说法还是实在的")
         v = judge(feat, baseline_formality=0.25)
         self.assertEqual(v.kind, "WATCH")
-        self.assertIn("极短回应", v.reason)
+        self.assertIn("短回复", v.reason)
         # 关键区别：走的是「不表态」分支，不是「换题」分支
         self.assertNotIn("可能只是不关注", v.reason)
 
-    def test_two_consecutive_minimal_replies_refute(self):
-        """连续两次「嗯」= 这条预言没说到点上，该结账了。"""
+    def test_two_consecutive_minimal_replies_remain_unknown(self):
+        """连续短回复也不构成反驳。"""
         feat = extract_features("嗯。", pending_claim="c", predicts="p",
                                 prev_ai_say="x", minimal_streak=1)
         v = judge(feat, baseline_formality=0.25)
-        self.assertEqual(v.kind, "REFUTED")
-        self.assertTrue(v.settle)
+        self.assertEqual(v.kind, "WATCH")
+        self.assertFalse(v.settle)
 
     def test_content_reply_not_treated_as_minimal(self):
         """带内容的短句不算 —— 「算了不说了。你觉得我该不该换个工作」有真问题。"""
@@ -219,8 +219,8 @@ class TestMinimalReplyHandling(unittest.TestCase):
                                 pending_claim="c", predicts="p")
         self.assertFalse(feat.text.strip() in ("嗯。",))
 
-    def test_pending_no_longer_piles_up(self):
-        """引擎层：连续极短回应会把预言结掉，不会无限堆。"""
+    def test_short_replies_do_not_force_pending_closed(self):
+        """引擎层保留未知，队列由上限和 TTL 限制而非伪造结论。"""
         with tempfile.TemporaryDirectory() as tmp:
             store = Store(Path(tmp))
             replies = [
@@ -234,7 +234,8 @@ class TestMinimalReplyHandling(unittest.TestCase):
             self.assertEqual(len(store.pendings()), 1)
             e.turn("嗯。")
             e.turn("嗯。")
-            self.assertEqual(len(store.pendings()), 0, "两轮「嗯」之后还挂着")
+            self.assertEqual(len(store.pendings()), 1)
+            self.assertFalse([r for r in store.read_ledger() if r["kind"] == "pending_settle"])
 
 
 class TestRepairNoteUniqueness(unittest.TestCase):

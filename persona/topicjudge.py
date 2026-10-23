@@ -90,17 +90,7 @@ class BigramJudge:
         self.similarity = similarity
 
     def judge(self, req: JudgeRequest) -> dict[str, TopicVerdict]:
-        """按字面重合判。只产出 RETURNED / UNCLEAR，**从不产出 LEFT**。
-
-        为什么不产出 LEFT：字面重合低有两种可能 ——
-        「用户换了话题」和「用户还没说到」。两者当轮不可区分，
-        而判成 LEFT 会让预言记成 refuted，把「还没发生」变成「说反了」。
-        这是命中率被压到 40% 上下最主要的原因。
-
-        那条 else 分支（DROP <= overlap < KEEP）和上面的分支返回相同，
-        是有意留的 —— 它标出了「中间地带」这个位置，将来要在这里
-        接更细的判定（比如结合句式特征）。逻辑上是冗余的。
-        """
+        """仅观测字面相关性。否定句也可能高度重合，不能据此确认预测。"""
         from .settle import topic_overlap
 
         out: dict[str, TopicVerdict] = {}
@@ -112,15 +102,8 @@ class BigramJudge:
                       for r in refs if r]
             overlap = max(scores) if scores else 0.0
 
-            if overlap >= OVERLAP_KEEP:
-                out[p["id"]] = TopicVerdict(RETURNED, f"字面重合 {overlap:.2f}")
-            elif overlap < OVERLAP_DROP:
-                # 字面重合低 ≠ 预言被否证。它也可能只是「还没说到」。
-                # 退回 UNCLEAR 而不是 LEFT —— 让启发式判 WATCH 而不是 REFUTED。
-                # 这是修命中率的关键：以前字面兜底把「没提」当成「说反了」。
-                out[p["id"]] = TopicVerdict(UNCLEAR, f"字面重合 {overlap:.2f}")
-            else:
-                out[p["id"]] = TopicVerdict(UNCLEAR, f"字面重合 {overlap:.2f}")
+            out[p["id"]] = TopicVerdict(
+                UNCLEAR, f"字面重合 {overlap:.2f}，不足以证明或反驳")
         return out
 
 
@@ -153,7 +136,7 @@ verdict 三选一：
   预言：「对方会报一个具体的入睡时间」
   用户：「我最近老失眠」        -> unclear（还没说时间，不代表不说）
   用户：「两三点才睡着」        -> returned（就是这么个时间）
-  用户：「我不困，开始干活了」  -> left（明确顶回来）
+  用户：「我不打算说具体几点睡」 -> left（明确拒绝所预测的行为）
 
 格式：[{{"id":"p_0001","verdict":"returned","why":"十五字以内"}}]"""
 

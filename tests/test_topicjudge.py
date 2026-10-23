@@ -84,11 +84,11 @@ class TestLLMJudge(unittest.TestCase):
 
 
 class TestBigramFallback(unittest.TestCase):
-    def test_returns_when_literal_overlap(self):
+    def test_literal_overlap_alone_is_not_confirmation(self):
         req = _req(user="今天路上堵了一个半小时，好累", claim="很累",
                    predicts="会说路上堵")
         out = BigramJudge().judge(req)
-        self.assertEqual(out["p_1"].verdict, RETURNED)
+        self.assertEqual(out["p_1"].verdict, UNCLEAR)
 
     def test_unclear_when_unrelated(self):
         """字面完全不重合 → unclear，不是 left。
@@ -102,7 +102,7 @@ class TestBigramFallback(unittest.TestCase):
 
     def test_returned_when_literal_overlap(self):
         req = _req(user="今天路上堵了一个半小时，好累", claim="很累", predicts="会说路上堵")
-        self.assertEqual(BigramJudge().judge(req)["p_1"].verdict, RETURNED)
+        self.assertEqual(BigramJudge().judge(req)["p_1"].verdict, UNCLEAR)
 
     def test_empty_pendings(self):
         self.assertEqual(BigramJudge().judge(JudgeRequest(user_text="hi")), {})
@@ -195,7 +195,7 @@ class TestEngineIntegration(unittest.TestCase):
         self.assertTrue(any(s["id"] == p["id"] for s in res.settled),
                         "语义判 returned 却没结算")
 
-    def test_semantic_left_keeps_watching(self):
+    def test_semantic_explicit_contradiction_refutes(self):
         p = self._seed_pending()
         judge = AsyncJudge(
             LLMJudge(ScriptedLLM([f'[{{"id":"{p["id"]}","verdict":"left"}}]'])),
@@ -205,9 +205,9 @@ class TestEngineIntegration(unittest.TestCase):
                        ScriptedLLM([make_reply("need: a\nconfidence: 0.6\n"
                                                "direct: x\ndisplace: none", "嗯。")]),
                        judge=judge)
-        res = e.turn("……算了，不聊这个。")
-        self.assertFalse([s for s in res.settled if s["id"] == p["id"]])
-        self.assertEqual(len(self.store.pendings()), 1)
+        res = e.turn("我没有具体方案，也不准备给方案。")
+        self.assertEqual([s["outcome"] for s in res.settled if s["id"] == p["id"]], ["REFUTED"])
+        self.assertEqual(len(self.store.pendings()), 0)
 
     def test_no_judge_still_works(self):
         p = self._seed_pending()

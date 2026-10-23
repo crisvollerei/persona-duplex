@@ -77,8 +77,8 @@ class TestFindings(unittest.TestCase):
     def _cal(self, samples, judge=None) -> Calibration:
         return collect([_turn(samples, judge=judge)])
 
-    def test_flags_overlap_keep_too_high(self):
-        """被挂起的样本字面重合却很高 —— 说明阈值把该结算的挡住了。
+    def test_high_overlap_does_not_recommend_forcing_settlement(self):
+        """字面重合高也可能正好在否定，不能据此建议降低阈值。
 
         每条样本必须用**不同 pid** —— collect 按 pid 去重（同一条预言
         挂多轮只记最后一次判定），同一个 pid 会被合并成 1 条。
@@ -87,16 +87,16 @@ class TestFindings(unittest.TestCase):
                    for i in range(6)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
-        self.assertIn("OVERLAP_KEEP", areas)
-        self.assertEqual(areas["OVERLAP_KEEP"].level, "warn")
+        self.assertNotIn("OVERLAP_KEEP", areas)
+        self.assertEqual(areas["字面相关性"].level, "info")
 
-    def test_ok_when_well_separated(self):
+    def test_self_labeled_groups_do_not_validate_threshold(self):
         samples = [_s(overlap=0.3, verdict="CONFIRMED", pid=f"c{i}") for i in range(4)]
         samples += [_s(overlap=0.0, verdict="WATCH", settle=False, pid=f"w{i}")
                     for i in range(4)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
-        self.assertEqual(areas["OVERLAP_KEEP"].level, "ok")
+        self.assertEqual(areas["字面相关性"].level, "info")
 
     def test_hurt_threshold_overlap_detected(self):
         """受伤和正常样本的语域升幅重叠 → 会误判。
@@ -110,7 +110,8 @@ class TestFindings(unittest.TestCase):
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
         self.assertIn("语域阈值", areas)
-        self.assertEqual(areas["语域阈值"].level, "warn")
+        self.assertEqual(areas["语域阈值"].level, "info")
+        self.assertIn("独立", areas["语域阈值"].detail)
 
     def test_hurt_threshold_clean(self):
         samples = [_s(verdict="SUSPECTED_HURT", formality=0.9, base=0.3,
@@ -119,7 +120,7 @@ class TestFindings(unittest.TestCase):
                     for i in range(5)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
-        self.assertEqual(areas["语域阈值"].level, "ok")
+        self.assertEqual(areas["语域阈值"].level, "info")
 
     def test_grace_too_tight(self):
         """判定经常超时 → grace 该放宽。

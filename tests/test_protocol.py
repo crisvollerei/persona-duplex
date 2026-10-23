@@ -66,8 +66,9 @@ class FakeToolLLM:
 
 
 def _inner(direct="你其实早就想走了，只是在等一个人说可以。",
-           displace="降级", need="要被推一把", conf=0.6):
-    return {"need": need, "confidence": conf, "direct": direct, "displace": displace}
+           displace="降级", need="要被推一把", conf=0.6, baseline=None):
+    return {"need": need, "confidence": conf, "direct": direct,
+            "baseline": direct if baseline is None else baseline, "displace": displace}
 
 
 class TestSchema(unittest.TestCase):
@@ -85,7 +86,7 @@ class TestSchema(unittest.TestCase):
         params = tool["function"]["parameters"]
         self.assertFalse(params["additionalProperties"])
         self.assertEqual(set(params["required"]),
-                         {"need", "confidence", "direct", "displace"})
+                         {"need", "confidence", "direct", "baseline", "displace"})
 
 
 class TestParseInner(unittest.TestCase):
@@ -112,7 +113,7 @@ class TestParseInner(unittest.TestCase):
 class TestDisplacementCheck(unittest.TestCase):
     def test_paraphrase_rejected(self):
         """声称位移，但 say 基本是 direct 的复述 —— 不合格。"""
-        inner = Head(direct="不是矫情。三天睡四小时还问自己是不是矫情，这本身就说明你对自己太狠了。",
+        inner = Head(baseline="不是矫情。三天睡四小时还问自己是不是矫情，这本身就说明你对自己太狠了。",
                      displace="降级")
         ok, why = protocol.displacement_ok(inner, "不矫情。三天睡四小时还怀疑自己矫情，这本身就说明你对自己太狠了。")
         self.assertFalse(ok)
@@ -127,10 +128,10 @@ class TestDisplacementCheck(unittest.TestCase):
         ok, why = protocol.displacement_ok(Head(direct="x", displace="none"), "")
         self.assertFalse(ok)
 
-    def test_missing_direct_rejected(self):
+    def test_missing_baseline_not_reinterpreted_as_direct(self):
         ok, why = protocol.displacement_ok(Head(direct="", displace="降级"), "嗯。")
-        self.assertFalse(ok)
-        self.assertIn("direct", why)
+        self.assertTrue(ok)
+        self.assertIn("未知", why)
 
     def test_none_displace_is_permissive(self):
         inner = Head(direct="今天先别想事，去睡吧。", displace="none")
@@ -155,7 +156,7 @@ class TestTwoPhaseEngine(unittest.TestCase):
         props = set(tool["function"]["parameters"]["properties"])
         self.assertNotIn("say", props)
         self.assertNotIn("tail", props)
-        self.assertEqual(props, {"need", "confidence", "direct", "displace"})
+        self.assertEqual(props, {"need", "confidence", "direct", "baseline", "displace"})
 
     def test_phase2_receives_direct(self):
         """phase 2 必须真的看到 direct —— 否则因果链断在这里。

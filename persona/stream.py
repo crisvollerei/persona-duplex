@@ -42,10 +42,10 @@ _FIELD_PEEK = 12
 
 # 第一行是不是 HEAD 的字段行
 _HEAD_LINE = re.compile(
-    r"^[ \t]*(need|confidence|direct|displace)[ \t]*[:：]", re.IGNORECASE
+    r"^[ \t]*(need|confidence|direct|baseline|displace)[ \t]*[:：]", re.IGNORECASE
 )
 
-_HEAD_WORDS = ("need", "confidence", "direct", "displace")
+_HEAD_WORDS = ("need", "confidence", "direct", "baseline", "displace")
 
 
 def _any_field_prefix(text: str) -> bool:
@@ -119,6 +119,9 @@ class StreamParser:
         while True:
             if self.state == SEEK:
                 if not self._seek(raw):
+                    break
+                if self._dead:
+                    self.buf = ""
                     break
                 continue
             if self.state == IN_HEAD:
@@ -230,7 +233,9 @@ class StreamParser:
             if self._pending_ws:
                 out.append(self._pending_ws)
                 self._pending_ws = ""
-            out.append(piece)
+            body = piece.rstrip()
+            out.append(body)
+            self._pending_ws = piece[len(body):]
 
         return out
 
@@ -253,7 +258,7 @@ class StreamParser:
             prefix = self.buf[:i]
             self.buf = self.buf[i + len(m):]
             # 标记之前如果已经有正文，说明模型提前开口了，直接当 SAY
-            if prefix.strip():
+            if prefix.strip() and not _looks_like_protocol_full(prefix):
                 self.say_text += prefix
                 out.append(prefix)
             self.state = {SECTION_HEAD: IN_HEAD,
@@ -276,8 +281,10 @@ class StreamParser:
             # 判据：只有「当前内容仍是某个字段名的前缀」才值得等。
             if chr(10) not in t and len(t) < _FIELD_PEEK and _any_field_prefix(t):
                 return False
-            line1 = t.split(chr(10), 1)[0]
-            if _HEAD_LINE.match(line1) or _looks_like_protocol_full(t):
+            hold = _holdback(t, MARKERS)
+            candidate = t[:-hold] if hold else t
+            line1 = candidate.split(chr(10), 1)[0]
+            if _HEAD_LINE.match(line1) or _looks_like_protocol_full(candidate):
                 # 模型只写了字段没写标记 —— 整段是协议残留，一个字都不出。
                 # 实测：非流式 parse 已经被 guard 拦下，
                 # 流式这里却把整段当 SAY 吐出去，而 chat 默认走流式。
@@ -303,8 +310,24 @@ class StreamParser:
         return True
 
     def _say(self, out: list[str]) -> bool:
+        # 裸字段也可能出现在 SAY 中。整行出现前扣住字段前缀；一旦确认，
+        # 按内部段收取其余内容，不能等 finish() 才发现已经泄露。
+        previous_line = self.say_text.rsplit("\n", 1)[-1]
+        field = re.search(
+            r"^[ \t]*(need|confidence|direct|baseline|displace)[ \t]*[:：]",
+            self.buf, re.MULTILINE | re.IGNORECASE)
         hits = [(self.buf.find(m), m) for m in _SAY_END]
         hits = [(i, m) for i, m in hits if i >= 0]
+        if field and (field.start() > 0 or not previous_line.strip()) \
+                and (not hits or field.start() < min(i for i, _ in hits)):
+            piece = self.buf[:field.start()]
+            self.say_text += piece
+            if piece:
+                out.append(piece)
+            self.buf = self.buf[field.start():]
+            self.state = IN_HEAD
+            return True
+
         if hits:
             i, m = min(hits)
             piece = self.buf[:i]
@@ -326,6 +349,10 @@ class StreamParser:
         # 没到结尾。扣住可能是标记前缀的尾巴。
         hold = _holdback(self.buf, _SAY_END)
         n = len(self.buf) - hold
+        start = self.buf.rfind("\n", 0, n) + 1
+        last_line = self.buf[start:n]
+        if (start > 0 or not previous_line.strip()) and _any_field_prefix(last_line):
+            n = start
         if n > 0:
             piece = self.buf[:n]
             self.say_text += piece
