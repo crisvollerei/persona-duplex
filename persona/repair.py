@@ -131,6 +131,11 @@ class RepairBook:
     items: list[Repair] = field(default_factory=list)
 
     def open(self, note: str, turn_seq: int, created: str, level: str) -> Repair:
+        """开一条修复记录。同一条事还在处理中就复用，不重复开。
+
+        复用是必须的：同一条受伤可能有多个 pending 指向它，
+        每次开新的会让「两次没回应就转雷区」失效（永远都是新记录）。
+        """
         for r in self.items:
             if r.note == note and r.state in (OPEN, REPAIRING):
                 return r
@@ -140,15 +145,33 @@ class RepairBook:
         return r
 
     def active(self) -> list[Repair]:
+        """还在处理中的修复（open + repairing）。
+
+        open      还没发出修复语
+        repairing 发出去了，等反应
+        healed / residual 不算 active —— 已经结案
+        """
         return [r for r in self.items if r.state in (OPEN, REPAIRING)]
 
     def mark_repairing(self, note: str) -> None:
+        """记一次「已经发出修复语」。
+
+        **OPEN 和 REPAIRING 都要计数。**
+
+        只在 OPEN 时 +1 的话，attempts 会封顶在 1 —— 第一次之后状态
+        变成 REPAIRING，再也不满足条件。而 engine 里有一条
+        「attempts >= 2 就转雷区（不再反复道歉）」的规则，
+        它依赖这个计数能到 2。计数卡住等于那条规则从未生效。
+
+        实测：连续调用 5 次 mark_repairing，attempts 始终是 1。
+        """
         for r in self.items:
-            if r.note == note and r.state == OPEN:
+            if r.note == note and r.state in (OPEN, REPAIRING):
                 r.state = REPAIRING
                 r.attempts += 1
 
     def close(self, note: str, *, healed: bool) -> None:
+        """结案。healed=True 销账，False 转长期雷区（residual）。"""
         for r in self.items:
             if r.note == note and r.state in (OPEN, REPAIRING):
                 r.state = HEALED if healed else RESIDUAL

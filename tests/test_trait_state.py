@@ -544,6 +544,57 @@ class TestAnchorFrequency(unittest.TestCase):
         self.assertEqual(n_before, n_after, "系数不够时不该写账本")
 
 
+class TestRepairAttempts(unittest.TestCase):
+    """修复次数的累积。
+
+    实测踩过：attempts 封顶在 1，engine 里「attempts >= 2 就转雷区」
+    那条规则从未生效。原因是 mark_repairing 只在 OPEN 状态 +1，
+    第一次之后状态变 REPAIRING，再也不满足条件。
+    """
+
+    def test_attempts_accumulate(self):
+        from persona.repair import RepairBook
+        book = RepairBook()
+        r = book.open("测试", turn_seq=0, created="2026-01-01T00:00:00+08:00",
+                      level="soft")
+        for i in range(3):
+            book.mark_repairing("测试")
+            self.assertEqual(book.items[0].attempts, i + 1)
+
+    def test_attempts_survive_roundtrip(self):
+        """序列化再过一遍，attempts 不能丢。"""
+        from persona.repair import RepairBook
+        book = RepairBook()
+        book.open("测试", turn_seq=0, created="2026-01-01T00:00:00+08:00",
+                  level="soft")
+        book.mark_repairing("测试")
+        book.mark_repairing("测试")
+        again = RepairBook.from_list(book.to_list())
+        self.assertEqual(again.items[0].attempts, 2)
+
+    def test_open_reuses_active(self):
+        """同一条事还在处理中，不重复开新记录。"""
+        from persona.repair import RepairBook
+        book = RepairBook()
+        a = book.open("同一件事", turn_seq=0, created="2026-01-01T00:00:00+08:00",
+                      level="soft")
+        b = book.open("同一件事", turn_seq=1, created="2026-01-01T00:01:00+08:00",
+                      level="soft")
+        self.assertIs(a, b)
+        self.assertEqual(len(book.items), 1)
+
+    def test_closed_then_reopen_creates_new(self):
+        """已结案的事再受伤，应该是新记录。"""
+        from persona.repair import RepairBook
+        book = RepairBook()
+        book.open("同一件事", turn_seq=0, created="2026-01-01T00:00:00+08:00",
+                  level="soft")
+        book.close("同一件事", healed=True)
+        book.open("同一件事", turn_seq=5, created="2026-01-01T01:00:00+08:00",
+                  level="soft")
+        self.assertEqual(len(book.items), 2)
+
+
 class TestSessionRestoresTraits(unittest.TestCase):
     def test_traits_survive_restart(self):
         from persona.llm import ScriptedLLM

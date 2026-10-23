@@ -762,7 +762,18 @@ class TurnEngine:
             return None
 
         for r in active:
-            if r.state != "open" or r.turn_seq >= self._turn_seq:
+            # 受伤的当轮不认领（turn_seq 相同）—— 那时模型还在处理自己的尴尬。
+            if r.turn_seq >= self._turn_seq:
+                continue
+            # 状态门槛：open = 还没试过，repairing = 试过一次但没回应。
+            # 两种都允许再试，但 attempts >= 2 就不再试了 ——
+            # 「反复道歉是二次伤害」，第二次还没反应就该转雷区。
+            #
+            # 原来只允许 open，导致 attempts 永远停在 1，
+            # 下面「attempts >= 2 转雷区」那条规则从未生效。
+            if r.state not in ("open", "repairing"):
+                continue
+            if r.attempts >= 2:
                 continue
             if is_repair_attempt(say):
                 level = repair_level(say)
