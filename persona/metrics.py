@@ -36,7 +36,8 @@ class Metrics:
     misses: int = 0
     watches: int = 0
     hurts: int = 0
-    expired: int = 0
+    # 解析失败（没有 displace 字段）的轮次 —— 不进位移率分母
+    unparsed: int = 0
 
     repair_opened: int = 0
     repair_attempted: int = 0
@@ -48,6 +49,11 @@ class Metrics:
     displace_kinds: dict[str, int] = field(default_factory=dict)
     # 被挂起过的预言 id（去重）。同一条预言可能被晾好几轮，只算一次。
     watched_ids: set[str] = field(default_factory=set)
+    # 过期的预言 id（去重）。同一条可能同时有 pending_expire 和
+    # pending_settle(EXPIRED) 两条记录。
+    expired_ids: set[str] = field(default_factory=set)
+    # 没有 pending_id 的过期记录（老数据 / 手工改动）—— 无法去重，单独计数。
+    expired_anon: int = 0
 
     # 人格：从 traits_init 起，累计每次 trait_update / anchor_update 的位移。
     # 两个 dict 分开存，不用前缀挤一个 —— 参数名可能含冒号，前缀法就分不开。
@@ -63,7 +69,18 @@ class Metrics:
 
     @property
     def displacement_rate(self) -> float:
-        return self.displaced / self.turns if self.turns else 0.0
+        """位移率。
+
+        分母只算**成功解析出 displace 的轮次** —— 解析失败（displace 为空）
+        的那些轮不是「没有位移」，是「不知道」，算进分母会拉低比率。
+        """
+        known = self.turns - self.unparsed
+        return self.displaced / known if known > 0 else 0.0
+
+    @property
+    def expired(self) -> int:
+        """过期总数 = 去重后的 id 数 + 无法去重的匿名记录数。"""
+        return len(self.expired_ids) + self.expired_anon
 
     @property
     def accuracy(self) -> float:
@@ -72,11 +89,21 @@ class Metrics:
 
     @property
     def repair_success_rate(self) -> float | None:
-        """修复成功率。没发起过就返回 None —— 0 和「没有」是两回事。"""
-        done = self.repair_healed + self.repair_rejected + self.repair_residual
-        if not done:
+        """修复成功率。没发起过就返回 None —— 0 和「没有」是两回事。
+
+        分母包含「开了但没人理」的修复。只算已结案的话，
+        10 次受伤里 9 次没回应、1 次治愈会报成「成功率 100%」——
+        那 9 次恰恰是最该被看见的。
+        """
+        # 分母直接用「开了几条修复」。
+        #
+        # 用已经结案的数当分母会漏掉最该被看见的那批：
+        # 10 次受伤、9 次对方完全没接、1 次治愈 ——
+        # 旧算法报 100%，真实的修复覆盖率是 10%。
+        total = self.repair_opened
+        if not total:
             return None
-        return self.repair_healed / done
+        return self.repair_healed / total
 
     @property
     def brier(self) -> float:
@@ -86,27 +113,42 @@ class Metrics:
         return sum((c - (1.0 if h else 0.0)) ** 2 for c, h in self.conf_pairs) \
             / len(self.conf_pairs)
 
+    def paired_accuracy(self) -> float:
+        """**只在有配对样本上算**的命中率。
+
+        为什么要单独的这一个：calibration_gap 拿 conf_pairs 的均值
+        去比全局 accuracy，两边的分母不一样。
+        实测构造：4 条有配对全中 + 6 条无配对全错
+            -> 全局 accuracy = 40%
+            -> conf_pairs 均值 = 0.90
+            -> 报「平均把握 0.90 但命中 40%，在读空气」
+        但这 4 条其实全中 —— 纯属分母错配，把好数据报成坏数据。
+        """
+        if not self.conf_pairs:
+            return 0.0
+        return sum(1 for _, h in self.conf_pairs if h) / len(self.conf_pairs)
+
     def calibration_gap(self) -> float:
         """预测的把握度和实际命中率差多少。
 
-        只在样本够的时候才有意义。样本少于 4 条时返回 0 ——
-        两条数据算出「偏差 0.35」是噪声，不是诊断。
+        两边都用 conf_pairs —— 有配对的那批才是校准样本。
+        样本少于 4 条时返回 0：两条数据算出「偏差 0.35」是噪声。
         """
         if len(self.conf_pairs) < 4:
             return 0.0
         mean_conf = sum(c for c, _ in self.conf_pairs) / len(self.conf_pairs)
-        return abs(mean_conf - self.accuracy)
+        return abs(mean_conf - self.paired_accuracy())
 
     def is_overconfident(self) -> bool:
         """是不是「嘴上很有把握，实际全错」。
 
         只有把握高、命中低才算。反过来（把握低命中高）是保守，
-        不是毛病，不该报警。
+        不是毛病，不该报警。分母同样用 conf_pairs。
         """
         if len(self.conf_pairs) < 4:
             return False
         mean_conf = sum(c for c, _ in self.conf_pairs) / len(self.conf_pairs)
-        return mean_conf - self.accuracy > 0.2
+        return mean_conf - self.paired_accuracy() > 0.2
 
     def buckets(self) -> list[tuple[str, int, float, float]]:
         """按把握度分桶，看每个桶的实际命中率。"""
@@ -131,9 +173,14 @@ def compute(ledger: list[dict]) -> Metrics:
             m.turns += 1
             say = rec.get("say") or ""
             direct = rec.get("direct") or ""
-            disp = rec.get("displace") or "none"
+            # 不能写 `or "none"` —— 那会把解析失败（空串）和
+            # 「明确没位移」（none）混成一个，unparsed 永远是 0。
+            disp = rec.get("displace")
 
-            if disp not in ("", "none"):
+            if disp is None or disp == "":
+                # 解析失败：不知道有没有位移，不进分母
+                m.unparsed += 1
+            elif disp != "none":
                 m.displaced += 1
                 m.displace_kinds[disp] = m.displace_kinds.get(disp, 0) + 1
                 # 声称位移但 direct 和 say 几乎一样 = 装深沉。
@@ -160,7 +207,14 @@ def compute(ledger: list[dict]) -> Metrics:
         elif kind == "pending_expire":
             # 过期的预言走的是 pending_expire，不是 pending_settle。
             # 只认 pending_settle 的话，EXPIRED 永远是 0。
-            m.expired += 1
+            #
+            # 但**同一条预言可能两种记录都有**（老引擎两条都写），
+            # 直接 ++ 会算成两次。按 pid 去重。
+            pid = rec.get("pending_id")
+            if pid:
+                m.expired_ids.add(str(pid))
+            else:
+                m.expired_anon += 1
 
         elif kind == "pending_settle":
             outcome = rec.get("outcome", "")
@@ -171,7 +225,11 @@ def compute(ledger: list[dict]) -> Metrics:
             elif outcome == "SUSPECTED_HURT":
                 m.hurts += 1
             elif outcome == "EXPIRED":
-                m.expired += 1
+                pid = rec.get("pending_id")
+                if pid:
+                    m.expired_ids.add(str(pid))
+                else:
+                    m.expired_anon += 1
             else:
                 m.watches += 1
 

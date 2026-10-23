@@ -123,7 +123,9 @@ class Store:
 
     def save_view(self, name: str, data: dict) -> None:
         p = self._view_path(name)
-        tmp = p.with_suffix(".tmp")
+        # tmp 文件名要带 pid —— 固定名字在两个进程同时写时会互撞。
+        # 实测：两个 Store 各写 60 次，21~29 次 PermissionError。
+        tmp = p.with_suffix(f".{os.getpid()}.tmp")
         with self._lock:
             tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
             os.replace(tmp, p)
@@ -162,15 +164,24 @@ class Store:
                 items = val if isinstance(val, list) else [str(val)]
                 items = [str(x).strip() for x in items if str(x).strip()]
                 cur = list(rel.get(key, []))
+                added: list[str] = []
                 for it in items:
                     if it in cur:
                         continue
-                    if key == "unresolved" and len(cur) >= limits.unresolved_max:
+                    # max(1, ...) 防止配置写成 0 时 pop 空列表崩溃
+                    if key == "unresolved" and len(cur) >= max(1, limits.unresolved_max):
                         cur.pop(0)          # 最老的先让位，别无限堆
                     cur.append(it)
+                    added.append(it)
                 if cur != rel.get(key, []):
                     rel[key] = cur
-                    changed[key] = cur
+                    # 账本里记**新增了哪几条**，不是整个列表。
+                    #
+                    # 记整个列表的话，重放时会把已经被 pop 掉的项也加回来 ——
+                    # 实测：6 轮后运行时 3 条（事3/4/5），
+                    # 重放后变 0 条（旧代码根本不处理列表字段）或多出 6 条。
+                    # 记增量 + 重放走同一套限幅，才能保证 runtime == rebuild。
+                    changed[key] = added
 
         self.save_view("relation", rel)
         return changed
@@ -261,10 +272,29 @@ class Store:
         没有 affects 的判断只进 prompt，不影响人格。
         """
         jid = self.next_judgment_id()
+        # confidence 必须夹到 0..1。不夹的话，一条 conf=5.0 的判断
+        # 单独就能越过 min_consensus=1.4 的共识闸门 ——
+        # 实测「孤证」一条就能推动参数。
+        try:
+            conf = max(0.0, min(1.0, float(confidence)))
+        except (TypeError, ValueError):
+            conf = 0.5
+
+        # supersedes 必须指向一条**当前活跃**的判断。
+        # 不校验的话：指向不存在的 id 会静默悬空（谁都没被推翻，也不报错）；
+        # 低置信判断能推翻高置信的（0.2 推翻 0.9）。
+        if supersedes:
+            live = {j["id"]: j for j in replay_judgments(self.read_ledger())}
+            target = live.get(str(supersedes))
+            if target is None:
+                supersedes = None          # 悬空 -> 当作不推翻
+            elif float(target.get("confidence", 0.0)) > conf + 0.2:
+                # 置信度差太多，新证据不足以推翻旧的
+                supersedes = None
         self.append("judgment_add", {
             "judgment_id": jid,
             "judgment": judgment,
-            "confidence": round(float(confidence), 3),
+            "confidence": round(conf, 3),
             "evidence_ids": evidence_ids or [],
             "supersedes": supersedes,
             "affects": dict(affects or {}),
@@ -350,18 +380,35 @@ class Store:
         existing = [r for r in self.read_ledger() if r.get("kind") == "traits_init"]
         if existing:
             prev = existing[0].get("persona", "")
-            if not persona or prev == persona:
-                return        # 同一人格，不重复初始化
+            # 老账本没有 persona 字段（这个字段是后加的）。
+            # 那种情况**不能**当作「换了人格」—— 否则升级一次就把所有
+            # 历史人格漂移清零。实测：warmth 0.80 升级后变回 0.70。
+            # 判据：persona 为空 = 老账本，认作「同一个人格」，保留状态。
+            if prev == "" or not persona or prev == persona:
+                if prev == "" and persona:
+                    # 顺便补上人格名，下次就能正确判断了
+                    self.append("traits_adopt", {"persona": persona})
+                return
             # 换了人格 —— 之前的 traits 状态对新人格没有意义
             self.append("traits_reset", {"from": prev, "to": persona})
         self.append("traits_init", {"traits": state, "persona": persona})
 
     def persona_name(self) -> str:
-        """账本里记录的人格名。空串表示没有初始化过。"""
+        """账本里记录的人格名。空串表示没有初始化过。
+
+        老账本的 traits_init 没有 persona 字段；如果后来用
+        traits_adopt 补记过，以补记的为准。
+        """
+        name = ""
         for r in self.read_ledger():
-            if r.get("kind") == "traits_init":
-                return str(r.get("persona", "") or "")
-        return ""
+            k = r.get("kind")
+            if k == "traits_init":
+                name = str(r.get("persona", "") or "") or name
+            elif k == "traits_adopt":
+                name = str(r.get("persona", "") or "") or name
+            elif k == "traits_reset":
+                name = str(r.get("to", "") or "")
+        return name
 
     def update_trait(self, name: str, delta: float, *,
                      reason: str = "", source: str = "consolidate") -> dict | None:
@@ -394,6 +441,28 @@ class Store:
             "reason": reason[:400],
         })
         return {"name": name, "delta": round(float(delta), 6), "reason": reason}
+
+    # ------------------------------------------------------------ 游标
+
+    def cursor(self, name: str, key: str = "ids") -> object:
+        """读一个游标（已消费的判断 id / 叙事读到的位置）。
+
+        游标必须能从账本重放 —— 它和 relation / traits 一样是跨轮累积量。
+        只存在 state/ 里的话，删掉 state 重建后同一批判断会被二次推动、
+        同一段叙事会被二次消费。实测：
+            judgment_cursor 丢失后 intervention 从 0.7036 又推到 0.7072
+            story_cursor 丢失后 anchor 从 0.706 又推到 0.712
+        """
+        value = [] if key == "ids" else 0
+        for r in self.read_ledger():
+            if r.get("kind") != f"{name}_cursor":
+                continue
+            value = r.get(key, value)
+        return value
+
+    def set_cursor(self, name: str, value, key: str = "ids") -> None:
+        """写游标。落账本，可重放。"""
+        self.append(f"{name}_cursor", {key: value})
 
     # ------------------------------------------------------------ 缓冲
 
@@ -487,12 +556,16 @@ def replay_traits(ledger: list[dict]) -> dict:
 
 
 def _clamp_trait(value: float, spec: dict) -> float:
-    """把值夹进 [物理边界 ∩ drift 范围]。"""
-    anchor = float(spec.get("anchor", 0.0))
-    drift = float(spec.get("drift", 0.0))
-    lo = max(float(spec.get("lo", 0.0)), anchor - drift)
-    hi = min(float(spec.get("hi", 1.0)), anchor + drift)
-    return max(lo, min(hi, value))
+    """把值夹进合法范围。
+
+    **必须复用 Trait.clamp**，不能另写一份 —— 两份实现会分叉。
+    实测踩过：配置矛盾（lo=0.8 hi=0.2）时
+        replay_traits 算 0.8，Trait.from_state 算 0.5。
+    而「重放 == 运行时」是这个项目的核心承诺。
+    """
+    from .config import Trait
+    t = Trait.from_state({**spec, "value": value})
+    return t.value
 
 
 def replay_judgments(ledger: list[dict]) -> list[dict]:
@@ -555,10 +628,13 @@ def load_judgments(path: Path, limit: int = 5) -> list[dict]:
 
 # ---------------------------------------------------------------- 重放
 
-def rebuild_views(store: "Store") -> dict:
+def rebuild_views(store: "Store", limits=None) -> dict:
     """从账本重放，重建 state/。
 
     state 坏了就用它。也是「同一份账本换策略重放」的入口。
+
+    limits 用运行时的同一份限额。不传就按默认（unresolved_max=3）——
+    重放和运行时必须用同一套限幅，否则重建出来的状态和原来不一样。
 
     要重放的**全部**在线状态都得在这里：
       relation  —— 关系
@@ -566,6 +642,8 @@ def rebuild_views(store: "Store") -> dict:
       repair    —— 修复账本（否则受伤之后就永远不再修复了）
       style     —— 语域基线（否则「受伤」的尺子会退回默认值）
     """
+    from .config import Limits as _Limits
+    unresolved_max = int(getattr(limits or _Limits(), "unresolved_max", 3))
     rel = {"closeness": 0.3, "unresolved": [], "sore_points": [], "inside_jokes": []}
     pend: dict[str, dict] = {}
     repairs: list[dict] = []
@@ -603,9 +681,15 @@ def rebuild_views(store: "Store") -> dict:
                         max(0.0, min(1.0, rel["closeness"] + float(val))), 3
                     )
                 elif key in ("unresolved", "sore_points", "inside_jokes"):
-                    for it in (val if isinstance(val, list) else [val]):
-                        if it not in rel[key]:
-                            rel[key].append(it)
+                    # 账本里记的是「新增项」。重放时要用和运行时**同一套限幅**，
+                    # 否则 pop(0) 淘汰掉的项会在重建后重新出现。
+                    items = val if isinstance(val, list) else [val]
+                    for it in items:
+                        if it in rel[key]:
+                            continue
+                        if key == "unresolved" and len(rel[key]) >= max(1, unresolved_max):
+                            rel[key].pop(0)
+                        rel[key].append(it)
         elif k == "style_update":
             if isinstance(rec.get("formality"), (int, float)):
                 style["formality"] = rec["formality"]
@@ -649,6 +733,10 @@ def rebuild_views(store: "Store") -> dict:
     store.save_view("pending", {"items": list(pend.values())})
     # 判断记忆也在账本里，一并重放。
     store.save_view("judgments", {"items": replay_judgments(ledger)})
+    # 游标同样 —— 它们决定「哪些判断已经用过」，不重放会二次消费。
+    for name, key in (("judgment", "ids"), ("story", "offset")):
+        value = store.cursor(name, key)
+        store.save_view(f"{name}_cursor", {key: value})
     # 人格参数同样。
     store.save_view("traits", {"traits": replay_traits(ledger)})
     # repair 从第一版就在写 repair_open，所以空列表就是真空 —— 一律覆盖。

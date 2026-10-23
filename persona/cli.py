@@ -390,13 +390,16 @@ def cmd_lift(args) -> int:
         if claim:
             seen_claims.add(claim)
 
-    full = compute(first + later)
+    # 「有积累」只能是 later 那批 —— 把 first 混进去，
+    # 等于拿「首见」的成绩去代表「有积累」，lift 会被稀释。
+    # 实测：首见 0% / 有积累 100%，混合后报 50%。
+    accumulated = compute(later)
     bare = compute(first)
-    out = compare_with_without_history(full, bare)
+    out = compare_with_without_history(accumulated, bare)
     print()
     print("关系增益")
     print("─" * 54)
-    print(f"  有积累（全部）  {out['with_history']:.0%}  （{out['n_with']} 条）")
+    print(f"  有积累（非首见）{out['with_history']:.0%}  （{out['n_with']} 条）")
     print(f"  首见（无积累）  {out['without_history']:.0%}  （{out['n_without']} 条）")
     print(f"  增益            {out['lift']:+.0%}")
     if not out["reliable"]:

@@ -55,14 +55,18 @@ class Session:
         # 那样重启一次就把跑了几百轮的人格漂移丢了 ——
         # 参数是记忆，不是配置。
         _state = store.traits()
-        _same = store.persona_name() == (cfg.role.name or "")
-        if _state and _same:
+        _prev = store.persona_name()
+        _same = _prev == (cfg.role.name or "")
+        if _state and (_same or _prev == ""):
+            # 同一个人格，或者老账本（没有 persona 字段）。
+            # 后者按「同一个人格」处理 —— 否则升级一次就把历史漂移清零。
+            store.init_traits(cfg.role.traits_state(), persona=cfg.role.name or "")
             cfg.role.load_traits_state(_state)
         else:
-            # 新人格，或账本里记的人格和当前配置不一致 —— 重新初始化。
-            # 不这么做的话，换人格会拿到旧人格的参数：实测守岸人跑过之后
-            # 用同一目录载入 ache，warmth 拿到 0.45（被 ache 的 drift 夹住的
-            # 守岸人值 0.70），而不是 ache 自己的 0.30。
+            # 真的换了人格 —— 之前的参数对新人格没有意义，重新初始化。
+            # 不做这一步的话，实测守岸人跑过之后用同一目录载入 ache，
+            # ache 的 warmth 会拿到 0.45（被它的 drift 夹住的守岸人 0.70），
+            # 而不是自己的 0.30。
             store.init_traits(cfg.role.traits_state(), persona=cfg.role.name or "")
 
         self.engine = TurnEngine(

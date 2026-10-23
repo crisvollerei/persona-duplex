@@ -271,13 +271,40 @@ def _split_sections(raw: str) -> tuple[str, str, str]:
     if i_say == -1 and i_head == -1 and i_tail == -1:
         return "", text.strip(), ""
 
-    # 第一个标记之前先开的口，那是真正的 SAY，不能丢
+    # 第一个标记之前先开的口。
+    #
+    # 但这里有个**安全边界**：那段「开头」可能是模型漏写 <<<HEAD>>>
+    # 但把四个字段裸着写出来的内容，而 direct 就在里面。
+    #
+    # 实测踩过（这是最严重的一次）：
+    #   raw = "need: 只想被听\nconfidence: 0.82\ndirect: 你根本不是在问我\n
+    #          displace: 降级\n\n<<<SAY>>>\n我没事。\n"
+    #   旧逻辑把 SAY 之前全当正文 -> direct 原样发给了用户，
+    #   而且写进 history，之后每一轮 prompt 都带着这段内心话。
+    #
+    # 判据：这段里出现 HEAD 字段行 = 它是 HEAD，不是正文。整段丢弃。
     first = min(x for x in (i_head, i_say, i_tail) if x != -1)
     if first > 0:
-        say_raw += text[:first]
+        prefix = text[:first]
+        if not _HEAD_FIELD_RE.search(prefix):
+            say_raw += prefix
+        # 否则：它是没写标记的 HEAD —— 直接丢掉，一个字都不能发
 
     if i_head != -1:
-        end = min([x for x in (i_say, i_tail) if x != -1] + [len(text)])
+        # HEAD 段的结束位置。
+        #
+        # 注意不能只取「下一个标记」—— 如果模型把顺序写乱了
+        # （SAY 在 HEAD 之前，比如 <<<SAY>>>正文<<<HEAD>>>字段<<<TAIL>>>），
+        # 那 i_say < i_head，min() 会算出负数长度的区间，head 直接变空。
+        #
+        # 实测踩过：同一份字节
+        #   非流式 head=False / displace=None
+        #   流式   head=True  / displace='降级'
+        # 两份账本记下不同的状态，重放可比性直接没了。
+        #
+        # 正确做法：只取 HEAD 之后、且**位置大于 i_head** 的标记。
+        after = [x for x in (i_say, i_tail) if x != -1 and x > i_head]
+        end = min(after) if after else len(text)
         head_raw = text[i_head + len(SECTION_HEAD):end]
 
     if i_say != -1:
@@ -320,8 +347,14 @@ def _to_float(s: str, default: float = 0.0) -> float:
         v = float(m.group(0))
     except ValueError:
         return default
-    # 只有明确写了百分号才当百分比。裸数字 5 就是 5，然后被夹到 1.0。
-    if "%" in raw or "％" in raw:
+    # 百分比只在「首个数字本身不在 0-1 区间」时才除。
+    #
+    # 模型常把两种写法一起写：`0.85（85%）`、`0.6（60%）`。
+    # 旧逻辑只要串里出现 % 就整体除 100 —— 0.85 变成 0.0085，
+    # 于是这一轮被判成「完全没把握」，还把脏样本写进校准账本。
+    #
+    # 判据：看**首个数字**。已经在 [0,1] 就是小数写法，不再除。
+    if ("%" in raw or "％" in raw) and not (0.0 <= v <= 1.0):
         v /= 100.0
     return max(0.0, min(1.0, v))
 

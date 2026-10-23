@@ -123,21 +123,34 @@ class Trait:
     drift: float = 0.0
     lo: float = 0.0
     hi: float = 1.0
-    value: float = 0.0          # 当前值，从 anchor 起步
+    value: float | None = None  # 当前值。None = 从 anchor 起步
 
     def __post_init__(self) -> None:
-        if not self.value:
+        # 用 is None 判断，不能用 falsy ——
+        # value=0.0 是合法值（参数被推到物理下界），
+        # 用 if not self.value 会把它当成「没设置」重置回 anchor。
+        # 实测踩过：push_traits 报 value=0.425 而账本实际是 0.0。
+        if self.value is None:
             self.value = self.anchor
         self.clamp()
 
     def clamp(self) -> None:
-        """值必须同时满足：物理边界 + 漂移范围。
+        """把 anchor 和 value 都夹回合法范围。
 
-        两者取交集。如果交集是空的（lo > hi，配置写错了），
-        退回到 anchor —— 至少不会把值推到一个两个范围都不认的地方。
-        实测踩过：lo=0.8 / hi=0.2 时，max(lo, ...) 让值跑到 0.8，
-        而 drift 范围是 0.3~0.7，值同时违反了 hi 和 drift 两条约束。
+        **anchor 也必须夹** —— 它会被长期层推动，不夹就会漂出物理边界。
+        实测踩过：affect_range（lo=0.02 hi=0.40 drift=0.10）连续 400 次
+        anchor 推动后 anchor=2.15、value=2.05，全部越过 hi=0.40。
+        然后 drift_room 的 lo=max(lo, anchor-drift) 反超 hi，
+        effective_plasticity 双向返回 0 —— 这个参数从此对任何经历都不再响应，
+        永久卡死。这是「人格不该撞墙停住」的反面。
+
+        value 的约束是两段交集：物理边界 [lo,hi] ∩ drange [anchor±drift]。
+        交集为空（配置矛盾）时退回 anchor —— 至少不会落在两个范围都不认的地方。
         """
+        # 先夹 anchor 本身
+        if self.lo <= self.hi:
+            self.anchor = max(self.lo, min(self.hi, self.anchor))
+
         lo = max(self.lo, self.anchor - self.drift)
         hi = min(self.hi, self.anchor + self.drift)
         if lo > hi:
@@ -276,17 +289,23 @@ class Role:
         return {k: v.to_state() for k, v in self.traits.items()}
 
     def load_traits_state(self, state: dict) -> None:
-        """用持久化的状态覆盖当前参数值。
+        """用持久化的状态覆盖当前参数。
 
-        只覆盖 value，不覆盖 anchor/plasticity/drift ——
-        这三个是「人格的材质」，只能由配置或长期层改，
-        不该因为读到一个旧快照就被改掉。
+        覆盖 **value 和 anchor**，不覆盖 plasticity / drift / lo / hi ——
+        后四个是「人格的材质」，只能由配置决定，不该因为读到一个
+        旧快照就被改掉。
+
+        为什么 anchor 也要恢复：长期层会推动它。不恢复的话，
+        重启一次就把跑了上百轮的基线漂移丢了 ——
+        实测账本 anchor=0.94 重启后回到 0.70，0.24 的漂移蒸发。
         """
         for name, d in (state or {}).items():
             t = self.traits.get(name)
             if t is None:
                 continue
             try:
+                if "anchor" in d:
+                    t.anchor = float(d["anchor"])
                 t.value = float(d.get("value", t.value))
             except (TypeError, ValueError):
                 continue
@@ -326,12 +345,25 @@ class PersonaConfig:
         TOML 里一直写着这条，但代码从来没读过它 —— 所以它是个假旋钮。
         """
         eff = max(0.0, min(1.0, confidence + self.role.bias))
+        stance = None
         for rule in self.stance_table:
             if rule.lo <= eff < rule.hi:
                 stance = rule.stance
                 break
-        else:
-            stance = self.stance_table[-1].stance if self.stance_table else STANCE_UNSURE
+        if stance is None:
+            # 落进表里的空隙：取**覆盖该值两侧中更保守的一档**。
+            # 旧实现直接取 table[-1]，但排序后最后一档是置信度最高那档
+            # （最敢说的），正好反了 —— 拿不准的时候应该更保守。
+            # 实测 rows=[[0,0.3,admit_unsure],[0.6,1.01,direct]] 时，
+            # eff=0.4 落到 direct，而 0.3 以下都是 admit_unsure。
+            conservative = [STANCE_UNSURE, STANCE_ASK, STANCE_GUESS, STANCE_DIRECT]
+            cands = [r.stance for r in self.stance_table if r.hi <= eff]
+            cands += [r.stance for r in self.stance_table if r.lo > eff]
+            if cands:
+                stance = min(cands, key=lambda w: (conservative.index(w)
+                                                   if w in conservative else 99))
+            else:
+                stance = self.stance_table[-1].stance if self.stance_table else STANCE_UNSURE
 
         # 地板：低于它的不许直接下结论，退回「只问」。
         # 这是对站位表的保护 —— 换一套更敢说的表时，地板仍然拦得住。

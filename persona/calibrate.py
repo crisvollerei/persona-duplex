@@ -31,6 +31,9 @@ class SettleSample:
     topic: str | None
     verdict: str
     settle: bool
+    # 谁判的：model / heuristic。字面阈值诊断只能看 heuristic 的样本 ——
+    # model 判的那些，字面 overlap 根本没参与决策。
+    by: str = ""
 
     @property
     def rise(self) -> float:
@@ -94,6 +97,12 @@ def collect(ledger: list[dict]) -> Calibration:
     cal.judgments = sum(1 for r in ledger if r.get("kind") == "judgment_add")
     cal.turns = sum(1 for r in ledger if r.get("kind") == "turn")
 
+    # 同一轮可能对同一条预言判多次（挂起后每轮重判）。
+    # samples 记「每条预言的最后一次判定」，不是「每轮的观测」——
+    # 否则一条挂 17 轮的预言会贡献 17 个 WATCH 样本，
+    # 把 OVERLAP_KEEP 诊断带成「阈值偏高」的假警。
+    by_pid: dict[str, SettleSample] = {}
+
     for rec in ledger:
         if rec.get("kind") != "turn":
             continue
@@ -107,7 +116,10 @@ def collect(ledger: list[dict]) -> Calibration:
             # judge_elapsed 才是判定器自己的耗时。老账本只有 elapsed
             # （整轮耗时，绝大部分是主生成）—— 那种样本不能拿来比 grace，
             # 否则每条都「超时」，报告永远在报一个假警。
-            if "judge_elapsed" in j:
+            if "judge_elapsed" in j and src != "none":
+                # source="none" 表示这一轮没有判定任务，engine 写的是 0.0。
+                # 把那些 0.0 算进分布会把真实的超时率稀释掉 ——
+                # 实测 20 个 0.0 + 20 个 2.0 报成 50%，真实是 100%。
                 el = j.get("judge_elapsed")
                 if isinstance(el, (int, float)):
                     cal.judge_elapsed.append(float(el))
@@ -116,7 +128,7 @@ def collect(ledger: list[dict]) -> Calibration:
 
         for row in probe.get("settle") or []:
             try:
-                cal.samples.append(SettleSample(
+                sample = SettleSample(
                     pid=str(row.get("pid", "")),
                     overlap=float(row.get("overlap", 0.0)),
                     formality=float(row.get("formality", 0.0)),
@@ -125,9 +137,15 @@ def collect(ledger: list[dict]) -> Calibration:
                     topic=row.get("topic"),
                     verdict=str(row.get("verdict", "")),
                     settle=bool(row.get("settle", False)),
-                ))
+                    by=str(row.get("by", "")),
+                )
             except (TypeError, ValueError):
                 continue
+            key = sample.pid or f"_anon_{len(by_pid)}"
+            # 后出现的覆盖先出现的 —— 拿最后一次判定
+            by_pid[key] = sample
+
+    cal.samples = list(by_pid.values())
     return cal
 
 
@@ -145,8 +163,16 @@ def findings(cal: Calibration) -> list[Finding]:
     out: list[Finding] = []
 
     # ---- 1. 字面重合度阈值
-    settled = [s for s in cal.samples if s.settle and s.verdict == "CONFIRMED"]
-    watched = [s for s in cal.samples if s.verdict == "WATCH"]
+    #
+    # 只看**字面判定真正参与了决策**的样本：
+    #   · by="model" 的样本是模型自己判的，overlap 只是顺手记的观测值，
+    #     拿它评字面阈值等于用无关数据反推
+    #   · topic="left" 的 WATCH 在 settle 里是**先**判的，overlap 根本没被读
+    # 不筛这两类的话，报告会拿无关样本报「阈值偏高」的假警。
+    eligible = [s for s in cal.samples
+                if s.by != "model" and s.topic not in ("left", "returned")]
+    settled = [s for s in eligible if s.settle and s.verdict == "CONFIRMED"]
+    watched = [s for s in eligible if s.verdict == "WATCH"]
 
     if len(cal.samples) >= 5:
         w = sorted(s.overlap for s in watched)
@@ -177,7 +203,15 @@ def findings(cal: Calibration) -> list[Finding]:
     hurt = cal.by_verdict("SUSPECTED_HURT")
     normal = [s for s in cal.samples
               if s.verdict not in ("SUSPECTED_HURT",) and s.settle]
-    if hurt and normal:
+    # 语域阈值：受伤样本至少 3 条、正常样本至少 5 条才下结论。
+    # 1 条受伤样本就说「间隔 0.45，分得开」是噪声。
+    if len(hurt) < 3 or len(normal) < 5:
+        if hurt or normal:
+            out.append(Finding(
+                "info", "语域阈值",
+                f"受伤 {len(hurt)} 条 / 正常 {len(normal)} 条 —— "
+                f"样本不足（需受伤≥3、正常≥5），先不下结论"))
+    elif hurt and normal:
         h_rise = min(s.rise for s in hurt)
         n_rise = max(s.rise for s in normal)
         if n_rise >= h_rise:
@@ -201,7 +235,12 @@ def findings(cal: Calibration) -> list[Finding]:
         ))
 
     # ---- 3. grace 预算
-    if cal.judge_elapsed:
+    if len(cal.judge_elapsed) < 10:
+        if cal.judge_elapsed:
+            out.append(Finding(
+                "info", "grace",
+                f"只有 {len(cal.judge_elapsed)} 条判定耗时样本 —— 至少 10 条才下结论"))
+    elif cal.judge_elapsed:
         el = sorted(cal.judge_elapsed)
         over = sum(1 for x in el if x > GRACE)
         rate = over / len(el)
@@ -287,9 +326,7 @@ def findings(cal: Calibration) -> list[Finding]:
 def format_report(cal: Calibration) -> str:
     lines = ["", "校准报告", "─" * 60]
 
-    n_turn = len(cal.judge_elapsed) + cal.legacy_elapsed
-    if not n_turn:
-        n_turn = sum(cal.judge_sources.values())
+    n_turn = cal.turns or sum(cal.judge_sources.values())
     lines.append(f"  样本：{len(cal.samples)} 次结算判定，{n_turn} 轮有判定记录")
 
     if cal.samples:

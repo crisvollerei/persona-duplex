@@ -78,51 +78,73 @@ class TestFindings(unittest.TestCase):
         return collect([_turn(samples, judge=judge)])
 
     def test_flags_overlap_keep_too_high(self):
-        """被挂起的样本字面重合却很高 —— 说明阈值把该结算的挡住了。"""
-        samples = [_s(overlap=0.9, verdict="WATCH", settle=False) for _ in range(6)]
+        """被挂起的样本字面重合却很高 —— 说明阈值把该结算的挡住了。
+
+        每条样本必须用**不同 pid** —— collect 按 pid 去重（同一条预言
+        挂多轮只记最后一次判定），同一个 pid 会被合并成 1 条。
+        """
+        samples = [_s(overlap=0.9, verdict="WATCH", settle=False, pid=f"p{i}")
+                   for i in range(6)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
         self.assertIn("OVERLAP_KEEP", areas)
         self.assertEqual(areas["OVERLAP_KEEP"].level, "warn")
 
     def test_ok_when_well_separated(self):
-        samples = [_s(overlap=0.3, verdict="CONFIRMED") for _ in range(4)]
-        samples += [_s(overlap=0.0, verdict="WATCH", settle=False) for _ in range(4)]
+        samples = [_s(overlap=0.3, verdict="CONFIRMED", pid=f"c{i}") for i in range(4)]
+        samples += [_s(overlap=0.0, verdict="WATCH", settle=False, pid=f"w{i}")
+                    for i in range(4)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
         self.assertEqual(areas["OVERLAP_KEEP"].level, "ok")
 
     def test_hurt_threshold_overlap_detected(self):
-        """受伤和正常样本的语域升幅重叠 → 会误判。"""
-        samples = [_s(verdict="SUSPECTED_HURT", formality=0.5, base=0.3)]
-        samples += [_s(verdict="CONFIRMED", formality=0.55, base=0.3)
-                    for _ in range(3)]
+        """受伤和正常样本的语域升幅重叠 → 会误判。
+
+        门槛：受伤 ≥3、正常 ≥5。
+        """
+        samples = [_s(verdict="SUSPECTED_HURT", formality=0.5, base=0.3,
+                      pid=f"h{i}") for i in range(3)]
+        samples += [_s(verdict="CONFIRMED", formality=0.55, base=0.3, pid=f"n{i}")
+                    for i in range(5)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
         self.assertIn("语域阈值", areas)
         self.assertEqual(areas["语域阈值"].level, "warn")
 
     def test_hurt_threshold_clean(self):
-        samples = [_s(verdict="SUSPECTED_HURT", formality=0.9, base=0.3)]
-        samples += [_s(verdict="CONFIRMED", formality=0.35, base=0.3)
-                    for _ in range(3)]
+        samples = [_s(verdict="SUSPECTED_HURT", formality=0.9, base=0.3,
+                      pid=f"h{i}") for i in range(3)]
+        samples += [_s(verdict="CONFIRMED", formality=0.35, base=0.3, pid=f"n{i}")
+                    for i in range(5)]
         fs = findings(self._cal(samples))
         areas = {f.area: f for f in fs}
         self.assertEqual(areas["语域阈值"].level, "ok")
 
     def test_grace_too_tight(self):
-        """判定经常超时 → grace 该放宽。"""
-        cal = Calibration(samples=[], judge_elapsed=[1.0, 2.0, 0.5, 3.0],
-                          judge_sources={"late": 4})
+        """判定经常超时 → grace 该放宽。
+
+        样本要 ≥10 条才下结论（少量样本报 info）。
+        """
+        cal = Calibration(samples=[],
+                          judge_elapsed=[1.0, 2.0, 0.5, 3.0] * 3,
+                          judge_sources={"late": 12})
         fs = findings(cal)
         areas = {f.area: f for f in fs}
         self.assertEqual(areas["grace"].level, "warn")
 
     def test_grace_healthy(self):
-        cal = Calibration(samples=[], judge_elapsed=[0.1, 0.2, 0.15],
-                          judge_sources={"llm": 3})
+        cal = Calibration(samples=[], judge_elapsed=[0.1, 0.2, 0.15] * 5,
+                          judge_sources={"llm": 15})
         areas = {f.area: f for f in findings(cal)}
         self.assertEqual(areas["grace"].level, "ok")
+
+    def test_grace_small_sample_gives_info(self):
+        """样本不足时只报 info，不给结论。"""
+        cal = Calibration(samples=[], judge_elapsed=[0.1, 0.2],
+                          judge_sources={"llm": 2})
+        areas = {f.area: f for f in findings(cal)}
+        self.assertEqual(areas["grace"].level, "info")
 
     def test_semantic_judge_underused(self):
         cal = Calibration(samples=[], judge_elapsed=[0.2] * 10,

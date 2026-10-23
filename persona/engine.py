@@ -115,6 +115,19 @@ class TurnEngine:
         self._repair_opened_turn = -1
         self._restore_bias()
 
+    def _sync_traits(self) -> None:
+        """把账本里的人格参数同步到内存配置。
+
+        每轮调用一次。成本是一次账本读取 + 几个浮点赋值 ——
+        相对一次 LLM 调用可以忽略。
+
+        为什么必须每轮同步：固化线程和对话线程是两个线程，
+        后者持有 cfg 对象。固化改了账本，cfg 不会自己变。
+        """
+        state = self.store.traits()
+        if state:
+            self.cfg.role.load_traits_state(state)
+
     def _restore_bias(self) -> None:
         """把上次会话学到的 bias 和轮次接回来。
 
@@ -159,6 +172,14 @@ class TurnEngine:
 
         # ---- 3. 组装上下文。此时预言都还挂着 —— 模型需要在上下文里
         #        看见它们，才能在 TAIL 里给出自己的判定。
+        #
+        # 先把人格参数从账本同步回来。固化线程是另一个线程，它写账本，
+        # 但不会改这里的 cfg 对象 —— 不同步的话，中期层和长期层的推动
+        # 只落在账本上，对实际对话零影响，要等下次重启才生效。
+        # 实测踩过：账本里 formality 已到 0.70（跨过 0.65 分界），
+        # 线上 prompt 里「用词正式一些」始终不出现。
+        self._sync_traits()
+
         relation = self.store.relation()
         pendings = pendings_snapshot
         judgments = self.store.judgments()

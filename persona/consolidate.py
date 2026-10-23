@@ -109,27 +109,37 @@ class Consolidator:
 
     # ------------------------------------------------------------ 活跃度
 
+    def _pending_count(self) -> int:
+        return len(list(self.store.buffer_dir.glob("*.json")))
+
     def profile(self) -> dict:
         """当前活跃度档位对应的容量与阈值。
 
-        优先用显式给的 gap_hours；其次用「上次固化到现在」；
-        **首次运行没有上一次**，此时看 buffer 里积压了多少轮 ——
-        积压多说明刚聊完一批，那就是密集。
+        **按本批积压量分档**，不用时间。
+
+        为什么不用时间：试过两种，都不行 ——
+          · 「距上次固化多久」：后台 interval 默认 300s = 0.083h，
+            永远小于 1h 的密集阈值，线上永远 dense，另两档不可达。
+          · 「距最后一轮多久」：刚聊完就是 0，也永远 dense。
+          · 「本批首末轮的时间跨度」：同一秒内连发两条跨度=0，
+            除出来是天文数字，边界还得额外兜。
+
+        积压量是这件事的**直接观测**：一次攒了多少轮没固化。
+        攒得多说明刚聊完一长串，攒得少说明零星几句。
+        不用第二手推算，也就没有时区/时钟/边界问题。
+
+            积压 ≥ 8  -> dense（刚聊完一长串）
+            积压 3-7  -> medium
+            积压 1-2  -> sparse（零星几句）
         """
-        gap = self.gap_hours
-        if gap is None and self._last_run_at:
-            import time as _t
-            gap = (_t.time() - self._last_run_at) / 3600.0
-        if gap is None:
-            # 首次运行：按积压量估。没积压 = 没有证据，走 sparse。
-            pending = len(list(self.store.buffer_dir.glob("*.json")))
-            if pending >= 8:
-                gap = 0.5        # 一次积了 8 轮以上 -> 刚聊完
-            elif pending >= 3:
-                gap = 6.0        # 中等
-            else:
-                gap = 48.0       # 零星几条 -> 稀疏
-        return ACTIVITY_PROFILES[activity_of([], gap_hours=gap)]
+        if self.gap_hours is not None:
+            return ACTIVITY_PROFILES[activity_of([], gap_hours=self.gap_hours)]
+        n = self._pending_count()
+        if n >= 8:
+            return ACTIVITY_PROFILES["dense"]
+        if n >= 3:
+            return ACTIVITY_PROFILES["medium"]
+        return ACTIVITY_PROFILES["sparse"]
 
     # ------------------------------------------------------------ 主逻辑
 
@@ -142,7 +152,10 @@ class Consolidator:
 
         events = self.store.drain_buffer(max_items=self.max_evidence)
         if not events:
-            return {"judgments": 0, "self_story": False, "reason": "no events"}
+            # 返回结构要和有事件时一致 —— 调用方拿 out["activity"] 不该 KeyError
+            return {"judgments": 0, "self_story": False, "traits": [],
+                    "anchors": [], "activity": activity,
+                    "threshold": prof["threshold"], "reason": "no events"}
 
         added = self._consolidate(events, prof)
         story = self._rewrite_story(events, added) if added else False
@@ -158,14 +171,10 @@ class Consolidator:
 
     def _current_activity(self) -> str:
         """和 profile() 用同一套判断，只是返回档位名。"""
-        gap = self.gap_hours
-        if gap is None and self._last_run_at:
-            import time as _t
-            gap = (_t.time() - self._last_run_at) / 3600.0
-        if gap is None:
-            pending = len(list(self.store.buffer_dir.glob("*.json")))
-            gap = 0.5 if pending >= 8 else (6.0 if pending >= 3 else 48.0)
-        return activity_of([], gap_hours=gap)
+        if self.gap_hours is not None:
+            return activity_of([], gap_hours=self.gap_hours)
+        n = self._pending_count()
+        return "dense" if n >= 8 else ("medium" if n >= 3 else "sparse")
 
     def _consolidate(self, events: list[dict], prof: dict | None = None) -> list[dict]:
         """从事件里提炼判断。
@@ -194,21 +203,40 @@ class Consolidator:
             # 后台失败不能影响任何东西，静默降级
             return self._heuristic_consolidate(events, prof)
 
-        cap = min(self.max_judgments_per_run, prof["capacity"])
+        # 模型返回的不是数组时必须降级。
+        # 实测踩过：返回 dict -> 被当 list 切片 -> KeyError，而 buffer
+        # 已经 drain 完，那批事件永久丢失；后台线程又 except: pass 吞掉，
+        # 线上表现就是「固化静默停止」。
+        if not isinstance(items, list):
+            return self._heuristic_consolidate(events, prof)
+
+        # capacity 与 max_judgments_per_run 取 max ——
+        # 用 min 的话三档都被 3 吃掉，capacity 12/8/5 是死配置。
+        cap = max(self.max_judgments_per_run, prof["capacity"])
         out = []
         for it in items[:cap]:
+            if not isinstance(it, dict):
+                continue
             txt = str(it.get("judgment", "")).strip()
             if not txt:
                 continue
-            # 语义去重：字符串相等太松，换个说法就绕过去了。
-            # 实测：跑两次固化，产出的判断一半是同一件事的复述。
-            dup = self._find_similar(txt)
-            if dup is not None:
-                continue
+            sup = it.get("supersedes")
+
+            # **先看 supersedes**：要推翻旧判断的，不能被去重挡掉。
+            # 实测踩过：模型写「他喜欢猫。」+ supersedes=j_0001，
+            # 先去重 → sim=1.0 判重复 → 跳过 → supersedes 根本没机会落地，
+            # 旧判断永远翻不了案。
+            if not sup:
+                dup = self._find_similar(txt)
+                if dup is not None:
+                    continue
+
+            try:
+                conf = float(it.get("confidence", 0.5))
+            except (TypeError, ValueError):
+                conf = 0.5
             rec = self.store.add_judgment(
-                judgment=txt,
-                confidence=float(it.get("confidence", 0.5)),
-                supersedes=it.get("supersedes"),
+                judgment=txt, confidence=conf, supersedes=sup,
                 affects=it.get("affects"),
             )
             out.append(rec)
@@ -217,9 +245,20 @@ class Consolidator:
     # 否定词。注意不能简单做子串匹配 —— 「别人」「别的」「差别」里的「别」
     # 不是否定。实测踩过：把「别」当否定词，「他在意别人的评价」被标成否定极，
     # 和「他不在乎别人的评价」同极，反而把真正的反义判断当成了重复。
+    # 否定词。用词表而不是单字 —— 单字会把常用词里的同形字全误判。
+    # 实测踩过的误判：「特别」「告别」「非常」「未来」「无所谓」「别人」「别的」。
+    # 每一个都曾被当成否定词，把肯定判断标成否定，判重直接失效。
     _NEG_RE = re.compile(
-        r"(?:不|没|没有|别|勿|非|无|未)"
-        r"(?!人|的|处|致|样|个|些)"    # 排除「别人」「别的」「别处」…
+        "|".join([
+            r"不(?!错|少|久|仅|但|过)",     # 不错/不少/不久/不仅/不但/不过
+            r"没(?!错|关系)",               # 没错/没关系
+            r"没有",
+            r"(?<!告)(?<!特)(?<!个)(?<!差)(?<!级)别(?!人|的|处|致|样|个|些)",
+            r"勿",
+            r"(?<!是)(?<!无)(?<!除)非(?!常)",  # 非常 = 很
+            r"(?<!无)(?<!所)无(?!所谓|论|疑|数)",  # 无所谓/无论/无疑/无数
+            r"(?<!周)(?<!尚)(?<!从)未(?!来|必|免)",  # 未来/未必/未免
+        ])
     )
 
     def _polarity(self, text: str) -> int:
@@ -254,7 +293,7 @@ class Consolidator:
         pol = self._polarity(text)
         best = None
         best_sim = 0.0
-        for j in self.store.judgments(limit=500):
+        for j in self.store.judgments(limit=10_000_000):
             if self._polarity(j["judgment"]) != pol:
                 continue        # 极性相反，绝不是同一件事
             sim = bigram_similarity(text, j["judgment"])
@@ -370,7 +409,9 @@ class Consolidator:
         """
         from .config import Trait
 
-        live = self.store.judgments(limit=500)
+        # 必须用**全量**判断。只取最近 500 条的话，真实净方向会被截断翻过来：
+        # 实测 500 条 +1 和 500 条 -1（净 0），被截成 500 条 -1 → 推成 -1。
+        live = self.store.judgments(limit=10_000_000)
         if not live:
             return []
 
@@ -380,7 +421,7 @@ class Consolidator:
         # 不够阈值的判断必须留着，让它和后续证据累积 ——
         # 否则第 1 条判断不够 1.4 就被标记掉，第 2 条来时从零开始，
         # 永远凑不齐。实测踩过：连续加 11 条同向判断，参数一步都没动。
-        consumed = set(self.store.load_view("judgment_cursor", {"ids": []}).get("ids", []))
+        consumed = set(self.store.cursor("judgment", "ids") or [])
         fresh = [j for j in live if j["id"] not in consumed]
         if not fresh:
             return []
@@ -458,9 +499,7 @@ class Consolidator:
                 pushed_ids |= {j["id"] for j in supporters}
                 pushed_ids |= {j["id"] for j in votes.get((name, -direction), [])}
         if pushed_ids:
-            self.store.save_view("judgment_cursor", {
-                "ids": sorted(consumed | pushed_ids)
-            })
+            self.store.set_cursor("judgment", sorted(consumed | pushed_ids), "ids")
         return changes
 
 
@@ -499,7 +538,15 @@ class Consolidator:
         # 同一条「我原来累了会说，现在话到嘴边就缩回去」
         # 被用了两次，self_disclosure 的基线被推了两遍。
         # 叙事是「一次事件」，不能当常驻依据反复消费。
-        seen = self.store.load_view("story_cursor", {"offset": 0}).get("offset", 0)
+        # 没有 LLM 就不该动游标 —— 否则「这次没模型只是跳过」
+        # 会被记成「这段叙事已经读过」，之后接上模型也永久跳过。
+        if self.llm is None:
+            return []
+
+        seen = int(self.store.cursor("story", "offset") or 0)
+        # 叙事变短（被截断/重写）时游标会越界 —— 退回从头读，不要空转
+        if seen > len(story):
+            seen = 0
         fresh = story[seen:]
         if len(fresh.strip()) < 200:
             return []      # 新增叙事太短，还不足以说明「我变了」
@@ -530,17 +577,23 @@ class Consolidator:
             return []
 
         changes: list[dict] = []
-        for it in items[:3]:
+        # 不静默截断 —— 模型给 5 条只处理 3 条，后 2 条没人知道去哪了
+        for it in items[:8]:
             if not isinstance(it, dict):
                 continue
             name = str(it.get("name", "")).strip()
             spec = state.get(name)
             if spec is None:
                 continue
+            # 三态：>0 上推，<0 下推，0/无法解析 = 无效不动。
+            # 旧写法把「不指定方向」当成下推 —— 实测 direction=0 推出了 -0.006。
             try:
-                direction = 1 if float(it.get("direction", 0)) > 0 else -1
+                d = float(it.get("direction", 0))
             except (TypeError, ValueError):
                 continue
+            if abs(d) < 0.5:
+                continue
+            direction = 1 if d > 0 else -1
             evidence = str(it.get("evidence", "")).strip()
             if not evidence:
                 continue          # 没依据不动
@@ -550,7 +603,15 @@ class Consolidator:
                 continue
             step = trait.drift * self.ANCHOR_FRACTION
             before = trait.anchor
-            trait.anchor = before + direction * step
+            # anchor 也必须夹在物理边界里。
+            #
+            # 少了这一步的后果（实测）：warmth 的 anchor 从 0.70 一路漂到 1.066，
+            # 超过 hi=0.92；value 跟着到 0.946 也越界。然后 Trait.clamp 的
+            # lo>hi 兜底把 value 设成 anchor，drift_room 退化成 (anchor, anchor)，
+            # nudge 永久返回 0 —— 参数被钉死在区间外，再也动不了。
+            trait.anchor = max(trait.lo, min(trait.hi, before + direction * step))
+            if abs(trait.anchor - before) < 1e-9:
+                continue          # 已经贴到物理边界，推不动了
             # value 保持相对位置
             trait.value = trait.value + (trait.anchor - before)
             trait.clamp()
@@ -571,7 +632,7 @@ class Consolidator:
         # 记下读到哪儿了 —— 下次只看新增的部分。
         # 注意：**无论有没有推动都要记**。否则一段「读过了但没判出变化」
         # 的叙事会在下次固化时被重复读一遍，浪费调用还可能被重复判。
-        self.store.save_view("story_cursor", {"offset": len(story)})
+        self.store.set_cursor("story", len(story), "offset")
         return changes
 
     def _read_story(self) -> str:
