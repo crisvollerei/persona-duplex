@@ -59,10 +59,9 @@ ACTIVITY_PROFILES = {
 
 
 def activity_of(events: list[dict], *, gap_hours: float | None = None) -> str:
-    """这批事件属于哪一档活跃度。
+    """把一个时间间隔映射成活跃度档位（dense / medium / sparse）。
 
-    优先用两批事件之间的间隔（gap_hours），没有就用事件内部的时间跨度。
-
+    优先用显式给的 gap_hours，没有就用事件内部的时间跨度。
     都没有时**按 sparse（最宽松）处理**，不是 medium。理由：
       · 这是保守选择 —— 阈值低，更容易形成判断，不会把该记的漏掉
       · 没有时间信息通常意味着「离线补跑」或「首次导入」，
@@ -70,7 +69,13 @@ def activity_of(events: list[dict], *, gap_hours: float | None = None) -> str:
       · 默认 medium 会让「两条事件的离线测试」永远出不了判断，
         这不是设计意图，是 bug
 
-    真正的活跃度判断依赖真实时间戳，那在线上总是有的。
+    **线上路径现在不经过这里。**
+    Consolidator.profile() 判活跃度用的是「本批积压了多少轮」，
+    不是时间 —— 试过三种时间口径（距上次固化 / 距最后一轮 /
+    本批首末轮跨度），全都有问题，见 profile() 的说明。
+
+    保留这个函数是因为它提供「给定间隔 -> 档位」的映射，
+    而且 gap_hours 显式传入时（测试、离线补跑）确实还走这条路。
     """
     if gap_hours is not None:
         if gap_hours <= ACTIVITY_DENSE_HOURS:

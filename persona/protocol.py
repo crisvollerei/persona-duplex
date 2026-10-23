@@ -680,6 +680,9 @@ def parse_tail(data: dict) -> Tail:
 def to_parsed(inner: Head, say: str) -> ParsedTurn:
     """把两阶段的产物拼成下游认识的 ParsedTurn。
 
+    除了 head 和 say，还要**真的做硬失败检测** ——
+    declared / read_aloud 不能写死成空列表（下面有详细原因）。
+
     tail 给一个空骨架 —— 这一步不产出 settle / pending，
     那是引擎在 phase 2 之后单独补的（见 engine._tool_turn）。
     """
@@ -714,12 +717,17 @@ def displacement_ok(inner: Head, say: str) -> tuple[bool, str]:
     """这一轮的 say 是不是真的位移了 direct。
 
     两阶段协议**不能**保证这一点 —— phase 2 仍然是个自由生成，
-    它完全可能把 direct 原样复述一遍。所以这里要验一次，
-    不合格就退回文本协议重来（见 engine）。
+    它完全可能把 direct 原样复述一遍。所以这里要验一次。
 
     判据沿用 parse.is_consistent 的思路，但更严格：
       · displace=none     → say 应该接近 direct（没位移是对的）
       · displace≠none     → say 不能是 direct 的复述
+
+    **这个函数只判定，不负责回退。**
+    早期版本是「不合格就退回文本协议重来」，但那样用户会看到两遍
+    （phase 2 可能已经流式吐了一部分），而账本只记一遍 ——
+    账本在说谎，比不给回复更糟。
+    现在由 engine 决定：没吐过才重来，吐过就就地收尾。
     """
     direct = (inner.direct or "").strip()
     say = (say or "").strip()

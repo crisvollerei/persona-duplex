@@ -89,6 +89,19 @@ class Calibration:
 
 
 def collect(ledger: list[dict]) -> Calibration:
+    """把账本摊平成一组可统计的样本。
+
+    **样本的单位是「每条预言」，不是「每轮观测」。**
+    同一轮可能对同一条预言判多次（挂起后每轮重判），只取最后一次 ——
+    否则一条挂 17 轮的预言会贡献 17 个 WATCH 样本，把 OVERLAP 诊断
+    带成「阈值偏高」的假警。
+
+    三个人格相关的量顺带从账本重放出来：
+    trait_state / anchor_updates / judgments / turns。
+    它们回答的是另一个问题：「这个角色变了多少」。
+
+    这也是为什么读这个模块时要注意：它的样本量和 turns 不是一回事。
+    """
     from .store import replay_traits
 
     cal = Calibration()
@@ -160,6 +173,25 @@ class Finding:
 
 
 def findings(cal: Calibration) -> list[Finding]:
+    """逐项诊断，每项给一个 level（ok / warn / info）。
+
+    **level 的语义很重要**：
+        ok    样本够、结论明确、没问题
+        warn  样本够、结论明确、有问题
+        info  样本不够，只能给现状，不能下结论
+
+    为什么要有 info：2 条样本算出「100% 超时」是噪声不是诊断。
+    所有分支都有最小样本量门槛，不够就降级成 info ——
+    这是为了防止报告看起来很有信息量，实际全是噪声。
+
+    诊断项（按顺序）：
+        OVERLAP_KEEP / OVERLAP_DROP  字面阈值该往哪调
+        语域阈值                      受伤检测的升幅门槛
+        grace                         判定器的超时容差
+        语义判定                       LLM 判定的覆盖率
+        人格漂移                      参数离起点走了 drift 的百分之多少
+        判断产出                      中期层有没有足够的证据
+    """
     out: list[Finding] = []
 
     # ---- 1. 字面重合度阈值
@@ -324,6 +356,12 @@ def findings(cal: Calibration) -> list[Finding]:
 
 
 def format_report(cal: Calibration) -> str:
+    """把诊断渲染成终端文本。
+
+    分成四段：概况 / 诊断 / 原始分布 / 分布图。
+    第一段是「有多少样本」，因为后面所有结论都受它限制 ——
+    读者应该先看到样本量再看到结论，而不是反过来。
+    """
     lines = ["", "校准报告", "─" * 60]
 
     n_turn = cal.turns or sum(cal.judge_sources.values())
