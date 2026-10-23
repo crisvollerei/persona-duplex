@@ -22,13 +22,22 @@
 from __future__ import annotations
 
 import json
+import math
 import re
 import threading
 import time
 from dataclasses import dataclass, field
 from typing import Callable
 
-from .store import Store, now_iso
+from .store import Store, now_iso, parse_iso as _parse_dt
+
+# 现在是什么时候。命名成 _now_dt 是为了和 store.now_iso 区分：
+# 后者返回字符串（写账本用），这个返回 datetime（算时间差用）。
+from .store import now_iso as _now_iso_str
+
+
+def _now_dt():
+    return _parse_dt(_now_iso_str())
 
 SELF_STORY_HEADER = """# 我如何变成现在这样
 
@@ -113,9 +122,32 @@ class Consolidator:
     llm: Callable[[str], str] | None = None
     max_judgments_per_run: int = 3      # 单次硬上限（防止一次写太多）
     max_evidence: int = 8
-    # 长期层单次推基线的幅度：drift 的这个比例。
-    # 5% 意味着要走 20 次才用完全部余量 —— 基线是尺子，动它要极慢。
+    # 长期层单次推基线的**基础**幅度：drift 的这个比例。
+    # 实际步长还要乘两个频率因子（见 _anchor_frequency），
+    # 所以 0.05 只是「时间充裕时的满额步长」。
     ANCHOR_FRACTION: float = 0.05
+
+    # ---- 基线推动的频率因子 ----
+    #
+    # 为什么需要它：没有衰减时，连续 20 次固化就能把 anchor 推到 drift 边界
+    # （实测 warmth 从 0.70 到 0.82）。后台间隔 300 秒，也就是**一次两小时的
+    # 对话就能把人格基线推到极限** —— 和「长期层是 100+ 轮的慢变」完全相反。
+    #
+    # 用两层衰减，不用硬阈值：硬阈值（「24 小时内只推一次」）会让行为在
+    # 边界处跳变，而且完全阻断密集期的累积。衰减是连续的 ——
+    # 刚推过就几乎推不动，隔久了就满额，和余弦退火是同一个思路。
+
+    # 因子 1 的时间尺度：距上次推动多久才能拿到满额。
+    # 6 小时意味着：刚推过 -> 0，6 小时后 -> 63%，一天后 -> 98%。
+    ANCHOR_TAU_HOURS: float = 6.0
+
+    # 因子 2 的观察窗口：这个时间内的推动次数会互相压制。
+    ANCHOR_RECENT_HOURS: float = 2.0
+
+    # 有效系数低于这个值就不推动（也不写账本）。
+    # 否则密集固化会写下大量 1e-5 级别的 trait_update，
+    # 账本被噪声填满，而且那些推动在数值上毫无意义。
+    ANCHOR_MIN_EFFECT: float = 0.02
     # 上一次固化到现在过了多久（小时）。None = 不知道，按 medium 处理。
     gap_hours: float | None = None
 
@@ -548,6 +580,65 @@ class Consolidator:
 
     # ------------------------------------------------------------ 基线推动
 
+    def _anchor_frequency(self) -> float:
+        """算出这一次 anchor 推动该打几折（0~1）。
+
+        两个因子相乘：
+
+        **因子 1：距上次推动了多久**
+            f1 = 1 - exp(-gap / TAU)
+
+            刚推过就是 0（推不动），TAU 小时后 63%，一天后 98%。
+            用指数而不是线性，是因为「刚刚推过」这一段应该被压得极狠 ——
+            线性衰减会让连续两次固化之间仍然推得动不少。
+
+        **因子 2：最近这个窗口里已经推了几次**
+            f2 = 1 / (1 + n)
+
+            2 小时内推过 1 次 -> 半额，3 次 -> 1/4，9 次 -> 1/10。
+            这一条管的是「密集期」：即使因子 1 因为间隔够长给了满额，
+            短时间反复推动也会被压下去。
+
+        为什么两个都要：
+            · 只有 f1：每 6 小时推一次就能稳步推进，一天 4 次太多
+            · 只有 f2：隔了 3 天推一次，n=0 拿满额，但下次又来一次也拿满额
+        两个一起，才是「变化滞后于事件」的连续版本。
+
+        返回 <= ANCHOR_MIN_EFFECT 时调用方直接跳过，不写账本。
+        """
+        state = self.store.load_view("anchor_pushes", {"times": []}) or {"times": []}
+        times = [t for t in (state.get("times") or []) if isinstance(t, str)]
+
+        now = _now_dt()
+        # 因子 1
+        if times:
+            last = max(_parse_dt(t) for t in times)
+            gap_h = max(0.0, (now - last).total_seconds() / 3600.0)
+        else:
+            gap_h = float("inf")        # 从没推过 -> 满额
+        f1 = 1.0 if gap_h == float("inf") else 1.0 - math.exp(-gap_h / self.ANCHOR_TAU_HOURS)
+
+        # 因子 2
+        recent = [t for t in times
+                  if (now - _parse_dt(t)).total_seconds() <= self.ANCHOR_RECENT_HOURS * 3600]
+        f2 = 1.0 / (1.0 + len(recent))
+
+        return f1 * f2
+
+    def _record_anchor_push(self) -> None:
+        """记一次基线推动的时间点，供频率因子计算用。
+
+        只保留最近 7 天的记录 —— 更早的对两个因子都没影响了
+        （TAU=6h，一天以前的 gap 已经足够拿满额）。
+        """
+        state = self.store.load_view("anchor_pushes", {"times": []}) or {"times": []}
+        times = [t for t in (state.get("times") or []) if isinstance(t, str)]
+        now = _now_dt()
+        cutoff = 7 * 24 * 3600
+        times = [t for t in times if (now - _parse_dt(t)).total_seconds() <= cutoff]
+        times.append(now.isoformat(timespec="seconds"))
+        self.store.save_view("anchor_pushes", {"times": times})
+
     def push_anchors(self, *, min_rounds: int = 3) -> list[dict]:
         """长期层：让自我叙事推动基线。
 
@@ -566,9 +657,14 @@ class Consolidator:
         story = self._read_story()
         if not story.strip():
             return []
-        # 叙事要够长才值得读 —— 太短说明还没形成「变化」的叙述
-        if len(story) < 400:
-            return []
+        # 这里**不检查全文长度**。
+        #
+        # 原来有个 `len(story) < 400 -> return` 的门槛，理由是「叙事够长才
+        # 值得读」。但它和下面「新增 >= 200 字」重复了 —— 只要新增够长，
+        # 全文多长无关。而且 400 这个数没有依据。
+        #
+        # 实测副作用：短会话写出的叙事只有 300 多字，永远进不了判读，
+        # 长期层在新角色上完全不启动。
 
         state = self.store.traits()
         if not state:
@@ -643,7 +739,17 @@ class Consolidator:
             trait = Trait.from_state(spec)
             if trait.drift <= 0:
                 continue
-            step = trait.drift * self.ANCHOR_FRACTION
+
+            # 频率因子：刚推过 / 短时间推太多次，都要打折。
+            # 见 _anchor_frequency —— 没有它的话一次两小时对话就能
+            # 把基线推到 drift 边界。
+            freq = self._anchor_frequency()
+            if freq < self.ANCHOR_MIN_EFFECT:
+                # 系数太低，这次不推。不写账本 —— 否则会被 1e-5 级别的
+                # 噪声记录填满，而那些推动在数值上毫无意义。
+                continue
+
+            step = trait.drift * self.ANCHOR_FRACTION * freq
             before = trait.anchor
             # anchor 也必须夹在物理边界里。
             #
@@ -671,9 +777,17 @@ class Consolidator:
                             "evidence": evidence[:60]})
         if changes:
             self.store.save_view("traits", {"traits": state})
+            # 记下这次推动的时间 —— 下次的频率因子要用它。
+            # 只在真的推了才记：否则「翻了一遍没推」也会算作一次推动，
+            # 把因子 2 的分母抬高，之后该推的时候反而推不动。
+            self._record_anchor_push()
         # 记下读到哪儿了 —— 下次只看新增的部分。
         # 注意：**无论有没有推动都要记**。否则一段「读过了但没判出变化」
         # 的叙事会在下次固化时被重复读一遍，浪费调用还可能被重复判。
+        #
+        # 那「因为频率因子太低而跳过」的叙事会不会丢？
+        # 不会。self-story 是**追加写**的（_rewrite_story），
+        # 被跳过的变化会在后续叙事里重新表达 —— 代价是慢一点，不是丢失。
         self.store.set_cursor("story", len(story), "offset")
         return changes
 

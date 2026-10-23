@@ -211,7 +211,11 @@ class TestLongTermAnchor(unittest.TestCase):
         self.assertEqual(calls["n"], 1, "没有新叙事却还在调 LLM")
 
     def test_new_story_can_push_again(self):
-        """有新叙事时可以继续推动。"""
+        """有新叙事时可以继续推动 —— 但**要等频率因子放行**。
+
+        刚推过一次的话，间隔为 0，f1 = 1 - exp(0) = 0，推不动。
+        这是对的：连续两次固化之间不该有基线漂移。
+        """
         def fake_llm(prompt):
             return '[{"name": "warmth", "direction": 1, "evidence": "现在会开口了"}]'
 
@@ -222,8 +226,37 @@ class TestLongTermAnchor(unittest.TestCase):
 
         with self.store.self_story_path.open("a", encoding="utf-8") as f:
             f.write("\n后来又过了一阵，我发现自己会先开口了。" * 20)
-        pushed = c.push_anchors()
-        self.assertEqual(len(pushed), 1, "新叙事应该能再推一次")
+        # 紧接着再推：频率因子挡住（间隔 0）
+        self.assertEqual(c.push_anchors(), [], "间隔为 0 时不该推进基线")
+
+        # 把上次推动时间往前挪 24 小时，模拟「过了一天」
+        pushes = self.store.load_view("anchor_pushes", {"times": []})
+        from persona.store import _LOCAL_TZ
+        from datetime import datetime, timedelta
+        old = (datetime.now(_LOCAL_TZ) - timedelta(hours=24)).isoformat(timespec="seconds")
+        self.store.save_view("anchor_pushes", {"times": [old]})
+        # 给一段新叙事（游标已经走到末尾了）
+        with self.store.self_story_path.open("a", encoding="utf-8") as f:
+            f.write("\n再后来又过了一阵，我确认自己真的变了。" * 20)
+        self.assertEqual(len(c.push_anchors()), 1, "隔一天应该能再推")
+
+    def test_short_total_story_still_works(self):
+        """叙事总长不足 400 字也该能判读 —— 只要新增够 200。
+
+        原来有个 `len(story) < 400` 门槛，和「新增 >= 200」重复了，
+        而且让短会话永远进不了判读。实测副作用：新角色跑十几轮
+        写出的叙事只有 300 多字，长期层完全不启动。
+        """
+        class Always:
+            def __call__(self, p):
+                return '[{"name": "warmth", "direction": 1, "evidence": "e"}]'
+
+        # 300 字，不到旧的 400 门槛，但超过新增的 200
+        self.store.self_story_path.write_text("我变了。" * 75, encoding="utf-8")
+        self.assertEqual(len(self.store.self_story_path.read_text(
+            encoding="utf-8")), 300)
+        c = Consolidator(self.store, llm=Always())
+        self.assertEqual(len(c.push_anchors()), 1, "300 字叙事应该能判读")
 
     def test_short_new_story_ignored(self):
         """新增叙事太短不算「变化」。"""
@@ -378,6 +411,137 @@ class TestPersonaSwitch(unittest.TestCase):
             self.assertEqual(kinds, ["traits_init", "traits_reset", "traits_init"])
         finally:
             tmp.cleanup()
+
+
+class TestAnchorFrequency(unittest.TestCase):
+    """基线推动的频率衰减。
+
+    没有它的时候：连续 20 次固化就能把 anchor 推到 drift 边界
+    （实测 warmth 0.70 -> 0.82）。后台间隔 300 秒，也就是
+    **一次两小时的对话就能把人格基线推到极限**。
+
+    两个因子：
+      f1 = 1 - exp(-gap / TAU)    距上次推动越久，越接近满额
+      f2 = 1 / (1 + n)            窗口内推得越多，每次越弱
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.store = Store(Path(self.tmp.name))
+        self.store.init_traits(_cfg().role.traits_state())
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_first_push_is_full_strength(self):
+        """从没推过 -> 满额。"""
+        self.assertAlmostEqual(Consolidator(self.store)._anchor_frequency(), 1.0, places=6)
+
+    def test_immediate_second_push_is_blocked(self):
+        """刚推过就跑第二次 -> 系数接近 0。"""
+        c = Consolidator(self.store)
+        c._record_anchor_push()
+        self.assertLess(c._anchor_frequency(), 0.01)
+
+    def test_factor_one_grows_with_gap(self):
+        """间隔越久，系数越接近 1。"""
+        from datetime import datetime, timedelta
+        from persona.store import _LOCAL_TZ
+        c = Consolidator(self.store)
+
+        def freq_at(hours):
+            old = (datetime.now(_LOCAL_TZ) - timedelta(hours=hours)
+                   ).isoformat(timespec="seconds")
+            self.store.save_view("anchor_pushes", {"times": [old]})
+            return c._anchor_frequency()
+
+        f1h, f6h, f24h = freq_at(1), freq_at(6), freq_at(24)
+        self.assertLess(f1h, f6h)
+        self.assertLess(f6h, f24h)
+        self.assertGreater(f24h, 0.9)
+
+    def test_factor_two_weakens_with_recent_count(self):
+        """同一窗口里已推次数越多，系数越低。"""
+        from datetime import datetime, timedelta
+        from persona.store import _LOCAL_TZ
+        c = Consolidator(self.store)
+        now = datetime.now(_LOCAL_TZ)
+
+        def freq_with(n_recent):
+            times = [(now - timedelta(minutes=30)).isoformat(timespec="seconds")
+                     for _ in range(n_recent)]
+            self.store.save_view("anchor_pushes", {"times": times})
+            return c._anchor_frequency()
+
+        self.assertGreater(freq_with(1), freq_with(3))
+        self.assertGreater(freq_with(3), freq_with(8))
+
+    def test_dense_consolidation_barely_moves_anchor(self):
+        """两小时内反复固化 20 次，anchor 只走第一步。
+
+        这是这次修的核心 —— 修之前 20 次会走满 drift（0.70 -> 0.82）。
+        现在只有第一次拿满额（此前从没推过），之后 19 次全被挡住。
+
+        预期总量 ≈ 1 步 = drift × ANCHOR_FRACTION = 0.12 × 0.05 = 0.006。
+        """
+        class Always:
+            def __call__(self, p):
+                return '[{"name": "warmth", "direction": 1, "evidence": "e"}]'
+
+        c = Consolidator(self.store, llm=Always())
+        before = self.store.traits()["warmth"]["anchor"]
+        for _ in range(20):
+            self.store.self_story_path.write_text("我变了。" * 300, encoding="utf-8")
+            self.store.set_cursor("story", 0, "offset")
+            c.push_anchors()
+        after = self.store.traits()["warmth"]["anchor"]
+        moved = abs(after - before)
+        self.assertLess(moved, 0.008,
+                        "密集固化把基线推动了 %.4f（应该只走一步 0.006）" % moved)
+        self.assertGreater(moved, 0.004, "第一次推动应该是满额的")
+
+        # 关键对比：修之前 20 次会跑到 0.82（drift 边界）
+        self.assertLess(after, 0.71, "不应该接近 drift 边界")
+
+    def test_daily_consolidation_does_move(self):
+        """每天固化一次，累积效果明显。"""
+        from datetime import datetime, timedelta
+        from persona.store import _LOCAL_TZ
+
+        class Always:
+            def __call__(self, p):
+                return '[{"name": "warmth", "direction": 1, "evidence": "e"}]'
+
+        c = Consolidator(self.store, llm=Always())
+        before = self.store.traits()["warmth"]["anchor"]
+        now = datetime.now(_LOCAL_TZ)
+        for day in range(5):
+            # 模拟「距上次推动已过一天」
+            t = (now - timedelta(days=1)).isoformat(timespec="seconds")
+            self.store.save_view("anchor_pushes", {"times": [t]})
+            self.store.self_story_path.write_text(
+                ("我变了。第%d天。" % day) * 300, encoding="utf-8")
+            self.store.set_cursor("story", 0, "offset")
+            c.push_anchors()
+        after = self.store.traits()["warmth"]["anchor"]
+        self.assertGreater(after - before, 0.01, "每天一次应该累积出可见漂移")
+
+    def test_low_frequency_push_not_recorded(self):
+        """系数太低时不写账本 —— 否则被 1e-5 级噪声填满。"""
+        class Always:
+            def __call__(self, p):
+                return '[{"name": "warmth", "direction": 1, "evidence": "e"}]'
+
+        c = Consolidator(self.store, llm=Always())
+        self.store.self_story_path.write_text("我变了。" * 300, encoding="utf-8")
+        c._record_anchor_push()          # 刚推过
+        n_before = len([r for r in self.store.read_ledger()
+                        if r["kind"] == "anchor_update"])
+        self.store.set_cursor("story", 0, "offset")
+        c.push_anchors()
+        n_after = len([r for r in self.store.read_ledger()
+                       if r["kind"] == "anchor_update"])
+        self.assertEqual(n_before, n_after, "系数不够时不该写账本")
 
 
 class TestSessionRestoresTraits(unittest.TestCase):
