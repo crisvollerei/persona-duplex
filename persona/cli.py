@@ -1,11 +1,14 @@
 """命令行入口。
 
     chat      普通对话（默认流式）
-    trace     带 trace 的对话（能看到 HEAD / 结算 / 修复）
+    trace     带 trace 的对话（能看到 HEAD / 结算 / 修复 / 判断）
     demo      离线演示，不需要 API key
     rebuild   从账本重建 state/
     stats     从账本算指标
+    lift      关系增益：有无历史时的命中率差
     calibrate 从账本反推阈值该怎么调
+
+除 demo 外都要 -d 指定数据目录，也都要 -p 指定人格。
 """
 from __future__ import annotations
 

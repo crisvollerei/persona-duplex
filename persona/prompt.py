@@ -3,6 +3,24 @@
 一次生成，顺序固定：HEAD → SAY → TAIL。
 这个顺序不是格式问题，是因果问题：只有当 direct 写在 SAY 之前，
 SAY 才是真的被 direct 条件化出来的。反过来就是事后编理由。
+
+三块内容各有来历：
+
+**人格**（build_system_prompt）
+    参数 -> 行为指令。这是 traits 影响实际对话的**唯一通道** ——
+    参数改了但 prompt 没跟上，漂移就只存在于账本里，对行为零影响。
+    _trait_block 负责把数值翻译成句子，跨过提示分界点才出现对应指令。
+    _STANCE_HINT 把站位映射成措辞约束（不是格式说明 ——
+    曾经写「先说出你的猜测」，被模型逐字翻译成了台词）。
+    phrase_block 按 need 注入分场景例句。语感靠例句，不靠形容词。
+
+**上下文**（build_context_block）
+    关系 / 挂起的预言 / 判断记忆 / 风格提示 / 修复提示
+
+**历史**（build_history_entry）
+    永远输出完整三段骨架，即使是缺 TAIL 的旧数据也要补齐 ——
+    历史是**示范**不是日志，模型会照着格式学。
+    曾因只存 HEAD+SAY 导致 95% 的轮次丢 TAIL。
 """
 from __future__ import annotations
 

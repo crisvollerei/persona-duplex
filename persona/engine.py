@@ -2,6 +2,19 @@
 
 一次生成，产出「说出去的话」+「状态变更」。
 观测在线写，结算下一轮填。
+
+三条生成路径（由 protocol 决定，见 protocol.py）：
+
+    text     一次生成，HEAD → SAY → TAIL。因果顺序靠 token 位置保证
+    tool     _generate_two_phase：phase1 出 HEAD、phase2 出 SAY、phase3 结算
+    persona  _generate_persona：raw（看不到人设）→ 人设化 → 结算
+
+三条路径的共同底线：**direct 永不进用户可见输出**。
+统一在 parse.safe_say 兜底，任何一条路径都不例外。
+
+另一条贯穿全部路径的约定：**已经吐给用户的内容不能重来**。
+兜底回退时必须先看「是否已经输出过」，否则用户会看到两遍，
+而账本只记一遍 —— 账本在说谎，比不给回复更糟。
 """
 from __future__ import annotations
 
