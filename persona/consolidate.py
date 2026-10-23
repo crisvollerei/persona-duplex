@@ -377,8 +377,23 @@ class Consolidator:
             "",
             "已有判断：",
         ]
-        for j in self.store.judgments(limit=10):
+        # 列出足够多的已有判断。
+        #
+        # 原来只列 10 条，而 _find_similar 扫的是全量 —— 模型看不到
+        # 第 11 条之后的旧判断，就没法在生成时避免复述，只能靠字面
+        # 相似度兜底（而它在同义 vs 反义上给出的分数是反的）。
+        # 这是「同一件事被记成多条」的上游成因。
+        #
+        # 上限 40 条：再多会挤占事件区的注意力，而且判断本身会累积，
+        # 全列到最后 prompt 全是历史。
+        all_judgments = self.store.judgments(limit=10_000_000)
+        shown = all_judgments[-40:]
+        if not shown:
+            lines.append("  （还没有）")
+        for j in shown:
             lines.append(f"  [{j['id']}] {j['judgment']}（{j['confidence']}）")
+        if len(all_judgments) > len(shown):
+            lines.append(f"  ……（另有 {len(all_judgments) - len(shown)} 条更早的判断）")
         lines += ["", "最近事件："]
         for e in events:
             lines.append(f"  - 用户: {e.get('user', '')[:80]}")

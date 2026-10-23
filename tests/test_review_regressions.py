@@ -160,6 +160,30 @@ class TestConsolidationRobustness(unittest.TestCase):
             self.assertIn(key, out)
 
 
+class TestPromptListsJudgments(unittest.TestCase):
+    def test_prompt_lists_more_than_ten(self):
+        """固化 prompt 要列出足够多的已有判断。
+
+        只列 10 条的话，模型看不到第 11 条之后的旧判断，
+        没法在生成时避免复述，只能靠字面相似度兜底 ——
+        而 bigram 在同义 vs 反义上给出的分数是反的。
+        """
+        tmp = tempfile.TemporaryDirectory()
+        try:
+            st = Store(Path(tmp.name))
+            st.init_traits(_cfg().role.traits_state())
+            for i in range(50):
+                st.add_judgment("判断%d" % i, 0.5)
+            c = Consolidator(st)
+            prompt = c._consolidation_prompt(
+                [{"user": "x", "need": "y", "direct": "z"}], c.profile())
+            self.assertGreater(prompt.count("[j_"), 10)
+            # 超出上限时要有省略提示，别让模型以为只有这些
+            self.assertIn("另有", prompt)
+        finally:
+            tmp.cleanup()
+
+
 class TestMetricsRobustness(unittest.TestCase):
     def test_expired_without_pid(self):
         m = compute([{"kind": "pending_expire", "reason": "timeout"}])
