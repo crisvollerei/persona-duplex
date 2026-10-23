@@ -35,10 +35,17 @@ class TopicVerdict:
 
     @property
     def returned(self) -> bool:
+        """用户说的正是预言预计会出现的那个东西。"""
         return self.verdict == RETURNED
 
     @property
     def left(self) -> bool:
+        """用户说的和预言预计的明显是两回事。
+
+        **注意 left 不等于「换了话题」** —— 它只表示「这一句的内容和
+        预言的预期相反或无关到可以否证」。换题、太短、只回应了别的部分，
+        都应该是 unclear（还没发生），不是 left。
+        """
         return self.verdict == LEFT
 
 
@@ -54,6 +61,16 @@ class JudgeRequest:
 
 
 class TopicJudge(Protocol):
+    """判定器的接口。两种实现：BigramJudge（字面）和 LLMJudge（语义）。
+
+    实现必须满足的契约：
+      · **总是返回 req.pendings 里每一条的判定** —— 漏判要补 UNCLEAR，
+        不能让调用方拿到残缺的 dict（漏掉的预言会静默悬挂）
+      · **不抛异常** —— 判不了就返回 UNCLEAR，让预言继续挂着
+      · 判断不了时倾向 UNCLEAR，不要猜 RETURNED / LEFT
+        那两个会直接写进校准账本，污染命中率统计
+    """
+
     name: str
 
     def judge(self, req: JudgeRequest) -> dict[str, TopicVerdict]:
@@ -69,9 +86,21 @@ class BigramJudge:
     name = "bigram"
 
     def __init__(self, similarity=None):
+        # 可插拔的相似度。默认走 settle.topic_overlap 里的 bigram。
         self.similarity = similarity
 
     def judge(self, req: JudgeRequest) -> dict[str, TopicVerdict]:
+        """按字面重合判。只产出 RETURNED / UNCLEAR，**从不产出 LEFT**。
+
+        为什么不产出 LEFT：字面重合低有两种可能 ——
+        「用户换了话题」和「用户还没说到」。两者当轮不可区分，
+        而判成 LEFT 会让预言记成 refuted，把「还没发生」变成「说反了」。
+        这是命中率被压到 40% 上下最主要的原因。
+
+        那条 else 分支（DROP <= overlap < KEEP）和上面的分支返回相同，
+        是有意留的 —— 它标出了「中间地带」这个位置，将来要在这里
+        接更细的判定（比如结合句式特征）。逻辑上是冗余的。
+        """
         from .settle import topic_overlap
 
         out: dict[str, TopicVerdict] = {}
@@ -130,6 +159,11 @@ verdict 三选一：
 
 
 def _clip(s: str, n: int = 160) -> str:
+    """截断长文本，并**把换行压成空格**。
+
+    压换行是因为这段内容会拼进 prompt 的列表项里：多行会打断
+    「- p_0001：猜「…」」这样的结构，模型更容易判错。
+    """
     s = (s or "").replace("\n", " ").strip()
     return s if len(s) <= n else s[:n] + "…"
 
@@ -144,6 +178,8 @@ class LLMJudge:
     name = "llm"
 
     def __init__(self, llm: Callable[..., str]):
+        # 接受两种形态：接受 (messages, *, max_tokens) 的闭包，
+        # 或者只接受 (messages) 的普通函数。见 _call。
         self.llm = llm
 
     def _call(self, messages: list[dict], *, max_tokens: int) -> str:
@@ -165,9 +201,21 @@ class LLMJudge:
     _TOKENS_BASE = 80
 
     def _budget(self, n: int) -> int:
+        """按条数算预算。
+
+        固定预算不行：挂到 8 条时输出会被截断，JSON 尾部断掉，
+        整批解析失败 → 全部退回「模型输出无法解析」。
+        实测过：8 条 + max_tokens=120 时输出停在 '"id":"p' 半截。
+        """
         return self._TOKENS_BASE + self._TOKENS_PER_PENDING * max(1, n)
 
     def judge(self, req: JudgeRequest) -> dict[str, TopicVerdict]:
+        """问模型，返回每条预言的判定。
+
+        **总是返回全部 pendings 的判定**，即使模型漏了几条 ——
+        漏的补成 UNCLEAR。不能让调用方拿到一个残缺的 dict，
+        否则漏掉的那些预言会静默留在悬挂状态。
+        """
         if not req.pendings:
             return {}
         lines = "\n".join(
@@ -185,6 +233,17 @@ class LLMJudge:
         return self._parse(raw, req)
 
     def _parse(self, raw: str, req: JudgeRequest) -> dict[str, TopicVerdict]:
+        """解析模型的 JSON。**任何异常都降级成 UNCLEAR，不抛。**
+
+        三种降级路径：
+            · 模型没给数组      -> 全部 UNCLEAR（判不了，不是判成「没回来」）
+            · JSON 解析失败     -> 全部 UNCLEAR
+            · 模型漏判某几条    -> 那几条补 UNCLEAR
+
+        为什么一律 UNCLEAR：UNCLEAR 的语义是「还没发生」，会让预言继续挂着；
+        而降级成 LEFT 或 RETURNED 会直接写进校准账本，污染命中率。
+        宁可这轮白判，不要记一个假的结论。
+        """
         valid = {p["id"] for p in req.pendings}
         out: dict[str, TopicVerdict] = {}
 
@@ -261,11 +320,18 @@ class AsyncJudge:
 
     def __init__(self, inner: TopicJudge, *, grace: float = 0.35,
                  fallback: TopicJudge | None = None):
+        # grace 是「等判定的最长时间」。超过它就立刻用 fallback 兜底，
+        # 不让判定变成瓶颈。
         self.inner = inner
         self.grace = grace
         self.fallback = fallback or BigramJudge()
 
     def submit(self, req: JudgeRequest) -> JudgeHandle:
+        """发射一次判定，立刻返回句柄。**不阻塞**。
+
+        线程是 daemon —— 进程退出时不保证跑完。这是有意的：
+        一个没回来的判定本来就该被丢弃（预言还挂着，下轮重判）。
+        """
         handle = JudgeHandle(
             req=req, grace=self.grace,
             started=time.monotonic(), fallback=self.fallback,
