@@ -49,8 +49,10 @@ class Metrics:
     # 被挂起过的预言 id（去重）。同一条预言可能被晾好几轮，只算一次。
     watched_ids: set[str] = field(default_factory=set)
 
-    # 人格：从 traits_init 起，累计每次 trait_update / anchor_update 的位移
+    # 人格：从 traits_init 起，累计每次 trait_update / anchor_update 的位移。
+    # 两个 dict 分开存，不用前缀挤一个 —— 参数名可能含冒号，前缀法就分不开。
     trait_drift: dict[str, float] = field(default_factory=dict)
+    anchor_drift: dict[str, float] = field(default_factory=dict)
     trait_updates: int = 0
     anchor_updates: int = 0
     # 判断：写了几条、推翻了几条
@@ -187,8 +189,8 @@ def compute(ledger: list[dict]) -> Metrics:
             m.anchor_updates += 1
             name = rec.get("name", "")
             # 基线漂移单独记 —— 它是「我变成了谁」，和参数浮动不是一回事
-            key = f"anchor:{name}"
-            m.trait_drift[key] = m.trait_drift.get(key, 0.0) + float(rec.get("delta", 0.0))
+            m.anchor_drift[name] = m.anchor_drift.get(name, 0.0) \
+                + float(rec.get("delta", 0.0))
 
         elif kind == "repair_open":
             m.repair_opened += 1
@@ -352,13 +354,12 @@ def format_report(m: Metrics) -> str:
             flag = "  ← 虚高" if conf - hit > 0.2 else ""
             lines.append(f"  {label:<10}{n:>6}{conf:>10.2f}{hit:>10.2f}{flag}")
 
-    if m.trait_drift:
+    if m.trait_drift or m.anchor_drift:
         lines += ["", "人格漂移", "─" * 54]
-        lines.append(f"  {'参数':<20}{'累计变化':>10}")
-        for k, v in sorted(m.trait_drift.items(),
-                           key=lambda x: -abs(x[1])):
-            mark = "基线" if k.startswith("anchor:") else "参数"
-            name = k.split(":", 1)[-1]
-            lines.append(f"  {name:<18}{mark:>2}{v:>+10.4f}")
+        lines.append(f"  {'参数':<16}{'类型':>6}{'累计变化':>12}")
+        rows = [(k, "参数", v) for k, v in m.trait_drift.items()]
+        rows += [(k, "基线", v) for k, v in m.anchor_drift.items()]
+        for name, kind, v in sorted(rows, key=lambda x: -abs(x[2])):
+            lines.append(f"  {name:<14}{kind:>6}{v:>+12.4f}")
 
     return "\n".join(lines)

@@ -131,9 +131,18 @@ class Trait:
         self.clamp()
 
     def clamp(self) -> None:
-        """值必须同时满足：物理边界 + 漂移范围。"""
+        """值必须同时满足：物理边界 + 漂移范围。
+
+        两者取交集。如果交集是空的（lo > hi，配置写错了），
+        退回到 anchor —— 至少不会把值推到一个两个范围都不认的地方。
+        实测踩过：lo=0.8 / hi=0.2 时，max(lo, ...) 让值跑到 0.8，
+        而 drift 范围是 0.3~0.7，值同时违反了 hi 和 drift 两条约束。
+        """
         lo = max(self.lo, self.anchor - self.drift)
         hi = min(self.hi, self.anchor + self.drift)
+        if lo > hi:
+            self.value = self.anchor
+            return
         self.value = max(lo, min(hi, self.value))
 
     def nudge(self, signal: float) -> float:
@@ -214,8 +223,12 @@ class Trait:
 
     @property
     def drift_room(self) -> tuple[float, float]:
-        return (max(self.lo, self.anchor - self.drift),
-                min(self.hi, self.anchor + self.drift))
+        lo = max(self.lo, self.anchor - self.drift)
+        hi = min(self.hi, self.anchor + self.drift)
+        if lo > hi:
+            # 配置矛盾（物理边界与漂移范围无交集）—— 退化成「不能动」
+            return (self.anchor, self.anchor)
+        return (lo, hi)
 
     def as_dict(self) -> dict:
         return {"anchor": round(self.anchor, 3), "value": round(self.value, 3),

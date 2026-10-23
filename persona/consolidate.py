@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import json
+import re
 import threading
 import time
 from dataclasses import dataclass, field
@@ -213,20 +214,49 @@ class Consolidator:
             out.append(rec)
         return out
 
-    def _find_similar(self, text: str, threshold: float = 0.55) -> dict | None:
-        """找一条已有的、和 text 说的是同一件事的判断。
+    # 否定词。注意不能简单做子串匹配 —— 「别人」「别的」「差别」里的「别」
+    # 不是否定。实测踩过：把「别」当否定词，「他在意别人的评价」被标成否定极，
+    # 和「他不在乎别人的评价」同极，反而把真正的反义判断当成了重复。
+    _NEG_RE = re.compile(
+        r"(?:不|没|没有|别|勿|非|无|未)"
+        r"(?!人|的|处|致|样|个|些)"    # 排除「别人」「别的」「别处」…
+    )
 
-        为什么不用「字符串相等」：LLM 换个说法就绕过去了。
-        实测两次固化产出 6 条判断，其中 3 条是同一件事的复述 ——
-        这些会被中期层误当成「多次一致」，把参数推过头。
+    def _polarity(self, text: str) -> int:
+        """粗判一句话的极性：+1 肯定，-1 否定。
 
-        用 bigram 相似度做粗筛。阈值 0.55 是保守选择：
-        宁可漏掉一条重复，也不要把两条不同的判断误合并。
+        只看有没有否定词，不做语法分析 ——
+        对「同义 vs 反义」这个粗分类够用了。
+        """
+        return -1 if self._NEG_RE.search(text or "") else 1
+
+    def _find_similar(self, text: str, threshold: float = 0.82) -> dict | None:
+        """只拦「近乎逐字重复」的判断。措辞不同的判断一律放行。
+
+        **为什么阈值这么高、而且不做语义判重**：
+
+        实测过 bigram 在这个任务上其实是反着的 ——
+            同义改写：「他在意别人的评价」/「他很在意别人对他的看法」= 0.43
+            反义：    「他在意别人的评价」/「他不在乎别人的评价」  = 0.57
+        反义比同义更像。任何单一阈值都会出错：
+            阈值低 -> 反义被当重复，旧判断永远翻不了案
+            阈值高 -> 同义被当新判断，同一件事反复记
+
+        所以这里只做一件最保守的事：拦「几乎一模一样」的（0.82 以上，
+        基本是同一句话换个标点）。剩下的判重交给模型 ——
+        固化 prompt 里本来就列了已有判断，并明确要求「不要重复」。
+
+        这条边界的代价：措辞差异大的复述会漏进来。但那是可接受的 ——
+        中期层还有一道 min_consensus 门槛，同一件事被记两条也不会
+        单独推参数，只是占一点空间。
         """
         from .similarity import bigram_similarity
+        pol = self._polarity(text)
         best = None
         best_sim = 0.0
         for j in self.store.judgments(limit=500):
+            if self._polarity(j["judgment"]) != pol:
+                continue        # 极性相反，绝不是同一件事
             sim = bigram_similarity(text, j["judgment"])
             if sim > best_sim:
                 best_sim, best = sim, j
@@ -317,15 +347,24 @@ class Consolidator:
 
     # ------------------------------------------------------------ 人格推动
 
-    def push_traits(self, *, min_consensus: int = 2) -> list[dict]:
+    def push_traits(self, *, min_consensus: float = 1.4) -> list[dict]:
         """把判断聚合成人格参数的推动。
 
-        这是中期层的核心：**多条判断指向同一方向才动**，单条不动。
+        这是中期层的核心：**证据够才动**，单条不动。
 
         为什么需要共识：
             一条「他不想被建议」可能只是那一轮的情境。
-            三条都说，才是倾向。这和激活度阈值是同一个思路 ——
+            几条都说，才是倾向。这和活跃度阈值是同一个思路 ——
             区分「状态」和「倾向」。
+
+        共识怎么算：**累加 confidence**，不是数条数。
+            每条判断自带把握度（0-1），用它比数条数更合理 ——
+            一条 0.9 的判断比三条 0.3 的更说明问题。
+            阈值 1.4 约等于「两条 0.7」或「一条 0.9 + 一条 0.5」。
+
+        **每条判断只消费一次**：用 judgment id 记游标，避免同一条证据
+        在每次固化时反复推动参数。实测踩过：3 条判断连续 push 20 次，
+        参数从 0.20 掉到 0.1775 —— 相当于同一条证据被用了 20 遍。
 
         返回实际发生的变更列表。
         """
@@ -335,9 +374,20 @@ class Consolidator:
         if not live:
             return []
 
+        # 只取「还没被消费过」的判断。
+        #
+        # 注意消费的语义：**只有真的推出了变化才标记已消费**。
+        # 不够阈值的判断必须留着，让它和后续证据累积 ——
+        # 否则第 1 条判断不够 1.4 就被标记掉，第 2 条来时从零开始，
+        # 永远凑不齐。实测踩过：连续加 11 条同向判断，参数一步都没动。
+        consumed = set(self.store.load_view("judgment_cursor", {"ids": []}).get("ids", []))
+        fresh = [j for j in live if j["id"] not in consumed]
+        if not fresh:
+            return []
+
         # 按 (参数名, 方向) 聚合
         votes: dict[tuple[str, int], list[dict]] = {}
-        for j in live:
+        for j in fresh:
             for name, direction in (j.get("affects") or {}).items():
                 try:
                     d = 1 if float(direction) > 0 else (-1 if float(direction) < 0 else 0)
@@ -349,12 +399,23 @@ class Consolidator:
         state = self.store.traits()
         changes: list[dict] = []
         for (name, direction), supporters in votes.items():
-            # 反向的判断也算反对票：如果 3 条说 -1、2 条说 +1，净方向是 -1
+            # 用 **confidence 加权**判断「够不够共识」，而不是数条数。
+            #
+            # 为什么不能数条数：实测一条判断通常只指向一个参数，而且各指各的。
+            # 一次固化产出 3 条，分别指向 self_disclosure / intervention / initiative，
+            # 每个参数只有 1 票 —— 按「2 条才算」的规则，中期层永远不动。
+            #
+            # 改成累加 confidence 之后：
+            #   3 条 0.7 的判断指向同一参数 -> 2.1 分，够
+            #   1 条 0.7 的判断             -> 0.7 分，不够
+            # 语义没变（还是「多条才动」），但不再要求字面意义上的「2 条」。
             opp = votes.get((name, -direction), [])
-            net = len(supporters) - len(opp)
-            if net < min_consensus * 0 or net <= 0:
+            mine = sum(float(j.get("confidence", 0.5)) for j in supporters)
+            theirs = sum(float(j.get("confidence", 0.5)) for j in opp)
+            net = mine - theirs
+            if net <= 0:
                 continue
-            if abs(net) < min_consensus:
+            if net < min_consensus:
                 continue
 
             spec = state.get(name)
@@ -364,14 +425,15 @@ class Consolidator:
             if trait.plasticity <= 0 or trait.drift <= 0:
                 continue
 
-            # 信号强度 = 净票数 / 阈值，夹到 1.0
-            signal = min(1.0, net / max(1, min_consensus))
+            # 信号强度 = 净可信度 / 阈值，夹到 1.0
+            signal = min(1.0, net / max(0.1, min_consensus))
             before = trait.value
             delta = trait.nudge(direction * signal)
             if abs(delta) < 1e-6:
                 continue
 
-            reason = f"{net} 条判断指向 {name} {'+' if direction > 0 else '-'}"
+            reason = (f"{len(supporters)} 条判断（可信度合计 {mine:.1f}）"
+                      f"指向 {name} {'+' if direction > 0 else '-'}")
             self.store.update_trait(name, delta, reason=reason)
             state[name]["value"] = trait.value
             changes.append({"name": name, "delta": round(delta, 5),
@@ -379,6 +441,26 @@ class Consolidator:
 
         # 没有实际变化也要把状态刷回去（可能被 clamp 过）
         self.store.save_view("traits", {"traits": state})
+
+        # 只标记**真正推动了参数**的判断为已消费。
+        #
+        # 为什么不是全部标记：
+        #   一条判断单独看不够阈值（比如 0.7 < 1.4），但它必须留着，
+        #   等后面来第二条同类证据一起凑够。如果立刻标记掉，
+        #   第二条来时又从零开始数 —— 永远凑不齐，中期层彻底不动。
+        #
+        # 那「凑不够的判断一直留着」会不会导致票数虚高？
+        #   不会。票数是从当前活跃判断实时累加的，判断本身不会被复制；
+        #   够阈值时一次性推一步，然后这些判断标记为已消费，不再参与。
+        pushed_ids: set[str] = set()
+        for (name, direction), supporters in votes.items():
+            if any(c["name"] == name for c in changes):
+                pushed_ids |= {j["id"] for j in supporters}
+                pushed_ids |= {j["id"] for j in votes.get((name, -direction), [])}
+        if pushed_ids:
+            self.store.save_view("judgment_cursor", {
+                "ids": sorted(consumed | pushed_ids)
+            })
         return changes
 
 

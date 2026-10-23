@@ -333,15 +333,35 @@ class Store:
         """
         return replay_traits(self.read_ledger())
 
-    def init_traits(self, state: dict) -> None:
+    def init_traits(self, state: dict, *, persona: str = "") -> None:
         """首次载入时把 persona.toml 的参数快照进账本。
 
         只写一次。之后所有变化都靠 trait_update / anchor_update 记录，
         重放时从这份快照往后推 —— 不依赖 toml 的当前内容。
+
+        **persona 参数是必需的**：同一个 data 目录换人格时必须重新初始化，
+        否则新人设会拿到旧人设的参数。
+
+        实测踩过：守岸人（warmth anchor 0.70）跑过之后，
+        用同一目录载入 ache（warmth anchor 0.30），
+        实际拿到 0.45 —— 被 ache 的 drift 范围夹住的守岸人值。
+        人格整个串了，而且看不出来。
         """
-        if any(r.get("kind") == "traits_init" for r in self.read_ledger()):
-            return
-        self.append("traits_init", {"traits": state})
+        existing = [r for r in self.read_ledger() if r.get("kind") == "traits_init"]
+        if existing:
+            prev = existing[0].get("persona", "")
+            if not persona or prev == persona:
+                return        # 同一人格，不重复初始化
+            # 换了人格 —— 之前的 traits 状态对新人格没有意义
+            self.append("traits_reset", {"from": prev, "to": persona})
+        self.append("traits_init", {"traits": state, "persona": persona})
+
+    def persona_name(self) -> str:
+        """账本里记录的人格名。空串表示没有初始化过。"""
+        for r in self.read_ledger():
+            if r.get("kind") == "traits_init":
+                return str(r.get("persona", "") or "")
+        return ""
 
     def update_trait(self, name: str, delta: float, *,
                      reason: str = "", source: str = "consolidate") -> dict | None:
@@ -437,7 +457,10 @@ def replay_traits(ledger: list[dict]) -> dict:
     state: dict[str, dict] = {}
     for rec in ledger:
         k = rec.get("kind")
-        if k == "traits_init":
+        if k == "traits_reset":
+            # 换人格了 —— 之前的参数状态作废，等下一个 traits_init
+            state.clear()
+        elif k == "traits_init":
             for name, d in (rec.get("traits") or {}).items():
                 if isinstance(d, dict):
                     state[name] = dict(d)

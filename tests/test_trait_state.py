@@ -235,6 +235,151 @@ class TestLongTermAnchor(unittest.TestCase):
         self.assertEqual(c.push_anchors(), [])
 
 
+class TestJudgmentConsumption(unittest.TestCase):
+    """每条判断只能推动参数一次。"""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.store = Store(Path(self.tmp.name))
+        self.cfg = _cfg()
+        self.store.init_traits(self.cfg.role.traits_state())
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_same_judgments_not_reused(self):
+        """3 条判断连续 push 10 次，参数只该动一次。
+
+        实测踩过：没有消费标记时，同 3 条判断被推了 20 次，
+        intervention 从 0.20 掉到 0.1775 —— 同一条证据用了 20 遍。
+        """
+        for i in range(3):
+            self.store.add_judgment("他不想被建议%d" % i, 0.7,
+                                    affects={"intervention": -1})
+        c = Consolidator(self.store)
+        c.push_traits()
+        first = self.store.traits()["intervention"]["value"]
+        for _ in range(10):
+            c.push_traits()
+        self.assertAlmostEqual(self.store.traits()["intervention"]["value"],
+                               first, places=6,
+                               msg="同一批判断被重复消费了")
+
+    def test_new_judgments_can_push_again(self):
+        c = Consolidator(self.store)
+        for i in range(2):
+            self.store.add_judgment("A%d" % i, 0.7, affects={"intervention": -1})
+        c.push_traits()
+        v1 = self.store.traits()["intervention"]["value"]
+        for i in range(2):
+            self.store.add_judgment("B%d" % i, 0.7, affects={"intervention": -1})
+        c.push_traits()
+        self.assertLess(self.store.traits()["intervention"]["value"], v1)
+
+    def test_insufficient_judgments_accumulate(self):
+        """不够阈值的判断要留着，等后续证据一起凑。
+
+        实测踩过：第 1 条判断不够 1.4 就被标记成已消费，
+        第 2 条来时从零开始 —— 连续加 11 条同向判断，参数一步都没动。
+        """
+        c = Consolidator(self.store)
+        self.store.add_judgment("单条 0.7", 0.7, affects={"intervention": -1})
+        self.assertEqual(c.push_traits(), [], "单条不该推")
+        # 第二条凑够 1.4，应该推了
+        self.store.add_judgment("第二条 0.7", 0.7, affects={"intervention": -1})
+        changes = c.push_traits()
+        self.assertEqual(len(changes), 1, "两条凑够阈值应该推")
+        self.assertLess(self.store.traits()["intervention"]["value"], 0.20)
+
+    def test_accumulation_over_many_judgments(self):
+        """连续加同向判断，参数应该逐步下移而不是一步不动。"""
+        c = Consolidator(self.store)
+        values = []
+        for i in range(8):
+            self.store.add_judgment("判断%d" % i, 0.7, affects={"intervention": -1})
+            c.push_traits()
+            values.append(self.store.traits()["intervention"]["value"])
+        self.assertLess(values[-1], 0.20, "8 条判断后应该有漂移")
+        self.assertGreater(values[-1], 0.19, "不该一步跳到很远")
+        # 单调不增
+        for a, b in zip(values, values[1:]):
+            self.assertLessEqual(b, a + 1e-9)
+
+    def test_pushed_judgments_not_reused(self):
+        """推过的判断不该继续参与投票。"""
+        c = Consolidator(self.store)
+        for i in range(2):
+            self.store.add_judgment("A%d" % i, 0.7, affects={"intervention": -1})
+        c.push_traits()
+        v1 = self.store.traits()["intervention"]["value"]
+        c.push_traits()
+        self.assertAlmostEqual(self.store.traits()["intervention"]["value"], v1,
+                               places=6, msg="已推过的判断还在投票")
+
+
+class TestPersonaSwitch(unittest.TestCase):
+    """同一个 data 目录换人格，参数不能串。"""
+
+    def test_switching_persona_resets_traits(self):
+        from persona.llm import ScriptedLLM
+        from persona.session import Session, SessionConfig
+
+        tmp = tempfile.TemporaryDirectory()
+        try:
+            cfg_a = _cfg("shorekeeper")
+            with Session(cfg_a, Store(Path(tmp.name)), ScriptedLLM([]),
+                         options=SessionConfig(consolidate_interval=999)):
+                pass
+            self.assertAlmostEqual(Store(Path(tmp.name)).traits()["warmth"]["value"],
+                                   0.70, places=3)
+
+            cfg_b = _cfg("ache")
+            with Session(cfg_b, Store(Path(tmp.name)), ScriptedLLM([]),
+                         options=SessionConfig(consolidate_interval=999)):
+                pass
+            self.assertAlmostEqual(cfg_b.role.trait("warmth"), 0.30, places=3)
+        finally:
+            tmp.cleanup()
+
+    def test_same_persona_keeps_drift(self):
+        """同一人格重开，漂移要保住。"""
+        from persona.llm import ScriptedLLM
+        from persona.session import Session, SessionConfig
+
+        tmp = tempfile.TemporaryDirectory()
+        try:
+            cfg = _cfg()
+            with Session(cfg, Store(Path(tmp.name)), ScriptedLLM([]),
+                         options=SessionConfig(consolidate_interval=999)):
+                pass
+            Store(Path(tmp.name)).update_trait("warmth", -0.02, reason="x")
+            learned = Store(Path(tmp.name)).traits()["warmth"]["value"]
+
+            cfg2 = _cfg()
+            with Session(cfg2, Store(Path(tmp.name)), ScriptedLLM([]),
+                         options=SessionConfig(consolidate_interval=999)):
+                pass
+            self.assertAlmostEqual(cfg2.role.trait("warmth"), learned, places=5)
+        finally:
+            tmp.cleanup()
+
+    def test_traits_reset_recorded(self):
+        from persona.llm import ScriptedLLM
+        from persona.session import Session, SessionConfig
+
+        tmp = tempfile.TemporaryDirectory()
+        try:
+            for name in ("shorekeeper", "ache"):
+                with Session(_cfg(name), Store(Path(tmp.name)), ScriptedLLM([]),
+                             options=SessionConfig(consolidate_interval=999)):
+                    pass
+            kinds = [r["kind"] for r in Store(Path(tmp.name)).read_ledger()
+                     if "traits" in r["kind"]]
+            self.assertEqual(kinds, ["traits_init", "traits_reset", "traits_init"])
+        finally:
+            tmp.cleanup()
+
+
 class TestSessionRestoresTraits(unittest.TestCase):
     def test_traits_survive_restart(self):
         from persona.llm import ScriptedLLM

@@ -103,6 +103,64 @@ class TestJudgmentInLedger(unittest.TestCase):
         self.assertEqual(before, after)
 
 
+class TestSemanticDedup(unittest.TestCase):
+    """判重的边界。
+
+    这个功能实测踩过两次坑：
+      1. 只看字符串相等 -> LLM 换个说法就绕过去了，同一件事记两条
+      2. 改成语义相似度 -> 反义比同义更像，旧判断永远翻不了案
+
+    实测数据：
+        同义改写「他很在意别人对他的看法」相似 0.43
+        反义    「他不在乎别人的评价」    相似 0.57
+
+    所以最终只拦「近乎逐字重复」，其余交给模型。
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.store = Store(Path(self.tmp.name))
+        from persona.config import PersonaConfig
+        cfg = PersonaConfig.load(ROOT / "personas" / "shorekeeper.toml")
+        self.store.init_traits(cfg.role.traits_state())
+        self.c = Consolidator(self.store)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_exact_duplicate_caught(self):
+        self.store.add_judgment("他倾向于先自我否定", 0.7)
+        self.assertIsNotNone(self.c._find_similar("他倾向于先自我否定"))
+
+    def test_punctuation_only_caught(self):
+        self.store.add_judgment("他倾向于先自我否定，再求助", 0.7)
+        self.assertIsNotNone(self.c._find_similar("他倾向于先自我否定,再求助"))
+
+    def test_opposite_not_caught(self):
+        """反义必须放行 —— 否则旧判断永远翻不了案。"""
+        self.store.add_judgment("他在意别人的评价", 0.7)
+        self.assertIsNone(self.c._find_similar("他不在乎别人的评价"))
+
+    def test_paraphrase_not_caught(self):
+        """措辞不同的同义改写放行 —— bigram 判不准，交给模型。"""
+        self.store.add_judgment("他在意别人的评价", 0.7)
+        self.assertIsNone(self.c._find_similar("他很在意别人对他的看法"))
+
+    def test_unrelated_not_caught(self):
+        self.store.add_judgment("他喜欢猫", 0.7)
+        self.assertIsNone(self.c._find_similar("他讨厌开会"))
+
+    def test_negator_does_not_match_bieren(self):
+        """「别人」里的「别」不是否定词。
+
+        实测踩过：把「别」当否定词直接子串匹配，
+        「他在意别人的评价」被标成否定极 —— 极性全乱。
+        """
+        self.assertEqual(self.c._polarity("他在意别人的评价"), 1)
+        self.assertEqual(self.c._polarity("他不在乎别人的评价"), -1)
+        self.assertEqual(self.c._polarity("他喜欢猫"), 1)
+
+
 class TestActivityProfile(unittest.TestCase):
     def test_dense_is_stricter(self):
         """密集对话要更多重复才算倾向 —— 把「状态」和「倾向」分开。"""
