@@ -226,9 +226,9 @@ class TestConsolidator(Base):
         """
         cfg = _cfg()
         e = TurnEngine(cfg, self.store, ScriptedLLM([
-            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: x\ndisplace: none", "嗯。"),
-            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: y\ndisplace: none", "嗯。"),
-            make_reply("need: 要被逗\nconfidence: 0.6\ndirect: z\ndisplace: none", "哈。"),
+            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: x\nbaseline: 嗯。\ndisplace: none", "嗯。", "settle: -"),
+            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: y\nbaseline: 嗯。\ndisplace: none", "嗯。", "settle: -"),
+            make_reply("need: 要被逗\nconfidence: 0.6\ndirect: z\nbaseline: 哈。\ndisplace: none", "哈。", "settle: -"),
         ]))
         for t in ("a啊", "b啊", "c啊"):
             e.turn(t)
@@ -247,8 +247,8 @@ class TestConsolidator(Base):
     def test_self_story_created(self):
         cfg = _cfg()
         e = TurnEngine(cfg, self.store, ScriptedLLM([
-            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: x\ndisplace: none", "嗯。"),
-            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: y\ndisplace: none", "嗯。"),
+            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: x\nbaseline: 嗯。\ndisplace: none", "嗯。", "settle: -"),
+            make_reply("need: 只想被听\nconfidence: 0.6\ndirect: y\nbaseline: 嗯。\ndisplace: none", "嗯。", "settle: -"),
         ]))
         for t in ("a啊", "b啊"):
             e.turn(t)

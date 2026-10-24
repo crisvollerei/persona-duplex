@@ -263,15 +263,15 @@ class TestPersonaProtocol(unittest.TestCase):
         cfg = PersonaConfig.load(ROOT / "personas" / "shorekeeper.toml")
         tool = protocol.raw_tool(cfg)
         props = set(tool["function"]["parameters"]["properties"])
-        self.assertEqual(props, {"need", "confidence", "raw"})
+        self.assertEqual(props, {"need", "confidence", "raw", "constraints"})
         self.assertNotIn("say", props)
 
-    def test_raw_tool_need_enum_from_config(self):
+    def test_raw_tool_is_independent_of_persona_config(self):
         from persona import protocol
         cfg = PersonaConfig.load(ROOT / "personas" / "shorekeeper.toml")
         tool = protocol.raw_tool(cfg)
-        enum = tool["function"]["parameters"]["properties"]["need"]["enum"]
-        self.assertEqual(enum, list(cfg.needs))
+        self.assertNotIn("enum", tool["function"]["parameters"]["properties"]["need"])
+        self.assertEqual(tool, protocol.raw_tool())
 
     def test_raw_tool_needs_list(self):
         """素回复这一层需要一次会话来跑。这里只验组装不炸。"""
@@ -286,13 +286,18 @@ class TestPersonaProtocol(unittest.TestCase):
 
 
 class TestLengthGuard(unittest.TestCase):
-    """brevity 的提示在 prompt 前部，但后面跟着几十行长回复示例 ——
-    规则输给示例。所以长度约束要放到最靠近输出的位置。"""
+    """长度是表达偏好，不得压过独立判断的必要信息。"""
 
     def test_short_persona_gets_guard(self):
         cfg = PersonaConfig.load(ROOT / "personas" / "shorekeeper.toml")
         self.assertGreaterEqual(cfg.role.traits["brevity"].value, 0.75)
-        # 这个断言靠 engine 的 _generate_persona 加 guard，这里只验参数值
+        from persona import protocol
+        from persona.parse import Head
+        messages = protocol.build_persona_messages(
+            cfg, Head(direct="完整解释", constraints=["保留关键步骤"]), [], "问题", "", first_turn=True)
+        self.assertIn("正确性优先", messages[0]["content"])
+        self.assertIn("保留关键步骤", messages[-1]["content"])
+        self.assertNotIn("不要超过三句", messages[0]["content"])
 
     def test_long_persona_does_not(self):
         cfg = PersonaConfig.load(ROOT / "personas" / "ache.toml")

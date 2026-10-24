@@ -88,15 +88,15 @@ class TestResponseJudging(unittest.TestCase):
     def test_explicit_refusal(self):
         self.assertEqual(judge_repair_response("不用说了，没必要"), "rejected")
 
-    def test_register_relaxed(self):
-        """重新用语气词、句子变长 —— 是原谅的信号，不需要说「没事」。"""
+    def test_register_relaxed_is_not_explicit_forgiveness(self):
+        """语气变化不证明用户接受了修复。"""
         self.assertEqual(
             judge_repair_response("哈哈其实我也觉得我有点敏感了，刚才那事儿吧……"),
-            "healed",
+            "unclear",
         )
 
-    def test_still_formal_is_rejected(self):
-        self.assertEqual(judge_repair_response("知道了。"), "rejected")
+    def test_short_reply_is_unknown(self):
+        self.assertEqual(judge_repair_response("知道了。"), "unclear")
 
     def test_empty_is_unclear(self):
         self.assertEqual(judge_repair_response(""), "unclear")
@@ -193,8 +193,8 @@ class TestEngineIntegration(unittest.TestCase):
         self.assertFalse(any("伤到" in u for u in rel["unresolved"]),
                          "修复成功了但未解决事项没销账")
 
-    def test_rejected_becomes_sore_point(self):
-        """修复被拒 → 转成雷区，别再提。反复道歉是二次伤害。"""
+    def test_rejected_pauses_without_inventing_sore_point(self):
+        """停止请求结束修复话题，不把暂定信号固化成长期禁区。"""
         e = self._engine([
             make_reply("need: a\nconfidence: 0.7\ndirect: x\ndisplace: none",
                        "嗯。", "settle: -\npending:\n  claim: 需要认同\n"
@@ -210,7 +210,8 @@ class TestEngineIntegration(unittest.TestCase):
         res = e.turn("不用说了，没必要。")
         self.assertEqual(res.repair_closed["verdict"], "rejected")
         rel = self.store.relation()
-        self.assertTrue(any("伤到" in s for s in rel["sore_points"]))
+        self.assertEqual(rel["sore_points"], [])
+        self.assertTrue(any(r["state"] == "paused" for r in self.store.load_view("repair", {})["items"]))
 
     def test_repair_note_injected_into_context(self):
         """待修复的事必须进上下文，否则模型根本不知道该道歉。"""

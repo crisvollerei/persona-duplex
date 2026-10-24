@@ -1,23 +1,8 @@
-"""受伤修复。
+"""暂定关系信号的修复与停止追问。
 
-这是全系统最贵、最容易漏的一条链路。
-
-用户在受伤之后不会说「你冒犯我了」，他会把句子变短、不再开玩笑、
-不再反问你。所以检测靠语域，不靠内容。
-
-但检测只是第一步。真正决定这段关系能不能撑住的，是**修复**：
-
-    不修复       → 用户认为你根本没意识到，比冒犯本身更伤
-    修得太重     → 把没发生的事说成发生了，反而更像猜错
-    修得太轻     → 觉得在敷衍
-
-而且修复是「位移不许声明」这条规则的**唯一例外**：
-
-    声明位移 = 索取信用（关于我）
-    承认损伤 = 请求修复（关于你）
-
-「我刚才那句是不是有点重」不是在说「你看我多克制」，
-是在问「你有没有被伤到」。前者关于我，后者关于你，所以它不违规。
+语域变化只是观察线索，不能证明用户受伤。短回复、换题或语气放松均保持未知。
+只有明确的接受/停止内容才用于对应收尾；至多两次尝试后暂停，不自动创建长期雷区。
+这里管理的是尝试状态，不是用户心理真值。residual 保留用于旧账本与显式实验接口。
 """
 from __future__ import annotations
 
@@ -29,7 +14,8 @@ from dataclasses import dataclass, field
 OPEN = "open"            # 检测到了，还没处理
 REPAIRING = "repairing"  # 已经发出修复，等反应
 HEALED = "healed"        # 修复成功，销账
-RESIDUAL = "residual"    # 修复失败或没回应，转为长期雷区
+RESIDUAL = "residual"    # 旧记录/显式实验的残留状态；默认不据沉默产生
+PAUSED = "paused"        # 停止追问；不是已证实的受伤或长期雷区
 
 # 修复措辞的三种力度
 SOFT = "soft"      # 「我刚才是不是说重了」
@@ -59,8 +45,8 @@ class Repair:
 
     @classmethod
     def from_dict(cls, d: dict) -> "Repair":
-        return cls(**{k: d.get(k) for k in
-                      ("note", "turn_seq", "level", "attempts", "state", "created")})
+        return cls(**{k: d[k] for k in
+                      ("note", "turn_seq", "level", "attempts", "state", "created") if k in d})
 
 
 # ---------------------------------------------------------------- 检测
@@ -125,7 +111,7 @@ def compose_repair(level: str, *, what: str = "") -> str:
 class RepairBook:
     """关系账本里的修复记录。
 
-    跟校准账本分开：这里记的不是「读得准不准」，是「关系有没有被碰伤」。
+    跟校准账本分开：这里记尝试及反馈状态，不把它当作已证实的心理结论。
     """
 
     items: list[Repair] = field(default_factory=list)
@@ -133,8 +119,7 @@ class RepairBook:
     def open(self, note: str, turn_seq: int, created: str, level: str) -> Repair:
         """开一条修复记录。同一条事还在处理中就复用，不重复开。
 
-        复用是必须的：同一条受伤可能有多个 pending 指向它，
-        每次开新的会让「两次没回应就转雷区」失效（永远都是新记录）。
+        同一条线索可能有多个 pending 指向它，复用记录才能约束总尝试次数。
         """
         for r in self.items:
             if r.note == note and r.state in (OPEN, REPAIRING):
@@ -149,7 +134,7 @@ class RepairBook:
 
         open      还没发出修复语
         repairing 发出去了，等反应
-        healed / residual 不算 active —— 已经结案
+        healed / residual / paused 不算 active —— 不再主动追问
         """
         return [r for r in self.items if r.state in (OPEN, REPAIRING)]
 
@@ -160,7 +145,7 @@ class RepairBook:
 
         只在 OPEN 时 +1 的话，attempts 会封顶在 1 —— 第一次之后状态
         变成 REPAIRING，再也不满足条件。而 engine 里有一条
-        「attempts >= 2 就转雷区（不再反复道歉）」的规则，
+        「attempts >= 2 就暂停（不再反复道歉）」的规则，
         它依赖这个计数能到 2。计数卡住等于那条规则从未生效。
 
         实测：连续调用 5 次 mark_repairing，attempts 始终是 1。
@@ -175,6 +160,11 @@ class RepairBook:
         for r in self.items:
             if r.note == note and r.state in (OPEN, REPAIRING):
                 r.state = HEALED if healed else RESIDUAL
+
+    def pause(self, note: str) -> None:
+        for r in self.active():
+            if r.note == note:
+                r.state = PAUSED
 
     def to_list(self) -> list[dict]:
         return [r.as_dict() for r in self.items]
@@ -193,39 +183,21 @@ def judge_repair_response(user_text: str, *, baseline_formality: float = 0.3,
 
     返回 healed / rejected / unclear。
 
-    注意这里不能用「话题重合度」——用户不需要复述刚才那句话才算原谅你。
-    真正该看的是语域有没有回落：重新用语气词、句子变长、反问回来。
+    只识别有限的明确接受/停止措辞，不以语域回落或话题重合判定原谅。
+    这是局部词法信号，不是完整的语义或心理判读。
     """
     if not user_text:
         return "unclear"
 
-    from .settle import formality_score
-
-    f = formality_score(user_text)
-    relaxed = f <= baseline_formality + 0.1
-    has_filler = any(e in user_text for e in "哈哈嘿嘿呃嗯嘛呀啦～~")
-    longer = len([c for c in user_text if not c.isspace()]) >= 8
-
-    # 明确接受：算了/没事/没关系
-    forgiving = any(k in user_text for k in
-                    ("没事", "没关系", "算了", "不要紧", "别放心上", "我也有问题"))
-    # 明确拒绝：不用/不必/我说了
-    refusing = any(k in user_text for k in
-                   ("不用", "不必", "没必要", "我说了", "别说了", "不想聊"))
-
-    if forgiving:
-        return "healed"
+    # Only explicit content can close an interpretation; register is not consent.
+    forgiving = any(k in user_text for k in (
+        "没事", "没关系", "不要紧", "别放心上", "不怪你", "不用道歉",
+        "我没有生气", "我没生气", "我也有问题"))
+    refusing = any(k in user_text for k in (
+        "不用说了", "别说了", "别再道歉", "不要再道歉", "不想聊这个", "没必要再说"))
+    negated = any(k in user_text for k in ("不是没事", "不是没关系", "并非没事", "别说没事"))
     if refusing:
         return "rejected"
-
-    # 「知道了。」「嗯。」这类极短的平静回应，是最典型的软拒绝。
-    # 它不像吵架，所以最容易被当成没事 —— 而它恰恰意味着「别再往下说了」。
-    n = len([c for c in user_text if not c.isspace()])
-    if n <= 6 and not has_filler and "？" not in user_text and "?" not in user_text:
-        return "rejected"
-
-    if relaxed and (has_filler or longer):
+    if forgiving and not negated and "?" not in user_text and "？" not in user_text:
         return "healed"
-    if f > baseline_formality + 0.3:
-        return "rejected"
     return "unclear"

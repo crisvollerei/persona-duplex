@@ -15,7 +15,8 @@ import time
 from dataclasses import dataclass, field
 from typing import Callable
 
-from .store import Store, now_iso, parse_iso as _parse_dt
+from .store import Store, is_diagnostic_judgment, now_iso, parse_iso as _parse_dt
+from .audit import fingerprint, model_info, traced
 
 # 现在是什么时候。命名成 _now_dt 是为了和 store.now_iso 区分：
 # 后者返回字符串（写账本用），这个返回 datetime（算时间差用）。
@@ -27,7 +28,7 @@ def _now_dt():
 
 SELF_STORY_HEADER = """# 人格的陪伴记录
 
-> 「我」是系统扮演的人格，不是用户。记录有依据的认识，不强求每次都发生变化。
+> 「我」指记录中的人格，不是用户或模型的现实身份。记录有依据的认识，不强求每次都发生变化。
 > 这些文字不是已验证的成长证据，默认不据此自动修改人格参数或基线。
 
 """
@@ -136,6 +137,8 @@ class Consolidator:
     ANCHOR_MIN_EFFECT: float = 0.02
     # 上一次固化到现在过了多久（小时）。None = 不知道，按 medium 处理。
     gap_hours: float | None = None
+    heuristic_fallback: bool = False
+    audit_context: dict = field(default_factory=dict)
 
     _stop: threading.Event = field(default_factory=threading.Event, repr=False)
     _thread: threading.Thread | None = field(default=None, repr=False)
@@ -178,6 +181,18 @@ class Consolidator:
     # ------------------------------------------------------------ 主逻辑
 
     def run_once(self) -> dict:
+        with self.store.consolidation_lock:
+            try:
+                return self._run_once()
+            except Exception as exc:
+                self.store.append("consolidate_error", {
+                    "where": "batch", "batch_id": getattr(self, "_batch_id", ""),
+                    "error_type": type(exc).__name__, "model": model_info(self.llm),
+                    **self.audit_context})
+                raise
+
+    def _run_once(self) -> dict:
+        self.store.recover_buffer()
         # 活跃度必须在 drain **之前**判 —— drain 会把 buffer 清空，
         # 之后再数积压永远是 0，于是永远走 sparse。
         # 这是个顺序 bug：逻辑没错，调用顺序错了。
@@ -199,8 +214,25 @@ class Consolidator:
             raise
 
     def _run_stages(self, events: list[dict], prof: dict, activity: str) -> dict:
-        added = self._consolidate(events, prof)
-        story = self._rewrite_story(events, added) if added else False
+        event_ids = [e["_event_id"] for e in events]
+        batch_id = self._batch_id = fingerprint(sorted(event_ids))
+        self._calls = []
+        self._batch_llm = traced(self.llm, "memory", lambda: self._calls,
+                                 lambda kind, row: self.store.append(kind, {
+                                     "batch_id": batch_id, **self.audit_context, **row}))
+        candidates = self._draft_judgments(events, prof)
+        entry = (self._story_entry_llm(events, candidates) if self.llm is not None and self._source == "llm"
+                 else self._story_entry_template(candidates)) if candidates else ""
+        with self.store.transaction():
+            added = self._save_judgments(candidates, batch_id=batch_id)
+            story = self._rewrite_story(events, added, entry=entry) if added else False
+            self.store.append("memory_batch_commit", {
+                "batch_id": batch_id, "event_ids": event_ids,
+                "evidence_ids": [e.get("turn_id") for e in events if e.get("turn_id")],
+                "events": events, "activity": activity, "profile": prof,
+                "source": getattr(self, "_source", "heuristic"),
+                "judgment_ids": [j["id"] for j in added], "story": story,
+                "calls": self._calls, **self.audit_context})
         # 成长依据尚待研究。用户倾向/模型自述不自动转成人格改变。
         # push_traits / push_anchors 仅保留为显式调用的实验接口。
         pushed = []
@@ -222,6 +254,20 @@ class Consolidator:
         return "dense" if n >= 8 else ("medium" if n >= 3 else "sparse")
 
     def _consolidate(self, events: list[dict], prof: dict | None = None) -> list[dict]:
+        candidates = self._draft_judgments(events, prof)
+        with self.store.transaction():
+            return self._save_judgments(candidates)
+
+    def _save_judgments(self, candidates, *, batch_id=""):
+        out = []
+        for item in candidates:
+            if not item.get("supersedes") and self._find_similar(
+                    item["judgment"], diagnostic=is_diagnostic_judgment(item)) is not None:
+                continue
+            out.append(self.store.add_judgment(**item, batch_id=batch_id))
+        return out
+
+    def _draft_judgments(self, events: list[dict], prof: dict | None = None) -> list[dict]:
         """从事件里提炼判断。
 
         **两条路径的阈值语义不同，这是刻意的**：
@@ -230,22 +276,27 @@ class Consolidator:
             它在 prompt 里能看到「这一批有几条、要求是什么」，
             但最终由它决定哪些够格。机械计数比它差得远。
 
-          · 启发式路径：阈值是**硬规则**。没有模型可依靠，
-            只能数次数。这时候阈值就是唯一依据。
+          · 启发式路径：阈值只控制诊断记录的计数，不产出用户倾向。
+            need 是模型读法；重复出现不等于用户证实。
 
         以前两条路径混用同一套阈值，导致 LLM 被阈值绑住（几乎出不了判断）、
         启发式又过于机械。分开之后各司其职。
         """
         prof = prof or self.profile()
+        self._source = "llm" if self.llm is not None else "heuristic"
         if self.llm is None:
             return self._heuristic_consolidate(events, prof)
 
         prompt = self._consolidation_prompt(events, prof)
         try:
-            raw = self.llm(prompt)
+            raw = getattr(self, "_batch_llm", None)(prompt) if getattr(self, "_batch_llm", None) else self.llm(prompt)
             items = json.loads(_extract_json(raw))
         except Exception:
-            # 后台失败不能影响任何东西，静默降级
+            if not self.heuristic_fallback:
+                raise
+            self._source = "heuristic_fallback"
+            self.store.append("memory_fallback", {"batch_id": getattr(self, "_batch_id", ""),
+                                                   "reason": "model_or_json_failure"})
             return self._heuristic_consolidate(events, prof)
 
         # 模型返回的不是数组时必须降级。
@@ -253,16 +304,16 @@ class Consolidator:
         # 已经 drain 完，那批事件永久丢失；后台线程又 except: pass 吞掉，
         # 线上表现就是「固化静默停止」。
         if not isinstance(items, list):
-            return self._heuristic_consolidate(events, prof)
+            raise ValueError("Memory model must return a JSON array")
 
-        # capacity 与 max_judgments_per_run 取 max ——
-        # 用 min 的话三档都被 3 吃掉，capacity 12/8/5 是死配置。
-        cap = max(self.max_judgments_per_run, prof["capacity"])
+        cap = max(0, min(self.max_judgments_per_run, prof["capacity"]))
         out = []
         for it in items[:cap]:
             if not isinstance(it, dict):
-                continue
-            txt = str(it.get("judgment", "")).strip()
+                raise ValueError("Memory judgment must be an object")
+            if not isinstance(it.get("judgment"), str):
+                raise ValueError("Memory judgment must be text")
+            txt = it["judgment"].strip()
             if not txt:
                 continue
             sup = it.get("supersedes")
@@ -276,15 +327,19 @@ class Consolidator:
                 if dup is not None:
                     continue
 
-            try:
-                conf = float(it.get("confidence", 0.5))
-            except (TypeError, ValueError):
-                conf = 0.5
-            rec = self.store.add_judgment(
-                judgment=txt, confidence=conf, supersedes=sup,
-                affects=None,
-            )
-            out.append(rec)
+            conf = it.get("confidence")
+            if isinstance(conf, bool) or not isinstance(conf, (int, float)) \
+                    or not math.isfinite(conf) or not 0 <= conf <= 1:
+                raise ValueError("Memory confidence must be finite and in [0, 1]")
+            evidence = [e.get("turn_id") for e in events if e.get("turn_id")]
+            specified = it.get("evidence_ids")
+            if specified is not None and (not isinstance(specified, list) or
+                                          any(eid not in evidence for eid in specified)):
+                raise ValueError("Unknown memory evidence id")
+            out.append({"judgment": txt, "confidence": conf, "supersedes": sup,
+                        "affects": None, "source": self._source,
+                        "evidence_ids": specified if specified is not None else evidence,
+                        "evidence_scope": "specified" if specified is not None else "batch"})
         return out
 
     # 否定词。注意不能简单做子串匹配 —— 「别人」「别的」「差别」里的「别」
@@ -314,7 +369,8 @@ class Consolidator:
         """
         return -1 if self._NEG_RE.search(text or "") else 1
 
-    def _find_similar(self, text: str, threshold: float = 0.82) -> dict | None:
+    def _find_similar(self, text: str, threshold: float = 0.82, *,
+                      diagnostic: bool = False) -> dict | None:
         """只拦「近乎逐字重复」的判断。措辞不同的判断一律放行。
 
         **为什么阈值这么高、而且不做语义判重**：
@@ -338,7 +394,9 @@ class Consolidator:
         pol = self._polarity(text)
         best = None
         best_sim = 0.0
-        for j in self.store.judgments(limit=10_000_000):
+        for j in self.store.judgments(limit=None):
+            if is_diagnostic_judgment(j) != diagnostic:
+                continue
             if self._polarity(j["judgment"]) != pol:
                 continue        # 极性相反，绝不是同一件事
             sim = bigram_similarity(text, j["judgment"])
@@ -348,10 +406,7 @@ class Consolidator:
 
     def _heuristic_consolidate(self, events: list[dict],
                                prof: dict | None = None) -> list[dict]:
-        """无模型兜底：只提炼最稳的那种判断 —— 重复出现的行为倾向。
-
-        触发阈值由活跃度决定：密集对话要见 5 次，稀疏对话见 2 次就够。
-        """
+        """无模型路径只记录重复的模型读法，不推导用户倾向。"""
         prof = prof or self.profile()
         need_min = prof["threshold"]
         counts: dict[str, int] = {}
@@ -360,18 +415,23 @@ class Consolidator:
             if need:
                 counts[need] = counts.get(need, 0) + 1
         out = []
-        existing = {j["judgment"] for j in self.store.judgments(limit=500)}
-        cap = min(self.max_judgments_per_run, prof["capacity"])
+        existing = {j["judgment"] for j in self.store.judgments(limit=None)
+                    if is_diagnostic_judgment(j)}
+        cap = max(0, min(self.max_judgments_per_run, prof["capacity"]))
+        if not cap:
+            return out
         for need, n in sorted(counts.items(), key=lambda x: -x[1]):
             if n < need_min:
                 continue                      # 没到这一档的阈值
-            txt = f"这种时候更可能是「{need}」"
+            txt = f"模型读法记录：本批 {n} 次将需求读为「{need}」；未验证为用户倾向。"
             if txt in existing:
                 continue
-            rec = self.store.add_judgment(
-                judgment=txt,
-                confidence=min(0.8, 0.4 + 0.1 * n),
-            )
+            # 兼容账本字段；0 不代表对用户的概率估计，诊断记录不进入用户记忆。
+            rec = {"judgment": txt, "confidence": 0.0,
+                   "source": getattr(self, "_source", "heuristic"),
+                   "evidence_ids": [e["turn_id"] for e in events
+                                    if e.get("need") == need and e.get("turn_id")],
+                   "evidence_scope": "need_count"}
             existing.add(txt)
             out.append(rec)
             if len(out) >= cap:
@@ -382,13 +442,17 @@ class Consolidator:
                               prof: dict | None = None) -> str:
         """批量提炼关于用户的暂定认识，不从用户倾向推导角色参数变更。"""
         prof = prof or self.profile()
-        cap = min(self.max_judgments_per_run, prof["capacity"])
+        cap = max(0, min(self.max_judgments_per_run, prof["capacity"]))
         lines = [
             f"下面是最近 {len(events)} 条对话事件，每条含用户说的、AI 读到的需求、"
             f"中性的素回答和角色实际说的话。",
             f"请提炼 0-{cap} 条关于用户稳定倾向的暂定判断；不是关于角色自身的判断。",
             "要求：",
             "  · 只写有重复证据的。同类迹象只出现一次就别写",
+            "  · 用户原话才是用户侧证据；need、direct、SAY 都是模型生成的解释或表达，",
+            "    不是用户自述。反复出现同一个模型读法，不算重复的用户证据。",
+            "  · 必须从用户原话找到支持；用户否认、纠正和不确定性要保留。",
+            "    用户沉默、短回复或换话题不能证明心理判断，也不能当作默认认可。",
             "  · 写倾向，不写事实（「倾向于先自我否定」而不是「他昨天辞职了」）",
             "  · **不要重复已有判断**。已经有判断说了这件事就跳过；",
             "    如果新证据推翻了它，用 supersedes 填那条 id",
@@ -408,24 +472,26 @@ class Consolidator:
         #
         # 上限 40 条：再多会挤占事件区的注意力，而且判断本身会累积，
         # 全列到最后 prompt 全是历史。
-        all_judgments = self.store.judgments(limit=10_000_000)
+        all_judgments = self.store.user_judgments(limit=None)
         shown = all_judgments[-40:]
         if not shown:
             lines.append("  （还没有）")
         for j in shown:
-            lines.append(f"  [{j['id']}] {j['judgment']}（{j['confidence']}）")
+            lines.append(f"  [{j['id']}] {j['judgment']}（暂定把握 {j['confidence']}；"
+                         f"来源 {j.get('source', 'legacy_unknown')}；"
+                         f"证据范围 {j.get('evidence_scope', 'unknown')}）")
         if len(all_judgments) > len(shown):
             lines.append(f"  ……（另有 {len(all_judgments) - len(shown)} 条更早的判断）")
         lines += ["", "最近事件："]
         for e in events:
-            lines.append(f"  - 用户: {e.get('user', '')[:80]}")
-            lines.append(f"    当时读成: {e.get('need', '')}")
-            lines.append(f"    素回答参考: {e.get('direct', '')[:80]}")
-            lines.append(f"    角色实际说: {e.get('say', '')[:80]}")
+            lines.append(f"  - [{e.get('turn_id', 'unknown')}] 用户原话: {e.get('user', '')}")
+            lines.append(f"    模型读法 need（非用户证据）: {e.get('need', '')}")
+            lines.append(f"    模型素回答 direct（非用户证据）: {e.get('direct', '')[:80]}")
+            lines.append(f"    模型表达 SAY（非用户证据）: {e.get('say', '')[:80]}")
         lines += [
             "",
             "只输出 JSON 数组，形如：",
-            '[{"judgment": "...", "confidence": 0.6, "supersedes": null}]',
+            '[{"judgment": "...", "confidence": 0.6, "supersedes": null, "evidence_ids": ["t_0001", "t_0002"]}]',
         ]
         return "\n".join(lines)
 
@@ -458,7 +524,7 @@ class Consolidator:
 
         # 必须用**全量**判断。只取最近 500 条的话，真实净方向会被截断翻过来：
         # 实测 500 条 +1 和 500 条 -1（净 0），被截成 500 条 -1 → 推成 -1。
-        live = self.store.judgments(limit=10_000_000)
+        live = self.store.user_judgments(limit=None)
         if not live:
             return []
 
@@ -779,58 +845,59 @@ class Consolidator:
 
     # ------------------------------------------------------------ 自传
 
-    def _rewrite_story(self, events: list[dict], added: list[dict]) -> bool:
+    def _rewrite_story(self, events: list[dict], added: list[dict], *, entry=None) -> bool:
         """把新判断写进自传。带原因，不是覆盖。"""
-        path = self.store.self_story_path
-        if not path.exists():
-            if not self.store.rebuild_story():
-                path.write_text(SELF_STORY_HEADER, encoding="utf-8")
-
-        if self.llm is not None and added:
-            entry = self._story_entry_llm(events, added)
-        else:
-            entry = self._story_entry_template(added)
+        if entry is None:
+            entry = (self._story_entry_llm(events, added) if self.llm is not None and added
+                     else self._story_entry_template(added))
         if not entry:
             return False
-
-        ledger = self.store.read_ledger()
-        if not any(r.get("kind") == "story_seed" for r in ledger):
-            self.store.append("story_seed", {"text": path.read_text(encoding="utf-8")})
-        self.store.append("story_entry", {"entry": entry,
-                                          "persona": self.store.persona_name()})
-        self.store.rebuild_story()
+        with self.store.transaction():
+            if not any(r.get("kind") == "story_seed" for r in self.store.read_ledger()):
+                self.store.append("story_seed", {"text": self._read_story() or SELF_STORY_HEADER})
+            self.store.append("story_entry", {
+                "entry": entry, "persona": self.store.persona_name(),
+                "batch_id": getattr(self, "_batch_id", ""),
+                "evidence_ids": [e["turn_id"] for e in events if e.get("turn_id")]})
         return True
+
 
     def _story_entry_template(self, added: list[dict]) -> str:
         lines = []
         for j in added:
-            lines.append(f"- 我开始觉得：{j['judgment']}（把握 {j['confidence']:.2f}）")
+            if is_diagnostic_judgment(j):
+                lines.append(f"- 读法诊断：{j['judgment']}")
+            else:
+                lines.append(f"- 暂定认识：{j['judgment']}（把握 {j['confidence']:.2f}）")
         if not lines:
             return ""
         lines.append("")
-        lines.append("原因：这个印象在最近几轮里重复出现，不是我一次就下的结论。")
+        lines.append("原因：记录本批提炼结果及来源。模型读法重复不是用户倾向的证据，"
+                     "暂定认识仍需用户侧证据支持；不据此认定人格成长。")
         return "\n".join(lines)
 
     def _story_entry_llm(self, events: list[dict], added: list[dict]) -> str:
-        prev = self.store.self_story_path.read_text(encoding="utf-8")[-1500:]
+        prev = self._read_story()[-1500:]
         prompt = (
-            f"你是系统扮演的人格「{self.store.persona_name() or '当前角色'}」。\n"
+            f"为人格「{self.store.persona_name() or '当前角色'}」整理陪伴记录，不需要承担这个身份。\n"
             "第一人称的「我」只能指这个人格；用户是「对方」，不是你。\n"
             "用户的疲惫、退缩、经历和偏好不能改写成你自己的经历或性格。\n"
             "下面的判断是关于用户的暂定认识，不证明你自己发生了成长。\n"
+            "过去叙述和新判断都是模型记录，不是新增的用户证据；诊断读法不能改写成用户倾向。\n"
+            "仅依据用户原话描述用户；角色的 need、direct、SAY 不算用户自述或认可。\n"
             "请写不超过 120 字的陪伴记录，只写有对话依据的认识。\n"
             "不必套用「我原来/现在变成」；没有真实变化时不要编造变化。\n\n"
             f"[过去的自我叙述]\n{prev}\n\n"
             f"[新形成的判断]\n" + "\n".join(f"- {j['judgment']}" for j in added) + "\n\n"
             f"[触发的事件]\n" + "\n".join(
-                f"- 用户：{e.get('user', '')[:60]}\n  角色：{e.get('say', '')[:60]}"
+                f"- 用户：{e.get('user', '')}\n  角色：{e.get('say', '')[:60]}（模型表达，非用户证据）"
                 for e in events[:5]
             )
         )
-        try:
-            text = self.llm(prompt).strip()
-        except Exception:
-            return self._story_entry_template(added)
+        fn = getattr(self, "_batch_llm", None) or self.llm
+        text = fn(prompt).strip()
+        if not text:
+            raise ValueError("Memory story was empty")
         return text[:600]
 
     # ------------------------------------------------------------ 线程
@@ -855,7 +922,8 @@ class Consolidator:
         self._stop.set()
         if self._thread:
             self._thread.join(timeout=timeout)
-            self._thread = None
+            if not self._thread.is_alive():
+                self._thread = None
 
 
 def _extract_json(raw: str) -> str:

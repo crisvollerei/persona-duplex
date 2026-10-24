@@ -3,8 +3,8 @@
 这里有两层规则，看起来矛盾，其实分工不同：
 
 **第一层：结构解析，best-effort**
-    字段缺失、格式跑偏、标记乱序 —— 一律跳过，永不阻塞对话。
-    状态坏了可以重建，对话卡住就什么都不剩了。
+    字段缺失、格式跑偏、标记乱序 —— 尽量保留安全正文，同时标记无效。
+    能恢复正文不代表协议有效，也不授权使用异常结构中的状态提议。
 
 **第二层：内容安全，零容忍**
     只要输出里出现 HEAD 字段行、近似标记、脚手架回显，
@@ -24,6 +24,7 @@
 from __future__ import annotations
 
 import re
+import math
 from dataclasses import dataclass, field
 
 from .config import DISPLACE_KINDS, DISPLACE_NONE
@@ -43,18 +44,10 @@ _DECLARATION_PATTERNS = [
     r"我欲言又止",
 ]
 
-# 「声明读」——把「我在解读你」摆到台面上。
-# 被读懂的感觉来自你说得对，不来自你说你读懂了。
-# 一旦说出来，对方要处理的是你的洞察力，而不是他自己的事。
-#
-# 判定标准不是「猜」这个字，是**猜的对象**：
-#   猜你 / 我猜你 / 我猜这（指对方的话）  → 在读人，违规
-#   我猜他也不会来                        → 在猜第三方的行为，正常
-# 所以不能简单禁「猜」，要禁「把猜测指向对方的那个句式」。
-# 真实跑出来的 20 轮里有 7 条是「我猜你……」，旧规则一条都没抓到 ——
-# 因为旧规则只认行首的「猜」，而这些句子以「我猜」开头。
+# 只观测指向对方的读法；句式本身不能证明强迫解读或是否留有退路。
+# 带否认空间的试探属于允许的表达，不在输出侧删除。
 _READ_ALOUD_PATTERNS = [
-    # —— 指向对方的猜测（真正要禁的）
+    # —— 指向对方的猜测
     r"(?:^|[，。！？；：\s])我?猜(?:你|您)",
     r"(?:^|[，。！？；：\s])我?猜(?:这|那)(?:句|话|个|些|种)?",
     r"(?:^|[，。！？；：\s])我?猜[“\"「]",
@@ -89,32 +82,7 @@ def _is_read_aloud(line: str) -> bool:
 
 
 def detect_read_aloud(text: str) -> list[str]:
-    """找出 say 里「把解读过程说出口」的句子。**只用于统计，不用于拦截。**
-
-    这一条的历史反复值得记下来，因为它是一条被我修歪又修回来的规则：
-
-    v1 只认行首的「猜」 → 漏掉「我猜你……」，真跑 20 轮里 7 条没抓到。
-    v2 按对象判（猜对方 = 违规）→ 抓到了，但把「猜错你就说」这种
-       带退路的台阶也算成违规。数据上一看：26 条里 4 条有退路、
-       22 条没退路。也就是说 v2 罚对了 22 条，但错罚了 4 条。
-    v3 我在输出侧硬删 → **修歪了**。删「猜一句：失眠跟工作有关」
-       会把紧跟着的「不对就当我没说」一起删掉 —— 恰好删掉了设计里
-       最该保留的那半句（退路）。用户看到的回复因此变短、变硬。
-
-    现在回到设计文档 §7 的原意：
-
-        假读错（明知故问）是位移的**最高明形式**，自带免责空间。
-        硬线是「问完之后留不留退路」。留 = 台阶；逼 = 操控。
-
-    也就是说「猜」本身不是问题，**不给退路的断言**才是。而这一层
-    用正则分不干净（「我猜你不是真想问，是已经想走了」没有退路，
-    「我猜你难受那会儿一个人扛的，猜错你就说」有退路 —— 结构几乎一样）。
-    所以这里只做**观测**：数出来，给 metrics 和 trace 看，
-    不修改模型说的话。
-
-    真要让模型少写断言式解读，得从源头治：stance_hint 里那句
-    「先说出你的猜测，再给内容」就是在教它这么写（见 prompt.py）。
-    """
+    """返回读法句式的短片段，只用于统计，不判定心理事实或拦截正文。"""
     hits: list[str] = []
     for raw_line in (text or "").splitlines():
         line = raw_line.strip()
@@ -126,15 +94,11 @@ def detect_read_aloud(text: str) -> list[str]:
 
 
 def has_exit_offer(text: str) -> bool:
-    """这句话有没有给对方留退路（「猜错你就说」「不对就当我没说」）。
-
-    留了退路 = 台阶；没留 = 审判。这是设计文档 §7 的硬线。
-    只用于统计和 trace，不参与拦截。
-    """
+    """观测常见退路措辞；未命中不等于语义上没有退路，不参与拦截。"""
     return bool(_EXIT_OFFER.search(text or ""))
 
 
-# 「留了退路」的信号。设计文档 §7：留 = 台阶；逼 = 操控。
+# 常见退路措辞的信号，不是语义判决。
 _EXIT_OFFER = re.compile(
     r"(否认|否掉|能被你|能让你|猜错|不对就|错了就|错了你|你可以反驳|"
     r"随时否|不认|当我没说|如果我说错|要是我猜错|直接说)"
@@ -148,6 +112,8 @@ class Head:
     direct: str = ""
     displace: str = DISPLACE_NONE
     baseline: str = ""  # 当前人格在本情境下的常态表达，不是 neutral direct
+    constraints: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -162,6 +128,7 @@ class PendingDraft:
     claim: str = ""
     confidence: float = 0.0
     predicts: str = ""
+    errors: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -172,6 +139,7 @@ class Tail:
     # 模型明确说「再等等」的预言 id。必须保留 ——
     # 丢掉的话引擎会退回字面判定，可能把「只是附和」判成 CONFIRMED。
     watch: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -182,10 +150,48 @@ class ParsedTurn:
     declared: list[str] = field(default_factory=list)   # 命中的声明句式
     read_aloud: list[str] = field(default_factory=list)  # 命中的「猜你是……」句式
     errors: list[str] = field(default_factory=list)
+    structural_errors: list[str] = field(default_factory=list)
+
+    def validity(self, *, protocol="text", probe=None, allowed=True) -> dict:
+        probe = probe or {}
+        reasons = [*self.errors, *self.structural_errors]
+        if self.head is None:
+            reasons.append("missing_head")
+        else:
+            reasons.extend(self.head.errors)
+            for key in ("need", "direct", "baseline"):
+                if not getattr(self.head, key).strip():
+                    reasons.append("missing_" + key)
+        if self.tail is None:
+            reasons.append("missing_tail")
+        else:
+            reasons.extend(self.tail.errors)
+            if self.tail.pending is not None:
+                reasons.extend(self.tail.pending.errors)
+        if not self.say.strip():
+            reasons.append("missing_say")
+        if not allowed:
+            reasons.append("displacement_not_allowed")
+        if self.declared:
+            reasons.append("declared_displacement")
+        if probe.get("stream_interrupted"):
+            reasons.append("stream_interrupted")
+        if probe.get("output_blocked"):
+            reasons.append("output_blocked")
+        if probe.get("observation_failed"):
+            reasons.append("observation_failed")
+        reasons = list(dict.fromkeys(reasons))
+        return {"valid": not reasons, "status": "valid" if not reasons else "invalid",
+                "reasons": reasons, "scope": "local_protocol_not_semantic_truth"}
 
     @property
     def ok(self) -> bool:
         return bool(self.say)
+
+    @property
+    def tail_usable(self) -> bool:
+        """State proposals require valid section structure; fields need their own checks."""
+        return self.tail is not None and not self.structural_errors
 
     @property
     def has_displacement(self) -> bool:
@@ -251,34 +257,63 @@ def _after_head_fields(block: str) -> str:
     """HEAD 块里、最后一个 HEAD 字段之后的内容。
 
     这里存在一个安全边界：direct 就在 HEAD 里，而 direct 永远不能出现在
-    用户面前。所以只有在**确认出现过 displace 字段**之后，才把后面的文本
-    当作正文 —— 否则宁可返回空串，也不能把 direct 的续行当成回复。
+    用户面前。所以只有在**最后一个字段是 displace**时，才把后面的文本
+    当作正文；若后面还有 direct / baseline，续行仍然属于内部字段。
 
     返回空串是安全的失败：用户看到空回复，但不会看到内心独白。
     """
     lines = block.splitlines(keepends=True)
     last_field = -1
-    saw_displace = False
+    last_name = ""
     for i, line in enumerate(lines):
         m = _HEAD_FIELD_RE.match(line)
         if not m:
             continue
         last_field = i
-        if m.group(1).lower() == "displace":
-            saw_displace = True
-    if not saw_displace or last_field == -1:
+        last_name = m.group(1).lower()
+    if last_name != "displace":
         return ""
     return "".join(lines[last_field + 1:])
 
 
 # 宽松的标记识别：容忍大小写、空格、少写一个 ">"
 _SECTION_LOOSE = re.compile(
-    r"<<\s*\^?\s*(HEAD|SAY|TAIL)\s*>>+", re.IGNORECASE
+    r"<{2,}\s*\^?\s*(HEAD|SAY|TAIL)\s*>{2,}", re.IGNORECASE
 )
+
+_SECTION_EXACT = re.compile("|".join(re.escape(marker) for marker in
+                                     (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)))
+
+
+def section_errors(raw: str, *, expression_only: bool = False) -> list[str]:
+    """Audit order independently of best-effort parsing or streaming delivery.
+
+    An explicit persona expression stage may omit TAIL. Tool-stage plain text
+    does not use this text-protocol audit.
+    """
+    markers = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
+    matches = list(_SECTION_EXACT.finditer(raw))
+    seen = [match.group() for match in matches]
+    errors = []
+    required = markers[:2] if expression_only else markers
+    for marker, name in zip(markers, ("head", "say", "tail")):
+        count = seen.count(marker)
+        if marker in required and count == 0:
+            errors.append("missing_" + name + "_marker")
+        if count > 1:
+            errors.append("duplicate_" + name + "_marker")
+    ranks = [markers.index(marker) for marker in seen]
+    if ranks != sorted(ranks):
+        errors.append("invalid_section_order")
+    if matches and raw[:matches[0].start()].strip():
+        errors.append("text_before_head")
+    if any(match.group() not in markers for match in _SECTION_LOOSE.finditer(raw)):
+        errors.append("invalid_section_marker")
+    return errors
 
 # HEAD 字段行：允许前后空白、全角冒号、大小写
 _FIELD_LINE = re.compile(
-    r"^[ \t]*(need|confidence|direct|baseline|displace)[ \t]*[:：]",
+    r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)[ \t]*[:：]",
     re.IGNORECASE | re.MULTILINE,
 )
 
@@ -445,50 +480,84 @@ _LEAD = r"^[ \t]*"
 _SEP = r"[ \t]*[:：][ \t]*"
 
 
-def _get_field(block: str, name: str) -> str:
+def _get_field(block: str, name: str, *, multiline: bool = False) -> str:
     m = re.search(rf"{_LEAD}{name}{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
-    return m.group(1).strip() if m else ""
+    if not m:
+        return ""
+    if not multiline:
+        return m.group(1).strip()
+    # Only free-text reference fields span lines; never consume the next field.
+    boundaries = [next_match.start() for pattern in (_FIELD_LINE, _SECTION_LOOSE)
+                  if (next_match := pattern.search(block, m.end())) is not None]
+    end = min(boundaries) if boundaries else len(block)
+    return block[m.start(1):end].strip()
 
 
 def _to_float(s: str, default: float = 0.0) -> float:
     raw = s or ""
-    m = re.search(r"-?\d+(?:\.\d+)?", raw)
+    m = re.search(r"-?(?:\d+(?:\.\d*)?|\.\d+)", raw)
     if not m:
         return default
     try:
         v = float(m.group(0))
     except ValueError:
         return default
-    # 百分比只在「首个数字本身不在 0-1 区间」时才除。
-    #
-    # 模型常把两种写法一起写：`0.85（85%）`、`0.6（60%）`。
-    # 旧逻辑只要串里出现 % 就整体除 100 —— 0.85 变成 0.0085，
-    # 于是这一轮被判成「完全没把握」，还把脏样本写进校准账本。
-    #
-    # 判据：看**首个数字**。已经在 [0,1] 就是小数写法，不再除。
-    if ("%" in raw or "％" in raw) and not (0.0 <= v <= 1.0):
+    # Only a percent sign belonging to the first number changes its unit.
+    # Thus 1% = .01, but .85 (85%) remains .85.
+    if raw[m.end():].lstrip().startswith(("%", "％")):
         v /= 100.0
     return max(0.0, min(1.0, v))
 
 
+def _valid_confidence(raw: str) -> bool:
+    """Validate before compatibility clamping; accept decimal/percent annotations."""
+    match = re.match(r"^[ \t]*([+-]?(?:\d+(?:\.\d*)?|\.\d+))([%％]?)", raw)
+    if not match:
+        return False
+    value = float(match[1])
+    if match[2]:
+        value /= 100
+    suffix = raw[match.end():].strip()
+    return (math.isfinite(value) and 0 <= value <= 1
+            and (not suffix or (suffix.startswith(("(", "（"))
+                                and suffix.endswith((")", "）")))))
+
+
 def parse_head(block: str) -> Head:
-    displace = _get_field(block, "displace").lower()
+    errors = []
+    values = {key: _get_field(block, key, multiline=key in ("direct", "baseline"))
+              for key in _HEAD_FIELDS}
+    for key in ("need", "confidence", "direct", "baseline", "displace"):
+        if not values[key]:
+            errors.append("missing_" + key)
+    displace = values["displace"].lower()
     if displace in ("", "无", "-", "null"):
         displace = DISPLACE_NONE
-    # 允许写成 "降级（判断→问题）"
-    if displace not in DISPLACE_KINDS:
-        for k in DISPLACE_KINDS:
-            if k != DISPLACE_NONE and k in displace:
-                displace = k
-                break
-        else:
+    # An annotation may explain one kind, but may not hide a second kind.
+    kinds = {kind for kind in DISPLACE_KINDS if kind != DISPLACE_NONE and kind in displace}
+    if re.search(r"\bnone\b|(?:^|[\s/、,+；;])无(?:$|[\s/、,+；;])", displace):
+        kinds.add(DISPLACE_NONE)
+    if len(kinds) > 1:
+        errors.append("multiple_displace")
+        displace = DISPLACE_NONE
+    elif displace not in DISPLACE_KINDS:
+        annotated = next((kind for kind in kinds if re.fullmatch(
+            re.escape(kind) + r"\s*(?:（[^（）]*）|\([^()]*\))", displace)), None)
+        if annotated is None:
+            errors.append("invalid_displace")
             displace = DISPLACE_NONE
+        else:
+            displace = annotated
+    confidence = values["confidence"]
+    if confidence and not _valid_confidence(confidence):
+        errors.append("invalid_confidence")
     return Head(
-        need=_get_field(block, "need"),
-        confidence=_to_float(_get_field(block, "confidence")),
-        direct=_get_field(block, "direct"),
+        need=values["need"],
+        confidence=_to_float(confidence),
+        direct=values["direct"],
         displace=displace,
-        baseline=_get_field(block, "baseline"),
+        baseline=values["baseline"],
+        errors=errors,
     )
 
 
@@ -496,6 +565,9 @@ def parse_tail(block: str) -> Tail:
     tail = Tail()
     if not block.strip():
         return tail
+    if not re.search(rf"{_LEAD}(settle|pending|delta){_SEP}", block,
+                     re.MULTILINE | re.IGNORECASE):
+        tail.errors.append("invalid_tail_fields")
 
     # settle: id | outcome | evidence
     #
@@ -546,21 +618,32 @@ def parse_tail(block: str) -> Tail:
     m = re.search(rf"{_LEAD}pending{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
     if m:
         rest = block[m.end():]
+        if m.group(1).strip().lower() in ("-", "无", "none", "null"):
+            return tail
         p = PendingDraft()
+        seen = set()
         for line in rest.splitlines():
             dm = re.match(r"^[ \t]*[-*]?[ \t]*(claim|confidence|predicts)[ \t]*[:：][ \t]*(.+)$",
                           line, re.IGNORECASE)
             if dm:
                 k = dm.group(1).lower()
+                seen.add(k)
                 v = dm.group(2).strip()
                 if k == "claim":
                     p.claim = v
                 elif k == "confidence":
                     p.confidence = _to_float(v)
+                    if not _valid_confidence(v):
+                        p.errors.append("invalid_pending_confidence")
                 else:
                     p.predicts = v
+        for key in ("claim", "confidence", "predicts"):
+            if key not in seen:
+                p.errors.append("missing_pending_" + key)
         if p.claim and p.predicts:
             tail.pending = p
+        else:
+            tail.errors.extend(p.errors)
 
     return tail
 
@@ -576,7 +659,7 @@ def detect_declarations(text: str) -> list[str]:
     return hits
 
 
-def parse(raw: str) -> ParsedTurn:
+def parse(raw: str, *, expression_only: bool = False) -> ParsedTurn:
     head_raw, say_raw, tail_raw = _split_sections(raw)
 
     head = parse_head(head_raw) if head_raw else None
@@ -603,4 +686,5 @@ def parse(raw: str) -> ParsedTurn:
     read_aloud = detect_read_aloud(say)
 
     return ParsedTurn(head=head, say=say, tail=tail, declared=declared,
-                      read_aloud=read_aloud, errors=errors)
+                      read_aloud=read_aloud, errors=errors,
+                      structural_errors=section_errors(raw, expression_only=expression_only))

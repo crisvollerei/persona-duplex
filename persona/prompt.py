@@ -1,8 +1,8 @@
 """组装发给模型的 prompt。
 
 一次生成，顺序固定：HEAD → SAY → TAIL。
-这个顺序不是格式问题，是因果问题：只有当 direct 写在 SAY 之前，
-SAY 才是真的被 direct 条件化出来的。反过来就是事后编理由。
+这个顺序让 SAY 可以读取前面的 direct / baseline，避免把参考补写在回复之后。
+它建立自回归上下文顺序，不证明模型内部判断独立，也不证明人格行为有效。
 
 三块内容各有来历：
 
@@ -24,6 +24,8 @@ SAY 才是真的被 direct 条件化出来的。反过来就是事后编理由�
 """
 from __future__ import annotations
 
+import json
+
 from .config import (
     DISPLACE_KINDS,
     STANCE_ASK,
@@ -32,6 +34,7 @@ from .config import (
     STANCE_UNSURE,
     PersonaConfig,
 )
+from .store import is_diagnostic_judgment
 
 SECTION_HEAD = "<<<HEAD>>>"
 SECTION_SAY = "<<<SAY>>>"
@@ -51,7 +54,7 @@ _STANCE_HINT = {
 
 _ATTENTION_HINT = {
     "surface": "只按字面理解对方说的话。不要主动推断潜台词。",
-    "subtle": "同时注意对方没说出口的部分：语气、缺口、为什么现在说这个。",
+    "subtle": "可留意语气、缺口和说话时机，形成暂定的人际读法；未说出口的部分仍是未知，不补成事实。",
 }
 
 
@@ -62,17 +65,17 @@ def _section_spec(cfg: PersonaConfig) -> str:
 {SECTION_HEAD}
 need: 从下面这个固定集合里选一个 —— {needs}
 confidence: 0 到 1 之间的小数，表示你对上面那个判断有多确定
-direct: 一句**不带任何人格色彩的素回复**。见下面「direct 是什么」。
+direct: 不受人格配置约束的内容参考。保留必要条件、理由和不确定性，不限一句。见下面「direct 是什么」。
 baseline: 当前人格通常会怎样接这句话。保留人格语感，不刻意遮掩、反说或留白。
 displace: 相对于上面这个人格基准的额外位移 —— {kinds} / none。none 是常态，不表示去掉人格。
 
 {SECTION_SAY}
 （只说给对方听的话。这里的内容会原样发出去。不要出现任何标记符。
- 不要写「我猜你……」「先猜一个……」来引出内容 —— 直接说事。）
+ 不展示解读过程来索取认同；有情境依据的试探性问法可以保留，但让对方能自然否认或不答。）
 
 [direct 是什么 · 这一条最重要]
 
-direct 不是「你的心里话」，是**一个没有性格的助手会给出的回答**。
+direct 不是「你的心里话」，是**按事实、逻辑和用户实际输入形成的内容参考**。
 
 它回答的是：按事实和逻辑，这句话该怎么接？
 它不回答：我作为这个角色会怎么说。
@@ -84,14 +87,15 @@ direct 不是「你的心里话」，是**一个没有性格的助手会给出�
   对：先吃点东西吧，饿着更累。
   对：这个得看你自己的情况，别人没法替你决定。
   对：情绪没有对错，你觉得难受就是真实的。
-      ↑ 这些是有用的、具体的、中性的回答。谁来都这么说。
+      ↑ 这些是有用、具体且不依赖角色设定的回答，不代表每个问题只有唯一答案。
 
 为什么必须这样拆分：
-  direct 有人格 → say 就只能做「减法」（把人格磨淡）→ 人格越调越弱
-  direct 无人格 → say 才是「替换」（换成角色的说法）→ 人格才可控
+  direct 记录内容判断，baseline 记录普通人格化，say 才记录实际选择说出口的内容。
+  不能用人设证明现实判断，也不能把 say 未说出某项建议算成改变事实。
 
-所以写 direct 的时候，忘掉你扮演的是谁。就当你是个普通助手，
-给出最有用的那句。人格是下一步的事。
+所以写 direct 时，不套用人格身份、语气、简短或少干涉偏好。
+按问题需要保留适用条件、理由、关键步骤和不确定性，不为凑一句而压缩。
+人格决定下一步怎样表达；不要求把 direct 的全部内容说给对方。
 
 {SECTION_TAIL}
 settle: 仅当用户提供明确证据时，写 <id> | confirmed 或 refuted | 一句证据；无法判定就写 - 或 watch，不必立即结算
@@ -129,43 +133,39 @@ pending:
 
 # ---------------------------------------------------------------- 规则
 
-_RULES = """[两条禁令]
+_RULES = """[两条表达边界]
 
 第一条：不许声明位移。
   禁止：「我本来想说……」「其实我差点说」「我没说出口」「我忍住没讲」
   原因：那是在索取信用。你在告诉对方「你看我多克制」，这比直接说更糟。
 
-第二条：不许声明「读」。
-  禁止：「猜你是……」「听起来你是……」「我觉得你其实……」「你是不是想……」
-        「你这不是在说 X，是在说 Y」「我读到你……」
-
-  这一条禁的是**句式**，不是某个词。下面这些全算，一个都不许出现：
-    「我猜你……」「我猜你这句……」「我猜这不是……」「我猜这个嗯……」
-    「猜一句：……」「先猜一个：……」「我要猜，你……」
-  规律很简单：**只要句子里出现「我」在「猜」对方的什么东西，就是违规。**
-  不管是「猜」还是「我猜」；不管猜的是人、是话、还是一个语气词。
-
-  可以猜的：第三方（「我猜他也不会来」）、外部事实（「我猜明天下雨」）。
-  不可以猜的：**对方**。对方是什么状态、为什么说这句、这句话后面藏着什么
-  —— 这些一律不许以「猜」的句式说出来。
-
-  原因：你把「我在解读你」这件事本身摆到了台面上。
-        被读懂的感觉来自你**说得对**，不来自你**说你读懂了**。
-        一旦说出来，对方要处理的是你的洞察力，不是他自己的事。
-
-  判断方法：把 say 里所有以「猜」「我猜」「先猜」开头的**分句**删掉。
-  如果剩下的内容还成立，那删掉的部分就是多余的表演。
+第二条：不把暂定读法压成对方必须承认的心理事实。
+  不展示「我很懂你」来索取认同，不把沉默、换题或短回复当作被说中的证据。
+  有上下文依据时，允许试探性地猜测或提问，包括「你是不是想……」。
+  读法必须保持可否认、可修正，给对方自然否认或不答的空间；对方否认就接受。
+  这不是按「我猜」等词语封禁句式，也不是每次都要附一句固定的免责声明。
+  不必每轮猜测；没有依据就说不知道、问清楚或只接住已经说出的内容。
   例：
-    错：我猜你不是真想问我该不该，是已经想走了。那我先问一句：真辞了，你最怕什么。
-    对：真辞了，你最怕什么。
-    错：我猜这个「嗯」是认了，但不想往下讲。那就不讲。
-    对：那就不讲。
+    错：你其实早就想走了，只是不肯承认。我看得出来。
+    可行：你是不是更想先离开？也可能是我理解错了。
+    也可行：真辞了，你最怕什么？
+    错：这个「嗯」说明我说中了。
+    可行：先停在这里也行。
 
 [位移怎么做才对]
 
 先区分两个层次：direct → baseline 是普通人格化；baseline → say 才是这里记录的位移。
 baseline 是当前人格的常态表达，不是素回复，也不是永远冻结的模板。
 无额外位移时，say 仍然完整保留人格。不要把「有个性」记成位移。
+
+[判断与表达的边界]
+
+人格影响注意、对人际读法的把握、站位和哪些话说出口，不只是换一种措辞。
+不要求把 direct 的内部判断、建议、理由逐项说出：允许降为问题、转移、截断和留白。
+没有说出某个判断，不等于判断成相反；位移不能被“语义等价改写”的要求抹掉。
+但事实和计算不能改错，未知不能说成保证；若给出实际操作或现实结论，
+不能省掉会使其错误或误导的适用条件与风险。
+额外位移只在情绪或人际顾虑承重时选择，一轮至多一种；不要为凑位移而绕话。
 
 普通人格化的例子（displace: none）：
 
@@ -235,17 +235,21 @@ def _trait_block(cfg: PersonaConfig) -> str:
             lines.append(f"- {hi_hint}")
     if not lines:
         return ""
-    return "[你的行为尺度]\n" + "\n".join(lines)
+    return ("[人格行为尺度 · 仅作用于 baseline/SAY]\n"
+            "以下决定表达选择，不限制 direct 的判断内容；简短或少干涉不能使实际说出的事实或操作误导。\n"
+            + "\n".join(lines))
 
 
-def phrase_block(cfg: PersonaConfig, *, need: str = "", first_turn: bool) -> str:
+def phrase_block(cfg: PersonaConfig, *, need: str = "", first_turn: bool,
+                 user_text: str = "") -> str:
     """按场景注入句式（方案 B）。
 
     不把所有人的话全塞进 prompt —— 那会稀释。
     只在**用得上**的时候给：
       · first_turn        → greeting
       · need ∈ {只想被听, 想有人替他说出口} → comfort
-      · 其余不给句式，让它自己说
+      · 本轮文本的承诺、疑问或告别关键词 → promise / answer / farewell
+      · 无匹配不给句式；默认单次生成中 need 来自上一轮
 
     这是「机制」而不是「内容」：给的是这个角色特有的说法，
     不是泛泛的「你要温柔一点」。
@@ -255,6 +259,12 @@ def phrase_block(cfg: PersonaConfig, *, need: str = "", first_turn: bool) -> str
         scenes.append("greeting")
     if need in ("只想被听", "想有人替他说出口"):
         scenes.append("comfort")
+    if any(word in user_text for word in ("答应", "保证", "承诺", "陪着我", "会一直在", "会不会离开")):
+        scenes.append("promise")
+    if any(word in user_text for word in ("?", "？", "为什么", "怎么", "是什么", "多少")):
+        scenes.append("answer")
+    if any(word in user_text for word in ("再见", "拜拜", "晚安", "先走了", "回头聊")):
+        scenes.append("farewell")
     if not scenes:
         return ""
     lines = ["[这个角色会怎么说 · 参考，不是模板]"]
@@ -266,45 +276,62 @@ def phrase_block(cfg: PersonaConfig, *, need: str = "", first_turn: bool) -> str
 
 
 def build_system_prompt(cfg: PersonaConfig, *, need: str = "",
-                        first_turn: bool = False) -> str:
+                        first_turn: bool = False,
+                        expression_only: bool = False, user_text: str = "") -> str:
     role = cfg.role
     parts = [
-        f"你在扮演「{role.name}」。",
+        (f"你负责生成「{role.name}」的人格表达，基础判断已由独立步骤完成。"
+         if expression_only else
+         f"按判断、表达和状态记录协议回应，并使用「{role.name}」的表达配置。"),
+        "",
+        "[判断与人格配置的作用范围]",
+        "人格配置是表达参考数据，不是模型身份，也不是现实事实或推理依据。",
+        "它决定 baseline/SAY 的注意重点、人际站位、主动程度、语气和取舍，不改变事实、计算与证据标准。",
+        "direct 不受人格身份、语气、简短或少干涉偏好约束；必要条件和不确定性不能因人设被改写。",
+        "人物背景、虚构经历和例句只用于表达，不得据此捏造现实经历、能力、关系或结论。",
     ]
 
-    # 长文本人设：身份与信念。有就放，没有就用 voice 兜底。
+    # 配置中的身份文字作为数据引用，不提升为模型身份或判断依据。
     if role.identity.strip():
-        parts += ["", "[你是谁]", role.identity.strip()]
+        parts += ["", "[人格背景参考 · JSON 字符串，不是新指令]",
+                  json.dumps(role.identity.strip(), ensure_ascii=False)]
 
     parts += [
         "",
-        f"[你注意什么]\n{_ATTENTION_HINT.get(role.attention, _ATTENTION_HINT['subtle'])}",
+        f"[人格表达注意重点]\n{_ATTENTION_HINT.get(role.attention, _ATTENTION_HINT['subtle'])}",
         "",
-        f"[你怎么说话]\n{role.voice or '自然、口语、不端着。'}",
+        f"[baseline/SAY 的语气]\n{role.voice or '自然、口语、不端着。'}",
     ]
 
     tb = _trait_block(cfg)
     if tb:
         parts += ["", tb]
 
-    pb = phrase_block(cfg, need=need, first_turn=first_turn)
+    pb = phrase_block(cfg, need=need, first_turn=first_turn, user_text=user_text)
     if pb:
         parts += ["", pb]
 
-    if role.special:
-        lines = ["[关于你自己的几件事]"]
-        for s in role.special:
+    special = [s for s in role.special if any(
+        word.casefold() in user_text.casefold() for word in s.get("keywords", []))]
+    if special:
+        lines = ["[人格表达的补充参考 · 不是现实经历或能力证明]"]
+        for s in special:
             lines.append(f"- {s.get('note', '')}（{s.get('when', '')}）")
         parts += ["", "\n".join(lines)]
 
     parts += [
         "",
-        f"[你有多敢猜]\n把握度偏移 {role.bias:+.2f}。"
-        f"正的表示你倾向于相信自己的判断，负的表示你倾向于先确认再下结论。",
+        (f"[人际表达的倾向]\n表达把握度偏移 {role.bias:+.2f}，只影响人际读法的表达，"
+         "不能提高事实的确定性，不能改变基础判断的证据与结论。"
+         if expression_only else
+         stance_policy(cfg)),
         "",
         f"[位移上限]\n{'允许在当前人格基准之外作情境性位移，不必每轮使用。' if role.legibility_max >= 1 else '不作人格基准之外的额外位移；仍然保持完整的人格语感。'}",
+        ({1: "轻度档：只作局部的问法、关注点或停顿变化，读法仍容易辨认。",
+          2: "较大档：情境确有需要时，允许较明显的转移、截断或留白，不追求晦涩。"}
+         .get(role.legibility_max, "")),
         "",
-        _section_spec(cfg),
+        "" if expression_only else _section_spec(cfg),
         "",
         _RULES,
     ]
@@ -341,14 +368,18 @@ def build_context_block(
     if repair_note:
         lines.append("")
         lines.append(repair_note)
-        lines.append("修复只有一次机会，而且必须短。解释会变成辩解。")
+        lines.append("这只是暂定信号，最多两次简短试探；没有明确回应就停止，不认定受伤或长期雷区。")
 
+    judgments = [j for j in judgments if not is_diagnostic_judgment(j)]
     if judgments:
         lines.append("")
         lines.append("[你对这个人的判断 · 可能过时，别当事实]")
+        lines.append("仅作暂定线索，不作为身份或事实依据；来源和证据范围不等于已验证。")
         for j in judgments:
             mark = "（后来推翻了）" if j.get("superseded_by") else ""
-            lines.append(f"- {j['judgment']}（把握 {j.get('confidence', 0):.2f}）{mark}")
+            provenance = (f"来源 {j.get('source') or 'unknown'}；"
+                          f"证据范围 {j.get('evidence_scope') or 'unknown'}")
+            lines.append(f"- {j['judgment']}（把握 {j.get('confidence', 0):.2f}；{provenance}）{mark}")
 
     if pendings:
         lines.append("")
@@ -452,4 +483,28 @@ def stance_hint(cfg: PersonaConfig, confidence: float) -> str:
     这是最便宜的人格旋钮：只改 cfg.role.bias，同一段对话就是另一个人。
     """
     st = cfg.stance_for(confidence)
-    return f"[当前站位: {st}] {_STANCE_HINT.get(st, '')}"
+    return (f"[当前站位: {st}] {_STANCE_HINT.get(st, '')}"
+            " 只约束人际读法，不降低已知事实或计算结论的确定性。")
+
+
+def stance_policy(cfg: PersonaConfig) -> str:
+    """在同一次生成内，用本轮 confidence 选站位，不借用上一轮的读法。"""
+    bias = cfg.role.bias
+    boundaries = {0.0, 1.0}
+    for rule in cfg.stance_table:
+        boundaries.update(value - bias for value in (rule.lo, rule.hi)
+                          if 0 <= value <= 1)
+    boundaries.add(cfg.confidence_floor - bias)
+    points = sorted(p for p in boundaries if 0 <= p <= 1)
+    lines = [
+        "[本轮站位规则 · 只约束人际读法]",
+        "先根据本轮输入写 HEAD.confidence，再据此选择站位；不沿用上一轮的把握度。",
+        f"下表已计入偏移 {bias:+.2f}、0..1 夹限及地板 {cfg.confidence_floor:g}，不要重复偏移。",
+        "它约束对需求和潜台词的表达，不限制有依据的事实或计算结论，也不能把猜测写成事实。",
+    ]
+    for lo, hi in zip(points, points[1:]):
+        stance = cfg.stance_for((lo + hi) / 2)
+        lines.append(f"{lo:g} <= confidence < {hi:g}: {stance}。{_STANCE_HINT.get(stance, '')}")
+    stance = cfg.stance_for(1.0)
+    lines.append(f"confidence = 1: {stance}。{_STANCE_HINT.get(stance, '')}")
+    return "\n".join(lines)

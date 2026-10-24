@@ -124,16 +124,19 @@ class TestConsolidationRobustness(unittest.TestCase):
                                     "say": "y", "direct": "z",
                                     "need": "只想被听", "displace": "none"})
 
-    def test_dict_output_falls_back(self):
-        """模型返回 JSON 对象不能崩，也不能丢事件。"""
+    def test_dict_output_preserves_events_without_silent_fallback(self):
         self._buf(3)
         c = Consolidator(self.store, llm=lambda p: '{"judgment": "x"}')
-        out = c.run_once()
-        self.assertIsInstance(out, dict)
+        with self.assertRaises(ValueError):
+            c.run_once()
+        self.assertEqual(len(list(self.store.buffer_dir.glob("*.json"))), 3)
+        self.assertEqual(self.store.judgments(), [])
 
-    def test_non_dict_item_skipped(self):
+    def test_non_dict_item_preserves_batch(self):
         self._buf(2)
-        Consolidator(self.store, llm=lambda p: '["str", 123]').run_once()
+        with self.assertRaises(ValueError):
+            Consolidator(self.store, llm=lambda p: '["str", 123]').run_once()
+        self.assertEqual(len(list(self.store.buffer_dir.glob("*.json"))), 2)
 
     def test_confidence_clamped(self):
         """confidence 必须夹到 0..1，否则单条越过共识闸门。"""

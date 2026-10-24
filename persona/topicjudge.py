@@ -13,11 +13,13 @@
 from __future__ import annotations
 
 import json
+import inspect
 import re
 import threading
 import time
 from dataclasses import dataclass, field
 from typing import Callable, Protocol
+from .audit import traced
 
 RETURNED = "returned"
 LEFT = "left"
@@ -32,6 +34,7 @@ OVERLAP_DROP = 0.05
 class TopicVerdict:
     verdict: str = UNCLEAR
     why: str = ""
+    status: str = "valid"
 
     @property
     def returned(self) -> bool:
@@ -43,7 +46,7 @@ class TopicVerdict:
         """用户说的和预言预计的明显是两回事。
 
         **注意 left 不等于「换了话题」** —— 它只表示「这一句的内容和
-        预言的预期相反或无关到可以否证」。换题、太短、只回应了别的部分，
+        预言的预期相反」。换题、太短、只回应了别的部分，
         都应该是 unclear（还没发生），不是 left。
         """
         return self.verdict == LEFT
@@ -58,6 +61,7 @@ class JudgeRequest:
     prev_user_text: str = ""
     pendings: list[dict] = field(default_factory=list)
     extra_refs: dict[str, list[str]] = field(default_factory=dict)
+    trace: list[dict] = field(default_factory=list)
 
 
 class TopicJudge(Protocol):
@@ -138,7 +142,8 @@ verdict 三选一：
   用户：「两三点才睡着」        -> returned（就是这么个时间）
   用户：「我不打算说具体几点睡」 -> left（明确拒绝所预测的行为）
 
-格式：[{{"id":"p_0001","verdict":"returned","why":"十五字以内"}}]"""
+returned / left 必须在 why 中简短引用用户实际提供的证据；没有证据就 unclear。
+格式：[{{"id":"p_0001","verdict":"returned","why":"用户证据，简短"}}]"""
 
 
 def _clip(s: str, n: int = 160) -> str:
@@ -165,16 +170,18 @@ class LLMJudge:
         # 或者只接受 (messages) 的普通函数。见 _call。
         self.llm = llm
 
-    def _call(self, messages: list[dict], *, max_tokens: int) -> str:
+    def _call(self, messages: list[dict], *, max_tokens: int, trace=None) -> str:
         """尽量把 max_tokens 传下去。
 
         openai_compatible 产出的闭包接受 (messages, *, max_tokens=...)；
         但测试和自定义判定器常常只接受 messages 一个参数。两种都要能跑。
         """
+        fn = traced(self.llm, "judge", lambda: trace) if trace is not None else self.llm
         try:
-            return self.llm(messages, max_tokens=max_tokens)
-        except TypeError:
-            return self.llm(messages)
+            inspect.signature(self.llm).bind(messages, max_tokens=max_tokens)
+        except (TypeError, ValueError):
+            return fn(messages)
+        return fn(messages, max_tokens=max_tokens)
 
     # 每条预言大约要 40 个 token 的 JSON（id + verdict + why）。
     # 固定 120 的预算只够判 2-3 条；挂到 8 条时输出会被截断，
@@ -212,7 +219,7 @@ class LLMJudge:
             pending_lines=lines,
         )
         raw = self._call([{"role": "user", "content": prompt}],
-                         max_tokens=self._budget(len(req.pendings)))
+                         max_tokens=self._budget(len(req.pendings)), trace=req.trace)
         return self._parse(raw, req)
 
     def _parse(self, raw: str, req: JudgeRequest) -> dict[str, TopicVerdict]:
@@ -234,12 +241,12 @@ class LLMJudge:
         i, j = text.find("["), text.rfind("]")
         if i == -1 or j <= i:
             # 模型没给数组 —— 当它判不了，而不是当它说「没回来」
-            return {pid: TopicVerdict(UNCLEAR, "模型输出无法解析") for pid in valid}
+            return {pid: TopicVerdict(UNCLEAR, "模型输出无法解析", "invalid") for pid in valid}
 
         try:
             items = json.loads(text[i:j + 1])
         except json.JSONDecodeError:
-            return {pid: TopicVerdict(UNCLEAR, "JSON 解析失败") for pid in valid}
+            return {pid: TopicVerdict(UNCLEAR, "JSON 解析失败", "invalid") for pid in valid}
 
         for it in items if isinstance(items, list) else []:
             if not isinstance(it, dict):
@@ -248,10 +255,14 @@ class LLMJudge:
             verdict = str(it.get("verdict", "")).strip().lower()
             if pid not in valid or verdict not in (RETURNED, LEFT, UNCLEAR):
                 continue
-            out[pid] = TopicVerdict(verdict, _clip(str(it.get("why", "")), 40))
+            why = it.get("why", "")
+            if verdict in (RETURNED, LEFT) and (not isinstance(why, str) or not why.strip()):
+                out[pid] = TopicVerdict(UNCLEAR, "语义判定缺少用户证据", "invalid")
+                continue
+            out[pid] = TopicVerdict(verdict, _clip(str(why), 160))
 
         for pid in valid - out.keys():
-            out[pid] = TopicVerdict(UNCLEAR, "模型漏判")
+            out[pid] = TopicVerdict(UNCLEAR, "模型漏判", "invalid")
         return out
 
 
@@ -280,7 +291,7 @@ class JudgeHandle:
     _error: BaseException | None = None
 
     def collect(self) -> tuple[dict[str, TopicVerdict], str]:
-        """返回 (verdicts, source)。source: llm / late / bigram。
+        """返回 (verdicts, source)。source: llm / late / error / invalid。
 
         late = 判定还在飞，这轮先用字面兜底，预言继续挂着。
         """
@@ -289,8 +300,10 @@ class JudgeHandle:
             self._thread.join(timeout=remaining)
 
         if self._error is None and self._result is not None:
-            return self._result, "llm"
-        return self.fallback.judge(self.req), "late"
+            statuses = [getattr(v, "status", "invalid") for v in self._result.values()]
+            source = "llm" if all(v == "valid" for v in statuses) else "invalid"
+            return self._result, source
+        return self.fallback.judge(self.req), "error" if self._error is not None else "late"
 
 
 class AsyncJudge:

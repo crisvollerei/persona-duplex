@@ -1,6 +1,6 @@
 """命令行入口。
 
-    chat      普通对话（默认流式）
+    chat      普通对话（默认流式，不额外审查或失败回退）
     trace     带 trace 的对话（能看到 HEAD / 结算 / 修复 / 判断）
     demo      离线演示，不需要 API key
     rebuild   从账本重建 state/
@@ -102,8 +102,9 @@ def _make_session(args, *, streaming: bool) -> Session:
     # tool 协议需要「填 schema」的调用方式，跟纯文本的 llm 接口不同。
     tool_llm = None
     if args.protocol in ("tool", "auto", "persona"):
-        tool_llm = openai_tool_call(args.model, temperature=0.9,
-                                    max_tokens=600, timeout=60.0)
+        tool_llm = openai_tool_call(
+            args.model, temperature=0.0 if args.protocol == "persona" else 0.9,
+            max_tokens=1400, timeout=60.0)
 
     return Session(
         cfg, store, llm,
@@ -112,7 +113,12 @@ def _make_session(args, *, streaming: bool) -> Session:
         consolidate_llm=consolidate_llm,
         tool_llm=tool_llm,
         protocol=args.protocol,
-        options=SessionConfig(stream=streaming),
+        options=SessionConfig(
+            stream=streaming,
+            fidelity_check=getattr(args, "check_fidelity", False),
+            json_fallback=getattr(args, "json_fallback", False),
+            memory_mode="frozen" if getattr(args, "freeze_memory", False) else "live",
+            condition=getattr(args, "condition", "")),
     )
 
 
@@ -128,6 +134,8 @@ def _print_trace(res) -> None:
         print(f"{cyan('baseline')}  {h.baseline or '（未知）'}")
         print(f"{cyan('displace')}  {h.displace}")
     print(f"{cyan('stance')}    {res.stance}")
+    if res.validity and not res.validity.get("valid"):
+        print(yellow("sample    本地协议无效：" + ", ".join(res.validity.get("reasons", []))))
     for s in res.settled:
         label = s.get("label", "")
         print(yellow(f"settle    {s['id']} → {s['outcome']}（{label}）"))
@@ -288,9 +296,11 @@ def cmd_demo(args) -> int:
     ]
     scripted = ScriptedLLM(replies)
 
-    with Session(cfg, store, scripted,
+    with Session(cfg, store, scripted, protocol="text",
                  options=SessionConfig(consolidate_interval=999,
-                                       consolidate_on_exit=True)) as sess:
+                                       consolidate_on_exit=True,
+                                       memory_mode="frozen" if getattr(args, "freeze_memory", False) else "live",
+                                       condition=getattr(args, "condition", ""))) as sess:
         _banner(sess, online=False)
         turns = [
             "今天好累啊，从早忙到晚，路上还堵了一个半小时。",
@@ -327,7 +337,10 @@ def cmd_demo(args) -> int:
             for w in res.warnings:
                 print(red(f"   [⚠ {w}]"))
 
-    print(dim("\n—— 会话已关闭，后台已跑完最后一次固化 ——"))
+    if sess.opts.memory_mode == "frozen":
+        print(dim("\n—— 会话已关闭，冻结条件未执行固化，事件保留在缓冲中 ——"))
+    else:
+        print(dim("\n—— 会话已关闭，后台已跑完最后一次固化 ——"))
     print(dim("\n—— 关系账本 ——"))
     print("  ", json.dumps(store.relation(), ensure_ascii=False))
     print(dim("\n—— 修复账本 ——"))
@@ -447,13 +460,19 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("-j", "--judge-model", default=None,
                        help="话题判定用的轻模型（默认跟随主模型）")
         p.add_argument("--no-judge", action="store_true",
-                       help="关掉 LLM 话题判定，退回字面")
+                       help="关闭 LLM 话题判定与模型记忆提炼，不控制可选一致性检查")
+        p.add_argument("--check-fidelity", action="store_true",
+                       help="仅用于 --protocol persona：显式增加一致性检查；默认关闭")
+        p.add_argument("--json-fallback", action="store_true",
+                       help="仅用于 --protocol persona：允许工具失败后改用同阶段 JSON；默认关闭")
+        p.add_argument("--freeze-memory", action="store_true",
+                       help="固定本次会话读取的长期判断记忆，不启动后台或退出固化；仍记录缓冲")
+        p.add_argument("--condition", default="", help="实验条件标签，随运行配置落账")
         p.add_argument("--protocol", default="text",
                        choices=["text", "tool", "auto", "persona"],
-                       help="text=单次生成三段（默认）；"
-                            "tool=两阶段，direct 结构上先于 say；"
-                            "persona=三层，素回复无人设、人设化单独一步；"
-                            "auto=文本失效时自动升级")
+                       help="text=一次生成 HEAD、SAY、TAIL（默认，无额外审查或自动重试）；"
+                            "persona=独立判断、人格表达、观察的三次调用实验；"
+                            "tool=内部参考工具、回复、观察；auto=文本失效时升级 tool")
         return p
 
     chat = common(sub.add_parser("chat", help="普通对话"))
@@ -481,6 +500,9 @@ def main(argv: list[str] | None = None) -> int:
     ca.set_defaults(func=cmd_calibrate)
 
     args = ap.parse_args(argv)
+    if (getattr(args, "check_fidelity", False) or getattr(args, "json_fallback", False)) \
+            and args.protocol != "persona":
+        ap.error("--check-fidelity / --json-fallback 仅适用于 --protocol persona")
 
     # 模型：命令行 > 环境变量 > 默认
     if getattr(args, "model", None) is None:

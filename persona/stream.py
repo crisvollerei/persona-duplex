@@ -22,11 +22,13 @@ from .parse import (
     parse_tail,
     plain_text,
     safe_say,
+    section_errors,
 )
 
 # 宽松识别协议残留（和 parse 里那份一致）。
 # 单独 import 一个名字，避免 stream 依赖 parse 的私有函数。
 from .parse import _looks_like_protocol as _looks_like_protocol_full
+from .parse import _SECTION_LOOSE
 from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL
 
 MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
@@ -40,16 +42,33 @@ _SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY)
 # 否则只看到 "n" 就判，既判不出字段行也判不出正文。
 _FIELD_PEEK = 12
 
-# 第一行是不是 HEAD 的字段行
+# 第一行是不是内部字段行（包括漏掉 TAIL 标记的情况）。
 _HEAD_LINE = re.compile(
-    r"^[ \t]*(need|confidence|direct|baseline|displace)[ \t]*[:：]", re.IGNORECASE
+    r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)[ \t]*[:：]", re.IGNORECASE
 )
 
-_HEAD_WORDS = ("need", "confidence", "direct", "baseline", "displace")
+_HEAD_WORDS = ("need", "confidence", "direct", "baseline", "displace", "settle", "delta", "pending")
+_SCAFFOLD_WORDS = ("内心", "心里话", "素回复", "原始回复", "人格基准", "位移方式", "判断")
+_INTERNAL_START = re.compile(r"[（(]\s*(?:" + "|".join(_SCAFFOLD_WORDS) + r")|<[|｜]")
+
+
+def _safety_holdback(text: str) -> int:
+    """扣住可能长成畸形标记或内部脚手架的后缀，不缓冲整句正文。"""
+    match = re.search(r"<+[^<>]*>*$|[（(][^（）()]*$", text)
+    if match is None:
+        return 0
+    suffix = match.group()
+    if suffix.startswith("<"):
+        word = re.sub(r"\s", "", suffix).lstrip("<").lstrip("^").rstrip(">").upper()
+        possible = any(name.startswith(word) for name in ("HEAD", "SAY", "TAIL"))
+    else:
+        word = suffix[1:].lstrip()
+        possible = any(name.startswith(word) for name in _SCAFFOLD_WORDS)
+    return len(suffix) if possible else 0
 
 
 def _any_field_prefix(text: str) -> bool:
-    """这段文本是不是某个 HEAD 字段名的前缀（还在长）。"""
+    """这段文本是不是某个内部字段名的前缀（还在长）。"""
     t = (text or "").strip().lower()
     if not t:
         return False
@@ -87,17 +106,20 @@ class StreamParser:
     所以开头和结尾的纯空白都要裁掉，中间的不动。
     """
 
-    def __init__(self) -> None:
+    def __init__(self, *, expression_only: bool = False) -> None:
         self.buf = ""
         self.state = SEEK
         self.head_text = ""
         self.say_text = ""
         # 整段被判为协议残留 —— 什么都不输出
         self._dead = False
+        self._blocked = False       # 已输出正常前缀后遇到不安全内容，后续全部截断
         self.tail_text = ""
         self._bare = False          # 模型完全没按协议来，整段都是回复
         self._emitted = False       # 是否已经吐过非空白内容
         self._pending_ws = ""       # 已收下但还没吐的尾部空白
+        self._raw_chunks: list[str] = []
+        self._expression_only = expression_only
 
         # 流式只负责标记边界，不审查内容。
         # 「猜你」那类问题属于措辞，归 prompt 和统计管 —— 在流式层删句子
@@ -106,11 +128,16 @@ class StreamParser:
 
     # ------------------------------------------------------------ 主接口
 
+    @property
+    def output_blocked(self) -> bool:
+        return self._blocked
+
     def feed(self, chunk: str) -> list[str]:
         """返回这一片里可以立刻发出去的文本。"""
         if not chunk:
             return []
-        if self._dead:
+        self._raw_chunks.append(chunk)
+        if self._dead or self._blocked:
             # 已经判定整段是协议残留 —— 后续内容一律不吐
             return []
         self.buf += chunk
@@ -140,8 +167,11 @@ class StreamParser:
 
         return self._trim(raw)
 
-    def finish(self) -> ParsedTurn:
-        """收尾。把还扣在缓冲区里的东西处理掉。"""
+    def finish(self, *, interrupted: bool = False) -> ParsedTurn:
+        """正常收尾才释放缓冲；中断时丢弃未交付文本和未完成的 TAIL。"""
+        if interrupted:
+            self.buf = ""
+            self.tail_text = ""
         self._flush_tail_ws()
         if self.buf:
             if self.state == SEEK:
@@ -153,11 +183,7 @@ class StreamParser:
                 # 缓冲区里可能是半截标记（"你好<<<HE"）。
                 # 无条件并进 say_text 的话，用户看到「你好」，
                 # 而账本里记的是「你好<<<HE」。实测踩过。
-                hold = 0
-                for marker in _SAY_END:
-                    for k in range(1, len(marker)):
-                        if self.buf.endswith(marker[:k]):
-                            hold = max(hold, k)
+                hold = max(_holdback(self.buf, _SAY_END), _safety_holdback(self.buf))
                 keep = self.buf[:-hold] if hold else self.buf
                 if keep:
                     self.say_text += keep
@@ -193,6 +219,8 @@ class StreamParser:
             errors.append("缺少 TAIL")
         if not say:
             errors.append("缺少 SAY")
+        if self._blocked:
+            errors.append("流式输出遇到协议残留，已截断可疑内容")
 
         return ParsedTurn(
             head=head,
@@ -203,6 +231,8 @@ class StreamParser:
             # 否则上游完全不知道这轮发生过违规。
             read_aloud=detect_read_aloud(say) + list(self._suppressed),
             errors=errors,
+            structural_errors=section_errors("".join(self._raw_chunks),
+                                             expression_only=self._expression_only),
         )
 
     # ------------------------------------------------------------ 空白处理
@@ -314,10 +344,27 @@ class StreamParser:
         # 按内部段收取其余内容，不能等 finish() 才发现已经泄露。
         previous_line = self.say_text.rsplit("\n", 1)[-1]
         field = re.search(
-            r"^[ \t]*(need|confidence|direct|baseline|displace)[ \t]*[:：]",
+            r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)[ \t]*[:：]",
             self.buf, re.MULTILINE | re.IGNORECASE)
         hits = [(self.buf.find(m), m) for m in _SAY_END]
         hits = [(i, m) for i, m in hits if i >= 0]
+        unsafe = [m.start() for m in _INTERNAL_START.finditer(self.buf)]
+        for marker in _SECTION_LOOSE.finditer(self.buf):
+            # 两个 > 可能还在长成标准三字符结尾，先扣住再决定。
+            complete = marker.end() < len(self.buf) or marker.group().endswith(">>>")
+            if complete and marker.group() not in MARKERS:
+                unsafe.append(marker.start())
+        if unsafe:
+            cut = min(unsafe)
+            if (not hits or cut < min(i for i, _ in hits)) \
+                    and (field is None or cut < field.start()):
+                piece = self.buf[:cut]
+                self.say_text += piece
+                if piece:
+                    out.append(piece)
+                self.buf = ""
+                self._blocked = True
+                return False
         if field and (field.start() > 0 or not previous_line.strip()) \
                 and (not hits or field.start() < min(i for i, _ in hits)):
             piece = self.buf[:field.start()]
@@ -347,7 +394,7 @@ class StreamParser:
             return True
 
         # 没到结尾。扣住可能是标记前缀的尾巴。
-        hold = _holdback(self.buf, _SAY_END)
+        hold = max(_holdback(self.buf, _SAY_END), _safety_holdback(self.buf))
         n = len(self.buf) - hold
         start = self.buf.rfind("\n", 0, n) + 1
         last_line = self.buf[start:n]

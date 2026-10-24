@@ -7,11 +7,49 @@ from __future__ import annotations
 
 import json
 import os
+import threading
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit, urlunsplit
 from typing import Callable, Iterator
 
 Message = dict[str, str]
+
+
+def _describe(fn, url, model, **conditions):
+    parts = urlsplit(url)
+    host = parts.netloc.rsplit("@", 1)[-1]
+    fn.metadata = {"kind": "openai_compatible", "conditions_known": True,
+                   "endpoint": urlunsplit((parts.scheme, host, parts.path, "", "")),
+                   "model": model, **conditions}
+    fn.observations = threading.local()
+    return fn
+
+
+def _response(payload, choice=None):
+    return {"id": payload.get("id"), "model": payload.get("model"),
+            "system_fingerprint": payload.get("system_fingerprint"),
+            "usage": payload.get("usage"),
+            "finish_reason": (choice or {}).get("finish_reason")}
+
+
+def _safe_extra(extra):
+    allowed = {"temperature", "top_p", "max_tokens", "seed", "stop",
+               "presence_penalty", "frequency_penalty", "reasoning_effort",
+               "thinking", "response_format"}
+    return {k: v for k, v in (extra or {}).items() if k in allowed}
+
+
+def _extra_conditions(extra):
+    safe = _safe_extra(extra)
+    unknown = sorted(set(extra or {}) - safe.keys())
+    return {"extra": safe, "unrecorded_extra_keys": unknown, "conditions_known": not unknown}
+
+
+def _validate_extra(extra):
+    reserved = {"model", "messages", "stream", "tools", "tool_choice"}
+    if reserved.intersection(extra or {}):
+        raise ValueError("extra cannot override model, messages or protocol routing")
 
 
 def _endpoint(base_url: str | None, api_key: str | None,
@@ -48,6 +86,7 @@ def openai_compatible(
     timeout: float = 60.0,
     extra: dict | None = None,
 ) -> Callable[[list[Message]], str]:
+    _validate_extra(extra)
     url, key, timeout = _endpoint(base_url, api_key, timeout)
     _default_max = max_tokens
 
@@ -57,6 +96,7 @@ def openai_compatible(
         判定器需要按待判条数动态给预算 —— 固定值在挂满预言时会把
         JSON 输出截断，整批解析失败。主对话用默认值即可。
         """
+        call.observations.response = None
         body = {
             "model": model,
             "messages": messages,
@@ -66,16 +106,20 @@ def openai_compatible(
         if extra:
             body.update(extra)
         payload = _post(url, key, body, timeout)
-        # content 可能是 None —— 模型只回了 tool_calls、被 content_filter
-        # 拦下、或者拒答。直接返回 None 会让下游 parse 里 text.find 崩。
-        # 返回空串，让 parse 走「缺少 SAY」的正常失败路径。
+        # 内容缺失返回空串；明确标为截断或拦截的生成不能当作完成。
         try:
-            content = payload["choices"][0]["message"].get("content")
+            choice = payload["choices"][0]
+            content = choice["message"].get("content")
         except (KeyError, IndexError, TypeError):
             return ""
+        call.observations.response = _response(payload, choice)
+        reason = choice.get("finish_reason")
+        if reason not in (None, "stop"):
+            raise RuntimeError(f"生成未正常完成：finish_reason={reason}")
         return content if isinstance(content, str) else ""
 
-    return call
+    return _describe(call, url, model, temperature=temperature, max_tokens=max_tokens,
+                     timeout=timeout, **_extra_conditions(extra))
 
 
 def openai_tool_call(
@@ -90,8 +134,8 @@ def openai_tool_call(
 ) -> Callable[..., dict]:
     """强制模型把输出填进一个函数的参数里，返回解析后的 dict。
 
-    这是「兜底协议」的底层：结构由 JSON Schema 保证，
-    字段不可能缺失、类型不可能错、也不会有标记藏在正文里。
+    请求端点按 JSON Schema 返回结构。兼容端点未必严格执行 schema，
+    因此关键阶段仍需由上层验证字段与类型。
 
     用法：
         fn = openai_tool_call("deepseek-chat")
@@ -100,11 +144,13 @@ def openai_tool_call(
     失败（模型不调工具 / JSON 坏）一律抛 RuntimeError ——
     由上层决定要不要退回文本协议。
     """
+    _validate_extra(extra)
     url, key, timeout = _endpoint(base_url, api_key, timeout)
     _default_max = max_tokens
 
     def call(messages: list[Message], *, tool: dict,
              max_tokens: int | None = None) -> dict:
+        call.observations.response = None
         body = {
             "model": model,
             "messages": messages,
@@ -117,10 +163,17 @@ def openai_tool_call(
         if extra:
             body.update(extra)
         payload = _post(url, key, body, timeout)
-        msg = payload["choices"][0]["message"]
+        choice = payload["choices"][0]
+        call.observations.response = _response(payload, choice)
+        reason = choice.get("finish_reason")
+        if reason not in (None, "stop", "tool_calls"):
+            raise RuntimeError(f"工具生成未正常完成：finish_reason={reason}")
+        msg = choice["message"]
         calls = msg.get("tool_calls") or []
         if not calls:
             raise RuntimeError("模型没有调用工具")
+        if len(calls) != 1 or calls[0].get("function", {}).get("name") != tool["function"]["name"]:
+            raise RuntimeError("模型返回的工具不匹配所请求的阶段")
         raw = calls[0]["function"]["arguments"]
         try:
             data = json.loads(raw)
@@ -130,7 +183,8 @@ def openai_tool_call(
             raise RuntimeError(f"工具参数不是对象：{type(data).__name__}")
         return data
 
-    return call
+    return _describe(call, url, model, temperature=temperature, max_tokens=max_tokens,
+                     timeout=timeout, **_extra_conditions(extra))
 
 
 def openai_stream(
@@ -144,8 +198,8 @@ def openai_stream(
 ) -> Callable[[list[Message]], "Iterator[str]"]:
     """流式版本。逐片吐文本增量。
 
-    注意：这里只做 SSE 的最小实现，够跑通。生产环境请换官方 SDK
-    处理重连、超时和 usage 统计。
+    这里只做 SSE 的最小实现，识别完成、截断与中断，不自动重试。
+    更完整的事件处理和 usage 统计可替换适配器，不改变上层交付约定。
     """
     base = (base_url or os.environ.get("PERSONA_BASE_URL")
             or "https://api.openai.com/v1").rstrip("/")
@@ -153,6 +207,7 @@ def openai_stream(
     url = base + "/chat/completions"
 
     def call(messages: list[Message]):
+        call.observations.response = None
         body = {
             "model": model,
             "messages": messages,
@@ -170,6 +225,7 @@ def openai_stream(
             },
             method="POST",
         )
+        completed = False
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             for raw in resp:
                 line = raw.decode("utf-8", "replace").strip()
@@ -180,14 +236,32 @@ def openai_stream(
                     return
                 try:
                     obj = json.loads(payload)
-                    delta = obj["choices"][0].get("delta", {})
-                    piece = delta.get("content")
-                except (json.JSONDecodeError, KeyError, IndexError):
+                except json.JSONDecodeError:
                     continue
+                if isinstance(obj, dict) and obj.get("error"):
+                    raise RuntimeError(f"流式服务错误：{obj['error']}")
+                choices = obj.get("choices") if isinstance(obj, dict) else None
+                if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+                    continue
+                choice = choices[0]
+                previous = call.observations.response or {}
+                observation = _response(obj, choice)
+                call.observations.response = {**previous, **{
+                    k: v for k, v in observation.items() if v is not None}}
+                delta = choice.get("delta") or {}
+                piece = delta.get("content")
                 if piece:
                     yield piece
+                reason = choice.get("finish_reason")
+                if reason is not None:
+                    if reason != "stop":
+                        raise RuntimeError(f"生成未正常完成：finish_reason={reason}")
+                    completed = True
+        if not completed:
+            raise RuntimeError("生成流式中断：连接结束但未收到完成标记")
 
-    return call
+    return _describe(call, url, model, temperature=temperature, max_tokens=max_tokens,
+                     timeout=timeout, stream=True)
 
 
 def text_prompt(fn: Callable[..., str]) -> Callable[[str], str]:
@@ -206,6 +280,8 @@ def text_prompt(fn: Callable[..., str]) -> Callable[[str], str]:
     def call(prompt: str) -> str:
         return fn([{"role": "user", "content": prompt}])
 
+    call.metadata = getattr(fn, "metadata", {"kind": "custom", "conditions_known": False})
+    call.observations = getattr(fn, "observations", threading.local())
     return call
 
 

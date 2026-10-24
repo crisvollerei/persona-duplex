@@ -229,7 +229,7 @@ class TestStreamingHoldback(Base):
         self.assertNotIn("<<<", sp.finish().say)
 
 
-class TestStreamingFallback(Base):
+class TestStreamingFailure(Base):
     def test_no_duplicate_output_after_partial_stream(self):
         """流吐了一半断掉，退回整段重来会让用户看到重复的半句。"""
         raw = make_reply("need: a\nconfidence: 0.6\ndirect: x\ndisplace: none", "好的。")
@@ -239,20 +239,28 @@ class TestStreamingFallback(Base):
             raise RuntimeError("connection reset")
 
         seen: list[str] = []
-        e = TurnEngine(_cfg(), self.store, ScriptedLLM([raw]), stream_llm=broken)
+        llm = ScriptedLLM([raw])
+        e = TurnEngine(_cfg(), self.store, llm, stream_llm=broken)
         res = e.turn("hi", on_delta=lambda p: seen.append(p))
         self.assertEqual("".join(seen), res.say)
+        self.assertEqual(llm.calls, [])
 
-    def test_falls_back_when_nothing_emitted(self):
-        """一片都没吐出去时，回退整段是安全的，必须回退。"""
+    def test_no_retry_when_nothing_emitted(self):
+        """默认即使首片前断线，也不另发整段请求。"""
         raw = make_reply("need: a\nconfidence: 0.6\ndirect: x\ndisplace: none", "好的。")
 
         def broken(messages):
             yield ""
             raise RuntimeError("连接在首片就断了")
 
-        e = TurnEngine(_cfg(), self.store, ScriptedLLM([raw]), stream_llm=broken)
-        self.assertEqual(e.turn("hi", on_delta=lambda p: None).say, "好的。")
+        llm = ScriptedLLM([raw])
+        e = TurnEngine(_cfg(), self.store, llm, stream_llm=broken)
+        seen = []
+        with self.assertRaisesRegex(RuntimeError, "首片"):
+            e.turn("hi", on_delta=seen.append)
+        self.assertEqual(seen, [])
+        self.assertEqual(llm.calls, [])
+        self.assertFalse(any(row["kind"] == "turn" for row in self.store.read_ledger()))
 
 
 class TestPendingLimits(Base):

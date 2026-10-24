@@ -11,6 +11,7 @@ import re
 from dataclasses import dataclass, field
 
 from .parse import _similar
+from .store import is_diagnostic_judgment
 
 HIT = {"CONFIRMED", "CONFIRMED'"}
 MISS = {"REFUTED", "REFUTED'"}
@@ -35,12 +36,15 @@ class Metrics:
     # 解析失败（没有 displace 字段）的轮次 —— 不进位移率分母
     unparsed: int = 0
     unknown_basis: int = 0  # 旧口径或缺人格基准，不能混入新位移率
+    invalid_turns: int = 0
+    generation_failures: int = 0
 
     repair_opened: int = 0
     repair_attempted: int = 0
     repair_healed: int = 0
     repair_rejected: int = 0
     repair_residual: int = 0
+    repair_paused: int = 0
 
     conf_pairs: list[tuple[float, bool]] = field(default_factory=list)
     displace_kinds: dict[str, int] = field(default_factory=dict)
@@ -61,6 +65,7 @@ class Metrics:
     # 判断：写了几条、推翻了几条
     judgments: int = 0
     judgments_superseded: int = 0
+    diagnostic_judgments: int = 0
 
     # ---------------------------------------------------------- 派生
 
@@ -71,7 +76,7 @@ class Metrics:
         分母只算**成功解析出 displace 的轮次** —— 解析失败（displace 为空）
         的那些轮不是「没有位移」，是「不知道」，算进分母会拉低比率。
         """
-        known = self.turns - self.unparsed - self.unknown_basis
+        known = self.turns - self.unparsed - self.unknown_basis - self.invalid_turns
         return self.displaced / known if known > 0 else 0.0
 
     @property
@@ -86,7 +91,7 @@ class Metrics:
 
     @property
     def repair_success_rate(self) -> float | None:
-        """修复成功率。没发起过就返回 None —— 0 和「没有」是两回事。
+        """接受措辞记录/全部开启记录；保留旧 API 名称，不代表心理修复真值。
 
         分母包含「开了但没人理」的修复。只算已结案的话，
         10 次受伤里 9 次没回应、1 次治愈会报成「成功率 100%」——
@@ -174,7 +179,11 @@ def compute(ledger: list[dict]) -> Metrics:
             # 「明确没位移」（none）混成一个，unparsed 永远是 0。
             disp = rec.get("displace")
 
-            if disp is None or disp == "":
+            flags = rec.get("probe") or {}
+            if (rec.get("validity") or {}).get("valid") is False or any(
+                    flags.get(k) for k in ("stream_interrupted", "output_blocked")):
+                m.invalid_turns += 1
+            elif disp is None or disp == "":
                 # 解析失败：不知道有没有位移，不进分母
                 m.unparsed += 1
             elif rec.get("displacement_basis") != "persona_baseline" or not baseline.strip():
@@ -203,6 +212,8 @@ def compute(ledger: list[dict]) -> Metrics:
                 else:
                     m.watches += 1
 
+        elif kind == "generation_failure":
+            m.generation_failures += 1
         elif kind == "pending_expire":
             # 过期的预言走的是 pending_expire，不是 pending_settle。
             # 只认 pending_settle 的话，EXPIRED 永远是 0。
@@ -233,9 +244,12 @@ def compute(ledger: list[dict]) -> Metrics:
                 m.watches += 1
 
         elif kind == "judgment_add":
-            m.judgments += 1
-            if rec.get("supersedes"):
-                m.judgments_superseded += 1
+            if is_diagnostic_judgment(rec):
+                m.diagnostic_judgments += 1
+            else:
+                m.judgments += 1
+                if rec.get("supersedes"):
+                    m.judgments_superseded += 1
 
         elif kind == "trait_update":
             m.trait_updates += 1
@@ -261,6 +275,8 @@ def compute(ledger: list[dict]) -> Metrics:
             m.repair_rejected += 1
         elif kind == "repair_residual":
             m.repair_residual += 1
+        elif kind == "repair_paused":
+            m.repair_paused += 1
 
     # 校准配对：把 pending_settle 和当初那条 pending_add 的 confidence 对上
     conf_by_id = {
@@ -314,11 +330,14 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
     """把指标翻译成诊断。返回 (等级, 项目, 说明)。"""
     out: list[tuple[str, str, str]] = []
 
-    if m.turns - m.unparsed - m.unknown_basis:
+    if m.turns - m.unparsed - m.unknown_basis - m.invalid_turns:
         rate = m.displacement_rate
         out.append(("info", "位移率", f"{rate:.0%}（相对人格基准，模型自报；低不等于无人格）"))
     if m.unknown_basis:
         out.append(("info", "口径未知", f"{m.unknown_basis} 轮旧口径/缺人格基准，不计新位移率"))
+    if m.invalid_turns or m.generation_failures:
+        out.append(("warn", "异常样本", f"{m.invalid_turns} 轮本地协议无效，不计位移率；"
+                    f"{m.generation_failures} 次生成/提交失败，不能当作正常无位移"))
 
     if m.declarations:
         out.append(("fail", "声明违规",
@@ -338,7 +357,7 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
         elif m.is_overconfident():
             out.append(("warn", "校准",
                         f"平均把握 {sum(c for c, _ in m.conf_pairs) / len(m.conf_pairs):.2f}"
-                        f" 但命中 {m.accuracy:.0%} —— 在读空气"))
+                        f" 但配对样本命中 {m.paired_accuracy():.0%} —— 在读空气"))
         else:
             out.append(("ok", "校准",
                         f"偏差 {gap:.2f}，Brier {m.brier:.3f}"))
@@ -355,24 +374,28 @@ def verdicts(m: Metrics) -> list[tuple[str, str, str]]:
 
     if m.repair_opened:
         rate = m.repair_success_rate
-        detail = (f"{m.repair_opened} 次受伤，"
-                  f"{m.repair_attempted} 次修复")
+        detail = (f"{m.repair_opened} 条暂定记录，"
+                  f"{m.repair_attempted} 次尝试")
         if rate is not None:
-            detail += f"，成功率 {rate:.0%}"
-        level = "ok" if (rate is None or rate >= 0.5) else "warn"
-        out.append((level, "受伤修复", detail))
+            detail += f"，接受措辞记录占 {rate:.0%}（不是心理真值）"
+        out.append(("info", "修复观察", detail))
+        if m.repair_paused:
+            out.append(("info", "修复暂停",
+                        f"{m.repair_paused} 条已停止追问，不推断长期雷区"))
         if m.repair_rejected:
             out.append(("info", "修复被拒",
-                        f"{m.repair_rejected} 次 —— 已转雷区"))
+                        f"{m.repair_rejected} 条旧版拒绝记录"))
         if m.repair_residual:
             out.append(("warn", "修复无回应",
-                        f"{m.repair_residual} 次 —— 可能没被听见"))
+                        f"{m.repair_residual} 条历史/显式残留记录，不证明受伤"))
 
     if m.judgments:
         detail = f"{m.judgments} 条"
         if m.judgments_superseded:
             detail += f"（{m.judgments_superseded} 条推翻了旧的）"
         out.append(("info", "判断记忆", detail))
+    if m.diagnostic_judgments:
+        out.append(("info", "读法诊断", f"{m.diagnostic_judgments} 条模型读法计数，不属于用户判断记忆"))
 
     if m.trait_updates or m.anchor_updates:
         out.append(("info", "人格漂移",

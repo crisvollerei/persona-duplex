@@ -33,6 +33,10 @@ DISPLACE_KINDS = (
     "多余",   # 解释过量
 )
 
+TRAIT_NAMES = frozenset(("initiative", "intervention", "self_disclosure", "brevity", "warmth",
+                         "formality", "affect_range", "imagery", "learning_openness"))
+PHRASE_SCENES = frozenset(("greeting", "comfort", "promise", "answer", "farewell"))
+
 
 @dataclass(frozen=True)
 class StanceRule:
@@ -55,7 +59,16 @@ def _parse_traits(raw: dict) -> dict[str, "Trait"]:
     """
     out: dict[str, Trait] = {}
     for name, spec in (raw or {}).items():
+        if name not in TRAIT_NAMES:
+            raise ValueError(f"Unknown trait: {name}")
         if isinstance(spec, dict):
+            for key in ("anchor", "plasticity", "drift", "lo", "hi"):
+                val = spec.get(key, 1.0 if key == "hi" else 0.0)
+                if isinstance(val, bool) or not isinstance(val, (int, float)) or not math.isfinite(val) \
+                        or not 0 <= val <= 1:
+                    raise ValueError(f"Invalid trait value: {name}.{key}")
+            if not spec.get("lo", 0) <= spec.get("anchor", 0) <= spec.get("hi", 1):
+                raise ValueError(f"Trait anchor outside bounds: {name}")
             out[name] = Trait(
                 anchor=float(spec.get("anchor", 0.0)),
                 plasticity=float(spec.get("plasticity", 0.0)),
@@ -64,7 +77,11 @@ def _parse_traits(raw: dict) -> dict[str, "Trait"]:
                 hi=float(spec.get("hi", 1.0)),
             )
         elif isinstance(spec, (int, float)):
+            if isinstance(spec, bool) or not math.isfinite(spec) or not 0 <= spec <= 1:
+                raise ValueError(f"Invalid trait value: {name}")
             out[name] = Trait(anchor=float(spec))
+        else:
+            raise ValueError(f"Invalid trait definition: {name}")
     return out
 
 
@@ -279,7 +296,7 @@ class Role:
     identity: str = ""
     # 按场景注入的句式。键是场景名（greeting / comfort / promise / answer / farewell）
     phrases: dict[str, list[str]] = field(default_factory=dict)
-    # 特殊触发的行为提示：[{when, note}]，由 need / 关键词触发注入
+    # 特殊提示：[{when, note, keywords}]，由本轮用户文本的显式关键词触发
     special: list[dict] = field(default_factory=list)
 
     def traits_state(self) -> dict:
@@ -330,6 +347,47 @@ class PersonaConfig:
     # 话题判定：接 LLM 做语义判断，异步跑，不开思考模式
     judge_enabled: bool = True
     judge_grace: float = 0.35
+
+    def validate(self) -> None:
+        def bounded(name, value, lo, hi):
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) \
+                    or not lo <= value <= hi:
+                raise ValueError(f"{name} must be finite and in [{lo}, {hi}]")
+        bounded("bias", self.role.bias, -1, 1)
+        if self.role.attention not in ("surface", "subtle"):
+            raise ValueError("Unknown attention policy")
+        if type(self.role.legibility_max) is not int or self.role.legibility_max not in (0, 1, 2):
+            raise ValueError("legibility_max must be 0, 1 or 2")
+        for name, trait in self.role.traits.items():
+            if name not in TRAIT_NAMES:
+                raise ValueError(f"Unknown trait: {name}")
+            for key in ("anchor", "value", "plasticity", "drift", "lo", "hi"):
+                bounded(f"{name}.{key}", getattr(trait, key), 0, 1)
+            if trait.lo > trait.hi:
+                raise ValueError(f"Inverted trait bounds: {name}")
+        unknown = self.role.phrases.keys() - PHRASE_SCENES
+        if unknown:
+            raise ValueError(f"Unknown phrase scene: {sorted(unknown)}")
+        for item in self.role.special:
+            keys = item.get("keywords")
+            if not isinstance(keys, list) or not keys or any(
+                    not isinstance(k, str) or not k.strip() for k in keys):
+                raise ValueError("special requires explicit keywords; 'when' is descriptive only")
+        bounded("closeness_step", self.limits.closeness_step, 0, 1)
+        for key in ("unresolved_max", "pending_max", "pending_total_max"):
+            value = getattr(self.limits, key)
+            if type(value) is not int or value < 0 or (key == "unresolved_max" and value == 0):
+                raise ValueError(f"Invalid limit: {key}")
+        bounded("confidence_floor", self.confidence_floor, 0, 1)
+        bounded("judge_grace", self.judge_grace, 0, 3600)
+        bounded("watch_ttl_hours", self.watch_ttl_hours, 0, 1e9)
+        end = -math.inf
+        for row in self.stance_table:
+            bounded("stance.lo", row.lo, 0, 1.01)
+            bounded("stance.hi", row.hi, 0, 1.01)
+            if row.lo >= row.hi or row.lo < end or row.stance not in STANCES:
+                raise ValueError("Invalid or overlapping stance intervals")
+            end = row.hi
 
     # ---------------------------------------------------------- 判定
 
@@ -390,6 +448,11 @@ class PersonaConfig:
     @classmethod
     def from_dict(cls, raw: dict) -> "PersonaConfig":
         r = raw.get("role", {})
+        for section, keys in ((r, ("legibility_max",)),
+                              (raw.get("limits", {}), ("unresolved_max", "pending_max", "pending_total_max"))):
+            for key in keys:
+                if key in section and type(section[key]) is not int:
+                    raise ValueError(f"{key} must be an integer")
         role = Role(
             name=r.get("name", "默认"),
             bias=float(r.get("bias", 0.0)),
@@ -399,7 +462,8 @@ class PersonaConfig:
             identity=str(r.get("identity", "") or ""),
             traits=_parse_traits(raw.get("params", {})),
             phrases=_parse_phrases(raw.get("phrases", {})),
-            special=[{"when": str(x.get("when", "")), "note": str(x.get("note", ""))}
+            special=[{"when": str(x.get("when", "")), "note": str(x.get("note", "")),
+                      "keywords": x.get("keywords", [])}
                      for x in (raw.get("special", []) or []) if isinstance(x, dict)],
         )
 
@@ -407,6 +471,8 @@ class PersonaConfig:
 
         table: list[StanceRule] = []
         for row in raw.get("stance_table", {}).get("rows", []):
+            if not isinstance(row, list) or len(row) != 3:
+                raise ValueError("Each stance row must contain lo, hi and stance")
             lo, hi, stance = row[0], row[1], row[2]
             if stance not in STANCES:
                 raise ValueError(f"未知站位: {stance}")
@@ -419,6 +485,7 @@ class PersonaConfig:
                 StanceRule(0.25, 0.50, STANCE_ASK),
                 StanceRule(0.00, 0.25, STANCE_UNSURE),
             ]
+        table.sort(key=lambda x: x.lo)
 
         lim = raw.get("limits", {})
         limits = Limits(
@@ -430,7 +497,9 @@ class PersonaConfig:
 
         watch = raw.get("watch", {})
         judge = raw.get("judge", {})
-        return cls(
+        if "enabled" in judge and type(judge["enabled"]) is not bool:
+            raise ValueError("judge.enabled must be a boolean")
+        cfg = cls(
             role=role,
             needs=needs,
             stance_table=table,
@@ -440,3 +509,5 @@ class PersonaConfig:
             judge_enabled=bool(judge.get("enabled", True)),
             judge_grace=float(judge.get("grace", 0.35)),
         )
+        cfg.validate()
+        return cfg

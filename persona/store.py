@@ -6,11 +6,15 @@ rebuild_views 只恢复既有结果，不会按新参数重跑模型或重新判
 from __future__ import annotations
 
 import json
+import math
 import os
 import threading
+from contextlib import contextmanager
+from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from uuid import uuid4
 
 _LOCAL_TZ = timezone(timedelta(hours=8))
 
@@ -48,34 +52,110 @@ class Store:
         self.self_story_path = self.root / "self-story.md"
 
         self._lock = threading.RLock()
+        # 固化跨模型调用互斥；与前台读写锁分离，不能卡住对话。
+        self.consolidation_lock = threading.Lock()
         self._counters: dict[str, int] = {}
+        self._transaction: dict | None = None
+        self._recovery_needed = True
+        self.recover_commits()
 
     # ------------------------------------------------------------ 账本
 
     def append(self, kind: str, payload: dict[str, Any]) -> dict[str, Any]:
         rec = {"t": now_iso(), "kind": kind, **payload}
         with self._lock:
-            with self.ledger_path.open("a", encoding="utf-8") as f:
-                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-                f.flush()
-                os.fsync(f.fileno())
+            if self._transaction is not None:
+                self._transaction["events"].append(rec)
+            else:
+                self._append_record(rec)
         return rec
 
-    def read_ledger(self) -> list[dict[str, Any]]:
+    def _append_record(self, rec: dict) -> None:
+        encoded = (json.dumps(rec, ensure_ascii=False, allow_nan=False) + "\n").encode("utf-8")
+        with self.ledger_path.open("a+b") as f:
+            f.seek(0, os.SEEK_END)
+            if f.tell():
+                f.seek(-1, os.SEEK_END)
+                if f.read(1) != b"\n":
+                    # Preserve damaged bytes, but never concatenate the next record to them.
+                    f.write(b"\n")
+            f.write(encoded)
+            f.flush()
+            os.fsync(f.fileno())
+
+    def _raw_ledger(self) -> list[dict]:
         if not self.ledger_path.exists():
             return []
         out = []
-        with self.ledger_path.open("r", encoding="utf-8") as f:
+        with self.ledger_path.open("rb") as f:
             for line in f:
-                line = line.strip()
-                if not line:
-                    continue
                 try:
-                    out.append(json.loads(line))
-                except json.JSONDecodeError:
-                    # 半行 = 上次写到一半被杀了。跳过，不让它毒化重放。
+                    rec = json.loads(line.decode("utf-8"))
+                except (UnicodeDecodeError, json.JSONDecodeError):
                     continue
+                if isinstance(rec, dict):
+                    out.append(rec)
         return out
+
+    def read_ledger(self) -> list[dict[str, Any]]:
+        with self._lock:
+            out = []
+            for rec in self._raw_ledger():
+                if rec.get("kind") == "commit":
+                    out.extend(r for r in rec.get("events", []) if isinstance(r, dict))
+                else:
+                    out.append(rec)
+            if self._transaction is not None:
+                out.extend(self._transaction["events"])
+            return deepcopy(out)
+
+    @contextmanager
+    def transaction(self):
+        """Short local commit only; never hold this context over a model request."""
+        with self._lock:
+            if self._transaction is not None:
+                yield
+                return
+            self.recover_commits()
+            tx = {"t": now_iso(), "kind": "commit", "commit_id": uuid4().hex,
+                  "events": [], "views": {}, "buffers": []}
+            self._transaction = tx
+            try:
+                yield
+                if not (tx["events"] or tx["views"] or tx["buffers"]):
+                    return
+                if tx["views"] and tx["events"]:
+                    tx["events"][-1]["state_after"] = deepcopy(tx["views"])
+                self._recovery_needed = True
+                self._append_record(tx)
+            finally:
+                self._transaction = None
+            self.recover_commits()
+
+    def recover_commits(self) -> None:
+        """Publish committed views/outbox after a crash; completed memory is not requeued."""
+        with self._lock:
+            if not self._recovery_needed or self._transaction is not None:
+                return
+            rows = self._raw_ledger()
+            checkpoint = self._read_view("commit_checkpoint", {}).get("commit_id")
+            commits = [r for r in rows if r.get("kind") == "commit"]
+            consumed = {eid for r in rows for event in (
+                r.get("events", []) if r.get("kind") == "commit" else [r])
+                if event.get("kind") == "memory_batch_commit"
+                for eid in event.get("event_ids", [])}
+            start = next((i + 1 for i, r in enumerate(commits)
+                          if r.get("commit_id") == checkpoint), 0)
+            for tx in commits[start:]:
+                for name, data in tx.get("views", {}).items():
+                    self._write_view(name, data)
+                for item in tx.get("buffers", []):
+                    if item["event"].get("_event_id") not in consumed:
+                        self._publish_buffer(item)
+                if any(r.get("kind") in ("story_seed", "story_entry") for r in tx.get("events", [])):
+                    self.rebuild_story()
+                self._write_view("commit_checkpoint", {"commit_id": tx["commit_id"]})
+            self._recovery_needed = False
 
     def rebuild_story(self) -> bool:
         """恢复有账本依据的叙事；没有新记录时保留旧版独立文件。"""
@@ -87,7 +167,15 @@ class Store:
                 parts.append(f"\n## {rec['t']}\n\n{rec.get('entry', '')}\n")
         if not parts:
             return False
-        self.self_story_path.write_text("".join(parts), encoding="utf-8")
+        tmp = self.self_story_path.with_suffix(f".{uuid4().hex}.tmp")
+        try:
+            with tmp.open("w", encoding="utf-8") as f:
+                f.write("".join(parts))
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(tmp, self.self_story_path)
+        finally:
+            tmp.unlink(missing_ok=True)
         return True
 
     # ------------------------------------------------------------ ID
@@ -107,7 +195,8 @@ class Store:
                 used = 0
                 if kind:
                     for r in self.read_ledger():
-                        if r.get("kind") != kind:
+                        if r.get("kind") != kind and not (
+                                prefix == "t" and r.get("kind") == "turn_start"):
                             continue
                         try:
                             used = max(used, int(str(r.get(key, "")).rsplit("_", 1)[-1]))
@@ -129,6 +218,13 @@ class Store:
         区分「这个视图确实不存在」和「存在但是空的」。
         比如 pendings() 要用这个信号触发从账本重放。
         """
+        with self._lock:
+            self.recover_commits()
+            if self._transaction is not None and name in self._transaction["views"]:
+                return deepcopy(self._transaction["views"][name])
+            return self._read_view(name, default)
+
+    def _read_view(self, name: str, default=None):
         p = self._view_path(name)
         if not p.exists():
             return None if default is None else dict(default)
@@ -136,17 +232,28 @@ class Store:
             got = json.loads(p.read_text(encoding="utf-8"))
             return got if isinstance(got, dict) else (None if default is None
                                                       else dict(default))
-        except (OSError, json.JSONDecodeError):
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError):
             return None if default is None else dict(default)
 
     def save_view(self, name: str, data: dict) -> None:
-        p = self._view_path(name)
-        # tmp 文件名要带 pid —— 固定名字在两个进程同时写时会互撞。
-        # 实测：两个 Store 各写 60 次，21~29 次 PermissionError。
-        tmp = p.with_suffix(f".{os.getpid()}.tmp")
         with self._lock:
-            tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+            if self._transaction is not None:
+                self._transaction["views"][name] = deepcopy(data)
+            else:
+                self.recover_commits()
+                self._write_view(name, data)
+
+    def _write_view(self, name: str, data: dict) -> None:
+        p = self._view_path(name)
+        tmp = p.with_suffix(f".{uuid4().hex}.tmp")
+        try:
+            with tmp.open("w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
+                f.flush()
+                os.fsync(f.fileno())
             os.replace(tmp, p)
+        finally:
+            tmp.unlink(missing_ok=True)
 
     # ------------------------------------------------------------ 关系
 
@@ -275,25 +382,33 @@ class Store:
 
     # ------------------------------------------------------------ 判断
 
-    def judgments(self, limit: int = 5) -> list[dict]:
+    def judgments(self, limit: int | None = 5) -> list[dict]:
         """判断记忆。从**账本**重放，不是从 jsonl 读。
 
         为什么要迁进账本：判断层原本是账本之外的旁路文件，
         导致「同一份账本换策略重放」这个承诺对判断层不成立 ——
         state/ 删了能重建关系，但判断永远重建不出来。
 
-        兼容：如果账本是空的、而 judgments.jsonl 还在，先导入一次。
+        包含用户判断和诊断记录；前台请使用 user_judgments()。
+        limit=None 返回全部活跃记录。兼容旧 judgments.jsonl 的一次性导入。
         """
         ledger = self.read_ledger()
         if not any(r.get("kind", "").startswith("judgment") for r in ledger):
             self._import_legacy_judgments()
             ledger = self.read_ledger()
-        return replay_judgments(ledger)[-limit:]
+        records = replay_judgments(ledger)
+        return records if limit is None else records[-limit:] if limit > 0 else []
+
+    def user_judgments(self, limit: int | None = 5) -> list[dict]:
+        """先排除模型读法计数，再截取供用户记忆使用的暂定判断。"""
+        records = [j for j in self.judgments(limit=None) if not is_diagnostic_judgment(j)]
+        return records if limit is None else records[-limit:] if limit > 0 else []
 
     def add_judgment(self, judgment: str, confidence: float,
                      evidence_ids: list[str] | None = None,
                      supersedes: str | None = None,
-                     affects: dict | None = None) -> dict:
+                     affects: dict | None = None, source: str = "explicit",
+                     batch_id: str = "", evidence_scope: str = "specified") -> dict:
         """写一条判断。落账本。
 
         affects 是「这条判断指向哪个人格参数、什么方向」：
@@ -306,7 +421,8 @@ class Store:
         # 单独就能越过 min_consensus=1.4 的共识闸门 ——
         # 实测「孤证」一条就能推动参数。
         try:
-            conf = max(0.0, min(1.0, float(confidence)))
+            conf = float(confidence)
+            conf = max(0.0, min(1.0, conf)) if math.isfinite(conf) else 0.5
         except (TypeError, ValueError):
             conf = 0.5
 
@@ -318,6 +434,9 @@ class Store:
             target = live.get(str(supersedes))
             if target is None:
                 supersedes = None          # 悬空 -> 当作不推翻
+            elif is_diagnostic_judgment(target) != is_diagnostic_judgment({
+                    "source": source, "evidence_scope": evidence_scope}):
+                supersedes = None
             elif float(target.get("confidence", 0.0)) > conf + 0.2:
                 # 置信度差太多，新证据不足以推翻旧的
                 supersedes = None
@@ -328,11 +447,13 @@ class Store:
             "evidence_ids": evidence_ids or [],
             "supersedes": supersedes,
             "affects": dict(affects or {}),
+            "source": source, "batch_id": batch_id, "evidence_scope": evidence_scope,
         })
         return {"id": jid, "judgment": judgment,
-                "confidence": round(float(confidence), 3),
+                "confidence": round(conf, 3),
                 "evidence_ids": evidence_ids or [],
                 "supersedes": supersedes, "affects": dict(affects or {}),
+                "source": source, "batch_id": batch_id, "evidence_scope": evidence_scope,
                 "superseded_by": None}
 
     def next_judgment_id(self) -> str:
@@ -374,6 +495,9 @@ class Store:
                     "evidence_ids": rec.get("evidence_ids", []),
                     "supersedes": rec.get("supersedes"),
                     "affects": rec.get("affects", {}),
+                    "source": rec.get("source", "legacy_unknown"),
+                    "batch_id": rec.get("batch_id", ""),
+                    "evidence_scope": rec.get("evidence_scope", "unknown"),
                     "imported": True,
                 })
                 n += 1
@@ -394,6 +518,10 @@ class Store:
         return replay_traits(self.read_ledger())
 
     def init_traits(self, state: dict, *, persona: str = "") -> None:
+        with self.transaction():
+            self._init_traits(state, persona=persona)
+
+    def _init_traits(self, state: dict, *, persona: str = "") -> None:
         """首次载入时把 persona.toml 的参数快照进账本。
 
         只写一次。之后所有变化都靠 trait_update / anchor_update 记录，
@@ -409,7 +537,7 @@ class Store:
         """
         existing = [r for r in self.read_ledger() if r.get("kind") == "traits_init"]
         if existing:
-            prev = existing[0].get("persona", "")
+            prev = self.persona_name()
             # 老账本没有 persona 字段（这个字段是后加的）。
             # 那种情况**不能**当作「换了人格」—— 否则升级一次就把所有
             # 历史人格漂移清零。实测：warmth 0.80 升级后变回 0.70。
@@ -503,20 +631,61 @@ class Store:
         互相覆盖 —— 实测 10 条只存下 5 条。真实对话碰不到（一轮要几秒），
         但离线批量补跑、测试、脚本回放都会触发，而且是静默丢数据。
 
-        加一个进程内递增序号兜底。
+        使用稳定事件 ID 和唯一文件名，提交恢复时可避免重复入队。
         """
         with self._lock:
-            self._buffer_seq = getattr(self, "_buffer_seq", 0) + 1
-            seq = self._buffer_seq
-        stamp = datetime.now(_LOCAL_TZ).strftime("%Y%m%d%H%M%S%f")
-        p = self.buffer_dir / f"{stamp}_{seq:06d}.json"
-        p.write_text(json.dumps(rec, ensure_ascii=False), encoding="utf-8")
+            stamp = datetime.now(_LOCAL_TZ).strftime("%Y%m%d%H%M%S%f")
+            eid = rec.get("_event_id") or uuid4().hex
+            item = {"filename": f"{stamp}_{eid}.json", "event": {**rec, "_event_id": eid}}
+            if self._transaction is not None:
+                self._transaction["buffers"].append(item)
+            else:
+                self._publish_buffer(item)
+
+    def _publish_buffer(self, item: dict) -> None:
+        p = self.buffer_dir / item["filename"]
+        if p.exists() or (self.processing_dir / p.name).exists():
+            return
+        tmp = p.with_suffix(".tmp")
+        try:
+            with tmp.open("w", encoding="utf-8") as f:
+                json.dump(item["event"], f, ensure_ascii=False, allow_nan=False)
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(tmp, p)
+        finally:
+            tmp.unlink(missing_ok=True)
 
     @property
     def processing_dir(self) -> Path:
         d = self.buffer_dir / "processing"
         d.mkdir(parents=True, exist_ok=True)
         return d
+
+    def recover_buffer(self) -> None:
+        """在固化锁内恢复上次崩溃留下的暂存事件，再进行本批分档。"""
+        self._drained = [p.name for p in self.processing_dir.glob("*.json")]
+        self.restore_drained()
+        consumed = {eid for r in self.read_ledger() if r.get("kind") == "memory_batch_commit"
+                    for eid in r.get("event_ids", [])}
+        for p in self.buffer_dir.glob("*.json"):
+            try:
+                event = json.loads(p.read_text(encoding="utf-8"))
+                if not isinstance(event, dict):
+                    raise ValueError("Buffer event must be an object")
+                if event.get("_event_id", p.stem) in consumed:
+                    p.unlink()
+            except ValueError as exc:
+                self._quarantine_buffer(p, exc)
+            except OSError:
+                continue
+
+    def _quarantine_buffer(self, path: Path, error: Exception) -> None:
+        self.append("buffer_error", {"file": path.name, "error_type": type(error).__name__})
+        target = path.with_suffix(".invalid")
+        if target.exists():
+            target = path.with_suffix(f".{uuid4().hex}.invalid")
+        path.rename(target)
 
     def drain_buffer(self, max_items: int = 20) -> list[dict]:
         """把积压的事件取出来。
@@ -528,14 +697,19 @@ class Store:
         for p in sorted(self.buffer_dir.glob("*.json"))[:max_items]:
             try:
                 rec = json.loads(p.read_text(encoding="utf-8"))
-            except (OSError, json.JSONDecodeError):
-                p.unlink(missing_ok=True)      # 坏文件丢掉，没别的办法
+                if not isinstance(rec, dict):
+                    raise ValueError("Buffer event must be an object")
+            except ValueError as exc:
+                self._quarantine_buffer(p, exc)
                 continue
+            except OSError:
+                continue
+            rec.setdefault("_event_id", p.stem)
             try:
                 p.rename(self.processing_dir / p.name)
                 moved.append(p.name)
             except OSError:
-                pass
+                continue
             out.append(rec)
         self._drained = moved
         return out
@@ -556,7 +730,10 @@ class Store:
             src = self.processing_dir / name
             if src.exists():
                 try:
-                    src.rename(self.buffer_dir / name)
+                    dst = self.buffer_dir / name
+                    if dst.exists():
+                        dst = self.buffer_dir / f"{src.stem}_recovered_{uuid4().hex}.json"
+                    src.rename(dst)
                 except OSError:
                     pass
         self._drained = []
@@ -655,8 +832,9 @@ def replay_traits(ledger: list[dict]) -> dict:
             cur["anchor"] = float(cur.get("anchor", 0.0)) + delta
             # value 跟着平移，保持相对位置 —— 否则 anchor 一动，
             # value 可能立刻越界被夹住，看起来像人格突变。
-            cur["value"] = _clamp_trait(
-                float(cur.get("value", 0.0)) + delta, cur)
+            from .config import Trait
+            moved = Trait.from_state({**cur, "value": float(cur.get("value", 0.0)) + delta})
+            cur["anchor"], cur["value"] = moved.anchor, moved.value
     return state
 
 
@@ -671,6 +849,12 @@ def _clamp_trait(value: float, spec: dict) -> float:
     from .config import Trait
     t = Trait.from_state({**spec, "value": value})
     return t.value
+
+
+def is_diagnostic_judgment(record: dict) -> bool:
+    """旧启发式记录也只证明模型反复这样读，不能作为用户倾向。"""
+    return (record.get("source") in ("heuristic", "heuristic_fallback")
+            or record.get("evidence_scope") == "need_count")
 
 
 def replay_judgments(ledger: list[dict]) -> list[dict]:
@@ -694,6 +878,9 @@ def replay_judgments(ledger: list[dict]) -> list[dict]:
             "supersedes": r.get("supersedes"),
             "superseded_by": None,
             "affects": dict(r.get("affects") or {}),
+            "source": r.get("source", "legacy_unknown"),
+            "batch_id": r.get("batch_id", ""),
+            "evidence_scope": r.get("evidence_scope", "unknown"),
             "t": r.get("t", ""),
         })
     superseded: dict[str, str] = {}
@@ -738,8 +925,8 @@ def rebuild_views(store: "Store", limits=None) -> dict:
 
     只恢复已记录的结果，不会按新参数重新运行模型或决策，不是反事实实验。
 
-    limits 用运行时的同一份限额。不传就按默认（unresolved_max=3）——
-    重放和运行时必须用同一套限幅，否则重建出来的状态和原来不一样。
+    新记录以实际提交的 state_after 快照为准；旧记录优先使用随事件记录的 limits，
+    缺失时才使用显式 limits 或默认值。这不是换参数重做决策的入口。
 
     要重放的**全部**在线状态都得在这里：
       relation  —— 关系
@@ -779,6 +966,8 @@ def rebuild_views(store: "Store", limits=None) -> dict:
 
     for rec in ledger:
         k = rec.get("kind")
+        if limits is None and isinstance(rec.get("limits"), dict):
+            unresolved_max = int(rec["limits"].get("unresolved_max", unresolved_max))
         if k == "turn":
             for key, val in (rec.get("relation_delta") or {}).items():
                 if key == "closeness":
@@ -819,6 +1008,8 @@ def rebuild_views(store: "Store", limits=None) -> dict:
                     state="open", created=rec.get("t", ""),
                     turn_seq=int(rec.get("turn_seq", 0) or 0))
             if rec["note"] not in rel["unresolved"]:
+                if len(rel["unresolved"]) >= max(1, unresolved_max):
+                    rel["unresolved"].pop(0)
                 rel["unresolved"].append(rec["note"])
         elif k == "repair_attempt":
             r = _repair(rec["note"])
@@ -833,6 +1024,21 @@ def rebuild_views(store: "Store", limits=None) -> dict:
             rel["unresolved"] = [u for u in rel["unresolved"] if u != rec["note"]]
             if rec["note"] not in rel["sore_points"]:
                 rel["sore_points"].append(rec["note"])
+        elif k == "repair_paused":
+            _repair(rec["note"], state="paused")
+            rel["unresolved"] = [u for u in rel["unresolved"] if u != rec["note"]]
+
+        snapshot = rec.get("state_after") or {}
+        if "relation" in snapshot:
+            rel = deepcopy(snapshot["relation"])
+        if "pending" in snapshot:
+            pend = {p["id"]: deepcopy(p) for p in snapshot["pending"]["items"]}
+        if "repair" in snapshot:
+            repairs = deepcopy(snapshot["repair"]["items"])
+        if "style" in snapshot:
+            style = deepcopy(snapshot["style"])
+        if "runtime" in snapshot:
+            store.save_view("runtime", snapshot["runtime"])
 
     store.save_view("relation", rel)
     store.save_view("pending", {"items": list(pend.values())})

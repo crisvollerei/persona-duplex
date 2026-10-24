@@ -1,12 +1,13 @@
 """会话与后台线程测试。
 
 重点：后台必须真的跑起来，退出时必须把积压清掉。
-慢层一直是空的，那「成长」就不存在。
+消费成功不保证必须产出新判断；记忆不是自动人格成长。
 """
 from __future__ import annotations
 
 import sys
 import tempfile
+import threading
 import time
 import unittest
 from pathlib import Path
@@ -25,7 +26,8 @@ def _cfg() -> PersonaConfig:
 
 
 def _reply(need="只想被听", say="嗯。"):
-    return make_reply(f"need: {need}\nconfidence: 0.6\ndirect: x\ndisplace: none", say)
+    return make_reply(f"need: {need}\nconfidence: 0.6\ndirect: x\nbaseline: 嗯。\ndisplace: none",
+                      say, "settle: -")
 
 
 class TestSessionLifecycle(unittest.TestCase):
@@ -86,13 +88,18 @@ class TestSessionLifecycle(unittest.TestCase):
                                            consolidate_on_exit=False)) as s:
             s.say("今天好累")
             s.say("路上还堵了")
-            deadline = time.time() + 3
-            while time.time() < deadline:
-                if (self.store.root / "self-story.md").exists():
+            deadline = time.monotonic() + 3
+            consumed = set()
+            while time.monotonic() < deadline:
+                consumed = {eid for row in self.store.read_ledger()
+                            if row.get("kind") == "memory_batch_commit"
+                            for eid in row.get("event_ids", [])}
+                if len(consumed) == 2:
                     break
                 time.sleep(0.02)
-        self.assertTrue((self.store.root / "self-story.md").exists(),
-                        "后台线程没有产出")
+        # The worker may consume the two turns in separate batches, neither of
+        # which has enough repeated evidence to justify a new judgment/story.
+        self.assertEqual(len(consumed), 2, "后台线程没有处理全部积压")
 
     def test_consolidate_now(self):
         with Session(_cfg(), self.store, ScriptedLLM([_reply()] * 2),
@@ -102,6 +109,54 @@ class TestSessionLifecycle(unittest.TestCase):
             s.say("路上还堵了")
             out = s.consolidate_now()
         self.assertGreaterEqual(out["judgments"], 1)
+
+    def test_say_returns_while_background_memory_model_is_still_running(self):
+        entered = threading.Event()
+        release = threading.Event()
+        returned = threading.Event()
+        memory_threads = []
+        errors = []
+        results = []
+        llm = ScriptedLLM([_reply(), _reply()])
+
+        def slow_memory(prompt):
+            memory_threads.append(threading.current_thread().name)
+            entered.set()
+            release.wait()
+            return "[]"
+
+        def foreground():
+            try:
+                results.append(session.say("今天好累"))
+            except Exception as exc:
+                errors.append(exc)
+            finally:
+                returned.set()
+
+        session = Session(_cfg(), self.store, llm, consolidate_llm=slow_memory,
+                          options=SessionConfig(consolidate_interval=0.01,
+                                                consolidate_on_exit=False))
+        worker = threading.Thread(target=foreground, daemon=True)
+        try:
+            worker.start()
+            self.assertTrue(returned.wait(3), "前台不应等待记忆提炼")
+            self.assertTrue(entered.wait(3), "后台没有开始提炼")
+            worker.join(timeout=3)
+            self.assertEqual(errors, [])
+            self.assertEqual(memory_threads, ["persona-consolidator"])
+
+            returned.clear()
+            worker = threading.Thread(target=foreground, daemon=True)
+            worker.start()
+            self.assertTrue(returned.wait(3), "后台尚未完成时下一轮也应返回")
+            self.assertFalse(release.is_set())
+            self.assertEqual(errors, [])
+            self.assertEqual(len(results), 2)
+            self.assertEqual(len(llm.calls), 2)
+        finally:
+            release.set()
+            worker.join(timeout=3)
+            session.close()
 
 
 class TestStreamingSession(unittest.TestCase):
@@ -129,18 +184,21 @@ class TestStreamingSession(unittest.TestCase):
         self.assertEqual("".join(seen), "嗯，然后呢。")
         self.assertEqual(res.say, "嗯，然后呢。")
 
-    def test_stream_falls_back_on_error(self):
-        """流断了要退回整段，不能吞掉整轮。"""
-        raw = make_reply("need: a\nconfidence: 0.6\ndirect: x\ndisplace: none", "好的。")
+    def test_stream_error_keeps_partial_without_another_model_call(self):
+        """流断了保留已发出的内容，不自动补发整段请求。"""
 
         def broken(messages):
             yield "<<<SAY>>>好"
             raise RuntimeError("connection reset")
 
-        with Session(_cfg(), self.store, ScriptedLLM([raw]), stream_llm=broken,
+        llm = ScriptedLLM(["不应被调用"])
+        seen = []
+        with Session(_cfg(), self.store, llm, stream_llm=broken,
                      options=SessionConfig(consolidate_interval=999)) as s:
-            res = s.say("hi")
-        self.assertEqual(res.say, "好的。")
+            res = s.say("hi", on_delta=seen.append)
+        self.assertEqual(res.say, "好")
+        self.assertEqual("".join(seen), res.say)
+        self.assertEqual(llm.calls, [])
 
 
 if __name__ == "__main__":

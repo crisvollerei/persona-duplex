@@ -199,7 +199,9 @@ class EngineTests(unittest.TestCase):
         def tool(messages, *, tool, **kwargs):
             if tool["function"]["name"] == "raw_reply":
                 return {"raw": "可以先休息。", "need": "只想被听", "confidence": 0.6,
-                        "displace": "反差"}
+                        "constraints": [], "displace": "反差"}
+            if tool["function"]["name"] == "check_fidelity":
+                return {"verdict": "consistent", "reason": "陪伴意象没有现实事实冲突"}
             return {"settle": [], "pending": None}
 
         output = reply("茶还没凉。", baseline="我想再陪你一会儿。", displace="转移")

@@ -57,7 +57,7 @@ class TestLLMJudge(unittest.TestCase):
         self.assertEqual(LLMJudge(llm).judge(_req())["p_1"].verdict, LEFT)
 
     def test_code_fence_tolerated(self):
-        llm = ScriptedLLM(['```json\n[{"id":"p_1","verdict":"returned"}]\n```'])
+        llm = ScriptedLLM(['```json\n[{"id":"p_1","verdict":"returned","why":"投了两家简历"}]\n```'])
         self.assertEqual(LLMJudge(llm).judge(_req())["p_1"].verdict, RETURNED)
 
     def test_garbage_becomes_unclear(self):
@@ -110,7 +110,7 @@ class TestBigramFallback(unittest.TestCase):
 
 class TestAsyncJudge(unittest.TestCase):
     def test_returns_llm_result_when_fast(self):
-        inner = LLMJudge(ScriptedLLM(['[{"id":"p_1","verdict":"returned"}]']))
+        inner = LLMJudge(ScriptedLLM(['[{"id":"p_1","verdict":"returned","why":"投了两家简历"}]']))
         h = AsyncJudge(inner, grace=3.0).submit(_req())
         verdicts, source = h.collect()
         self.assertEqual(source, "llm")
@@ -137,7 +137,7 @@ class TestAsyncJudge(unittest.TestCase):
 
         h = AsyncJudge(boom, grace=1.0).submit(_req(user="今天天气不错"))
         verdicts, source = h.collect()
-        self.assertEqual(source, "late")
+        self.assertEqual(source, "error")
         self.assertIn(verdicts["p_1"].verdict, (LEFT, RETURNED, UNCLEAR))
 
     def test_zero_budget_never_waits(self):
@@ -184,7 +184,7 @@ class TestEngineIntegration(unittest.TestCase):
         """这是接 LLM 的全部意义：字面不重合但语义对上了。"""
         p = self._seed_pending()
         judge = AsyncJudge(
-            LLMJudge(ScriptedLLM([f'[{{"id":"{p["id"]}","verdict":"returned"}}]'])),
+            LLMJudge(ScriptedLLM([f'[{{"id":"{p["id"]}","verdict":"returned","why":"投了两家简历"}}]'])),
             grace=3.0,
         )
         e = TurnEngine(_cfg(), self.store,
@@ -198,7 +198,7 @@ class TestEngineIntegration(unittest.TestCase):
     def test_semantic_explicit_contradiction_refutes(self):
         p = self._seed_pending()
         judge = AsyncJudge(
-            LLMJudge(ScriptedLLM([f'[{{"id":"{p["id"]}","verdict":"left"}}]'])),
+            LLMJudge(ScriptedLLM([f'[{{"id":"{p["id"]}","verdict":"left","why":"不准备给方案"}}]'])),
             grace=3.0,
         )
         e = TurnEngine(_cfg(), self.store,

@@ -51,6 +51,7 @@ class Calibration:
     # 整轮耗时，拿它比 grace 会把「生成慢」误报成「判定超时」。
     judge_elapsed: list[float] = field(default_factory=list)
     judge_sources: dict[str, int] = field(default_factory=dict)
+    judge_budgets: list[float] = field(default_factory=list)
     # 有多少轮账本只有旧的 elapsed 字段（无法区分判定耗时和生成耗时）
     legacy_elapsed: int = 0
 
@@ -60,6 +61,7 @@ class Calibration:
     # 判断记忆的产出速率
     judgments: int = 0
     turns: int = 0
+    diagnostic_judgments: int = 0
 
     # ---------------------------------------------------------- 统计
 
@@ -102,12 +104,14 @@ def collect(ledger: list[dict]) -> Calibration:
 
     这也是为什么读这个模块时要注意：它的样本量和 turns 不是一回事。
     """
-    from .store import replay_traits
+    from .store import is_diagnostic_judgment, replay_traits
 
     cal = Calibration()
     cal.trait_state = replay_traits(ledger)
     cal.anchor_updates = sum(1 for r in ledger if r.get("kind") == "anchor_update")
-    cal.judgments = sum(1 for r in ledger if r.get("kind") == "judgment_add")
+    records = [r for r in ledger if r.get("kind") == "judgment_add"]
+    cal.diagnostic_judgments = sum(is_diagnostic_judgment(r) for r in records)
+    cal.judgments = len(records) - cal.diagnostic_judgments
     cal.turns = sum(1 for r in ledger if r.get("kind") == "turn")
 
     # 同一轮可能对同一条预言判多次（挂起后每轮重判）。
@@ -136,6 +140,7 @@ def collect(ledger: list[dict]) -> Calibration:
                 el = j.get("judge_elapsed")
                 if isinstance(el, (int, float)):
                     cal.judge_elapsed.append(float(el))
+                    cal.judge_budgets.append(float(j.get("grace", GRACE)))
             elif isinstance(j.get("elapsed"), (int, float)):
                 cal.legacy_elapsed += 1
 
@@ -211,12 +216,18 @@ def findings(cal: Calibration) -> list[Finding]:
                 f"只有 {len(cal.judge_elapsed)} 条判定耗时样本 —— 至少 10 条才下结论"))
     elif cal.judge_elapsed:
         el = sorted(cal.judge_elapsed)
-        over = sum(1 for x in el if x > GRACE)
-        rate = over / len(el)
+        # Availability at collection, not total background duration, determines a timeout.
+        active = sum(v for k, v in cal.judge_sources.items() if k != "none")
+        over = cal.judge_sources.get("late", 0)
+        if not active:
+            budgets = cal.judge_budgets or [GRACE] * len(cal.judge_elapsed)
+            over = sum(x > budget for x, budget in zip(cal.judge_elapsed, budgets))
+        budget_label = "各轮记录的预算" if cal.judge_budgets else f"{GRACE}s"
+        rate = over / (active or len(el))
         if rate > 0.3:
             out.append(Finding(
                 "warn", "grace",
-                f"{rate:.0%} 的轮次判定没在 {GRACE}s 内返回（中位 "
+                f"{rate:.0%} 的轮次收集时判定仍未返回（{budget_label}；中位 "
                 f"{cal.pct(el, 0.5):.2f}s）—— 要么放宽 grace，要么换更快的模型"
             ))
         else:
@@ -278,6 +289,8 @@ def findings(cal: Calibration) -> list[Finding]:
         rate = cal.judgments / cal.turns
         out.append(Finding("info", "判断产出",
                            f"{cal.judgments} 条 / {cal.turns} 轮（{rate:.2f}/轮）；不设产出配额"))
+    if cal.diagnostic_judgments:
+        out.append(Finding("info", "读法诊断", f"{cal.diagnostic_judgments} 条模型读法计数；不计用户判断产出"))
 
     if not cal.samples:
         out.append(Finding(

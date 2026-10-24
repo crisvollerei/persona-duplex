@@ -1,12 +1,15 @@
 """会话生命周期：引擎、后台记忆提炼、账本与退出收尾。
 
+默认前台一次生成三段；记忆在后台异步提炼，不是回复必经的串行调用。
 默认后台只记录暂定认识和陪伴经历，不自动改变人格参数。成长策略尚待验证。
 """
 from __future__ import annotations
 
 import atexit
 import threading
-from dataclasses import dataclass
+import math
+from copy import deepcopy
+from dataclasses import asdict, dataclass
 from typing import Callable, Iterator
 
 from .config import PersonaConfig
@@ -14,6 +17,7 @@ from .consolidate import Consolidator
 from .engine import TurnEngine, TurnResult
 from .store import Store
 from .topicjudge import build_judge
+from .audit import model_info
 
 
 @dataclass
@@ -21,6 +25,10 @@ class SessionConfig:
     consolidate_interval: float = 300.0   # 后台多久跑一次
     consolidate_on_exit: bool = True      # 退出时补一次
     stream: bool = False                  # 是否用流式
+    fidelity_check: bool = False          # persona 实验：额外模型检查
+    json_fallback: bool = False           # persona 实验：工具失败后改用 JSON
+    memory_mode: str = "live"             # live | frozen (fixed long-term judgments)
+    condition: str = ""
 
 
 class Session:
@@ -42,6 +50,11 @@ class Session:
         options: SessionConfig | None = None,
     ):
         self.opts = options or SessionConfig()
+        cfg.validate()
+        if self.opts.memory_mode not in ("live", "frozen"):
+            raise ValueError("memory_mode must be live or frozen")
+        if not math.isfinite(self.opts.consolidate_interval) or self.opts.consolidate_interval <= 0:
+            raise ValueError("consolidate_interval must be finite and positive")
         self.store = store
 
         # 人格参数：账本里有快照就用快照，没有就用人格配置初始化。
@@ -73,28 +86,44 @@ class Session:
             ),
             protocol=protocol,
             tool_llm=tool_llm,
+            fidelity_check=self.opts.fidelity_check,
+            json_fallback=self.opts.json_fallback,
+            audit_options={"session": asdict(self.opts), "memory_model": model_info(consolidate_llm),
+                           "judge_model": model_info(fast_llm)},
         )
+        if self.opts.memory_mode == "frozen":
+            self.engine.memory_snapshot = deepcopy(store.user_judgments())
         # 慢层固化也走模型：没有 llm 时它只会数 need 出现几次，
         # 那不是「判断」，只是计数。给了模型才可能提炼出有洞察的判断。
-        self.consolidator = Consolidator(store, llm=consolidate_llm)
+        self.consolidator = Consolidator(store, llm=consolidate_llm,
+                                        audit_context={"run_id": self.engine.run["run_id"]})
         self._closed = False
-        self._lock = threading.Lock()
+        self._active_turn = False
+        self._lock = threading.RLock()
 
-        self.consolidator.start(self.opts.consolidate_interval)
+        if self.opts.memory_mode == "live":
+            self.consolidator.start(self.opts.consolidate_interval)
         atexit.register(self.close)
 
     # ------------------------------------------------------------ 对话
 
     def say(self, text: str, on_delta: Callable[[str], None] | None = None) -> TurnResult:
         """说一句，拿回一轮结果。"""
-        if self._closed:
-            raise RuntimeError("会话已关闭")
-        res = self.engine.turn(text, on_delta=on_delta)
-        self.engine.update_style_baseline(text)
-        return res
+        with self._lock:
+            if self._closed:
+                raise RuntimeError("会话已关闭")
+            if self._active_turn:
+                raise RuntimeError("不能在回复回调内重入会话")
+            self._active_turn = True
+            try:
+                return self.engine.turn(text, on_delta=on_delta)
+            finally:
+                self._active_turn = False
 
     def say_stream(self, text: str) -> "_StreamedTurn":
-        """流式说一句，逐片吐。返回的对象迭代耗尽后，本轮结果在 .result 上。
+        """迭代 SAY；此迭代包装器先完成一轮，实时输出请使用 say 的 on_delta。
+
+        返回的对象迭代耗尽后，本轮结果在 .result 上。
 
         返回的不是 generator 而是实现了迭代协议的对象 —— generator 上
         挂不了属性，而调用方需要拿到这一轮的 TurnResult（结算了什么、
@@ -109,6 +138,8 @@ class Session:
 
     def consolidate_now(self) -> dict:
         """手动催一次后台固化。测试和 CLI 用。"""
+        if self.opts.memory_mode == "frozen":
+            raise RuntimeError("冻结记忆条件下不能固化；请在独立的 live 会话中处理积压")
         return self.consolidator.run_once()
 
     def close(self) -> None:
@@ -116,11 +147,14 @@ class Session:
         with self._lock:
             if self._closed:
                 return
+            if self._active_turn:
+                raise RuntimeError("不能在回复回调内关闭会话；请在本轮结束后关闭")
             self._closed = True
-        try:
-            self.consolidator.stop()
-        finally:
-            if self.opts.consolidate_on_exit:
+            try:
+                self.consolidator.stop()
+            finally:
+                atexit.unregister(self.close)
+            if self.opts.consolidate_on_exit and self.opts.memory_mode == "live":
                 try:
                     self.consolidator.run_once()
                 except Exception as e:
