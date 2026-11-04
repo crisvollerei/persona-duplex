@@ -69,9 +69,9 @@ $$c_{\mathrm{eff}}=\mathrm{clip}(c_t+b,0,1).$$
 
 $$\mathrm{stance}(c_{\mathrm{eff}})=\begin{cases}
 \text{direct} & 0.80\leq c_{\mathrm{eff}}\leq1.00,\\
-\text{guess\_first} & 0.50\leq c_{\mathrm{eff}}<0.80,\\
-\text{ask\_only} & 0.25\leq c_{\mathrm{eff}}<0.50,\\
-\text{admit\_unsure} & 0.00\leq c_{\mathrm{eff}}<0.25.
+\text{guess\textunderscore first} & 0.50\leq c_{\mathrm{eff}}<0.80,\\
+\text{ask\textunderscore only} & 0.25\leq c_{\mathrm{eff}}<0.50,\\
+\text{admit\textunderscore unsure} & 0.00\leq c_{\mathrm{eff}}<0.25.
 \end{cases}$$
 
 [`PersonaConfig.stance_for`](../../persona/config.py) 还在低于 `confidence_floor`、但表项允许 `direct` 或 `guess_first` 时退回 `ask_only`；原本已为 `admit_unsure` 的表项不受此规则改变。配置可采用其他合法站位表。
