@@ -63,11 +63,11 @@ flowchart TD
 
 模型自报把握度为 $c_t$，角色偏移为 $b$，有效把握度为：
 
-$$c_{\mathrm{eff}}=\operatorname{clip}(c_t+b,0,1).$$
+$$c_{\mathrm{eff}}=\mathrm{clip}(c_t+b,0,1).$$
 
 常用站位表将其映射为：
 
-$$\operatorname{stance}(c_{\mathrm{eff}})=\begin{cases}
+$$\mathrm{stance}(c_{\mathrm{eff}})=\begin{cases}
 \text{direct} & 0.80\leq c_{\mathrm{eff}}\leq1.00,\\
 \text{guess\_first} & 0.50\leq c_{\mathrm{eff}}<0.80,\\
 \text{ask\_only} & 0.25\leq c_{\mathrm{eff}}<0.50,\\
@@ -95,7 +95,7 @@ $$I_i=[\max(l_i,a_i-d_i),\ \min(h_i,a_i+d_i)].$$
 显式调用 `push_traits` 时，未消费判断的同向置信度减去反向置信度达到默认阈值 `1.4` 才能推动。按推动方向计算到有效边界的饱和度 $\sigma_i$ 后，候选更新为：
 
 $$p_{\mathrm{eff}}=p_i\frac{1+\cos(\pi\sigma_i)}2,\qquad
-\Delta v_i=\operatorname{clip}(s,-1,1)\,p_{\mathrm{eff}}\,(0.15d_i),$$
+\Delta v_i=\mathrm{clip}(s,-1,1)\,p_{\mathrm{eff}}\,(0.15d_i),$$
 
 更新后再限制于 $I_i$，具体见 [`Trait.nudge`](../../persona/config.py)。置信度之和是工程闸门，不是相互独立证据的统计置信度。
 
