@@ -56,6 +56,7 @@ class Store:
         self.consolidation_lock = threading.Lock()
         self._counters: dict[str, int] = {}
         self._transaction: dict | None = None
+        self._ledger_cache: tuple[tuple[int, int], list[dict]] | None = None
         self._recovery_needed = True
         self.recover_commits()
 
@@ -71,6 +72,7 @@ class Store:
         return rec
 
     def _append_record(self, rec: dict) -> None:
+        self._ledger_cache = None
         encoded = (json.dumps(rec, ensure_ascii=False, allow_nan=False) + "\n").encode("utf-8")
         with self.ledger_path.open("a+b") as f:
             f.seek(0, os.SEEK_END)
@@ -84,8 +86,14 @@ class Store:
             os.fsync(f.fileno())
 
     def _raw_ledger(self) -> list[dict]:
-        if not self.ledger_path.exists():
+        try:
+            st = self.ledger_path.stat()
+        except OSError:
+            self._ledger_cache = None
             return []
+        key = (st.st_mtime_ns, st.st_size)
+        if self._ledger_cache is not None and self._ledger_cache[0] == key:
+            return self._ledger_cache[1]
         out = []
         with self.ledger_path.open("rb") as f:
             for line in f:
@@ -95,6 +103,7 @@ class Store:
                     continue
                 if isinstance(rec, dict):
                     out.append(rec)
+        self._ledger_cache = (key, out)
         return out
 
     def read_ledger(self) -> list[dict[str, Any]]:

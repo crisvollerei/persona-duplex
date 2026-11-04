@@ -72,7 +72,10 @@ def _post(url: str, key: str, body: dict, timeout: float) -> dict:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
-        detail = e.read().decode("utf-8", "replace")[:400]
+        try:
+            detail = e.read().decode("utf-8", "replace")[:400]
+        finally:
+            e.close()
         raise RuntimeError(f"LLM HTTP {e.code}: {detail}") from e
 
 
@@ -195,16 +198,15 @@ def openai_stream(
     temperature: float = 0.9,
     max_tokens: int = 900,
     timeout: float = 90.0,
+    extra: dict | None = None,
 ) -> Callable[[list[Message]], "Iterator[str]"]:
     """流式版本。逐片吐文本增量。
 
     这里只做 SSE 的最小实现，识别完成、截断与中断，不自动重试。
     更完整的事件处理和 usage 统计可替换适配器，不改变上层交付约定。
     """
-    base = (base_url or os.environ.get("PERSONA_BASE_URL")
-            or "https://api.openai.com/v1").rstrip("/")
-    key = api_key or os.environ.get("PERSONA_API_KEY") or ""
-    url = base + "/chat/completions"
+    _validate_extra(extra)
+    url, key, timeout = _endpoint(base_url, api_key, timeout)
 
     def call(messages: list[Message]):
         call.observations.response = None
@@ -215,6 +217,8 @@ def openai_stream(
             "max_tokens": max_tokens,
             "stream": True,
         }
+        if extra:
+            body.update(extra)
         data = json.dumps(body).encode("utf-8")
         req = urllib.request.Request(
             url, data=data,
@@ -226,7 +230,15 @@ def openai_stream(
             method="POST",
         )
         completed = False
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        try:
+            resp_ctx = urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as e:
+            try:
+                detail = e.read().decode("utf-8", "replace")[:400]
+            finally:
+                e.close()
+            raise RuntimeError(f"LLM HTTP {e.code}: {detail}") from e
+        with resp_ctx as resp:
             for raw in resp:
                 line = raw.decode("utf-8", "replace").strip()
                 if not line or not line.startswith("data:"):
@@ -247,13 +259,14 @@ def openai_stream(
                 previous = call.observations.response or {}
                 observation = _response(obj, choice)
                 call.observations.response = {**previous, **{
-                    k: v for k, v in observation.items() if v is not None}}
+                    k: v for k, v in observation.items()
+                    if v is not None and (k != "finish_reason" or v != "")}}
                 delta = choice.get("delta") or {}
                 piece = delta.get("content")
                 if piece:
                     yield piece
                 reason = choice.get("finish_reason")
-                if reason is not None:
+                if reason:
                     if reason != "stop":
                         raise RuntimeError(f"生成未正常完成：finish_reason={reason}")
                     completed = True
@@ -261,7 +274,7 @@ def openai_stream(
             raise RuntimeError("生成流式中断：连接结束但未收到完成标记")
 
     return _describe(call, url, model, temperature=temperature, max_tokens=max_tokens,
-                     timeout=timeout, stream=True)
+                     timeout=timeout, stream=True, **_extra_conditions(extra))
 
 
 def text_prompt(fn: Callable[..., str]) -> Callable[[str], str]:

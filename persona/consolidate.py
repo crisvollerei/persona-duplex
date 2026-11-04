@@ -108,7 +108,7 @@ class Consolidator:
     store: Store
     llm: Callable[[str], str] | None = None
     max_judgments_per_run: int = 3      # 单次硬上限（防止一次写太多）
-    max_evidence: int = 8
+    max_evidence: int = 12
     # 长期层单次推基线的**基础**幅度：drift 的这个比例。
     # 实际步长还要乘两个频率因子（见 _anchor_frequency），
     # 所以 0.05 只是「时间充裕时的满额步长」。
@@ -165,14 +165,14 @@ class Consolidator:
         攒得多说明刚聊完一长串，攒得少说明零星几句。
         不用第二手推算，也就没有时区/时钟/边界问题。
 
-            积压 ≥ 8  -> dense（刚聊完一长串）
-            积压 3-7  -> medium
+            积压 ≥ 12 -> dense（刚聊完一长串）
+            积压 3-11 -> medium
             积压 1-2  -> sparse（零星几句）
         """
         if self.gap_hours is not None:
             return ACTIVITY_PROFILES[activity_of([], gap_hours=self.gap_hours)]
         n = self._pending_count()
-        if n >= 8:
+        if n >= 12:
             return ACTIVITY_PROFILES["dense"]
         if n >= 3:
             return ACTIVITY_PROFILES["medium"]
@@ -251,7 +251,7 @@ class Consolidator:
         if self.gap_hours is not None:
             return activity_of([], gap_hours=self.gap_hours)
         n = self._pending_count()
-        return "dense" if n >= 8 else ("medium" if n >= 3 else "sparse")
+        return "dense" if n >= 12 else ("medium" if n >= 3 else "sparse")
 
     def _consolidate(self, events: list[dict], prof: dict | None = None) -> list[dict]:
         candidates = self._draft_judgments(events, prof)
@@ -552,67 +552,68 @@ class Consolidator:
 
         state = self.store.traits()
         changes: list[dict] = []
-        for (name, direction), supporters in votes.items():
-            # 用 **confidence 加权**判断「够不够共识」，而不是数条数。
+        with self.store.transaction():
+            for (name, direction), supporters in votes.items():
+                # 用 **confidence 加权**判断「够不够共识」，而不是数条数。
+                #
+                # 为什么不能数条数：实测一条判断通常只指向一个参数，而且各指各的。
+                # 一次固化产出 3 条，分别指向 self_disclosure / intervention / initiative，
+                # 每个参数只有 1 票 —— 按「2 条才算」的规则，中期层永远不动。
+                #
+                # 改成累加 confidence 之后：
+                #   3 条 0.7 的判断指向同一参数 -> 2.1 分，够
+                #   1 条 0.7 的判断             -> 0.7 分，不够
+                # 语义没变（还是「多条才动」），但不再要求字面意义上的「2 条」。
+                opp = votes.get((name, -direction), [])
+                mine = sum(float(j.get("confidence", 0.5)) for j in supporters)
+                theirs = sum(float(j.get("confidence", 0.5)) for j in opp)
+                net = mine - theirs
+                if net <= 0:
+                    continue
+                if net < min_consensus:
+                    continue
+
+                spec = state.get(name)
+                if spec is None:
+                    continue
+                trait = Trait.from_state(spec)
+                if trait.plasticity <= 0 or trait.drift <= 0:
+                    continue
+
+                # 信号强度 = 净可信度 / 阈值，夹到 1.0
+                signal = min(1.0, net / max(0.1, min_consensus))
+                before = trait.value
+                delta = trait.nudge(direction * signal)
+                if abs(delta) < 1e-6:
+                    continue
+
+                reason = (f"{len(supporters)} 条判断（可信度合计 {mine:.1f}）"
+                          f"指向 {name} {'+' if direction > 0 else '-'}")
+                self.store.update_trait(name, delta, reason=reason)
+                state[name]["value"] = trait.value
+                changes.append({"name": name, "delta": round(delta, 5),
+                                "value": round(trait.value, 4), "reason": reason})
+
+            # 没有实际变化也要把状态刷回去（可能被 clamp 过）
+            self.store.save_view("traits", {"traits": state})
+
+            # 只标记**真正推动了参数**的判断为已消费。
             #
-            # 为什么不能数条数：实测一条判断通常只指向一个参数，而且各指各的。
-            # 一次固化产出 3 条，分别指向 self_disclosure / intervention / initiative，
-            # 每个参数只有 1 票 —— 按「2 条才算」的规则，中期层永远不动。
+            # 为什么不是全部标记：
+            #   一条判断单独看不够阈值（比如 0.7 < 1.4），但它必须留着，
+            #   等后面来第二条同类证据一起凑够。如果立刻标记掉，
+            #   第二条来时又从零开始数 —— 永远凑不齐，中期层彻底不动。
             #
-            # 改成累加 confidence 之后：
-            #   3 条 0.7 的判断指向同一参数 -> 2.1 分，够
-            #   1 条 0.7 的判断             -> 0.7 分，不够
-            # 语义没变（还是「多条才动」），但不再要求字面意义上的「2 条」。
-            opp = votes.get((name, -direction), [])
-            mine = sum(float(j.get("confidence", 0.5)) for j in supporters)
-            theirs = sum(float(j.get("confidence", 0.5)) for j in opp)
-            net = mine - theirs
-            if net <= 0:
-                continue
-            if net < min_consensus:
-                continue
-
-            spec = state.get(name)
-            if spec is None:
-                continue
-            trait = Trait.from_state(spec)
-            if trait.plasticity <= 0 or trait.drift <= 0:
-                continue
-
-            # 信号强度 = 净可信度 / 阈值，夹到 1.0
-            signal = min(1.0, net / max(0.1, min_consensus))
-            before = trait.value
-            delta = trait.nudge(direction * signal)
-            if abs(delta) < 1e-6:
-                continue
-
-            reason = (f"{len(supporters)} 条判断（可信度合计 {mine:.1f}）"
-                      f"指向 {name} {'+' if direction > 0 else '-'}")
-            self.store.update_trait(name, delta, reason=reason)
-            state[name]["value"] = trait.value
-            changes.append({"name": name, "delta": round(delta, 5),
-                            "value": round(trait.value, 4), "reason": reason})
-
-        # 没有实际变化也要把状态刷回去（可能被 clamp 过）
-        self.store.save_view("traits", {"traits": state})
-
-        # 只标记**真正推动了参数**的判断为已消费。
-        #
-        # 为什么不是全部标记：
-        #   一条判断单独看不够阈值（比如 0.7 < 1.4），但它必须留着，
-        #   等后面来第二条同类证据一起凑够。如果立刻标记掉，
-        #   第二条来时又从零开始数 —— 永远凑不齐，中期层彻底不动。
-        #
-        # 那「凑不够的判断一直留着」会不会导致票数虚高？
-        #   不会。票数是从当前活跃判断实时累加的，判断本身不会被复制；
-        #   够阈值时一次性推一步，然后这些判断标记为已消费，不再参与。
-        pushed_ids: set[str] = set()
-        for (name, direction), supporters in votes.items():
-            if any(c["name"] == name for c in changes):
-                pushed_ids |= {j["id"] for j in supporters}
-                pushed_ids |= {j["id"] for j in votes.get((name, -direction), [])}
-        if pushed_ids:
-            self.store.set_cursor("judgment", sorted(consumed | pushed_ids), "ids")
+            # 那「凑不够的判断一直留着」会不会导致票数虚高？
+            #   不会。票数是从当前活跃判断实时累加的，判断本身不会被复制；
+            #   够阈值时一次性推一步，然后这些判断标记为已消费，不再参与。
+            pushed_ids: set[str] = set()
+            for (name, direction), supporters in votes.items():
+                if any(c["name"] == name for c in changes):
+                    pushed_ids |= {j["id"] for j in supporters}
+                    pushed_ids |= {j["id"] for j in votes.get((name, -direction), [])}
+            if pushed_ids:
+                self.store.set_cursor("judgment", sorted(consumed | pushed_ids), "ids")
         return changes
 
 
@@ -749,8 +750,13 @@ class Consolidator:
                   "没有明确变化就输出 []。不要为了有输出而编。"]
         prompt = "\n".join(lines)
 
+        calls: list[dict] = []
+        anchor_llm = traced(
+            self.llm, "anchor", lambda: calls,
+            lambda kind, row: self.store.append(kind, {**self.audit_context, **row}),
+        )
         try:
-            raw = self.llm(prompt) if self.llm else ""
+            raw = anchor_llm(prompt) if anchor_llm else ""
             items = json.loads(_extract_json(raw)) if raw else []
         except Exception:
             return []
@@ -758,80 +764,81 @@ class Consolidator:
             return []
 
         changes: list[dict] = []
-        # 不静默截断 —— 模型给 5 条只处理 3 条，后 2 条没人知道去哪了
-        for it in items[:8]:
-            if not isinstance(it, dict):
-                continue
-            name = str(it.get("name", "")).strip()
-            spec = state.get(name)
-            if spec is None:
-                continue
-            # 三态：>0 上推，<0 下推，0/无法解析 = 无效不动。
-            # 旧写法把「不指定方向」当成下推 —— 实测 direction=0 推出了 -0.006。
-            try:
-                d = float(it.get("direction", 0))
-            except (TypeError, ValueError):
-                continue
-            if abs(d) < 0.5:
-                continue
-            direction = 1 if d > 0 else -1
-            evidence = str(it.get("evidence", "")).strip()
-            if not evidence:
-                continue          # 没依据不动
+        with self.store.transaction():
+            # 不静默截断 —— 模型给 5 条只处理 3 条，后 2 条没人知道去哪了
+            for it in items[:8]:
+                if not isinstance(it, dict):
+                    continue
+                name = str(it.get("name", "")).strip()
+                spec = state.get(name)
+                if spec is None:
+                    continue
+                # 三态：>0 上推，<0 下推，0/无法解析 = 无效不动。
+                # 旧写法把「不指定方向」当成下推 —— 实测 direction=0 推出了 -0.006。
+                try:
+                    d = float(it.get("direction", 0))
+                except (TypeError, ValueError):
+                    continue
+                if abs(d) < 0.5:
+                    continue
+                direction = 1 if d > 0 else -1
+                evidence = str(it.get("evidence", "")).strip()
+                if not evidence:
+                    continue          # 没依据不动
 
-            trait = Trait.from_state(spec)
-            if trait.drift <= 0:
-                continue
+                trait = Trait.from_state(spec)
+                if trait.drift <= 0:
+                    continue
 
-            # 频率因子：刚推过 / 短时间推太多次，都要打折。
-            # 见 _anchor_frequency —— 没有它的话一次两小时对话就能
-            # 把基线推到 drift 边界。
-            freq = self._anchor_frequency()
-            if freq < self.ANCHOR_MIN_EFFECT:
-                # 系数太低，这次不推。不写账本 —— 否则会被 1e-5 级别的
-                # 噪声记录填满，而那些推动在数值上毫无意义。
-                continue
+                # 频率因子：刚推过 / 短时间推太多次，都要打折。
+                # 见 _anchor_frequency —— 没有它的话一次两小时对话就能
+                # 把基线推到 drift 边界。
+                freq = self._anchor_frequency()
+                if freq < self.ANCHOR_MIN_EFFECT:
+                    # 系数太低，这次不推。不写账本 —— 否则会被 1e-5 级别的
+                    # 噪声记录填满，而那些推动在数值上毫无意义。
+                    continue
 
-            step = trait.drift * self.ANCHOR_FRACTION * freq
-            before = trait.anchor
-            # anchor 也必须夹在物理边界里。
+                step = trait.drift * self.ANCHOR_FRACTION * freq
+                before = trait.anchor
+                # anchor 也必须夹在物理边界里。
+                #
+                # 少了这一步的后果（实测）：warmth 的 anchor 从 0.70 一路漂到 1.066，
+                # 超过 hi=0.92；value 跟着到 0.946 也越界。然后 Trait.clamp 的
+                # lo>hi 兜底把 value 设成 anchor，drift_room 退化成 (anchor, anchor)，
+                # nudge 永久返回 0 —— 参数被钉死在区间外，再也动不了。
+                trait.anchor = max(trait.lo, min(trait.hi, before + direction * step))
+                if abs(trait.anchor - before) < 1e-9:
+                    continue          # 已经贴到物理边界，推不动了
+                # value 保持相对位置
+                trait.value = trait.value + (trait.anchor - before)
+                trait.clamp()
+
+                # store.update_anchor 会拒绝没有 reason 的改动
+                rec = self.store.update_anchor(
+                    name, trait.anchor - before,
+                    reason=f"{evidence[:80]}（叙事驱动）")
+                if rec is None:
+                    continue
+                state[name]["anchor"] = trait.anchor
+                state[name]["value"] = trait.value
+                changes.append({"name": name, "delta": round(trait.anchor - before, 5),
+                                "anchor": round(trait.anchor, 4),
+                                "evidence": evidence[:60]})
+            if changes:
+                self.store.save_view("traits", {"traits": state})
+                # 记下这次推动的时间 —— 下次的频率因子要用它。
+                # 只在真的推了才记：否则「翻了一遍没推」也会算作一次推动，
+                # 把因子 2 的分母抬高，之后该推的时候反而推不动。
+                self._record_anchor_push()
+            # 记下读到哪儿了 —— 下次只看新增的部分。
+            # 注意：**无论有没有推动都要记**。否则一段「读过了但没判出变化」
+            # 的叙事会在下次固化时被重复读一遍，浪费调用还可能被重复判。
             #
-            # 少了这一步的后果（实测）：warmth 的 anchor 从 0.70 一路漂到 1.066，
-            # 超过 hi=0.92；value 跟着到 0.946 也越界。然后 Trait.clamp 的
-            # lo>hi 兜底把 value 设成 anchor，drift_room 退化成 (anchor, anchor)，
-            # nudge 永久返回 0 —— 参数被钉死在区间外，再也动不了。
-            trait.anchor = max(trait.lo, min(trait.hi, before + direction * step))
-            if abs(trait.anchor - before) < 1e-9:
-                continue          # 已经贴到物理边界，推不动了
-            # value 保持相对位置
-            trait.value = trait.value + (trait.anchor - before)
-            trait.clamp()
-
-            # store.update_anchor 会拒绝没有 reason 的改动
-            rec = self.store.update_anchor(
-                name, trait.anchor - before,
-                reason=f"{evidence[:80]}（叙事驱动）")
-            if rec is None:
-                continue
-            state[name]["anchor"] = trait.anchor
-            state[name]["value"] = trait.value
-            changes.append({"name": name, "delta": round(trait.anchor - before, 5),
-                            "anchor": round(trait.anchor, 4),
-                            "evidence": evidence[:60]})
-        if changes:
-            self.store.save_view("traits", {"traits": state})
-            # 记下这次推动的时间 —— 下次的频率因子要用它。
-            # 只在真的推了才记：否则「翻了一遍没推」也会算作一次推动，
-            # 把因子 2 的分母抬高，之后该推的时候反而推不动。
-            self._record_anchor_push()
-        # 记下读到哪儿了 —— 下次只看新增的部分。
-        # 注意：**无论有没有推动都要记**。否则一段「读过了但没判出变化」
-        # 的叙事会在下次固化时被重复读一遍，浪费调用还可能被重复判。
-        #
-        # 那「因为频率因子太低而跳过」的叙事会不会丢？
-        # 不会。self-story 是**追加写**的（_rewrite_story），
-        # 被跳过的变化会在后续叙事里重新表达 —— 代价是慢一点，不是丢失。
-        self.store.set_cursor("story", len(story), "offset")
+            # 那「因为频率因子太低而跳过」的叙事会不会丢？
+            # 不会。self-story 是**追加写**的（_rewrite_story），
+            # 被跳过的变化会在后续叙事里重新表达 —— 代价是慢一点，不是丢失。
+            self.store.set_cursor("story", len(story), "offset")
         return changes
 
     def _read_story(self) -> str:

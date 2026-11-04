@@ -710,9 +710,11 @@ class TurnEngine:
         失败一律退回文本协议 —— 这是兜底机制，不能自己变成新的故障点。
         """
         from . import protocol
+        from .prompt import stance_hint
 
         if self.tool_llm is None:
             warnings.append("未配置 tool_llm，退回文本协议")
+            self._probe["protocol"] = {"mode": "text_fallback", "reason": "no_tool_llm"}
             return self._generate(fallback_messages, on_delta)
 
         # ---- phase 1：内部参考（素回答、人格基准、额外位移）
@@ -727,17 +729,24 @@ class TurnEngine:
         except Exception as e:
             warnings.append(f"两阶段 phase 1 失败（{e}），退回文本协议")
             self._protocol_failures += 1
+            self._probe["protocol"] = {"mode": "text_fallback", "reason": "phase1_error"}
             return self._generate(fallback_messages, on_delta)
 
         self._probe["protocol"] = {"mode": "tool", "direct": inner.direct[:120]}
 
-        # ---- phase 2：把 direct 说成 say
+        # ---- phase 2：把 direct 说成 say（注入本轮 need 句式与本轮 confidence 站位提示）
+        phase2_sys = (
+            build_system_prompt(self.cfg, need=inner.need,
+                                first_turn=self._turn_seq <= 1, user_text=user_text)
+            + "\n\n" + stance_hint(self.cfg, inner.confidence)
+        )
         msgs2 = protocol.build_phase2_messages(
-            inner, self.history, user_text, system_prompt=sys_prompt, context=ctx)
+            inner, self.history, user_text, system_prompt=phase2_sys, context=ctx)
         say = ""
         say_raw = ""
         emitted: list[str] = []
         interrupted = False
+        sp_blocked = False
 
         def forward(piece):
             if piece:
@@ -767,10 +776,7 @@ class TurnEngine:
                     if remainder:
                         forward(remainder)
                 say = phase2.say
-                if sp.output_blocked:
-                    interrupted = True
-                    self._probe["output_blocked"] = True
-                    warnings.append("流式输出遇到协议残留，已截断可疑内容，不生成后续观察")
+                sp_blocked = sp.output_blocked
             else:
                 say_raw = self.llm(msgs2)
                 say = protocol.clean_phase2(say_raw)
@@ -789,6 +795,11 @@ class TurnEngine:
                 warnings.append(f"两阶段 phase 2 失败（{e}），已输出的部分就地收尾")
                 say = safe_say("".join(emitted))
             else:
+                self._probe["protocol"] = {
+                    **self._probe.get("protocol", {}),
+                    "mode": "text_fallback",
+                    "reason": "phase2_error",
+                }
                 warnings.append(f"两阶段 phase 2 失败（{e}），退回文本协议")
                 return self._generate(fallback_messages, on_delta)
 
@@ -797,11 +808,23 @@ class TurnEngine:
             self._probe.setdefault("protocol", {})["phase2_raw"] = say_raw[:400]
             self._protocol_failures += 1
             if any(p.strip() for p in emitted):
+                if sp_blocked:
+                    interrupted = True
+                    self._probe["output_blocked"] = True
+                    warnings.append("流式输出遇到协议残留，已截断可疑内容，不生成后续观察")
                 warnings.append("phase 2 产出被清洗为空，已输出的部分就地收尾")
                 say = safe_say("".join(emitted))
             else:
+                if sp_blocked:
+                    self._probe.setdefault("protocol", {})["phase2_output_blocked"] = True
+                self._probe["protocol"]["mode"] = "text_fallback"
+                self._probe["protocol"]["reason"] = "phase2_empty"
                 warnings.append("phase 2 无可见产出，退回文本协议")
                 return self._generate(fallback_messages, on_delta)
+        elif sp_blocked:
+            interrupted = True
+            self._probe["output_blocked"] = True
+            warnings.append("流式输出遇到协议残留，已截断可疑内容，不生成后续观察")
 
         ok, why = protocol.displacement_ok(inner, say)
         if not ok:
@@ -1020,6 +1043,8 @@ class TurnEngine:
         # 在 probe 里留下一条并不存在的 WATCH 样本。
         expired = self.store.sweep_expired(self.cfg.watch_ttl_hours)
         for p in expired:
+            self._pending_topic.pop(p["id"], None)
+            self._minimal_streak.pop(p["id"], None)
             self.store.append("pending_expire", {"pending_id": p["id"],
                                                  "reason": "timeout"})
             out.append({**p, "outcome": "EXPIRED", "label": OUTCOME_LABEL["EXPIRED"]})
@@ -1074,6 +1099,8 @@ class TurnEngine:
                 closed = self.store.close_pending(p["id"], outcome, evidence,
                                                   delayed=delayed)
                 if closed:
+                    self._pending_topic.pop(p["id"], None)
+                    self._minimal_streak.pop(p["id"], None)
                     self.store.append("pending_settle", {
                         "pending_id": p["id"], "outcome": outcome,
                         "evidence": evidence, "by": "model",
@@ -1115,6 +1142,7 @@ class TurnEngine:
                 continue
 
             self._minimal_streak.pop(p["id"], None)
+            self._pending_topic.pop(p["id"], None)
             outcome = self._outcome_for(verdict, p, feat)
             closed = self.store.close_pending(
                 p["id"], outcome, verdict.reason, delayed=verdict.delayed

@@ -156,7 +156,12 @@ class Session:
                 atexit.unregister(self.close)
             if self.opts.consolidate_on_exit and self.opts.memory_mode == "live":
                 try:
-                    self.consolidator.run_once()
+                    while True:
+                        before = len(list(self.store.buffer_dir.glob("*.json")))
+                        self.consolidator.run_once()
+                        after = len(list(self.store.buffer_dir.glob("*.json")))
+                        if after == 0 or after >= before:
+                            break
                 except Exception as e:
                     # 不能完全静默 —— 但 close 是收尾路径，也不该抛出去
                     # 盖掉调用方真正的错误。记到 stderr 和账本。

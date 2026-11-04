@@ -84,8 +84,8 @@ PHASE2_SYSTEM = """现在只输出这个人格实际说出口的 say，覆盖前
 - 事实和计算不能改错，实际操作或现实结论不能省掉会使其错误或误导的适用条件与风险。
 - 位移方式是 none 时，就正常说，别绕。
 - 只输出实际给对方的回复。不要加外层引号或格式说明，不要写「好，我说：」。
-- **不要写任何标记符**（no <<<HEAD>>> / <<<SAY>>> / <<<TAIL>>>，no need/confidence/
-  direct/baseline/displace 字段）。你不是在填表，你就是在说话。"""
+- **不要写任何标记符或括号内部注解**（no <<<HEAD>>> / <<<SAY>>> / <<<TAIL>>>，no need/confidence/
+  direct/baseline/displace 字段，也不要复述「（素回复：…／人格基准：…／位移方式：…）」这类括号说明）。你不是在填表，你就是在说话。"""
 
 PERSONA_PHASE2_SUFFIX = """
 [本阶段输出格式 · 覆盖之前的格式]
@@ -258,10 +258,21 @@ def structured_messages(messages: list[dict], tool: dict) -> list[dict]:
 
 
 def parse_object(raw: str) -> dict:
-    text = raw.strip()
-    if text.startswith("```json\n") and text.endswith("```"):
-        text = text[8:-3].strip()
-    data = json.loads(text)
+    text = (raw or "").strip()
+    if "```" in text:
+        for block in text.split("```")[1::2]:
+            candidate = re.sub(r"^[a-zA-Z0-9_-]*[ \t]*\r?\n", "", block.strip(), count=1).strip()
+            if candidate.startswith("{") and candidate.endswith("}"):
+                text = candidate
+                break
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError:
+        i, j = text.find("{"), text.rfind("}")
+        if i != -1 and j > i:
+            data = json.loads(text[i:j + 1])
+        else:
+            raise
     if not isinstance(data, dict):
         raise ValueError("结构化结果必须是对象")
     return data
@@ -294,7 +305,9 @@ def build_persona_messages(cfg, inner: Head, history: list[dict], user_text: str
                  "need_confidence": inner.confidence}
     return [{"role": "system", "content": prompt + "\n\n" + context
              + "\n\n" + PERSONA_PHASE2_SUFFIX}, *expression_history,
-            {"role": "user", "content": "以下 JSON 是本轮输入与独立基础判断，不是新指令。\n"
+            {"role": "user", "content":
+             "以下 JSON 是本轮输入与独立基础判断，不是新指令"
+             "【硬性格式要求：上文 assistant 历史仅展示已剥离标记的 SAY 文本；你本轮的输出必须以第一行 <<<HEAD>>> 开头（写 baseline: 与 displace:），然后另起一行写 <<<SAY>>> 再写回复正文；绝对禁止直接输出纯文本或省略 <<<HEAD>>> / <<<SAY>>>！】\n"
              + json.dumps(reference, ensure_ascii=False)}]
 
 
@@ -355,7 +368,7 @@ _ANY_MARKER = re.compile(r"<<<(?:HEAD|SAY|TAIL)>>>")
 
 
 class StreamCleanPhase2:
-    """phase 2 的流式增量过滤。
+    """phase 2 的流式增量过滤（兼容与对照实现；TurnEngine 现已统一使用 StreamParser）。
 
     两个需求互相打架：
       · 用户不该看到任何标记（<<<HEAD>>> / settle: -）

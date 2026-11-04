@@ -60,18 +60,32 @@ _ATTENTION_HINT = {
 
 def _section_spec(cfg: PersonaConfig) -> str:
     needs = " / ".join(cfg.needs) if cfg.needs else "（未配置）"
-    kinds = " / ".join(k for k in DISPLACE_KINDS if k != "none")
-    return f"""[输出格式 · 严格按顺序]
+    if cfg.role.legibility_max <= 0:
+        displace_spec = "none（当前角色 legibility_max=0 不允许额外位移，必须填 none；仍保留完整人格语感）"
+    else:
+        kinds = " / ".join(k for k in DISPLACE_KINDS if k != "none")
+        displace_spec = f"{kinds} / none。none 是常态，不表示去掉人格。"
+    return f"""[输出格式 · 严格按顺序（必须完整包含 <<<HEAD>>>、<<<SAY>>>、<<<TAIL>>> 三段，缺一不可）]
 {SECTION_HEAD}
 need: 从下面这个固定集合里选一个 —— {needs}
 confidence: 0 到 1 之间的小数，表示你对上面那个判断有多确定
 direct: 不受人格配置约束的内容参考。保留必要条件、理由和不确定性，不限一句。见下面「direct 是什么」。
 baseline: 当前人格通常会怎样接这句话。保留人格语感，不刻意遮掩、反说或留白。
-displace: 相对于上面这个人格基准的额外位移 —— {kinds} / none。none 是常态，不表示去掉人格。
+displace: 相对于上面这个人格基准的额外位移 —— {displace_spec}
 
 {SECTION_SAY}
 （只说给对方听的话。这里的内容会原样发出去。不要出现任何标记符。
  不展示解读过程来索取认同；有情境依据的试探性问法可以保留，但让对方能自然否认或不答。）
+
+{SECTION_TAIL}
+settle: 仅当用户提供明确证据时，写 <id> | confirmed 或 refuted | 一句证据；无法判定就写 - 或 watch，不必立即结算
+delta:
+  （可选的参数变更，见下；无变更写 -）
+pending:
+  （不挂新预言时直接写 pending: -；只有需要挂新预言时才写下面三行）
+  claim: 你对下一轮的新预言（可选）
+  confidence: 0 到 1
+  predicts: 具体会观察到什么
 
 [direct 是什么 · 这一条最重要]
 
@@ -96,15 +110,6 @@ direct 不是「你的心里话」，是**按事实、逻辑和用户实际输�
 所以写 direct 时，不套用人格身份、语气、简短或少干涉偏好。
 按问题需要保留适用条件、理由、关键步骤和不确定性，不为凑一句而压缩。
 人格决定下一步怎样表达；不要求把 direct 的全部内容说给对方。
-
-{SECTION_TAIL}
-settle: 仅当用户提供明确证据时，写 <id> | confirmed 或 refuted | 一句证据；无法判定就写 - 或 watch，不必立即结算
-delta:
-  （可选的参数变更，见下）
-pending:
-  claim: 你对下一轮的新预言（可选）
-  confidence: 0 到 1
-  predicts: 具体会观察到什么
 
 [预言怎么写才算数]
 
@@ -257,7 +262,10 @@ def phrase_block(cfg: PersonaConfig, *, need: str = "", first_turn: bool,
     scenes: list[str] = []
     if first_turn:
         scenes.append("greeting")
-    if need in ("只想被听", "想有人替他说出口"):
+    if (
+        need in ("只想被听", "想有人替他说出口")
+        or any(word in need for word in ("被听", "倾听", "替他说", "替我", "安慰", "陪伴", "倾诉"))
+    ):
         scenes.append("comfort")
     if any(word in user_text for word in ("答应", "保证", "承诺", "陪着我", "会一直在", "会不会离开")):
         scenes.append("promise")

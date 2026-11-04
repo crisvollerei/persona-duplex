@@ -14,7 +14,7 @@ from persona.calibrate import collect, findings
 from persona.config import PersonaConfig
 from persona.consolidate import Consolidator
 from persona.engine import TurnEngine
-from persona.llm import ScriptedLLM, make_reply, openai_compatible, openai_tool_call
+from persona.llm import ScriptedLLM, make_reply, openai_compatible, openai_stream, openai_tool_call
 from persona.metrics import compute, verdicts
 from persona.parse import parse
 from persona.prompt import build_system_prompt, phrase_block
@@ -656,6 +656,178 @@ class TestUncertaintyAndControls(Case):
             "source": "llm", "judge_elapsed": 1.2, "grace": .01}}} for _ in range(12)]
         report = {item.area: item for item in findings(collect(ledger))}
         self.assertEqual(report["grace"].level, "ok")
+
+    def test_close_drains_multiple_consolidation_batches(self):
+        replies = [reply() for _ in range(15)]
+        with Session(config(), self.store, ScriptedLLM(replies),
+                     options=SessionConfig(consolidate_interval=999,
+                                           consolidate_on_exit=True)) as session:
+            for i in range(15):
+                session.say(f"turn {i}")
+            self.assertEqual(len(self.buffers()), 15)
+        self.assertEqual(self.buffers(), [])
+        consumed = [eid for r in self.rows("memory_batch_commit") for eid in r.get("event_ids", [])]
+        self.assertEqual(len(consumed), 15)
+
+    def test_settled_and_expired_pendings_clean_up_runtime_tracking(self):
+        cfg = config()
+        tail1 = "settle: -\npending:\n  claim: c1\n  confidence: .7\n  predicts: p1"
+        tail2 = "settle: p_0001 | confirmed | explicit evidence\npending:\n  claim: c2\n  confidence: .7\n  predicts: p2"
+        engine = TurnEngine(cfg, self.store, ScriptedLLM([reply(tail=tail1), reply(tail=tail2), reply()]))
+        r1 = engine.turn("first")
+        pid1 = r1.pending_added["id"]
+        engine._minimal_streak[pid1] = 2
+        self.assertIn(pid1, engine._pending_topic)
+
+        r2 = engine.turn("second")
+        self.assertNotIn(pid1, engine._pending_topic)
+        self.assertNotIn(pid1, engine._minimal_streak)
+
+        pid2 = r2.pending_added["id"]
+        engine._minimal_streak[pid2] = 1
+        items = self.store.pendings()
+        items[0]["created"] = "2020-01-01T00:00:00+08:00"
+        self.store._save_pendings(items)
+        engine.turn("third")
+        self.assertNotIn(pid2, engine._pending_topic)
+        self.assertNotIn(pid2, engine._minimal_streak)
+
+    def test_explicit_trait_and_anchor_pushes_commit_atomically_and_trace_calls(self):
+        cfg = config("shorekeeper")
+        self.store.init_traits(cfg.role.traits_state())
+        self.store.add_judgment("no advice 1", .8, affects={"intervention": -1})
+        self.store.add_judgment("no advice 2", .8, affects={"intervention": -1})
+        con = Consolidator(self.store)
+        with patch.object(self.store, "set_cursor", side_effect=OSError("cursor write failed")):
+            with self.assertRaises(OSError):
+                con.push_traits()
+        self.assertEqual(self.rows("trait_update"), [])
+        self.assertAlmostEqual(self.store.traits()["intervention"]["value"], .20, places=4)
+
+        self.store.self_story_path.write_text("我原来不会主动开口，现在变了。" * 30, encoding="utf-8")
+        con_anchor = Consolidator(
+            self.store,
+            llm=lambda p: '[{"name": "warmth", "direction": 1, "evidence": "现在变了"}]',
+        )
+        with patch.object(self.store, "set_cursor", side_effect=OSError("story cursor failed")):
+            with self.assertRaises(OSError):
+                con_anchor.push_anchors()
+        self.assertEqual(self.rows("anchor_update"), [])
+        self.assertEqual(self.rows("anchor_push"), [])
+        self.assertEqual(len(self.rows("model_call_end")), 1)
+        self.assertEqual(self.rows("model_call_end")[0]["route"], "anchor")
+
+    def test_comfort_phrases_match_freeform_needs_and_tool_phase2_injects_current_need_and_stance(self):
+        cfg = config("shorekeeper")
+        freeform_pb = phrase_block(cfg, need="对方此刻需要倾听与陪伴", first_turn=False)
+        self.assertIn(cfg.role.phrases["comfort"][0], freeform_pb)
+
+        seen_phase2 = []
+        def tool(messages, *, tool, **kwargs):
+            if tool["function"]["name"] == "inner":
+                return {"need": "只想被听", "confidence": .85,
+                        "direct": "先休息。", "baseline": "我在。", "displace": "none"}
+            return {"settle": [], "pending": None}
+        def llm(messages):
+            seen_phase2.append(messages)
+            return "我在，慢慢说。"
+        engine = TurnEngine(cfg, self.store, llm, tool_llm=tool, protocol="tool")
+        engine.turn("今天好累")
+        sys_content = seen_phase2[0][0]["content"]
+        self.assertIn(cfg.role.phrases["comfort"][0], sys_content)
+        self.assertIn("[当前站位:", sys_content)
+
+    def test_tool_fallback_records_text_fallback_mode_in_probe(self):
+        def failing_tool(messages, *, tool, **kwargs):
+            raise RuntimeError("tool unavailable")
+        engine = TurnEngine(config(), self.store, ScriptedLLM([reply("fallback ok")]),
+                            tool_llm=failing_tool, protocol="tool")
+        res = engine.turn("hello")
+        self.assertEqual(res.say, "fallback ok")
+        turn_row = self.rows("turn")[0]
+        self.assertEqual(turn_row["probe"]["protocol"]["mode"], "text_fallback")
+
+    def test_parse_object_accepts_fenced_and_wrapped_json_objects(self):
+        for raw in ('```json\r\n{"a": 1}\r\n```', '```\n{"a": 1}\n```', '说明如下：\n{"a": 1}\n完毕'):
+            self.assertEqual(protocol.parse_object(raw), {"a": 1})
+        with self.assertRaises(ValueError):
+            protocol.parse_object("[1, 2, 3]")
+
+    def test_openai_stream_validates_extra_wraps_http_error_and_ignores_empty_finish_reason(self):
+        import io
+        import urllib.error
+
+        with self.assertRaises(ValueError):
+            openai_stream("fake", extra={"model": "override"})
+        fn = openai_stream("fake", api_key="test", extra={"seed": 7})
+        self.assertEqual(model_info(fn)["extra"]["seed"], 7)
+
+        chunks = [
+            'data: {"choices":[{"delta":{"content":"hel"},"finish_reason":""}]}\n\n',
+            'data: {"choices":[{"delta":{"content":"lo"},"finish_reason":"stop"}]}\n\n',
+        ]
+        with patch("urllib.request.urlopen", return_value=io.BytesIO("".join(chunks).encode("utf-8"))):
+            self.assertEqual(list(fn([])), ["hel", "lo"])
+            self.assertEqual(fn.observations.response["finish_reason"], "stop")
+
+        http_err = urllib.error.HTTPError("https://example.test", 429, "rate limit", {}, io.BytesIO(b"quota"))
+        with patch("urllib.request.urlopen", side_effect=http_err):
+            with self.assertRaisesRegex(RuntimeError, "LLM HTTP 429: quota"):
+                list(fn([]))
+
+    def test_ledger_cache_reuses_parsed_rows_and_invalidates_on_write(self):
+        self.store.append("probe", {"n": 1})
+        first = self.store.read_ledger()
+        with patch.object(Path, "open", side_effect=AssertionError("should hit ledger cache")):
+            second = self.store.read_ledger()
+        self.assertEqual(first, second)
+        self.store.append("probe", {"n": 2})
+        self.assertEqual([r["n"] for r in self.rows("probe")], [1, 2])
+
+    def test_tool_phase2_zero_emission_blocked_falls_back_cleanly(self):
+        def tool(messages, *, tool, **kwargs):
+            return {
+                "need": "想被拦住",
+                "confidence": 0.4,
+                "direct": "先别点发送。",
+                "baseline": "先停一下。",
+                "displace": "none",
+            }
+        calls = {"n": 0}
+        def stream(messages):
+            calls["n"] += 1
+            if calls["n"] == 1:
+                # Phase 2 echoes parenthetical scaffold at index 0 -> blocked with 0 emitted chars
+                yield "（"
+                yield "素回复：先别点发送。）"
+            else:
+                # Fallback text protocol stream succeeds cleanly
+                yield reply("先别点。停在这里，也可以。")
+
+        engine = TurnEngine(config(), self.store, ScriptedLLM([]),
+                            stream_llm=stream, tool_llm=tool, protocol="tool")
+        emitted = []
+        res = engine.turn("手停在发送键上", on_delta=emitted.append)
+        self.assertEqual(res.say, "先别点。停在这里，也可以。")
+        self.assertEqual("".join(emitted), "先别点。停在这里，也可以。")
+        self.assertTrue(res.validity["valid"])
+        row = self.rows("turn")[0]
+        self.assertEqual(row["probe"]["protocol"]["mode"], "text_fallback")
+        self.assertEqual(row["probe"]["protocol"]["reason"], "phase2_empty")
+        self.assertTrue(row["probe"]["protocol"].get("phase2_output_blocked"))
+        self.assertFalse(row["probe"].get("output_blocked"))
+
+    def test_multiline_and_parenthetical_empty_pending_are_valid(self):
+        for tail in (
+            "settle: -\ndelta: -\npending:",
+            "settle: -\npending:\n  -",
+            "settle: -\npending: （无）",
+            "settle: -\npending:\n  claim: -\n  confidence: 0\n  predicts: -",
+        ):
+            with self.subTest(tail=tail):
+                parsed = parse(reply(tail=tail))
+                self.assertTrue(parsed.validity()["valid"], parsed.validity())
+                self.assertIsNone(parsed.tail.pending)
 
 
 if __name__ == "__main__":

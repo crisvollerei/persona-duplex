@@ -618,11 +618,20 @@ def parse_tail(block: str) -> Tail:
     m = re.search(rf"{_LEAD}pending{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
     if m:
         rest = block[m.end():]
-        if m.group(1).strip().lower() in ("-", "无", "none", "null"):
+
+        def _is_empty_marker(val: str) -> bool:
+            cleaned = re.sub(r"（[^（）]*）|\([^()]*\)", "", (val or "").strip()).strip()
+            cleaned = cleaned.lstrip("-*").strip().lower()
+            return cleaned in ("", "-", "无", "none", "null", "nil", "n/a", "暂无", "不挂")
+
+        if m.group(1).strip() and _is_empty_marker(m.group(1)):
             return tail
         p = PendingDraft()
         seen = set()
+        non_empty_lines = []
         for line in rest.splitlines():
+            if re.match(r"^(settle|delta)[ \t]*[:：]", line.strip(), re.IGNORECASE):
+                break
             dm = re.match(r"^[ \t]*[-*]?[ \t]*(claim|confidence|predicts)[ \t]*[:：][ \t]*(.+)$",
                           line, re.IGNORECASE)
             if dm:
@@ -637,6 +646,12 @@ def parse_tail(block: str) -> Tail:
                         p.errors.append("invalid_pending_confidence")
                 else:
                     p.predicts = v
+            elif line.strip():
+                non_empty_lines.append(line.strip())
+        if not seen and all(_is_empty_marker(ln) for ln in non_empty_lines):
+            return tail
+        if "claim" in seen and _is_empty_marker(p.claim) and _is_empty_marker(p.predicts):
+            return tail
         for key in ("claim", "confidence", "predicts"):
             if key not in seen:
                 p.errors.append("missing_pending_" + key)
