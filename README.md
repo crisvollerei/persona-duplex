@@ -292,12 +292,24 @@ data/<会话目录>/
 
 完整命令示例见 [使用说明](docs/how-to-start.md)。
 
+## 实验验证
+
+[初步实证研究](docs/validation/validation_study_paper.md) 汇总多人格与协议比较、
+零身份文本联合配置、关系修复、跨会话记忆及显式参数推动实验。
+数据集包含 65 条对话输出，其中 48 条保存了本地协议有效性和流式一致性标记。
+这些结果是框架可运行性与配置敏感性的初步证据，尚不能证明判断与人格因果独立、
+普遍安全或长期人格成长；失败案例、统计口径与图表适用范围见论文。
+
+- [实验数据](docs/validation/experiment_results.json)：对话输出、部分配置、调用轨迹与状态快照。
+- [绘图脚本](docs/validation/generate_figures.py) 与 [配图](docs/validation/figures/)：
+  需要额外安装 Pillow，优先使用 Windows 中文字体；绘图复现不等于在线实验复现。
+
 ## 项目结构
 
 - `persona/`：配置、提示词、协议、解析、会话、记忆、账本与报告。
 - `personas/`：随安装包分发的人格配置。
 - `tests/`：离线单元测试和回归测试。
-- `docs/`：使用说明。
+- `docs/`：使用说明、初步实证研究、实验数据与配图。
 
 ## 限制
 
