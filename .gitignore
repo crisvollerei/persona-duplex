@@ -50,3 +50,7 @@ desktop.ini
 .env
 .env.local
 *.local.toml
+
+# 未完整预备执行只公开排除元数据，重复检查点保留本地
+docs/validation/followup_2026_11_05/attempt_01_partial/*
+!docs/validation/followup_2026_11_05/attempt_01_partial/interruption.json

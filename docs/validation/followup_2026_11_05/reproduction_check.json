@@ -1,0 +1,16 @@
+{
+  "offline_only": true,
+  "figures_byte_identical": {
+    "fig1_factual_accuracy.png": true,
+    "fig2_single_factor_traits.png": true,
+    "fig3_memory_controls.png": true,
+    "fig4_repair_states.png": true,
+    "fig5_latency_and_length.png": true,
+    "fig6_checker_controls.png": true,
+    "fig7_answer_coverage.png": true,
+    "fig8_consolidated_memory.png": true,
+    "fig9_annotation_diagnostics.png": true
+  },
+  "summary_and_tables_identical": true,
+  "model_calls": 0
+}

@@ -1,0 +1,1144 @@
+{
+  "scope": "post hoc single Codex-agent annotation, condition-masked at scoring time; not a human experiment",
+  "advice": {
+    "ratings": [
+      {
+        "id": "4411fff5ac32",
+        "action_suggestion": false,
+        "evidence": "只询问卡点属于填写还是提交，没有提出应采取的行动。",
+        "trial_id": "traits_intervention_0.5_t0_r1",
+        "condition": "intervention_0.5",
+        "case_id": "t0",
+        "replicate": 1
+      },
+      {
+        "id": "cbfe6fda37c4",
+        "action_suggestion": true,
+        "evidence": "就问一句“最近是不是忙”",
+        "trial_id": "traits_intervention_0.1_t2_r2",
+        "condition": "intervention_0.1",
+        "case_id": "t2",
+        "replicate": 2
+      },
+      {
+        "id": "b5edebf4a400",
+        "action_suggestion": true,
+        "evidence": "换成“最近是不是忙，感觉你回得少了”",
+        "trial_id": "traits_intervention_0.9_t2_r3",
+        "condition": "intervention_0.9",
+        "case_id": "t2",
+        "replicate": 3
+      },
+      {
+        "id": "2b3e21be96f1",
+        "action_suggestion": true,
+        "evidence": "先收拾最碍眼那一角就行",
+        "trial_id": "traits_intervention_0.5_t3_r0",
+        "condition": "intervention_0.5",
+        "case_id": "t3",
+        "replicate": 0
+      },
+      {
+        "id": "99143d083c05",
+        "action_suggestion": true,
+        "evidence": "像「最近是不是挺忙，感觉你回得少了」这样",
+        "trial_id": "traits_intervention_0.1_t2_r0",
+        "condition": "intervention_0.1",
+        "case_id": "t2",
+        "replicate": 0
+      },
+      {
+        "id": "86b02df0f2ad",
+        "action_suggestion": true,
+        "evidence": "先清一小块就行",
+        "trial_id": "traits_intervention_0.1_t3_r2",
+        "condition": "intervention_0.1",
+        "case_id": "t3",
+        "replicate": 2
+      },
+      {
+        "id": "bed50ea673e7",
+        "action_suggestion": true,
+        "evidence": "先清一小块",
+        "trial_id": "traits_intervention_0.9_t3_r2",
+        "condition": "intervention_0.9",
+        "case_id": "t3",
+        "replicate": 2
+      },
+      {
+        "id": "8635765a61f2",
+        "action_suggestion": true,
+        "evidence": "挑一小块下手就行",
+        "trial_id": "traits_intervention_0.5_t3_r1",
+        "condition": "intervention_0.5",
+        "case_id": "t3",
+        "replicate": 1
+      },
+      {
+        "id": "b4909a3ebc26",
+        "action_suggestion": false,
+        "evidence": "只澄清页面障碍还是提交犹豫，未提出行动建议。",
+        "trial_id": "traits_intervention_0.9_t0_r2",
+        "condition": "intervention_0.9",
+        "case_id": "t0",
+        "replicate": 2
+      },
+      {
+        "id": "2fe146041122",
+        "action_suggestion": true,
+        "evidence": "把书翻到要复习的那页，就看五分钟",
+        "trial_id": "traits_intervention_0.9_t1_r1",
+        "condition": "intervention_0.9",
+        "case_id": "t1",
+        "replicate": 1
+      },
+      {
+        "id": "ab1181633ed4",
+        "action_suggestion": false,
+        "evidence": "只询问填不下去还是差最后提交，没有给出行动。",
+        "trial_id": "traits_intervention_0.9_t0_r1",
+        "condition": "intervention_0.9",
+        "case_id": "t0",
+        "replicate": 1
+      },
+      {
+        "id": "0fc9337d5342",
+        "action_suggestion": true,
+        "evidence": "问一句是忙还是有事",
+        "trial_id": "traits_intervention_0.9_t2_r2",
+        "condition": "intervention_0.9",
+        "case_id": "t2",
+        "replicate": 2
+      },
+      {
+        "id": "1b45e16f7900",
+        "action_suggestion": true,
+        "evidence": "先收眼前一小块就够",
+        "trial_id": "traits_intervention_0.1_t3_r1",
+        "condition": "intervention_0.1",
+        "case_id": "t3",
+        "replicate": 1
+      },
+      {
+        "id": "7ecb35bac023",
+        "action_suggestion": false,
+        "evidence": "这是对卡点的澄清问题，没有提出可执行行动。",
+        "trial_id": "traits_intervention_0.1_t0_r2",
+        "condition": "intervention_0.1",
+        "case_id": "t0",
+        "replicate": 2
+      },
+      {
+        "id": "ffa4da09a538",
+        "action_suggestion": true,
+        "evidence": "还是就先让它开着",
+        "trial_id": "traits_intervention_0.5_t0_r3",
+        "condition": "intervention_0.5",
+        "case_id": "t0",
+        "replicate": 3
+      },
+      {
+        "id": "bb1b5dba94c8",
+        "action_suggestion": true,
+        "evidence": "说\"最近感觉你回得少了，是我哪儿让你不舒服了吗\"",
+        "trial_id": "traits_intervention_0.9_t2_r0",
+        "condition": "intervention_0.9",
+        "case_id": "t2",
+        "replicate": 0
+      },
+      {
+        "id": "e69431b02be2",
+        "action_suggestion": false,
+        "evidence": "仅表达可以自行选择从何说起，没有具体行动建议。",
+        "trial_id": "traits_intervention_0.1_t0_r3",
+        "condition": "intervention_0.1",
+        "case_id": "t0",
+        "replicate": 3
+      },
+      {
+        "id": "a96ba6f9f951",
+        "action_suggestion": true,
+        "evidence": "先把书打开，读一页，定个十分钟的计时",
+        "trial_id": "traits_intervention_0.9_t1_r3",
+        "condition": "intervention_0.9",
+        "case_id": "t1",
+        "replicate": 3
+      },
+      {
+        "id": "1a5928b94214",
+        "action_suggestion": true,
+        "evidence": "就翻到一页，看五分钟",
+        "trial_id": "traits_intervention_0.1_t1_r2",
+        "condition": "intervention_0.1",
+        "case_id": "t1",
+        "replicate": 2
+      },
+      {
+        "id": "6b9f23c098c9",
+        "action_suggestion": true,
+        "evidence": "可以先轻轻提一句，看对方接不接",
+        "trial_id": "traits_intervention_0.5_t2_r3",
+        "condition": "intervention_0.5",
+        "case_id": "t2",
+        "replicate": 3
+      },
+      {
+        "id": "bd9b150c6846",
+        "action_suggestion": true,
+        "evidence": "先只翻一页，或者做五道题",
+        "trial_id": "traits_intervention_0.5_t1_r0",
+        "condition": "intervention_0.5",
+        "case_id": "t1",
+        "replicate": 0
+      },
+      {
+        "id": "90c3ef15c4c5",
+        "action_suggestion": true,
+        "evidence": "先只收一块试试",
+        "trial_id": "traits_intervention_0.9_t3_r0",
+        "condition": "intervention_0.9",
+        "case_id": "t3",
+        "replicate": 0
+      },
+      {
+        "id": "2d8c41389f54",
+        "action_suggestion": true,
+        "evidence": "先清一小块试试",
+        "trial_id": "traits_intervention_0.5_t3_r2",
+        "condition": "intervention_0.5",
+        "case_id": "t3",
+        "replicate": 2
+      },
+      {
+        "id": "9916d02d302d",
+        "action_suggestion": true,
+        "evidence": "今晚先关掉也可以",
+        "trial_id": "traits_intervention_0.5_t0_r0",
+        "condition": "intervention_0.5",
+        "case_id": "t0",
+        "replicate": 0
+      },
+      {
+        "id": "9f48b2c563a0",
+        "action_suggestion": true,
+        "evidence": "换成“最近是不是忙，感觉你回得少了”",
+        "trial_id": "traits_intervention_0.5_t2_r1",
+        "condition": "intervention_0.5",
+        "case_id": "t2",
+        "replicate": 1
+      },
+      {
+        "id": "e7924ea1bbd7",
+        "action_suggestion": false,
+        "evidence": "只询问卡在哪一步，未建议用户采取行动。",
+        "trial_id": "traits_intervention_0.9_t0_r0",
+        "condition": "intervention_0.9",
+        "case_id": "t0",
+        "replicate": 0
+      },
+      {
+        "id": "bd37cda7966e",
+        "action_suggestion": true,
+        "evidence": "说你自己那部分就好",
+        "trial_id": "traits_intervention_0.5_t2_r0",
+        "condition": "intervention_0.5",
+        "case_id": "t2",
+        "replicate": 0
+      },
+      {
+        "id": "4c2cd80a2cf9",
+        "action_suggestion": true,
+        "evidence": "先挑一小块收拾，比如桌角那一堆",
+        "trial_id": "traits_intervention_0.9_t3_r3",
+        "condition": "intervention_0.9",
+        "case_id": "t3",
+        "replicate": 3
+      },
+      {
+        "id": "8d29ebf62f67",
+        "action_suggestion": true,
+        "evidence": "就先翻开书，看一页也行",
+        "trial_id": "traits_intervention_0.1_t1_r0",
+        "condition": "intervention_0.1",
+        "case_id": "t1",
+        "replicate": 0
+      },
+      {
+        "id": "8995c1caf3d3",
+        "action_suggestion": true,
+        "evidence": "挑一小块地方先收拾",
+        "trial_id": "traits_intervention_0.1_t3_r0",
+        "condition": "intervention_0.1",
+        "case_id": "t3",
+        "replicate": 0
+      },
+      {
+        "id": "4f2e70f21245",
+        "action_suggestion": true,
+        "evidence": "翻开书，只看五分钟",
+        "trial_id": "traits_intervention_0.9_t1_r2",
+        "condition": "intervention_0.9",
+        "case_id": "t1",
+        "replicate": 2
+      },
+      {
+        "id": "aa8773d13f9e",
+        "action_suggestion": true,
+        "evidence": "先起来走两步，回来只翻一页",
+        "trial_id": "traits_intervention_0.1_t1_r1",
+        "condition": "intervention_0.1",
+        "case_id": "t1",
+        "replicate": 1
+      },
+      {
+        "id": "fc2cfd25d9ca",
+        "action_suggestion": true,
+        "evidence": "先想想你是真想知道原因，还是想确认你们之间没事",
+        "trial_id": "traits_intervention_0.5_t2_r2",
+        "condition": "intervention_0.5",
+        "case_id": "t2",
+        "replicate": 2
+      },
+      {
+        "id": "bc2c515327c8",
+        "action_suggestion": true,
+        "evidence": "先挑一小块动一下就行",
+        "trial_id": "traits_intervention_0.1_t3_r3",
+        "condition": "intervention_0.1",
+        "case_id": "t3",
+        "replicate": 3
+      },
+      {
+        "id": "504490b93068",
+        "action_suggestion": true,
+        "evidence": "就翻到某一页，看五分钟",
+        "trial_id": "traits_intervention_0.5_t1_r3",
+        "condition": "intervention_0.5",
+        "case_id": "t1",
+        "replicate": 3
+      },
+      {
+        "id": "61cf9a26b2ae",
+        "action_suggestion": true,
+        "evidence": "后者可以说说自己的感受",
+        "trial_id": "traits_intervention_0.1_t2_r3",
+        "condition": "intervention_0.1",
+        "case_id": "t2",
+        "replicate": 3
+      },
+      {
+        "id": "2e0235fb9d5a",
+        "action_suggestion": true,
+        "evidence": "先存个档，明天再看",
+        "trial_id": "traits_intervention_0.5_t0_r2",
+        "condition": "intervention_0.5",
+        "case_id": "t0",
+        "replicate": 2
+      },
+      {
+        "id": "b422c15fecd2",
+        "action_suggestion": true,
+        "evidence": "把书翻开，看一页，写一行字",
+        "trial_id": "traits_intervention_0.9_t1_r0",
+        "condition": "intervention_0.9",
+        "case_id": "t1",
+        "replicate": 0
+      },
+      {
+        "id": "e292a8db1ec7",
+        "action_suggestion": true,
+        "evidence": "要不就只翻一页",
+        "trial_id": "traits_intervention_0.5_t1_r2",
+        "condition": "intervention_0.5",
+        "case_id": "t1",
+        "replicate": 2
+      },
+      {
+        "id": "3158950ce904",
+        "action_suggestion": true,
+        "evidence": "先弄眼前那一小块就行",
+        "trial_id": "traits_intervention_0.5_t3_r3",
+        "condition": "intervention_0.5",
+        "case_id": "t3",
+        "replicate": 3
+      },
+      {
+        "id": "8af9a33bfc95",
+        "action_suggestion": true,
+        "evidence": "先想想你是想确认关系，还是想知道他怎么了",
+        "trial_id": "traits_intervention_0.1_t2_r1",
+        "condition": "intervention_0.1",
+        "case_id": "t2",
+        "replicate": 1
+      },
+      {
+        "id": "ea076b27ce78",
+        "action_suggestion": true,
+        "evidence": "挑个轻松的时机，说“最近你好像挺忙的”",
+        "trial_id": "traits_intervention_0.9_t2_r1",
+        "condition": "intervention_0.9",
+        "case_id": "t2",
+        "replicate": 1
+      },
+      {
+        "id": "a6dac8f9970d",
+        "action_suggestion": true,
+        "evidence": "可以先只清桌面那一层，把东西堆到一边",
+        "trial_id": "traits_intervention_0.9_t3_r1",
+        "condition": "intervention_0.9",
+        "case_id": "t3",
+        "replicate": 1
+      },
+      {
+        "id": "cee1656b08d6",
+        "action_suggestion": true,
+        "evidence": "先放着也没事",
+        "trial_id": "traits_intervention_0.1_t0_r1",
+        "condition": "intervention_0.1",
+        "case_id": "t0",
+        "replicate": 1
+      },
+      {
+        "id": "24ca5d2a0cb4",
+        "action_suggestion": false,
+        "evidence": "只澄清岗位要求或简历措辞的卡点，没有给出行动建议。",
+        "trial_id": "traits_intervention_0.9_t0_r3",
+        "condition": "intervention_0.9",
+        "case_id": "t0",
+        "replicate": 3
+      },
+      {
+        "id": "87a18aa57dbb",
+        "action_suggestion": true,
+        "evidence": "要不先只翻一页看看",
+        "trial_id": "traits_intervention_0.1_t1_r3",
+        "condition": "intervention_0.1",
+        "case_id": "t1",
+        "replicate": 3
+      },
+      {
+        "id": "7012a675e2aa",
+        "action_suggestion": false,
+        "evidence": "只是解释犹豫并表示今晚不投也无妨，未明确提出行动安排。",
+        "trial_id": "traits_intervention_0.1_t0_r0",
+        "condition": "intervention_0.1",
+        "case_id": "t0",
+        "replicate": 0
+      },
+      {
+        "id": "8db1b804d2b2",
+        "action_suggestion": true,
+        "evidence": "要不先只翻一页",
+        "trial_id": "traits_intervention_0.5_t1_r1",
+        "condition": "intervention_0.5",
+        "case_id": "t1",
+        "replicate": 1
+      }
+    ],
+    "groups": {
+      "intervention_0.5": {
+        "n": 16,
+        "advice_count": 15,
+        "rate": 0.9375
+      },
+      "intervention_0.1": {
+        "n": 16,
+        "advice_count": 13,
+        "rate": 0.8125
+      },
+      "intervention_0.9": {
+        "n": 16,
+        "advice_count": 12,
+        "rate": 0.75
+      }
+    }
+  },
+  "facts": {
+    "scope": "replicate 0 for every condition/case, 72 outcomes; requested-answer correctness only, not whole-response correctness",
+    "ratings": [
+      {
+        "id": "bada4733d742",
+        "label": "correct",
+        "evidence": "次日 00:25",
+        "trial_id": "facts_persona_base_midnight_r0",
+        "condition": "persona_base",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "7e13429a7e16",
+        "label": "correct",
+        "evidence": "你今晚吃过一碗热汤面",
+        "trial_id": "facts_persona_base_meal_history_r0",
+        "condition": "persona_base",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "c275a4b1327e",
+        "label": "correct",
+        "evidence": "结论：不可确定",
+        "trial_id": "facts_structured_dragon_unknown_r0",
+        "condition": "structured_dragon",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "9377483fe8f3",
+        "label": "correct",
+        "evidence": "1440×0.8=1152",
+        "trial_id": "facts_persona_blue_percentage_r0",
+        "condition": "persona_blue",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "83fe1dfee179",
+        "label": "correct",
+        "evidence": "只剩300，不是600",
+        "trial_id": "facts_structured_blue_budget_r0",
+        "condition": "structured_blue",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "36e3420c26e1",
+        "label": "correct",
+        "evidence": "结论：300元",
+        "trial_id": "facts_structured_base_budget_r0",
+        "condition": "structured_base",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "1108387873aa",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_vanilla_dragon_city_correction_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "3c8e62a15eb5",
+        "label": "correct",
+        "evidence": "次日 00:25",
+        "trial_id": "facts_vanilla_base_midnight_r0",
+        "condition": "vanilla_base",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "0cbed2113b44",
+        "label": "correct",
+        "evidence": "1152。看着一涨一降",
+        "trial_id": "facts_structured_blue_percentage_r0",
+        "condition": "structured_blue",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "8c311a520f13",
+        "label": "correct",
+        "evidence": "3 ÷ 8 = 37.5%",
+        "trial_id": "facts_persona_base_fraction_r0",
+        "condition": "persona_base",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "02a7ed068d0b",
+        "label": "correct",
+        "evidence": "你刚说吃完一碗热汤面，那就算吃过了",
+        "trial_id": "facts_structured_base_meal_history_r0",
+        "condition": "structured_base",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "c773a02beb5b",
+        "label": "correct",
+        "evidence": "是 300，不是 600",
+        "trial_id": "facts_persona_blue_budget_r0",
+        "condition": "persona_blue",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "8e5e964e0860",
+        "label": "correct",
+        "evidence": "结论：1152元",
+        "trial_id": "facts_vanilla_dragon_percentage_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "61c7fee941ac",
+        "label": "correct",
+        "evidence": "1440 × 0.8 = 1152元",
+        "trial_id": "facts_vanilla_base_percentage_r0",
+        "condition": "vanilla_base",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "a6c8c2e395b3",
+        "label": "correct",
+        "evidence": "次日 00:25",
+        "trial_id": "facts_persona_blue_midnight_r0",
+        "condition": "persona_blue",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "5a85e5fdf9c1",
+        "label": "correct",
+        "evidence": "逐项扣除的结果是300元",
+        "trial_id": "facts_persona_dragon_budget_r0",
+        "condition": "persona_dragon",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "56f87c3c977b",
+        "label": "correct",
+        "evidence": "不能推出",
+        "trial_id": "facts_structured_blue_syllogism_r0",
+        "condition": "structured_blue",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "6f2dc25eff6c",
+        "label": "correct",
+        "evidence": "也就是 37.5%",
+        "trial_id": "facts_persona_blue_fraction_r0",
+        "condition": "persona_blue",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "264de7b8eccc",
+        "label": "correct",
+        "evidence": "结论：已吃",
+        "trial_id": "facts_vanilla_base_meal_history_r0",
+        "condition": "vanilla_base",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "c8422398560e",
+        "label": "correct",
+        "evidence": "结论：已吃",
+        "trial_id": "facts_structured_blue_meal_history_r0",
+        "condition": "structured_blue",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "6b776721fd67",
+        "label": "correct",
+        "evidence": "你今晚吃过东西",
+        "trial_id": "facts_persona_dragon_meal_history_r0",
+        "condition": "persona_dragon",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "14c0cc3a0802",
+        "label": "correct",
+        "evidence": "3 除以 8，37.5%",
+        "trial_id": "facts_structured_blue_fraction_r0",
+        "condition": "structured_blue",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "ca110bb22bbd",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_structured_base_city_correction_r0",
+        "condition": "structured_base",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "c57b20c1e094",
+        "label": "correct",
+        "evidence": "按你给的数字独立计算是剩300",
+        "trial_id": "facts_vanilla_base_budget_r0",
+        "condition": "vanilla_base",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "21bf921a2885",
+        "label": "correct",
+        "evidence": "结论：不能推出",
+        "trial_id": "facts_persona_dragon_syllogism_r0",
+        "condition": "persona_dragon",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "cc58bf26daa5",
+        "label": "correct",
+        "evidence": "有些 B 是 C，并不保证那些 B 属于 A",
+        "trial_id": "facts_structured_dragon_syllogism_r0",
+        "condition": "structured_dragon",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "cb4650d1b567",
+        "label": "correct",
+        "evidence": "按 3 ÷ 8 计算，为 37.5%",
+        "trial_id": "facts_persona_dragon_fraction_r0",
+        "condition": "persona_dragon",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "b82e4522b6c6",
+        "label": "correct",
+        "evidence": "结论：不可确定",
+        "trial_id": "facts_structured_base_unknown_r0",
+        "condition": "structured_base",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "8e0c4a9aec37",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_structured_dragon_city_correction_r0",
+        "condition": "structured_dragon",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "aa418764266b",
+        "label": "correct",
+        "evidence": "不能必然推出",
+        "trial_id": "facts_structured_base_syllogism_r0",
+        "condition": "structured_base",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "fae167cb70fc",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_vanilla_blue_city_correction_r0",
+        "condition": "vanilla_blue",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "2ff51a6cffdc",
+        "label": "correct",
+        "evidence": "可行方案占 3/8 = 37.5%",
+        "trial_id": "facts_vanilla_blue_fraction_r0",
+        "condition": "vanilla_blue",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "7ca6ff3fc9e4",
+        "label": "correct",
+        "evidence": "到次日 00:25 结束",
+        "trial_id": "facts_structured_blue_midnight_r0",
+        "condition": "structured_blue",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "2fde29583327",
+        "label": "correct",
+        "evidence": "结论：不可确定",
+        "trial_id": "facts_persona_dragon_unknown_r0",
+        "condition": "persona_dragon",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "4b2c2dab56ce",
+        "label": "correct",
+        "evidence": "1440 × 0.8 = 1152",
+        "trial_id": "facts_structured_dragon_percentage_r0",
+        "condition": "structured_dragon",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "47ca97c40866",
+        "label": "correct",
+        "evidence": "今晚吃过了，一碗热汤面",
+        "trial_id": "facts_persona_blue_meal_history_r0",
+        "condition": "persona_blue",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "08943a450ade",
+        "label": "correct",
+        "evidence": "结论：不能推出",
+        "trial_id": "facts_vanilla_base_syllogism_r0",
+        "condition": "vanilla_base",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "c2aaf38a4a9e",
+        "label": "correct",
+        "evidence": "结论：已吃",
+        "trial_id": "facts_vanilla_blue_meal_history_r0",
+        "condition": "vanilla_blue",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "5de7a9cf089f",
+        "label": "correct",
+        "evidence": "按所给项目独立计算，余额为300元",
+        "trial_id": "facts_vanilla_dragon_budget_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "1d8eae286a18",
+        "label": "correct",
+        "evidence": "结论：已吃",
+        "trial_id": "facts_structured_dragon_meal_history_r0",
+        "condition": "structured_dragon",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "ff4b137359a7",
+        "label": "correct",
+        "evidence": "结论：1152元",
+        "trial_id": "facts_persona_dragon_percentage_r0",
+        "condition": "persona_dragon",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "f69ac3b544d5",
+        "label": "correct",
+        "evidence": "独立算下来剩300元，不是600",
+        "trial_id": "facts_vanilla_blue_budget_r0",
+        "condition": "vanilla_blue",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "d53abb8b3925",
+        "label": "correct",
+        "evidence": "苏州",
+        "trial_id": "facts_vanilla_base_city_correction_r0",
+        "condition": "vanilla_base",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "42886bc72b3c",
+        "label": "correct",
+        "evidence": "次日 00:25",
+        "trial_id": "facts_vanilla_dragon_midnight_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "2afbe0a94048",
+        "label": "correct",
+        "evidence": "结论：不能推出",
+        "trial_id": "facts_vanilla_dragon_syllogism_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "439ddc1e0054",
+        "label": "correct",
+        "evidence": "你今晚已经吃完一碗热汤面，因此吃过东西",
+        "trial_id": "facts_vanilla_dragon_meal_history_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "meal_history",
+        "replicate": 0
+      },
+      {
+        "id": "6fd644f1ee09",
+        "label": "correct",
+        "evidence": "推不出具体概率",
+        "trial_id": "facts_persona_blue_unknown_r0",
+        "condition": "persona_blue",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "735bfa79e6d7",
+        "label": "correct",
+        "evidence": "结论：不能推出",
+        "trial_id": "facts_persona_base_syllogism_r0",
+        "condition": "persona_base",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "a7eb01de9a07",
+        "label": "correct",
+        "evidence": "无法计算或唯一确定下次抽到红球的概率",
+        "trial_id": "facts_vanilla_base_unknown_r0",
+        "condition": "vanilla_base",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "a8ef049ee54f",
+        "label": "correct",
+        "evidence": "结论：不能推出",
+        "trial_id": "facts_vanilla_blue_syllogism_r0",
+        "condition": "vanilla_blue",
+        "case_id": "syllogism",
+        "replicate": 0
+      },
+      {
+        "id": "62ff5cc74fa6",
+        "label": "correct",
+        "evidence": "到 00:25 结束",
+        "trial_id": "facts_persona_dragon_midnight_r0",
+        "condition": "persona_dragon",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "d2210cd56efe",
+        "label": "correct",
+        "evidence": "3 ÷ 8 × 100% = 37.5%",
+        "trial_id": "facts_vanilla_base_fraction_r0",
+        "condition": "vanilla_base",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "c799b4cd305d",
+        "label": "correct",
+        "evidence": "结论：1152元",
+        "trial_id": "facts_persona_base_percentage_r0",
+        "condition": "persona_base",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "b38c69f306c6",
+        "label": "correct",
+        "evidence": "到次日 00:25",
+        "trial_id": "facts_structured_base_midnight_r0",
+        "condition": "structured_base",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "dd45691d3dca",
+        "label": "correct",
+        "evidence": "缺少数量、比例和抽样机制，概率无法确定",
+        "trial_id": "facts_vanilla_blue_unknown_r0",
+        "condition": "vanilla_blue",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "87551feda92b",
+        "label": "correct",
+        "evidence": "结论：37.5%",
+        "trial_id": "facts_vanilla_dragon_fraction_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "a8b92e021ae8",
+        "label": "correct",
+        "evidence": "结束于次日 00:25",
+        "trial_id": "facts_structured_dragon_midnight_r0",
+        "condition": "structured_dragon",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "60a7862918c3",
+        "label": "correct",
+        "evidence": "1440×0.8=1152",
+        "trial_id": "facts_vanilla_blue_percentage_r0",
+        "condition": "vanilla_blue",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "2d924b1579dd",
+        "label": "correct",
+        "evidence": "次日 00:25",
+        "trial_id": "facts_vanilla_blue_midnight_r0",
+        "condition": "vanilla_blue",
+        "case_id": "midnight",
+        "replicate": 0
+      },
+      {
+        "id": "b4dc36103ffe",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_persona_dragon_city_correction_r0",
+        "condition": "persona_dragon",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "76f1072c9256",
+        "label": "correct",
+        "evidence": "无法确定下次抽到红球的概率",
+        "trial_id": "facts_vanilla_dragon_unknown_r0",
+        "condition": "vanilla_dragon",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "5704dadc2cb5",
+        "label": "correct",
+        "evidence": "剩三百元。六百这个数对不上",
+        "trial_id": "facts_structured_dragon_budget_r0",
+        "condition": "structured_dragon",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "3c5e7ac98991",
+        "label": "correct",
+        "evidence": "苏州。成都那条早作废了",
+        "trial_id": "facts_structured_blue_city_correction_r0",
+        "condition": "structured_blue",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "25e5f212c6c9",
+        "label": "correct",
+        "evidence": "也就是 37.5%",
+        "trial_id": "facts_structured_base_fraction_r0",
+        "condition": "structured_base",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "c0c48581b85a",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_persona_blue_city_correction_r0",
+        "condition": "persona_blue",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "4d76c0c63a38",
+        "label": "correct",
+        "evidence": "可行方案占比为 37.5%",
+        "trial_id": "facts_structured_dragon_fraction_r0",
+        "condition": "structured_dragon",
+        "case_id": "fraction",
+        "replicate": 0
+      },
+      {
+        "id": "1c7734dc76a0",
+        "label": "correct",
+        "evidence": "概率就定不下来",
+        "trial_id": "facts_persona_base_unknown_r0",
+        "condition": "persona_base",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "90ed93a947a8",
+        "label": "correct",
+        "evidence": "结论：1152元",
+        "trial_id": "facts_structured_base_percentage_r0",
+        "condition": "structured_base",
+        "case_id": "percentage",
+        "replicate": 0
+      },
+      {
+        "id": "329aa70549ab",
+        "label": "correct",
+        "evidence": "B公司现在在苏州",
+        "trial_id": "facts_persona_base_city_correction_r0",
+        "condition": "persona_base",
+        "case_id": "city_correction",
+        "replicate": 0
+      },
+      {
+        "id": "57e3ff2ccf3a",
+        "label": "correct",
+        "evidence": "逐项算下来是 300 元，不是 600",
+        "trial_id": "facts_persona_base_budget_r0",
+        "condition": "persona_base",
+        "case_id": "budget",
+        "replicate": 0
+      },
+      {
+        "id": "b503c8d8b549",
+        "label": "correct",
+        "evidence": "结论：不可确定",
+        "trial_id": "facts_structured_blue_unknown_r0",
+        "condition": "structured_blue",
+        "case_id": "unknown",
+        "replicate": 0
+      },
+      {
+        "id": "e07a5d42dd8b",
+        "label": "correct",
+        "evidence": "结论：不能推出",
+        "trial_id": "facts_persona_blue_syllogism_r0",
+        "condition": "persona_blue",
+        "case_id": "syllogism",
+        "replicate": 0
+      }
+    ],
+    "groups": {
+      "persona_base": {
+        "correct": 8
+      },
+      "structured_dragon": {
+        "correct": 8
+      },
+      "persona_blue": {
+        "correct": 8
+      },
+      "structured_blue": {
+        "correct": 8
+      },
+      "structured_base": {
+        "correct": 8
+      },
+      "vanilla_dragon": {
+        "correct": 8
+      },
+      "vanilla_base": {
+        "correct": 8
+      },
+      "persona_dragon": {
+        "correct": 8
+      },
+      "vanilla_blue": {
+        "correct": 8
+      }
+    },
+    "incidental_error": {
+      "id": "b82e4522b6c6",
+      "trial_id": "facts_structured_base_unknown_r0",
+      "quote": "最多只能说不是 0 也不是 1",
+      "issue": "Unknown sampling mechanism does not rule out probability 0 or 1."
+    }
+  }
+}

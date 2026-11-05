@@ -1,0 +1,338 @@
+{
+  "status": "post-hoc deterministic scorer implementation correction",
+  "rule": "Preserve internal decimal points; remove only trailing ASCII sentence-stop dots. All other strict-format and gold rules unchanged.",
+  "original_result_file_unchanged": true,
+  "runner_unchanged": true,
+  "scorer_source_sha256": "2cafe82856282152a103805ac398c7acf3eeeec4fca5f7f8e9ce97ba53997a13",
+  "affected_trials": [
+    {
+      "trial_id": "facts_vanilla_dragon_fraction_r2",
+      "condition": "vanilla_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_blue_fraction_r3",
+      "condition": "persona_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_base_fraction_r0",
+      "condition": "vanilla_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_blue_fraction_r1",
+      "condition": "persona_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_base_fraction_r2",
+      "condition": "vanilla_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_dragon_fraction_r0",
+      "condition": "vanilla_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_dragon_fraction_r0",
+      "condition": "persona_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_dragon_fraction_r1",
+      "condition": "persona_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_blue_fraction_r1",
+      "condition": "vanilla_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_base_fraction_r0",
+      "condition": "persona_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_base_fraction_r1",
+      "condition": "persona_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_blue_fraction_r0",
+      "condition": "vanilla_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_structured_dragon_fraction_r2",
+      "condition": "structured_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_dragon_fraction_r3",
+      "condition": "persona_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_dragon_fraction_r3",
+      "condition": "vanilla_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_dragon_fraction_r2",
+      "condition": "persona_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_base_fraction_r3",
+      "condition": "vanilla_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_base_fraction_r3",
+      "condition": "persona_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_blue_fraction_r2",
+      "condition": "persona_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_blue_fraction_r3",
+      "condition": "vanilla_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_base_fraction_r1",
+      "condition": "vanilla_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_blue_fraction_r0",
+      "condition": "persona_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_dragon_fraction_r1",
+      "condition": "vanilla_dragon",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_vanilla_blue_fraction_r2",
+      "condition": "vanilla_blue",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    },
+    {
+      "trial_id": "facts_persona_base_fraction_r2",
+      "condition": "persona_base",
+      "case_id": "fraction",
+      "changes": {
+        "say_correct": {
+          "original": false,
+          "corrected": true
+        },
+        "direct_correct": {
+          "original": false,
+          "corrected": true
+        }
+      }
+    }
+  ],
+  "affected_trial_count": 25,
+  "input_sha256": "f27e84a74b5726662703100733edc8cc22ca66e5b0e1dfcb6027e20762c811e6"
+}

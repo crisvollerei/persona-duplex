@@ -1,0 +1,40 @@
+{
+  "study_id": "persona_duplex_followup_2026_11_05",
+  "version": 1,
+  "status": "fixed_before_primary_api_execution",
+  "randomization_seed": 20261105,
+  "replicates": 4,
+  "requested_model": "deepseek-chat",
+  "temperature": 0.7,
+  "max_tokens": 1800,
+  "workers": 8,
+  "primary_jobs": 528,
+  "experiments": {
+    "facts": {"conditions": 9, "cases": 8, "replicates": 4, "jobs": 288, "primary": "say_correct", "secondary": ["answer_format_present", "direct_correct", "valid", "stream_match", "calls_count", "elapsed_s"]},
+    "traits": {"factors": ["intervention", "brevity"], "values": [0.1, 0.5, 0.9], "cases": 4, "replicates": 4, "jobs": 96, "primary": "SAY character count", "secondary": "advice-giving requires separate content review"},
+    "memory": {"conditions": ["empty", "correct", "irrelevant", "contradictory"], "cases": 4, "replicates": 4, "jobs": 64, "primary": "exact final conclusion matching target or unknown as appropriate", "note": "Controlled injected judgments, not learned memories or an elapsed-day test; unsupported_claim is limited to ungrounded non-unknown final conclusions"},
+    "repair": {"conditions": ["healed", "stop", "ambiguous", "formal_neutral"], "replicates": 4, "jobs": 16, "primary": "expected_state", "note": "First three use a seeded repairing record; fourth tests formal wording with explicit denial of distress"},
+    "displacement": {"personas": 2, "cases": 4, "replicates": 4, "jobs": 32, "primary": "exploratory enum distribution", "note": "No independently validated semantic displacement gold labels"},
+    "checker": {"cases": 4, "candidate_conditions": 2, "replicates": 4, "jobs": 32, "primary": "checker_correct", "note": "Known-correct and known-incorrect candidates with supplied factual premises; no personality generation involved"}
+  },
+  "controls": {
+    "long_term_memory": "fixed empty except deliberate memory injection",
+    "semantic_judge": false,
+    "fidelity_check_in_generation": false,
+    "json_fallback": false,
+    "retry": false,
+    "persona_transport": "forced tool calls in raw and observation stages",
+    "streaming": true,
+    "server_seed": null
+  },
+  "analysis": {
+    "primary_fact_denominator": "all assigned trials; exceptions and missing final answer count as incorrect",
+    "direct_denominator": "only explicit parseable conclusion labels; coverage must be reported",
+    "length_unit": "Python len(str), including spaces and punctuation",
+    "pairing_unit": "case, averaging replicates within each case",
+    "bootstrap_resamples": 4000,
+    "intervals": "Wilson per-record descriptive intervals; paired case bootstrap for differences",
+    "multiplicity": "exploratory; no confirmatory p-value claims",
+    "generalization": "fixed small task set, one requested model and one provider session"
+  }
+}

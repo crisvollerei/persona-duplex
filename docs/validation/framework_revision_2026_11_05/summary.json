@@ -1,0 +1,1664 @@
+{
+  "scope": "Focused engineering verification; limited synthetic tasks, not a randomized version superiority study",
+  "input_sha256": "d50c3ce91fb000b3be307e5a470228c19569f12b49d862946c27ba4e6f7b0dbf",
+  "status": {
+    "ok": 36
+  },
+  "format": {
+    "structured_base": {
+      "matches": 13,
+      "n": 16
+    },
+    "structured_blue": {
+      "matches": 12,
+      "n": 16
+    }
+  },
+  "memory": {
+    "replicates": 4,
+    "learned_strict_recall": 4,
+    "learned_n": 4,
+    "empty_unknown": 4,
+    "empty_n": 4,
+    "quote_counts": [
+      3,
+      3,
+      3,
+      2
+    ],
+    "quotes_survive_rebuild": 4
+  },
+  "online_turns": 52,
+  "valid_turns": 50,
+  "stream_equal": 52,
+  "calls": 60,
+  "historical_replay": {
+    "n": 400,
+    "matches": 400,
+    "records": [
+      {
+        "trial_id": "displacement_dragon_d1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_unknown_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_focus_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_drink_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_budget_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_walk_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_meal_history_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_walk_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_file_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_syllogism_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_stop_stop_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_formal_neutral_formal_neutral_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_city_correction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_percentage_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_fraction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_unknown_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_budget_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_percentage_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_unknown_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_percentage_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_walk_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_walk_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_focus_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_city_correction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_fraction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_percentage_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_file_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_meal_history_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_focus_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_fraction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_drink_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_budget_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_percentage_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_midnight_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_city_correction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_midnight_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_file_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_city_correction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_formal_neutral_formal_neutral_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_meal_history_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_city_correction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_midnight_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_budget_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_syllogism_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_focus_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_syllogism_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_fraction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_walk_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_meal_history_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_city_correction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_drink_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_meal_history_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_file_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_unknown_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_ambiguous_ambiguous_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_walk_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_walk_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_city_correction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_syllogism_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_focus_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_percentage_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_budget_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_fraction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_city_correction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_unknown_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_ambiguous_ambiguous_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_city_correction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_walk_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_ambiguous_ambiguous_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_syllogism_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_healed_healed_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_drink_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_budget_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_walk_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_city_correction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_fraction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_city_correction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_drink_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_unknown_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_fraction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_unknown_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_fraction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_syllogism_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_focus_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_percentage_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_focus_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_drink_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_formal_neutral_formal_neutral_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_walk_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_focus_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_fraction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_budget_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_budget_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_percentage_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_budget_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_midnight_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_midnight_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_percentage_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_syllogism_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_syllogism_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_syllogism_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_meal_history_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_percentage_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_file_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_syllogism_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_percentage_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_fraction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_drink_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_percentage_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_city_correction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_fraction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_file_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_unknown_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_file_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_unknown_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_focus_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_focus_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_file_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_drink_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_meal_history_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_midnight_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_midnight_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_midnight_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_drink_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_budget_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_file_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_budget_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_budget_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_unknown_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_meal_history_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_healed_healed_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_percentage_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_focus_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_fraction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_syllogism_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_meal_history_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_fraction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_meal_history_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_budget_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_file_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_city_correction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_formal_neutral_formal_neutral_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_meal_history_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_percentage_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_file_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_ambiguous_ambiguous_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_fraction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_midnight_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_focus_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_midnight_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_fraction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_drink_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_stop_stop_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_unknown_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_fraction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t2_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_meal_history_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_file_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_unknown_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_percentage_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_fraction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_unknown_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_syllogism_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_meal_history_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_syllogism_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_syllogism_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_unknown_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_city_correction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_city_correction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_drink_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_meal_history_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_focus_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_syllogism_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_midnight_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_midnight_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_unknown_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_syllogism_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_city_correction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_unknown_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_midnight_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_meal_history_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_unknown_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_meal_history_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_meal_history_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_percentage_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_unknown_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_fraction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_fraction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_percentage_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_midnight_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_walk_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_midnight_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_drink_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_syllogism_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_meal_history_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_midnight_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_city_correction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_file_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_file_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_focus_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_meal_history_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_fraction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t2_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_meal_history_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_fraction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_midnight_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_meal_history_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_percentage_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t0_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_unknown_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_percentage_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_stop_stop_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_syllogism_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_syllogism_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_walk_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_meal_history_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_percentage_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_midnight_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_city_correction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_city_correction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_midnight_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_focus_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_budget_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_midnight_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_syllogism_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_walk_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_walk_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_city_correction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_meal_history_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_midnight_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.1_t1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_budget_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.5_t3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_drink_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t2_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d0_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_budget_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_syllogism_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t0_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_walk_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t1_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_syllogism_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_city_correction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_drink_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_irrelevant_file_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_syllogism_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d1_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_walk_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_unknown_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_percentage_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_meal_history_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_city_correction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t3_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_empty_focus_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_budget_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_percentage_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_file_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d3_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_unknown_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_midnight_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.1_t1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_contradictory_drink_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_unknown_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_healed_healed_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t3_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.5_t0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_dragon_d2_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_budget_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_unknown_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_stop_stop_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_midnight_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t3_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_city_correction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_brevity_0.9_t1_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_fraction_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_budget_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "repair_healed_healed_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "displacement_blue_d0_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_budget_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_syllogism_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_midnight_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "traits_intervention_0.9_t1_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_fraction_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_fraction_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_blue_city_correction_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_budget_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_base_percentage_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_dragon_percentage_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_structured_base_budget_r3",
+        "matches": true
+      },
+      {
+        "trial_id": "memory_correct_drink_r0",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_budget_r1",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_blue_budget_r2",
+        "matches": true
+      },
+      {
+        "trial_id": "facts_persona_dragon_unknown_r3",
+        "matches": true
+      }
+    ]
+  },
+  "offline_replay_sources": {
+    "__init__.py": "d6368aa276a11f608f26c477c46b2887a6cbbfae77ad7e303510e186c48a0a60",
+    "__main__.py": "13a1a5b340cdcfc1902b62be90e508c7c71886000d5bf087e7854aadf09fb35e",
+    "audit.py": "041cba6c60076361947fcae477a0f4fa144d7f8f1ff144a67c897e06908850fa",
+    "calibrate.py": "ee439e4fbb4738d53c26a18efd52162d0a4ffad058cdc5c27252436b551a020c",
+    "cli.py": "4896217cdf99ce6d58fa71f58fb07c976f79ccecf2a79726310a4225d1227231",
+    "config.py": "484d93f52b82fcafef28a81a1c821497f35ed3eb33537189af82fd7b901fc62b",
+    "consolidate.py": "6f4fe3bda4d46c608def647e7e6b9f76a3b0d401055b9e35863b83d79df8490d",
+    "engine.py": "738d7d2e65eb4198777e01beb075b3be09efa90cfe8fff3f8ac2e5c79f9e2bde",
+    "llm.py": "d7ee5e5dc3c6a7c174b00c28cd6a625330dae7e0c79aba6fc115f7836e08bcd8",
+    "metrics.py": "ba0505803af76f9dfb769e0a07d121f62f2aa47f74695bc451146da7ea942bd8",
+    "parse.py": "d9abe2c9ddf2860d9e84db9d2b11899f1667eb5fb01f224447aee98787ceaeba",
+    "prompt.py": "238cc25170718af7217e368c5490f6af938961e0d52a895cd5dc77fcfa6a5962",
+    "protocol.py": "9f2ab9f0cb490676c055fb2c70810686163b381659647e65f722e7cdac6653a9",
+    "repair.py": "6e30a5c3b1a16c0f08d23276070c14ce244ffb570b6636bb38efeb24c3a65f2c",
+    "session.py": "f59d2ecde552b8c7b58c62572b53203bb82cadd5da974381abd42d5e09c59593",
+    "settle.py": "e5c1efd5db7c9075e4ef0564168acdc38e943fea7778c9db20290384cd837a5c",
+    "similarity.py": "f6e45d0ee5be796f84f4b4f9eae7ac3b9b83978d76d4c06050f22a0581fc9586",
+    "store.py": "ee6cfc8fc88efeea3c9765fa7e89db986e68a984a1fa9ec2a71743cfd854d149",
+    "stream.py": "da8185eff8ccb504eae8c9004005eea164882614a2999994fe9f54da3ebabb65",
+    "term.py": "d0d623ce466aa678405d5762900ee5a25c259b39bf289bb5e75eb61eb2d572f9",
+    "topicjudge.py": "5dcc2e0be5bfc72bac57a90085a615f177593734c9b8b63bf618d70c892a215a"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "rater": "single Codex subagent; condition-masked",
+  "scope": "post hoc diagnostic subset, not human ground truth or confirmatory primary",
+  "ratings": [
+    {
+      "id": "bada4733d742",
+      "label": "correct",
+      "evidence": "次日 00:25"
+    },
+    {
+      "id": "7e13429a7e16",
+      "label": "correct",
+      "evidence": "你今晚吃过一碗热汤面"
+    },
+    {
+      "id": "c275a4b1327e",
+      "label": "correct",
+      "evidence": "结论：不可确定"
+    },
+    {
+      "id": "9377483fe8f3",
+      "label": "correct",
+      "evidence": "1440×0.8=1152"
+    },
+    {
+      "id": "83fe1dfee179",
+      "label": "correct",
+      "evidence": "只剩300，不是600"
+    },
+    {
+      "id": "36e3420c26e1",
+      "label": "correct",
+      "evidence": "结论：300元"
+    },
+    {
+      "id": "1108387873aa",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "3c8e62a15eb5",
+      "label": "correct",
+      "evidence": "次日 00:25"
+    },
+    {
+      "id": "0cbed2113b44",
+      "label": "correct",
+      "evidence": "1152。看着一涨一降"
+    },
+    {
+      "id": "8c311a520f13",
+      "label": "correct",
+      "evidence": "3 ÷ 8 = 37.5%"
+    },
+    {
+      "id": "02a7ed068d0b",
+      "label": "correct",
+      "evidence": "你刚说吃完一碗热汤面，那就算吃过了"
+    },
+    {
+      "id": "c773a02beb5b",
+      "label": "correct",
+      "evidence": "是 300，不是 600"
+    },
+    {
+      "id": "8e5e964e0860",
+      "label": "correct",
+      "evidence": "结论：1152元"
+    },
+    {
+      "id": "61c7fee941ac",
+      "label": "correct",
+      "evidence": "1440 × 0.8 = 1152元"
+    },
+    {
+      "id": "a6c8c2e395b3",
+      "label": "correct",
+      "evidence": "次日 00:25"
+    },
+    {
+      "id": "5a85e5fdf9c1",
+      "label": "correct",
+      "evidence": "逐项扣除的结果是300元"
+    },
+    {
+      "id": "56f87c3c977b",
+      "label": "correct",
+      "evidence": "不能推出"
+    },
+    {
+      "id": "6f2dc25eff6c",
+      "label": "correct",
+      "evidence": "也就是 37.5%"
+    },
+    {
+      "id": "264de7b8eccc",
+      "label": "correct",
+      "evidence": "结论：已吃"
+    },
+    {
+      "id": "c8422398560e",
+      "label": "correct",
+      "evidence": "结论：已吃"
+    },
+    {
+      "id": "6b776721fd67",
+      "label": "correct",
+      "evidence": "你今晚吃过东西"
+    },
+    {
+      "id": "14c0cc3a0802",
+      "label": "correct",
+      "evidence": "3 除以 8，37.5%"
+    },
+    {
+      "id": "ca110bb22bbd",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "c57b20c1e094",
+      "label": "correct",
+      "evidence": "按你给的数字独立计算是剩300"
+    },
+    {
+      "id": "21bf921a2885",
+      "label": "correct",
+      "evidence": "结论：不能推出"
+    },
+    {
+      "id": "cc58bf26daa5",
+      "label": "correct",
+      "evidence": "有些 B 是 C，并不保证那些 B 属于 A"
+    },
+    {
+      "id": "cb4650d1b567",
+      "label": "correct",
+      "evidence": "按 3 ÷ 8 计算，为 37.5%"
+    },
+    {
+      "id": "b82e4522b6c6",
+      "label": "correct",
+      "evidence": "结论：不可确定"
+    },
+    {
+      "id": "8e0c4a9aec37",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "aa418764266b",
+      "label": "correct",
+      "evidence": "不能必然推出"
+    },
+    {
+      "id": "fae167cb70fc",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "2ff51a6cffdc",
+      "label": "correct",
+      "evidence": "可行方案占 3/8 = 37.5%"
+    },
+    {
+      "id": "7ca6ff3fc9e4",
+      "label": "correct",
+      "evidence": "到次日 00:25 结束"
+    },
+    {
+      "id": "2fde29583327",
+      "label": "correct",
+      "evidence": "结论：不可确定"
+    },
+    {
+      "id": "4b2c2dab56ce",
+      "label": "correct",
+      "evidence": "1440 × 0.8 = 1152"
+    },
+    {
+      "id": "47ca97c40866",
+      "label": "correct",
+      "evidence": "今晚吃过了，一碗热汤面"
+    },
+    {
+      "id": "08943a450ade",
+      "label": "correct",
+      "evidence": "结论：不能推出"
+    },
+    {
+      "id": "c2aaf38a4a9e",
+      "label": "correct",
+      "evidence": "结论：已吃"
+    },
+    {
+      "id": "5de7a9cf089f",
+      "label": "correct",
+      "evidence": "按所给项目独立计算，余额为300元"
+    },
+    {
+      "id": "1d8eae286a18",
+      "label": "correct",
+      "evidence": "结论：已吃"
+    },
+    {
+      "id": "ff4b137359a7",
+      "label": "correct",
+      "evidence": "结论：1152元"
+    },
+    {
+      "id": "f69ac3b544d5",
+      "label": "correct",
+      "evidence": "独立算下来剩300元，不是600"
+    },
+    {
+      "id": "d53abb8b3925",
+      "label": "correct",
+      "evidence": "苏州"
+    },
+    {
+      "id": "42886bc72b3c",
+      "label": "correct",
+      "evidence": "次日 00:25"
+    },
+    {
+      "id": "2afbe0a94048",
+      "label": "correct",
+      "evidence": "结论：不能推出"
+    },
+    {
+      "id": "439ddc1e0054",
+      "label": "correct",
+      "evidence": "你今晚已经吃完一碗热汤面，因此吃过东西"
+    },
+    {
+      "id": "6fd644f1ee09",
+      "label": "correct",
+      "evidence": "推不出具体概率"
+    },
+    {
+      "id": "735bfa79e6d7",
+      "label": "correct",
+      "evidence": "结论：不能推出"
+    },
+    {
+      "id": "a7eb01de9a07",
+      "label": "correct",
+      "evidence": "无法计算或唯一确定下次抽到红球的概率"
+    },
+    {
+      "id": "a8ef049ee54f",
+      "label": "correct",
+      "evidence": "结论：不能推出"
+    },
+    {
+      "id": "62ff5cc74fa6",
+      "label": "correct",
+      "evidence": "到 00:25 结束"
+    },
+    {
+      "id": "d2210cd56efe",
+      "label": "correct",
+      "evidence": "3 ÷ 8 × 100% = 37.5%"
+    },
+    {
+      "id": "c799b4cd305d",
+      "label": "correct",
+      "evidence": "结论：1152元"
+    },
+    {
+      "id": "b38c69f306c6",
+      "label": "correct",
+      "evidence": "到次日 00:25"
+    },
+    {
+      "id": "dd45691d3dca",
+      "label": "correct",
+      "evidence": "缺少数量、比例和抽样机制，概率无法确定"
+    },
+    {
+      "id": "87551feda92b",
+      "label": "correct",
+      "evidence": "结论：37.5%"
+    },
+    {
+      "id": "a8b92e021ae8",
+      "label": "correct",
+      "evidence": "结束于次日 00:25"
+    },
+    {
+      "id": "60a7862918c3",
+      "label": "correct",
+      "evidence": "1440×0.8=1152"
+    },
+    {
+      "id": "2d924b1579dd",
+      "label": "correct",
+      "evidence": "次日 00:25"
+    },
+    {
+      "id": "b4dc36103ffe",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "76f1072c9256",
+      "label": "correct",
+      "evidence": "无法确定下次抽到红球的概率"
+    },
+    {
+      "id": "5704dadc2cb5",
+      "label": "correct",
+      "evidence": "剩三百元。六百这个数对不上"
+    },
+    {
+      "id": "3c5e7ac98991",
+      "label": "correct",
+      "evidence": "苏州。成都那条早作废了"
+    },
+    {
+      "id": "25e5f212c6c9",
+      "label": "correct",
+      "evidence": "也就是 37.5%"
+    },
+    {
+      "id": "c0c48581b85a",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "4d76c0c63a38",
+      "label": "correct",
+      "evidence": "可行方案占比为 37.5%"
+    },
+    {
+      "id": "1c7734dc76a0",
+      "label": "correct",
+      "evidence": "概率就定不下来"
+    },
+    {
+      "id": "90ed93a947a8",
+      "label": "correct",
+      "evidence": "结论：1152元"
+    },
+    {
+      "id": "329aa70549ab",
+      "label": "correct",
+      "evidence": "B公司现在在苏州"
+    },
+    {
+      "id": "57e3ff2ccf3a",
+      "label": "correct",
+      "evidence": "逐项算下来是 300 元，不是 600"
+    },
+    {
+      "id": "b503c8d8b549",
+      "label": "correct",
+      "evidence": "结论：不可确定"
+    },
+    {
+      "id": "e07a5d42dd8b",
+      "label": "correct",
+      "evidence": "结论：不能推出"
+    }
+  ]
+}

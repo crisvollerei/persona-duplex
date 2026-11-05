@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "scope": "published research artifacts; self and ignored local material excluded",
+  "files": [
+    {
+      "path": "analyze.py",
+      "bytes": 3765,
+      "sha256": "1065c2c1f604e916cf15ca935e01d9f95faefefe222b74052240ae71eb98f046"
+    },
+    {
+      "path": "implementation_snapshot/manifest.json",
+      "bytes": 2969,
+      "sha256": "cefbce3964160ce529dbbe53c75d78eb2ce1ff190400b38b6182d654bfdeb6a6"
+    },
+    {
+      "path": "implementation_snapshot/persona/__init__.py",
+      "bytes": 452,
+      "sha256": "d6368aa276a11f608f26c477c46b2887a6cbbfae77ad7e303510e186c48a0a60"
+    },
+    {
+      "path": "implementation_snapshot/persona/__main__.py",
+      "bytes": 52,
+      "sha256": "13a1a5b340cdcfc1902b62be90e508c7c71886000d5bf087e7854aadf09fb35e"
+    },
+    {
+      "path": "implementation_snapshot/persona/audit.py",
+      "bytes": 3156,
+      "sha256": "041cba6c60076361947fcae477a0f4fa144d7f8f1ff144a67c897e06908850fa"
+    },
+    {
+      "path": "implementation_snapshot/persona/calibrate.py",
+      "bytes": 14780,
+      "sha256": "ee439e4fbb4738d53c26a18efd52162d0a4ffad058cdc5c27252436b551a020c"
+    },
+    {
+      "path": "implementation_snapshot/persona/cli.py",
+      "bytes": 21705,
+      "sha256": "4896217cdf99ce6d58fa71f58fb07c976f79ccecf2a79726310a4225d1227231"
+    },
+    {
+      "path": "implementation_snapshot/persona/config.py",
+      "bytes": 22463,
+      "sha256": "484d93f52b82fcafef28a81a1c821497f35ed3eb33537189af82fd7b901fc62b"
+    },
+    {
+      "path": "implementation_snapshot/persona/consolidate.py",
+      "bytes": 50424,
+      "sha256": "6f4fe3bda4d46c608def647e7e6b9f76a3b0d401055b9e35863b83d79df8490d"
+    },
+    {
+      "path": "implementation_snapshot/persona/engine.py",
+      "bytes": 62920,
+      "sha256": "738d7d2e65eb4198777e01beb075b3be09efa90cfe8fff3f8ac2e5c79f9e2bde"
+    },
+    {
+      "path": "implementation_snapshot/persona/llm.py",
+      "bytes": 12424,
+      "sha256": "d7ee5e5dc3c6a7c174b00c28cd6a625330dae7e0c79aba6fc115f7836e08bcd8"
+    },
+    {
+      "path": "implementation_snapshot/persona/metrics.py",
+      "bytes": 17992,
+      "sha256": "ba0505803af76f9dfb769e0a07d121f62f2aa47f74695bc451146da7ea942bd8"
+    },
+    {
+      "path": "implementation_snapshot/persona/parse.py",
+      "bytes": 27847,
+      "sha256": "d9abe2c9ddf2860d9e84db9d2b11899f1667eb5fb01f224447aee98787ceaeba"
+    },
+    {
+      "path": "implementation_snapshot/persona/prompt.py",
+      "bytes": 27567,
+      "sha256": "47b573b3886e479271e75164b689bcc39a6363cf98da2b08bc228efef58322ce"
+    },
+    {
+      "path": "implementation_snapshot/persona/protocol.py",
+      "bytes": 42879,
+      "sha256": "9f2ab9f0cb490676c055fb2c70810686163b381659647e65f722e7cdac6653a9"
+    },
+    {
+      "path": "implementation_snapshot/persona/repair.py",
+      "bytes": 7636,
+      "sha256": "6e30a5c3b1a16c0f08d23276070c14ce244ffb570b6636bb38efeb24c3a65f2c"
+    },
+    {
+      "path": "implementation_snapshot/persona/session.py",
+      "bytes": 9179,
+      "sha256": "f59d2ecde552b8c7b58c62572b53203bb82cadd5da974381abd42d5e09c59593"
+    },
+    {
+      "path": "implementation_snapshot/persona/settle.py",
+      "bytes": 10248,
+      "sha256": "e5c1efd5db7c9075e4ef0564168acdc38e943fea7778c9db20290384cd837a5c"
+    },
+    {
+      "path": "implementation_snapshot/persona/similarity.py",
+      "bytes": 2868,
+      "sha256": "f6e45d0ee5be796f84f4b4f9eae7ac3b9b83978d76d4c06050f22a0581fc9586"
+    },
+    {
+      "path": "implementation_snapshot/persona/store.py",
+      "bytes": 49529,
+      "sha256": "ee6cfc8fc88efeea3c9765fa7e89db986e68a984a1fa9ec2a71743cfd854d149"
+    },
+    {
+      "path": "implementation_snapshot/persona/stream.py",
+      "bytes": 17874,
+      "sha256": "da8185eff8ccb504eae8c9004005eea164882614a2999994fe9f54da3ebabb65"
+    },
+    {
+      "path": "implementation_snapshot/persona/term.py",
+      "bytes": 3000,
+      "sha256": "d0d623ce466aa678405d5762900ee5a25c259b39bf289bb5e75eb61eb2d572f9"
+    },
+    {
+      "path": "implementation_snapshot/persona/topicjudge.py",
+      "bytes": 14788,
+      "sha256": "5dcc2e0be5bfc72bac57a90085a615f177593734c9b8b63bf618d70c892a215a"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 918,
+      "sha256": "5225e6a15daff356608233b3f0031651ac357fe614d738202fd33043fdcc8dc8"
+    },
+    {
+      "path": "raw_calls.json.gz",
+      "bytes": 46128,
+      "sha256": "297093f79c9ec03f96a7cc06ae52c6b6b5149376bbcad591895117c8885ae4c3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2845,
+      "sha256": "9b03887d86011ac9f1546227cefa12648118d2a194b26e097308858cc11bbe01"
+    },
+    {
+      "path": "results.json",
+      "bytes": 454075,
+      "sha256": "d50c3ce91fb000b3be307e5a470228c19569f12b49d862946c27ba4e6f7b0dbf"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 42023,
+      "sha256": "a7c5434d65efc8ec147ea8ef8a4e805e2e2a513aca40a21c61e242e178b4048f"
+    },
+    {
+      "path": "validate.py",
+      "bytes": 5667,
+      "sha256": "b1b7a778997b0ae5ae3c11492dec3957280baa0ee4d6a3688cc9d269dc6e49ed"
+    }
+  ]
+}

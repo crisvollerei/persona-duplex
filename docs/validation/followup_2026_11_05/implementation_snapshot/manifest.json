@@ -1,0 +1,112 @@
+{
+  "git_head": "f02223c94a66af9ccb588a5932988b4ffa7c0d4c",
+  "source_hash": "9c9eeb5970bfb63b28021a436469b9fe811dc90cfeba69f3a3b949306d5bb329",
+  "scope": "frozen persona module sources used by the formal study",
+  "files": [
+    {
+      "path": "persona/__init__.py",
+      "copied": true,
+      "sha256": "d6368aa276a11f608f26c477c46b2887a6cbbfae77ad7e303510e186c48a0a60"
+    },
+    {
+      "path": "persona/__main__.py",
+      "copied": true,
+      "sha256": "13a1a5b340cdcfc1902b62be90e508c7c71886000d5bf087e7854aadf09fb35e"
+    },
+    {
+      "path": "persona/audit.py",
+      "copied": true,
+      "sha256": "041cba6c60076361947fcae477a0f4fa144d7f8f1ff144a67c897e06908850fa"
+    },
+    {
+      "path": "persona/calibrate.py",
+      "copied": true,
+      "sha256": "ee439e4fbb4738d53c26a18efd52162d0a4ffad058cdc5c27252436b551a020c"
+    },
+    {
+      "path": "persona/cli.py",
+      "copied": true,
+      "sha256": "4896217cdf99ce6d58fa71f58fb07c976f79ccecf2a79726310a4225d1227231"
+    },
+    {
+      "path": "persona/config.py",
+      "copied": true,
+      "sha256": "484d93f52b82fcafef28a81a1c821497f35ed3eb33537189af82fd7b901fc62b"
+    },
+    {
+      "path": "persona/consolidate.py",
+      "copied": true,
+      "sha256": "910ab1ac0b0cfbce01cf993da41200512cb36ddead0e7304d09a482770bf691d"
+    },
+    {
+      "path": "persona/engine.py",
+      "copied": true,
+      "sha256": "5cefd0139bb3aede6f9b2cde4f4db6179d35fff7a561bfb9d245348ec78ed72c"
+    },
+    {
+      "path": "persona/llm.py",
+      "copied": true,
+      "sha256": "d7ee5e5dc3c6a7c174b00c28cd6a625330dae7e0c79aba6fc115f7836e08bcd8"
+    },
+    {
+      "path": "persona/metrics.py",
+      "copied": true,
+      "sha256": "ba0505803af76f9dfb769e0a07d121f62f2aa47f74695bc451146da7ea942bd8"
+    },
+    {
+      "path": "persona/parse.py",
+      "copied": true,
+      "sha256": "81f531edf4cdf813a5f574631804f944646226e34fdaf5c93e668d25d67f9b3d"
+    },
+    {
+      "path": "persona/prompt.py",
+      "copied": true,
+      "sha256": "67e5f3add4810307c22c707d4f01d1afce0528cfc31b258530577ddc6be37ca2"
+    },
+    {
+      "path": "persona/protocol.py",
+      "copied": true,
+      "sha256": "661367b4a55137fa48d4821d469dc852e839b5c7867f102dc3ffcdecdd4641be"
+    },
+    {
+      "path": "persona/repair.py",
+      "copied": true,
+      "sha256": "6e30a5c3b1a16c0f08d23276070c14ce244ffb570b6636bb38efeb24c3a65f2c"
+    },
+    {
+      "path": "persona/session.py",
+      "copied": true,
+      "sha256": "f59d2ecde552b8c7b58c62572b53203bb82cadd5da974381abd42d5e09c59593"
+    },
+    {
+      "path": "persona/settle.py",
+      "copied": true,
+      "sha256": "e5c1efd5db7c9075e4ef0564168acdc38e943fea7778c9db20290384cd837a5c"
+    },
+    {
+      "path": "persona/similarity.py",
+      "copied": true,
+      "sha256": "f6e45d0ee5be796f84f4b4f9eae7ac3b9b83978d76d4c06050f22a0581fc9586"
+    },
+    {
+      "path": "persona/store.py",
+      "copied": true,
+      "sha256": "8aef508451a0512bed57f25170a681941aca1ba598ca9af1bb2588f7d513a1eb"
+    },
+    {
+      "path": "persona/stream.py",
+      "copied": true,
+      "sha256": "4bd225835a0b1a5479ef8fc66a781585594010ecbe4a8dcfb4803cbc51b2a856"
+    },
+    {
+      "path": "persona/term.py",
+      "copied": true,
+      "sha256": "d0d623ce466aa678405d5762900ee5a25c259b39bf289bb5e75eb61eb2d572f9"
+    },
+    {
+      "path": "persona/topicjudge.py",
+      "copied": true,
+      "sha256": "5dcc2e0be5bfc72bac57a90085a615f177593734c9b8b63bf618d70c892a215a"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "rater": "single Codex subagent, condition-masked",
+  "scope": "exploratory; not human independent ground truth",
+  "ratings": [
+    {
+      "id": "4411fff5ac32",
+      "action_suggestion": false,
+      "evidence": "只询问卡点属于填写还是提交，没有提出应采取的行动。"
+    },
+    {
+      "id": "cbfe6fda37c4",
+      "action_suggestion": true,
+      "evidence": "就问一句“最近是不是忙”"
+    },
+    {
+      "id": "b5edebf4a400",
+      "action_suggestion": true,
+      "evidence": "换成“最近是不是忙，感觉你回得少了”"
+    },
+    {
+      "id": "2b3e21be96f1",
+      "action_suggestion": true,
+      "evidence": "先收拾最碍眼那一角就行"
+    },
+    {
+      "id": "99143d083c05",
+      "action_suggestion": true,
+      "evidence": "像「最近是不是挺忙，感觉你回得少了」这样"
+    },
+    {
+      "id": "86b02df0f2ad",
+      "action_suggestion": true,
+      "evidence": "先清一小块就行"
+    },
+    {
+      "id": "bed50ea673e7",
+      "action_suggestion": true,
+      "evidence": "先清一小块"
+    },
+    {
+      "id": "8635765a61f2",
+      "action_suggestion": true,
+      "evidence": "挑一小块下手就行"
+    },
+    {
+      "id": "b4909a3ebc26",
+      "action_suggestion": false,
+      "evidence": "只澄清页面障碍还是提交犹豫，未提出行动建议。"
+    },
+    {
+      "id": "2fe146041122",
+      "action_suggestion": true,
+      "evidence": "把书翻到要复习的那页，就看五分钟"
+    },
+    {
+      "id": "ab1181633ed4",
+      "action_suggestion": false,
+      "evidence": "只询问填不下去还是差最后提交，没有给出行动。"
+    },
+    {
+      "id": "0fc9337d5342",
+      "action_suggestion": true,
+      "evidence": "问一句是忙还是有事"
+    },
+    {
+      "id": "1b45e16f7900",
+      "action_suggestion": true,
+      "evidence": "先收眼前一小块就够"
+    },
+    {
+      "id": "7ecb35bac023",
+      "action_suggestion": false,
+      "evidence": "这是对卡点的澄清问题，没有提出可执行行动。"
+    },
+    {
+      "id": "ffa4da09a538",
+      "action_suggestion": true,
+      "evidence": "还是就先让它开着"
+    },
+    {
+      "id": "bb1b5dba94c8",
+      "action_suggestion": true,
+      "evidence": "说\"最近感觉你回得少了，是我哪儿让你不舒服了吗\""
+    },
+    {
+      "id": "e69431b02be2",
+      "action_suggestion": false,
+      "evidence": "仅表达可以自行选择从何说起，没有具体行动建议。"
+    },
+    {
+      "id": "a96ba6f9f951",
+      "action_suggestion": true,
+      "evidence": "先把书打开，读一页，定个十分钟的计时"
+    },
+    {
+      "id": "1a5928b94214",
+      "action_suggestion": true,
+      "evidence": "就翻到一页，看五分钟"
+    },
+    {
+      "id": "6b9f23c098c9",
+      "action_suggestion": true,
+      "evidence": "可以先轻轻提一句，看对方接不接"
+    },
+    {
+      "id": "bd9b150c6846",
+      "action_suggestion": true,
+      "evidence": "先只翻一页，或者做五道题"
+    },
+    {
+      "id": "90c3ef15c4c5",
+      "action_suggestion": true,
+      "evidence": "先只收一块试试"
+    },
+    {
+      "id": "2d8c41389f54",
+      "action_suggestion": true,
+      "evidence": "先清一小块试试"
+    },
+    {
+      "id": "9916d02d302d",
+      "action_suggestion": true,
+      "evidence": "今晚先关掉也可以"
+    },
+    {
+      "id": "9f48b2c563a0",
+      "action_suggestion": true,
+      "evidence": "换成“最近是不是忙，感觉你回得少了”"
+    },
+    {
+      "id": "e7924ea1bbd7",
+      "action_suggestion": false,
+      "evidence": "只询问卡在哪一步，未建议用户采取行动。"
+    },
+    {
+      "id": "bd37cda7966e",
+      "action_suggestion": true,
+      "evidence": "说你自己那部分就好"
+    },
+    {
+      "id": "4c2cd80a2cf9",
+      "action_suggestion": true,
+      "evidence": "先挑一小块收拾，比如桌角那一堆"
+    },
+    {
+      "id": "8d29ebf62f67",
+      "action_suggestion": true,
+      "evidence": "就先翻开书，看一页也行"
+    },
+    {
+      "id": "8995c1caf3d3",
+      "action_suggestion": true,
+      "evidence": "挑一小块地方先收拾"
+    },
+    {
+      "id": "4f2e70f21245",
+      "action_suggestion": true,
+      "evidence": "翻开书，只看五分钟"
+    },
+    {
+      "id": "aa8773d13f9e",
+      "action_suggestion": true,
+      "evidence": "先起来走两步，回来只翻一页"
+    },
+    {
+      "id": "fc2cfd25d9ca",
+      "action_suggestion": true,
+      "evidence": "先想想你是真想知道原因，还是想确认你们之间没事"
+    },
+    {
+      "id": "bc2c515327c8",
+      "action_suggestion": true,
+      "evidence": "先挑一小块动一下就行"
+    },
+    {
+      "id": "504490b93068",
+      "action_suggestion": true,
+      "evidence": "就翻到某一页，看五分钟"
+    },
+    {
+      "id": "61cf9a26b2ae",
+      "action_suggestion": true,
+      "evidence": "后者可以说说自己的感受"
+    },
+    {
+      "id": "2e0235fb9d5a",
+      "action_suggestion": true,
+      "evidence": "先存个档，明天再看"
+    },
+    {
+      "id": "b422c15fecd2",
+      "action_suggestion": true,
+      "evidence": "把书翻开，看一页，写一行字"
+    },
+    {
+      "id": "e292a8db1ec7",
+      "action_suggestion": true,
+      "evidence": "要不就只翻一页"
+    },
+    {
+      "id": "3158950ce904",
+      "action_suggestion": true,
+      "evidence": "先弄眼前那一小块就行"
+    },
+    {
+      "id": "8af9a33bfc95",
+      "action_suggestion": true,
+      "evidence": "先想想你是想确认关系，还是想知道他怎么了"
+    },
+    {
+      "id": "ea076b27ce78",
+      "action_suggestion": true,
+      "evidence": "挑个轻松的时机，说“最近你好像挺忙的”"
+    },
+    {
+      "id": "a6dac8f9970d",
+      "action_suggestion": true,
+      "evidence": "可以先只清桌面那一层，把东西堆到一边"
+    },
+    {
+      "id": "cee1656b08d6",
+      "action_suggestion": true,
+      "evidence": "先放着也没事"
+    },
+    {
+      "id": "24ca5d2a0cb4",
+      "action_suggestion": false,
+      "evidence": "只澄清岗位要求或简历措辞的卡点，没有给出行动建议。"
+    },
+    {
+      "id": "87a18aa57dbb",
+      "action_suggestion": true,
+      "evidence": "要不先只翻一页看看"
+    },
+    {
+      "id": "7012a675e2aa",
+      "action_suggestion": false,
+      "evidence": "只是解释犹豫并表示今晚不投也无妨，未明确提出行动安排。"
+    },
+    {
+      "id": "8db1b804d2b2",
+      "action_suggestion": true,
+      "evidence": "要不先只翻一页"
+    }
+  ]
+}

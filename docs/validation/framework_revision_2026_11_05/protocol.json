@@ -1,0 +1,14 @@
+{
+  "study": "focused verification of framework revision",
+  "fixed_before_requests": true,
+  "requested_model": "deepseek-chat",
+  "temperature": 0.7,
+  "format_trials": 32,
+  "format_design": "8 original fact tasks, neutral and blue expression, 2 independent repetitions; default text only",
+  "memory_replicates": 4,
+  "memory_design": "3 training turns, real consolidation, isolated learned/empty probes; import complete supported memory including evidence_quotes",
+  "scoring": "Use published decimal-corrected strict conclusion score; memory strict slot and explicitly descriptive in-text number checks remain separate",
+  "comparison_scope": "Targeted new-run verification, not a randomized between-version superiority experiment",
+  "retries": "No model request retries, no checker, no JSON fallback; bounded local file-write retry only",
+  "privacy": "Synthetic tasks only; no API credentials in artifacts"
+}

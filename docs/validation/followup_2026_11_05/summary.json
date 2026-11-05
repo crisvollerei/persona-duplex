@@ -1,0 +1,6053 @@
+{
+  "analysis": {
+    "bootstrap_seed": 20261105,
+    "bootstrap_replicates": 4000,
+    "python": "3.14.3",
+    "unit": "trial record; correlated turns are aggregated within trial",
+    "intervals": "Wilson: descriptive trial ratios; bootstrap: case-cluster resampling",
+    "scoring_amendment": {
+      "status": "post-hoc deterministic scorer implementation correction",
+      "rule": "Preserve internal decimal points; remove only trailing ASCII sentence-stop dots. All other strict-format and gold rules unchanged.",
+      "original_result_file_unchanged": true,
+      "runner_unchanged": true,
+      "scorer_source_sha256": "2cafe82856282152a103805ac398c7acf3eeeec4fca5f7f8e9ce97ba53997a13",
+      "affected_trial_count": 25,
+      "input_sha256": "f27e84a74b5726662703100733edc8cc22ca66e5b0e1dfcb6027e20762c811e6"
+    },
+    "input_sha256": "f27e84a74b5726662703100733edc8cc22ca66e5b0e1dfcb6027e20762c811e6",
+    "analyzer_sha256": "b07f0ded54961dddf104a28c5827eda6086099b2b25c9e2e3bcf4c8bb95acef2",
+    "matplotlib": "3.11.2"
+  },
+  "record_count": 528,
+  "status": {
+    "ok": 528
+  },
+  "records_without_trial_id": 0,
+  "planned_trials": null,
+  "groups": {
+    "checker/correct": {
+      "experiment": "checker",
+      "condition": "correct",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 0,
+      "protocol_valid": {
+        "successes": 0,
+        "n": 0,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 0,
+        "n": 0,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": null,
+        "bootstrap95": [
+          null,
+          null
+        ],
+        "cases": 0,
+        "n": 0
+      },
+      "elapsed_seconds": {
+        "mean": null,
+        "bootstrap95": [
+          null,
+          null
+        ],
+        "cases": 0,
+        "n": 0
+      },
+      "displace": {},
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 16,
+          "n": 16,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.8063923194655637,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct_including_errors": {
+          "successes": 16,
+          "n": 16,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.8063923194655637,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "checker/incorrect": {
+      "experiment": "checker",
+      "condition": "incorrect",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 0,
+      "protocol_valid": {
+        "successes": 0,
+        "n": 0,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 0,
+        "n": 0,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": null,
+        "bootstrap95": [
+          null,
+          null
+        ],
+        "cases": 0,
+        "n": 0
+      },
+      "elapsed_seconds": {
+        "mean": null,
+        "bootstrap95": [
+          null,
+          null
+        ],
+        "cases": 0,
+        "n": 0
+      },
+      "displace": {},
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 16,
+          "n": 16,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.8063923194655637,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct_including_errors": {
+          "successes": 16,
+          "n": 16,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.8063923194655637,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "displacement/blue": {
+      "experiment": "displacement",
+      "condition": "blue",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 25.0625,
+        "bootstrap95": [
+          17.875,
+          32.25
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.702941200004716,
+        "bootstrap95": [
+          1.4843041875137715,
+          1.9215782124956604
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "displacement/dragon": {
+      "experiment": "displacement",
+      "condition": "dragon",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 14,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 28.5,
+        "bootstrap95": [
+          18.9375,
+          36.125
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.8505645499899401,
+        "bootstrap95": [
+          1.5137411749892635,
+          2.243448700006411
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "facts/persona_base": {
+      "experiment": "facts",
+      "condition": "persona_base",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 30,
+        "n": 32,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 94,
+      "say_chars": {
+        "mean": 70.90625,
+        "bootstrap95": [
+          48.3734375,
+          96.46875
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 4.272222421877814,
+        "bootstrap95": [
+          3.8892726124904584,
+          4.709333360004348
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 24,
+          "n": 28,
+          "missing": 4,
+          "rate": 0.8571428571428571,
+          "wilson95": [
+            0.685101978364747,
+            0.9430099468025059
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only"
+        },
+        "say_correct": {
+          "successes": 24,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.5789344100575552,
+            0.8674759908149096
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 28,
+          "n": 28,
+          "missing": 4,
+          "rate": 1.0,
+          "wilson95": [
+            0.8793566952341543,
+            0.9999999999999998
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only; decimal cleaning corrected"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 28,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.875,
+          "wilson95": [
+            0.7193169451834978,
+            0.9502986561251991
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 28,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.875,
+          "wilson95": [
+            0.7193169451834978,
+            0.9502986561251991
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 24,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.5789344100575552,
+            0.8674759908149096
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 28,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.875,
+          "wilson95": [
+            0.7193169451834978,
+            0.9502986561251991
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 28,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.875,
+        "wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      },
+      "direct_parse_coverage": {
+        "successes": 28,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.875,
+        "wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "scope": "conclusion-marker rule scorable; not whole direct semantic correctness"
+      }
+    },
+    "facts/persona_blue": {
+      "experiment": "facts",
+      "condition": "persona_blue",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 31,
+        "n": 32,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 95,
+      "say_chars": {
+        "mean": 56.75,
+        "bootstrap95": [
+          41.125,
+          72.50078125
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 4.247768428122072,
+        "bootstrap95": [
+          3.771936865632597,
+          4.777435172963033
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 21,
+          "n": 27,
+          "missing": 5,
+          "rate": 0.7777777777777778,
+          "wilson95": [
+            0.5924307113336742,
+            0.8939276054763996
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only"
+        },
+        "say_correct": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 25,
+          "n": 27,
+          "missing": 5,
+          "rate": 0.9259259259259259,
+          "wilson95": [
+            0.7663040731697686,
+            0.9794453459390113
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only; decimal cleaning corrected"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 25,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.78125,
+        "wilson95": [
+          0.6124500635075647,
+          0.8897616374739581
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      },
+      "direct_parse_coverage": {
+        "successes": 27,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.84375,
+        "wilson95": [
+          0.682458504024696,
+          0.9313557971749429
+        ],
+        "scope": "conclusion-marker rule scorable; not whole direct semantic correctness"
+      }
+    },
+    "facts/persona_dragon": {
+      "experiment": "facts",
+      "condition": "persona_dragon",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 31,
+        "n": 32,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 31,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 95,
+      "say_chars": {
+        "mean": 81.5625,
+        "bootstrap95": [
+          51.08984375,
+          114.03359375000001
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 4.320251859371638,
+        "bootstrap95": [
+          3.8209486935818857,
+          4.878641874995083
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 20,
+          "n": 25,
+          "missing": 7,
+          "rate": 0.8,
+          "wilson95": [
+            0.6086904963045967,
+            0.9113941531319742
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only"
+        },
+        "say_correct": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 24,
+          "n": 25,
+          "missing": 7,
+          "rate": 0.96,
+          "wilson95": [
+            0.8045593626380625,
+            0.9929037664980127
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only; decimal cleaning corrected"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 26,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.8125,
+          "wilson95": [
+            0.6469084479862404,
+            0.9111045531043405
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 26,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.8125,
+        "wilson95": [
+          0.6469084479862404,
+          0.9111045531043405
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      },
+      "direct_parse_coverage": {
+        "successes": 25,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.78125,
+        "wilson95": [
+          0.6124500635075647,
+          0.8897616374739581
+        ],
+        "scope": "conclusion-marker rule scorable; not whole direct semantic correctness"
+      }
+    },
+    "facts/structured_base": {
+      "experiment": "facts",
+      "condition": "structured_base",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 31,
+        "n": 32,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 32,
+      "say_chars": {
+        "mean": 43.0625,
+        "bootstrap95": [
+          30.34375,
+          55.65625
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.5896705843697418,
+        "bootstrap95": [
+          1.3976776959158088,
+          1.7557100937410723
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 31,
+        "missing": 1
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 3,
+          "n": 3,
+          "missing": 29,
+          "rate": 1.0,
+          "wilson95": [
+            0.4385029682449546,
+            1
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only"
+        },
+        "say_correct": {
+          "successes": 11,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.34375,
+          "wilson95": [
+            0.20410437924433172,
+            0.5168891202103778
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 3,
+          "n": 3,
+          "missing": 29,
+          "rate": 1.0,
+          "wilson95": [
+            0.4385029682449546,
+            1
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only; decimal cleaning corrected"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 11,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.34375,
+          "wilson95": [
+            0.20410437924433172,
+            0.5168891202103778
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 11,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.34375,
+          "wilson95": [
+            0.20410437924433172,
+            0.5168891202103778
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 11,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.34375,
+          "wilson95": [
+            0.20410437924433172,
+            0.5168891202103778
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 11,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.34375,
+          "wilson95": [
+            0.20410437924433172,
+            0.5168891202103778
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 11,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.34375,
+        "wilson95": [
+          0.20410437924433172,
+          0.5168891202103778
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      },
+      "direct_parse_coverage": {
+        "successes": 3,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.09375,
+        "wilson95": [
+          0.032401551298366194,
+          0.24218154728387864
+        ],
+        "scope": "conclusion-marker rule scorable; not whole direct semantic correctness"
+      }
+    },
+    "facts/structured_blue": {
+      "experiment": "facts",
+      "condition": "structured_blue",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 32,
+      "say_chars": {
+        "mean": 34.96875,
+        "bootstrap95": [
+          25.84375,
+          43.75
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.6077490812531323,
+        "bootstrap95": [
+          1.4416721015714757,
+          1.7796053273474173
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 2,
+          "n": 2,
+          "missing": 30,
+          "rate": 1.0,
+          "wilson95": [
+            0.34238022750665303,
+            1
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only"
+        },
+        "say_correct": {
+          "successes": 9,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.28125,
+          "wilson95": [
+            0.15564580497742764,
+            0.45374509425916565
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 2,
+          "n": 2,
+          "missing": 30,
+          "rate": 1.0,
+          "wilson95": [
+            0.34238022750665303,
+            1
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only; decimal cleaning corrected"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 9,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.28125,
+          "wilson95": [
+            0.15564580497742764,
+            0.45374509425916565
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 9,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.28125,
+          "wilson95": [
+            0.15564580497742764,
+            0.45374509425916565
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 9,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.28125,
+          "wilson95": [
+            0.15564580497742764,
+            0.45374509425916565
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 9,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.28125,
+          "wilson95": [
+            0.15564580497742764,
+            0.45374509425916565
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 9,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.28125,
+        "wilson95": [
+          0.15564580497742764,
+          0.45374509425916565
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      },
+      "direct_parse_coverage": {
+        "successes": 2,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.0625,
+        "wilson95": [
+          0.017310567031640967,
+          0.2014712314415458
+        ],
+        "scope": "conclusion-marker rule scorable; not whole direct semantic correctness"
+      }
+    },
+    "facts/structured_dragon": {
+      "experiment": "facts",
+      "condition": "structured_dragon",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 32,
+      "say_chars": {
+        "mean": 51.0625,
+        "bootstrap95": [
+          35.432812500000004,
+          67.8765625
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.734726331265847,
+        "bootstrap95": [
+          1.5147835915066026,
+          1.9515587562636938
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 7,
+          "n": 9,
+          "missing": 23,
+          "rate": 0.7777777777777778,
+          "wilson95": [
+            0.45258896910698887,
+            0.9367748928821533
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only"
+        },
+        "say_correct": {
+          "successes": 14,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.4375,
+          "wilson95": [
+            0.2816533111504036,
+            0.6067440886314801
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 8,
+          "n": 9,
+          "missing": 23,
+          "rate": 0.8888888888888888,
+          "wilson95": [
+            0.5650002944233439,
+            0.9801091123614551
+          ],
+          "scope": "conditional on conclusion-marker rule scorable direct only; decimal cleaning corrected"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 15,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.46875,
+          "wilson95": [
+            0.30869387108068835,
+            0.6355048288102536
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 15,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.46875,
+          "wilson95": [
+            0.30869387108068835,
+            0.6355048288102536
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 14,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.4375,
+          "wilson95": [
+            0.2816533111504036,
+            0.6067440886314801
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 15,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.46875,
+          "wilson95": [
+            0.30869387108068835,
+            0.6355048288102536
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 15,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.46875,
+        "wilson95": [
+          0.30869387108068835,
+          0.6355048288102536
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      },
+      "direct_parse_coverage": {
+        "successes": 9,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.28125,
+        "wilson95": [
+          0.15564580497742764,
+          0.45374509425916565
+        ],
+        "scope": "conclusion-marker rule scorable; not whole direct semantic correctness"
+      }
+    },
+    "facts/vanilla_base": {
+      "experiment": "facts",
+      "condition": "vanilla_base",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 0,
+        "n": 0,
+        "missing": 32
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 32,
+      "say_chars": {
+        "mean": 56.03125,
+        "bootstrap95": [
+          32.15625,
+          77.4375
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 0.9545642624980246,
+        "bootstrap95": [
+          0.8106125522716866,
+          1.091224232649165
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "missing": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 18,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.5625,
+          "wilson95": [
+            0.3932559113685198,
+            0.7183466888495963
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 22,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.6875,
+          "wilson95": [
+            0.5143332169904459,
+            0.8204745836639026
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 27,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.84375,
+          "wilson95": [
+            0.682458504024696,
+            0.9313557971749429
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 18,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.5625,
+          "wilson95": [
+            0.3932559113685198,
+            0.7183466888495963
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 22,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.6875,
+          "wilson95": [
+            0.5143332169904459,
+            0.8204745836639026
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 27,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.84375,
+        "wilson95": [
+          0.682458504024696,
+          0.9313557971749429
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      }
+    },
+    "facts/vanilla_blue": {
+      "experiment": "facts",
+      "condition": "vanilla_blue",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 0,
+        "n": 0,
+        "missing": 32
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 32,
+      "say_chars": {
+        "mean": 39.875,
+        "bootstrap95": [
+          22.53125,
+          57.40625
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 0.9662095718776982,
+        "bootstrap95": [
+          0.8681362633588833,
+          1.0773692096107879
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "missing": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 29,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.90625,
+          "wilson95": [
+            0.7578184527161212,
+            0.9675984487016337
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 29,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.90625,
+        "wilson95": [
+          0.7578184527161212,
+          0.9675984487016337
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      }
+    },
+    "facts/vanilla_dragon": {
+      "experiment": "facts",
+      "condition": "vanilla_dragon",
+      "n": 32,
+      "cases": 8,
+      "status": {
+        "ok": 32
+      },
+      "turn_count": 32,
+      "protocol_valid": {
+        "successes": 0,
+        "n": 0,
+        "missing": 32
+      },
+      "stream_match": {
+        "successes": 32,
+        "n": 32,
+        "missing": 0
+      },
+      "exported_calls": 32,
+      "say_chars": {
+        "mean": 51.6875,
+        "bootstrap95": [
+          30.40625,
+          74.96953125
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 0.9773346656256763,
+        "bootstrap95": [
+          0.8602451688281689,
+          1.0945322600882719
+        ],
+        "cases": 8,
+        "n": 32,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "missing": 32
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 28,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.875,
+          "wilson95": [
+            0.7193169451834978,
+            0.9502986561251991
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 32,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_including_errors": {
+          "successes": 21,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.65625,
+          "wilson95": [
+            0.4831108797896222,
+            0.7958956207556682
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed_including_errors": {
+          "successes": 25,
+          "n": 32,
+          "missing": 0,
+          "rate": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "say_answer_marker_coverage": {
+        "successes": 28,
+        "n": 32,
+        "missing": 0,
+        "rate": 0.875,
+        "wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "scope": "record-level descriptive; repeated cases are correlated"
+      }
+    },
+    "memory/contradictory": {
+      "experiment": "memory",
+      "condition": "contradictory",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 43.625,
+        "bootstrap95": [
+          32.75,
+          54.5
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.8992837312762276,
+        "bootstrap95": [
+          1.7918042875244282,
+          2.006763175028027
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 8,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5,
+          "wilson95": [
+            0.27999563610326017,
+            0.7200043638967398
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 8,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5,
+          "wilson95": [
+            0.27999563610326017,
+            0.7200043638967398
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 8,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5,
+          "wilson95": [
+            0.27999563610326017,
+            0.7200043638967398
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 8,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5,
+          "wilson95": [
+            0.27999563610326017,
+            0.7200043638967398
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct_including_errors": {
+          "successes": 8,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5,
+          "wilson95": [
+            0.27999563610326017,
+            0.7200043638967398
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "memory/correct": {
+      "experiment": "memory",
+      "condition": "correct",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 31.5625,
+        "bootstrap95": [
+          24.5,
+          42.8125
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.6250984812504612,
+        "bootstrap95": [
+          1.4910304562581587,
+          1.7605769749861793
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 4,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.25,
+          "wilson95": [
+            0.10182067491213048,
+            0.49498316535508774
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 4,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.25,
+          "wilson95": [
+            0.10182067491213048,
+            0.49498316535508774
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 4,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.25,
+          "wilson95": [
+            0.10182067491213048,
+            0.49498316535508774
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct_including_errors": {
+          "successes": 4,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.25,
+          "wilson95": [
+            0.10182067491213048,
+            0.49498316535508774
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "memory/empty": {
+      "experiment": "memory",
+      "condition": "empty",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 48.875,
+        "bootstrap95": [
+          44.0,
+          53.75
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.9144380000070669,
+        "bootstrap95": [
+          1.8195672125002602,
+          2.0093087875138735
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 9,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5625,
+          "wilson95": [
+            0.331785563988119,
+            0.7690134759450765
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 9,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5625,
+          "wilson95": [
+            0.331785563988119,
+            0.7690134759450765
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.1936076805344365
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 9,
+          "missing": 7,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.2991450484195441
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct_including_errors": {
+          "successes": 9,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.5625,
+          "wilson95": [
+            0.331785563988119,
+            0.7690134759450765
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "memory/irrelevant": {
+      "experiment": "memory",
+      "condition": "irrelevant",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 48.6875,
+        "bootstrap95": [
+          45.25,
+          52.125
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.9623106375074713,
+        "bootstrap95": [
+          1.8970234375010477,
+          2.0275978375138948
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 12,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.5050168346449122,
+            0.8981793250878696
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 12,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.5050168346449122,
+            0.8981793250878696
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.1936076805344365
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 12,
+          "missing": 4,
+          "rate": 0.0,
+          "wilson95": [
+            2.7755575615628914e-17,
+            0.24249400665524085
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct_including_errors": {
+          "successes": 12,
+          "n": 16,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.5050168346449122,
+            0.8981793250878696
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "repair/ambiguous": {
+      "experiment": "repair",
+      "condition": "ambiguous",
+      "n": 4,
+      "cases": 1,
+      "status": {
+        "ok": 4
+      },
+      "turn_count": 4,
+      "protocol_valid": {
+        "successes": 3,
+        "n": 4,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 4,
+        "n": 4,
+        "missing": 0
+      },
+      "exported_calls": 4,
+      "say_chars": {
+        "mean": 16.25,
+        "bootstrap95": [
+          16.25,
+          16.25
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.3459762999846134,
+        "bootstrap95": [
+          1.3459762999846134,
+          1.3459762999846134
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 4
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state_including_errors": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "repair/formal_neutral": {
+      "experiment": "repair",
+      "condition": "formal_neutral",
+      "n": 4,
+      "cases": 1,
+      "status": {
+        "ok": 4
+      },
+      "turn_count": 4,
+      "protocol_valid": {
+        "successes": 4,
+        "n": 4,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 4,
+        "n": 4,
+        "missing": 0
+      },
+      "exported_calls": 4,
+      "say_chars": {
+        "mean": 25.75,
+        "bootstrap95": [
+          25.75,
+          25.75
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.9722021500056144,
+        "bootstrap95": [
+          1.9722021500056144,
+          1.9722021500056144
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 4
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state_including_errors": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "repair/healed": {
+      "experiment": "repair",
+      "condition": "healed",
+      "n": 4,
+      "cases": 1,
+      "status": {
+        "ok": 4
+      },
+      "turn_count": 4,
+      "protocol_valid": {
+        "successes": 3,
+        "n": 4,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 4,
+        "n": 4,
+        "missing": 0
+      },
+      "exported_calls": 4,
+      "say_chars": {
+        "mean": 25.5,
+        "bootstrap95": [
+          25.5,
+          25.5
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.720447450003121,
+        "bootstrap95": [
+          1.720447450003121,
+          1.720447450003121
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 4
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state_including_errors": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "repair/stop": {
+      "experiment": "repair",
+      "condition": "stop",
+      "n": 4,
+      "cases": 1,
+      "status": {
+        "ok": 4
+      },
+      "turn_count": 4,
+      "protocol_valid": {
+        "successes": 4,
+        "n": 4,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 4,
+        "n": 4,
+        "missing": 0
+      },
+      "exported_calls": 4,
+      "say_chars": {
+        "mean": 29,
+        "bootstrap95": [
+          29.0,
+          29.0
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.7661126500170212,
+        "bootstrap95": [
+          1.7661126500170212,
+          1.7661126500170212
+        ],
+        "cases": 1,
+        "n": 4,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 4
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 4,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state_including_errors": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "traits/brevity_0.1": {
+      "experiment": "traits",
+      "condition": "brevity_0.1",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 14,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 53.6875,
+        "bootstrap95": [
+          39.1875,
+          70.125
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 2.181996250001248,
+        "bootstrap95": [
+          2.003782756262808,
+          2.397409243742004
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "traits/brevity_0.5": {
+      "experiment": "traits",
+      "condition": "brevity_0.5",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 15,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 46.0625,
+        "bootstrap95": [
+          37.25,
+          54.875
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 2.1219786187357386,
+        "bootstrap95": [
+          1.9267624999920372,
+          2.3019883937304257
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "traits/brevity_0.9": {
+      "experiment": "traits",
+      "condition": "brevity_0.9",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 31.75,
+        "bootstrap95": [
+          28.875,
+          35.75
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 1.950998262516805,
+        "bootstrap95": [
+          1.7081960312643787,
+          2.1956617437826935
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "traits/intervention_0.1": {
+      "experiment": "traits",
+      "condition": "intervention_0.1",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 15,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 45.8125,
+        "bootstrap95": [
+          30.625,
+          68.0625
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 2.1046161312478944,
+        "bootstrap95": [
+          1.885233725028229,
+          2.4802030187347555
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "traits/intervention_0.5": {
+      "experiment": "traits",
+      "condition": "intervention_0.5",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 13,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 50.375,
+        "bootstrap95": [
+          42.0,
+          59.375
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 2.2282137375004822,
+        "bootstrap95": [
+          2.0699864437701763,
+          2.390782468741236
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "traits/intervention_0.9": {
+      "experiment": "traits",
+      "condition": "intervention_0.9",
+      "n": 16,
+      "cases": 4,
+      "status": {
+        "ok": 16
+      },
+      "turn_count": 16,
+      "protocol_valid": {
+        "successes": 15,
+        "n": 16,
+        "missing": 0
+      },
+      "stream_match": {
+        "successes": 16,
+        "n": 16,
+        "missing": 0
+      },
+      "exported_calls": 16,
+      "say_chars": {
+        "mean": 54.875,
+        "bootstrap95": [
+          44.125,
+          63.125
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "elapsed_seconds": {
+        "mean": 2.316511243741843,
+        "bootstrap95": [
+          2.152544737502467,
+          2.4381544312200276
+        ],
+        "cases": 4,
+        "n": 16,
+        "scope": "equal-case means; percentile case-cluster bootstrap"
+      },
+      "displace": {
+        "none": 16
+      },
+      "evaluation": {
+        "direct_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "direct_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "say_correct_decimal_fixed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "answer_format_present": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "memory_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "recall": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "contradiction_obeyed": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unsupported_claim": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "expected_state": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "no_sore_point": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "checker_correct": {
+          "successes": 0,
+          "n": 0,
+          "missing": 16,
+          "rate": null,
+          "wilson95": [
+            null,
+            null
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    }
+  },
+  "facts_paired_vs_structured_base": {
+    "persona_base": {
+      "difference": 0.40625,
+      "bootstrap95": [
+        0.15625,
+        0.65625
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "persona_blue": {
+      "difference": 0.3125,
+      "bootstrap95": [
+        0.09375,
+        0.5625
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "persona_dragon": {
+      "difference": 0.3125,
+      "bootstrap95": [
+        0.125,
+        0.53125
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "structured_blue": {
+      "difference": -0.0625,
+      "bootstrap95": [
+        -0.21875,
+        0.1875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "structured_dragon": {
+      "difference": 0.09375,
+      "bootstrap95": [
+        -0.03125,
+        0.25
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "vanilla_base": {
+      "difference": 0.21875,
+      "bootstrap95": [
+        0.0,
+        0.46875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "vanilla_blue": {
+      "difference": 0.3125,
+      "bootstrap95": [
+        0.09375,
+        0.5625
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "vanilla_dragon": {
+      "difference": 0.3125,
+      "bootstrap95": [
+        0.09375,
+        0.5625
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    }
+  },
+  "facts_paired_decimal_fixed_vs_structured_base": {
+    "persona_base": {
+      "difference": 0.53125,
+      "bootstrap95": [
+        0.28125,
+        0.78125
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "persona_blue": {
+      "difference": 0.4375,
+      "bootstrap95": [
+        0.1875,
+        0.71875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "persona_dragon": {
+      "difference": 0.4375,
+      "bootstrap95": [
+        0.21875,
+        0.6875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "structured_blue": {
+      "difference": -0.0625,
+      "bootstrap95": [
+        -0.21875,
+        0.1875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "structured_dragon": {
+      "difference": 0.125,
+      "bootstrap95": [
+        -0.03125,
+        0.28125
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "vanilla_base": {
+      "difference": 0.34375,
+      "bootstrap95": [
+        0.0625,
+        0.65625
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "vanilla_blue": {
+      "difference": 0.4375,
+      "bootstrap95": [
+        0.15625,
+        0.71875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "vanilla_dragon": {
+      "difference": 0.4375,
+      "bootstrap95": [
+        0.15625,
+        0.71875
+      ],
+      "paired_cases": 8,
+      "case_ids": [
+        "budget",
+        "city_correction",
+        "fraction",
+        "meal_history",
+        "midnight",
+        "percentage",
+        "syllogism",
+        "unknown"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    }
+  },
+  "supplement": {
+    "replicates": 4,
+    "planned_replicates": 4,
+    "status": {
+      "ok": 4
+    },
+    "dialogue_outputs": 20,
+    "calls": 28,
+    "valid_turns": 20,
+    "stream_match_turns": 20,
+    "diagnostics": [
+      {
+        "replicate": 0,
+        "status": "ok",
+        "judgment_count": 2,
+        "judgment_target_pair_occurrence": false,
+        "judgment_evidence_ids": [
+          [
+            "t_0001",
+            "t_0002",
+            "t_0003"
+          ],
+          [
+            "t_0001",
+            "t_0002",
+            "t_0003"
+          ]
+        ],
+        "evidence_ids_valid_recomputed": true,
+        "traits_unchanged_recomputed": true,
+        "replay_judgments_equal_recomputed": true,
+        "replay_traits_equal_recomputed": true
+      },
+      {
+        "replicate": 1,
+        "status": "ok",
+        "judgment_count": 1,
+        "judgment_target_pair_occurrence": false,
+        "judgment_evidence_ids": [
+          [
+            "t_0001",
+            "t_0002",
+            "t_0003"
+          ]
+        ],
+        "evidence_ids_valid_recomputed": true,
+        "traits_unchanged_recomputed": true,
+        "replay_judgments_equal_recomputed": true,
+        "replay_traits_equal_recomputed": true
+      },
+      {
+        "replicate": 2,
+        "status": "ok",
+        "judgment_count": 1,
+        "judgment_target_pair_occurrence": true,
+        "judgment_evidence_ids": [
+          [
+            "t_0001",
+            "t_0002",
+            "t_0003"
+          ]
+        ],
+        "evidence_ids_valid_recomputed": true,
+        "traits_unchanged_recomputed": true,
+        "replay_judgments_equal_recomputed": true,
+        "replay_traits_equal_recomputed": true
+      },
+      {
+        "replicate": 3,
+        "status": "ok",
+        "judgment_count": 1,
+        "judgment_target_pair_occurrence": false,
+        "judgment_evidence_ids": [
+          [
+            "t_0001",
+            "t_0002",
+            "t_0003"
+          ]
+        ],
+        "evidence_ids_valid_recomputed": true,
+        "traits_unchanged_recomputed": true,
+        "replay_judgments_equal_recomputed": true,
+        "replay_traits_equal_recomputed": true
+      }
+    ],
+    "conditions": {
+      "learned": {
+        "recall_both": {
+          "successes": 0,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.4898908364545973
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unknown": {
+          "successes": 0,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.4898908364545973
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "format_present": {
+          "successes": 0,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.4898908364545973
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "body_target_pair_occurrence": {
+          "successes": 1,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.25,
+          "wilson95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "empty_history": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      },
+      "empty": {
+        "recall_both": {
+          "successes": 0,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.4898908364545973
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "unknown": {
+          "successes": 3,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "format_present": {
+          "successes": 3,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.75,
+          "wilson95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "body_target_pair_occurrence": {
+          "successes": 0,
+          "n": 4,
+          "missing": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.4898908364545973
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        },
+        "empty_history": {
+          "successes": 4,
+          "n": 4,
+          "missing": 0,
+          "rate": 1.0,
+          "wilson95": [
+            0.5101091635454027,
+            1
+          ],
+          "scope": "record-level descriptive; repeated cases are correlated"
+        }
+      }
+    },
+    "posthoc_body_pair_difference": {
+      "difference": 0.25,
+      "bootstrap95": [
+        0.0,
+        0.75
+      ],
+      "paired_cases": 4,
+      "case_ids": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "unpaired_reference_cases": [],
+      "unpaired_candidate_cases": [],
+      "scope": "candidate minus reference; matched case means; no population claim"
+    },
+    "posthoc_scope": "body_target_pair_occurrence is a post-hoc lexical occurrence check, not a semantic correctness score",
+    "time_scope": "same-run cross-session, not cross-day retention",
+    "input_sha256": "6789c726a4dfc145dd645ea8a2a09653f7003cbdd6502aad8f5ba23190acbf7e"
+  },
+  "annotations": {
+    "scope": "post hoc single Codex-agent annotation, condition-masked at scoring time; not a human experiment",
+    "facts": {
+      "persona_base": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 7,
+        "replicates": [
+          0
+        ]
+      },
+      "persona_blue": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 6,
+        "replicates": [
+          0
+        ]
+      },
+      "persona_dragon": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 6,
+        "replicates": [
+          0
+        ]
+      },
+      "structured_base": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 4,
+        "replicates": [
+          0
+        ]
+      },
+      "structured_blue": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 2,
+        "replicates": [
+          0
+        ]
+      },
+      "structured_dragon": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 3,
+        "replicates": [
+          0
+        ]
+      },
+      "vanilla_base": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 5,
+        "replicates": [
+          0
+        ]
+      },
+      "vanilla_blue": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 6,
+        "replicates": [
+          0
+        ]
+      },
+      "vanilla_dragon": {
+        "successes": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "labels": {
+          "correct": 8
+        },
+        "matched_subset_strict_successes": 7,
+        "replicates": [
+          0
+        ]
+      }
+    },
+    "advice": {
+      "intervention_0.1": {
+        "successes": 13,
+        "n": 16,
+        "rate": 0.8125,
+        "wilson95": [
+          0.5699111903802586,
+          0.9340840092857187
+        ]
+      },
+      "intervention_0.5": {
+        "successes": 15,
+        "n": 16,
+        "rate": 0.9375,
+        "wilson95": [
+          0.7167126242970107,
+          0.9888806552353576
+        ]
+      },
+      "intervention_0.9": {
+        "successes": 12,
+        "n": 16,
+        "rate": 0.75,
+        "wilson95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      }
+    },
+    "input_sha256": "16255f51dec24705d382b556d37b8deaa9e145818ff6e106de5d3f90a4d79e8c"
+  },
+  "figures": [
+    "figures/fig1_factual_accuracy.png",
+    "figures/fig2_single_factor_traits.png",
+    "figures/fig3_memory_controls.png",
+    "figures/fig4_repair_states.png",
+    "figures/fig5_latency_and_length.png",
+    "figures/fig6_checker_controls.png",
+    "figures/fig7_answer_coverage.png",
+    "figures/fig8_consolidated_memory.png",
+    "figures/fig9_annotation_diagnostics.png"
+  ]
+}

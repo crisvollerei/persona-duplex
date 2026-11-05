@@ -1,0 +1,15 @@
+{
+  "status": "incomplete_host_checkpoint_failure",
+  "cause": "Windows PermissionError during atomic checkpoint replacement",
+  "saved_record_counts": {
+    "experiment_results.json": 240,
+    "experiment_results.json.tmp": 248
+  },
+  "raw_call_coverage": "last committed checkpoint only",
+  "runner_snapshot_hash_verified": true,
+  "subsequent_submitted_jobs": "executor waited for completion, but uncollected in-memory results unavailable",
+  "analysis_scope": "separate incomplete attempt; not combined with replacement run",
+  "upstream_request_retry": false,
+  "publication_scope": "exclusion_metadata_only",
+  "retained_locally": "Incomplete checkpoints and duplicate execution artifacts are not part of the published dataset."
+}

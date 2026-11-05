@@ -5,3 +5,7 @@
 *.jpg binary
 *.ttf binary
 *.ttc binary
+*.gz binary
+
+# 研究归档保留原始字节，确保数据与源码快照的哈希跨平台一致
+docs/validation/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
