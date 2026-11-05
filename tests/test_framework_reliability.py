@@ -669,6 +669,36 @@ class TestUncertaintyAndControls(Case):
         consumed = [eid for r in self.rows("memory_batch_commit") for eid in r.get("event_ids", [])]
         self.assertEqual(len(consumed), 15)
 
+    def test_close_drains_backlog_recovered_from_processing(self):
+        session = Session(config(), self.store, ScriptedLLM([]),
+                          options=SessionConfig(consolidate_interval=999,
+                                                consolidate_on_exit=True))
+        self.addCleanup(session.close)
+        session.consolidator.stop()
+        self.push(24)
+        self.store.drain_buffer(max_items=12)
+        self.assertEqual(len(self.buffers()), 12)
+        self.assertEqual(len(list(self.store.processing_dir.glob("*.json"))), 12)
+        session.close()
+        self.assertEqual(self.buffers(), [])
+        self.assertEqual(list(self.store.processing_dir.glob("*.json")), [])
+        consumed = [eid for r in self.rows("memory_batch_commit")
+                    for eid in r.get("event_ids", [])]
+        self.assertEqual(len(consumed), 24)
+        self.assertEqual(len(set(consumed)), 24)
+
+    def test_close_stops_when_consolidation_makes_no_progress(self):
+        session = Session(config(), self.store, ScriptedLLM([]),
+                          options=SessionConfig(consolidate_interval=999,
+                                                consolidate_on_exit=True))
+        self.addCleanup(session.close)
+        session.consolidator.stop()
+        self.push(2)
+        with patch.object(session.consolidator, "run_once", return_value={}) as run:
+            session.close()
+        self.assertEqual(run.call_count, 1)
+        self.assertEqual(len(self.buffers()), 2)
+
     def test_settled_and_expired_pendings_clean_up_runtime_tracking(self):
         cfg = config()
         tail1 = "settle: -\npending:\n  claim: c1\n  confidence: .7\n  predicts: p1"
@@ -822,12 +852,31 @@ class TestUncertaintyAndControls(Case):
             "settle: -\ndelta: -\npending:",
             "settle: -\npending:\n  -",
             "settle: -\npending: （无）",
+            "settle: -\npending: (NONE)",
             "settle: -\npending:\n  claim: -\n  confidence: 0\n  predicts: -",
         ):
             with self.subTest(tail=tail):
                 parsed = parse(reply(tail=tail))
                 self.assertTrue(parsed.validity()["valid"], parsed.validity())
                 self.assertIsNone(parsed.tail.pending)
+
+    def test_parenthetical_prediction_is_not_an_empty_pending_marker(self):
+        for pending in ("（用户下一轮会提供具体辞职方案）",
+                        "(the user will describe a resignation plan)",
+                        "\n  （用户下一轮会提供具体辞职方案）"):
+            with self.subTest(pending=pending):
+                parsed = parse(reply(tail="settle: -\npending: " + pending))
+                self.assertFalse(parsed.validity()["valid"])
+                self.assertIn("missing_pending_claim", parsed.validity()["reasons"])
+
+    def test_structured_parenthetical_prediction_is_preserved(self):
+        parsed = parse(reply(tail="settle: -\npending:\n"
+                            "  claim: （用户会说明下一步）\n"
+                            "  confidence: .7\n"
+                            "  predicts: （用户下一轮提供具体辞职方案）"))
+        self.assertTrue(parsed.validity()["valid"], parsed.validity())
+        self.assertEqual(parsed.tail.pending.claim, "（用户会说明下一步）")
+        self.assertEqual(parsed.tail.pending.predicts, "（用户下一轮提供具体辞职方案）")
 
 
 if __name__ == "__main__":

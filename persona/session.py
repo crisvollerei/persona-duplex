@@ -157,9 +157,14 @@ class Session:
             if self.opts.consolidate_on_exit and self.opts.memory_mode == "live":
                 try:
                     while True:
-                        before = len(list(self.store.buffer_dir.glob("*.json")))
+                        # A recovered processing batch must count as backlog too.
+                        before = sum(1 for directory in (self.store.buffer_dir,
+                                                         self.store.processing_dir)
+                                     for _ in directory.glob("*.json"))
                         self.consolidator.run_once()
-                        after = len(list(self.store.buffer_dir.glob("*.json")))
+                        after = sum(1 for directory in (self.store.buffer_dir,
+                                                        self.store.processing_dir)
+                                    for _ in directory.glob("*.json"))
                         if after == 0 or after >= before:
                             break
                 except Exception as e:

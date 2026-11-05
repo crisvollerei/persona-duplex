@@ -347,22 +347,36 @@ def _looks_like_protocol(text: str) -> bool:
                 or _SCAFFOLD.search(t))
 
 
-# 模型把内部特殊 token 当正文写出来了。
-# 实测 DeepSeek 会在回复末尾带上 "<｜end▁of▁sentence｜>" ——
-# 这个给用户看是明显的 bug。用正则通吃各家写法：
-#   <|endoftext|>  <｜end▁of▁sentence｜>  <end_of_turn>  [INST] ...
-_SPECIAL_TOKEN = re.compile(
-    r"<[|｜]?[\w▁\s]{1,40}[|｜]?>\s*$"      # 结尾的特殊 token
-    r"|<[|｜][^>]{1,40}[|｜]>"                  # 任何位置的 <|...|> 形式
+# Only unambiguous control syntax is reserved. Generic angle-bracket text can
+# be a user's answer, mathematical notation, or HTML rather than a model token.
+_BARE_MODEL_TOKENS = (
+    "<end_of_turn>", "<end_of_text>", "<endoftext>",
+    "<start_of_turn>", "<start_of_text>", "<eot_id>",
+    "<eos_token>", "<bos_token>", "[INST]", "[/INST]",
 )
+_SPECIAL_TOKEN = re.compile(
+    r"<[|｜][^>]*[|｜]>|" + "|".join(re.escape(token) for token in _BARE_MODEL_TOKENS)
+)
+_SPECIAL_TOKEN_START = re.compile(
+    r"<[|｜]|" + "|".join(re.escape(token) for token in _BARE_MODEL_TOKENS)
+)
+
+
+def special_token_holdback(text: str) -> int:
+    """Hold possible control-token prefixes until streaming can classify them."""
+    best = 0
+    for token in (*_BARE_MODEL_TOKENS, "<|", "<｜"):
+        for size in range(1, len(token)):
+            if text.endswith(token[:size]):
+                best = max(best, size)
+    return best
 
 
 def strip_special_tokens(text: str) -> str:
     """去掉模型漏出来的特殊 token。
 
-    这些不该出现在用户可见文本里。注意只在**结尾**或**明确的
-    <|...|> 形式**上动手 —— 不能把正常的尖括号内容（比如
-    「<3」或者代码片段）也删了。
+    仅识别明确的控制 token；不按尖括号内容的语言、字符数或位置推测。
+    普通的 <苏州>、<300>、HTML 标签与不等式都保留。
     """
     t = text or ""
     prev = None
@@ -620,15 +634,21 @@ def parse_tail(block: str) -> Tail:
         rest = block[m.end():]
 
         def _is_empty_marker(val: str) -> bool:
-            cleaned = re.sub(r"（[^（）]*）|\([^()]*\)", "", (val or "").strip()).strip()
-            cleaned = cleaned.lstrip("-*").strip().lower()
+            cleaned = (val or "").strip()
+            if cleaned.startswith(("- ", "* ")):
+                cleaned = cleaned[2:].strip()
+            wrapped = re.fullmatch(r"（([^（）]*)）|\(([^()]*)\)", cleaned)
+            if wrapped:
+                cleaned = next(part for part in wrapped.groups() if part is not None).strip()
+            cleaned = cleaned.lower()
             return cleaned in ("", "-", "无", "none", "null", "nil", "n/a", "暂无", "不挂")
 
         if m.group(1).strip() and _is_empty_marker(m.group(1)):
             return tail
         p = PendingDraft()
         seen = set()
-        non_empty_lines = []
+        # Inline prose is malformed pending evidence, not an empty block.
+        non_empty_lines = [m.group(1).strip()] if m.group(1).strip() else []
         for line in rest.splitlines():
             if re.match(r"^(settle|delta)[ \t]*[:：]", line.strip(), re.IGNORECASE):
                 break

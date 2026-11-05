@@ -230,8 +230,9 @@ class TestPromptInjection(unittest.TestCase):
         p = build_system_prompt(self.cfg)
         # brevity 0.85 -> 短
         self.assertIn("尽量短", p)
-        # intervention 0.20 -> 不给建议
-        self.assertIn("不要给建议", p)
+        # Low intervention avoids unsolicited advice, without refusing an explicit request.
+        self.assertIn("未被请求时不主动安排下一步", p)
+        self.assertIn("用户明确求解时正常回答", p)
         # affect_range 0.15 -> 平稳
         self.assertIn("不要有情绪起伏", p)
 

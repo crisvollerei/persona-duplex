@@ -17,6 +17,30 @@ from typing import Any
 from uuid import uuid4
 
 _LOCAL_TZ = timezone(timedelta(hours=8))
+MAX_JUDGMENT_QUOTES = 12
+
+
+def _evidence_quotes(value, *, evidence_ids=None) -> list[dict]:
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        raise ValueError("Memory evidence quotes must be a list")
+    out = []
+    for item in value:
+        if not isinstance(item, dict):
+            raise ValueError("Memory evidence quote must be an object")
+        turn_id, quote = item.get("turn_id"), item.get("quote")
+        scope = item.get("evidence_scope", "unknown")
+        if not isinstance(turn_id, str) or not turn_id or not isinstance(quote, str) or not quote.strip():
+            raise ValueError("Memory evidence quote requires a turn id and nonempty text")
+        if evidence_ids is not None and turn_id not in evidence_ids:
+            raise ValueError("Memory quote is outside its evidence ids")
+        if scope not in ("specified", "batch", "unknown"):
+            raise ValueError("Unknown memory quote evidence scope")
+        row = {"turn_id": turn_id, "quote": quote, "evidence_scope": scope}
+        if row not in out:
+            out.append(row)
+    return out[-MAX_JUDGMENT_QUOTES:]
 
 
 def now_iso() -> str:
@@ -417,7 +441,8 @@ class Store:
                      evidence_ids: list[str] | None = None,
                      supersedes: str | None = None,
                      affects: dict | None = None, source: str = "explicit",
-                     batch_id: str = "", evidence_scope: str = "specified") -> dict:
+                     batch_id: str = "", evidence_scope: str = "specified",
+                     evidence_quotes: list[dict] | None = None) -> dict:
         """写一条判断。落账本。
 
         affects 是「这条判断指向哪个人格参数、什么方向」：
@@ -425,6 +450,8 @@ class Store:
         中期层靠它把多条判断聚合成一次参数推动。
         没有 affects 的判断只进 prompt，不影响人格。
         """
+        quotes = _evidence_quotes(evidence_quotes, evidence_ids=evidence_ids or [])
+        quoted = {"evidence_quotes": quotes} if quotes else {}
         jid = self.next_judgment_id()
         # confidence 必须夹到 0..1。不夹的话，一条 conf=5.0 的判断
         # 单独就能越过 min_consensus=1.4 的共识闸门 ——
@@ -457,13 +484,31 @@ class Store:
             "supersedes": supersedes,
             "affects": dict(affects or {}),
             "source": source, "batch_id": batch_id, "evidence_scope": evidence_scope,
+            **quoted,
         })
         return {"id": jid, "judgment": judgment,
                 "confidence": round(conf, 3),
                 "evidence_ids": evidence_ids or [],
                 "supersedes": supersedes, "affects": dict(affects or {}),
                 "source": source, "batch_id": batch_id, "evidence_scope": evidence_scope,
+                **quoted,
                 "superseded_by": None}
+
+    def attach_judgment_evidence(self, judgment_id: str, evidence_quotes: list[dict]) -> bool:
+        """Append caller-verified user statements without changing a judgment or its confidence."""
+        with self._lock:
+            current = next((j for j in self.judgments(limit=None)
+                            if j["id"] == judgment_id), None)
+            if current is None or is_diagnostic_judgment(current):
+                return False
+            quotes = _evidence_quotes(evidence_quotes)
+            known = current.get("evidence_quotes", [])
+            fresh = [q for q in quotes if q not in known]
+            if not fresh:
+                return False
+            self.append("judgment_evidence", {"judgment_id": judgment_id,
+                                             "evidence_quotes": fresh})
+            return True
 
     def next_judgment_id(self) -> str:
         with self._lock:
@@ -507,6 +552,8 @@ class Store:
                     "source": rec.get("source", "legacy_unknown"),
                     "batch_id": rec.get("batch_id", ""),
                     "evidence_scope": rec.get("evidence_scope", "unknown"),
+                    **({"evidence_quotes": rec["evidence_quotes"]}
+                       if rec.get("evidence_quotes") else {}),
                     "imported": True,
                 })
                 n += 1
@@ -876,7 +923,16 @@ def replay_judgments(ledger: list[dict]) -> list[dict]:
     因为中期层需要看到完整列表才能判断「多条一致」。
     """
     recs: list[dict] = []
+    by_id: dict[str, dict] = {}
     for r in ledger:
+        if r.get("kind") == "judgment_evidence":
+            target = by_id.get(r.get("judgment_id"))
+            if target is not None:
+                target["evidence_quotes"] = _evidence_quotes(
+                    target.get("evidence_quotes", []) + (r.get("evidence_quotes") or []))
+                target["evidence_ids"] = list(dict.fromkeys(
+                    target["evidence_ids"] + [q["turn_id"] for q in target["evidence_quotes"]]))
+            continue
         if r.get("kind") != "judgment_add":
             continue
         recs.append({
@@ -890,8 +946,11 @@ def replay_judgments(ledger: list[dict]) -> list[dict]:
             "source": r.get("source", "legacy_unknown"),
             "batch_id": r.get("batch_id", ""),
             "evidence_scope": r.get("evidence_scope", "unknown"),
+            **({"evidence_quotes": _evidence_quotes(r["evidence_quotes"])}
+               if r.get("evidence_quotes") else {}),
             "t": r.get("t", ""),
         })
+        by_id[recs[-1]["id"]] = recs[-1]
     superseded: dict[str, str] = {}
     for r in recs:
         if r.get("supersedes"):

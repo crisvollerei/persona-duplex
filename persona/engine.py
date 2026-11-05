@@ -316,6 +316,8 @@ class TurnEngine:
         else:
             raw, parsed = self._generate(messages, on_delta)
 
+        self._verify_delivery(parsed.say or plain_text(raw), on_delta)
+
         # ---- 5. 收判定。grace 很短，拿不到就立刻用字面兜底，
         #        所以这里不会拖慢对话。
         collect_started = time.monotonic()
@@ -504,6 +506,24 @@ class TurnEngine:
             )
 
     # ------------------------------------------------------------ 生成
+
+    def _verify_delivery(self, say: str, on_delta) -> None:
+        """Only commit a normal turn when callback delivery matches its reply."""
+        if on_delta is None:
+            self._probe["delivery"] = {"mode": "return", "matches_recorded": None}
+            return
+        visible = "".join(self._delivered)
+        if say.startswith(visible):
+            remainder = say[len(visible):]
+            if remainder:
+                on_delta(remainder)
+                visible = "".join(self._delivered)
+        if visible != say:
+            self._failure({"stage": "delivery_consistency", "delivered": visible,
+                           "candidate": say, "error_type": "DeliveryMismatch"})
+            raise RuntimeError("已交付文本与最终回复不一致，本轮不提交状态或重试")
+        self._probe["delivery"] = {"mode": "callback", "matches_recorded": True,
+                                   "characters": len(visible)}
 
     def _generate(self, messages, on_delta):
         """一次请求，不因流式失败另发整段请求；已交付片段就地收尾。"""

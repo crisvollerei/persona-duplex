@@ -23,12 +23,14 @@ from .parse import (
     plain_text,
     safe_say,
     section_errors,
+    special_token_holdback,
 )
 
 # 宽松识别协议残留（和 parse 里那份一致）。
 # 单独 import 一个名字，避免 stream 依赖 parse 的私有函数。
 from .parse import _looks_like_protocol as _looks_like_protocol_full
 from .parse import _SECTION_LOOSE
+from .parse import _SPECIAL_TOKEN_START
 from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL
 
 MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
@@ -49,22 +51,31 @@ _HEAD_LINE = re.compile(
 
 _HEAD_WORDS = ("need", "confidence", "direct", "baseline", "displace", "settle", "delta", "pending")
 _SCAFFOLD_WORDS = ("内心", "心里话", "素回复", "原始回复", "人格基准", "位移方式", "判断")
-_INTERNAL_START = re.compile(r"[（(]\s*(?:" + "|".join(_SCAFFOLD_WORDS) + r")|<[|｜]")
+_INTERNAL_START = re.compile(r"[（(]\s*(?:" + "|".join(_SCAFFOLD_WORDS) + r")")
 
 
 def _safety_holdback(text: str) -> int:
     """扣住可能长成畸形标记或内部脚手架的后缀，不缓冲整句正文。"""
-    match = re.search(r"<+[^<>]*>*$|[（(][^（）()]*$", text)
-    if match is None:
-        return 0
-    suffix = match.group()
-    if suffix.startswith("<"):
+    hold = special_token_holdback(text)
+    angle = re.search(r"<+[^<>]*>*$", text)
+    if angle is not None:
+        suffix = angle.group()
         word = re.sub(r"\s", "", suffix).lstrip("<").lstrip("^").rstrip(">").upper()
-        possible = any(name.startswith(word) for name in ("HEAD", "SAY", "TAIL"))
-    else:
+        opening = len(suffix) - len(suffix.lstrip("<"))
+        possible = (opening >= 2 or suffix == "<") and any(
+            name.startswith(word) for name in ("HEAD", "SAY", "TAIL"))
+        if possible:
+            hold = max(hold, len(suffix))
+    # Inspect independently: an ordinary inequality before an opening bracket
+    # must not hide a later, partially generated internal scaffold.
+    bracket = re.search(r"[（(][^（）()]*$", text)
+    if bracket is not None:
+        suffix = bracket.group()
         word = suffix[1:].lstrip()
         possible = any(name.startswith(word) for name in _SCAFFOLD_WORDS)
-    return len(suffix) if possible else 0
+        if possible:
+            hold = max(hold, len(suffix))
+    return hold
 
 
 def _any_field_prefix(text: str) -> bool:
@@ -349,6 +360,7 @@ class StreamParser:
         hits = [(self.buf.find(m), m) for m in _SAY_END]
         hits = [(i, m) for i, m in hits if i >= 0]
         unsafe = [m.start() for m in _INTERNAL_START.finditer(self.buf)]
+        unsafe.extend(m.start() for m in _SPECIAL_TOKEN_START.finditer(self.buf))
         for marker in _SECTION_LOOSE.finditer(self.buf):
             # 两个 > 可能还在长成标准三字符结尾，先扣住再决定。
             complete = marker.end() < len(self.buf) or marker.group().endswith(">>>")
