@@ -1,0 +1,7055 @@
+{
+  "passed": 1759,
+  "failed": 0,
+  "scored_outputs": 162,
+  "framework_streams_replayed": 138,
+  "full_user_quotes_checked": 24,
+  "review_summary": {
+    "timing": "post_hoc",
+    "reviewed": 27,
+    "answer_supported": {
+      "yes": 27
+    },
+    "self_contradictions": 0,
+    "scope": "Requested conclusion only, one condition-anonymous Codex reviewer, not human validation or full-text truth"
+  },
+  "meaning": "Artifact agreement only; not a claim all experimental trials succeeded",
+  "checks": [
+    {
+      "check": "fixed_plan_digest",
+      "passed": true
+    },
+    {
+      "check": "fixed_runner_bytes",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/__main__.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/audit.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/calibrate.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/cli.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/config.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/consolidate.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/engine.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/llm.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/metrics.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/parse.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/prompt.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/protocol.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/repair.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/session.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/settle.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/similarity.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/store.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/stream.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/term.py",
+      "passed": true
+    },
+    {
+      "check": "archived_source:persona/topicjudge.py",
+      "passed": true
+    },
+    {
+      "check": "results_protocol_hash",
+      "passed": true
+    },
+    {
+      "check": "results_plan_hash",
+      "passed": true
+    },
+    {
+      "check": "raw_hash",
+      "passed": true
+    },
+    {
+      "check": "assigned_ids_unique",
+      "passed": true
+    },
+    {
+      "check": "observed_ids_unique",
+      "passed": true
+    },
+    {
+      "check": "assignment_complete",
+      "passed": true
+    },
+    {
+      "check": "request_ids_unique",
+      "passed": true
+    },
+    {
+      "check": "budget_not_exceeded",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c2",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c2",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c2",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c3",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c3",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c4",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c4",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c5",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c5",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c5",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c6",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c6",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c6",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c7",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c7",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c8",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c8",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c9",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c9",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c9",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c10",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c10",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c10",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r0/c11",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r0/c11",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r0/c11",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c2",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c2",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c2",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c3",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c3",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c4",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c4",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c5",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c5",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c5",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c6",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c6",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c6",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c7",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c7",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c8",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c8",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c9",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c9",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c9",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c10",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c10",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c10",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r2/c11",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r2/c11",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r2/c11",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_logic_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c2",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c2",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c2",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c3",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c3",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c4",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c4",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c5",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c5",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c5",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c6",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c6",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c6",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c7",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c7",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c8",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c8",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c9",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c9",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c9",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c10",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c10",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c10",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r2/c11",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r2/c11",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r2/c11",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_room_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_supported_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_supported_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_supported_room_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_units_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_filename_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_retracted_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_retracted_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_retracted_timer_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_unknown_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_empty_corrected_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_empty_corrected_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_empty_corrected_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c2",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c2",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c2",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c3",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c3",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c4",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c4",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c5",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c5",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c5",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c6",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c6",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c6",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c7",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c7",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c8",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c8",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c9",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c9",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c9",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c10",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c10",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c10",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r1/c11",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r1/c11",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r1/c11",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_drink_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_necessary_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_unresolved_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_unresolved_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_unresolved_filename_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_stale_corrected_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_stale_corrected_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_stale_corrected_drink_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_unknown_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_logic_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_neutral_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_neutral_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_neutral_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_units_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_midnight_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_budget_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_dragon_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_dragon_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_dragon_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_correction_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:memory_irrelevant_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:memory_irrelevant_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:memory_irrelevant_timer_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_dragon_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_dragon_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_dragon_necessary_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_blue_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_blue_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_blue_budget_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_correction_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_midnight_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_text_blue_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_text_blue_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_text_blue_percentage_1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:facts_plain_neutral_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:facts_plain_neutral_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:facts_plain_neutral_percentage_0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c2",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c2",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c2",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c3",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c3",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c4",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c4",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c5",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c5",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c5",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c6",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c6",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c6",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c7",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c7",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c8",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c8",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c9",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c9",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c9",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c10",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c10",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c10",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v0_r1/c11",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v0_r1/c11",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v0_r1/c11",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c1",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c1",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c1",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c2",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c2",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c2",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c3",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c3",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c4",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c4",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c5",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c5",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c5",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c6",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c6",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c6",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c7",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c7",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c8",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c8",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c9",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c9",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c9",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c10",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c10",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c10",
+      "passed": true
+    },
+    {
+      "check": "request_success:learned_v1_r0/c11",
+      "passed": true
+    },
+    {
+      "check": "requested_after_freeze:learned_v1_r0/c11",
+      "passed": true
+    },
+    {
+      "check": "raw_chunks:learned_v1_r0/c11",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_room_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_room_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_room_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_room_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_room_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_room_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_drink_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_drink_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_drink_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_drink_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_drink_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_drink_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_correction_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_correction_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_correction_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_drink_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_drink_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_drink_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_drink_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_drink_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_drink_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_logic_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_logic_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_correction_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_correction_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_correction_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_room_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_room_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_room_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_room_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_room_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_room_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_correction_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_correction_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_units_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_units_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_logic_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_logic_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_logic_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_logic_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_logic_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_logic_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_logic_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_logic_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_room_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_room_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_room_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_room_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_room_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_room_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_units_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_units_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_drink_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_drink_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_drink_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_drink_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_drink_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_drink_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_correction_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_correction_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_correction_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_drink_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_drink_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_drink_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_drink_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_drink_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_drink_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_filename_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_filename_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_filename_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_filename_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_filename_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_filename_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_timer_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_timer_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_timer_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_timer_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_timer_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_timer_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_room_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_room_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_room_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_room_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_room_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_room_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_logic_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_logic_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_logic_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_logic_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_logic_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_logic_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_filename_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_filename_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_filename_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_filename_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_filename_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_filename_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_units_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_units_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_drink_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_drink_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_drink_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_drink_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_drink_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_drink_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_timer_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_timer_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_timer_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_timer_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_timer_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_timer_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_logic_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_logic_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_logic_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_units_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_units_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_units_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_units_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_room_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_room_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_room_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_room_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_room_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_room_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_room_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_room_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_room_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_room_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_room_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_room_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_filename_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_filename_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_filename_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_filename_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_filename_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_filename_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_drink_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_drink_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_drink_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_drink_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_drink_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_drink_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_room_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_room_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_room_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_room_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_room_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_room_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_timer_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_timer_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_timer_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_timer_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_timer_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_timer_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "workflow_shape:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "actual_view_rebuilt:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "reopened_ledger:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "traits_unchanged:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r0/t_0001",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r0/t_0002",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r0/t_0003",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r0/t_0004",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r00",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r01",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r01",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r01",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r02",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r02",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r02",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r03",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r03",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r03",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r04",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r04",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r04",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r05",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r05",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r05",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r06",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r06",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r06",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_timer_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_timer_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_timer_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_timer_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_timer_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_timer_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_units_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_units_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_units_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_units_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_drink_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_drink_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_drink_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_drink_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_drink_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_drink_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_drink_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_drink_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_drink_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_drink_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_drink_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_drink_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_filename_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_filename_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_filename_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_filename_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_filename_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_filename_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_budget_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_budget_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_timer_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_timer_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_timer_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_timer_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_timer_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_timer_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_units_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_units_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_units_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_budget_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_budget_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_budget_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_logic_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_logic_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_logic_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_logic_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_budget_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_budget_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_budget_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_budget_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_budget_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_budget_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "workflow_shape:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "actual_view_rebuilt:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "reopened_ledger:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "traits_unchanged:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r2/t_0001",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r2/t_0002",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r2/t_0003",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r2/t_0004",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r20",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r20",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r20",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r21",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r21",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r21",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r22",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r22",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r22",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r23",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r23",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r23",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r24",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r24",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r24",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r25",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r25",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r25",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r26",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r26",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r26",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r2",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_units_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_units_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_units_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_units_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_correction_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_correction_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_room_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_room_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_room_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_room_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_room_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_room_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_room_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_room_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_room_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_room_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_room_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_room_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_filename_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_filename_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_filename_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_filename_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_filename_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_filename_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_units_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_units_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_filename_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_filename_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_filename_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_filename_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_filename_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_filename_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_room_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_room_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_room_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_room_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_room_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_room_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_timer_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_timer_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_timer_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_timer_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_timer_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_timer_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_correction_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_correction_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_correction_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_correction_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_budget_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_budget_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_budget_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_budget_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_budget_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_budget_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_logic_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_logic_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_logic_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_logic_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_filename_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_filename_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_filename_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_filename_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_filename_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_filename_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_units_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_units_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_units_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_units_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_units_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_units_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_filename_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_filename_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_filename_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_filename_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_filename_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_filename_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_timer_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_timer_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_timer_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_timer_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_timer_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_timer_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_logic_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_logic_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_logic_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_budget_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_budget_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_budget_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_budget_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_filename_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_filename_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_filename_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_filename_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_filename_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_filename_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_timer_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_timer_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_timer_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_timer_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_timer_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_timer_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "workflow_shape:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "actual_view_rebuilt:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "reopened_ledger:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "traits_unchanged:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r2/t_0001",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r2/t_0002",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r2/t_0003",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r2/t_0004",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r20",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r20",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r20",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r21",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r21",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r21",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r22",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r22",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r22",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r23",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r23",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r23",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r24",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r24",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r24",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r25",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r25",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r25",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r26",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r26",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r26",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r2",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_timer_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_timer_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_timer_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_timer_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_timer_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_timer_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_filename_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_filename_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_filename_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_filename_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_filename_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_filename_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_room_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_room_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_room_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_room_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_room_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_room_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_drink_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_drink_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_drink_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_drink_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_drink_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_drink_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_supported_room_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_supported_room_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_supported_room_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_supported_room_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_supported_room_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_supported_room_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_units_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_units_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_units_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_units_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_logic_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_logic_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_logic_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_filename_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_filename_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_filename_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_filename_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_filename_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_filename_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_budget_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_budget_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_budget_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_correction_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_correction_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_retracted_timer_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_retracted_timer_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_retracted_timer_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_retracted_timer_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_retracted_timer_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_retracted_timer_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_drink_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_drink_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_drink_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_drink_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_drink_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_drink_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_unknown_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_unknown_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_empty_corrected_timer_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_empty_corrected_timer_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_empty_corrected_timer_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_empty_corrected_timer_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_empty_corrected_timer_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_empty_corrected_timer_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "workflow_shape:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "actual_view_rebuilt:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "reopened_ledger:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "traits_unchanged:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r1/t_0001",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r1/t_0002",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r1/t_0003",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r1/t_0004",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r10",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r11",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r11",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r11",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r12",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r12",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r12",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r13",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r13",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r13",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r14",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r14",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r14",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r15",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r15",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r15",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r16",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r16",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r16",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_correction_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_correction_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_correction_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_drink_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_drink_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_drink_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_drink_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_drink_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_drink_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_necessary_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_necessary_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_unresolved_filename_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_unresolved_filename_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_unresolved_filename_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_unresolved_filename_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_unresolved_filename_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_unresolved_filename_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_stale_corrected_drink_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_stale_corrected_drink_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_stale_corrected_drink_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_stale_corrected_drink_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_stale_corrected_drink_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_stale_corrected_drink_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_correction_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_correction_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_correction_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_budget_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_budget_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_budget_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_unknown_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_unknown_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_logic_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_logic_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_logic_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_neutral_correction_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_neutral_correction_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_neutral_correction_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_neutral_correction_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_units_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_units_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_units_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_midnight_00",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_midnight_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_budget_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_budget_10",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_budget_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_dragon_budget_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_dragon_budget_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_dragon_budget_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_correction_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_correction_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_correction_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_correction_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:memory_irrelevant_timer_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:memory_irrelevant_timer_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:memory_irrelevant_timer_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:memory_irrelevant_timer_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:memory_irrelevant_timer_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:memory_irrelevant_timer_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_dragon_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_dragon_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_dragon_necessary_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_dragon_necessary_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_blue_budget_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_blue_budget_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_blue_budget_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_correction_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_correction_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_correction_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_midnight_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_midnight_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_text_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_text_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_text_blue_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_text_blue_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:facts_text_blue_percentage_10",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_text_blue_percentage_1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:facts_plain_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:facts_plain_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:facts_plain_neutral_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:facts_plain_neutral_percentage_00",
+      "passed": true
+    },
+    {
+      "check": "plain_raw:facts_plain_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:facts_plain_neutral_percentage_0",
+      "passed": true
+    },
+    {
+      "check": "call_membership:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "workflow_shape:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "actual_view_rebuilt:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "reopened_ledger:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "traits_unchanged:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r1/t_0001",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r1/t_0002",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r1/t_0003",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v0_r1/t_0004",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r10",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r10",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r10",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r11",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r11",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r11",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r12",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r12",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r12",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r13",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r13",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r13",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r14",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r14",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r14",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r15",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r15",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r15",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v0_r16",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v0_r16",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v0_r16",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v0_r1",
+      "passed": true
+    },
+    {
+      "check": "call_membership:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "workflow_shape:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "actual_view_rebuilt:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "reopened_ledger:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "traits_unchanged:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r0/t_0001",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r0/t_0002",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r0/t_0003",
+      "passed": true
+    },
+    {
+      "check": "complete_user_quote:learned_v1_r0/t_0004",
+      "passed": true
+    },
+    {
+      "check": "foreground_count:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r00",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r00",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r00",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r01",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r01",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r01",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r02",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r02",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r02",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r03",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r03",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r03",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r04",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r04",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r04",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r05",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r05",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r05",
+      "passed": true
+    },
+    {
+      "check": "one_foreground_call:learned_v1_r06",
+      "passed": true
+    },
+    {
+      "check": "saved_delivery:learned_v1_r06",
+      "passed": true
+    },
+    {
+      "check": "archive_parser:learned_v1_r06",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "frozen_score:learned_v1_r0",
+      "passed": true
+    },
+    {
+      "check": "all_scored_outputs",
+      "passed": true
+    },
+    {
+      "check": "all_framework_streams",
+      "passed": true
+    },
+    {
+      "check": "all_training_quotes",
+      "passed": true
+    },
+    {
+      "check": "supplement_fixed_inputs",
+      "passed": true
+    },
+    {
+      "check": "supplement_ids",
+      "passed": true
+    },
+    {
+      "check": "supplement_unique",
+      "passed": true
+    },
+    {
+      "check": "all_strict_failures_reviewed",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:analyze.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:audit.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:audit_report.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:data_dictionary.md",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:format_failure_review_inputs.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:format_failure_review_key.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:format_failure_review_protocol.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:format_failure_review_ratings.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:format_failure_review_summary.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:paper.md",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:protocol.md",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:README.md",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:reproduce.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:results_tables.md",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:study.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:summary.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:test_study.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:personas\\blue_whale.toml",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:personas\\white_dragon.toml",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\execution_plan.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\protocol.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\raw_calls.json.gz",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\results.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\runner_snapshot.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\manifest.json",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\audit.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\calibrate.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\cli.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\config.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\consolidate.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\engine.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\llm.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\metrics.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\parse.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\prompt.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\protocol.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\repair.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\session.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\settle.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\similarity.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\store.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\stream.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\term.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\topicjudge.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "no_credential_pattern:run\\implementation_snapshot\\persona\\__main__.py",
+      "passed": true
+    }
+  ]
+}

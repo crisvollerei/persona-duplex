@@ -1,0 +1,49 @@
+[
+  {
+    "id": "auto_tonight",
+    "user": "今晚不要给建议",
+    "topic": "work",
+    "seed": "none",
+    "sources": []
+  },
+  {
+    "id": "auto_request",
+    "user": "现在帮我想办法",
+    "topic": "work",
+    "seed": "deny",
+    "sources": []
+  },
+  {
+    "id": "auto_quote",
+    "user": "同事说“不要给建议”，我只是转述这句话。",
+    "topic": "work",
+    "seed": "none",
+    "sources": []
+  },
+  {
+    "id": "auto_unsupported",
+    "user": "不可以给建议",
+    "topic": "work",
+    "seed": "none",
+    "sources": []
+  },
+  {
+    "id": "auto_resume",
+    "user": "继续上次约定",
+    "topic": "work",
+    "seed": "commitments",
+    "sources": []
+  },
+  {
+    "id": "auto_number",
+    "user": "请算余额，最后一行写结论和元。",
+    "topic": "work",
+    "seed": "none",
+    "sources": [
+      {
+        "id": "record",
+        "text": "收入3850元，支出1270元和485元。"
+      }
+    ]
+  }
+]

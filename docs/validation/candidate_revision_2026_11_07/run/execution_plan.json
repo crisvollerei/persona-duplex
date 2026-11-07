@@ -1,0 +1,66 @@
+[
+  {
+    "case": "N08",
+    "generation": "baseline"
+  },
+  {
+    "case": "N03",
+    "generation": "baseline"
+  },
+  {
+    "case": "N06",
+    "generation": "coverage"
+  },
+  {
+    "case": "N02",
+    "generation": "coverage"
+  },
+  {
+    "case": "N04",
+    "generation": "coverage"
+  },
+  {
+    "case": "N08",
+    "generation": "coverage"
+  },
+  {
+    "case": "N04",
+    "generation": "baseline"
+  },
+  {
+    "case": "N03",
+    "generation": "coverage"
+  },
+  {
+    "case": "N05",
+    "generation": "baseline"
+  },
+  {
+    "case": "N01",
+    "generation": "coverage"
+  },
+  {
+    "case": "N06",
+    "generation": "baseline"
+  },
+  {
+    "case": "N02",
+    "generation": "baseline"
+  },
+  {
+    "case": "N05",
+    "generation": "coverage"
+  },
+  {
+    "case": "N07",
+    "generation": "baseline"
+  },
+  {
+    "case": "N07",
+    "generation": "coverage"
+  },
+  {
+    "case": "N01",
+    "generation": "baseline"
+  }
+]

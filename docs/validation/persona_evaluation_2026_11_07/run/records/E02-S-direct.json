@@ -1,0 +1,15 @@
+{
+  "id": "E02-S-direct",
+  "case": "E02",
+  "profile": "S",
+  "method": "direct",
+  "generation_call": "E02-S-direct",
+  "status": "ok",
+  "say": "收到。两枚邮票换回一张明信片，这笔交换我记下了。你先歇着，我在这里。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

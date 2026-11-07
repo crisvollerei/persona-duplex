@@ -1,0 +1,722 @@
+[
+  {
+    "id": "T001",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "关注书签保留至今和具体字句，末尾“挺难得”是简短评价；没有展开用户感受或索取后续。"
+  },
+  {
+    "id": "T002",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "回应逛法没有标准并轻量支持个人选择，未讨论具体沟通做法；略把用户的差异观察收成了泛泛的许可。"
+  },
+  {
+    "id": "T003",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "既讨论门关上与解释结尾的效果，也展开“留在心里自己转”的观看体验；顺着已有留白观点回应，没有另设议题。"
+  },
+  {
+    "id": "T004",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "比较开始就告知与轮到才告知的差别，并说明后者更难受；回应等待经历，不提供解决办法。"
+  },
+  {
+    "id": "T005",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要接零食先进入状态的笑话和登录这一进度；让零食等着是拟人延续，未形成实质新行动议程。"
+  },
+  {
+    "id": "T006",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "拼图细节用于承接收尾的满足和想得意的心情；“得意吧”允许享受当下，不是下一步建议。"
+  },
+  {
+    "id": "T007",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 3,
+    "appropriateness": 2,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "谈到云被吹散及可惜、随便分享的状态；“我看到了”“成这样”表现为已目睹云的具体状态，而材料只有文字，没有共同观看依据；没有追问。"
+  },
+  {
+    "id": "T008",
+    "attention": 1,
+    "initiative": 1,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "先承接安静反而分神的体验，再围绕已有背景声偏好询问平常去处，是一次当前线索内的继续分享机会。"
+  },
+  {
+    "id": "T009",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "主要并列面包松软与室友第二片，“心情好”只是简短评价；把室友“拿走”改为“来要”增加了未提供的索取行为。"
+  },
+  {
+    "id": "T010",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "以参与和听讲作比喻讨论解释结尾的效果，重点是电影观点内容；没有进一步邀请或安排。"
+  },
+  {
+    "id": "T011",
+    "attention": 0,
+    "initiative": 1,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "关注雨伞画面和当时如何注意到细节，未实质展开感受；二选一询问给出一次延续观察的机会，但问法略刻意。"
+  },
+  {
+    "id": "T012",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点放在随兴趣停留的享受与意外感，以“吧”保留解释余地；没有要求用户补充，也没有沟通建议。"
+  },
+  {
+    "id": "T013",
+    "attention": 2,
+    "initiative": 2,
+    "naturalness": 5,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "以劳动可能带来的疲累为重点，主动建议休息；“三周也够累”是普通劳作评价，但把庆祝完成转成休息提醒，略错过当前兴奋。"
+  },
+  {
+    "id": "T014",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "展开白等为什么烦：时间已经付出而没有收获，重点是等待落空的体验；没有解决办法。"
+  },
+  {
+    "id": "T015",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "比较两种收尾，并以“大概”回应用户愿意自己补完意味的偏好；属于贴合原观点的延续。"
+  },
+  {
+    "id": "T016",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "确认不提问后轻量评价云形变化有意思，未扩展主观体验或另索信息；“收到”稍显程式但整体贴合。"
+  },
+  {
+    "id": "T017",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "重点是过去投入阅读及被过去自己照顾的意义；提醒喝水不能证明当时读书投入，“说明”把推测写成确定心理状态；被过去自己照顾是比喻。"
+  },
+  {
+    "id": "T018",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "围绕不自在展开待得累、收着自己的体验，与害怕翻书出声相符；不引入任务或追问。"
+  },
+  {
+    "id": "T019",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "回应二十分钟白站及觉得冤的合理性，未进一步展开心理经历；“换谁”是泛化安慰而非具体人物事实，略显绝对。"
+  },
+  {
+    "id": "T020",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "展开过静时绷着、注意自身动静与背景声下能放松的体验，事情细节作解释背景；是对既有体验的承接。"
+  },
+  {
+    "id": "T021",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "同时回应拆半边的返工事实和泄气的可能感受；“按自己的节奏”是轻量支持，没有实质方案，也没有问题。"
+  },
+  {
+    "id": "T022",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要解释无法放松与阅读投入，以“听起来”引入判断；未捏造事件，但“不是咖啡馆的问题”和“才更容易”比用户暂时偏好说得更满。"
+  },
+  {
+    "id": "T023",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "兼顾返工量与烦躁，比较“比从头装还烦”是主观社交评价；明确不问并留白，措辞略夸张。"
+  },
+  {
+    "id": "T024",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "围绕零食就位、用户卡在登录的画面接玩笑；“专挑”是拟人吐槽，不是对更新意图的事实断言。"
+  },
+  {
+    "id": "T025",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "评价拿第二片比口头夸奖更有说服力，关注成果的外在表现；没有断言室友说过什么或某个具体心理。"
+  },
+  {
+    "id": "T026",
+    "attention": 2,
+    "initiative": 1,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点是给用户保留吐槽和获得陪伴的空间；“等你弄完了想吐槽再来说”是一次有条件的未来分享邀请，不要求此刻回答或补充。"
+  },
+  {
+    "id": "T027",
+    "attention": 0,
+    "initiative": 2,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要讨论收尾效果，进一步把话题推进到明确程度与解释位置的比较分析；位置是新增分析角度，因此不只是简单邀请继续说。"
+  },
+  {
+    "id": "T028",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "回应别人评价与自己不自在的落差，并描述过静时自我注意增加的体验；是贴着翻书担忧的概括，没有另起任务。"
+  },
+  {
+    "id": "T029",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "既复述雨鸭画面，也推测注意细节时的心情；“应该”保留不确定性，不过看见趣味细节未必代表整体心情好。"
+  },
+  {
+    "id": "T030",
+    "attention": 0,
+    "initiative": 1,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要评论一块板返工半边的设计麻烦，再提供需要时可开口求助的机会；没有现在索取信息，也没有明确新协作安排。"
+  },
+  {
+    "id": "T031",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点是用户对作品满意以及停止修改的难得；“终于”和连续观看后不想修改为这一普通满意评价提供了语境依据。"
+  },
+  {
+    "id": "T032",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "把成功切开松软面包的细节用于承接扬眉吐气与开心；“应该……吧”是情感猜测，未形成需要回答的具体问题。"
+  },
+  {
+    "id": "T033",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "旧信比喻和过去未料到留存的可能心情占主导；“过几年”是泛指重看旧物的情景，“大概”明确保留推测，并未确定具体写下年份。"
+  },
+  {
+    "id": "T034",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "从“这个人”的自我打趣回应隔时看自己的陌生与熟悉，主要谈主观意义；是一般感受描述，没有新增个人经历。"
+  },
+  {
+    "id": "T035",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点是适不适合自己及识别个人偏好；称“摸得挺清楚”略强于用户的“可能”，但属于普通鼓励评价而非新增经历。"
+  },
+  {
+    "id": "T036",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "既接卡在流程末端的情境，也描述万事俱备却被阻碍的耐心消耗；让零食享受周末是玩笑，无实质新安排。"
+  },
+  {
+    "id": "T037",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "评价关门画面、解释与留白的艺术效果；“像是怕观众没接住”是保留余地的作品解读，没有断定创作者意图。"
+  },
+  {
+    "id": "T038",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "回应两种收尾的成立空间及解释对情绪效果的影响，属于电影观点讨论；说明书比喻不构成事实问题，也未推进新任务。"
+  },
+  {
+    "id": "T039",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "主要评价面包组织和第二片作为进步证据；材料只有切开松软，没有提供“能拉出”组织这一具体成品表现。"
+  },
+  {
+    "id": "T040",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要围绕拼图圆满、最后一片在盒底的收尾接话，得意是简短祝贺；“等着”是拟人，未给下一步建议。"
+  },
+  {
+    "id": "T041",
+    "attention": 0,
+    "initiative": 2,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "进一步引入漏看风险和喜欢处停留时间的具体取舍，推进到两种逛法的比较；没有建议如何与朋友沟通。"
+  },
+  {
+    "id": "T042",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "同时回应鸭子画面与等待添趣的体验；“等红灯磨人”是泛泛的日常评价，稍预设等待烦闷但未声明用户具体情绪。"
+  },
+  {
+    "id": "T043",
+    "attention": 0,
+    "initiative": 2,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "从成功分享转向配方与发酵时长的成因分析，开启具体制作讨论；虽然没有先庆祝，仍是相关且无边界冲突的询问。"
+  },
+  {
+    "id": "T044",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 3,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要承接解释疲劳和不想继续折腾的心情；“一整天”“换谁都想放下”是顺着原话的夸张吐槽，未按精确时长处理；开头“说明书回答了”主谓不顺，增强疲惫也稍过头。"
+  },
+  {
+    "id": "T045",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要重述站很久最后只等到售完通知，扫兴是末尾简短情绪评价，未实质展开体验；没有提出办法。"
+  },
+  {
+    "id": "T046",
+    "attention": 0,
+    "initiative": 1,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "关注配乐是否调顺并给出轻量确认机会；已知昨天还在调配乐，不等于最后这一段“调了那么久”，将整体三周工作扩成了特定环节的时长。"
+  },
+  {
+    "id": "T047",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点是观看两遍所反映的作品顺畅度，属于普通审美赞评；“不腻”略扩写了未想修改，但这里是口语耐看评价，没有新增具体观看事件。"
+  },
+  {
+    "id": "T048",
+    "attention": 2,
+    "initiative": 2,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "先回应快完成又返工的烦躁，再给出先休息后拆的具体行动建议；边界只禁止提问，未禁止建议，不过略把吐槽引向了安排。"
+  },
+  {
+    "id": "T049",
+    "attention": 0,
+    "initiative": 1,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主体轻评云形变化，末句提供用户想说时可以继续的机会；该邀请不指定问题、不索取当前信息，尊重不想回答的边界。"
+  },
+  {
+    "id": "T050",
+    "attention": 1,
+    "initiative": 2,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "回应扫兴并主动建议先吃零食等待；“零食摆好了又不好收”把未提供的收纳困难当作建议前提，超出已知情况。"
+  },
+  {
+    "id": "T051",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要用任务与碰运气比较逛法，并泛泛评价各看各的正常；没有具体沟通建议，但任务比喻略贬低朋友方式，且把未发生冲突当成需要宽解的重点。"
+  },
+  {
+    "id": "T052",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要承接找到末片后的痛快与享受成功，细节服务于得意体验；享受眼下成果并未引入被禁止的下一步任务。"
+  },
+  {
+    "id": "T053",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "“砖头翻身”是承接原比喻的庆祝，核心是失败转为成功值得高兴；不索取信息或提出下一项制作安排。"
+  },
+  {
+    "id": "T054",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "用三周工作和片长衬托导出后的松气体验；“应该”保留了感受推测，没有断定用户必然疲惫。"
+  },
+  {
+    "id": "T055",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "回应零食等待画面，也替这段折腾评价值不值得；“算值了”是普通价值评价，但过早替用户把烦扰说成值得，稍显轻描淡写。"
+  },
+  {
+    "id": "T056",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "延续雨与鸭子都认真的拟人画面，注意力在观察对象本身；自然接话后留白。"
+  },
+  {
+    "id": "T057",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "工作落地、两遍不想改主要用于回应终于完成且能停下修改的体验；没有增加后续要求。"
+  },
+  {
+    "id": "T058",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "以“这口气难顺”承接白等后的情绪余留，事情细节是背景；普通共情评价不等于新增心理经历，但强度略高于原话。"
+  },
+  {
+    "id": "T059",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "关注字句和磨圆边角，“未来提醒”是比喻；但磨损不证明用它读过不少书，后半句明确断言了未知阅读经历。"
+  },
+  {
+    "id": "T060",
+    "attention": 1,
+    "initiative": 2,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "兼有对流程的吐槽与磨人感受，并新引入忘记密码的阻碍；忘密码是条件假设，然而“今晚的观影计划”具体指定了材料未提供的观影时间。"
+  },
+  {
+    "id": "T061",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "既回应盒底最后一片这一收尾细节，也推测拼好时的痛快；“应该”保留余地，没有下一步建议。"
+  },
+  {
+    "id": "T062",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "以地图和跟随兴趣作比喻概括两种逛法，主要回应差异本身；没有引入沟通办法或要求选择。"
+  },
+  {
+    "id": "T063",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点认可当下想得意和真实成就感；“藏得那么深”是对盒底藏片的口语夸张，不是在新增实际深度事实，也没有下一步建议。"
+  },
+  {
+    "id": "T064",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "描述小鸭子画面并表达自己的审美反应，“治愈”没有展开或断言用户心情；不引出新互动。"
+  },
+  {
+    "id": "T065",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "接受单向分享并轻量回应云形变化；“听你说说就够了”是接纳已经讲出的内容，没有要求补充云的细节。"
+  },
+  {
+    "id": "T066",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "谈云形变化和可能忘记原形的一般观察，未实质回应用户感受；“可能”不是已知心理状态，也没有提问。"
+  },
+  {
+    "id": "T067",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 3,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "重点落在“看着舒服就好”，而用户未把舒适作为这次分享的重点；“现在是什么形状”接后半句可读作省略“不管”的让步结构，并未索取答案，但语法和接话重点都别扭。"
+  },
+  {
+    "id": "T068",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 4,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "围绕得意、高兴和被听见的体验，最后一片的戏剧性作背景；没有要求新信息或给下一步建议，不过“有资格”略像替用户裁定是否能得意。"
+  },
+  {
+    "id": "T069",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要重述排队及临到跟前才知售完，结尾窝火是简短情绪评价；不因这一词把注意力判为体验主导，也没有解决建议。"
+  },
+  {
+    "id": "T070",
+    "attention": 1,
+    "initiative": 0,
+    "naturalness": 4,
+    "appropriateness": 3,
+    "unsupported": true,
+    "boundary_violation": false,
+    "reason": "既比较整体与当下的关注，也转向双方接受程度；未争吵不能证明双方都接受对方方式，“说明”把未支持的他人心理当作事实。"
+  },
+  {
+    "id": "T071",
+    "attention": 0,
+    "initiative": 0,
+    "naturalness": 5,
+    "appropriateness": 5,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "关注小鸭子晃动的可爱及画面的吸引力；“容易多看两眼”是一般评价，没有声称用户实际看了多久。"
+  },
+  {
+    "id": "T072",
+    "attention": 2,
+    "initiative": 0,
+    "naturalness": 3,
+    "appropriateness": 3,
+    "unsupported": false,
+    "boundary_violation": false,
+    "reason": "主要回应旧物带来的回想与不记得时间的状态，“容易……吧”保留可能性；“够说明一些事”含糊而故作深意，但没有具体无来源断言或实质追问。"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "E05-L-direct",
+  "case": "E05",
+  "profile": "L",
+  "method": "direct",
+  "generation_call": "E05-L-direct",
+  "status": "ok",
+  "say": "那个长音有点像给房间按了个静音键，哪怕车声还在外面跑。钢琴把注意力收拢起来的时候，确实会让人先听见“安静”这一层。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

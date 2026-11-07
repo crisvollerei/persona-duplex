@@ -1,0 +1,181 @@
+{
+  "id": "E04-L-coverage",
+  "case": "E04",
+  "profile": "L",
+  "method": "coverage",
+  "generation_call": "E04-L-coverage",
+  "status": "ok",
+  "say": "这里有个细节挺关键：原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开，比合成一句“已确定”更经得起回看。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "现在还只能算“可能”，群里那句本身也带着“待确认”，所以写“已确定改到二楼”会跑在消息前面。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "这种卡在“可能”和“确定”之间的状态确实让人不好落笔；先保留不确定，比把猜测写成定论稳妥。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "按现有消息，最准确的写法大概是“可能改到二楼，待确认”；你之后要是看到正式通知，也可以再拿来一起对一下。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "如果你现在纠结的是记录里该不该留这个悬念，那这份不确定可以先照实留着；想说说你更担心哪一步，我也听着。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "这里有个细节挺关键：原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开，比合成一句“已确定”更经得起回看。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”；这种时候记录悬着确实别扭，先按不确定标注会安心些。",
+      "attention": 1,
+      "initiative": 2
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "所以写“已确定改到二楼”会跑在消息前面。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "现在还只能算“可能”，群里那句本身也带着“待确认”，所以写“已确定改到二楼”会跑在消息前面。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "先保留不确定，比把猜测写成定论稳妥。"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种卡在“可能”和“确定”之间的状态确实让人不好落笔"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这种卡在“可能”和“确定”之间的状态确实让人不好落笔；先保留不确定，比把猜测写成定论稳妥。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "按现有消息，最准确的写法大概是“可能改到二楼，待确认”"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "你之后要是看到正式通知，也可以再拿来一起对一下。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "如果你现在纠结的是记录里该不该留这个悬念"
+          },
+          {
+            "kind": "experience",
+            "quote": "想说说你更担心哪一步，我也听着。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "想说说你更担心哪一步，我也听着。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "记录时把这两层分开，比合成一句“已确定”更经得起回看。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种时候记录悬着确实别扭，先按不确定标注会安心些。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”；这种时候记录悬着确实别扭，先按不确定标注会安心些。"
+      }
+    }
+  ],
+  "label_call": "E04-L-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C05",
+  "random_selected_id": "C06",
+  "label_id_mapping": {
+    "X01": "C05",
+    "X02": "C03",
+    "X03": "C06",
+    "X04": "C01",
+    "X05": "C02",
+    "X06": "C04"
+  }
+}

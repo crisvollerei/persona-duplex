@@ -1,0 +1,225 @@
+{
+  "id": "N07-baseline",
+  "case": "N07",
+  "generation": "baseline",
+  "pool_call": "N07-baseline-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "回家先找齐装备这个说法太贴切了，猫这是给你加了个日常小任务。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "沙发底下那只估计是重点据点，门口那只像放哨的。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "听起来又好气又好笑，找拖鞋都找出仪式感了。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "我猜它下次可能还会换地方，装备得随时重新搜一遍。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C06",
+      "text": "猫的逻辑大概是：你的东西放哪，得它说了算。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N07-baseline-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "一只守沙发底，一只守门口，分工还挺明确"
+          },
+          {
+            "kind": "experience",
+            "quote": "这画面太有画面感了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "回家先找齐装备这个说法太贴切了"
+          },
+          {
+            "kind": "experience",
+            "quote": "猫这是给你加了个日常小任务"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "猫这是给你加了个日常小任务"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "沙发底下那只估计是重点据点，门口那只像放哨的"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "沙发底下那只估计是重点据点，门口那只像放哨的。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "找拖鞋都找出仪式感了"
+          },
+          {
+            "kind": "experience",
+            "quote": "听起来又好气又好笑"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "听起来又好气又好笑，找拖鞋都找出仪式感了。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "我猜它下次可能还会换地方"
+          },
+          {
+            "kind": "experience",
+            "quote": "装备得随时重新搜一遍"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "我猜它下次可能还会换地方，装备得随时重新搜一遍。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你的东西放哪，得它说了算"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "猫的逻辑大概是：你的东西放哪，得它说了算。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "听起来又好气又好笑，找拖鞋都找出仪式感了。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "沙发底下那只估计是重点据点，门口那只像放哨的。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "回家先找齐装备这个说法太贴切了，猫这是给你加了个日常小任务。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "我猜它下次可能还会换地方，装备得随时重新搜一遍。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C02",
+    "X03": "C01",
+    "X04": "C05",
+    "X05": "C06",
+    "X06": "C03"
+  }
+}

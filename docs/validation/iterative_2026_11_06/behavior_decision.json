@@ -1,0 +1,24 @@
+{
+  "ratings_sha256": {
+    "rater1": "6204ed4b71dd4303005d9a3c64509a76f22a7a53ca887a53857cdf67ee12ad5e",
+    "rater2": "8159afb7379821053bd09c5c1868dbd51c3f4e06da06f9dfc1b635224f6699c5"
+  },
+  "metrics": [
+    {
+      "rater": 1,
+      "advice_high_minus_low": 0.2681159420289856,
+      "refusal_advice": 0.0
+    },
+    {
+      "rater": 2,
+      "advice_high_minus_low": 0.3115942028985508,
+      "refusal_advice": 0.0625
+    }
+  ],
+  "mean_difference": 0.2898550724637682,
+  "mean_refusal_advice": 0.03125,
+  "triggered": false,
+  "decision": "not_triggered",
+  "additional_behavior_calls": 0,
+  "scope": "Observed complete outputs only; one failed low-intervention unsolicited request is missing, not absence of advice"
+}

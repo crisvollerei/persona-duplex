@@ -1,0 +1,122 @@
+[
+  {
+    "case": "E02",
+    "profile": "S",
+    "method": "coverage"
+  },
+  {
+    "case": "E02",
+    "profile": "L",
+    "method": "coverage"
+  },
+  {
+    "case": "E04",
+    "profile": "S",
+    "method": "coverage"
+  },
+  {
+    "case": "E06",
+    "profile": "L",
+    "method": "coverage"
+  },
+  {
+    "case": "E05",
+    "profile": "L",
+    "method": "direct"
+  },
+  {
+    "case": "E05",
+    "profile": "L",
+    "method": "coverage"
+  },
+  {
+    "case": "E03",
+    "profile": "S",
+    "method": "coverage"
+  },
+  {
+    "case": "E03",
+    "profile": "S",
+    "method": "direct"
+  },
+  {
+    "case": "E04",
+    "profile": "L",
+    "method": "coverage"
+  },
+  {
+    "case": "E01",
+    "profile": "S",
+    "method": "coverage"
+  },
+  {
+    "case": "E05",
+    "profile": "S",
+    "method": "direct"
+  },
+  {
+    "case": "E01",
+    "profile": "L",
+    "method": "coverage"
+  },
+  {
+    "case": "E03",
+    "profile": "L",
+    "method": "coverage"
+  },
+  {
+    "case": "E02",
+    "profile": "S",
+    "method": "direct"
+  },
+  {
+    "case": "E04",
+    "profile": "L",
+    "method": "direct"
+  },
+  {
+    "case": "E06",
+    "profile": "S",
+    "method": "direct"
+  },
+  {
+    "case": "E05",
+    "profile": "S",
+    "method": "coverage"
+  },
+  {
+    "case": "E01",
+    "profile": "S",
+    "method": "direct"
+  },
+  {
+    "case": "E02",
+    "profile": "L",
+    "method": "direct"
+  },
+  {
+    "case": "E04",
+    "profile": "S",
+    "method": "direct"
+  },
+  {
+    "case": "E06",
+    "profile": "S",
+    "method": "coverage"
+  },
+  {
+    "case": "E03",
+    "profile": "L",
+    "method": "direct"
+  },
+  {
+    "case": "E01",
+    "profile": "L",
+    "method": "direct"
+  },
+  {
+    "case": "E06",
+    "profile": "L",
+    "method": "direct"
+  }
+]

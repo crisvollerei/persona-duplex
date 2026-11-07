@@ -1,0 +1,27 @@
+{
+  "sources": {
+    "persona/__init__.py": "93d572f8e77f9f9dd17d0465425b151f4e1841da978785eaa6ffe28f208b4b6a",
+    "persona/__main__.py": "13a1a5b340cdcfc1902b62be90e508c7c71886000d5bf087e7854aadf09fb35e",
+    "persona/audit.py": "041cba6c60076361947fcae477a0f4fa144d7f8f1ff144a67c897e06908850fa",
+    "persona/calibrate.py": "ee439e4fbb4738d53c26a18efd52162d0a4ffad058cdc5c27252436b551a020c",
+    "persona/cli.py": "4896217cdf99ce6d58fa71f58fb07c976f79ccecf2a79726310a4225d1227231",
+    "persona/config.py": "484d93f52b82fcafef28a81a1c821497f35ed3eb33537189af82fd7b901fc62b",
+    "persona/consolidate.py": "f71db8e6801ddd464eca57a51399f30ee9e639b3ea1245669de1238cd0beaee7",
+    "persona/contracts.py": "fb22429beeed6a136b7a1c8df90b30d85c160d28795c1d4dc4a96d77af97a300",
+    "persona/engine.py": "7637e68159855e1df941bea7cd5d8db7b2aadd8451ee88327564abd62a975d26",
+    "persona/llm.py": "d7ee5e5dc3c6a7c174b00c28cd6a625330dae7e0c79aba6fc115f7836e08bcd8",
+    "persona/metrics.py": "ba0505803af76f9dfb769e0a07d121f62f2aa47f74695bc451146da7ea942bd8",
+    "persona/parse.py": "d9abe2c9ddf2860d9e84db9d2b11899f1667eb5fb01f224447aee98787ceaeba",
+    "persona/prompt.py": "741ec8c3888ade4ce53ddfcfea17a239adb5a91c8d2d93bb75c8437173ca927d",
+    "persona/protocol.py": "9f2ab9f0cb490676c055fb2c70810686163b381659647e65f722e7cdac6653a9",
+    "persona/repair.py": "6e30a5c3b1a16c0f08d23276070c14ce244ffb570b6636bb38efeb24c3a65f2c",
+    "persona/session.py": "2899deb2447780fe6b5b34ce2a9b7454daa090571b9e50a337ee02c7c0969c25",
+    "persona/settle.py": "e5c1efd5db7c9075e4ef0564168acdc38e943fea7778c9db20290384cd837a5c",
+    "persona/similarity.py": "f6e45d0ee5be796f84f4b4f9eae7ac3b9b83978d76d4c06050f22a0581fc9586",
+    "persona/store.py": "1a784ca6e9fbe1024f184d77fe085b56ad76ec6e8736cac0f7bd40b6a757c43f",
+    "persona/stream.py": "da8185eff8ccb504eae8c9004005eea164882614a2999994fe9f54da3ebabb65",
+    "persona/term.py": "d0d623ce466aa678405d5762900ee5a25c259b39bf289bb5e75eb61eb2d572f9",
+    "persona/topicjudge.py": "5dcc2e0be5bfc72bac57a90085a615f177593734c9b8b63bf618d70c892a215a"
+  },
+  "description": "Current framework frozen before fair shared-RAG comparison"
+}

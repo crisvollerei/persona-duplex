@@ -1,0 +1,19 @@
+{
+  "fixed_at": "2026-11-07T01:24:00+08:00",
+  "planned_workflows": 4,
+  "planned_outputs": 8,
+  "planned_calls": 12,
+  "hard_limit": 12,
+  "design": "Four independently initialized natural-text controls (up to2calls) followed by restart and one supplied-content realization. Retain control rejection and all failures. No retry, checker or outcome-dependent replacement.",
+  "model": "deepseek-chat",
+  "temperature": 0.7,
+  "max_tokens": 900,
+  "timeout_s": 90,
+  "clock": "2026-11-07T21:00:00+08:00",
+  "boundary_policy": "Actual complete command determines scope and duration; model scope is an advisory label.",
+  "runner_sha256": "83a85c26c779c4ec9cf704ad931d7badf43c4220aa986915fbe6fbf0376b610a",
+  "hashes": {
+    "cases.json": "db3818f4bc38db7efc7f1b7022f0765dd6ea8f15e0d4af1831362afd2a780939",
+    "persona_config.toml": "518159abc7b2aed33268ba0180c9c58e86406b3b473f06c881b2b15f89b7acd5"
+  }
+}

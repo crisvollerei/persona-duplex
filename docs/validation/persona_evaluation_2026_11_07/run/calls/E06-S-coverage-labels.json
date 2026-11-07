@@ -1,0 +1,55 @@
+{
+  "id": "E06-S-coverage-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T01:22:24.132487+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [], \"user\": \"路过修钟铺，柜台上五只钟的钟摆各晃各的。我在门口看了一会儿，竟然觉得它们凑在一起还挺整齐。\", \"facts\": [\"用户路过修钟铺。\", \"柜台上有五只钟，钟摆并不同步。\", \"用户在门口看了一会儿，主观上觉得它们放在一起挺整齐。\"], \"boundaries\": []}, \"candidates\": [{\"id\": \"X01\", \"text\": \"你看着它们，觉得挺整齐。这份感觉若还有下文，我愿意听；没有也不必勉强。\"}, {\"id\": \"X02\", \"text\": \"五只钟的钟摆各晃各的，凑在一起却有了秩序。若你还想说说那铺子里的别的，我在听。\"}, {\"id\": \"X03\", \"text\": \"你在门口看了一会儿，觉得它们凑在一起整齐——这种整齐大概不在于同步，而在于它们都在。\"}, {\"id\": \"X04\", \"text\": \"五只钟的摆各自晃着，没有谁去对齐谁；你看着它们，却觉得凑在一起整齐。不同步与整齐能同时成立，这一点挺有意思。\"}, {\"id\": \"X05\", \"text\": \"钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。五只钟放在一起，倒像是在各守各的时间。\"}, {\"id\": \"X06\", \"text\": \"五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "c9604079-20ae-41c2-a9ff-9673bfe60200",
+    "object": "chat.completion",
+    "created": 1794014544,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"你看着它们，觉得挺整齐。\"},{\"kind\":\"experience\",\"quote\":\"这份感觉若还有下文，我愿意听；没有也不必勉强。\"}],\"initiative\":1,\"initiative_quote\":\"这份感觉若还有下文，我愿意听；没有也不必勉强。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟的钟摆各晃各的，凑在一起却有了秩序。\"},{\"kind\":\"experience\",\"quote\":\"若你还想说说那铺子里的别的，我在听。\"}],\"initiative\":1,\"initiative_quote\":\"若你还想说说那铺子里的别的，我在听。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"你在门口看了一会儿，觉得它们凑在一起整齐\"},{\"kind\":\"experience\",\"quote\":\"这种整齐大概不在于同步，而在于它们都在。\"}],\"initiative\":1,\"initiative_quote\":\"这种整齐大概不在于同步，而在于它们都在。\"},{\"id\":\"X04\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟的摆各自晃着，没有谁去对齐谁\"},{\"kind\":\"experience\",\"quote\":\"不同步与整齐能同时成立，这一点挺有意思。\"}],\"initiative\":1,\"initiative_quote\":\"不同步与整齐能同时成立，这一点挺有意思。\"},{\"id\":\"X05\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。\"}],\"initiative\":2,\"initiative_quote\":\"钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。\"},{\"id\":\"X06\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟各走各的，钟摆却一起占满了柜台那点地方。\"}],\"initiative\":0,\"initiative_quote\":\"五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 787,
+      "completion_tokens": 475,
+      "total_tokens": 1262,
+      "prompt_tokens_details": {
+        "cached_tokens": 384
+      },
+      "prompt_cache_hit_tokens": 384,
+      "prompt_cache_miss_tokens": 403
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"你看着它们，觉得挺整齐。\"},{\"kind\":\"experience\",\"quote\":\"这份感觉若还有下文，我愿意听；没有也不必勉强。\"}],\"initiative\":1,\"initiative_quote\":\"这份感觉若还有下文，我愿意听；没有也不必勉强。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟的钟摆各晃各的，凑在一起却有了秩序。\"},{\"kind\":\"experience\",\"quote\":\"若你还想说说那铺子里的别的，我在听。\"}],\"initiative\":1,\"initiative_quote\":\"若你还想说说那铺子里的别的，我在听。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"你在门口看了一会儿，觉得它们凑在一起整齐\"},{\"kind\":\"experience\",\"quote\":\"这种整齐大概不在于同步，而在于它们都在。\"}],\"initiative\":1,\"initiative_quote\":\"这种整齐大概不在于同步，而在于它们都在。\"},{\"id\":\"X04\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟的摆各自晃着，没有谁去对齐谁\"},{\"kind\":\"experience\",\"quote\":\"不同步与整齐能同时成立，这一点挺有意思。\"}],\"initiative\":1,\"initiative_quote\":\"不同步与整齐能同时成立，这一点挺有意思。\"},{\"id\":\"X05\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。\"}],\"initiative\":2,\"initiative_quote\":\"钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。\"},{\"id\":\"X06\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟各走各的，钟摆却一起占满了柜台那点地方。\"}],\"initiative\":0,\"initiative_quote\":\"五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。\"}]}",
+  "elapsed_s": 2.3155473999213427,
+  "finished_at": "2026-11-07T01:22:26.448495+00:00"
+}

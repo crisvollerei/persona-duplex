@@ -1,0 +1,181 @@
+{
+  "id": "E03-L-coverage",
+  "case": "E03",
+  "profile": "L",
+  "method": "coverage",
+  "generation_call": "E03-L-coverage",
+  "status": "ok",
+  "say": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "先算总数：4盒×6枚=24枚，贴出去9枚，桌上就剩15枚。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上，这个画面挺清楚的。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "4盒一共24枚，贴走9枚，桌上剩15枚。要是你愿意，也可以说说板上贴成了什么样子。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "算下来桌上还剩15枚。贴那9枚的时候，你感觉是顺手还是有点费劲？不说也完全没关系。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "桌上还剩15枚，因为24减9等于15。你特意说“剩下的都还在桌上”，这一步交代得很清楚，算起来也踏实。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "先算总数：4盒×6枚=24枚，贴出去9枚，桌上就剩15枚。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "先算总数：4盒×6枚=24枚，贴出去9枚，桌上就剩15枚。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上，这个画面挺清楚的。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "4盒一共24枚，贴走9枚，桌上剩15枚。"
+          },
+          {
+            "kind": "experience",
+            "quote": "要是你愿意，也可以说说板上贴成了什么样子。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是你愿意，也可以说说板上贴成了什么样子。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "算下来桌上还剩15枚。"
+          },
+          {
+            "kind": "experience",
+            "quote": "贴那9枚的时候，你感觉是顺手还是有点费劲？"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "贴那9枚的时候，你感觉是顺手还是有点费劲？不说也完全没关系。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "也可以反过来看，桌上剩的比贴出去的多6枚。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "桌上还剩15枚，因为24减9等于15。"
+          },
+          {
+            "kind": "experience",
+            "quote": "你特意说“剩下的都还在桌上”，这一步交代得很清楚，算起来也踏实。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "桌上还剩15枚，因为24减9等于15。你特意说“剩下的都还在桌上”，这一步交代得很清楚，算起来也踏实。"
+      }
+    }
+  ],
+  "label_call": "E03-L-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C05",
+  "random_selected_id": "C02",
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C03",
+    "X03": "C01",
+    "X04": "C06",
+    "X05": "C05",
+    "X06": "C04"
+  }
+}

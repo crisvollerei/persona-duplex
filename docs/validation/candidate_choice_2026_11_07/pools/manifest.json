@@ -1,0 +1,10 @@
+{
+  "phase": "pools",
+  "created_at": "2026-11-07T00:13:38.861082+00:00",
+  "protocol_sha256": "e8dce12d4c24ffbb6c629853d9fcbb569fd38f9a7afd25c8aa8f499a7cd4af65",
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "online": true,
+  "server_seed": null,
+  "retries": 0
+}

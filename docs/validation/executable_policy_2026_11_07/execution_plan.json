@@ -1,0 +1,562 @@
+[
+  {
+    "id": "social_i1_practical_traditional_r1",
+    "case_id": "social",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i1_practical_policy_r0",
+    "case_id": "social",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_feeling_policy_r0",
+    "case_id": "work",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_practical_traditional_r0",
+    "case_id": "answer",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_feeling_policy_r1",
+    "case_id": "denied",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_practical_traditional_r1",
+    "case_id": "answer",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_practical_policy_r1",
+    "case_id": "answer",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "auto_request",
+    "case_id": "auto_request",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "automatic"
+  },
+  {
+    "id": "denied_i0_practical_traditional_r1",
+    "case_id": "denied",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i0_practical_policy_r0",
+    "case_id": "work",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_feeling_traditional_r0",
+    "case_id": "social",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_feeling_traditional_r0",
+    "case_id": "denied",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i1_feeling_traditional_r0",
+    "case_id": "social",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_feeling_traditional_r1",
+    "case_id": "work",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_feeling_policy_r1",
+    "case_id": "answer",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_practical_policy_r1",
+    "case_id": "answer",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_feeling_policy_r0",
+    "case_id": "answer",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_feeling_policy_r0",
+    "case_id": "answer",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i0_feeling_traditional_r0",
+    "case_id": "work",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_feeling_traditional_r0",
+    "case_id": "answer",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_feeling_traditional_r1",
+    "case_id": "answer",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "auto_quote",
+    "case_id": "auto_quote",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "automatic"
+  },
+  {
+    "id": "answer_i1_practical_traditional_r0",
+    "case_id": "answer",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_practical_traditional_r0",
+    "case_id": "social",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_practical_traditional_r1",
+    "case_id": "answer",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_practical_traditional_r1",
+    "case_id": "social",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_feeling_policy_r0",
+    "case_id": "denied",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_practical_policy_r1",
+    "case_id": "social",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_feeling_policy_r1",
+    "case_id": "answer",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_practical_policy_r1",
+    "case_id": "denied",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "auto_resume",
+    "case_id": "auto_resume",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "automatic"
+  },
+  {
+    "id": "social_i1_practical_traditional_r0",
+    "case_id": "social",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_practical_traditional_r1",
+    "case_id": "denied",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i0_practical_traditional_r1",
+    "case_id": "work",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i1_feeling_policy_r0",
+    "case_id": "social",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_feeling_traditional_r1",
+    "case_id": "denied",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_feeling_traditional_r0",
+    "case_id": "work",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i1_feeling_policy_r1",
+    "case_id": "social",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_feeling_policy_r0",
+    "case_id": "social",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_feeling_policy_r1",
+    "case_id": "denied",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_feeling_traditional_r1",
+    "case_id": "social",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_practical_policy_r0",
+    "case_id": "denied",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_feeling_traditional_r0",
+    "case_id": "denied",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_practical_policy_r1",
+    "case_id": "work",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i0_feeling_traditional_r1",
+    "case_id": "work",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_practical_policy_r0",
+    "case_id": "denied",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "auto_number",
+    "case_id": "auto_number",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "automatic"
+  },
+  {
+    "id": "answer_i0_feeling_traditional_r1",
+    "case_id": "answer",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_practical_policy_r0",
+    "case_id": "answer",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_practical_traditional_r0",
+    "case_id": "work",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i0_practical_policy_r1",
+    "case_id": "work",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_practical_traditional_r1",
+    "case_id": "work",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_feeling_policy_r0",
+    "case_id": "denied",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_practical_policy_r1",
+    "case_id": "denied",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i1_practical_traditional_r0",
+    "case_id": "denied",
+    "profile": "i1_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_practical_traditional_r0",
+    "case_id": "denied",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "auto_tonight",
+    "case_id": "auto_tonight",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "automatic"
+  },
+  {
+    "id": "work_i0_feeling_policy_r1",
+    "case_id": "work",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i0_practical_traditional_r0",
+    "case_id": "work",
+    "profile": "i0_practical",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i1_feeling_traditional_r0",
+    "case_id": "answer",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "auto_unsupported",
+    "case_id": "auto_unsupported",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "automatic"
+  },
+  {
+    "id": "work_i0_feeling_policy_r0",
+    "case_id": "work",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "answer_i0_practical_policy_r0",
+    "case_id": "answer",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_feeling_policy_r1",
+    "case_id": "social",
+    "profile": "i0_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_practical_policy_r0",
+    "case_id": "work",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i1_feeling_traditional_r1",
+    "case_id": "social",
+    "profile": "i1_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i0_practical_policy_r0",
+    "case_id": "social",
+    "profile": "i0_practical",
+    "method": "policy",
+    "replicate": 0,
+    "kind": "controlled"
+  },
+  {
+    "id": "work_i1_feeling_policy_r1",
+    "case_id": "work",
+    "profile": "i1_feeling",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "denied_i0_feeling_traditional_r1",
+    "case_id": "denied",
+    "profile": "i0_feeling",
+    "method": "traditional",
+    "replicate": 1,
+    "kind": "controlled"
+  },
+  {
+    "id": "social_i1_practical_policy_r1",
+    "case_id": "social",
+    "profile": "i1_practical",
+    "method": "policy",
+    "replicate": 1,
+    "kind": "controlled"
+  }
+]

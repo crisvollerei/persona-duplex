@@ -1,0 +1,28 @@
+{
+  "study_id": "candidate_revision_2026_11_07",
+  "fixed_at": "2026-11-07T00:44:47.635668+00:00",
+  "planned_calls": 32,
+  "planned_pools": 16,
+  "planned_candidates": 96,
+  "planned_offline_choices": 96,
+  "seed": 2026110727,
+  "hashes": {
+    "cases.json": "8ed0d3c0ddd8cff6b6ca037e89d45fff39b0d736e2d4d0f92cef4aab02292c0a",
+    "profiles.json": "6661c7cad6161a9aaccee1c02f4bbdfe557678d203ef6c2d86f0b3d074c8451b",
+    "common_prompt.txt": "7e7ef1f693e323bd6c93bf02cf86b31e5abe819dec5609e6dff923689329596f",
+    "baseline_prompt.txt": "8ada58f1fa92dd55b5ab5a15e5b4ff249b16293371a84ab4ece193db5da1ffd5",
+    "coverage_prompt.txt": "769311d3adca4d6098302eb0ba0ae9124a3b8c22be5b9e3804967ddfbb8ee2c9",
+    "label_prompt.txt": "e183072c95b19a0519d5707441af83e3ba4f0a5c69b59cd0e6a8860437dab10e",
+    "selection.py": "41af586870e12d1792d04e13407357b58abc7705f28a3e4dac5b04a31dd20961",
+    "mechanism.py": "be107535695263c9f8df8bf716ec2990a7fa47dbd19de74604c87a135b1eb696",
+    "benchmark.py": "9c94d8940abd597c9a64e93dcc7405a5388b84b077ba35e3aaa1f09f0b05d56d",
+    "test_mechanism.py": "750038c9626fbd8b516161d01b00d7c33f157e7fe9460c2da621590146ac7d48",
+    "review_codebook.md": "d062c4325e3d4267e5f995a2a7e756465843d7aab0f14337f58ab1fa6393d745",
+    "protocol.md": "b9c47aba5a05ab1d3b4c1b3b1064980adde3c0d71eff1707810d67cf020074fa"
+  },
+  "baseline_origin": {
+    "study_id": "candidate_choice_2026_11_07",
+    "common_sha256": "7e7ef1f693e323bd6c93bf02cf86b31e5abe819dec5609e6dff923689329596f",
+    "pool_prompt_sha256": "8ada58f1fa92dd55b5ab5a15e5b4ff249b16293371a84ab4ece193db5da1ffd5"
+  }
+}

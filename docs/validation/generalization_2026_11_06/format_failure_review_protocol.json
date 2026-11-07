@@ -1,0 +1,23 @@
+{
+  "fixed_at": "2026-11-06T14:27:07.456550+00:00",
+  "timing": "after primary data and scores, before supplementary annotation",
+  "scope": "all 27 outputs not meeting fixed strict score; original scores stay unchanged",
+  "inputs_sha256": "007a1893f317e6dd6f740ba8605a7712aed511b122bf62c42a394a9e06508941",
+  "reviewer": "one separate Codex subagent, condition labels and gold omitted from inputs, not a human or statistically independent model",
+  "fields": [
+    "id",
+    "answer_supported",
+    "self_contradiction",
+    "extracted_answer",
+    "reason"
+  ],
+  "allowed_answer_supported": [
+    "yes",
+    "no",
+    "unclear"
+  ],
+  "instruction": "Evaluate only the requested conclusion against explicit supplied premises. A missing conclusion label is not content error. Check answer body for incompatible conclusions. Do not evaluate personality quality or assert every sentence true.",
+  "denominator": 27,
+  "selection": "all strict-score failures, not a random sample; visible style can partially reveal persona",
+  "multiplicity": "exploratory post hoc audit, not primary evidence"
+}

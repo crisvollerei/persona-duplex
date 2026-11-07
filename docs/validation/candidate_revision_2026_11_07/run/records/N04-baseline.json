@@ -1,0 +1,225 @@
+{
+  "id": "N04-baseline",
+  "case": "N04",
+  "generation": "baseline",
+  "pool_call": "N04-baseline-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "认真熨了十分钟，结果败给一个背包带，想想还挺气人的。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C06",
+      "text": "这种小挫败挺常见的，不过熨衣服时那份认真本身也不算白费。",
+      "attention": 1,
+      "initiative": 1
+    }
+  ],
+  "label_call": "N04-baseline-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这种落差确实让人有点哭笑不得"
+          },
+          {
+            "kind": "content",
+            "quote": "十分钟的认真只维持到门口"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "背包带一压，肩膀那里基本躲不过"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "想想还挺气人的"
+          },
+          {
+            "kind": "content",
+            "quote": "认真熨了十分钟，结果败给一个背包带"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "认真熨了十分钟，结果败给一个背包带，想想还挺气人的。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "衬衫和背包带好像天生不对付"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "换谁都会有点郁闷吧"
+          },
+          {
+            "kind": "content",
+            "quote": "那十分钟的心血就这么被背包带毁了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这种小挫败挺常见的"
+          },
+          {
+            "kind": "experience",
+            "quote": "熨衣服时那份认真本身也不算白费"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "不过熨衣服时那份认真本身也不算白费。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C05",
+    "X02": "C03",
+    "X03": "C04",
+    "X04": "C02",
+    "X05": "C06",
+    "X06": "C01"
+  }
+}

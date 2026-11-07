@@ -1,0 +1,22 @@
+[
+  {
+    "id": "practical_first",
+    "policy": {
+      "intervention": 0,
+      "practical": 1,
+      "feeling": 0,
+      "detail": 0,
+      "seed": "inquiry-study-v1"
+    }
+  },
+  {
+    "id": "detail_first",
+    "policy": {
+      "intervention": 0,
+      "practical": 0,
+      "feeling": 0,
+      "detail": 1,
+      "seed": "inquiry-study-v1"
+    }
+  }
+]

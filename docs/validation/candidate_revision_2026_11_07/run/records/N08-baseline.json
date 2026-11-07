@@ -1,0 +1,209 @@
+{
+  "id": "N08-baseline",
+  "case": "N08",
+  "generation": "baseline",
+  "pool_call": "N08-baseline-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "这个比喻有意思，键盘上突然有了主次之分。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "被圈住之后回车键估计还挺得意，其他键只能干看着。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C06",
+      "text": "胶带卷滚得真是时候，硬生生给键盘排了出戏。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N08-baseline-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "敲下去是不是都有点仪式感。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这个比喻有意思，键盘上突然有了主次之分。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这个比喻有意思，键盘上突然有了主次之分。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "被圈住之后回车键估计还挺得意，其他键只能干看着。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "被圈住之后回车键估计还挺得意，其他键只能干看着。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "胶带卷滚得真是时候，硬生生给键盘排了出戏。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "胶带卷滚得真是时候，硬生生给键盘排了出戏。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C02",
+    "X03": "C03",
+    "X04": "C06",
+    "X05": "C05",
+    "X06": "C01"
+  }
+}

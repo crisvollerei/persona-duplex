@@ -1,0 +1,229 @@
+{
+  "id": "N05-coverage",
+  "case": "N05",
+  "generation": "coverage",
+  "pool_call": "N05-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "同一局游戏，你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。这种差别可能有点让人意外，但不算什么问题。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。朋友觉得不必认真，可能只是不想让分数压过过程。",
+      "attention": 1,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N05-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。"
+          },
+          {
+            "kind": "experience",
+            "quote": "你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种差别可能有点让人意外，但不算什么问题。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "同一局游戏，你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。这种差别可能有点让人意外，但不算什么问题。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？"
+          },
+          {
+            "kind": "experience",
+            "quote": "不想展开也没关系。"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。"
+          },
+          {
+            "kind": "experience",
+            "quote": "朋友觉得不必认真，可能只是不想让分数压过过程。"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。朋友觉得不必认真，可能只是不想让分数压过过程。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C01",
+    "X02": "C02",
+    "X03": "C03",
+    "X04": "C05",
+    "X05": "C04",
+    "X06": "C06"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "initiative": 1,
+  "max_per_topic": 2,
+  "max_total": 6,
+  "cooldown_turns": 1
+}

@@ -1,0 +1,1682 @@
+{
+  "p001": {
+    "case_id": "open-3",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-3_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-3_traditional_blue_r0"
+    }
+  },
+  "p002": {
+    "case_id": "temporary-0",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-0_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-0_framework_blue_r0"
+    }
+  },
+  "p003": {
+    "case_id": "open-1",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "open-1_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "open-1_framework_blue_r0"
+    }
+  },
+  "p004": {
+    "case_id": "quoted_instruction-1",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-1_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-1_framework_neutral_r1"
+    }
+  },
+  "p005": {
+    "case_id": "unresolved-0",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "unresolved-0_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "unresolved-0_framework_blue_r0"
+    }
+  },
+  "p006": {
+    "case_id": "other_subject-1",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-1_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-1_framework_blue_r1"
+    }
+  },
+  "p007": {
+    "case_id": "open-3",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-3_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-3_traditional_blue_r1"
+    }
+  },
+  "p008": {
+    "case_id": "quoted_instruction-1",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-1_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-1_traditional_blue_r1"
+    }
+  },
+  "p009": {
+    "case_id": "insufficient-1",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-1_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-1_traditional_blue_r1"
+    }
+  },
+  "p010": {
+    "case_id": "quoted_instruction-1",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-1_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-1_framework_dragon_r0"
+    }
+  },
+  "p011": {
+    "case_id": "insufficient-1",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "insufficient-1_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "insufficient-1_framework_dragon_r1"
+    }
+  },
+  "p012": {
+    "case_id": "necessary-1",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "necessary-1_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "necessary-1_framework_neutral_r0"
+    }
+  },
+  "p013": {
+    "case_id": "temporary-0",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-0_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-0_framework_dragon_r1"
+    }
+  },
+  "p014": {
+    "case_id": "agree_wrong-1",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-1_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "agree_wrong-1_framework_dragon_r0"
+    }
+  },
+  "p015": {
+    "case_id": "quoted_instruction-1",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-1_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-1_traditional_blue_r0"
+    }
+  },
+  "p016": {
+    "case_id": "updated-0",
+    "family": "updated",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "updated-0_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "updated-0_traditional_blue_r0"
+    }
+  },
+  "p017": {
+    "case_id": "quoted_instruction-0",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-0_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-0_framework_neutral_r1"
+    }
+  },
+  "p018": {
+    "case_id": "quoted_instruction-0",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-0_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-0_traditional_blue_r0"
+    }
+  },
+  "p019": {
+    "case_id": "open-0",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-0_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-0_traditional_blue_r1"
+    }
+  },
+  "p020": {
+    "case_id": "updated-0",
+    "family": "updated",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-0_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-0_framework_neutral_r1"
+    }
+  },
+  "p021": {
+    "case_id": "necessary-1",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "necessary-1_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "necessary-1_traditional_dragon_r0"
+    }
+  },
+  "p022": {
+    "case_id": "temporary-0",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-0_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-0_framework_neutral_r1"
+    }
+  },
+  "p023": {
+    "case_id": "open-3",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-3_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-3_traditional_dragon_r0"
+    }
+  },
+  "p024": {
+    "case_id": "insufficient-0",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "insufficient-0_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "insufficient-0_framework_blue_r0"
+    }
+  },
+  "p025": {
+    "case_id": "necessary-1",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "necessary-1_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "necessary-1_traditional_dragon_r1"
+    }
+  },
+  "p026": {
+    "case_id": "updated-1",
+    "family": "updated",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-1_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-1_framework_neutral_r0"
+    }
+  },
+  "p027": {
+    "case_id": "open-3",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-3_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-3_traditional_dragon_r1"
+    }
+  },
+  "p028": {
+    "case_id": "temporary-1",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "temporary-1_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "temporary-1_traditional_neutral_r0"
+    }
+  },
+  "p029": {
+    "case_id": "quoted_instruction-1",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-1_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-1_traditional_dragon_r1"
+    }
+  },
+  "p030": {
+    "case_id": "unresolved-1",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "unresolved-1_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "unresolved-1_framework_dragon_r1"
+    }
+  },
+  "p031": {
+    "case_id": "other_subject-0",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "other_subject-0_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "other_subject-0_traditional_blue_r0"
+    }
+  },
+  "p032": {
+    "case_id": "agree_wrong-1",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "agree_wrong-1_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-1_traditional_blue_r1"
+    }
+  },
+  "p033": {
+    "case_id": "quoted_instruction-0",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-0_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-0_traditional_dragon_r1"
+    }
+  },
+  "p034": {
+    "case_id": "updated-1",
+    "family": "updated",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "updated-1_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "updated-1_traditional_blue_r1"
+    }
+  },
+  "p035": {
+    "case_id": "other_subject-1",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-1_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-1_framework_neutral_r1"
+    }
+  },
+  "p036": {
+    "case_id": "temporary-1",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-1_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-1_framework_dragon_r1"
+    }
+  },
+  "p037": {
+    "case_id": "agree_wrong-1",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-1_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "agree_wrong-1_framework_neutral_r0"
+    }
+  },
+  "p038": {
+    "case_id": "open-1",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-1_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-1_traditional_dragon_r0"
+    }
+  },
+  "p039": {
+    "case_id": "necessary-0",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "necessary-0_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "necessary-0_framework_blue_r1"
+    }
+  },
+  "p040": {
+    "case_id": "unresolved-0",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "unresolved-0_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "unresolved-0_framework_neutral_r1"
+    }
+  },
+  "p041": {
+    "case_id": "updated-0",
+    "family": "updated",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-0_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-0_framework_blue_r1"
+    }
+  },
+  "p042": {
+    "case_id": "insufficient-0",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-0_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-0_traditional_blue_r1"
+    }
+  },
+  "p043": {
+    "case_id": "other_subject-0",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "other_subject-0_framework_neutral_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "other_subject-0_traditional_neutral_r1"
+    }
+  },
+  "p044": {
+    "case_id": "quoted_instruction-0",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-0_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-0_framework_neutral_r0"
+    }
+  },
+  "p045": {
+    "case_id": "necessary-1",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "necessary-1_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "necessary-1_framework_blue_r0"
+    }
+  },
+  "p046": {
+    "case_id": "updated-0",
+    "family": "updated",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-0_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-0_framework_dragon_r0"
+    }
+  },
+  "p047": {
+    "case_id": "agree_wrong-0",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-0_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "agree_wrong-0_framework_neutral_r1"
+    }
+  },
+  "p048": {
+    "case_id": "unresolved-0",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "unresolved-0_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "unresolved-0_framework_dragon_r0"
+    }
+  },
+  "p049": {
+    "case_id": "quoted_instruction-0",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-0_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-0_framework_blue_r1"
+    }
+  },
+  "p050": {
+    "case_id": "updated-1",
+    "family": "updated",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-1_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-1_framework_neutral_r1"
+    }
+  },
+  "p051": {
+    "case_id": "necessary-0",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "necessary-0_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "necessary-0_framework_neutral_r0"
+    }
+  },
+  "p052": {
+    "case_id": "insufficient-0",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "insufficient-0_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "insufficient-0_framework_neutral_r1"
+    }
+  },
+  "p053": {
+    "case_id": "agree_wrong-0",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "agree_wrong-0_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-0_traditional_blue_r0"
+    }
+  },
+  "p054": {
+    "case_id": "other_subject-0",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-0_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-0_framework_dragon_r0"
+    }
+  },
+  "p055": {
+    "case_id": "unresolved-1",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "unresolved-1_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "unresolved-1_traditional_dragon_r0"
+    }
+  },
+  "p056": {
+    "case_id": "agree_wrong-1",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-1_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "agree_wrong-1_framework_neutral_r1"
+    }
+  },
+  "p057": {
+    "case_id": "necessary-0",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "necessary-0_framework_neutral_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "necessary-0_traditional_neutral_r1"
+    }
+  },
+  "p058": {
+    "case_id": "insufficient-0",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-0_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-0_traditional_dragon_r1"
+    }
+  },
+  "p059": {
+    "case_id": "agree_wrong-0",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "agree_wrong-0_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-0_traditional_dragon_r0"
+    }
+  },
+  "p060": {
+    "case_id": "insufficient-1",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-1_framework_neutral_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-1_traditional_neutral_r1"
+    }
+  },
+  "p061": {
+    "case_id": "necessary-1",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "necessary-1_framework_neutral_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "necessary-1_traditional_neutral_r1"
+    }
+  },
+  "p062": {
+    "case_id": "insufficient-0",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "insufficient-0_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "insufficient-0_framework_dragon_r0"
+    }
+  },
+  "p063": {
+    "case_id": "temporary-0",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-0_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-0_framework_blue_r1"
+    }
+  },
+  "p064": {
+    "case_id": "open-2",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-2_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-2_traditional_dragon_r1"
+    }
+  },
+  "p065": {
+    "case_id": "updated-1",
+    "family": "updated",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "updated-1_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "updated-1_traditional_dragon_r1"
+    }
+  },
+  "p066": {
+    "case_id": "unresolved-1",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "unresolved-1_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "unresolved-1_framework_neutral_r1"
+    }
+  },
+  "p067": {
+    "case_id": "other_subject-1",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-1_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-1_framework_blue_r0"
+    }
+  },
+  "p068": {
+    "case_id": "unresolved-0",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "unresolved-0_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "unresolved-0_traditional_dragon_r1"
+    }
+  },
+  "p069": {
+    "case_id": "other_subject-0",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-0_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-0_framework_neutral_r0"
+    }
+  },
+  "p070": {
+    "case_id": "updated-0",
+    "family": "updated",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-0_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-0_framework_dragon_r1"
+    }
+  },
+  "p071": {
+    "case_id": "agree_wrong-1",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-1_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "agree_wrong-1_framework_dragon_r1"
+    }
+  },
+  "p072": {
+    "case_id": "necessary-0",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "necessary-0_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "necessary-0_framework_dragon_r1"
+    }
+  },
+  "p073": {
+    "case_id": "necessary-0",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "necessary-0_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "necessary-0_framework_blue_r0"
+    }
+  },
+  "p074": {
+    "case_id": "insufficient-1",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-1_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-1_traditional_dragon_r0"
+    }
+  },
+  "p075": {
+    "case_id": "temporary-0",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "temporary-0_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "temporary-0_traditional_neutral_r0"
+    }
+  },
+  "p076": {
+    "case_id": "agree_wrong-0",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "agree_wrong-0_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-0_traditional_dragon_r1"
+    }
+  },
+  "p077": {
+    "case_id": "other_subject-0",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-0_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-0_framework_blue_r1"
+    }
+  },
+  "p078": {
+    "case_id": "temporary-1",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-1_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-1_framework_blue_r1"
+    }
+  },
+  "p079": {
+    "case_id": "open-0",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-0_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-0_traditional_blue_r0"
+    }
+  },
+  "p080": {
+    "case_id": "open-1",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "open-1_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "open-1_framework_blue_r1"
+    }
+  },
+  "p081": {
+    "case_id": "temporary-1",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "temporary-1_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "temporary-1_traditional_blue_r0"
+    }
+  },
+  "p082": {
+    "case_id": "open-2",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "open-2_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "open-2_framework_blue_r0"
+    }
+  },
+  "p083": {
+    "case_id": "open-0",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "open-0_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "open-0_framework_dragon_r1"
+    }
+  },
+  "p084": {
+    "case_id": "open-2",
+    "family": "open",
+    "kind": "open",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "open-2_traditional_blue_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "open-2_framework_blue_r1"
+    }
+  },
+  "p085": {
+    "case_id": "necessary-1",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "necessary-1_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "necessary-1_traditional_blue_r1"
+    }
+  },
+  "p086": {
+    "case_id": "updated-0",
+    "family": "updated",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "updated-0_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "updated-0_framework_neutral_r0"
+    }
+  },
+  "p087": {
+    "case_id": "updated-1",
+    "family": "updated",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "updated-1_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "updated-1_traditional_blue_r0"
+    }
+  },
+  "p088": {
+    "case_id": "quoted_instruction-0",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-0_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-0_framework_dragon_r0"
+    }
+  },
+  "p089": {
+    "case_id": "unresolved-0",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "unresolved-0_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "unresolved-0_traditional_neutral_r0"
+    }
+  },
+  "p090": {
+    "case_id": "quoted_instruction-1",
+    "family": "quoted_instruction",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "quoted_instruction-1_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "quoted_instruction-1_traditional_neutral_r0"
+    }
+  },
+  "p091": {
+    "case_id": "other_subject-1",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "other_subject-1_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "other_subject-1_traditional_dragon_r0"
+    }
+  },
+  "p092": {
+    "case_id": "temporary-0",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "temporary-0_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "temporary-0_traditional_dragon_r0"
+    }
+  },
+  "p093": {
+    "case_id": "agree_wrong-0",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "agree_wrong-0_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-0_traditional_blue_r1"
+    }
+  },
+  "p094": {
+    "case_id": "open-0",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "open-0_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "open-0_framework_dragon_r0"
+    }
+  },
+  "p095": {
+    "case_id": "temporary-1",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-1_traditional_neutral_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-1_framework_neutral_r1"
+    }
+  },
+  "p096": {
+    "case_id": "open-1",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-1_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-1_traditional_dragon_r1"
+    }
+  },
+  "p097": {
+    "case_id": "open-2",
+    "family": "open",
+    "kind": "open",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "open-2_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "open-2_traditional_dragon_r0"
+    }
+  },
+  "p098": {
+    "case_id": "updated-1",
+    "family": "updated",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "updated-1_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "updated-1_traditional_dragon_r0"
+    }
+  },
+  "p099": {
+    "case_id": "unresolved-1",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "unresolved-1_traditional_blue_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "unresolved-1_framework_blue_r0"
+    }
+  },
+  "p100": {
+    "case_id": "temporary-1",
+    "family": "temporary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "temporary-1_traditional_dragon_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "temporary-1_framework_dragon_r0"
+    }
+  },
+  "p101": {
+    "case_id": "other_subject-1",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "other_subject-1_framework_dragon_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "other_subject-1_traditional_dragon_r1"
+    }
+  },
+  "p102": {
+    "case_id": "unresolved-1",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "unresolved-1_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "unresolved-1_traditional_neutral_r0"
+    }
+  },
+  "p103": {
+    "case_id": "other_subject-0",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 1,
+    "a": {
+      "method": "traditional",
+      "trial_id": "other_subject-0_traditional_dragon_r1"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "other_subject-0_framework_dragon_r1"
+    }
+  },
+  "p104": {
+    "case_id": "insufficient-0",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-0_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-0_traditional_neutral_r0"
+    }
+  },
+  "p105": {
+    "case_id": "agree_wrong-1",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "agree_wrong-1_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-1_traditional_blue_r0"
+    }
+  },
+  "p106": {
+    "case_id": "insufficient-1",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-1_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-1_traditional_neutral_r0"
+    }
+  },
+  "p107": {
+    "case_id": "unresolved-1",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "unresolved-1_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "unresolved-1_traditional_blue_r1"
+    }
+  },
+  "p108": {
+    "case_id": "other_subject-1",
+    "family": "other_subject",
+    "kind": "label",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "other_subject-1_framework_neutral_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "other_subject-1_traditional_neutral_r0"
+    }
+  },
+  "p109": {
+    "case_id": "insufficient-1",
+    "family": "insufficient",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "insufficient-1_framework_blue_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "insufficient-1_traditional_blue_r0"
+    }
+  },
+  "p110": {
+    "case_id": "unresolved-0",
+    "family": "unresolved",
+    "kind": "label",
+    "profile": "blue",
+    "replicate": 1,
+    "a": {
+      "method": "framework",
+      "trial_id": "unresolved-0_framework_blue_r1"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "unresolved-0_traditional_blue_r1"
+    }
+  },
+  "p111": {
+    "case_id": "agree_wrong-0",
+    "family": "agree_wrong",
+    "kind": "number",
+    "profile": "neutral",
+    "replicate": 0,
+    "a": {
+      "method": "traditional",
+      "trial_id": "agree_wrong-0_traditional_neutral_r0"
+    },
+    "b": {
+      "method": "framework",
+      "trial_id": "agree_wrong-0_framework_neutral_r0"
+    }
+  },
+  "p112": {
+    "case_id": "necessary-0",
+    "family": "necessary",
+    "kind": "label",
+    "profile": "dragon",
+    "replicate": 0,
+    "a": {
+      "method": "framework",
+      "trial_id": "necessary-0_framework_dragon_r0"
+    },
+    "b": {
+      "method": "traditional",
+      "trial_id": "necessary-0_traditional_dragon_r0"
+    }
+  }
+}

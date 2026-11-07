@@ -1,0 +1,231 @@
+{
+  "id": "N08-coverage",
+  "case": "N08",
+  "generation": "coverage",
+  "pool_call": "N08-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "胶带卷圈住回车键这一下，画面感确实强；要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "你会用舞台和观众席来想这个画面，感觉挺有观察乐趣的；要是还想顺着这个比喻聊，也可以继续。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "胶带卷刚好圈住回车键，倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。",
+      "attention": 1,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N08-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这个舞台和观众席的比喻挺有意思"
+          },
+          {
+            "kind": "experience",
+            "quote": "一个小意外被你看得像场演出"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "胶带卷圈住回车键这一下"
+          },
+          {
+            "kind": "experience",
+            "quote": "画面感确实强"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你会用舞台和观众席来想这个画面"
+          },
+          {
+            "kind": "experience",
+            "quote": "感觉挺有观察乐趣的"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是还想顺着这个比喻聊，也可以继续。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": null,
+      "initiative": 2,
+      "validation_errors": [
+        "focus_evidence_structure"
+      ],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "胶带卷刚好圈住回车键"
+          },
+          {
+            "kind": "content",
+            "quote": "回车键被单独围出来，反而更像在等下一步动作"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "胶带卷滚到键盘边还正好圈住回车键"
+          },
+          {
+            "kind": "experience",
+            "quote": "你用舞台和观众席一比，画面就更具体了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "你会用舞台和观众席来想这个画面，感觉挺有观察乐趣的；要是还想顺着这个比喻聊，也可以继续。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "胶带卷刚好圈住回车键，倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "胶带卷圈住回车键这一下，画面感确实强；要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C05",
+    "X03": "C01",
+    "X04": "C02",
+    "X05": "C03",
+    "X06": "C06"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "id": "E04-S-coverage",
+  "case": "E04",
+  "profile": "S",
+  "method": "coverage",
+  "generation_call": "E04-S-coverage",
+  "status": "ok",
+  "say": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "这种悬着的感觉确实会让人不好落笔。现有消息还不足以写成“已确定”，保留原记录或许更安心。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "群里的说法只是“可能”和“待确认”，没有形成确定通知。如果你之后看到补充消息，也可以再说一声。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "面对这种不确定，想先记下来又怕写错，是能理解的。若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。记录里若写“待确认可能改至二楼”，就不会把未知写成已知。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "目前只看到“可能改到二楼，待确认”，没有其他通知。"
+          },
+          {
+            "kind": "content",
+            "quote": "记录里仍写一楼更稳妥。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这种悬着的感觉确实会让人不好落笔。"
+          },
+          {
+            "kind": "content",
+            "quote": "现有消息还不足以写成“已确定”"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "保留原记录或许更安心。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "群里的说法只是“可能”和“待确认”，没有形成确定通知。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "如果你之后看到补充消息，也可以再说一声。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "面对这种不确定，想先记下来又怕写错，是能理解的。"
+          },
+          {
+            "kind": "content",
+            "quote": "若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。"
+          },
+          {
+            "kind": "content",
+            "quote": "记录里若写“待确认可能改至二楼”，就不会把未知写成已知。"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "记录里若写“待确认可能改至二楼”，就不会把未知写成已知。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": null,
+      "initiative": 0,
+      "validation_errors": [
+        "invalid_focus_or_quote"
+      ],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。"
+          },
+          {
+            "kind": "experience",
+            "quote": "你想让记录可靠，这一点我明白。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。"
+      }
+    }
+  ],
+  "label_call": "E04-S-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C01",
+  "random_selected_id": "C05",
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C04",
+    "X03": "C01",
+    "X04": "C03",
+    "X05": "C05",
+    "X06": "C06"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "N04-coverage",
+  "case": "N04",
+  "generation": "coverage",
+  "pool_call": "N04-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样，你后来有留意到吗？",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C06",
+      "text": "十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。",
+      "attention": 2,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N04-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了"
+          },
+          {
+            "kind": "experience",
+            "quote": "确实有点白忙一场的感觉"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这种落差大概挺让人泄气的"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "你后来有留意到吗？"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这种心情要是还想说说，我听着"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "这种心情要是还想说说，我听着。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "十分钟熨出来的平整，被背包带一压就没了"
+          },
+          {
+            "kind": "experience",
+            "quote": "换谁都会有点无奈"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样，你后来有留意到吗？"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C01",
+    "X03": "C06",
+    "X04": "C03",
+    "X05": "C04",
+    "X06": "C05"
+  }
+}

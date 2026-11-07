@@ -1,0 +1,55 @@
+{
+  "id": "N02-baseline-pool",
+  "stage": "pool",
+  "started_at": "2026-11-07T00:45:26.593206+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你正在进行普通中文聊天。依据提供的完整历史、用户当前原话和已知事实回应。\n只把有来源的内容作为事实；不编造用户经历，不把对方未说明的心理当成确定事实。可以作普通、可撤回的社交评价，不必机械复述事实。\n用户明确边界优先于偏好，不因人格主动性而违反不要建议、不要追问等要求。无需强行解决问题；庆祝、认同、轻微不同意见、邀请分享和留白都可能合适。\n用自然、平等、不过度亲密的日常中文，不用人设名称、口癖、表情符号或舞台动作。通常35至100个汉字，长度是软参考，不能为凑字重复或牺牲意思。\n关注点 attention：0=以具体事情、细节或过程为中心；1=事情与体验都得到实质关注；2=以对方的主观体验或感受为中心。温柔用词本身不等于关注感受。\n主动性 initiative：0=接住当前话语后留白，不要求继续、不带入新方向；1=一次低压力的继续分享机会或邀请；2=主动带入相关新角度、推进讨论或提出行动方向。没有问号不一定是0，主动性也不等于字数。\n这两个维度只描述本次回复的取舍，不是人的心理诊断；同一种取舍可以有多种自然措辞。\n\n请为同一个用户消息生成六种不同但都自然、适切的完整回复。你没有目标角色，不要把选项写成预设的三种人格，不要机械列举坐标组合。\n优先让回复具有真实的语义取舍；可在关注细节还是体验、继续展开还是留白上有所不同。不是同一句话换六种措辞。各条必须独立遵守同一用户边界，不为凑多样性生成冒犯、不适切或捏造内容的回复。\n随后按共同定义估计每条实际文本的attention和initiative。标签是对文本的描述，不能只填写原本打算实现的动作。\n只输出JSON对象：{\"candidates\":[{\"id\":\"C01\",\"text\":\"完整回复\",\"attention\":0,\"initiative\":0},...]}。恰好六条，id依次C01到C06，无其他字段、说明或Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [], \"user\": \"阳台那盆薄荷冒出两片新叶了！我刚凑过去看了好一会儿。先别给我建议，我现在就是想宣布一下这两片叶子的存在。\", \"facts\": [\"用户阳台上的薄荷冒出了两片新叶。\", \"用户刚凑近观察了较长一会儿。\", \"用户想分享新叶出现这件事。\"], \"boundaries\": [\"先别给我建议\"]}}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 2400,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "d7c32c0d-881b-4127-a662-0900e3114c77",
+    "object": "chat.completion",
+    "created": 1794012326,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"candidates\":[{\"id\":\"C01\",\"text\":\"收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。\",\"attention\":1,\"initiative\":1},{\"id\":\"C02\",\"text\":\"好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。\",\"attention\":0,\"initiative\":0},{\"id\":\"C03\",\"text\":\"两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。\",\"attention\":1,\"initiative\":1},{\"id\":\"C04\",\"text\":\"嗯，我听到了，两片新叶，恭喜它俩正式亮相。\",\"attention\":0,\"initiative\":0},{\"id\":\"C05\",\"text\":\"凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。\",\"attention\":2,\"initiative\":0},{\"id\":\"C06\",\"text\":\"宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。\",\"attention\":1,\"initiative\":0}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 545,
+      "completion_tokens": 237,
+      "total_tokens": 782,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 289
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"candidates\":[{\"id\":\"C01\",\"text\":\"收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。\",\"attention\":1,\"initiative\":1},{\"id\":\"C02\",\"text\":\"好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。\",\"attention\":0,\"initiative\":0},{\"id\":\"C03\",\"text\":\"两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。\",\"attention\":1,\"initiative\":1},{\"id\":\"C04\",\"text\":\"嗯，我听到了，两片新叶，恭喜它俩正式亮相。\",\"attention\":0,\"initiative\":0},{\"id\":\"C05\",\"text\":\"凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。\",\"attention\":2,\"initiative\":0},{\"id\":\"C06\",\"text\":\"宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。\",\"attention\":1,\"initiative\":0}]}",
+  "elapsed_s": 2.5511187000665814,
+  "finished_at": "2026-11-07T00:45:29.144939+00:00"
+}

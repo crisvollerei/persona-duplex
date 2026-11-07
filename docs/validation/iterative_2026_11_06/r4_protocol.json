@@ -1,0 +1,20 @@
+{
+  "fixed_at": "2026-11-06T23:19:41+08:00",
+  "stage": "r4",
+  "classification": "Final prospective focused supplement after r3; not replacement, broad confirmation or repeated sampling until success",
+  "rationale": "Check exact unique source-locator-to-full-original normalization while preserving negation and quotation context; retain original source-integrity rejections",
+  "plan_digest": "b8bedb18774ec35994b33ddb2b7a9fed40cf5cd3c7497b80ec57ebc047da19f3",
+  "units": 4,
+  "dialogue_outputs": 20,
+  "max_requests": 36,
+  "hard_global_limit": 800,
+  "prior_completed_requests": 757,
+  "candidate": "revision_D",
+  "new_values": [
+    41,
+    47
+  ],
+  "contrast": "Archived baseline versus revision_D on two positively updated preference scenarios, fresh fixed numbers",
+  "stopping_rule": "Final online stage regardless of outcome. No extra samples or replacements; maximum final actual calls 793",
+  "scope": "Focused regression verification, not evidence of general memory superiority or the six-scenario average"
+}

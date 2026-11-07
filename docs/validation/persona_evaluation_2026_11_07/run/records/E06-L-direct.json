@@ -1,0 +1,15 @@
+{
+  "id": "E06-L-direct",
+  "case": "E06",
+  "profile": "L",
+  "method": "direct",
+  "generation_call": "E06-L-direct",
+  "status": "ok",
+  "say": "各晃各的，凑在一起反倒像某种乱中有序的节拍，这感觉挺妙的。修钟铺门口大概就是容易让人站住脚的地方。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

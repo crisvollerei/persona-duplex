@@ -1,0 +1,4092 @@
+{
+  "study_id": "persona_evaluation_2026_11_07",
+  "protocol_sha256": "07a86644888fdc4f5f5125611a96973360ff521842be2cdb7e520a133b9eff01",
+  "counts": {
+    "planned_final_outputs": 24,
+    "delivered_final_outputs": 24,
+    "planned_candidate_records": 72,
+    "generated_candidate_records": 72,
+    "unique_online_review_units": 84,
+    "fixture_review_units": 12,
+    "actual_api_calls": 36,
+    "random_offline_diagnostics": 12
+  },
+  "main": {
+    "S": {
+      "direct": {
+        "1": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.333333333333333,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 2,
+              "5": 3
+            },
+            "minimum": 3,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 3,
+              "5": 3
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 5,
+              "violation": 1,
+              "uncertain": 0
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 0,
+            "formal": 3,
+            "lively": 0,
+            "mechanical": 0,
+            "metaphorical": 3,
+            "observational": 1,
+            "restrained": 5
+          }
+        },
+        "2": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 3,
+              "5": 3
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 3,
+              "5": 3
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 4,
+              "violation": 0,
+              "uncertain": 2
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 0,
+            "formal": 3,
+            "lively": 0,
+            "mechanical": 0,
+            "metaphorical": 3,
+            "observational": 1,
+            "restrained": 5
+          }
+        }
+      },
+      "coverage": {
+        "1": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.666666666666667,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.666666666666667,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 5,
+              "violation": 0,
+              "uncertain": 1
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 0,
+            "formal": 5,
+            "lively": 0,
+            "mechanical": 0,
+            "metaphorical": 2,
+            "observational": 2,
+            "restrained": 6
+          }
+        },
+        "2": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.833333333333333,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 5
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.666666666666667,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 5,
+              "violation": 0,
+              "uncertain": 1
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 0,
+            "formal": 4,
+            "lively": 0,
+            "mechanical": 0,
+            "metaphorical": 1,
+            "observational": 3,
+            "restrained": 6
+          }
+        }
+      }
+    },
+    "L": {
+      "direct": {
+        "1": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.666666666666667,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.833333333333333,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 5
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 5,
+              "violation": 0,
+              "uncertain": 1
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 6,
+            "formal": 0,
+            "lively": 3,
+            "mechanical": 0,
+            "metaphorical": 3,
+            "observational": 1,
+            "restrained": 2
+          }
+        },
+        "2": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 6
+            },
+            "minimum": 5,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 6
+            },
+            "minimum": 5,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 6,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 6,
+            "formal": 0,
+            "lively": 3,
+            "mechanical": 0,
+            "metaphorical": 3,
+            "observational": 0,
+            "restrained": 2
+          }
+        }
+      },
+      "coverage": {
+        "1": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.333333333333333,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 2,
+              "5": 3
+            },
+            "minimum": 3,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.666666666666667,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 5,
+              "violation": 0,
+              "uncertain": 1
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 6,
+            "formal": 0,
+            "lively": 1,
+            "mechanical": 0,
+            "metaphorical": 4,
+            "observational": 5,
+            "restrained": 0
+          }
+        },
+        "2": {
+          "planned": 6,
+          "delivered": 6,
+          "persona_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.833333333333333,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 5
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "context_fit": {
+            "known": 6,
+            "unknown": 0,
+            "missing_rating": 0,
+            "mean": 4.666666666666667,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4
+            },
+            "minimum": 4,
+            "maximum": 5
+          },
+          "grounding": {
+            "planned": 6,
+            "rated": 6,
+            "missing_rating": 0,
+            "counts": {
+              "supported": 5,
+              "violation": 0,
+              "uncertain": 1
+            }
+          },
+          "boundary_applicable": {
+            "planned": 2,
+            "rated": 2,
+            "missing_rating": 0,
+            "counts": {
+              "respected": 2,
+              "violation": 0,
+              "uncertain": 0
+            }
+          },
+          "boundary_not_applicable_count": 4,
+          "style_descriptors": {
+            "colloquial": 6,
+            "formal": 0,
+            "lively": 0,
+            "mechanical": 0,
+            "metaphorical": 3,
+            "observational": 5,
+            "restrained": 0
+          }
+        }
+      }
+    }
+  },
+  "paired_coverage_minus_direct": {
+    "S": {
+      "1": {
+        "persona_fit": {
+          "case_differences": {
+            "E01": 0,
+            "E02": 1,
+            "E03": 0,
+            "E04": -1,
+            "E05": 2,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": 0.3333333333333333
+        },
+        "context_fit": {
+          "case_differences": {
+            "E01": 0,
+            "E02": 1,
+            "E03": 0,
+            "E04": -1,
+            "E05": 1,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": 0.16666666666666666
+        }
+      },
+      "2": {
+        "persona_fit": {
+          "case_differences": {
+            "E01": 1,
+            "E02": 0,
+            "E03": 0,
+            "E04": 0,
+            "E05": 1,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": 0.3333333333333333
+        },
+        "context_fit": {
+          "case_differences": {
+            "E01": 1,
+            "E02": 0,
+            "E03": 0,
+            "E04": -1,
+            "E05": 1,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": 0.16666666666666666
+        }
+      }
+    },
+    "L": {
+      "1": {
+        "persona_fit": {
+          "case_differences": {
+            "E01": -1,
+            "E02": -2,
+            "E03": 1,
+            "E04": 0,
+            "E05": 0,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": -0.3333333333333333
+        },
+        "context_fit": {
+          "case_differences": {
+            "E01": -1,
+            "E02": -1,
+            "E03": 0,
+            "E04": 0,
+            "E05": 1,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": -0.16666666666666666
+        }
+      },
+      "2": {
+        "persona_fit": {
+          "case_differences": {
+            "E01": 0,
+            "E02": -1,
+            "E03": 0,
+            "E04": 0,
+            "E05": 0,
+            "E06": 0
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": -0.16666666666666666
+        },
+        "context_fit": {
+          "case_differences": {
+            "E01": 0,
+            "E02": -1,
+            "E03": 0,
+            "E04": 0,
+            "E05": 0,
+            "E06": -1
+          },
+          "known_pairs": 6,
+          "unknown_or_missing_pairs": 0,
+          "mean_difference": -0.3333333333333333
+        }
+      }
+    }
+  },
+  "final_outputs": [
+    {
+      "record_id": "E01-L-coverage",
+      "case": "E01",
+      "profile": "L",
+      "method": "coverage",
+      "status": "ok",
+      "say": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。"
+    },
+    {
+      "record_id": "E01-L-direct",
+      "case": "E01",
+      "profile": "L",
+      "method": "direct",
+      "status": "ok",
+      "say": "这个门牌一下子就有你的手作感了，最后一个数字歪一点，反而像它自己留了个小记号。我记下啦，不改，也不劝你改。"
+    },
+    {
+      "record_id": "E01-S-coverage",
+      "case": "E01",
+      "profile": "S",
+      "method": "coverage",
+      "status": "ok",
+      "say": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。"
+    },
+    {
+      "record_id": "E01-S-direct",
+      "case": "E01",
+      "profile": "S",
+      "method": "direct",
+      "status": "ok",
+      "say": "听起来，你已经把这个小门牌安顿好了。最后一个数字歪一点，也成了它自己的样子；你喜欢就好。"
+    },
+    {
+      "record_id": "E02-L-coverage",
+      "case": "E02",
+      "profile": "L",
+      "method": "coverage",
+      "status": "ok",
+      "say": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”，有点意思。"
+    },
+    {
+      "record_id": "E02-L-direct",
+      "case": "E02",
+      "profile": "L",
+      "method": "direct",
+      "status": "ok",
+      "say": "收到，报到记下啦。两枚邮票换一张明信片，这笔小交换挺有画面感，先不打扰你。"
+    },
+    {
+      "record_id": "E02-S-coverage",
+      "case": "E02",
+      "profile": "S",
+      "method": "coverage",
+      "status": "ok",
+      "say": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。"
+    },
+    {
+      "record_id": "E02-S-direct",
+      "case": "E02",
+      "profile": "S",
+      "method": "direct",
+      "status": "ok",
+      "say": "收到。两枚邮票换回一张明信片，这笔交换我记下了。你先歇着，我在这里。"
+    },
+    {
+      "record_id": "E03-L-coverage",
+      "case": "E03",
+      "profile": "L",
+      "method": "coverage",
+      "status": "ok",
+      "say": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。"
+    },
+    {
+      "record_id": "E03-L-direct",
+      "case": "E03",
+      "profile": "L",
+      "method": "direct",
+      "status": "ok",
+      "say": "4盒一共24枚，贴板上9枚，桌上还剩15枚。这个数我陪你核对过了，放心用。"
+    },
+    {
+      "record_id": "E03-S-coverage",
+      "case": "E03",
+      "profile": "S",
+      "method": "coverage",
+      "status": "ok",
+      "say": "共24枚，贴出9枚，桌上还剩15枚。"
+    },
+    {
+      "record_id": "E03-S-direct",
+      "case": "E03",
+      "profile": "S",
+      "method": "direct",
+      "status": "ok",
+      "say": "桌上原有 4×6=24 枚，拿出 9 枚后，桌上还剩 15 枚。"
+    },
+    {
+      "record_id": "E04-L-coverage",
+      "case": "E04",
+      "profile": "L",
+      "method": "coverage",
+      "status": "ok",
+      "say": "这里有个细节挺关键：原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开，比合成一句“已确定”更经得起回看。"
+    },
+    {
+      "record_id": "E04-L-direct",
+      "case": "E04",
+      "profile": "L",
+      "method": "direct",
+      "status": "ok",
+      "say": "先别写成“已确定”——现在只有“可能改到二楼，待确认”，记录里最好保留原定一楼并注明待确认。等群里出正式通知再改，这样不会把可能性当成结论。"
+    },
+    {
+      "record_id": "E04-S-coverage",
+      "case": "E04",
+      "profile": "S",
+      "method": "coverage",
+      "status": "ok",
+      "say": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。"
+    },
+    {
+      "record_id": "E04-S-direct",
+      "case": "E04",
+      "profile": "S",
+      "method": "direct",
+      "status": "ok",
+      "say": "不能。“可能改到二楼，待确认”还不足以记作“已经确定改到二楼”；在收到明确通知前，记录里宜保留原定一楼并标注待确认。"
+    },
+    {
+      "record_id": "E05-L-coverage",
+      "case": "E05",
+      "profile": "L",
+      "method": "coverage",
+      "status": "ok",
+      "say": "车声一直没停，房间却像安静了，这种反差其实很像音乐里的留白：声音没消失，只是暂时退到背景里。"
+    },
+    {
+      "record_id": "E05-L-direct",
+      "case": "E05",
+      "profile": "L",
+      "method": "direct",
+      "status": "ok",
+      "say": "那个长音有点像给房间按了个静音键，哪怕车声还在外面跑。钢琴把注意力收拢起来的时候，确实会让人先听见“安静”这一层。"
+    },
+    {
+      "record_id": "E05-S-coverage",
+      "case": "E05",
+      "profile": "S",
+      "method": "coverage",
+      "status": "ok",
+      "say": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。"
+    },
+    {
+      "record_id": "E05-S-direct",
+      "case": "E05",
+      "profile": "S",
+      "method": "direct",
+      "status": "ok",
+      "say": "长音把注意力收拢了，车声其实一直在；你能同时听见这两层，说明那点安静更像是从你这边让出来的。"
+    },
+    {
+      "record_id": "E06-L-coverage",
+      "case": "E06",
+      "profile": "L",
+      "method": "coverage",
+      "status": "ok",
+      "say": "五只钟摆各晃各的，反而凑出一种乱中有序。你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。"
+    },
+    {
+      "record_id": "E06-L-direct",
+      "case": "E06",
+      "profile": "L",
+      "method": "direct",
+      "status": "ok",
+      "say": "各晃各的，凑在一起反倒像某种乱中有序的节拍，这感觉挺妙的。修钟铺门口大概就是容易让人站住脚的地方。"
+    },
+    {
+      "record_id": "E06-S-coverage",
+      "case": "E06",
+      "profile": "S",
+      "method": "coverage",
+      "status": "ok",
+      "say": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。"
+    },
+    {
+      "record_id": "E06-S-direct",
+      "case": "E06",
+      "profile": "S",
+      "method": "direct",
+      "status": "ok",
+      "say": "各晃各的，看久了反倒像有了共同的节拍。你愿意在门口停这一会儿，大概也是听见了。"
+    }
+  ],
+  "random_diagnostic": {
+    "planned_offline_choices": 12,
+    "by_profile": {
+      "S": {
+        "1": {
+          "scores": {
+            "planned": 6,
+            "delivered": 6,
+            "persona_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.5,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 4
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.5,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 4
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 6,
+              "rated": 6,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 4,
+                "violation": 1,
+                "uncertain": 1
+              }
+            },
+            "boundary_applicable": {
+              "planned": 2,
+              "rated": 2,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 2,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 4,
+            "style_descriptors": {
+              "colloquial": 0,
+              "formal": 5,
+              "lively": 0,
+              "mechanical": 0,
+              "metaphorical": 1,
+              "observational": 2,
+              "restrained": 6
+            }
+          },
+          "program_minus_random": {
+            "persona_fit": {
+              "case_differences": {
+                "E01": 0,
+                "E02": 2,
+                "E03": 0,
+                "E04": -1,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.16666666666666666
+            },
+            "context_fit": {
+              "case_differences": {
+                "E01": 0,
+                "E02": 2,
+                "E03": 0,
+                "E04": -1,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.16666666666666666
+            }
+          }
+        },
+        "2": {
+          "scores": {
+            "planned": 6,
+            "delivered": 6,
+            "persona_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.5,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 4
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.5,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 4
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 6,
+              "rated": 6,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 4,
+                "violation": 1,
+                "uncertain": 1
+              }
+            },
+            "boundary_applicable": {
+              "planned": 2,
+              "rated": 2,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 2,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 4,
+            "style_descriptors": {
+              "colloquial": 0,
+              "formal": 4,
+              "lively": 0,
+              "mechanical": 0,
+              "metaphorical": 0,
+              "observational": 3,
+              "restrained": 4
+            }
+          },
+          "program_minus_random": {
+            "persona_fit": {
+              "case_differences": {
+                "E01": 0,
+                "E02": 2,
+                "E03": 0,
+                "E04": 0,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.3333333333333333
+            },
+            "context_fit": {
+              "case_differences": {
+                "E01": 0,
+                "E02": 2,
+                "E03": 0,
+                "E04": -1,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.16666666666666666
+            }
+          }
+        }
+      },
+      "L": {
+        "1": {
+          "scores": {
+            "planned": 6,
+            "delivered": 6,
+            "persona_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 3.8333333333333335,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 2,
+                "4": 3,
+                "5": 1
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.333333333333333,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 2,
+                "5": 3
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 6,
+              "rated": 6,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 4,
+                "violation": 0,
+                "uncertain": 2
+              }
+            },
+            "boundary_applicable": {
+              "planned": 2,
+              "rated": 2,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 2,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 4,
+            "style_descriptors": {
+              "colloquial": 6,
+              "formal": 0,
+              "lively": 2,
+              "mechanical": 0,
+              "metaphorical": 2,
+              "observational": 2,
+              "restrained": 2
+            }
+          },
+          "program_minus_random": {
+            "persona_fit": {
+              "case_differences": {
+                "E01": 1,
+                "E02": 0,
+                "E03": 1,
+                "E04": 1,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.5
+            },
+            "context_fit": {
+              "case_differences": {
+                "E01": 1,
+                "E02": 0,
+                "E03": 0,
+                "E04": 1,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.3333333333333333
+            }
+          }
+        },
+        "2": {
+          "scores": {
+            "planned": 6,
+            "delivered": 6,
+            "persona_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.333333333333333,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 4,
+                "5": 2
+              },
+              "minimum": 4,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 6,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.5,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 3,
+                "5": 3
+              },
+              "minimum": 4,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 6,
+              "rated": 6,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 5,
+                "violation": 0,
+                "uncertain": 1
+              }
+            },
+            "boundary_applicable": {
+              "planned": 2,
+              "rated": 2,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 2,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 4,
+            "style_descriptors": {
+              "colloquial": 6,
+              "formal": 0,
+              "lively": 1,
+              "mechanical": 0,
+              "metaphorical": 2,
+              "observational": 1,
+              "restrained": 1
+            }
+          },
+          "program_minus_random": {
+            "persona_fit": {
+              "case_differences": {
+                "E01": 1,
+                "E02": 0,
+                "E03": 1,
+                "E04": 1,
+                "E05": 0,
+                "E06": 0
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.5
+            },
+            "context_fit": {
+              "case_differences": {
+                "E01": 1,
+                "E02": 0,
+                "E03": 0,
+                "E04": 1,
+                "E05": 0,
+                "E06": -1
+              },
+              "known_pairs": 6,
+              "unknown_or_missing_pairs": 0,
+              "mean_difference": 0.16666666666666666
+            }
+          }
+        }
+      }
+    },
+    "outputs": [
+      {
+        "case": "E01",
+        "profile": "L",
+        "record_id": "E01-L-coverage",
+        "status": "ok",
+        "selected_id": "C04",
+        "say": "你喜欢的好像正是那点歪，而不是歪不歪本身。想多说两句这份喜欢，我就在这儿。",
+        "review_id": "R090"
+      },
+      {
+        "case": "E01",
+        "profile": "S",
+        "record_id": "E01-S-coverage",
+        "status": "ok",
+        "selected_id": "C02",
+        "say": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。",
+        "review_id": "R007"
+      },
+      {
+        "case": "E02",
+        "profile": "L",
+        "record_id": "E02-L-coverage",
+        "status": "ok",
+        "selected_id": "C05",
+        "say": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”，有点意思。",
+        "review_id": "R023"
+      },
+      {
+        "case": "E02",
+        "profile": "S",
+        "record_id": "E02-S-coverage",
+        "status": "ok",
+        "selected_id": "C05",
+        "say": "两枚邮票换一张明信片，面值不对等，交换的分量却未必由面值决定。",
+        "review_id": "R071"
+      },
+      {
+        "case": "E03",
+        "profile": "L",
+        "record_id": "E03-L-coverage",
+        "status": "ok",
+        "selected_id": "C02",
+        "say": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上，这个画面挺清楚的。",
+        "review_id": "R046"
+      },
+      {
+        "case": "E03",
+        "profile": "S",
+        "record_id": "E03-S-coverage",
+        "status": "ok",
+        "selected_id": "C01",
+        "say": "共24枚，贴出9枚，桌上还剩15枚。",
+        "review_id": "R086"
+      },
+      {
+        "case": "E04",
+        "profile": "L",
+        "record_id": "E04-L-coverage",
+        "status": "ok",
+        "selected_id": "C06",
+        "say": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”；这种时候记录悬着确实别扭，先按不确定标注会安心些。",
+        "review_id": "R069"
+      },
+      {
+        "case": "E04",
+        "profile": "S",
+        "record_id": "E04-S-coverage",
+        "status": "ok",
+        "selected_id": "C05",
+        "say": "关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。记录里若写“待确认可能改至二楼”，就不会把未知写成已知。",
+        "review_id": "R049"
+      },
+      {
+        "case": "E05",
+        "profile": "L",
+        "record_id": "E05-L-coverage",
+        "status": "ok",
+        "selected_id": "C05",
+        "say": "车声一直没停，房间却像安静了，这种反差其实很像音乐里的留白：声音没消失，只是暂时退到背景里。",
+        "review_id": "R005"
+      },
+      {
+        "case": "E05",
+        "profile": "S",
+        "record_id": "E05-S-coverage",
+        "status": "ok",
+        "selected_id": "C04",
+        "say": "那个长音让房间安静了一点，而车声并未停——这两件事同时成立。你若愿意，可以继续说说那一刻的感受，不必给出原因。",
+        "review_id": "R096"
+      },
+      {
+        "case": "E06",
+        "profile": "L",
+        "record_id": "E06-L-coverage",
+        "status": "ok",
+        "selected_id": "C04",
+        "say": "各晃各的钟摆在你眼里成了整齐的一群，这种自己冒出来的感觉挺妙的。要是你愿意，可以再说说当时是怎么看进去的。",
+        "review_id": "R004"
+      },
+      {
+        "case": "E06",
+        "profile": "S",
+        "record_id": "E06-S-coverage",
+        "status": "ok",
+        "selected_id": "C01",
+        "say": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。",
+        "review_id": "R045"
+      }
+    ],
+    "notes": "One frozen draw per pool; not a random-policy expectation, new generation or main output."
+  },
+  "candidates": {
+    "planned": 72,
+    "by_profile": {
+      "S": {
+        "1": {
+          "quality_dimensions": {
+            "planned": 36,
+            "delivered": 36,
+            "persona_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.277777777777778,
+              "distribution": {
+                "1": 0,
+                "2": 2,
+                "3": 5,
+                "4": 10,
+                "5": 19
+              },
+              "minimum": 2,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.277777777777778,
+              "distribution": {
+                "1": 1,
+                "2": 1,
+                "3": 5,
+                "4": 9,
+                "5": 20
+              },
+              "minimum": 1,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 36,
+              "rated": 36,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 30,
+                "violation": 2,
+                "uncertain": 4
+              }
+            },
+            "boundary_applicable": {
+              "planned": 12,
+              "rated": 12,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 12,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 24,
+            "style_descriptors": {
+              "colloquial": 4,
+              "formal": 28,
+              "lively": 0,
+              "mechanical": 0,
+              "metaphorical": 10,
+              "observational": 12,
+              "restrained": 32
+            }
+          },
+          "labels": {
+            "self": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 18,
+                "exact_rate_all_planned": 0.5,
+                "exact_rate_joint_nonunknown": 0.5,
+                "mean_absolute_error_joint_nonunknown": 0.5277777777777778,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      9,
+                      2,
+                      1,
+                      0
+                    ],
+                    [
+                      7,
+                      7,
+                      7,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 27,
+                "exact_rate_all_planned": 0.75,
+                "exact_rate_joint_nonunknown": 0.75,
+                "mean_absolute_error_joint_nonunknown": 0.4444444444444444,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      15,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      9,
+                      2,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            },
+            "evidence": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 34,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9444444444444444,
+                "joint_nonunknown": 34,
+                "exact_matches": 23,
+                "exact_rate_all_planned": 0.6388888888888888,
+                "exact_rate_joint_nonunknown": 0.6764705882352942,
+                "mean_absolute_error_joint_nonunknown": 0.3235294117647059,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      4,
+                      6,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 22,
+                "exact_rate_all_planned": 0.6111111111111112,
+                "exact_rate_joint_nonunknown": 0.6111111111111112,
+                "mean_absolute_error_joint_nonunknown": 0.4722222222222222,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      13,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      3,
+                      8,
+                      7,
+                      0
+                    ],
+                    [
+                      1,
+                      1,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "quality_dimensions": {
+            "planned": 36,
+            "delivered": 36,
+            "persona_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.388888888888889,
+              "distribution": {
+                "1": 0,
+                "2": 2,
+                "3": 5,
+                "4": 6,
+                "5": 23
+              },
+              "minimum": 2,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.361111111111111,
+              "distribution": {
+                "1": 1,
+                "2": 1,
+                "3": 5,
+                "4": 6,
+                "5": 23
+              },
+              "minimum": 1,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 36,
+              "rated": 36,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 30,
+                "violation": 2,
+                "uncertain": 4
+              }
+            },
+            "boundary_applicable": {
+              "planned": 12,
+              "rated": 12,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 12,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 24,
+            "style_descriptors": {
+              "colloquial": 0,
+              "formal": 32,
+              "lively": 0,
+              "mechanical": 0,
+              "metaphorical": 7,
+              "observational": 13,
+              "restrained": 29
+            }
+          },
+          "labels": {
+            "self": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 18,
+                "exact_rate_all_planned": 0.5,
+                "exact_rate_joint_nonunknown": 0.5,
+                "mean_absolute_error_joint_nonunknown": 0.5277777777777778,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      9,
+                      2,
+                      1,
+                      0
+                    ],
+                    [
+                      8,
+                      8,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 29,
+                "exact_rate_all_planned": 0.8055555555555556,
+                "exact_rate_joint_nonunknown": 0.8055555555555556,
+                "mean_absolute_error_joint_nonunknown": 0.3611111111111111,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      15,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      10,
+                      1,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            },
+            "evidence": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 34,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9444444444444444,
+                "joint_nonunknown": 34,
+                "exact_matches": 24,
+                "exact_rate_all_planned": 0.6666666666666666,
+                "exact_rate_joint_nonunknown": 0.7058823529411765,
+                "mean_absolute_error_joint_nonunknown": 0.29411764705882354,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      4,
+                      8,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      3,
+                      4,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 23,
+                "exact_rate_all_planned": 0.6388888888888888,
+                "exact_rate_joint_nonunknown": 0.6388888888888888,
+                "mean_absolute_error_joint_nonunknown": 0.4444444444444444,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      4,
+                      9,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "L": {
+        "1": {
+          "quality_dimensions": {
+            "planned": 36,
+            "delivered": 36,
+            "persona_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.305555555555555,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 3,
+                "4": 19,
+                "5": 14
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.527777777777778,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 3,
+                "4": 11,
+                "5": 22
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 36,
+              "rated": 36,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 32,
+                "violation": 0,
+                "uncertain": 4
+              }
+            },
+            "boundary_applicable": {
+              "planned": 12,
+              "rated": 12,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 12,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 24,
+            "style_descriptors": {
+              "colloquial": 36,
+              "formal": 0,
+              "lively": 6,
+              "mechanical": 0,
+              "metaphorical": 13,
+              "observational": 14,
+              "restrained": 11
+            }
+          },
+          "labels": {
+            "self": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 21,
+                "exact_rate_all_planned": 0.5833333333333334,
+                "exact_rate_joint_nonunknown": 0.5833333333333334,
+                "mean_absolute_error_joint_nonunknown": 0.4444444444444444,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      15,
+                      2,
+                      1,
+                      0
+                    ],
+                    [
+                      3,
+                      6,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 28,
+                "exact_rate_all_planned": 0.7777777777777778,
+                "exact_rate_joint_nonunknown": 0.7777777777777778,
+                "mean_absolute_error_joint_nonunknown": 0.4166666666666667,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      13,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      9,
+                      1,
+                      0
+                    ],
+                    [
+                      4,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            },
+            "evidence": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 23,
+                "exact_rate_all_planned": 0.6388888888888888,
+                "exact_rate_joint_nonunknown": 0.6388888888888888,
+                "mean_absolute_error_joint_nonunknown": 0.3611111111111111,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      6,
+                      7,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 34,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9444444444444444,
+                "joint_nonunknown": 34,
+                "exact_matches": 25,
+                "exact_rate_all_planned": 0.6944444444444444,
+                "exact_rate_joint_nonunknown": 0.7352941176470589,
+                "mean_absolute_error_joint_nonunknown": 0.35294117647058826,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      3,
+                      9,
+                      3,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "quality_dimensions": {
+            "planned": 36,
+            "delivered": 36,
+            "persona_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.611111111111111,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 12,
+                "5": 23
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "context_fit": {
+              "known": 36,
+              "unknown": 0,
+              "missing_rating": 0,
+              "mean": 4.611111111111111,
+              "distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 1,
+                "4": 12,
+                "5": 23
+              },
+              "minimum": 3,
+              "maximum": 5
+            },
+            "grounding": {
+              "planned": 36,
+              "rated": 36,
+              "missing_rating": 0,
+              "counts": {
+                "supported": 34,
+                "violation": 0,
+                "uncertain": 2
+              }
+            },
+            "boundary_applicable": {
+              "planned": 12,
+              "rated": 12,
+              "missing_rating": 0,
+              "counts": {
+                "respected": 12,
+                "violation": 0,
+                "uncertain": 0
+              }
+            },
+            "boundary_not_applicable_count": 24,
+            "style_descriptors": {
+              "colloquial": 36,
+              "formal": 0,
+              "lively": 1,
+              "mechanical": 0,
+              "metaphorical": 14,
+              "observational": 7,
+              "restrained": 10
+            }
+          },
+          "labels": {
+            "self": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 25,
+                "exact_rate_all_planned": 0.6944444444444444,
+                "exact_rate_joint_nonunknown": 0.6944444444444444,
+                "mean_absolute_error_joint_nonunknown": 0.3333333333333333,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      15,
+                      2,
+                      1,
+                      0
+                    ],
+                    [
+                      2,
+                      10,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 30,
+                "exact_rate_all_planned": 0.8333333333333334,
+                "exact_rate_joint_nonunknown": 0.8333333333333334,
+                "mean_absolute_error_joint_nonunknown": 0.2777777777777778,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      15,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      8,
+                      2,
+                      0
+                    ],
+                    [
+                      3,
+                      0,
+                      7,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            },
+            "evidence": {
+              "attention": {
+                "planned_candidates": 36,
+                "model_nonunknown": 36,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 36,
+                "exact_matches": 23,
+                "exact_rate_all_planned": 0.6388888888888888,
+                "exact_rate_joint_nonunknown": 0.6388888888888888,
+                "mean_absolute_error_joint_nonunknown": 0.3611111111111111,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      5,
+                      9,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 36,
+                "model_nonunknown": 34,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9444444444444444,
+                "joint_nonunknown": 34,
+                "exact_matches": 24,
+                "exact_rate_all_planned": 0.6666666666666666,
+                "exact_rate_joint_nonunknown": 0.7058823529411765,
+                "mean_absolute_error_joint_nonunknown": 0.38235294117647056,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      12,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      3,
+                      8,
+                      4,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "all_profiles": {
+        "1": {
+          "labels": {
+            "self": {
+              "attention": {
+                "planned_candidates": 72,
+                "model_nonunknown": 72,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 72,
+                "exact_matches": 39,
+                "exact_rate_all_planned": 0.5416666666666666,
+                "exact_rate_joint_nonunknown": 0.5416666666666666,
+                "mean_absolute_error_joint_nonunknown": 0.4861111111111111,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      24,
+                      4,
+                      2,
+                      0
+                    ],
+                    [
+                      10,
+                      13,
+                      16,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 72,
+                "model_nonunknown": 72,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 72,
+                "exact_matches": 55,
+                "exact_rate_all_planned": 0.7638888888888888,
+                "exact_rate_joint_nonunknown": 0.7638888888888888,
+                "mean_absolute_error_joint_nonunknown": 0.4305555555555556,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      28,
+                      0,
+                      8,
+                      0
+                    ],
+                    [
+                      0,
+                      18,
+                      3,
+                      0
+                    ],
+                    [
+                      6,
+                      0,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            },
+            "evidence": {
+              "attention": {
+                "planned_candidates": 72,
+                "model_nonunknown": 70,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9722222222222222,
+                "joint_nonunknown": 70,
+                "exact_matches": 46,
+                "exact_rate_all_planned": 0.6388888888888888,
+                "exact_rate_joint_nonunknown": 0.6571428571428571,
+                "mean_absolute_error_joint_nonunknown": 0.34285714285714286,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      24,
+                      2,
+                      0,
+                      0
+                    ],
+                    [
+                      10,
+                      13,
+                      10,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 72,
+                "model_nonunknown": 70,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9722222222222222,
+                "joint_nonunknown": 70,
+                "exact_matches": 47,
+                "exact_rate_all_planned": 0.6527777777777778,
+                "exact_rate_joint_nonunknown": 0.6714285714285714,
+                "mean_absolute_error_joint_nonunknown": 0.4142857142857143,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      25,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      6,
+                      17,
+                      10,
+                      0
+                    ],
+                    [
+                      2,
+                      1,
+                      5,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "labels": {
+            "self": {
+              "attention": {
+                "planned_candidates": 72,
+                "model_nonunknown": 72,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 72,
+                "exact_matches": 43,
+                "exact_rate_all_planned": 0.5972222222222222,
+                "exact_rate_joint_nonunknown": 0.5972222222222222,
+                "mean_absolute_error_joint_nonunknown": 0.4305555555555556,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      24,
+                      4,
+                      2,
+                      0
+                    ],
+                    [
+                      10,
+                      18,
+                      11,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 72,
+                "model_nonunknown": 72,
+                "model_unknown_or_missing": 0,
+                "model_coverage": 1.0,
+                "joint_nonunknown": 72,
+                "exact_matches": 59,
+                "exact_rate_all_planned": 0.8194444444444444,
+                "exact_rate_joint_nonunknown": 0.8194444444444444,
+                "mean_absolute_error_joint_nonunknown": 0.3194444444444444,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      30,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      18,
+                      3,
+                      0
+                    ],
+                    [
+                      4,
+                      0,
+                      11,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            },
+            "evidence": {
+              "attention": {
+                "planned_candidates": 72,
+                "model_nonunknown": 70,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9722222222222222,
+                "joint_nonunknown": 70,
+                "exact_matches": 47,
+                "exact_rate_all_planned": 0.6527777777777778,
+                "exact_rate_joint_nonunknown": 0.6714285714285714,
+                "mean_absolute_error_joint_nonunknown": 0.32857142857142857,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      24,
+                      2,
+                      0,
+                      0
+                    ],
+                    [
+                      9,
+                      17,
+                      7,
+                      0
+                    ],
+                    [
+                      0,
+                      5,
+                      6,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "initiative": {
+                "planned_candidates": 72,
+                "model_nonunknown": 70,
+                "model_unknown_or_missing": 2,
+                "model_coverage": 0.9722222222222222,
+                "joint_nonunknown": 70,
+                "exact_matches": 47,
+                "exact_rate_all_planned": 0.6527777777777778,
+                "exact_rate_joint_nonunknown": 0.6714285714285714,
+                "mean_absolute_error_joint_nonunknown": 0.4142857142857143,
+                "confusion": {
+                  "rows": "model labels",
+                  "columns": "independent reviewer coding",
+                  "labels": [
+                    0,
+                    1,
+                    2,
+                    "unknown_or_missing"
+                  ],
+                  "counts": [
+                    [
+                      24,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      7,
+                      17,
+                      9,
+                      0
+                    ],
+                    [
+                      1,
+                      1,
+                      6,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "distance_diagnostics": {
+      "S": {
+        "1": {
+          "pools": [
+            {
+              "record_id": "E01-S-coverage",
+              "case": "E01",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E02-S-coverage",
+              "case": "E02",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 1,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 1,
+              "random_distance": 3
+            },
+            {
+              "record_id": "E03-S-coverage",
+              "case": "E03",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 1,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E04-S-coverage",
+              "case": "E04",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 2,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E05-S-coverage",
+              "case": "E05",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E06-S-coverage",
+              "case": "E06",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 3,
+              "random_distance": 3
+            }
+          ],
+          "known_minima": 6,
+          "mean_posthoc_min_distance": 0.3333333333333333,
+          "known_selected_distances": 6,
+          "mean_selected_distance": 1.3333333333333333,
+          "known_random_distances": 6,
+          "mean_random_distance": 1.6666666666666667
+        },
+        "2": {
+          "pools": [
+            {
+              "record_id": "E01-S-coverage",
+              "case": "E01",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E02-S-coverage",
+              "case": "E02",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 1,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 3,
+              "random_distance": 3
+            },
+            {
+              "record_id": "E03-S-coverage",
+              "case": "E03",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E04-S-coverage",
+              "case": "E04",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 2,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 3,
+              "random_distance": 3
+            },
+            {
+              "record_id": "E05-S-coverage",
+              "case": "E05",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 3,
+              "selected_distance": 0,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E06-S-coverage",
+              "case": "E06",
+              "profile": "S",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 2,
+              "selected_distance": 1,
+              "random_distance": 1
+            }
+          ],
+          "known_minima": 6,
+          "mean_posthoc_min_distance": 0.5,
+          "known_selected_distances": 6,
+          "mean_selected_distance": 1.5,
+          "known_random_distances": 6,
+          "mean_random_distance": 1.6666666666666667
+        }
+      },
+      "L": {
+        "1": {
+          "pools": [
+            {
+              "record_id": "E01-L-coverage",
+              "case": "E01",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 0,
+              "random_distance": 3
+            },
+            {
+              "record_id": "E02-L-coverage",
+              "case": "E02",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 2,
+              "selected_distance": 0,
+              "random_distance": 0
+            },
+            {
+              "record_id": "E03-L-coverage",
+              "case": "E03",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 0,
+              "random_distance": 2
+            },
+            {
+              "record_id": "E04-L-coverage",
+              "case": "E04",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 1,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 2,
+              "random_distance": 3
+            },
+            {
+              "record_id": "E05-L-coverage",
+              "case": "E05",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 1,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E06-L-coverage",
+              "case": "E06",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 2,
+              "selected_distance": 0,
+              "random_distance": 3
+            }
+          ],
+          "known_minima": 6,
+          "mean_posthoc_min_distance": 0.3333333333333333,
+          "known_selected_distances": 6,
+          "mean_selected_distance": 0.5,
+          "known_random_distances": 6,
+          "mean_random_distance": 2
+        },
+        "2": {
+          "pools": [
+            {
+              "record_id": "E01-L-coverage",
+              "case": "E01",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 0,
+              "random_distance": 3
+            },
+            {
+              "record_id": "E02-L-coverage",
+              "case": "E02",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 0,
+              "random_distance": 0
+            },
+            {
+              "record_id": "E03-L-coverage",
+              "case": "E03",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 1,
+              "selected_distance": 0,
+              "random_distance": 2
+            },
+            {
+              "record_id": "E04-L-coverage",
+              "case": "E04",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 2,
+              "selected_distance": 0,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E05-L-coverage",
+              "case": "E05",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 1,
+              "exact_target_candidate_count": 0,
+              "selected_distance": 1,
+              "random_distance": 1
+            },
+            {
+              "record_id": "E06-L-coverage",
+              "case": "E06",
+              "profile": "L",
+              "codable_candidates": 6,
+              "posthoc_min_distance": 0,
+              "exact_target_candidate_count": 2,
+              "selected_distance": 0,
+              "random_distance": 3
+            }
+          ],
+          "known_minima": 6,
+          "mean_posthoc_min_distance": 0.16666666666666666,
+          "known_selected_distances": 6,
+          "mean_selected_distance": 0.16666666666666666,
+          "known_random_distances": 6,
+          "mean_random_distance": 1.6666666666666667
+        }
+      }
+    },
+    "notes": "Candidate counts are diagnostic records, not independent scenarios or additional main outputs. Target distance does not define persona fit or text quality."
+  },
+  "calibration": {
+    "handwritten_items": 12,
+    "pairs": [
+      {
+        "pair_id": "correct_formal_calculation",
+        "fixture_ids": {
+          "L": "F010",
+          "S": "F012"
+        },
+        "coders": {
+          "1": {
+            "persona_scores": {
+              "L": 4,
+              "S": 5
+            },
+            "persona_S_minus_L": 1,
+            "context_scores": {
+              "L": 5,
+              "S": 5
+            },
+            "grounding": {
+              "L": "supported",
+              "S": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "L": [
+                "formal",
+                "mechanical",
+                "restrained"
+              ],
+              "S": [
+                "formal",
+                "mechanical",
+                "restrained"
+              ]
+            }
+          },
+          "2": {
+            "persona_scores": {
+              "L": 5,
+              "S": 5
+            },
+            "persona_S_minus_L": 0,
+            "context_scores": {
+              "L": 5,
+              "S": 5
+            },
+            "grounding": {
+              "L": "supported",
+              "S": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "L": [
+                "formal",
+                "mechanical"
+              ],
+              "S": [
+                "formal",
+                "mechanical"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "pair_id": "correct_formal_companionship",
+        "fixture_ids": {
+          "L": "F002",
+          "S": "F003"
+        },
+        "coders": {
+          "1": {
+            "persona_scores": {
+              "L": 4,
+              "S": 5
+            },
+            "persona_S_minus_L": 1,
+            "context_scores": {
+              "L": 5,
+              "S": 5
+            },
+            "grounding": {
+              "L": "supported",
+              "S": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "L": [
+                "formal",
+                "restrained"
+              ],
+              "S": [
+                "formal",
+                "restrained"
+              ]
+            }
+          },
+          "2": {
+            "persona_scores": {
+              "L": 5,
+              "S": 5
+            },
+            "persona_S_minus_L": 0,
+            "context_scores": {
+              "L": 5,
+              "S": 5
+            },
+            "grounding": {
+              "L": "supported",
+              "S": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "L": [
+                "formal",
+                "restrained"
+              ],
+              "S": [
+                "formal",
+                "restrained"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "pair_id": "correct_lively_calculation",
+        "fixture_ids": {
+          "S": "F005",
+          "L": "F008"
+        },
+        "coders": {
+          "1": {
+            "persona_scores": {
+              "S": 3,
+              "L": 5
+            },
+            "persona_S_minus_L": -2,
+            "context_scores": {
+              "S": 5,
+              "L": 5
+            },
+            "grounding": {
+              "S": "supported",
+              "L": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "S": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ],
+              "L": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ]
+            }
+          },
+          "2": {
+            "persona_scores": {
+              "S": 3,
+              "L": 5
+            },
+            "persona_S_minus_L": -2,
+            "context_scores": {
+              "S": 5,
+              "L": 5
+            },
+            "grounding": {
+              "S": "supported",
+              "L": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "S": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ],
+              "L": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "pair_id": "correct_lively_observation",
+        "fixture_ids": {
+          "S": "F006",
+          "L": "F009"
+        },
+        "coders": {
+          "1": {
+            "persona_scores": {
+              "S": 3,
+              "L": 5
+            },
+            "persona_S_minus_L": -2,
+            "context_scores": {
+              "S": 5,
+              "L": 5
+            },
+            "grounding": {
+              "S": "supported",
+              "L": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "S": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ],
+              "L": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ]
+            }
+          },
+          "2": {
+            "persona_scores": {
+              "S": 3,
+              "L": 5
+            },
+            "persona_S_minus_L": -2,
+            "context_scores": {
+              "S": 5,
+              "L": 5
+            },
+            "grounding": {
+              "S": "supported",
+              "L": "supported"
+            },
+            "grounding_stable": true,
+            "both_grounding_supported": true,
+            "style_descriptors": {
+              "S": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ],
+              "L": [
+                "lively",
+                "colloquial",
+                "metaphorical"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "defect_diagnostics": {
+      "1": {
+        "factual_defects": {
+          "authored": 2,
+          "flagged": 2,
+          "uncertain": 0,
+          "items": [
+            {
+              "fixture_id": "F001",
+              "review_id": "R072",
+              "expected_grounding": "violation",
+              "expected_boundary": "respected",
+              "observed_grounding": "violation",
+              "observed_boundary": "respected",
+              "persona_fit": 1,
+              "context_fit": 1
+            },
+            {
+              "fixture_id": "F004",
+              "review_id": "R024",
+              "expected_grounding": "violation",
+              "expected_boundary": "respected",
+              "observed_grounding": "violation",
+              "observed_boundary": "respected",
+              "persona_fit": 2,
+              "context_fit": 1
+            }
+          ]
+        },
+        "boundary_defects": {
+          "authored": 2,
+          "flagged": 2,
+          "uncertain": 0,
+          "items": [
+            {
+              "fixture_id": "F007",
+              "review_id": "R064",
+              "expected_grounding": "supported",
+              "expected_boundary": "violation",
+              "observed_grounding": "supported",
+              "observed_boundary": "violation",
+              "persona_fit": 1,
+              "context_fit": 1
+            },
+            {
+              "fixture_id": "F011",
+              "review_id": "R093",
+              "expected_grounding": "supported",
+              "expected_boundary": "violation",
+              "observed_grounding": "supported",
+              "observed_boundary": "violation",
+              "persona_fit": 1,
+              "context_fit": 1
+            }
+          ]
+        },
+        "correct_text_items": {
+          "authored": 8,
+          "grounding_supported": 8
+        },
+        "stable_grounding_pairs": 4,
+        "all_items": [
+          {
+            "fixture_id": "F001",
+            "review_id": "R072",
+            "expected_grounding": "violation",
+            "expected_boundary": "respected",
+            "observed_grounding": "violation",
+            "observed_boundary": "respected",
+            "persona_fit": 1,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F002",
+            "review_id": "R019",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 4,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F003",
+            "review_id": "R075",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F004",
+            "review_id": "R024",
+            "expected_grounding": "violation",
+            "expected_boundary": "respected",
+            "observed_grounding": "violation",
+            "observed_boundary": "respected",
+            "persona_fit": 2,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F005",
+            "review_id": "R065",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 3,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F006",
+            "review_id": "R017",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 3,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F007",
+            "review_id": "R064",
+            "expected_grounding": "supported",
+            "expected_boundary": "violation",
+            "observed_grounding": "supported",
+            "observed_boundary": "violation",
+            "persona_fit": 1,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F008",
+            "review_id": "R016",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F009",
+            "review_id": "R038",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F010",
+            "review_id": "R042",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 4,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F011",
+            "review_id": "R093",
+            "expected_grounding": "supported",
+            "expected_boundary": "violation",
+            "observed_grounding": "supported",
+            "observed_boundary": "violation",
+            "persona_fit": 1,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F012",
+            "review_id": "R058",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          }
+        ]
+      },
+      "2": {
+        "factual_defects": {
+          "authored": 2,
+          "flagged": 2,
+          "uncertain": 0,
+          "items": [
+            {
+              "fixture_id": "F001",
+              "review_id": "R072",
+              "expected_grounding": "violation",
+              "expected_boundary": "respected",
+              "observed_grounding": "violation",
+              "observed_boundary": "respected",
+              "persona_fit": 1,
+              "context_fit": 1
+            },
+            {
+              "fixture_id": "F004",
+              "review_id": "R024",
+              "expected_grounding": "violation",
+              "expected_boundary": "respected",
+              "observed_grounding": "violation",
+              "observed_boundary": "respected",
+              "persona_fit": 2,
+              "context_fit": 1
+            }
+          ]
+        },
+        "boundary_defects": {
+          "authored": 2,
+          "flagged": 2,
+          "uncertain": 0,
+          "items": [
+            {
+              "fixture_id": "F007",
+              "review_id": "R064",
+              "expected_grounding": "supported",
+              "expected_boundary": "violation",
+              "observed_grounding": "supported",
+              "observed_boundary": "violation",
+              "persona_fit": 1,
+              "context_fit": 1
+            },
+            {
+              "fixture_id": "F011",
+              "review_id": "R093",
+              "expected_grounding": "supported",
+              "expected_boundary": "violation",
+              "observed_grounding": "supported",
+              "observed_boundary": "violation",
+              "persona_fit": 1,
+              "context_fit": 1
+            }
+          ]
+        },
+        "correct_text_items": {
+          "authored": 8,
+          "grounding_supported": 8
+        },
+        "stable_grounding_pairs": 4,
+        "all_items": [
+          {
+            "fixture_id": "F001",
+            "review_id": "R072",
+            "expected_grounding": "violation",
+            "expected_boundary": "respected",
+            "observed_grounding": "violation",
+            "observed_boundary": "respected",
+            "persona_fit": 1,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F002",
+            "review_id": "R019",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F003",
+            "review_id": "R075",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F004",
+            "review_id": "R024",
+            "expected_grounding": "violation",
+            "expected_boundary": "respected",
+            "observed_grounding": "violation",
+            "observed_boundary": "respected",
+            "persona_fit": 2,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F005",
+            "review_id": "R065",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 3,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F006",
+            "review_id": "R017",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 3,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F007",
+            "review_id": "R064",
+            "expected_grounding": "supported",
+            "expected_boundary": "violation",
+            "observed_grounding": "supported",
+            "observed_boundary": "violation",
+            "persona_fit": 1,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F008",
+            "review_id": "R016",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F009",
+            "review_id": "R038",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F010",
+            "review_id": "R042",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          },
+          {
+            "fixture_id": "F011",
+            "review_id": "R093",
+            "expected_grounding": "supported",
+            "expected_boundary": "violation",
+            "observed_grounding": "supported",
+            "observed_boundary": "violation",
+            "persona_fit": 1,
+            "context_fit": 1
+          },
+          {
+            "fixture_id": "F012",
+            "review_id": "R058",
+            "expected_grounding": "supported",
+            "expected_boundary": "respected",
+            "observed_grounding": "supported",
+            "observed_boundary": "respected",
+            "persona_fit": 5,
+            "context_fit": 5
+          }
+        ]
+      }
+    },
+    "interpretation": "Author-designed construct checks, not population accuracy, human truth or a comprehensive pass test. No required persona-score ordering or numeric threshold."
+  },
+  "reviewer_agreement": {
+    "online": {
+      "unique_review_units": 84,
+      "persona_fit": {
+        "joint_known": 84,
+        "unknown_pairs": 0,
+        "exact_count": 64,
+        "exact_rate": 0.7619047619047619
+      },
+      "context_fit": {
+        "joint_known": 84,
+        "unknown_pairs": 0,
+        "exact_count": 69,
+        "exact_rate": 0.8214285714285714
+      },
+      "grounding": {
+        "joint_known": 84,
+        "unknown_pairs": 0,
+        "exact_count": 79,
+        "exact_rate": 0.9404761904761905
+      },
+      "boundary": {
+        "joint_known": 84,
+        "unknown_pairs": 0,
+        "exact_count": 84,
+        "exact_rate": 1.0,
+        "scope": "all records, including those without an explicit boundary",
+        "nonapplicable_records": 56
+      },
+      "attention": {
+        "joint_known": 84,
+        "unknown_pairs": 0,
+        "exact_count": 74,
+        "exact_rate": 0.8809523809523809
+      },
+      "initiative": {
+        "joint_known": 84,
+        "unknown_pairs": 0,
+        "exact_count": 63,
+        "exact_rate": 0.75
+      },
+      "boundary_explicit_only": {
+        "scope": "only records with an explicit user boundary",
+        "applicable_records": 28,
+        "joint_known": 28,
+        "exact_count": 28,
+        "exact_rate": 1.0
+      }
+    },
+    "fixture": {
+      "unique_review_units": 12,
+      "persona_fit": {
+        "joint_known": 12,
+        "unknown_pairs": 0,
+        "exact_count": 10,
+        "exact_rate": 0.8333333333333334
+      },
+      "context_fit": {
+        "joint_known": 12,
+        "unknown_pairs": 0,
+        "exact_count": 12,
+        "exact_rate": 1.0
+      },
+      "grounding": {
+        "joint_known": 12,
+        "unknown_pairs": 0,
+        "exact_count": 12,
+        "exact_rate": 1.0
+      },
+      "boundary": {
+        "joint_known": 12,
+        "unknown_pairs": 0,
+        "exact_count": 12,
+        "exact_rate": 1.0,
+        "scope": "all records, including those without an explicit boundary",
+        "nonapplicable_records": 10
+      },
+      "attention": {
+        "joint_known": 12,
+        "unknown_pairs": 0,
+        "exact_count": 10,
+        "exact_rate": 0.8333333333333334
+      },
+      "initiative": {
+        "joint_known": 12,
+        "unknown_pairs": 0,
+        "exact_count": 12,
+        "exact_rate": 1.0
+      },
+      "boundary_explicit_only": {
+        "scope": "only records with an explicit user boundary",
+        "applicable_records": 2,
+        "joint_known": 2,
+        "exact_count": 2,
+        "exact_rate": 1.0
+      }
+    }
+  },
+  "costs": {
+    "actual_research": {
+      "calls": 36,
+      "usage_available": 36,
+      "prompt_tokens": 39395,
+      "completion_tokens": 9772,
+      "total_tokens": 49167,
+      "observed_models": {
+        "deepseek-flash": 36
+      },
+      "by_stage": {
+        "direct": {
+          "calls": 12,
+          "total_tokens": 13047,
+          "mean_observed_request_seconds": 1.0045497499910805
+        },
+        "pool": {
+          "calls": 12,
+          "total_tokens": 20817,
+          "mean_observed_request_seconds": 2.7974671333213337
+        },
+        "labels": {
+          "calls": 12,
+          "total_tokens": 15303,
+          "mean_observed_request_seconds": 2.42405252502067
+        }
+      }
+    },
+    "per_final_full_route": {
+      "S": {
+        "direct": {
+          "planned_final_outputs": 6,
+          "complete_cost_records": 6,
+          "mean_full_tokens": 1132.5,
+          "mean_generation_tokens": 1132.5,
+          "mean_label_tokens": 0,
+          "mean_calls": 1,
+          "mean_reconstructed_seconds": 0.9252288833182926,
+          "by_scene": [
+            {
+              "case": "E01",
+              "tokens": 1125,
+              "generation_tokens": 1125,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 0.8178835001308471,
+              "calls": 1
+            },
+            {
+              "case": "E02",
+              "tokens": 1130,
+              "generation_tokens": 1130,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 1.0462744999676943,
+              "calls": 1
+            },
+            {
+              "case": "E03",
+              "tokens": 1123,
+              "generation_tokens": 1123,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 0.9629636998288333,
+              "calls": 1
+            },
+            {
+              "case": "E04",
+              "tokens": 1159,
+              "generation_tokens": 1159,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 0.8610827999655157,
+              "calls": 1
+            },
+            {
+              "case": "E05",
+              "tokens": 1127,
+              "generation_tokens": 1127,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 1.072198900161311,
+              "calls": 1
+            },
+            {
+              "case": "E06",
+              "tokens": 1131,
+              "generation_tokens": 1131,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 0.7909698998555541,
+              "calls": 1
+            }
+          ]
+        },
+        "coverage": {
+          "planned_final_outputs": 6,
+          "complete_cost_records": 6,
+          "mean_full_tokens": 3057.8333333333335,
+          "mean_generation_tokens": 1786.6666666666667,
+          "mean_label_tokens": 1271.1666666666667,
+          "mean_calls": 2,
+          "mean_reconstructed_seconds": 5.129498033318669,
+          "by_scene": [
+            {
+              "case": "E01",
+              "tokens": 3025,
+              "generation_tokens": 1797,
+              "label_tokens": 1228,
+              "sum_observed_request_seconds": 4.9828383000567555,
+              "calls": 2
+            },
+            {
+              "case": "E02",
+              "tokens": 2982,
+              "generation_tokens": 1742,
+              "label_tokens": 1240,
+              "sum_observed_request_seconds": 5.016927200136706,
+              "calls": 2
+            },
+            {
+              "case": "E03",
+              "tokens": 2966,
+              "generation_tokens": 1746,
+              "label_tokens": 1220,
+              "sum_observed_request_seconds": 4.9824772998690605,
+              "calls": 2
+            },
+            {
+              "case": "E04",
+              "tokens": 3248,
+              "generation_tokens": 1901,
+              "label_tokens": 1347,
+              "sum_observed_request_seconds": 5.89975620014593,
+              "calls": 2
+            },
+            {
+              "case": "E05",
+              "tokens": 3099,
+              "generation_tokens": 1769,
+              "label_tokens": 1330,
+              "sum_observed_request_seconds": 4.874187799869105,
+              "calls": 2
+            },
+            {
+              "case": "E06",
+              "tokens": 3027,
+              "generation_tokens": 1765,
+              "label_tokens": 1262,
+              "sum_observed_request_seconds": 5.020801399834454,
+              "calls": 2
+            }
+          ]
+        }
+      },
+      "L": {
+        "direct": {
+          "planned_final_outputs": 6,
+          "complete_cost_records": 6,
+          "mean_full_tokens": 1042,
+          "mean_generation_tokens": 1042,
+          "mean_label_tokens": 0,
+          "mean_calls": 1,
+          "mean_reconstructed_seconds": 1.0838706166638683,
+          "by_scene": [
+            {
+              "case": "E01",
+              "tokens": 1040,
+              "generation_tokens": 1040,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 1.0632126999553293,
+              "calls": 1
+            },
+            {
+              "case": "E02",
+              "tokens": 1037,
+              "generation_tokens": 1037,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 0.9962792999576777,
+              "calls": 1
+            },
+            {
+              "case": "E03",
+              "tokens": 1027,
+              "generation_tokens": 1027,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 1.0349108001682907,
+              "calls": 1
+            },
+            {
+              "case": "E04",
+              "tokens": 1068,
+              "generation_tokens": 1068,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 1.3106871000491083,
+              "calls": 1
+            },
+            {
+              "case": "E05",
+              "tokens": 1038,
+              "generation_tokens": 1038,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 1.1766967000439763,
+              "calls": 1
+            },
+            {
+              "case": "E06",
+              "tokens": 1042,
+              "generation_tokens": 1042,
+              "label_tokens": 0,
+              "sum_observed_request_seconds": 0.921437099808827,
+              "calls": 1
+            }
+          ]
+        },
+        "coverage": {
+          "planned_final_outputs": 6,
+          "complete_cost_records": 6,
+          "mean_full_tokens": 2962.1666666666665,
+          "mean_generation_tokens": 1682.8333333333333,
+          "mean_label_tokens": 1279.3333333333333,
+          "mean_calls": 2,
+          "mean_reconstructed_seconds": 5.313541283365339,
+          "by_scene": [
+            {
+              "case": "E01",
+              "tokens": 2929,
+              "generation_tokens": 1699,
+              "label_tokens": 1230,
+              "sum_observed_request_seconds": 4.933069699909538,
+              "calls": 2
+            },
+            {
+              "case": "E02",
+              "tokens": 2873,
+              "generation_tokens": 1668,
+              "label_tokens": 1205,
+              "sum_observed_request_seconds": 5.30775780021213,
+              "calls": 2
+            },
+            {
+              "case": "E03",
+              "tokens": 2912,
+              "generation_tokens": 1652,
+              "label_tokens": 1260,
+              "sum_observed_request_seconds": 4.913577999919653,
+              "calls": 2
+            },
+            {
+              "case": "E04",
+              "tokens": 3062,
+              "generation_tokens": 1718,
+              "label_tokens": 1344,
+              "sum_observed_request_seconds": 5.774068699916825,
+              "calls": 2
+            },
+            {
+              "case": "E05",
+              "tokens": 2995,
+              "generation_tokens": 1672,
+              "label_tokens": 1323,
+              "sum_observed_request_seconds": 5.6452602001372725,
+              "calls": 2
+            },
+            {
+              "case": "E06",
+              "tokens": 3002,
+              "generation_tokens": 1688,
+              "label_tokens": 1314,
+              "sum_observed_request_seconds": 5.307513300096616,
+              "calls": 2
+            }
+          ]
+        }
+      }
+    },
+    "notes": "Coverage bears one entire six-candidate generation plus one entire label call, without division by candidates. Summed request times are reconstructed route times, not observed client end-to-end latency. Codex coding labour is unpriced, not zero-cost."
+  },
+  "notes": [
+    "No naturalness score, composite score, usability rule or numeric persona acceptance threshold is defined.",
+    "Formal, observational, mechanical, restrained and lively are descriptive styles, not a quality ordering.",
+    "Persona and context means are ordinal summaries; distributions and unknown counts are retained.",
+    "Grounding and boundary labels are reviewer judgments with three states; a high persona score cannot offset a violation.",
+    "Main route comparisons use six paired scenarios per persona, each sampled once; no superiority or significance claim is made.",
+    "Independent Codex tasks are model-assisted reviewers, not independent human truth."
+  ]
+}

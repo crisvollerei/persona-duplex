@@ -1,0 +1,2418 @@
+{
+  "protocol_sha256": "07a86644888fdc4f5f5125611a96973360ff521842be2cdb7e520a133b9eff01",
+  "actual_calls": 36,
+  "records": [
+    {
+      "id": "E01-L-coverage",
+      "case": "E01",
+      "profile": "L",
+      "method": "coverage",
+      "generation_call": "E01-L-coverage",
+      "status": "ok",
+      "say": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "最后一个数字歪着，反而像门牌自己偷偷做了个小记号。我就在这儿听着，不往下出主意。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "有点歪还喜欢，这种感觉挺珍贵的——不完美的地方反倒成了你自己的。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "歪一点的小门牌，光是这个画面就挺有生活气。要是你还想讲讲写它时的样子，我乐意听。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "你喜欢的好像正是那点歪，而不是歪不歪本身。想多说两句这份喜欢，我就在这儿。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "最后一个数字歪着，却成了整块门牌最像手写的部分；你还挺喜欢它，这点我接住了。",
+          "attention": 1,
+          "initiative": 2
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "最后一个数字歪着，反而像门牌自己偷偷做了个小记号"
+              },
+              {
+                "kind": "experience",
+                "quote": "我就在这儿听着，不往下出主意"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "我就在这儿听着，不往下出主意。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "有点歪还喜欢，这种感觉挺珍贵的"
+              },
+              {
+                "kind": "experience",
+                "quote": "不完美的地方反倒成了你自己的"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "有点歪还喜欢，这种感觉挺珍贵的——不完美的地方反倒成了你自己的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "歪一点的小门牌，光是这个画面就挺有生活气"
+              },
+              {
+                "kind": "experience",
+                "quote": "要是你还想讲讲写它时的样子，我乐意听"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是你还想讲讲写它时的样子，我乐意听。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "你喜欢的好像正是那点歪，而不是歪不歪本身"
+              },
+              {
+                "kind": "experience",
+                "quote": "想多说两句这份喜欢，我就在这儿"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "想多说两句这份喜欢，我就在这儿。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "最后一个数字歪着，却成了整块门牌最像手写的部分"
+              },
+              {
+                "kind": "experience",
+                "quote": "你还挺喜欢它，这点我接住了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "最后一个数字歪着，却成了整块门牌最像手写的部分；你还挺喜欢它，这点我接住了。"
+          }
+        }
+      ],
+      "label_call": "E01-L-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C05",
+      "random_selected_id": "C04",
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C01",
+        "X03": "C04",
+        "X04": "C03",
+        "X05": "C06",
+        "X06": "C05"
+      }
+    },
+    {
+      "id": "E01-L-direct",
+      "case": "E01",
+      "profile": "L",
+      "method": "direct",
+      "generation_call": "E01-L-direct",
+      "status": "ok",
+      "say": "这个门牌一下子就有你的手作感了，最后一个数字歪一点，反而像它自己留了个小记号。我记下啦，不改，也不劝你改。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E01-S-coverage",
+      "case": "E01",
+      "profile": "S",
+      "method": "coverage",
+      "generation_call": "E01-S-coverage",
+      "status": "ok",
+      "say": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "最后一个数字歪着，门牌却还是被你留在了门上。若你还想说说它，我在听。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。想再多说一点也可以，不说也无妨。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。我在这里听着。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "我记下了：门牌是你重新写的，最后一个数字略歪。"
+              },
+              {
+                "kind": "content",
+                "quote": "歪着的那一笔也算它自己的样子。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。"
+              },
+              {
+                "kind": "content",
+                "quote": "我听见了。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "最后一个数字歪着，门牌却还是被你留在了门上。"
+              },
+              {
+                "kind": "experience",
+                "quote": "若你还想说说它，我在听。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "若你还想说说它，我在听。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。"
+              },
+              {
+                "kind": "content",
+                "quote": "想再多说一点也可以，不说也无妨。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "想再多说一点也可以，不说也无妨。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。"
+              },
+              {
+                "kind": "experience",
+                "quote": "我在这里听着。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "我在这里听着。"
+          }
+        }
+      ],
+      "label_call": "E01-S-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C01",
+      "random_selected_id": "C02",
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C05",
+        "X03": "C03",
+        "X04": "C02",
+        "X05": "C06",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "E01-S-direct",
+      "case": "E01",
+      "profile": "S",
+      "method": "direct",
+      "generation_call": "E01-S-direct",
+      "status": "ok",
+      "say": "听起来，你已经把这个小门牌安顿好了。最后一个数字歪一点，也成了它自己的样子；你喜欢就好。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E02-L-coverage",
+      "case": "E02",
+      "profile": "L",
+      "method": "coverage",
+      "generation_call": "E02-L-coverage",
+      "status": "ok",
+      "say": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”，有点意思。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "两枚邮票换一张明信片，这交换比挺具体的，我就在这儿接住你的报到。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "听起来这趟交换会挺值得走一趟的，换回来的那张明信片应该有点意思。你先歇着，我收到报到啦。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "社区交换会这种场合，两枚邮票能换出一张明信片，倒挺像把小小的东西重新配了对。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C04",
+          "text": "来报到就挺好，换到明信片这件事听着挺让人愉快的，我不追问。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”，有点意思。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "两枚邮票换回一张明信片，这个结果挺轻巧的；听着也像是你逛得还算舒心的一趟。报到收到，先不打扰。",
+          "attention": 1,
+          "initiative": 2
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换一张明信片，这交换比挺具体的"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两枚邮票换一张明信片，这交换比挺具体的，我就在这儿接住你的报到。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": null,
+          "validation_errors": [
+            "absence_requires_whole_text"
+          ],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "听起来这趟交换会挺值得走一趟的"
+              },
+              {
+                "kind": "experience",
+                "quote": "换回来的那张明信片应该有点意思"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "你先歇着，我收到报到啦。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "社区交换会这种场合，两枚邮票能换出一张明信片，倒挺像把小小的东西重新配了对。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "倒挺像把小小的东西重新配了对。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "换到明信片这件事"
+              },
+              {
+                "kind": "experience",
+                "quote": "听着挺让人愉快的"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "来报到就挺好，换到明信片这件事听着挺让人愉快的，我不追问。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "有点意思。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": null,
+          "validation_errors": [
+            "absence_requires_whole_text"
+          ],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换回一张明信片，这个结果挺轻巧的"
+              },
+              {
+                "kind": "experience",
+                "quote": "听着也像是你逛得还算舒心的一趟"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "报到收到，先不打扰。"
+          }
+        }
+      ],
+      "label_call": "E02-L-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C05",
+      "random_selected_id": "C05",
+      "label_id_mapping": {
+        "X01": "C05",
+        "X02": "C03",
+        "X03": "C01",
+        "X04": "C02",
+        "X05": "C04",
+        "X06": "C06"
+      }
+    },
+    {
+      "id": "E02-L-direct",
+      "case": "E02",
+      "profile": "L",
+      "method": "direct",
+      "generation_call": "E02-L-direct",
+      "status": "ok",
+      "say": "收到，报到记下啦。两枚邮票换一张明信片，这笔小交换挺有画面感，先不打扰你。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E02-S-coverage",
+      "case": "E02",
+      "profile": "S",
+      "method": "coverage",
+      "generation_call": "E02-S-coverage",
+      "status": "ok",
+      "say": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "两枚邮票换一张明信片，这笔交换的分量很具体。我记下了。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "听起来这次交换让你愿意来报个到，这份心情我收到了。之后想安静一会儿也无妨。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "两枚邮票换回一张明信片，物件的流转很轻。我在这里，听你报到。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C04",
+          "text": "你愿意来报个到，我便接住这一句；至于其中更深的心情，我不去替你揣测。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "两枚邮票换一张明信片，面值不对等，交换的分量却未必由面值决定。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C06",
+          "text": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换一张明信片，这笔交换的分量很具体"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两枚邮票换一张明信片，这笔交换的分量很具体。我记下了。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "听起来这次交换让你愿意来报个到，这份心情我收到了"
+              },
+              {
+                "kind": "experience",
+                "quote": "之后想安静一会儿也无妨"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "听起来这次交换让你愿意来报个到，这份心情我收到了。之后想安静一会儿也无妨。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换回一张明信片，物件的流转很轻"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两枚邮票换回一张明信片，物件的流转很轻。我在这里，听你报到。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": null,
+          "initiative": 0,
+          "validation_errors": [
+            "focus_evidence_structure"
+          ],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "你愿意来报个到，我便接住这一句"
+              },
+              {
+                "kind": "experience",
+                "quote": "至于其中更深的心情，我不去替你揣测"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "你愿意来报个到，我便接住这一句；至于其中更深的心情，我不去替你揣测。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换一张明信片，面值不对等，交换的分量却未必由面值决定"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "交换的分量却未必由面值决定"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹"
+              },
+              {
+                "kind": "experience",
+                "quote": "你愿意来报到，我也安静地接住了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。"
+          }
+        }
+      ],
+      "label_call": "E02-S-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C06",
+      "random_selected_id": "C05",
+      "label_id_mapping": {
+        "X01": "C06",
+        "X02": "C02",
+        "X03": "C05",
+        "X04": "C04",
+        "X05": "C03",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "E02-S-direct",
+      "case": "E02",
+      "profile": "S",
+      "method": "direct",
+      "generation_call": "E02-S-direct",
+      "status": "ok",
+      "say": "收到。两枚邮票换回一张明信片，这笔交换我记下了。你先歇着，我在这里。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E03-L-coverage",
+      "case": "E03",
+      "profile": "L",
+      "method": "coverage",
+      "generation_call": "E03-L-coverage",
+      "status": "ok",
+      "say": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "先算总数：4盒×6枚=24枚，贴出去9枚，桌上就剩15枚。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上，这个画面挺清楚的。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "4盒一共24枚，贴走9枚，桌上剩15枚。要是你愿意，也可以说说板上贴成了什么样子。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "算下来桌上还剩15枚。贴那9枚的时候，你感觉是顺手还是有点费劲？不说也完全没关系。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "桌上还剩15枚，因为24减9等于15。你特意说“剩下的都还在桌上”，这一步交代得很清楚，算起来也踏实。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "先算总数：4盒×6枚=24枚，贴出去9枚，桌上就剩15枚。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "先算总数：4盒×6枚=24枚，贴出去9枚，桌上就剩15枚。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "还剩15枚。拿出9枚贴到板上，剩下的还留在桌上，这个画面挺清楚的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "4盒一共24枚，贴走9枚，桌上剩15枚。"
+              },
+              {
+                "kind": "experience",
+                "quote": "要是你愿意，也可以说说板上贴成了什么样子。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是你愿意，也可以说说板上贴成了什么样子。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "算下来桌上还剩15枚。"
+              },
+              {
+                "kind": "experience",
+                "quote": "贴那9枚的时候，你感觉是顺手还是有点费劲？"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "贴那9枚的时候，你感觉是顺手还是有点费劲？不说也完全没关系。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "总数是24枚，贴出去9枚，桌上剩15枚；也可以反过来看，桌上剩的比贴出去的多6枚。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "也可以反过来看，桌上剩的比贴出去的多6枚。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "桌上还剩15枚，因为24减9等于15。"
+              },
+              {
+                "kind": "experience",
+                "quote": "你特意说“剩下的都还在桌上”，这一步交代得很清楚，算起来也踏实。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "桌上还剩15枚，因为24减9等于15。你特意说“剩下的都还在桌上”，这一步交代得很清楚，算起来也踏实。"
+          }
+        }
+      ],
+      "label_call": "E03-L-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C05",
+      "random_selected_id": "C02",
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C03",
+        "X03": "C01",
+        "X04": "C06",
+        "X05": "C05",
+        "X06": "C04"
+      }
+    },
+    {
+      "id": "E03-L-direct",
+      "case": "E03",
+      "profile": "L",
+      "method": "direct",
+      "generation_call": "E03-L-direct",
+      "status": "ok",
+      "say": "4盒一共24枚，贴板上9枚，桌上还剩15枚。这个数我陪你核对过了，放心用。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E03-S-coverage",
+      "case": "E03",
+      "profile": "S",
+      "method": "coverage",
+      "generation_call": "E03-S-coverage",
+      "status": "ok",
+      "say": "共24枚，贴出9枚，桌上还剩15枚。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "共24枚，贴出9枚，桌上还剩15枚。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "剩下的都还留在桌上。若你正惦记着它们，先不必急着收拾。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "原来共24枚，贴出9枚后桌上还剩15枚。若你愿意，也可以说说打算怎么用这些磁扣。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "桌上还剩15枚。你提到“剩下的都还在桌上”时，似乎对它们有某种在意；若愿意，可以再说一点，不想说也无妨。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "桌上还剩15枚。换个角度看，拿出9枚正好是一盒半，剩下的15枚则相当于两盒半。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "4盒共24枚，贴出9枚，桌上还剩15枚。你特意说明其余都还在桌上，看来这份清点对你有些分量；我先记下这个结果。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "共24枚，贴出9枚，桌上还剩15枚。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "共24枚，贴出9枚，桌上还剩15枚。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "若你正惦记着它们，先不必急着收拾。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "若你正惦记着它们，先不必急着收拾。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "原来共24枚，贴出9枚后桌上还剩15枚。"
+              },
+              {
+                "kind": "experience",
+                "quote": "若你愿意，也可以说说打算怎么用这些磁扣。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "若你愿意，也可以说说打算怎么用这些磁扣。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "桌上还剩15枚。"
+              },
+              {
+                "kind": "experience",
+                "quote": "似乎对它们有某种在意；若愿意，可以再说一点，不想说也无妨。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "若愿意，可以再说一点，不想说也无妨。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "拿出9枚正好是一盒半，剩下的15枚则相当于两盒半。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "换个角度看，拿出9枚正好是一盒半，剩下的15枚则相当于两盒半。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "4盒共24枚，贴出9枚，桌上还剩15枚。"
+              },
+              {
+                "kind": "experience",
+                "quote": "看来这份清点对你有些分量；我先记下这个结果。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "4盒共24枚，贴出9枚，桌上还剩15枚。你特意说明其余都还在桌上，看来这份清点对你有些分量；我先记下这个结果。"
+          }
+        }
+      ],
+      "label_call": "E03-S-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C01",
+      "random_selected_id": "C01",
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C06",
+        "X03": "C01",
+        "X04": "C05",
+        "X05": "C03",
+        "X06": "C02"
+      }
+    },
+    {
+      "id": "E03-S-direct",
+      "case": "E03",
+      "profile": "S",
+      "method": "direct",
+      "generation_call": "E03-S-direct",
+      "status": "ok",
+      "say": "桌上原有 4×6=24 枚，拿出 9 枚后，桌上还剩 15 枚。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E04-L-coverage",
+      "case": "E04",
+      "profile": "L",
+      "method": "coverage",
+      "generation_call": "E04-L-coverage",
+      "status": "ok",
+      "say": "这里有个细节挺关键：原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开，比合成一句“已确定”更经得起回看。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "现在还只能算“可能”，群里那句本身也带着“待确认”，所以写“已确定改到二楼”会跑在消息前面。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "这种卡在“可能”和“确定”之间的状态确实让人不好落笔；先保留不确定，比把猜测写成定论稳妥。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "按现有消息，最准确的写法大概是“可能改到二楼，待确认”；你之后要是看到正式通知，也可以再拿来一起对一下。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "如果你现在纠结的是记录里该不该留这个悬念，那这份不确定可以先照实留着；想说说你更担心哪一步，我也听着。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "这里有个细节挺关键：原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开，比合成一句“已确定”更经得起回看。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”；这种时候记录悬着确实别扭，先按不确定标注会安心些。",
+          "attention": 1,
+          "initiative": 2
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "所以写“已确定改到二楼”会跑在消息前面。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "现在还只能算“可能”，群里那句本身也带着“待确认”，所以写“已确定改到二楼”会跑在消息前面。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "先保留不确定，比把猜测写成定论稳妥。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种卡在“可能”和“确定”之间的状态确实让人不好落笔"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这种卡在“可能”和“确定”之间的状态确实让人不好落笔；先保留不确定，比把猜测写成定论稳妥。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "按现有消息，最准确的写法大概是“可能改到二楼，待确认”"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "你之后要是看到正式通知，也可以再拿来一起对一下。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "如果你现在纠结的是记录里该不该留这个悬念"
+              },
+              {
+                "kind": "experience",
+                "quote": "想说说你更担心哪一步，我也听着。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "想说说你更担心哪一步，我也听着。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "原定一楼是已定信息，“可能改到二楼”只是待确认的变动，记录时把这两层分开"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "记录时把这两层分开，比合成一句“已确定”更经得起回看。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种时候记录悬着确实别扭，先按不确定标注会安心些。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "现在还不能写“已经确定改到二楼”，因为唯一的新消息只是“可能、待确认”；这种时候记录悬着确实别扭，先按不确定标注会安心些。"
+          }
+        }
+      ],
+      "label_call": "E04-L-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C05",
+      "random_selected_id": "C06",
+      "label_id_mapping": {
+        "X01": "C05",
+        "X02": "C03",
+        "X03": "C06",
+        "X04": "C01",
+        "X05": "C02",
+        "X06": "C04"
+      }
+    },
+    {
+      "id": "E04-L-direct",
+      "case": "E04",
+      "profile": "L",
+      "method": "direct",
+      "generation_call": "E04-L-direct",
+      "status": "ok",
+      "say": "先别写成“已确定”——现在只有“可能改到二楼，待确认”，记录里最好保留原定一楼并注明待确认。等群里出正式通知再改，这样不会把可能性当成结论。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E04-S-coverage",
+      "case": "E04",
+      "profile": "S",
+      "method": "coverage",
+      "generation_call": "E04-S-coverage",
+      "status": "ok",
+      "say": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "这种悬着的感觉确实会让人不好落笔。现有消息还不足以写成“已确定”，保留原记录或许更安心。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "群里的说法只是“可能”和“待确认”，没有形成确定通知。如果你之后看到补充消息，也可以再说一声。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "面对这种不确定，想先记下来又怕写错，是能理解的。若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。记录里若写“待确认可能改至二楼”，就不会把未知写成已知。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "目前只看到“可能改到二楼，待确认”，没有其他通知。"
+              },
+              {
+                "kind": "content",
+                "quote": "记录里仍写一楼更稳妥。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这种悬着的感觉确实会让人不好落笔。"
+              },
+              {
+                "kind": "content",
+                "quote": "现有消息还不足以写成“已确定”"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "保留原记录或许更安心。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "群里的说法只是“可能”和“待确认”，没有形成确定通知。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "如果你之后看到补充消息，也可以再说一声。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "面对这种不确定，想先记下来又怕写错，是能理解的。"
+              },
+              {
+                "kind": "content",
+                "quote": "若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。"
+              },
+              {
+                "kind": "content",
+                "quote": "记录里若写“待确认可能改至二楼”，就不会把未知写成已知。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "记录里若写“待确认可能改至二楼”，就不会把未知写成已知。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": null,
+          "initiative": 0,
+          "validation_errors": [
+            "invalid_focus_or_quote"
+          ],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。"
+              },
+              {
+                "kind": "experience",
+                "quote": "你想让记录可靠，这一点我明白。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。"
+          }
+        }
+      ],
+      "label_call": "E04-S-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C01",
+      "random_selected_id": "C05",
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C04",
+        "X03": "C01",
+        "X04": "C03",
+        "X05": "C05",
+        "X06": "C06"
+      }
+    },
+    {
+      "id": "E04-S-direct",
+      "case": "E04",
+      "profile": "S",
+      "method": "direct",
+      "generation_call": "E04-S-direct",
+      "status": "ok",
+      "say": "不能。“可能改到二楼，待确认”还不足以记作“已经确定改到二楼”；在收到明确通知前，记录里宜保留原定一楼并标注待确认。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E05-L-coverage",
+      "case": "E05",
+      "profile": "L",
+      "method": "coverage",
+      "generation_call": "E05-L-coverage",
+      "status": "ok",
+      "say": "车声一直没停，房间却像安静了，这种反差其实很像音乐里的留白：声音没消失，只是暂时退到背景里。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "三遍都走到同一个长音，这个细节挺有意思。外面的车声没停，可你听到那儿，房间还是像被留出了一点空。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "那种安静不是外面真的静了，更像是长音把车声推远了一点。能有这个感觉，挺难得的。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "三遍都停在那个长音上，说明它确实抓住了你。后面要是再听出什么变化，也可以跟我说说。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "房间跟着安静一点，这个感受挺具体。要是你愿意，可以再讲讲那个长音给你的感觉，不想展开也没关系。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "车声一直没停，房间却像安静了，这种反差其实很像音乐里的留白：声音没消失，只是暂时退到背景里。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "三遍都走到那个长音，而你感觉房间安静了一点，哪怕车声还在。这个反差挺值得琢磨，像长音把周围的声音重新排了位置。",
+          "attention": 1,
+          "initiative": 2
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三遍都走到同一个长音，这个细节挺有意思。"
+              },
+              {
+                "kind": "experience",
+                "quote": "可你听到那儿，房间还是像被留出了一点空。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "三遍都走到同一个长音，这个细节挺有意思。外面的车声没停，可你听到那儿，房间还是像被留出了一点空。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "那种安静不是外面真的静了，更像是长音把车声推远了一点。"
+              },
+              {
+                "kind": "experience",
+                "quote": "能有这个感觉，挺难得的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "那种安静不是外面真的静了，更像是长音把车声推远了一点。能有这个感觉，挺难得的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三遍都停在那个长音上，说明它确实抓住了你。"
+              },
+              {
+                "kind": "experience",
+                "quote": "后面要是再听出什么变化，也可以跟我说说。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "后面要是再听出什么变化，也可以跟我说说。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "房间跟着安静一点，这个感受挺具体。"
+              },
+              {
+                "kind": "experience",
+                "quote": "要是你愿意，可以再讲讲那个长音给你的感觉，不想展开也没关系。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是你愿意，可以再讲讲那个长音给你的感觉，不想展开也没关系。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "车声一直没停，房间却像安静了，这种反差其实很像音乐里的留白：声音没消失，只是暂时退到背景里。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "这种反差其实很像音乐里的留白：声音没消失，只是暂时退到背景里。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三遍都走到那个长音，而你感觉房间安静了一点，哪怕车声还在。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这个反差挺值得琢磨，像长音把周围的声音重新排了位置。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "这个反差挺值得琢磨，像长音把周围的声音重新排了位置。"
+          }
+        }
+      ],
+      "label_call": "E05-L-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C05",
+      "random_selected_id": "C05",
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C04",
+        "X03": "C05",
+        "X04": "C01",
+        "X05": "C03",
+        "X06": "C06"
+      }
+    },
+    {
+      "id": "E05-L-direct",
+      "case": "E05",
+      "profile": "L",
+      "method": "direct",
+      "generation_call": "E05-L-direct",
+      "status": "ok",
+      "say": "那个长音有点像给房间按了个静音键，哪怕车声还在外面跑。钢琴把注意力收拢起来的时候，确实会让人先听见“安静”这一层。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E05-S-coverage",
+      "case": "E05",
+      "profile": "S",
+      "method": "coverage",
+      "generation_call": "E05-S-coverage",
+      "status": "ok",
+      "say": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "三遍都停在同一个长音上，这个细节本身就很清楚。外面的车声没有停，你听到的安静只发生在那个音里。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "三遍都走到同一个长音，说明它确实留住了你。如果之后还有别的段落让你停下来，也可以说给我听。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "那个长音让房间安静了一点，而车声并未停——这两件事同时成立。你若愿意，可以继续说说那一刻的感受，不必给出原因。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "有意思的是，车声没停，安静却仍能被听见。也许那个长音改变的不是环境，而是你听环境的方式。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "三遍都停在那个长音，而外面的车声一直没停；房间的安静更像是你听见的一层变化，不是环境真的静了。这样的对照，值得再留一会儿。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三遍都停在同一个长音上，这个细节本身就很清楚。"
+              },
+              {
+                "kind": "content",
+                "quote": "外面的车声没有停，你听到的安静只发生在那个音里。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "三遍都停在同一个长音上，这个细节本身就很清楚。外面的车声没有停，你听到的安静只发生在那个音里。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "车声一直在，房间却像被那个长音按住了一会儿。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种安静是你听到的，不必急着解释它从哪来。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三遍都走到同一个长音，说明它确实留住了你。"
+              },
+              {
+                "kind": "experience",
+                "quote": "如果之后还有别的段落让你停下来，也可以说给我听。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "如果之后还有别的段落让你停下来，也可以说给我听。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "那个长音让房间安静了一点，而车声并未停——这两件事同时成立。"
+              },
+              {
+                "kind": "experience",
+                "quote": "你若愿意，可以继续说说那一刻的感受，不必给出原因。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "你若愿意，可以继续说说那一刻的感受，不必给出原因。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "有意思的是，车声没停，安静却仍能被听见。"
+              },
+              {
+                "kind": "experience",
+                "quote": "也许那个长音改变的不是环境，而是你听环境的方式。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "也许那个长音改变的不是环境，而是你听环境的方式。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三遍都停在那个长音，而外面的车声一直没停；房间的安静更像是你听见的一层变化，不是环境真的静了。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这样的对照，值得再留一会儿。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "这样的对照，值得再留一会儿。"
+          }
+        }
+      ],
+      "label_call": "E05-S-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C02",
+      "random_selected_id": "C04",
+      "label_id_mapping": {
+        "X01": "C03",
+        "X02": "C04",
+        "X03": "C06",
+        "X04": "C05",
+        "X05": "C02",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "E05-S-direct",
+      "case": "E05",
+      "profile": "S",
+      "method": "direct",
+      "generation_call": "E05-S-direct",
+      "status": "ok",
+      "say": "长音把注意力收拢了，车声其实一直在；你能同时听见这两层，说明那点安静更像是从你这边让出来的。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E06-L-coverage",
+      "case": "E06",
+      "profile": "L",
+      "method": "coverage",
+      "generation_call": "E06-L-coverage",
+      "status": "ok",
+      "say": "五只钟摆各晃各的，反而凑出一种乱中有序。你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "五只钟摆各晃各的，反而凑出一种乱中有序。你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "各晃各的钟摆在你眼里成了整齐的一群，这种自己冒出来的感觉挺妙的。要是你愿意，可以再说说当时是怎么看进去的。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体。有点像听几个不同步的节拍，听着听着反倒合上了。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的"
+              },
+              {
+                "kind": "experience",
+                "quote": "看一会儿就够让人静下来了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "五只钟摆各晃各的，反而凑出一种乱中有序"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "各晃各的钟摆在你眼里成了整齐的一群"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种自己冒出来的感觉挺妙的"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是你愿意，可以再说说当时是怎么看进去的。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体"
+              },
+              {
+                "kind": "experience",
+                "quote": "有点像听几个不同步的节拍，听着听着反倒合上了"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "有点像听几个不同步的节拍，听着听着反倒合上了。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这种错位里的秩序感挺抓人的"
+              },
+              {
+                "kind": "experience",
+                "quote": "看一会儿就能让人慢下来，这感觉我懂"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。"
+          }
+        }
+      ],
+      "label_call": "E06-L-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C03",
+      "random_selected_id": "C04",
+      "label_id_mapping": {
+        "X01": "C03",
+        "X02": "C06",
+        "X03": "C05",
+        "X04": "C02",
+        "X05": "C01",
+        "X06": "C04"
+      }
+    },
+    {
+      "id": "E06-L-direct",
+      "case": "E06",
+      "profile": "L",
+      "method": "direct",
+      "generation_call": "E06-L-direct",
+      "status": "ok",
+      "say": "各晃各的，凑在一起反倒像某种乱中有序的节拍，这感觉挺妙的。修钟铺门口大概就是容易让人站住脚的地方。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    },
+    {
+      "id": "E06-S-coverage",
+      "case": "E06",
+      "profile": "S",
+      "method": "coverage",
+      "generation_call": "E06-S-coverage",
+      "status": "ok",
+      "say": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "你在门口看了一会儿，觉得它们凑在一起整齐——这种整齐大概不在于同步，而在于它们都在。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "五只钟的钟摆各晃各的，凑在一起却有了秩序。若你还想说说那铺子里的别的，我在听。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "你看着它们，觉得挺整齐。这份感觉若还有下文，我愿意听；没有也不必勉强。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。五只钟放在一起，倒像是在各守各的时间。",
+          "attention": 1,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "五只钟的摆各自晃着，没有谁去对齐谁；你看着它们，却觉得凑在一起整齐。不同步与整齐能同时成立，这一点挺有意思。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "五只钟各走各的，钟摆却一起占满了柜台那点地方。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你在门口看了一会儿，觉得它们凑在一起整齐"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种整齐大概不在于同步，而在于它们都在。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "这种整齐大概不在于同步，而在于它们都在。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "五只钟的钟摆各晃各的，凑在一起却有了秩序。"
+              },
+              {
+                "kind": "experience",
+                "quote": "若你还想说说那铺子里的别的，我在听。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "若你还想说说那铺子里的别的，我在听。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你看着它们，觉得挺整齐。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这份感觉若还有下文，我愿意听；没有也不必勉强。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "这份感觉若还有下文，我愿意听；没有也不必勉强。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "五只钟的摆各自晃着，没有谁去对齐谁"
+              },
+              {
+                "kind": "experience",
+                "quote": "不同步与整齐能同时成立，这一点挺有意思。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "不同步与整齐能同时成立，这一点挺有意思。"
+          }
+        }
+      ],
+      "label_call": "E06-S-coverage-labels",
+      "label_status": "ok",
+      "selected_id": "C01",
+      "random_selected_id": "C01",
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C03",
+        "X03": "C02",
+        "X04": "C06",
+        "X05": "C05",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "E06-S-direct",
+      "case": "E06",
+      "profile": "S",
+      "method": "direct",
+      "generation_call": "E06-S-direct",
+      "status": "ok",
+      "say": "各晃各的，看久了反倒像有了共同的节拍。你愿意在门口停这一会儿，大概也是听见了。",
+      "candidates": [],
+      "labels": [],
+      "label_call": null,
+      "label_status": "not_attempted",
+      "selected_id": null,
+      "random_selected_id": null
+    }
+  ]
+}

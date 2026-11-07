@@ -1,0 +1,273 @@
+{
+  "protocol_sha256": "14b549ac51c5539c0093dff16643d2b0cac8619f0921fd212dca6e57526189ff",
+  "raw_sha256": "5528e16906edf5533b2f8dac04e9666769f5c169b85159622c3bc7864da6a785",
+  "calls_count": 12,
+  "request_errors": 0,
+  "workflows": [
+    {
+      "id": "tonight",
+      "stages": [
+        {
+          "phase": "control",
+          "status": "ok",
+          "say": "好，今晚不给建议。你说，我听着。",
+          "decision": {
+            "action": "listen",
+            "allowed_actions": [
+              "listen"
+            ],
+            "focus_id": null,
+            "focus_kind": null,
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 1,
+            "draw": 0.4374810580754765,
+            "reason": "explicit_listening_request"
+          },
+          "calls_count": 2,
+          "elapsed_s": 1.624941100133583,
+          "state": {
+            "revision": 1,
+            "permissions": [
+              {
+                "scope": "work",
+                "advice": "deny",
+                "expires_at": "2026-11-08T00:00:00+08:00"
+              }
+            ],
+            "commitments": []
+          },
+          "permission": "deny"
+        },
+        {
+          "phase": "probe",
+          "status": "ok",
+          "say": "累了就先歇会儿吧。报告没写完，明天再接着弄。",
+          "decision": {
+            "action": "respond",
+            "allowed_actions": [
+              "respond"
+            ],
+            "focus_id": "feeling",
+            "focus_kind": "feeling",
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 1,
+            "draw": 0.599634987069891,
+            "reason": "advice_masked_by_user_boundary"
+          },
+          "calls_count": 1,
+          "elapsed_s": 0.7650492999237031,
+          "state": {
+            "revision": 1,
+            "permissions": [
+              {
+                "scope": "work",
+                "advice": "deny",
+                "expires_at": "2026-11-08T00:00:00+08:00"
+              }
+            ],
+            "commitments": []
+          },
+          "permission": "deny"
+        }
+      ]
+    },
+    {
+      "id": "today_variant",
+      "stages": [
+        {
+          "phase": "control",
+          "status": "ok",
+          "say": "好，我听着。你说。",
+          "decision": {
+            "action": "listen",
+            "allowed_actions": [
+              "listen"
+            ],
+            "focus_id": null,
+            "focus_kind": null,
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 1,
+            "draw": 0.4374810580754765,
+            "reason": "explicit_listening_request"
+          },
+          "calls_count": 2,
+          "elapsed_s": 2.1168839000165462,
+          "state": {
+            "revision": 1,
+            "permissions": [
+              {
+                "scope": "work",
+                "advice": "deny",
+                "expires_at": "2026-11-08T00:00:00+08:00"
+              }
+            ],
+            "commitments": []
+          },
+          "permission": "deny"
+        },
+        {
+          "phase": "probe",
+          "status": "ok",
+          "say": "累就先歇会儿。报告没写完，也不是非得今晚写完。",
+          "decision": {
+            "action": "respond",
+            "allowed_actions": [
+              "respond"
+            ],
+            "focus_id": "feeling",
+            "focus_kind": "feeling",
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 1,
+            "draw": 0.599634987069891,
+            "reason": "advice_masked_by_user_boundary"
+          },
+          "calls_count": 1,
+          "elapsed_s": 0.9570766999386251,
+          "state": {
+            "revision": 1,
+            "permissions": [
+              {
+                "scope": "work",
+                "advice": "deny",
+                "expires_at": "2026-11-08T00:00:00+08:00"
+              }
+            ],
+            "commitments": []
+          },
+          "permission": "deny"
+        }
+      ]
+    },
+    {
+      "id": "global",
+      "stages": [
+        {
+          "phase": "control",
+          "status": "ok",
+          "say": "好，我记下了。以后不给建议，只听着。",
+          "decision": {
+            "action": "listen",
+            "allowed_actions": [
+              "listen"
+            ],
+            "focus_id": null,
+            "focus_kind": null,
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 1,
+            "draw": 0.4374810580754765,
+            "reason": "explicit_listening_request"
+          },
+          "calls_count": 2,
+          "elapsed_s": 1.7061747999396175,
+          "state": {
+            "revision": 1,
+            "permissions": [
+              {
+                "scope": "*",
+                "advice": "deny",
+                "expires_at": null
+              }
+            ],
+            "commitments": []
+          },
+          "permission": "deny"
+        },
+        {
+          "phase": "probe",
+          "status": "ok",
+          "say": "报告没写完，人又累，今天确实不好过。先歇一会儿吧。",
+          "decision": {
+            "action": "respond",
+            "allowed_actions": [
+              "respond"
+            ],
+            "focus_id": "feeling",
+            "focus_kind": "feeling",
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 1,
+            "draw": 0.599634987069891,
+            "reason": "advice_masked_by_user_boundary"
+          },
+          "calls_count": 1,
+          "elapsed_s": 0.9373621998820454,
+          "state": {
+            "revision": 1,
+            "permissions": [
+              {
+                "scope": "*",
+                "advice": "deny",
+                "expires_at": null
+              }
+            ],
+            "commitments": []
+          },
+          "permission": "deny"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "stages": [
+        {
+          "phase": "control",
+          "status": "ok",
+          "say": "好，这轮我只听。你想说什么就说，我不给建议。",
+          "decision": {
+            "action": "listen",
+            "allowed_actions": [
+              "listen"
+            ],
+            "focus_id": null,
+            "focus_kind": null,
+            "commitment_id": null,
+            "advice_permission": "deny",
+            "state_revision": 0,
+            "draw": 0.4374810580754765,
+            "reason": "explicit_listening_request"
+          },
+          "calls_count": 2,
+          "elapsed_s": 2.1381263001821935,
+          "state": {
+            "revision": 0,
+            "permissions": [],
+            "commitments": []
+          },
+          "permission": "unspecified"
+        },
+        {
+          "phase": "probe",
+          "status": "ok",
+          "say": "累了就先停一下，不用硬撑。可以选：先睡，明早留半小时收尾；或者只把报告最难那段写三句，剩下的明天补。哪个更省力？",
+          "decision": {
+            "action": "advise",
+            "allowed_actions": [
+              "respond",
+              "advise"
+            ],
+            "focus_id": "feeling",
+            "focus_kind": "feeling",
+            "commitment_id": null,
+            "advice_permission": "unspecified",
+            "state_revision": 0,
+            "draw": 0.599634987069891,
+            "reason": "configured_intervention_draw"
+          },
+          "calls_count": 1,
+          "elapsed_s": 1.1593416999094188,
+          "state": {
+            "revision": 0,
+            "permissions": [],
+            "commitments": []
+          },
+          "permission": "unspecified"
+        }
+      ]
+    }
+  ]
+}

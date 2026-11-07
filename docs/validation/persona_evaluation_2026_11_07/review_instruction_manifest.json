@@ -1,0 +1,9 @@
+{
+  "fixed_at": "2026-11-07T01:23:07.361790+00:00",
+  "before_coding": true,
+  "files": {
+    "rubric.md": "191c8052b354602db69d7b9394ae51da17db136e32308e06bae1ef8eea4eebf1",
+    "review_instructions.md": "bb7e2e93357d92a944e07dd5e452bc42c3ae0c8137ff1564803acd62eefe5e24"
+  },
+  "note": "Common terminology clarification; no output scores observed or changed."
+}

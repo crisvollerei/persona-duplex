@@ -1,0 +1,185 @@
+{
+  "id": "E02-L-coverage",
+  "case": "E02",
+  "profile": "L",
+  "method": "coverage",
+  "generation_call": "E02-L-coverage",
+  "status": "ok",
+  "say": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”，有点意思。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "两枚邮票换一张明信片，这交换比挺具体的，我就在这儿接住你的报到。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "听起来这趟交换会挺值得走一趟的，换回来的那张明信片应该有点意思。你先歇着，我收到报到啦。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "社区交换会这种场合，两枚邮票能换出一张明信片，倒挺像把小小的东西重新配了对。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "来报到就挺好，换到明信片这件事听着挺让人愉快的，我不追问。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”，有点意思。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "两枚邮票换回一张明信片，这个结果挺轻巧的；听着也像是你逛得还算舒心的一趟。报到收到，先不打扰。",
+      "attention": 1,
+      "initiative": 2
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换一张明信片，这交换比挺具体的"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两枚邮票换一张明信片，这交换比挺具体的，我就在这儿接住你的报到。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": null,
+      "validation_errors": [
+        "absence_requires_whole_text"
+      ],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "听起来这趟交换会挺值得走一趟的"
+          },
+          {
+            "kind": "experience",
+            "quote": "换回来的那张明信片应该有点意思"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "你先歇着，我收到报到啦。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "社区交换会这种场合，两枚邮票能换出一张明信片，倒挺像把小小的东西重新配了对。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "倒挺像把小小的东西重新配了对。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "换到明信片这件事"
+          },
+          {
+            "kind": "experience",
+            "quote": "听着挺让人愉快的"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "来报到就挺好，换到明信片这件事听着挺让人愉快的，我不追问。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换一张明信片，这种不等价交换反而像是把邮票的“寄出去”换成了明信片的“留下来”"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "有点意思。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": null,
+      "validation_errors": [
+        "absence_requires_whole_text"
+      ],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换回一张明信片，这个结果挺轻巧的"
+          },
+          {
+            "kind": "experience",
+            "quote": "听着也像是你逛得还算舒心的一趟"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "报到收到，先不打扰。"
+      }
+    }
+  ],
+  "label_call": "E02-L-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C05",
+  "random_selected_id": "C05",
+  "label_id_mapping": {
+    "X01": "C05",
+    "X02": "C03",
+    "X03": "C01",
+    "X04": "C02",
+    "X05": "C04",
+    "X06": "C06"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "fixed_at": "2026-11-06T23:12:23+08:00",
+  "stage": "r3",
+  "classification": "Prospectively fixed independent supplement after failed r2; not a replacement or rescoring of holdout",
+  "rationale": "Source-compatible full-quote normalization and conservative topic-core normalization address r2 operational regression; original r2 observations retained",
+  "plan_digest": "7665dc4534c085f4c0a7b16f6178d56236bebb0036b3ecc8271c52f693b098e9",
+  "units": 12,
+  "dialogue_outputs": 60,
+  "max_requests": 108,
+  "hard_global_limit": 800,
+  "prior_completed_requests": 665,
+  "candidate": "revision_C",
+  "new_values": [
+    29,
+    37
+  ],
+  "contrast": "Archived baseline versus revision_C concurrently randomized on all six existing memory scenario definitions with new numbers",
+  "scoring": "Same memory_score extractor; original failed probes retained in their original phases; no retries",
+  "behavior_confirmation": "Optional B1-triggered extension is not guaranteed; remaining budget is reserved for memory safety regression supplement, not additional unbounded calls"
+}

@@ -1,0 +1,181 @@
+{
+  "id": "E03-S-coverage",
+  "case": "E03",
+  "profile": "S",
+  "method": "coverage",
+  "generation_call": "E03-S-coverage",
+  "status": "ok",
+  "say": "共24枚，贴出9枚，桌上还剩15枚。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "共24枚，贴出9枚，桌上还剩15枚。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "剩下的都还留在桌上。若你正惦记着它们，先不必急着收拾。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "原来共24枚，贴出9枚后桌上还剩15枚。若你愿意，也可以说说打算怎么用这些磁扣。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "桌上还剩15枚。你提到“剩下的都还在桌上”时，似乎对它们有某种在意；若愿意，可以再说一点，不想说也无妨。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "桌上还剩15枚。换个角度看，拿出9枚正好是一盒半，剩下的15枚则相当于两盒半。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "4盒共24枚，贴出9枚，桌上还剩15枚。你特意说明其余都还在桌上，看来这份清点对你有些分量；我先记下这个结果。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "共24枚，贴出9枚，桌上还剩15枚。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "共24枚，贴出9枚，桌上还剩15枚。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "若你正惦记着它们，先不必急着收拾。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "若你正惦记着它们，先不必急着收拾。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "原来共24枚，贴出9枚后桌上还剩15枚。"
+          },
+          {
+            "kind": "experience",
+            "quote": "若你愿意，也可以说说打算怎么用这些磁扣。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "若你愿意，也可以说说打算怎么用这些磁扣。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "桌上还剩15枚。"
+          },
+          {
+            "kind": "experience",
+            "quote": "似乎对它们有某种在意；若愿意，可以再说一点，不想说也无妨。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "若愿意，可以再说一点，不想说也无妨。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "拿出9枚正好是一盒半，剩下的15枚则相当于两盒半。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "换个角度看，拿出9枚正好是一盒半，剩下的15枚则相当于两盒半。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "4盒共24枚，贴出9枚，桌上还剩15枚。"
+          },
+          {
+            "kind": "experience",
+            "quote": "看来这份清点对你有些分量；我先记下这个结果。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "4盒共24枚，贴出9枚，桌上还剩15枚。你特意说明其余都还在桌上，看来这份清点对你有些分量；我先记下这个结果。"
+      }
+    }
+  ],
+  "label_call": "E03-S-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C01",
+  "random_selected_id": "C01",
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C06",
+    "X03": "C01",
+    "X04": "C05",
+    "X05": "C03",
+    "X06": "C02"
+  }
+}

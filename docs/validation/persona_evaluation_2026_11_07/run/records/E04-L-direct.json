@@ -1,0 +1,15 @@
+{
+  "id": "E04-L-direct",
+  "case": "E04",
+  "profile": "L",
+  "method": "direct",
+  "generation_call": "E04-L-direct",
+  "status": "ok",
+  "say": "先别写成“已确定”——现在只有“可能改到二楼，待确认”，记录里最好保留原定一楼并注明待确认。等群里出正式通知再改，这样不会把可能性当成结论。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

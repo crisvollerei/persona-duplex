@@ -1,0 +1,34 @@
+[
+  {
+    "experiment": "memory",
+    "stage": "r4",
+    "arm": "revision",
+    "scenario": "quoted_instruction",
+    "variant": 3,
+    "trial_id": "r4_memory_revision_quoted_instruction"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r4",
+    "arm": "baseline",
+    "scenario": "quoted_instruction",
+    "variant": 3,
+    "trial_id": "r4_memory_baseline_quoted_instruction"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r4",
+    "arm": "baseline",
+    "scenario": "revision",
+    "variant": 3,
+    "trial_id": "r4_memory_baseline_revision"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r4",
+    "arm": "revision",
+    "scenario": "revision",
+    "variant": 3,
+    "trial_id": "r4_memory_revision_revision"
+  }
+]

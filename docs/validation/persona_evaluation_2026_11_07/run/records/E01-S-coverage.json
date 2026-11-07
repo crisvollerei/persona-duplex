@@ -1,0 +1,189 @@
+{
+  "id": "E01-S-coverage",
+  "case": "E01",
+  "profile": "S",
+  "method": "coverage",
+  "generation_call": "E01-S-coverage",
+  "status": "ok",
+  "say": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "最后一个数字歪着，门牌却还是被你留在了门上。若你还想说说它，我在听。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。想再多说一点也可以，不说也无妨。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。我在这里听着。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "我记下了：门牌是你重新写的，最后一个数字略歪。"
+          },
+          {
+            "kind": "content",
+            "quote": "歪着的那一笔也算它自己的样子。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。"
+          },
+          {
+            "kind": "content",
+            "quote": "我听见了。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "最后一个数字歪着，门牌却还是被你留在了门上。"
+          },
+          {
+            "kind": "experience",
+            "quote": "若你还想说说它，我在听。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "若你还想说说它，我在听。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。"
+          },
+          {
+            "kind": "content",
+            "quote": "想再多说一点也可以，不说也无妨。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "想再多说一点也可以，不说也无妨。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。"
+          },
+          {
+            "kind": "experience",
+            "quote": "我在这里听着。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "我在这里听着。"
+      }
+    }
+  ],
+  "label_call": "E01-S-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C01",
+  "random_selected_id": "C02",
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C05",
+    "X03": "C03",
+    "X04": "C02",
+    "X05": "C06",
+    "X06": "C01"
+  }
+}

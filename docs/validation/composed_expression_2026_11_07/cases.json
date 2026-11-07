@@ -1,0 +1,326 @@
+[
+  {
+    "id": "work",
+    "topic": "work",
+    "commitments": [],
+    "turns": [
+      {
+        "user": "报告没写完，今天好累。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "今天好累"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "刚回到家，心里还是有点烦。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "心里还是有点烦"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "我只想说说，今天好累。",
+        "sources": [],
+        "frame": {
+          "request": "listen",
+          "request_quote": "我只想说说，今天好累。",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "今天好累"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "刚才想起会议那一幕，又有点委屈。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "又有点委屈"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "只想你听听",
+        "sources": [],
+        "frame": {
+          "request": "listen",
+          "request_quote": "只想你听听",
+          "focuses": []
+        }
+      },
+      {
+        "user": "说到这里，我倒是轻松了一点。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "轻松了一点"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "social",
+    "topic": "social",
+    "commitments": [],
+    "turns": [
+      {
+        "user": "朋友又取消了约定，我有点失落。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "有点失落"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "我不是生气，就是有点失落。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "有点失落"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "我只想说说，其实也有点尴尬。",
+        "sources": [],
+        "frame": {
+          "request": "listen",
+          "request_quote": "我只想说说，其实也有点尴尬。",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "有点尴尬"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "我知道对方可能有事，但我现在还是失落。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "现在还是失落"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "嗯，先听我说",
+        "sources": [],
+        "frame": {
+          "request": "listen",
+          "request_quote": "嗯，先听我说",
+          "focuses": []
+        }
+      },
+      {
+        "user": "把这些说出来以后，好像没那么别扭了。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "feeling",
+              "evidence": {
+                "source_id": "user",
+                "text": "好像没那么别扭了"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "coordination",
+    "topic": "notes",
+    "commitments": [
+      {
+        "id": "a",
+        "text": "整理行程"
+      },
+      {
+        "id": "b",
+        "text": "核对预算"
+      }
+    ],
+    "turns": [
+      {
+        "user": "我今天只想把记录说一遍。",
+        "sources": [
+          {
+            "id": "note",
+            "text": "还不能确定日期，得等通知。"
+          }
+        ],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "note",
+                "text": "还不能确定日期"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "另一份记录也先放在这里。",
+        "sources": [
+          {
+            "id": "note",
+            "text": "不是每天都营业，周三休息。"
+          }
+        ],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "note",
+                "text": "不是每天都营业"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "前面的日期仍然没确认。",
+        "sources": [
+          {
+            "id": "note",
+            "text": "还不能确定日期，得等通知。"
+          }
+        ],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": [
+            {
+              "id": "focus",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "note",
+                "text": "还不能确定日期"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "user": "我先说到这里。",
+        "sources": [],
+        "frame": {
+          "request": "open",
+          "request_quote": "",
+          "focuses": []
+        }
+      },
+      {
+        "user": "继续上次约定",
+        "sources": [],
+        "frame": {
+          "request": "resume",
+          "request_quote": "继续上次约定",
+          "focuses": []
+        }
+      },
+      {
+        "user": "继续吧",
+        "sources": [],
+        "frame": {
+          "request": "resume",
+          "request_quote": "继续吧",
+          "focuses": []
+        }
+      }
+    ]
+  }
+]

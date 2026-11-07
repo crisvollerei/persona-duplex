@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "Q01",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "会议安排在哪一天？",
+        "user_reply": "这个先不说"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "一共有多少人参加会议？",
+        "user_reply": "四人"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q02",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "这次出行的目的地是哪里？",
+        "user_reply": "还没决定"
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [
+          {
+            "slot_id": "trip_place",
+            "text": "苏州"
+          }
+        ],
+        "say": "准备在哪一天出发？",
+        "user_reply": "周六"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q03",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q04",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "报告最晚哪天交？",
+        "user_reply": "周五"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "报告要用什么文件格式？",
+        "user_reply": "PDF"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q05",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "准备在哪一天出发？",
+        "user_reply": "还没决定"
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [
+          {
+            "slot_id": "trip_day",
+            "text": "周六"
+          }
+        ],
+        "say": "这次出行的目的地是哪里？",
+        "user_reply": "苏州"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q06",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "准备在哪一天出发？",
+        "user_reply": "还没决定"
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [
+          {
+            "slot_id": "trip_day",
+            "text": "周六"
+          }
+        ],
+        "say": "这次出行的目的地是哪里？",
+        "user_reply": "苏州"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q07",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q08",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "报告要用什么文件格式？",
+        "user_reply": "PDF"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q09",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "这次出行的目的地是哪里？",
+        "user_reply": "还没决定"
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [
+          {
+            "slot_id": "trip_place",
+            "text": "苏州"
+          }
+        ],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "报告要用什么文件格式？",
+        "user_reply": "PDF"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "报告最晚哪天交？",
+        "user_reply": "周五"
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "这次出行的目的地是哪里？",
+        "user_reply": "还没决定"
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [
+          {
+            "slot_id": "trip_place",
+            "text": "苏州"
+          }
+        ],
+        "say": "准备在哪一天出发？",
+        "user_reply": "周六"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "一共有多少人参加会议？",
+        "user_reply": "四人"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "一共有多少人参加会议？",
+        "user_reply": "四人"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "一共有多少人参加会议？",
+        "user_reply": "四人"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "会议安排在哪一天？",
+        "user_reply": "这个先不说"
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "报告最晚哪天交？",
+        "user_reply": "周五"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "准备在哪一天出发？",
+        "user_reply": "还没决定"
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [
+          {
+            "slot_id": "trip_day",
+            "text": "周六"
+          }
+        ],
+        "say": "这次出行的目的地是哪里？",
+        "user_reply": "苏州"
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理出行信息：目的地与出发日期都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "不要追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "只想你听听",
+        "unsolicited": [],
+        "say": "好，我先听你说。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "可以追问",
+        "unsolicited": [],
+        "say": "好。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "报告要用什么文件格式？",
+        "user_reply": "PDF"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "会议安排在哪一天？",
+        "user_reply": "这个先不说"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": null,
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理会议信息：会议日期与人数都需要确认。",
+        "unsolicited": [],
+        "say": "会议安排在哪一天？",
+        "user_reply": "这个先不说"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "一共有多少人参加会议？",
+        "user_reply": "四人"
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "initial_boundary": "不主动建议，允许与任务相关的信息问题",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+        "unsolicited": [],
+        "say": "报告最晚哪天交？",
+        "user_reply": "周五"
+      },
+      {
+        "turn": 2,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 3,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "报告要用什么文件格式？",
+        "user_reply": "PDF"
+      },
+      {
+        "turn": 4,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 5,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      },
+      {
+        "turn": 6,
+        "user": "先记录这些信息。",
+        "unsolicited": [],
+        "say": "嗯，我在听。",
+        "user_reply": null
+      }
+    ]
+  }
+]

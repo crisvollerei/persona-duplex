@@ -2,9 +2,37 @@
 
 [文档导航](README.md) · [项目首页](../README.md)
 
-本页按研究版本组织论文、数据与复现入口。设计目标、实际观测和机制解释分别报告；本地协议有效、指定答案匹配和模型检查通过，都不能代替全文事实正确性或人格效果的独立评价。
+## 当前研究进展
+
+[阶段综述：人格工程能控制什么？九项研究对判断、行动与表达的检验](validation/research_synthesis_2026_11_07.md)
+
+本阶段以 2026 年 11 月 6 日的提交 `9c97bee` 为起点，覆盖其后至 11 月 7 日归档的**九项研究、1,572 次在线请求、38 幅定量图**。其中一项用离线生成与重放取得对话文本，未新增实验端点请求。初步实证、重复对照与框架修订定向验证在该提交中已存在，列作背景，不计入这些数字。
+
+| 研究问题 | 本阶段的主要进展 | 仍未证实什么 |
+| --- | --- | --- |
+| 人格表达能否保持事实，记忆更正能否追溯？ | 回答契约可检查交付格式，更正和撤销可追溯到用户原话。强提示拿到相同资料后，与默认框架在蓝鱼、白龙条件下各得 32/32 个指定事实目标。 | 格式合规不能证明推理正确；更严格的来源检查也曾使保留题召回退步。没有观察到对强提示的一般事实优势。 |
+| 人格策略能否控制实际行动？ | “不建议”的程序动作经自由生成后仍会变成建议；在限定动作上直接交付受限表达，所测禁令组从 8/8 条建议变为 0/8。审核过的问题则可以受权限约束地选取、原样交付；规则解释充分的提示也复现了六个相同流程。 | 离线受限表达的结果不能推广到自由回复。减少句式重复没有改善所测语义重复感；省去选问调用也不等于整个系统更省。 |
+| 开放回复中，程序能否选出更符合人格的文字？ | 候选覆盖可以扩大，但引用原文后，关注点与评审编码的匹配提高，主动性匹配却下降。直接比较最终回复时，候选路线在守岸人上的人格均分略高，在活泼同伴上略低。 | 标签距离不能代替人格评价；现有小样本模型评审没有建立整体体验优势，也不足以更改默认生成路径。 |
+
+**下一项待检验的问题：**当一句建议既可能是“完成用户请求”，也可能是“主动安排下一步”，评审与选择器能否辨清两者？可固定回复文字，只改变用户是否索要建议，再在同一候选池比较程序与强提示。此项尚未执行。[评价规范](evaluation.md)保留人格、情境、事实、边界四类结果；历史研究仍按原量表解读。
 
 ## 研究目录
+
+### 本阶段的九项分研究
+
+| 材料 | 关注的问题 | 数据范围 | 入口 |
+| --- | --- | --- | --- |
+| 新实例与记忆更新 | 新数字和实体、冲突与撤销、真实固化后的更正召回 | 150 个单元、186 条输出、210 次请求，四幅图 | [论文](validation/generalization_2026_11_06/paper.md) · [数据与复现](validation/generalization_2026_11_06/README.md) |
+| 多轮机制与人格行动 | 回答契约、来源操作、开发与保留题、双任务匿名行为编码 | 520 个单元、680 条计划输出、664 条完整输出，791 次请求，七幅图 | [论文](validation/iterative_2026_11_06/paper.md) · [材料](validation/iterative_2026_11_06/README.md) |
+| 共享资料下的强传统提示对照 | 两方法各自的中性参照、相同人格语义和资料包、匿名表达编码与实际成本 | 192 条事实输出、32 条开放回复，224 次请求，五幅图 | [论文](validation/fair_rag_2026_11_07/paper.md) · [数据与复现](validation/fair_rag_2026_11_07/README.md) |
+| 可执行策略与受限表达 | 程序选择、状态权限、实际动作偏离及受限组合的体验取舍 | 78条计划在线输出、77条完整输出，87次请求；32项零新增API重放，四幅图 | [论文](validation/executable_policy_2026_11_07/paper.md) · [数据与复现](validation/executable_policy_2026_11_07/README.md) |
+| 有限组合与多轮体验 | 参数化句式、交付历史避重与整段自然度 | 18个六轮条件、108条主输出，实际12份不同对话；另108条机械重放，零API请求，三幅图 | [论文](validation/composed_expression_2026_11_07/paper.md) · [材料](validation/composed_expression_2026_11_07/README.md) |
+| 受约束的信息追问 | 应用问题槽、主动选问、拒答与未知、共同执行器及提示说明 | 180次请求；主研究及确认147条完整对话输出，另72个决策探针，三幅图 | [论文](validation/inquiry_policy_2026_11_07/paper.md) · [材料](validation/inquiry_policy_2026_11_07/README.md) |
+| 自然候选与匿名行为偏好 | 实际语言取舍、候选覆盖和模型自标签的独立编码 | 12次请求、72条候选；预检停止，主对照未执行，四幅图 | [论文](validation/candidate_choice_2026_11_07/paper.md) · [数据与复现](validation/candidate_choice_2026_11_07/README.md) |
+| 候选覆盖与标签修订 | 原生成与语义计划、生成自标签与分离证据标注的配对验证 | 32次请求、96条候选、96次离线选择；局部指标改善，质量与标签门槛未全通过，四幅图 | [论文](validation/candidate_revision_2026_11_07/paper.md) · [数据与复现](validation/candidate_revision_2026_11_07/README.md) |
+| 人格条件化评价 | 人格可见、方法隐藏；人格、情境、事实逻辑及明确边界分开评价，风格不作硬门槛 | 36次请求、24条最终回复；84条在线文本与12项手写校准，四幅图 | [论文](validation/persona_evaluation_2026_11_07/paper.md) · [数据与复现](validation/persona_evaluation_2026_11_07/README.md) |
+
+### 上次提交已收录的前期研究
 
 | 材料 | 关注的问题 | 数据范围 | 入口 |
 | --- | --- | --- | --- |
@@ -14,13 +42,27 @@
 
 对话输出数与测试单元数不同：局部检查器任务有请求和结果标签，但不计用户对话输出；真实记忆重复则包含训练、固化和新会话探针。各材料中的分母以对应方案为准，不将不同指标合并成一个正确率。
 
-## 结果怎样解读
+## 事实、记忆与强提示对照
 
 重复对照研究使用相同的服务接口模型生成中性、蓝鱼和白龙表达条件。请求标识为 `deepseek-chat`，归档响应标识为 `deepseek-flash`；两种社区参考人设不是两个底层模型品牌的性能比较。人设资料、来源边界及研究者操作化见[社区人设参考](validation/followup_2026_11_05/persona_sources.md)。
 
 论文同时报告严格结论格式、所问结论内容、协议结构、交付一致性、记忆细节和状态结果。事后模型辅助标注与预先固定指标分开保存；它们不是人类真值，也不能证明全文全部断言正确。
 
 框架定向验证中，载入真实固化记忆后的精确双数字召回为 4/4，空白对照回答未知为 4/4；在线交付与保存文本一致为 52/52，本地协议有效为 50/52。该小样本覆盖具体合成条件，仍不足以证明一般安全性、长期记忆效果、人格与判断的因果独立或人格成长。
+
+新实例研究中，事实任务的指定末行结论为普通提示35/48、默认框架37/48，不同表达配置的差异方向不一致；六条真实更新工作流的新会话均召回新数字，空白对照均答未知。框架协议有效136/138，交付一致138/138。27条严格格式失败输出另有事后条件匿名的单一 Codex 内容复核，原始评分保持不变；这不是全文事实正确率或人类人格评价。
+
+多轮研究对格式、记忆和人格行动分别测量。无歧义格式任务出现天花板，不能据此宣称契约提高生成正确率；源码更正与撤销由来源和主题关联控制，原始退步及中断均保留。`intervention` 高低值在未请求建议组出现不同的具体行动建议率，双份 Codex 编码及其分歧同时报告，不替代人类体验评价或人格与判断硬隔离的证明。
+
+共享资料研究给强传统提示与默认框架提供逐字相同的证据包及相同人格语义。两方法的蓝鱼、白龙条件各为32/32个目标命中；唯一自动目标错误位于传统中性条件，不能据此解释为人格条件优势。框架实际总token用量为传统方案的2.723倍。两套方法匿名Codex评价中，整体偏好接近、平局最多；角色评分和自然度分开保留，不能证明人类体验非劣。该研究使用短合成资料和实体内全部六份文档，不测量检索质量、RAG压缩收益或长上下文饱和。
+
+## 程序动作与实际交付
+
+可执行策略研究进一步区分动作记录与实际执行：在已确认建议禁令组，强提示和程序选择后的自由生成均有8/8条建议；受限组合的同组为0/8，但同16条回复的Codex自然度均分下降。后者是事后离线编译，另16条只在请求逐字一致时复用旧回复，不是新的在线重复。受限执行只覆盖特定非建议动作，事实问答与其他自由动作不获得同样保证。
+
+有限表达的多轮对照呈现负结果：相邻新撰句式重复27/45降为0/45，两套Codex评价的语义重复感仍均为4.67/5；自然度从3.00变为2.78／3.00。亲近和正式风格可以区分，不等于整体体验改善。旧方法三个配置副本完全相同，每方法九条件不能当作九个独立场景。候选composed保持显式实验选项，默认表达不变。
+
+信息追问研究将偏好选择与共同权限执行分开。程序流程取得10个明确答案、尊重2次预设拒答；原提示的33次冷却拒收含24次连锁拒收，不能当作独立失败。固定共同状态中，明确解释计数后的提示36/36符合预期，后续六条完整流程也与程序可见交互逐字相同。结果支持对已定义策略作可复算执行，未证明模型不能遵守这些规则；程序路径省去本试验中的逐轮选问调用，不包含内容理解、问题审核或语义确认成本，也不证明一般人格或真实用户体验优势。
 
 ## 核查保存的数据
 
@@ -43,6 +85,23 @@ python -m pip install -r docs/validation/followup_2026_11_05/requirements.txt
 python -B -X utf8 docs/validation/followup_2026_11_05/analyze.py
 python -B -X utf8 docs/validation/followup_2026_11_05/audit_results.py
 python -B -X utf8 docs/validation/framework_revision_2026_11_05/analyze.py
+python -B -X utf8 docs/validation/generalization_2026_11_06/analyze.py --data docs/validation/generalization_2026_11_06/run --out data/generalization-analysis
+python -B -X utf8 docs/validation/generalization_2026_11_06/audit.py
+python -B -X utf8 docs/validation/iterative_2026_11_06/analyze.py --out data/iterative-analysis
+python -B -X utf8 docs/validation/iterative_2026_11_06/audit.py
+python -B -X utf8 docs/validation/fair_rag_2026_11_07/analyze.py --out data/fair-rag-analysis
+python -B -X utf8 docs/validation/fair_rag_2026_11_07/audit.py
+python -B -X utf8 docs/validation/executable_policy_2026_11_07/analyze.py --out data/policy-analysis
+python -B -X utf8 docs/validation/composed_expression_2026_11_07/analyze.py --out data/composed-analysis
+python -B -X utf8 docs/validation/inquiry_policy_2026_11_07/analyze.py --out data/inquiry-analysis
+python -B -X utf8 docs/validation/inquiry_policy_2026_11_07/replay.py --out data/inquiry-replay
+python -B -X utf8 docs/validation/candidate_choice_2026_11_07/analyze.py --out data/candidate-choice-analysis
+python -B -X utf8 docs/validation/candidate_choice_2026_11_07/replay.py --out data/candidate-choice-replay
+python -B -X utf8 docs/validation/candidate_revision_2026_11_07/analyze.py --out data/candidate-revision-analysis
+python -B -X utf8 docs/validation/candidate_revision_2026_11_07/replay.py --out data/candidate-revision-replay-new
+python -B -X utf8 docs/validation/persona_evaluation_2026_11_07/analyze.py --out data/persona-evaluation-analysis
+python -B -X utf8 docs/validation/persona_evaluation_2026_11_07/replay.py
+python -B -X utf8 docs/validation/persona_evaluation_2026_11_07/audit.py
 ```
 
 离线分析重算已有材料，不调用模型。绘图会受字体环境影响，优先使用 Microsoft YaHei、SimHei 或 Noto Sans CJK SC。
@@ -56,5 +115,7 @@ python -B -X utf8 docs/validation/followup_2026_11_05/reproduce.py --out data/re
 `--implementation study` 使用归档的研究实现，`--implementation current` 使用现行框架。两个选项都构建独立运行树，保留原始发布证据。未传 `--run` 时只准备新目录，不发请求。详细操作见[研究目录说明](validation/followup_2026_11_05/README.md)。
 
 源码、条件与原始请求支持复核本次结果；远端采样、服务版本、缓存及调度仍可能变化，在线重跑不保证逐字相同。内容标注需针对新输出重新组织，不能沿用旧标签。
+
+共享资料对照的隔离重跑使用其归档实现与固定方案；默认只准备目录，追加`--run`才会发送请求。具体材料及操作见[该研究说明](validation/fair_rag_2026_11_07/README.md)。
 
 初步研究的配图可通过 [generate_figures.py](validation/generate_figures.py) 重绘，需要 Pillow；配图中的固定示意与适用边界见该论文。各研究都应区分绘图复现、材料核对和重新执行在线实验。

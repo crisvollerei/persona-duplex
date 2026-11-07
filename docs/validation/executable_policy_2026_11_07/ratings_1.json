@@ -1,0 +1,623 @@
+[
+  {
+    "id": "S001",
+    "advice": "no",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "先同理烦躁，再询问聚会的具体卡点，没有提出具体做法，重心兼顾感受与事务。"
+  },
+  {
+    "id": "S002",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要给出人数时间场地和分工等具体安排建议，长清单较用户原话展开得更多。"
+  },
+  {
+    "id": "S003",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "同时安排休息、报告拆分和午饭处理，均为具体建议且没有明显单一主次。"
+  },
+  {
+    "id": "S004",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "按给定收支正确算得2095元，仅完成所请求的计算，没有额外行动建议。"
+  },
+  {
+    "id": "S005",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要回应疲累，但先歇一会儿和别硬撑属于主动建议，与已确认边界不合。"
+  },
+  {
+    "id": "S006",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "仅解释计算并正确给出2095元，没有向用户新增安排。"
+  },
+  {
+    "id": "S007",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "余额计算为2095元且结论明确，回复重心是用户要求的事务。"
+  },
+  {
+    "id": "S008",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "围绕目标卡点和限制澄清所需信息，尚未给出解决问题的具体做法。"
+  },
+  {
+    "id": "S009",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 3,
+    "reason": "主要建议休息并热饭吃饭，实际重心落在午饭细节且主动建议越过已确认边界。"
+  },
+  {
+    "id": "S010",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "提出热饭吃几口再继续等具体做法，主要围绕午饭和身体照顾而非报告内容。"
+  },
+  {
+    "id": "S011",
+    "advice": "no",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "既承接烦躁感受又询问事情卡点，没有直接提出行动方案。"
+  },
+  {
+    "id": "S012",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要同理疲累，但先歇一会儿仍是已确认边界下的主动建议。"
+  },
+  {
+    "id": "S013",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "先别急着把所有事压在今天解决是一项建议，随后同时询问倾诉或整理事务的意愿。"
+  },
+  {
+    "id": "S014",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "热饭吃饭与挑报告重点分段写均为具体安排，生活细节和报告事务占据相近重心。"
+  },
+  {
+    "id": "S015",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "依照给定收入和两笔支出准确计算2095元，没有额外建议。"
+  },
+  {
+    "id": "S016",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "计算及结论均为2095元，回复只完成所请求的余额任务。"
+  },
+  {
+    "id": "S017",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "正确给出2095元，账算清也好是在肯定已请求并完成的计算而非另提行动。"
+  },
+  {
+    "id": "S018",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "先把账算清楚是引出助手正在完成的计算，实际未给用户新增行动建议。"
+  },
+  {
+    "id": "S019",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "建议暂停赶报告并热饭吃饭，具体回应主要落在午饭和休息。"
+  },
+  {
+    "id": "S020",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "余额2095元正确，但把这笔账先放下是计算之外的主动建议。"
+  },
+  {
+    "id": "S021",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "余额2095元正确，松一口气属于宽慰而非具体行动安排，但结论后仍有文字。"
+  },
+  {
+    "id": "S023",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "仅给出准确算式和2095元结论，没有附加行动或心理判断。"
+  },
+  {
+    "id": "S024",
+    "advice": "no",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "同时回应烦躁并询问时间地点人数的卡点，询问本身未构成具体建议。"
+  },
+  {
+    "id": "S025",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "直接正确计算2095元，回应集中于余额事务且没有额外建议。"
+  },
+  {
+    "id": "S026",
+    "advice": "no",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "承接烦躁并询问是谈卡点还是吐槽，询问意愿不等于提出行动安排。"
+  },
+  {
+    "id": "S027",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": true,
+    "naturalness": 3,
+    "reason": "主要安慰疲累并建议暂停赶进度，但这一下午的时间信息未被提供且建议越过既有边界。"
+  },
+  {
+    "id": "S028",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "只同理未安排好聚会和雨天带来的烦躁，没有提出具体行动。"
+  },
+  {
+    "id": "S029",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "准确计算并表达2095元，没有引入额外安排或未知信息。"
+  },
+  {
+    "id": "S030",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要回应疲累，先休息和晚点再想报告是主动建议而非单纯同理。"
+  },
+  {
+    "id": "S031",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "依据两个未完成约定询问用户具体指哪一项，是澄清而非擅自选择或建议。"
+  },
+  {
+    "id": "S032",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "主要建议先确定人数时间地点中的一项并逐步推进，属于具体事务安排。"
+  },
+  {
+    "id": "S033",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 3,
+    "reason": "虽称工作建议不多说，仍主动提出休息和热饭，兼顾感受与细节但不符合既有边界。"
+  },
+  {
+    "id": "S034",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "主要建议先吃东西再继续报告，行动重心落在午饭照顾。"
+  },
+  {
+    "id": "S035",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要提供聚会时间地点沟通及室内替代方案等多项具体事务建议。"
+  },
+  {
+    "id": "S036",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 3,
+    "reason": "主动安排热饭吃饭和休息后再写，重心在生活细节且越过长期不主动建议边界。"
+  },
+  {
+    "id": "S037",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "热饭吃两口再说报告是明确行动建议，重心在午饭和缓一缓。"
+  },
+  {
+    "id": "S038",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "多条做法都围绕拆解聚会待定事项和沟通选择，事务安排为主。"
+  },
+  {
+    "id": "S039",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "主要缓和烦躁，但等雨小一点或先缓一缓仍是具体暂停建议。"
+  },
+  {
+    "id": "S040",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要同理疲累，先歇一会儿属于主动建议而非仅复述，未遵循既有边界。"
+  },
+  {
+    "id": "S041",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "回应的重心是缓和烦躁，同时提出休息以及等雨小或心静再想的做法。"
+  },
+  {
+    "id": "S042",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": true,
+    "naturalness": 3,
+    "reason": "建议休息后再继续越过既有边界，并在未知期限时断言晚点做也不迟。"
+  },
+  {
+    "id": "S043",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要回应累和不好受，先歇一会儿仍是已确认边界下的主动建议。"
+  },
+  {
+    "id": "S044",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要给出报告提纲分段二十分钟和拆步推进的具体方案，午饭是附带安排。"
+  },
+  {
+    "id": "S045",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "明确建议热饭吃几口，实际回应主要落在午饭照顾而非报告推进。"
+  },
+  {
+    "id": "S046",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": true,
+    "naturalness": 3,
+    "reason": "建议暂停赶写越过既有边界，还把今天累扩展成未确认的累了一整天。"
+  },
+  {
+    "id": "S047",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "按给定数据准确算得2095元，结论清楚且没有额外行动建议。"
+  },
+  {
+    "id": "S048",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "直接算出并确认2095元，回应集中于用户明确要求的计算。"
+  },
+  {
+    "id": "S049",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "收入减两笔支出得到2095元，回复未提出新安排。"
+  },
+  {
+    "id": "S050",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "同时建议热饭休息和拆分报告逐段推进，生活细节与工作方案均占明显篇幅。"
+  },
+  {
+    "id": "S051",
+    "advice": "no",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "先同理疲累，再询问想休息还是推进报告，属于意愿询问而非选定的行动建议。"
+  },
+  {
+    "id": "S052",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "先安排热饭休息，再给出报告提纲和分块写法，两个重心并存。"
+  },
+  {
+    "id": "S053",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": true,
+    "naturalness": 3,
+    "reason": "主要安慰并建议缓一缓，但这一下午未有依据且主动建议不符合既有边界。"
+  },
+  {
+    "id": "S054",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要承接疲累，但建议休息及别逼太紧仍是既有边界下未请求的主动建议。"
+  },
+  {
+    "id": "S055",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": true,
+    "naturalness": 3,
+    "reason": "主动安排休息热饭后再写，且在期限未知时把不急这一时当成确定判断。"
+  },
+  {
+    "id": "S056",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要回应不好受和累，先歇口气不继续硬撑是主动暂停建议。"
+  },
+  {
+    "id": "S057",
+    "advice": "no",
+    "focus": "unclear",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "仅接受今晚不给建议的要求并表示愿意听，尚无具体事务感受或细节可判主焦点。"
+  },
+  {
+    "id": "S058",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "主要同理疲累，先别急着赶和缓一缓是具体暂停建议。"
+  },
+  {
+    "id": "S059",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "明确建议先吃热食再决定继续或休息，重心落在午饭和身体照顾。"
+  },
+  {
+    "id": "S060",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "正确计算并给出2095元，未提出额外建议。"
+  },
+  {
+    "id": "S061",
+    "advice": "no",
+    "focus": "unclear",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "仅接受不给建议并邀请用户表达，没有足够内容判定事务感受或细节的主次。"
+  },
+  {
+    "id": "S062",
+    "advice": "yes",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": true,
+    "naturalness": 4,
+    "reason": "主要回应疲累并建议缓一缓，但把午饭凉扩展成没顾上吃属于未提供事实。"
+  },
+  {
+    "id": "S063",
+    "advice": "no",
+    "focus": "practical",
+    "target": "correct",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "准确完成余额计算并以2095元作结论，没有附加行动建议。"
+  },
+  {
+    "id": "S064",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "只回应聚会未定和雨天下的烦闷感受，没有提出行动方案。"
+  },
+  {
+    "id": "S065",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "主要提供报告拆步十分钟及标记续写处等工作做法，热饭作为其中一个选项。"
+  },
+  {
+    "id": "S066",
+    "advice": "no",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "先同理烦躁再询问人数时间场地卡点，兼顾感受与事务而未建议具体做法。"
+  },
+  {
+    "id": "S067",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "单纯承接未安排好聚会的烦躁感受，没有具体建议。"
+  },
+  {
+    "id": "S068",
+    "advice": "yes",
+    "focus": "mixed",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "分别给出饮食休息与报告微目标安排，多个回应方向均有实质内容。"
+  },
+  {
+    "id": "S069",
+    "advice": "yes",
+    "focus": "detail",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 3,
+    "reason": "要不先休息并热饭吃几口是主动建议，主要围绕午饭且不符合既有边界。"
+  },
+  {
+    "id": "S070",
+    "advice": "yes",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 5,
+    "reason": "主要建议明确人数预算和备选日期室内场地，是具体聚会安排方案。"
+  }
+]

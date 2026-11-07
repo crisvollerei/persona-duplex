@@ -1,0 +1,1985 @@
+{
+  "version": "baseline",
+  "api_calls": 0,
+  "memory": [
+    {
+      "version": "baseline",
+      "scenario": "supported",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "supported",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "supported",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "supported",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "supported",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "supported",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "retracted",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "retraction_not_available"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "retracted",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "retraction_not_available"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "retracted",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "retraction_not_available"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "retracted",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "retraction_not_available"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "retracted",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "retraction_not_available"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "retracted",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": true,
+      "correct": false,
+      "reasons": [
+        "retraction_not_available"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "third_party",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "同事说：“我明确更正，现在改为专注23分钟，旧19分钟作废。”我只是转述。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "third_party",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "同事说：“我明确更正，现在改为专注23分钟，旧19分钟作废。”我只是转述。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "third_party",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "同事说：“我明确更正，现在改为专注23分钟，旧19分钟作废。”我只是转述。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "third_party",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "同事说：“我明确更正，现在改为专注23分钟，旧19分钟作废。”我只是转述。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "third_party",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "同事说：“我明确更正，现在改为专注23分钟，旧19分钟作废。”我只是转述。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "third_party",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "同事说：“我明确更正，现在改为专注23分钟，旧19分钟作废。”我只是转述。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "hypothetical",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "如果以后决定修改，我可能会改为专注23分钟，但现在还没有确定。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "hypothetical",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "如果以后决定修改，我可能会改为专注23分钟，但现在还没有确定。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "hypothetical",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "如果以后决定修改，我可能会改为专注23分钟，但现在还没有确定。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "hypothetical",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "如果以后决定修改，我可能会改为专注23分钟，但现在还没有确定。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "hypothetical",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "如果以后决定修改，我可能会改为专注23分钟，但现在还没有确定。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "hypothetical",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "如果以后决定修改，我可能会改为专注23分钟，但现在还没有确定。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "forged",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "forged",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "forged",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "forged",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "forged",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "forged",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "wrong_target",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "wrong_target",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "wrong_target",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "wrong_target",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "wrong_target",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "wrong_target",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "cross_topic",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我偏好的热饮是茉莉茶。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我偏好的热饮是茉莉茶。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "cross_topic",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "cross_topic",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "cross_topic",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我偏好的热饮是茉莉茶。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我偏好的热饮是茉莉茶。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "cross_topic",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我偏好的热饮是茉莉茶。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我偏好的热饮是茉莉茶。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        },
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "baseline",
+      "scenario": "cross_topic",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [
+        "legacy_confidence_and_target_guard"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    }
+  ],
+  "contracts": [],
+  "memory_correct": 21,
+  "memory_total": 42,
+  "contract_correct": 0,
+  "contract_total": 0
+}

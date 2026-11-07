@@ -1,0 +1,43 @@
+{
+  "case": "S04",
+  "call_id": "S04",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "排了二十分钟，到跟前才说卖完了，这确实挺让人窝火的。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "这二十分钟站得确实冤，换谁都会觉得白等了。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "轮到才被告知卖完，比一开始就说更让人难受。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "白站二十分钟，还得到最后才知道，这口气确实难顺。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "这种时候最烦的就是时间已经花出去了，结果什么也没落着。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C06",
+      "text": "站了那么久，最后只等到一句卖完了，确实挺扫兴的。",
+      "attention": 2,
+      "initiative": 0
+    }
+  ]
+}

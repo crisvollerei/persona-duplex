@@ -1,0 +1,159 @@
+{
+  "network_requests": 0,
+  "reused_responses": 108,
+  "exact_flows": 30,
+  "planned_steps": 180,
+  "delivered_outputs": 147,
+  "checks": [
+    {
+      "phase": "main",
+      "id": "meeting-detail_first-no_inquiry-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-detail_first-program-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-detail_first-prompt-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-detail_first-prompt-2",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-practical_first-no_inquiry-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-practical_first-program-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-practical_first-prompt-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "meeting-practical_first-prompt-2",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-detail_first-no_inquiry-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-detail_first-program-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-detail_first-prompt-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-detail_first-prompt-2",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-practical_first-no_inquiry-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-practical_first-program-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-practical_first-prompt-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "report-practical_first-prompt-2",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-detail_first-no_inquiry-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-detail_first-program-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-detail_first-prompt-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-detail_first-prompt-2",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-practical_first-no_inquiry-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-practical_first-program-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-practical_first-prompt-1",
+      "equal": true
+    },
+    {
+      "phase": "main",
+      "id": "trip-practical_first-prompt-2",
+      "equal": true
+    },
+    {
+      "phase": "confirmation",
+      "id": "meeting-detail_first-clarified",
+      "equal": true
+    },
+    {
+      "phase": "confirmation",
+      "id": "meeting-practical_first-clarified",
+      "equal": true
+    },
+    {
+      "phase": "confirmation",
+      "id": "report-detail_first-clarified",
+      "equal": true
+    },
+    {
+      "phase": "confirmation",
+      "id": "report-practical_first-clarified",
+      "equal": true
+    },
+    {
+      "phase": "confirmation",
+      "id": "trip-detail_first-clarified",
+      "equal": true
+    },
+    {
+      "phase": "confirmation",
+      "id": "trip-practical_first-clarified",
+      "equal": true
+    }
+  ]
+}

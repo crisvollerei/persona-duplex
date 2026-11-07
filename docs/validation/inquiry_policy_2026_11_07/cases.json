@@ -1,0 +1,85 @@
+[
+  {
+    "id": "report",
+    "topic": "report",
+    "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+    "slots": [
+      {
+        "id": "report_due",
+        "kind": "practical",
+        "question": "报告最晚哪天交？",
+        "purpose": "填写交付日期",
+        "evidence": "截止日期",
+        "answer": "周五",
+        "response": "answer"
+      },
+      {
+        "id": "report_format",
+        "kind": "detail",
+        "question": "报告要用什么文件格式？",
+        "purpose": "填写导出格式",
+        "evidence": "文件格式",
+        "answer": "PDF",
+        "response": "answer"
+      }
+    ],
+    "controls": {}
+  },
+  {
+    "id": "meeting",
+    "topic": "meeting",
+    "task": "整理会议信息：会议日期与人数都需要确认。",
+    "slots": [
+      {
+        "id": "meeting_day",
+        "kind": "practical",
+        "question": "会议安排在哪一天？",
+        "purpose": "填写会议日期",
+        "evidence": "会议日期",
+        "answer": "周三",
+        "response": "decline"
+      },
+      {
+        "id": "meeting_count",
+        "kind": "detail",
+        "question": "一共有多少人参加会议？",
+        "purpose": "填写参与人数",
+        "evidence": "人数",
+        "answer": "四人",
+        "response": "answer"
+      }
+    ],
+    "controls": {}
+  },
+  {
+    "id": "trip",
+    "topic": "trip",
+    "task": "整理出行信息：目的地与出发日期都需要确认。",
+    "slots": [
+      {
+        "id": "trip_place",
+        "kind": "practical",
+        "question": "这次出行的目的地是哪里？",
+        "purpose": "填写目的地",
+        "evidence": "目的地",
+        "answer": "苏州",
+        "response": "ambiguous_first"
+      },
+      {
+        "id": "trip_day",
+        "kind": "detail",
+        "question": "准备在哪一天出发？",
+        "purpose": "填写出发日期",
+        "evidence": "出发日期",
+        "answer": "周六",
+        "response": "ambiguous_first"
+      }
+    ],
+    "controls": {
+      "2": "不要追问",
+      "3": "只想你听听",
+      "4": "可以追问"
+    },
+    "late_answer_turn": 5
+  }
+]

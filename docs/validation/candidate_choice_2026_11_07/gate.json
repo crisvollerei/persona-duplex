@@ -1,0 +1,24 @@
+{
+  "pools_sha256": "2bbf4c56387f4283c22a55bb55ca457618d21f2274462d5f68a05fa12c65a472",
+  "schema_ok": 12,
+  "coders": [
+    {
+      "coder": 1,
+      "usable": 63,
+      "planned_candidates": 72,
+      "distinct_pools": 9,
+      "passed": false,
+      "ratings_sha256": "31c078ba07d28d630e10047eb81b352353a0cda6a0f9a388bb1907f84a655bc9"
+    },
+    {
+      "coder": 2,
+      "usable": 63,
+      "planned_candidates": 72,
+      "distinct_pools": 9,
+      "passed": false,
+      "ratings_sha256": "200a0db2b803ee8389319c60230445b221e37b554f5907bc7487d4d94628f983"
+    }
+  ],
+  "proceed": false,
+  "policy": "Whole batch only; no candidate removal, regeneration or replacement"
+}

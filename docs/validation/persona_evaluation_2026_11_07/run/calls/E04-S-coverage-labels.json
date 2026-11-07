@@ -1,0 +1,55 @@
+{
+  "id": "E04-S-coverage-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T01:22:03.481936+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [{\"role\": \"user\", \"content\": \"读书会原定在一楼。群里刚有人发了‘可能改到二楼，待确认’，没有其他通知。\"}], \"user\": \"那我现在能把‘已经确定改到二楼’写进自己的记录吗？\", \"facts\": [\"读书会原定在一楼。\", \"目前唯一新增消息为‘可能改到二楼，待确认’。\", \"用户没有收到其他通知。\"], \"boundaries\": []}, \"candidates\": [{\"id\": \"X01\", \"text\": \"这种悬着的感觉确实会让人不好落笔。现有消息还不足以写成“已确定”，保留原记录或许更安心。\"}, {\"id\": \"X02\", \"text\": \"面对这种不确定，想先记下来又怕写错，是能理解的。若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。\"}, {\"id\": \"X03\", \"text\": \"目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。\"}, {\"id\": \"X04\", \"text\": \"群里的说法只是“可能”和“待确认”，没有形成确定通知。如果你之后看到补充消息，也可以再说一声。\"}, {\"id\": \"X05\", \"text\": \"关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。记录里若写“待确认可能改至二楼”，就不会把未知写成已知。\"}, {\"id\": \"X06\", \"text\": \"现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "c4e58466-9716-4a60-b47b-49656624ada6",
+    "object": "chat.completion",
+    "created": 1794014523,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种悬着的感觉确实会让人不好落笔。\"},{\"kind\":\"content\",\"quote\":\"现有消息还不足以写成“已确定”\"}],\"initiative\":1,\"initiative_quote\":\"保留原记录或许更安心。\"},{\"id\":\"X02\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"面对这种不确定，想先记下来又怕写错，是能理解的。\"},{\"kind\":\"content\",\"quote\":\"若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。\"}],\"initiative\":2,\"initiative_quote\":\"若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。\"},{\"id\":\"X03\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"目前只看到“可能改到二楼，待确认”，没有其他通知。\"},{\"kind\":\"content\",\"quote\":\"记录里仍写一楼更稳妥。\"}],\"initiative\":0,\"initiative_quote\":\"目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。\"},{\"id\":\"X04\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"群里的说法只是“可能”和“待确认”，没有形成确定通知。\"}],\"initiative\":1,\"initiative_quote\":\"如果你之后看到补充消息，也可以再说一声。\"},{\"id\":\"X05\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。\"},{\"kind\":\"content\",\"quote\":\"记录里若写“待确认可能改至二楼”，就不会把未知写成已知。\"}],\"initiative\":2,\"initiative_quote\":\"记录里若写“待确认可能改至二楼”，就不会把未知写成已知。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。\"},{\"kind\":\"experience\",\"quote\":\"你想让记录可靠，这一点我明白。\"}],\"initiative\":0,\"initiative_quote\":\"现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 823,
+      "completion_tokens": 524,
+      "total_tokens": 1347,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 567
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种悬着的感觉确实会让人不好落笔。\"},{\"kind\":\"content\",\"quote\":\"现有消息还不足以写成“已确定”\"}],\"initiative\":1,\"initiative_quote\":\"保留原记录或许更安心。\"},{\"id\":\"X02\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"面对这种不确定，想先记下来又怕写错，是能理解的。\"},{\"kind\":\"content\",\"quote\":\"若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。\"}],\"initiative\":2,\"initiative_quote\":\"若你愿意，可以说说更在意记录准确，还是怕临时找不到地方。\"},{\"id\":\"X03\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"目前只看到“可能改到二楼，待确认”，没有其他通知。\"},{\"kind\":\"content\",\"quote\":\"记录里仍写一楼更稳妥。\"}],\"initiative\":0,\"initiative_quote\":\"目前只看到“可能改到二楼，待确认”，没有其他通知。记录里仍写一楼更稳妥。\"},{\"id\":\"X04\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"群里的说法只是“可能”和“待确认”，没有形成确定通知。\"}],\"initiative\":1,\"initiative_quote\":\"如果你之后看到补充消息，也可以再说一声。\"},{\"id\":\"X05\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"关键差别在措辞：“可能改到二楼，待确认”是未定消息，不是确定通知。\"},{\"kind\":\"content\",\"quote\":\"记录里若写“待确认可能改至二楼”，就不会把未知写成已知。\"}],\"initiative\":2,\"initiative_quote\":\"记录里若写“待确认可能改至二楼”，就不会把未知写成已知。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。\"},{\"kind\":\"experience\",\"quote\":\"你想让记录可靠，这一点我明白。\"}],\"initiative\":0,\"initiative_quote\":\"现在还不能把“已经确定改到二楼”写进记录，唯一新增消息只是待确认的可能。你想让记录可靠，这一点我明白；先保留一楼或标注待确认，会更贴近现状。\"}]}",
+  "elapsed_s": 2.4628006001003087,
+  "finished_at": "2026-11-07T01:22:05.945322+00:00"
+}

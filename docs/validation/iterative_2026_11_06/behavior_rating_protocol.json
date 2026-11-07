@@ -1,0 +1,15 @@
+{
+  "stage": "b1",
+  "fixed_before_generation": true,
+  "codebook_sha256": "365160a55f149fa8e37e2c1580a6ea429b72438e4820241d31646d94384cc632",
+  "reviewers": 2,
+  "reviewer_type": "separately started condition-anonymous Codex tasks; not independent humans",
+  "labels": [
+    "action_advice",
+    "decision_pressure",
+    "clarification",
+    "accepts_refusal"
+  ],
+  "no_consensus_overwrite": true,
+  "conditional_confirmation_trigger": "mean of the two reviewer unsolicited high-minus-low advice differences <=0 OR mean refusal advice rate >0.10"
+}

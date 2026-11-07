@@ -1,0 +1,9 @@
+{
+  "timing": "post_hoc",
+  "reviewed": 27,
+  "answer_supported": {
+    "yes": 27
+  },
+  "self_contradictions": 0,
+  "scope": "Requested conclusion only, one condition-anonymous Codex reviewer, not human validation or full-text truth"
+}

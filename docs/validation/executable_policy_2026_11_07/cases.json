@@ -1,0 +1,173 @@
+[
+  {
+    "id": "work",
+    "user": "报告没写完，今天好累，桌边的午饭也凉了。",
+    "topic": "work",
+    "seed": "none",
+    "frame": {
+      "facts": [
+        {
+          "source_id": "user",
+          "text": "报告没写完"
+        }
+      ],
+      "focuses": [
+        {
+          "id": "task",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "user",
+            "text": "报告没写完"
+          }
+        },
+        {
+          "id": "feeling",
+          "kind": "feeling",
+          "evidence": {
+            "source_id": "user",
+            "text": "好累"
+          }
+        },
+        {
+          "id": "detail",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "user",
+            "text": "午饭也凉了"
+          }
+        }
+      ]
+    },
+    "sources": [],
+    "gold": null
+  },
+  {
+    "id": "social",
+    "user": "聚会还没安排好，我有点烦，窗外雨也下个不停。",
+    "topic": "social",
+    "seed": "none",
+    "frame": {
+      "facts": [
+        {
+          "source_id": "user",
+          "text": "聚会还没安排好"
+        }
+      ],
+      "focuses": [
+        {
+          "id": "task",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "user",
+            "text": "聚会还没安排好"
+          }
+        },
+        {
+          "id": "feeling",
+          "kind": "feeling",
+          "evidence": {
+            "source_id": "user",
+            "text": "有点烦"
+          }
+        },
+        {
+          "id": "detail",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "user",
+            "text": "窗外雨也下个不停"
+          }
+        }
+      ]
+    },
+    "sources": [],
+    "gold": null
+  },
+  {
+    "id": "denied",
+    "user": "报告没写完，今天好累，桌边的午饭也凉了。",
+    "topic": "work",
+    "seed": "deny",
+    "frame": {
+      "facts": [
+        {
+          "source_id": "user",
+          "text": "报告没写完"
+        }
+      ],
+      "focuses": [
+        {
+          "id": "task",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "user",
+            "text": "报告没写完"
+          }
+        },
+        {
+          "id": "feeling",
+          "kind": "feeling",
+          "evidence": {
+            "source_id": "user",
+            "text": "好累"
+          }
+        },
+        {
+          "id": "detail",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "user",
+            "text": "午饭也凉了"
+          }
+        }
+      ]
+    },
+    "sources": [],
+    "gold": null
+  },
+  {
+    "id": "answer",
+    "user": "我有点烦，帮我算余额，最后一行写结论和元。",
+    "topic": "work",
+    "seed": "deny",
+    "frame": {
+      "request": "answer",
+      "request_quote": "帮我算余额",
+      "answer": "3850-1270-485=2095元",
+      "required": [
+        "结论行保留单位元"
+      ],
+      "facts": [
+        {
+          "source_id": "record",
+          "text": "收入3850元，支出1270元和485元。"
+        }
+      ],
+      "focuses": [
+        {
+          "id": "feeling",
+          "kind": "feeling",
+          "evidence": {
+            "source_id": "user",
+            "text": "有点烦"
+          }
+        },
+        {
+          "id": "task",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "record",
+            "text": "收入3850元，支出1270元和485元。"
+          }
+        }
+      ]
+    },
+    "sources": [
+      {
+        "id": "record",
+        "text": "收入3850元，支出1270元和485元。"
+      }
+    ],
+    "gold": "2095元"
+  }
+]

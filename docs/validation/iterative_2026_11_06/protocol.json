@@ -1,0 +1,54 @@
+{
+  "study_id": "persona_duplex_iterative_2026_11_06",
+  "fixed_at": "2026-11-06T22:51:26+08:00",
+  "client_date": "2026-11-06",
+  "plan_digest": "8611592b65bdc594155a44dcb83e583878b28029cb8b954329ff7b73fd7f6d50",
+  "parameters": {
+    "model": "deepseek-chat",
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "timeout": 120.0
+  },
+  "endpoint": "https://api.deepseek.com/v1",
+  "workers": 4,
+  "hard_limit": 800,
+  "planned_requests": {
+    "r0": 48,
+    "r1": 252,
+    "r2": 252,
+    "b1": 144,
+    "total": 696
+  },
+  "optional_behavior_confirmation": {
+    "maximum": 96,
+    "criterion": "Only if b1 high-low unsolicited advice difference <=0 or refusal advice exceeds 10%; one targeted policy revision then four new scenarios x three boundaries x two settings x four replications; labels fixed before new outputs"
+  },
+  "version_policy": "Baseline archived before edits. Freeze A before r1. At most one evidence-based revision B between r1 and holdout r2; use B or unchanged A in r2. Never tune on r2 outputs.",
+  "arm_policy": "r1/r2 same three arms: baseline, revision without contract, revision with contract; memory baseline/revision. r2 uses fresh fixed instances. No manual content repair.",
+  "outcomes": [
+    "content coverage and target correctness",
+    "mechanical format",
+    "combined strict answer",
+    "local protocol",
+    "delivered text",
+    "memory state and operations",
+    "behavior labels",
+    "tokens and latency"
+  ],
+  "scoring": "Format and content use pre-fixed extractors; missing coverage is separate. All assigned denominators, no retries or replacement. Mechanical contract is not factual truth.",
+  "controls": {
+    "default_foreground_calls": 1,
+    "memory": "explicit phase boundaries",
+    "checker": false,
+    "retry": false,
+    "fallback": false,
+    "semantic_judge": false,
+    "server_seed": null
+  },
+  "analysis": "Paired task/scenario-cluster descriptive bootstrap 4000; no equivalence or general-safety claim. Rounds separate; behavior ratings by two condition-anonymous Codex review tasks, not independent humans.",
+  "profile_hashes": {
+    "blue_whale.toml": "1787a5c6cad5cf6bb4cc80475015568ba4fef2d617404eb63aab7319c08473d9",
+    "white_dragon.toml": "b4649800e052014c46602797dac8e6ef55c17b6fe4a682218a3b2f03040b3991"
+  },
+  "privacy": "Synthetic tasks only; API secret remains in process environment"
+}

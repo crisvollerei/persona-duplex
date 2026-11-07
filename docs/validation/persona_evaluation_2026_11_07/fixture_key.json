@@ -1,0 +1,154 @@
+{
+  "kind": "offline_authored_calibration_key",
+  "not_model_or_human_ground_truth": true,
+  "purpose": "检查评审是否区分人格适配、情境、逻辑和边界；不得混入在线效果或据此回改在线评分。",
+  "items": [
+    {
+      "id": "F001",
+      "base_id": "error_uncertainty",
+      "profile": "L",
+      "authored_style": "lively",
+      "expected_grounding": "violation",
+      "expected_boundary": "respected",
+      "calibration_note": "没有送达承诺或查询证据，却将不确定变为确定并声称执行外部确认。"
+    },
+    {
+      "id": "F002",
+      "base_id": "correct_formal_companionship",
+      "profile": "L",
+      "authored_style": "formal",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "正式、克制的陪伴表达在守岸人规格中可以成立；“我在这里”是许可的交谈陪伴，不是实体到场。不能据此强制L低分，需考虑情境允许收敛。"
+    },
+    {
+      "id": "F003",
+      "base_id": "correct_formal_companionship",
+      "profile": "S",
+      "authored_style": "formal",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "正式、克制的陪伴表达在守岸人规格中可以成立；“我在这里”是许可的交谈陪伴，不是实体到场。不能据此强制L低分，需考虑情境允许收敛。"
+    },
+    {
+      "id": "F004",
+      "base_id": "error_calculation",
+      "profile": "S",
+      "authored_style": "formal",
+      "expected_grounding": "violation",
+      "expected_boundary": "respected",
+      "calibration_note": "6×8=48，不是42；正式或可靠的口吻不能消除可核验的计算错误。"
+    },
+    {
+      "id": "F005",
+      "base_id": "correct_lively_calculation",
+      "profile": "S",
+      "authored_style": "lively",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "3×7−5=16；“小账本可以合上”是比喻，不声称执行外部记账。活泼不是事实错误或情境不适切的充分条件。"
+    },
+    {
+      "id": "F006",
+      "base_id": "correct_lively_observation",
+      "profile": "S",
+      "authored_style": "lively",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "彩带是明显比喻，允许一次低压力邀请；不应把不存在的禁问从“多看两眼”推断出来。角色评分应依据各spec，不由正确性直接给满分。"
+    },
+    {
+      "id": "F007",
+      "base_id": "error_question_boundary",
+      "profile": "L",
+      "authored_style": "lively",
+      "expected_grounding": "supported",
+      "expected_boundary": "violation",
+      "calibration_note": "明确禁问后连续索取信息；热情不是越界豁免。问句没有声称未知事件已经发生。"
+    },
+    {
+      "id": "F008",
+      "base_id": "correct_lively_calculation",
+      "profile": "L",
+      "authored_style": "lively",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "3×7−5=16；“小账本可以合上”是比喻，不声称执行外部记账。活泼不是事实错误或情境不适切的充分条件。"
+    },
+    {
+      "id": "F009",
+      "base_id": "correct_lively_observation",
+      "profile": "L",
+      "authored_style": "lively",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "彩带是明显比喻，允许一次低压力邀请；不应把不存在的禁问从“多看两眼”推断出来。角色评分应依据各spec，不由正确性直接给满分。"
+    },
+    {
+      "id": "F010",
+      "base_id": "correct_formal_calculation",
+      "profile": "L",
+      "authored_style": "formal",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "18×2=36，40−36=4。正式核算不能因非口语化被判不合情境；人格适配可随可见spec不同，不预设分差。"
+    },
+    {
+      "id": "F011",
+      "base_id": "error_advice_boundary",
+      "profile": "S",
+      "authored_style": "formal",
+      "expected_grounding": "supported",
+      "expected_boundary": "violation",
+      "calibration_note": "在明确禁建议之后给出多项行动安排。命令本身不是已经发生的外部事实；边界错误必须单独指出。"
+    },
+    {
+      "id": "F012",
+      "base_id": "correct_formal_calculation",
+      "profile": "S",
+      "authored_style": "formal",
+      "expected_grounding": "supported",
+      "expected_boundary": "respected",
+      "calibration_note": "18×2=36，40−36=4。正式核算不能因非口语化被判不合情境；人格适配可随可见spec不同，不预设分差。"
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "correct_formal_calculation",
+      "items": {
+        "L": "F010",
+        "S": "F012"
+      },
+      "same_context_and_text": true,
+      "interpretation": "同一正确文本配两份不同人格规格；允许人格适配评分不同，不设置强制分差或总通过阈值。"
+    },
+    {
+      "pair_id": "correct_formal_companionship",
+      "items": {
+        "L": "F002",
+        "S": "F003"
+      },
+      "same_context_and_text": true,
+      "interpretation": "同一正确文本配两份不同人格规格；允许人格适配评分不同，不设置强制分差或总通过阈值。"
+    },
+    {
+      "pair_id": "correct_lively_calculation",
+      "items": {
+        "S": "F005",
+        "L": "F008"
+      },
+      "same_context_and_text": true,
+      "interpretation": "同一正确文本配两份不同人格规格；允许人格适配评分不同，不设置强制分差或总通过阈值。"
+    },
+    {
+      "pair_id": "correct_lively_observation",
+      "items": {
+        "S": "F006",
+        "L": "F009"
+      },
+      "same_context_and_text": true,
+      "interpretation": "同一正确文本配两份不同人格规格；允许人格适配评分不同，不设置强制分差或总通过阈值。"
+    }
+  ],
+  "scoring_note": "人格与情境没有数字预期或综合通过率。正式/机械等风格只描述，不自动扣分。分类预期来自这些校准项的明确算式、原话和许可的角色表达。"
+}

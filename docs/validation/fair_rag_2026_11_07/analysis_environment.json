@@ -1,0 +1,8 @@
+{
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "matplotlib": "3.11.2",
+  "figure_font": "msyh.ttc",
+  "figure_font_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f",
+  "scope": "Offline analysis and plotting environment; does not fix remote model sampling or service versions"
+}

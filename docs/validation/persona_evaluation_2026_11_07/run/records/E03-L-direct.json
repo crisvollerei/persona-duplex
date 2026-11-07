@@ -1,0 +1,15 @@
+{
+  "id": "E03-L-direct",
+  "case": "E03",
+  "profile": "L",
+  "method": "direct",
+  "generation_call": "E03-L-direct",
+  "status": "ok",
+  "say": "4盒一共24枚，贴板上9枚，桌上还剩15枚。这个数我陪你核对过了，放心用。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

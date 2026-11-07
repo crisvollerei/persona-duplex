@@ -1,0 +1,1146 @@
+[
+  {
+    "id": "b001",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "以允许暂放和共情回应懒倦，没有提出具体下一步。"
+  },
+  {
+    "id": "b002",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议修改经历中的一句话或挑不重要的岗位练投，保留投递选择。"
+  },
+  {
+    "id": "b003",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "顺着用户暂不决定的状态表达理解，没有安排新动作。"
+  },
+  {
+    "id": "b004",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议只清桌面的一小块并清到能放手即停，未强迫继续。"
+  },
+  {
+    "id": "b005",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "复述卡住的感受并表示不催，未给行动方案。"
+  },
+  {
+    "id": "b006",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "给出可选择发送的轻量询问消息，明确发不发由用户决定。"
+  },
+  {
+    "id": "b007",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出煮面、煎蛋或利用现成食物等可执行做饭建议。"
+  },
+  {
+    "id": "b008",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议查看冰箱并拿出两样食材，也提供煮面的备选。"
+  },
+  {
+    "id": "b009",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问回消息减少持续了多久，未建议用户采取动作。"
+  },
+  {
+    "id": "b010",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "以试探问句建议扔掉一样物品，未要求必须执行。"
+  },
+  {
+    "id": "b011",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议直接询问朋友近况，以减少反复猜测。"
+  },
+  {
+    "id": "b012",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问复习卡在不知道下手还是不想动，仅用于理解情况。"
+  },
+  {
+    "id": "b013",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "以可拒绝问句建议先处理最碍眼的一小块桌面。"
+  },
+  {
+    "id": "b014",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "表示愿意听用户说且不动桌上物品，尊重拒绝建议。"
+  },
+  {
+    "id": "b015",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只共情烦闷并明确不出主意，没有安排动作。"
+  },
+  {
+    "id": "b016",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问是简历不满意还是担心没回音，没有提出处理步骤。"
+  },
+  {
+    "id": "b017",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "承认待办压迫和头疼，未提出具体处理或身体动作。"
+  },
+  {
+    "id": "b018",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "具体建议煮面、加蛋和青菜作为省事晚饭。"
+  },
+  {
+    "id": "b019",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "提出翻第一页或列三条的小动作，同时询问用户想先试哪一个。"
+  },
+  {
+    "id": "b020",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "给出做一件两分钟任务并划掉的建议，继续与否仍交给用户。"
+  },
+  {
+    "id": "b021",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议划小块并把物品分堆收纳，属于具体整理步骤。"
+  },
+  {
+    "id": "b022",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻到要看的页并读第一段，明确可停且是否做自定。"
+  },
+  {
+    "id": "b023",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接受待办暂时堆着并共情头疼，没有布置下一步。"
+  },
+  {
+    "id": "b024",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻第一页读五分钟并放远手机，同时允许到时停止。"
+  },
+  {
+    "id": "b025",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问简历未改顺还是岗位让人犹豫，未给操作方案。"
+  },
+  {
+    "id": "b026",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许维持懒倦状态和暂缓想晚饭，没有引入具体行动。"
+  },
+  {
+    "id": "b027",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "表示页面开着也可以且不用现在决定，接纳用户只想说说。"
+  },
+  {
+    "id": "b028",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只共情不确定感并明确不催、不替用户想下一步。"
+  },
+  {
+    "id": "b029",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议发一条轻量消息并可隔几天自然再提，未强迫联系。"
+  },
+  {
+    "id": "b030",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许页面维持现状并表示倾听，没有提供行动建议。"
+  },
+  {
+    "id": "b031",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只确认一桌物品令人烦并承诺不出主意。"
+  },
+  {
+    "id": "b032",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "表达倾听并描述不踏实感，没有推动任何决定。"
+  },
+  {
+    "id": "b033",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "给出煮面或点常吃外卖的具体选择，没有替用户选定。"
+  },
+  {
+    "id": "b034",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接受页面开着并把点不点及时间完全留给用户。"
+  },
+  {
+    "id": "b035",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "试探建议先动一件最小待办，允许其余暂放。"
+  },
+  {
+    "id": "b036",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问打算先动桌面的哪一块，同时把处理一块作为下一步提出。"
+  },
+  {
+    "id": "b037",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议限时改一条简历或只查看要求，明确不必投递。"
+  },
+  {
+    "id": "b038",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "在共情后提出先缓一缓、喘口气的可执行休息建议。"
+  },
+  {
+    "id": "b039",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "用疑问形式建议挑一件最小的任务做掉，并非仅了解情况。"
+  },
+  {
+    "id": "b040",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许晚饭暂时未定并愿意倾听，没有具体安排。"
+  },
+  {
+    "id": "b041",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "复述书未翻开的状态并表示听着，没有给建议。"
+  },
+  {
+    "id": "b042",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "提出做两分钟小事等具体选择，并询问哪一件顺手。"
+  },
+  {
+    "id": "b043",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议限时检查两处简历信息后关页，保留是否投递的决定。"
+  },
+  {
+    "id": "b044",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "仅表达倾听与对悬心感的理解，未建议联系朋友。"
+  },
+  {
+    "id": "b045",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议挪出一小块能用的桌面并暂缓其他整理。"
+  },
+  {
+    "id": "b046",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问是心没跟上还是不想碰书，以了解复习障碍。"
+  },
+  {
+    "id": "b047",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出煮面加蛋或点外卖的晚饭建议，给出不同选择。"
+  },
+  {
+    "id": "b048",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问双方之前通常如何聊天，没有提出联系动作。"
+  },
+  {
+    "id": "b049",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "先询问简历或岗位顾虑，再建议修改一处后投递等做法，未强令执行。"
+  },
+  {
+    "id": "b050",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议用两分钟核对简历关键项后关页，并允许不投。"
+  },
+  {
+    "id": "b051",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议试做一件五分钟能完成的小事，其余暂放。"
+  },
+  {
+    "id": "b052",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "试探建议先清一小块桌面，不要求一次整理完。"
+  },
+  {
+    "id": "b053",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接纳待办暂放并表示愿意听，没有引入新任务。"
+  },
+  {
+    "id": "b054",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只共情桌面杂乱带来的烦闷并表示听着。"
+  },
+  {
+    "id": "b055",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议清出一小块空桌面来缓解视觉烦躁。"
+  },
+  {
+    "id": "b056",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议挑一小块物品归类，做完可停或自行决定继续。"
+  },
+  {
+    "id": "b057",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "复述坐下而未翻书的处境并表示倾听，没有建议。"
+  },
+  {
+    "id": "b058",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "具体建议放远手机、翻到目标页并读五分钟，允许到时停下。"
+  },
+  {
+    "id": "b059",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "明确不给建议和不排下一步，只邀请用户继续说。"
+  },
+  {
+    "id": "b060",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议写下待办并圈出一项逐个处理，起点由用户挑选。"
+  },
+  {
+    "id": "b061",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "说明不出主意并共情朋友回消息少造成的悬心感。"
+  },
+  {
+    "id": "b062",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只确认桌面令人堵得慌并表示倾听，没有安排整理。"
+  },
+  {
+    "id": "b063",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻目标页、放远手机并计时十分钟，继续与否由用户决定。"
+  },
+  {
+    "id": "b064",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出改措辞或补数字后关页及练投方案，保留最终选择。"
+  },
+  {
+    "id": "b065",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议写下待办并先做最小一件，属于具体处理步骤。"
+  },
+  {
+    "id": "b066",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问更担心朋友状态还是双方关系，仅帮助理解不安来源。"
+  },
+  {
+    "id": "b067",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议打开冰箱找现成食物，也允许改点外卖。"
+  },
+  {
+    "id": "b068",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议分享一件小事，若多次冷淡再问近况，属于具体联系方案。"
+  },
+  {
+    "id": "b069",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议挪开最碍眼物品并限时清一小块，明确做不做随用户。"
+  },
+  {
+    "id": "b070",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接受书暂时合着并表示用户想说时在场，没有提出下一步。"
+  },
+  {
+    "id": "b071",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "具体建议煮面加蛋或不开火改点外卖。"
+  },
+  {
+    "id": "b072",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接受不点投递和页面开着的现状，只表示倾听。"
+  },
+  {
+    "id": "b073",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": true,
+    "reason": "不安排晚饭，转而询问今天累还是提不起劲，尊重拒绝建议。"
+  },
+  {
+    "id": "b074",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只共情坐下却未翻书的卡顿感，没有给行动建议。"
+  },
+  {
+    "id": "b075",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出直接温和问近况或观察一段时间的方案，没有要求选择其一。"
+  },
+  {
+    "id": "b076",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议从清单挑一件两分钟任务完成，之后是否继续可自定。"
+  },
+  {
+    "id": "b077",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "给出装箱暂存桌面物品或只清手掌大小区域的具体做法。"
+  },
+  {
+    "id": "b078",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议改简历中最不满意的一行，改完可关页而不必投递。"
+  },
+  {
+    "id": "b079",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只承认待办带来的疲惫并愿意听用户说，没有安排处理。"
+  },
+  {
+    "id": "b080",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "试探建议挑一件最小任务完成，再考虑其余事项。"
+  },
+  {
+    "id": "b081",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议做一件两分钟任务后收手，属于限定范围的小行动方案。"
+  },
+  {
+    "id": "b082",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "明确不出主意并允许随意选择说起处，没有实质提问或行动安排。"
+  },
+  {
+    "id": "b083",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许晚饭暂不决定并表示倾听，没有提出具体下一步。"
+  },
+  {
+    "id": "b084",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议立即做一件两分钟内能收尾的事，同时允许做完停止。"
+  },
+  {
+    "id": "b085",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "给出限时整理A4大小桌面的步骤，未施加必须继续的要求。"
+  },
+  {
+    "id": "b086",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问犹豫来自岗位还是简历，没有提出投递动作。"
+  },
+  {
+    "id": "b087",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问简历不满意还是怕没有回音，仅了解卡点。"
+  },
+  {
+    "id": "b088",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只共情看见堆物就烦并说明不出主意。"
+  },
+  {
+    "id": "b089",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "明确不催、不排事项并接纳头疼感，没有给具体行动。"
+  },
+  {
+    "id": "b090",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问朋友回复变化是突然还是逐渐出现，未给应对建议。"
+  },
+  {
+    "id": "b091",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "以温和试探方式建议清出一小块可用桌面。"
+  },
+  {
+    "id": "b092",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议发轻松链接、照片或问候，并明确是否发及内容由用户定。"
+  },
+  {
+    "id": "b093",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "仅描述未翻书的难受状态，未提出复习动作。"
+  },
+  {
+    "id": "b094",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "共情桌面带来的烦躁并明确不给主意。"
+  },
+  {
+    "id": "b095",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议开冰箱挑一样想吃的东西，明确不想动也可以。"
+  },
+  {
+    "id": "b096",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "提出填信息后关闭并晚些提交的方案，末尾询问这样是否可接受。"
+  },
+  {
+    "id": "b097",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议限时整理一小块并以试探问句邀请尝试，没有强迫。"
+  },
+  {
+    "id": "b098",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议只做一件最不费劲的事，其他暂搁。"
+  },
+  {
+    "id": "b099",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻页读五分钟并放远手机，到时可以停下休息。"
+  },
+  {
+    "id": "b100",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议限时清键盘前或先挑三件废纸，清完可以停止。"
+  },
+  {
+    "id": "b101",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问不安来自消息减少还是其他事情，没有行动建议。"
+  },
+  {
+    "id": "b102",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问简历不满还是按不下按钮，并分别提出修改后投或练投的建议。"
+  },
+  {
+    "id": "b103",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "以试探问句建议收拾一小块桌面，其余可后处理。"
+  },
+  {
+    "id": "b104",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出煮面、炒饭、热现成饭菜或外卖等可执行选择。"
+  },
+  {
+    "id": "b105",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许维持懒倦和晚饭未定状态，未引入具体安排。"
+  },
+  {
+    "id": "b106",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问回消息变化的起点和话题范围，以理解情况。"
+  },
+  {
+    "id": "b107",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议挑十分钟能完成的一种饭或点外卖，选择留给用户。"
+  },
+  {
+    "id": "b108",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问简历不顺眼还是不想要岗位，没有给处理步骤。"
+  },
+  {
+    "id": "b109",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "试探建议先动一件最小待办，允许其他事项暂放。"
+  },
+  {
+    "id": "b110",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只倾听并允许维持页面开着未点击的现状，没有安排新动作。"
+  },
+  {
+    "id": "b111",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问简历未满意还是不想去这家公司，仅澄清犹豫来源。"
+  },
+  {
+    "id": "b112",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许晚饭暂时未定并共情决策费劲，没有具体行动安排。"
+  },
+  {
+    "id": "b113",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "共情朋友回消息少的不安并表示不催，没有建议联系。"
+  },
+  {
+    "id": "b114",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议挑一件两分钟待办做掉再看其余，给出具体例子。"
+  },
+  {
+    "id": "b115",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议只读第一段，或更轻量地只把书打开，均可停止。"
+  },
+  {
+    "id": "b116",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "具体建议煮面加蛋或加热现成食物作为晚饭。"
+  },
+  {
+    "id": "b117",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议发一条近况问候后放下手机，未要求对方必须回应。"
+  },
+  {
+    "id": "b118",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": true,
+    "reason": "接受不点投递并邀请用户说想谈的那一段，没有提出行动方案。"
+  },
+  {
+    "id": "b119",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出煮面、饺子、外卖或番茄鸡蛋面等具体晚饭选择。"
+  },
+  {
+    "id": "b120",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议尝试发一条轻问候，明确发不发和内容由用户挑选。"
+  },
+  {
+    "id": "b121",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻到目标页读第一段，明确可停且不必决定学多久。"
+  },
+  {
+    "id": "b122",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻目标页并限时读第一段，到时可停。"
+  },
+  {
+    "id": "b123",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "允许页面开着和不想点就不点，只表示听着。"
+  },
+  {
+    "id": "b124",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议煮面配蛋菜或面包配现成食物，属于具体晚饭方案。"
+  },
+  {
+    "id": "b125",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接纳暂不解决待办并共情头疼，没有提出处理步骤。"
+  },
+  {
+    "id": "b126",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只描述待办带来的疲惫并表示不催，未提供建议。"
+  },
+  {
+    "id": "b127",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": true,
+    "accepts_refusal": null,
+    "reason": "询问是否卡在开始，同时建议随便翻一页试试。"
+  },
+  {
+    "id": "b128",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议翻目标页读第一段并以问句邀请尝试，保留停止选择。"
+  },
+  {
+    "id": "b129",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "提出煮面加蛋青菜或点外卖的具体选择。"
+  },
+  {
+    "id": "b130",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议做一件两分钟任务后即停，属于范围有限的小行动方案。"
+  },
+  {
+    "id": "b131",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "接受页面开着并表示等用户愿意说，没有推动投递。"
+  },
+  {
+    "id": "b132",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "试探建议发一条轻量问候，之后观察这一轮如何回应。"
+  },
+  {
+    "id": "b133",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议只改简历一栏的一句话后关页，明确随时能停且不等于投递。"
+  },
+  {
+    "id": "b134",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议读第一段或仅把书打开两分钟，后续是否阅读仍可再决定。"
+  },
+  {
+    "id": "b135",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只共情待办沉重并承认头疼，未安排任何动作。"
+  },
+  {
+    "id": "b136",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议烧水或淘米先定主食，允许不想弄时停止。"
+  },
+  {
+    "id": "b137",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只倾听并允许书未翻开的现状延续，没有给复习步骤。"
+  },
+  {
+    "id": "b138",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议到厨房挑一种现成食物评估能否做饭，明确可以不做。"
+  },
+  {
+    "id": "b139",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "共情桌面带来的烦躁并表示不打断，没有行动建议。"
+  },
+  {
+    "id": "b140",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "共情悬心感并允许用户想说多少就说多少，没有安排联系。"
+  },
+  {
+    "id": "b141",
+    "action_advice": false,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": true,
+    "reason": "只承认回消息少引发的不安并表示听着。"
+  },
+  {
+    "id": "b142",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "建议发一句轻量问候，提供了可执行的消息内容。"
+  },
+  {
+    "id": "b143",
+    "action_advice": true,
+    "decision_pressure": false,
+    "clarification": false,
+    "accepts_refusal": null,
+    "reason": "以试探方式建议翻开第一页看两段，并允许看完就停。"
+  }
+]

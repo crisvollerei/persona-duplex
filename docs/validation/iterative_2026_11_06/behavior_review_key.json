@@ -1,0 +1,1146 @@
+{
+  "b001": {
+    "trial_id": "b1_s4_refused_0.9_r1",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b002": {
+    "trial_id": "b1_s0_requested_0.9_r2",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b003": {
+    "trial_id": "b1_s4_refused_0.9_r0",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b004": {
+    "trial_id": "b1_s1_requested_0.1_r3",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b005": {
+    "trial_id": "b1_s2_refused_0.1_r2",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b006": {
+    "trial_id": "b1_s3_requested_0.9_r2",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b007": {
+    "trial_id": "b1_s4_unsolicited_0.1_r0",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b008": {
+    "trial_id": "b1_s4_requested_0.1_r1",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b009": {
+    "trial_id": "b1_s3_unsolicited_0.1_r3",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b010": {
+    "trial_id": "b1_s1_unsolicited_0.9_r3",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b011": {
+    "trial_id": "b1_s3_unsolicited_0.9_r0",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b012": {
+    "trial_id": "b1_s2_unsolicited_0.1_r0",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b013": {
+    "trial_id": "b1_s1_unsolicited_0.9_r0",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b014": {
+    "trial_id": "b1_s1_refused_0.9_r2",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b015": {
+    "trial_id": "b1_s1_refused_0.1_r0",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b016": {
+    "trial_id": "b1_s0_unsolicited_0.9_r1",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b017": {
+    "trial_id": "b1_s5_refused_0.9_r3",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b018": {
+    "trial_id": "b1_s4_unsolicited_0.9_r3",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b019": {
+    "trial_id": "b1_s2_unsolicited_0.9_r3",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b020": {
+    "trial_id": "b1_s5_requested_0.1_r0",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b021": {
+    "trial_id": "b1_s1_requested_0.9_r0",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b022": {
+    "trial_id": "b1_s2_requested_0.9_r1",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b023": {
+    "trial_id": "b1_s5_refused_0.1_r1",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b024": {
+    "trial_id": "b1_s2_unsolicited_0.9_r0",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b025": {
+    "trial_id": "b1_s0_unsolicited_0.1_r3",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b026": {
+    "trial_id": "b1_s4_refused_0.1_r0",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b027": {
+    "trial_id": "b1_s0_refused_0.1_r3",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b028": {
+    "trial_id": "b1_s3_refused_0.9_r3",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b029": {
+    "trial_id": "b1_s3_requested_0.1_r1",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b030": {
+    "trial_id": "b1_s0_refused_0.1_r2",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b031": {
+    "trial_id": "b1_s1_refused_0.1_r3",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b032": {
+    "trial_id": "b1_s3_refused_0.9_r2",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b033": {
+    "trial_id": "b1_s4_requested_0.9_r3",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b034": {
+    "trial_id": "b1_s0_refused_0.1_r1",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b035": {
+    "trial_id": "b1_s5_unsolicited_0.9_r3",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b036": {
+    "trial_id": "b1_s1_unsolicited_0.1_r2",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b037": {
+    "trial_id": "b1_s0_requested_0.9_r0",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b038": {
+    "trial_id": "b1_s5_unsolicited_0.1_r0",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b039": {
+    "trial_id": "b1_s5_unsolicited_0.1_r3",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b040": {
+    "trial_id": "b1_s4_refused_0.9_r3",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b041": {
+    "trial_id": "b1_s2_refused_0.9_r3",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b042": {
+    "trial_id": "b1_s5_requested_0.9_r0",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b043": {
+    "trial_id": "b1_s0_requested_0.1_r1",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b044": {
+    "trial_id": "b1_s3_refused_0.1_r2",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b045": {
+    "trial_id": "b1_s1_unsolicited_0.1_r0",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b046": {
+    "trial_id": "b1_s2_unsolicited_0.1_r2",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b047": {
+    "trial_id": "b1_s4_unsolicited_0.9_r1",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b048": {
+    "trial_id": "b1_s3_unsolicited_0.1_r1",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b049": {
+    "trial_id": "b1_s0_unsolicited_0.9_r0",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b050": {
+    "trial_id": "b1_s0_requested_0.1_r3",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b051": {
+    "trial_id": "b1_s5_unsolicited_0.9_r1",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b052": {
+    "trial_id": "b1_s1_unsolicited_0.1_r1",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b053": {
+    "trial_id": "b1_s5_refused_0.9_r1",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b054": {
+    "trial_id": "b1_s1_refused_0.9_r1",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b055": {
+    "trial_id": "b1_s1_unsolicited_0.9_r1",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b056": {
+    "trial_id": "b1_s1_requested_0.9_r3",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b057": {
+    "trial_id": "b1_s2_refused_0.9_r1",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b058": {
+    "trial_id": "b1_s2_requested_0.1_r1",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b059": {
+    "trial_id": "b1_s2_refused_0.1_r0",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b060": {
+    "trial_id": "b1_s5_requested_0.9_r1",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b061": {
+    "trial_id": "b1_s3_refused_0.9_r1",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b062": {
+    "trial_id": "b1_s1_refused_0.9_r0",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b063": {
+    "trial_id": "b1_s2_requested_0.9_r0",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b064": {
+    "trial_id": "b1_s0_requested_0.9_r1",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b065": {
+    "trial_id": "b1_s5_unsolicited_0.9_r0",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b066": {
+    "trial_id": "b1_s3_unsolicited_0.1_r0",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b067": {
+    "trial_id": "b1_s4_requested_0.1_r0",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b068": {
+    "trial_id": "b1_s3_requested_0.1_r3",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b069": {
+    "trial_id": "b1_s1_requested_0.1_r2",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b070": {
+    "trial_id": "b1_s2_refused_0.9_r2",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b071": {
+    "trial_id": "b1_s4_unsolicited_0.1_r3",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b072": {
+    "trial_id": "b1_s0_refused_0.9_r1",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b073": {
+    "trial_id": "b1_s4_refused_0.1_r1",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b074": {
+    "trial_id": "b1_s2_refused_0.1_r3",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b075": {
+    "trial_id": "b1_s3_unsolicited_0.9_r3",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b076": {
+    "trial_id": "b1_s5_requested_0.1_r3",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b077": {
+    "trial_id": "b1_s1_requested_0.1_r1",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b078": {
+    "trial_id": "b1_s0_requested_0.1_r0",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b079": {
+    "trial_id": "b1_s5_refused_0.1_r0",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b080": {
+    "trial_id": "b1_s5_unsolicited_0.1_r1",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b081": {
+    "trial_id": "b1_s5_requested_0.9_r3",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b082": {
+    "trial_id": "b1_s3_refused_0.9_r0",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b083": {
+    "trial_id": "b1_s4_refused_0.1_r2",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b084": {
+    "trial_id": "b1_s5_requested_0.1_r2",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b085": {
+    "trial_id": "b1_s1_requested_0.1_r0",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b086": {
+    "trial_id": "b1_s0_unsolicited_0.1_r2",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b087": {
+    "trial_id": "b1_s0_unsolicited_0.1_r0",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b088": {
+    "trial_id": "b1_s1_refused_0.9_r3",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b089": {
+    "trial_id": "b1_s5_refused_0.1_r3",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b090": {
+    "trial_id": "b1_s3_unsolicited_0.9_r2",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b091": {
+    "trial_id": "b1_s1_unsolicited_0.1_r3",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b092": {
+    "trial_id": "b1_s3_requested_0.9_r1",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b093": {
+    "trial_id": "b1_s2_refused_0.1_r1",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b094": {
+    "trial_id": "b1_s1_refused_0.1_r1",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b095": {
+    "trial_id": "b1_s4_requested_0.9_r1",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b096": {
+    "trial_id": "b1_s0_requested_0.9_r3",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b097": {
+    "trial_id": "b1_s1_requested_0.9_r2",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b098": {
+    "trial_id": "b1_s5_unsolicited_0.9_r2",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b099": {
+    "trial_id": "b1_s2_unsolicited_0.9_r2",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b100": {
+    "trial_id": "b1_s1_requested_0.9_r1",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b101": {
+    "trial_id": "b1_s3_unsolicited_0.1_r2",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b102": {
+    "trial_id": "b1_s0_unsolicited_0.9_r3",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b103": {
+    "trial_id": "b1_s1_unsolicited_0.9_r2",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b104": {
+    "trial_id": "b1_s4_unsolicited_0.1_r2",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b105": {
+    "trial_id": "b1_s4_refused_0.9_r2",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b106": {
+    "trial_id": "b1_s3_unsolicited_0.9_r1",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 1
+  },
+  "b107": {
+    "trial_id": "b1_s4_requested_0.9_r0",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b108": {
+    "trial_id": "b1_s0_unsolicited_0.1_r1",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b109": {
+    "trial_id": "b1_s5_unsolicited_0.1_r2",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b110": {
+    "trial_id": "b1_s0_refused_0.9_r2",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b111": {
+    "trial_id": "b1_s0_unsolicited_0.9_r2",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b112": {
+    "trial_id": "b1_s4_refused_0.1_r3",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b113": {
+    "trial_id": "b1_s3_refused_0.1_r1",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b114": {
+    "trial_id": "b1_s5_requested_0.9_r2",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b115": {
+    "trial_id": "b1_s2_requested_0.1_r3",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b116": {
+    "trial_id": "b1_s4_unsolicited_0.1_r1",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b117": {
+    "trial_id": "b1_s3_requested_0.9_r3",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b118": {
+    "trial_id": "b1_s0_refused_0.9_r3",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b119": {
+    "trial_id": "b1_s4_unsolicited_0.9_r0",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b120": {
+    "trial_id": "b1_s3_requested_0.1_r0",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b121": {
+    "trial_id": "b1_s2_requested_0.1_r2",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b122": {
+    "trial_id": "b1_s2_requested_0.9_r2",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b123": {
+    "trial_id": "b1_s0_refused_0.9_r0",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b124": {
+    "trial_id": "b1_s4_requested_0.9_r2",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b125": {
+    "trial_id": "b1_s5_refused_0.9_r0",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b126": {
+    "trial_id": "b1_s5_refused_0.9_r2",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b127": {
+    "trial_id": "b1_s2_unsolicited_0.1_r3",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b128": {
+    "trial_id": "b1_s2_requested_0.1_r0",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b129": {
+    "trial_id": "b1_s4_unsolicited_0.9_r2",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 2
+  },
+  "b130": {
+    "trial_id": "b1_s5_requested_0.1_r1",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 1
+  },
+  "b131": {
+    "trial_id": "b1_s0_refused_0.1_r0",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b132": {
+    "trial_id": "b1_s3_requested_0.1_r2",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b133": {
+    "trial_id": "b1_s0_requested_0.1_r2",
+    "stage": "b1",
+    "scenario": 0,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b134": {
+    "trial_id": "b1_s2_requested_0.9_r3",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 3
+  },
+  "b135": {
+    "trial_id": "b1_s5_refused_0.1_r2",
+    "stage": "b1",
+    "scenario": 5,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b136": {
+    "trial_id": "b1_s4_requested_0.1_r3",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b137": {
+    "trial_id": "b1_s2_refused_0.9_r0",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "refused",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b138": {
+    "trial_id": "b1_s4_requested_0.1_r2",
+    "stage": "b1",
+    "scenario": 4,
+    "boundary": "requested",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b139": {
+    "trial_id": "b1_s1_refused_0.1_r2",
+    "stage": "b1",
+    "scenario": 1,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 2
+  },
+  "b140": {
+    "trial_id": "b1_s3_refused_0.1_r0",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 0
+  },
+  "b141": {
+    "trial_id": "b1_s3_refused_0.1_r3",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "refused",
+    "intervention": 0.1,
+    "replicate": 3
+  },
+  "b142": {
+    "trial_id": "b1_s3_requested_0.9_r0",
+    "stage": "b1",
+    "scenario": 3,
+    "boundary": "requested",
+    "intervention": 0.9,
+    "replicate": 0
+  },
+  "b143": {
+    "trial_id": "b1_s2_unsolicited_0.9_r1",
+    "stage": "b1",
+    "scenario": 2,
+    "boundary": "unsolicited",
+    "intervention": 0.9,
+    "replicate": 1
+  }
+}

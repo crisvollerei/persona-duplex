@@ -1,0 +1,825 @@
+{
+  "source_results_sha256": "f6cec3e6ff9d0cc31a3d5c669ade0e1d2d5698c7769304458c05ee55648a55d3",
+  "runner_sha256": "53fc299c97a9a258c51bbc5075de2966fd169f01cdebce081a4e2f1f7f42c72d",
+  "network_calls": 0,
+  "records": [
+    {
+      "original_id": "answer_i0_feeling_policy_r0",
+      "case_id": "answer",
+      "profile": "i0_feeling",
+      "replicate": 0,
+      "say": "我理解你现在有点烦，先把账算清楚：\n\n收入 3850 元，支出 1270 元和 485 元，余额 = 3850 − 1270 − 485 = 2095 元。\n\n结论：余额为 2095 元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.14311216008555697,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "21b7e112d6f4baa138cc28ddf235962583f077cc5a0082a44584138d7d7ea962"
+    },
+    {
+      "original_id": "answer_i0_feeling_policy_r1",
+      "case_id": "answer",
+      "profile": "i0_feeling",
+      "replicate": 1,
+      "say": "收入 3850 元，支出 1270 元和 485 元，余额是 3850 − 1270 − 485 = 2095 元。\n\n结论：余额为 2095 元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.10511801492755463,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "021f75a7012cfce8da3b59b06d51d7c9c8b26d9f8983893eeb19fda1978128d2"
+    },
+    {
+      "original_id": "answer_i0_practical_policy_r0",
+      "case_id": "answer",
+      "profile": "i0_practical",
+      "replicate": 0,
+      "say": "收入 3850 元，支出 1270 元和 485 元，计算为：3850 − 1270 − 485 = 2095 元。\n\n结论：余额为 2095 元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.14311216008555697,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "1fa7b5131f3abeed216a40efe72b872dde6cc7957e4f2f40161f359343c6af3a"
+    },
+    {
+      "original_id": "answer_i0_practical_policy_r1",
+      "case_id": "answer",
+      "profile": "i0_practical",
+      "replicate": 1,
+      "say": "收入3850元，支出1270元和485元，余额是：3850−1270−485＝2095元。  \n结论：余额2095元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.10511801492755463,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "99f82a394ed8fbeb7942a91b7e576af8614b0476726b8d0432e8c427a148cafd"
+    },
+    {
+      "original_id": "answer_i1_feeling_policy_r0",
+      "case_id": "answer",
+      "profile": "i1_feeling",
+      "replicate": 0,
+      "say": "收入3850元，减去支出1270元和485元，余额是2095元。烦的时候先把账算清也好。\n\n结论：余额2095元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.14311216008555697,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "8e68f87b3fe6f42927e9fd9adeba3ac376c10230f30d43561d3b44b8a32b32d4"
+    },
+    {
+      "original_id": "answer_i1_feeling_policy_r1",
+      "case_id": "answer",
+      "profile": "i1_feeling",
+      "replicate": 1,
+      "say": "收入 3850 元，支出 1270 元和 485 元，余额是 3850 − 1270 − 485 = 2095 元。\n\n结论：余额为 2095 元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.10511801492755463,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "021f75a7012cfce8da3b59b06d51d7c9c8b26d9f8983893eeb19fda1978128d2"
+    },
+    {
+      "original_id": "answer_i1_practical_policy_r0",
+      "case_id": "answer",
+      "profile": "i1_practical",
+      "replicate": 0,
+      "say": "按你给的数据算：收入3850元，支出1270元和485元，余额是3850−1270−485＝2095元。\n\n结论：余额为2095元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.14311216008555697,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "2767534256ed31ddf7764b950859cfb93dd07d1b9f5c084be24cb4bde7ab1bdf"
+    },
+    {
+      "original_id": "answer_i1_practical_policy_r1",
+      "case_id": "answer",
+      "profile": "i1_practical",
+      "replicate": 1,
+      "say": "收入 3850 元，支出 1270 元和 485 元，计算：3850 − 1270 − 485 = 2095 元。\n\n结论：余额 2095 元。",
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.10511801492755463,
+        "reason": "answer_requested_content"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "999e0815d486c11312f356f11e97c70025948ed351e41a9fa7cd9a23c1f3aa94"
+    },
+    {
+      "original_id": "denied_i0_feeling_policy_r0",
+      "case_id": "denied",
+      "profile": "i0_feeling",
+      "replicate": 0,
+      "say": "你说\"好累\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.8532513248201116,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "6bc01dbc33173abb89ad3747a9bb4c96568be05bb5ca032aafe8bd07c7143aa0"
+    },
+    {
+      "original_id": "denied_i0_feeling_policy_r1",
+      "case_id": "denied",
+      "profile": "i0_feeling",
+      "replicate": 1,
+      "say": "你说\"好累\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.7920365057458196,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "dd25f40be01409979cef98bfa63f8ce879effe8ec3a24c70295bb1664082e033"
+    },
+    {
+      "original_id": "denied_i0_practical_policy_r0",
+      "case_id": "denied",
+      "profile": "i0_practical",
+      "replicate": 0,
+      "say": "你说\"报告没写完\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.8532513248201116,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "cf6b4b2eb1b558e9e32c84153304256dda1e7272691dfa0ab8edb77990f1fe6a"
+    },
+    {
+      "original_id": "denied_i0_practical_policy_r1",
+      "case_id": "denied",
+      "profile": "i0_practical",
+      "replicate": 1,
+      "say": "你说\"报告没写完\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.7920365057458196,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "accecd6056b26f6203067549d78a6ded58ecfe47f207dc313682af5a2cec121d"
+    },
+    {
+      "original_id": "denied_i1_feeling_policy_r0",
+      "case_id": "denied",
+      "profile": "i1_feeling",
+      "replicate": 0,
+      "say": "你说\"好累\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.8532513248201116,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "a75c30727658c47b08e510979e73f3dc242d40a6ea590722ab941e038eae7203"
+    },
+    {
+      "original_id": "denied_i1_feeling_policy_r1",
+      "case_id": "denied",
+      "profile": "i1_feeling",
+      "replicate": 1,
+      "say": "你说\"好累\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.7920365057458196,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "07a7fc567c8f74d739cd17c0cfadd180964c1d1d4d814cc3b433b11af1bab6c8"
+    },
+    {
+      "original_id": "denied_i1_practical_policy_r0",
+      "case_id": "denied",
+      "profile": "i1_practical",
+      "replicate": 0,
+      "say": "你说\"报告没写完\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.8532513248201116,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "9f40651b2c24cd5f2fda7eb2bab09435b5f4da7a3c4ab5f9286a3733fee77e85"
+    },
+    {
+      "original_id": "denied_i1_practical_policy_r1",
+      "case_id": "denied",
+      "profile": "i1_practical",
+      "replicate": 1,
+      "say": "你说\"报告没写完\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.7920365057458196,
+        "reason": "advice_masked_by_user_boundary"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "be67a4f1403420eb993d0197fc7e48cd77c964a47250dc56ca91787463c54440"
+    },
+    {
+      "original_id": "social_i0_feeling_policy_r0",
+      "case_id": "social",
+      "profile": "i0_feeling",
+      "replicate": 0,
+      "say": "你说\"有点烦\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.2649581493439749,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "5dfe71209ce456d3190f2049ba45e283f9293ebb420f56935d95463e8b79efb4"
+    },
+    {
+      "original_id": "social_i0_feeling_policy_r1",
+      "case_id": "social",
+      "profile": "i0_feeling",
+      "replicate": 1,
+      "say": "你说\"有点烦\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.44169275541965713,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "fdf826b9edff6999778eecf3ebcf3f6f6054cf582e0b264764be1263637e241e"
+    },
+    {
+      "original_id": "social_i0_practical_policy_r0",
+      "case_id": "social",
+      "profile": "i0_practical",
+      "replicate": 0,
+      "say": "你说\"聚会还没安排好\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.2649581493439749,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "0c10f1ee0b18ac86c6afb66460865106dc3519ea7ebf06d0689d6b53779034a8"
+    },
+    {
+      "original_id": "social_i0_practical_policy_r1",
+      "case_id": "social",
+      "profile": "i0_practical",
+      "replicate": 1,
+      "say": "你说\"聚会还没安排好\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.44169275541965713,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "52cdc16b75be7a22ef32edba3adf7df21943f1d111735723c539667ee2aba0fa"
+    },
+    {
+      "original_id": "social_i1_feeling_policy_r0",
+      "case_id": "social",
+      "profile": "i1_feeling",
+      "replicate": 0,
+      "say": "雨一直下，安排又没定下来，确实容易让人烦。先别逼自己一下子全定好，可以分几步来：\n\n- 先只定一件最关键的：时间或地点，二选一先敲定。\n- 把“必须今天定”和“可以拖到明天”的分开，只处理前一类。\n- 如果人数还没齐，可以先发一句“时间地点我先定个大概，大家看行不行”，减少反复沟通。\n- 雨大不方便出门的话，也可以考虑改成室内或线上小聚，或者把准备事项分给别人一部分。\n\n你现在最卡的是哪一步——时间、地点，还是人没凑齐？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.2649581493439749,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "b7356347ea3cebaf8195aedbce4ff0f611219383b4551579c4a2c3ec00c8526a"
+    },
+    {
+      "original_id": "social_i1_feeling_policy_r1",
+      "case_id": "social",
+      "profile": "i1_feeling",
+      "replicate": 1,
+      "say": "雨声一直响着，确实容易让人更烦。聚会没安排好这件事，可以先不急着一次想全。给你几个可选的做法：\n\n- 先只定一件最关键的事，比如时间或地点，其余先放着；\n- 把待定项列成两三个小问题，发给要参加的人一起选；\n- 如果今天状态不佳，就先把安排挪到明天，给自己一个明确的暂停点；\n- 也可以先处理能立刻确定的部分，比如人数或预算，让事情有个起点。\n\n你现在更想先动哪一项？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.44169275541965713,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "b474184b927dfb74e300e38a049f1d51c0ae3feec425142501aeea262da80b61"
+    },
+    {
+      "original_id": "social_i1_practical_policy_r0",
+      "case_id": "social",
+      "profile": "i1_practical",
+      "replicate": 0,
+      "say": "聚会还没安排好确实容易让人烦，尤其外面还一直下雨。可以先把能定的事情缩小一点，挑一两件先处理：\n\n- 先定人数和大致时间，再决定场地；人数没定前，不用急着比较太多地方。\n- 如果雨一直下，优先考虑交通方便、室内活动为主的方案，减少临时变动。\n- 把待办拆成“今天能定的”和“可以晚点再定的”，先推进第一类。\n- 也可以直接问参与的人一两个关键选项，比如时间或地点偏好，减少你一个人反复权衡。\n\n你现在卡住的是人数、时间，还是场地？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.2649581493439749,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "d1f3e17ceaad7d231b56f680b54ee43c78fda8c55ed894e8e6663c889295d0e4"
+    },
+    {
+      "original_id": "social_i1_practical_policy_r1",
+      "case_id": "social",
+      "profile": "i1_practical",
+      "replicate": 1,
+      "say": "聚会还没安排好确实容易让人烦，尤其雨一直下，心也更乱。可以先从最小的一步开始：明确人数和预算，再定一个备选日期和室内场地。要是有人还没回复，可以先按“能来的人”安排，不必等齐。你想先理哪一块——人数、场地，还是时间？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.44169275541965713,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "f82ac676d0e4391572800c8fcd54e0f4c80501a99f1a733f20b7cd44c6f9d746"
+    },
+    {
+      "original_id": "work_i0_feeling_policy_r0",
+      "case_id": "work",
+      "profile": "i0_feeling",
+      "replicate": 0,
+      "say": "你说\"好累\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.037235843367833595,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "31ddc497ba8d947ba26f7e48e6fe7cebf0f4a23e8c7a296df1a328e7596ad876"
+    },
+    {
+      "original_id": "work_i0_feeling_policy_r1",
+      "case_id": "work",
+      "profile": "i0_feeling",
+      "replicate": 1,
+      "say": "你说\"好累\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.21909829224821298,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "9ad5998db4fb8f5cffc03538d09d2b14f8ed26464178ad1262f22533e5ed0799"
+    },
+    {
+      "original_id": "work_i0_practical_policy_r0",
+      "case_id": "work",
+      "profile": "i0_practical",
+      "replicate": 0,
+      "say": "你说\"报告没写完\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.037235843367833595,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "495f380a632ff93e0c7f5cf803ab12f40eb1e71b92966156e5b471279c303226"
+    },
+    {
+      "original_id": "work_i0_practical_policy_r1",
+      "case_id": "work",
+      "profile": "i0_practical",
+      "replicate": 1,
+      "say": "你说\"报告没写完\"。我先听你说。",
+      "decision": {
+        "action": "respond",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.21909829224821298,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "bounded_atoms",
+      "replayed_expression_calls": 0,
+      "network_calls": 0,
+      "unchanged_reply": false,
+      "original_reply_sha256": "25abf937c2e805ae9b62be58c1c71098fe49150369ae079ef9002b80fe205794"
+    },
+    {
+      "original_id": "work_i1_feeling_policy_r0",
+      "case_id": "work",
+      "profile": "i1_feeling",
+      "replicate": 0,
+      "say": "听起来你今天已经撑了很久，累是正常的。先别急着把报告一口气写完，可以试试这几个小选择：\n\n- 先歇十到二十分钟，闭眼靠一会儿或出去走两步，再回来写；\n- 把报告拆成“还能写完的最小一段”，只做这一段，做完再决定要不要继续；\n- 午饭凉了的话，热一下或者换点能马上吃的东西，先垫一垫；\n- 如果今天状态确实不够，也可以给自己定个收尾时间，剩下的明天再补。\n\n你想先照顾哪一头？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.037235843367833595,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "7653cd68189835028b0891d431ef36ebf7c989792e28c8ecf4c59de37169dea2"
+    },
+    {
+      "original_id": "work_i1_feeling_policy_r1",
+      "case_id": "work",
+      "profile": "i1_feeling",
+      "replicate": 1,
+      "say": "先照顾一下累的感觉吧。午饭凉了，如果还能热，先热一热吃几口；不想吃正餐，也可以先喝点温水、吃点手边能垫的东西。\n\n报告没写完这件事，可以试这几个小选择：\n- 先停五到十分钟，闭眼歇一会儿，再回来写一小段；\n- 把剩下的报告拆成“只写三行”或“只补一个小标题”这种很小的目标；\n- 今天只求先写到能接着做的程度，剩下的明天再收尾。\n\n你现在更想先吃点东西，还是先歇几分钟？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "feeling",
+        "focus_kind": "feeling",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.21909829224821298,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "b906d5d78e13b83311152035d43c30383cb853b3515b43408b718c06b3217f4d"
+    },
+    {
+      "original_id": "work_i1_practical_policy_r0",
+      "case_id": "work",
+      "profile": "i1_practical",
+      "replicate": 0,
+      "say": "报告没写完又累，午饭还凉着，确实容易卡住。可以先选一个轻一点的做法：把报告拆成“只列提纲”“补一段内容”“最后通读”中的一小步，先做十分钟；或者先去热一下午饭，吃完再回来。要是今天状态实在不够，也可以先停一下，把明天要继续的地方标出来。你现在更想先动报告，还是先处理午饭？",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.037235843367833595,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "8c375e7ab68788b7add10f6d807a7bb6240028e545bb0d4bd78e83b2117eeea3"
+    },
+    {
+      "original_id": "work_i1_practical_policy_r1",
+      "case_id": "work",
+      "profile": "i1_practical",
+      "replicate": 1,
+      "say": "报告没写完又累，午饭还凉着，确实容易卡住。可以先选一个小切入口：只整理报告提纲或先写最确定的一段，定个20分钟就停；午饭热一下，边吃边把这段过一遍。要是今天状态实在不够，也可以先把剩余部分拆成两三步，只完成第一步，剩下的明天再接着写。",
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "respond",
+          "advise"
+        ],
+        "focus_id": "task",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.21909829224821298,
+        "reason": "configured_intervention_draw"
+      },
+      "realization": "free_model",
+      "replayed_expression_calls": 1,
+      "network_calls": 0,
+      "unchanged_reply": true,
+      "original_reply_sha256": "5b582c3698de60205bce999954889eb118daad0a13d5cdd029956c84db80f0bd"
+    }
+  ],
+  "byte_checked_reused_requests": 16,
+  "scope": "Offline constrained compilation plus exact-request reuse of old free replies; not an independent online replication or new model usage."
+}

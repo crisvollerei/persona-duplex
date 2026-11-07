@@ -1,0 +1,245 @@
+{
+  "phases": {
+    "main": {
+      "requests": 72,
+      "planned": 144,
+      "complete_outputs": 111,
+      "total_tokens": 58651,
+      "models": {
+        "deepseek-flash": 72
+      }
+    },
+    "confirmation": {
+      "requests": 36,
+      "planned": 36,
+      "complete_outputs": 36,
+      "total_tokens": 35255,
+      "models": {
+        "deepseek-flash": 36
+      }
+    },
+    "probe": {
+      "requests": 72,
+      "total_tokens": 66266,
+      "models": {
+        "deepseek-flash": 72
+      }
+    }
+  },
+  "groups": {
+    "main/no_inquiry": {
+      "flows": 6,
+      "slots": 12,
+      "planned": 36,
+      "delivered": 36,
+      "legal": 36,
+      "matches": 4,
+      "known": 0,
+      "complete": 0,
+      "questions": 0,
+      "declined": 0,
+      "rejected_flows": 0,
+      "first_rejections": 0,
+      "later_rejections": 0,
+      "rejection_reasons": {}
+    },
+    "main/program": {
+      "flows": 6,
+      "slots": 12,
+      "planned": 36,
+      "delivered": 36,
+      "legal": 36,
+      "matches": 36,
+      "known": 10,
+      "complete": 4,
+      "questions": 12,
+      "declined": 2,
+      "rejected_flows": 0,
+      "first_rejections": 0,
+      "later_rejections": 0,
+      "rejection_reasons": {}
+    },
+    "main/prompt": {
+      "flows": 12,
+      "slots": 24,
+      "planned": 72,
+      "delivered": 39,
+      "legal": 39,
+      "matches": 36,
+      "known": 15,
+      "complete": 4,
+      "questions": 17,
+      "declined": 2,
+      "rejected_flows": 9,
+      "first_rejections": 9,
+      "later_rejections": 24,
+      "rejection_reasons": {
+        "question_cooldown": 33
+      }
+    },
+    "confirmation/prompt": {
+      "flows": 6,
+      "slots": 12,
+      "planned": 36,
+      "delivered": 36,
+      "legal": 36,
+      "matches": 36,
+      "known": 10,
+      "complete": 4,
+      "questions": 12,
+      "declined": 2,
+      "rejected_flows": 0,
+      "first_rejections": 0,
+      "later_rejections": 0,
+      "rejection_reasons": {}
+    }
+  },
+  "probe": {
+    "original": {
+      "n": 36,
+      "legal": 32,
+      "matches": 28,
+      "opportunity_n": 12,
+      "opportunity_asked": 8,
+      "opportunity_matches": 8,
+      "abstention_n": 24,
+      "abstention_matches": 20,
+      "cooldown_n": 4,
+      "cooldown_matches": 0
+    },
+    "clarified": {
+      "n": 36,
+      "legal": 36,
+      "matches": 36,
+      "opportunity_n": 12,
+      "opportunity_asked": 12,
+      "opportunity_matches": 12,
+      "abstention_n": 24,
+      "abstention_matches": 24,
+      "cooldown_n": 4,
+      "cooldown_matches": 4
+    }
+  },
+  "coders": {
+    "1": {
+      "program": {
+        "flows": 6,
+        "coherence": 5,
+        "progress": {
+          "partial": 2,
+          "complete": 4
+        },
+        "questions": {
+          "relevant": 12,
+          "none": 24
+        },
+        "pressure": 0,
+        "unsupported": 0
+      },
+      "no_inquiry": {
+        "flows": 6,
+        "coherence": 3,
+        "progress": {
+          "none": 6
+        },
+        "questions": {
+          "none": 36
+        },
+        "pressure": 0,
+        "unsupported": 0
+      },
+      "prompt": {
+        "flows": 12,
+        "coherence": 2.6666666666666665,
+        "progress": {
+          "partial": 7,
+          "none": 1,
+          "complete": 4
+        },
+        "questions": {
+          "relevant": 17,
+          "none": 55
+        },
+        "pressure": 0,
+        "unsupported": 0
+      }
+    },
+    "2": {
+      "program": {
+        "flows": 6,
+        "coherence": 5,
+        "progress": {
+          "partial": 2,
+          "complete": 4
+        },
+        "questions": {
+          "relevant": 12,
+          "none": 24
+        },
+        "pressure": 0,
+        "unsupported": 0
+      },
+      "no_inquiry": {
+        "flows": 6,
+        "coherence": 2.3333333333333335,
+        "progress": {
+          "none": 6
+        },
+        "questions": {
+          "none": 36
+        },
+        "pressure": 0,
+        "unsupported": 0
+      },
+      "prompt": {
+        "flows": 12,
+        "coherence": 2.5833333333333335,
+        "progress": {
+          "partial": 7,
+          "none": 1,
+          "complete": 4
+        },
+        "questions": {
+          "relevant": 17,
+          "none": 55
+        },
+        "pressure": 0,
+        "unsupported": 0
+      }
+    }
+  },
+  "agreement": {
+    "coherence": {
+      "equal": 19,
+      "n": 24
+    },
+    "progress": {
+      "equal": 24,
+      "n": 24
+    },
+    "question": {
+      "equal": 144,
+      "n": 144
+    },
+    "pressure": {
+      "equal": 144,
+      "n": 144
+    },
+    "unsupported": {
+      "equal": 144,
+      "n": 144
+    }
+  },
+  "confirmation_visible_equals_program": {
+    "equal": 6,
+    "total": 6
+  },
+  "total_requests": 180,
+  "total_tokens": 160172,
+  "models": {
+    "deepseek-flash": 180
+  },
+  "finish_reasons": {
+    "stop": 180
+  }
+}

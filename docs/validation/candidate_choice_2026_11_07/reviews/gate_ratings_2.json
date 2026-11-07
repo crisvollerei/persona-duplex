@@ -1,0 +1,485 @@
+[
+  {
+    "scene_id": "G01",
+    "candidates": [
+      {
+        "id": "T001",
+        "semantic_usable": true,
+        "reason": "对保存下来的书签及留言作自然评价，事实贴合。"
+      },
+      {
+        "id": "T017",
+        "semantic_usable": false,
+        "reason": "从喝水提醒直接断定过去读书投入，加入未支持的心理状态。"
+      },
+      {
+        "id": "T033",
+        "semantic_usable": true,
+        "reason": "旧信是比喻，对当年是否料到保留至今用了大概。"
+      },
+      {
+        "id": "T034",
+        "semantic_usable": true,
+        "reason": "贴合这个人的自我打趣，提供自然的时间距离感回应。"
+      },
+      {
+        "id": "T059",
+        "semantic_usable": false,
+        "reason": "把边角磨圆直接解释为陪用户读过不少书，具体过往未获支持。"
+      },
+      {
+        "id": "T072",
+        "semantic_usable": true,
+        "reason": "对旧物唤起回想保留可能性，虽笼统但仍完整相关。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T001",
+      "T034"
+    ],
+    "reason": "T001留在旧书签和留言保存下来的物件层面；T034转向隔着时间看过去自己的体验，关注重点有实质区别。"
+  },
+  {
+    "scene_id": "G02",
+    "candidates": [
+      {
+        "id": "T006",
+        "semantic_usable": true,
+        "reason": "顺着用户想得意的愿望回应，没有后续任务。"
+      },
+      {
+        "id": "T040",
+        "semantic_usable": true,
+        "reason": "对拼完及末片的小惊喜作庆贺，拟人不构成事实问题。"
+      },
+      {
+        "id": "T052",
+        "semantic_usable": true,
+        "reason": "享受成果是承接现在的庆祝，不属于下一步建议。"
+      },
+      {
+        "id": "T061",
+        "semantic_usable": true,
+        "reason": "依据末片位置和拼完事实，谨慎推测痛快的感觉。"
+      },
+      {
+        "id": "T063",
+        "semantic_usable": true,
+        "reason": "认可首次完成的成就感，藏得深属于口语夸张。"
+      },
+      {
+        "id": "T068",
+        "semantic_usable": true,
+        "reason": "陪伴得意的意思清楚，资格一词稍显评判但仍基本适切。"
+      }
+    ],
+    "at_least_two_distinct_usable": false,
+    "distinct_pair": [],
+    "reason": "六条都围绕首次拼完与找到末片庆贺并留白；惊喜、痛快和成就感的措辞差别不足以支持不同的互动选择。"
+  },
+  {
+    "scene_id": "G03",
+    "candidates": [
+      {
+        "id": "T005",
+        "semantic_usable": true,
+        "reason": "延续零食的拟人笑点，登录后开场是自然期待。"
+      },
+      {
+        "id": "T024",
+        "semantic_usable": true,
+        "reason": "专挑放松时更新是明显吐槽拟人，没有新增具体事实。"
+      },
+      {
+        "id": "T036",
+        "semantic_usable": true,
+        "reason": "回应等待的耐心消耗，零食享受周末是清楚的玩笑。"
+      },
+      {
+        "id": "T050",
+        "semantic_usable": false,
+        "reason": "凭空把摆出的零食描述成不好收，并据此给建议。"
+      },
+      {
+        "id": "T055",
+        "semantic_usable": true,
+        "reason": "整体仍接住当前玩笑；把折腾说成值得略有失准，但属于评价且无施压。"
+      },
+      {
+        "id": "T060",
+        "semantic_usable": false,
+        "reason": "把未注明具体时段的周末电影说成今晚的观影计划。"
+      }
+    ],
+    "at_least_two_distinct_usable": false,
+    "distinct_pair": [],
+    "reason": "可用回复都轻接零食和播放器的趣事后收尾；耐心或值了的评价有轻微侧重，但没有足够清楚的互动取舍，保守记为不满足。"
+  },
+  {
+    "scene_id": "G04",
+    "candidates": [
+      {
+        "id": "T004",
+        "semantic_usable": true,
+        "reason": "认可告知太晚的不快，遵守不提供解决办法的要求。"
+      },
+      {
+        "id": "T014",
+        "semantic_usable": true,
+        "reason": "自然承接时间投入落空的烦闷，无建议。"
+      },
+      {
+        "id": "T019",
+        "semantic_usable": true,
+        "reason": "站得冤和换谁都会是普通共感表达，无越界。"
+      },
+      {
+        "id": "T045",
+        "semantic_usable": true,
+        "reason": "用等待与最终售罄的落差回应扫兴，贴合事实。"
+      },
+      {
+        "id": "T058",
+        "semantic_usable": true,
+        "reason": "顺着白等的憋闷作简短回应，没有解决措施。"
+      },
+      {
+        "id": "T069",
+        "semantic_usable": true,
+        "reason": "对排队后才知售罄作自然情绪回应，没有新任务。"
+      }
+    ],
+    "at_least_two_distinct_usable": false,
+    "distinct_pair": [],
+    "reason": "六条都在认可白等及迟知售罄的不快后留白，难受、扫兴和窝火在这里主要是同义的情绪承接。"
+  },
+  {
+    "scene_id": "G05",
+    "candidates": [
+      {
+        "id": "T009",
+        "semantic_usable": true,
+        "reason": "松软及室友取第二片都来自材料，心情好属于一般庆贺。"
+      },
+      {
+        "id": "T025",
+        "semantic_usable": true,
+        "reason": "以取第二片作为有分量的反馈，是普通评价。"
+      },
+      {
+        "id": "T032",
+        "semantic_usable": true,
+        "reason": "庆贺成功并用应该推测开心，没有断言未述过往。"
+      },
+      {
+        "id": "T039",
+        "semantic_usable": false,
+        "reason": "能拉出松软的组织给成品添加了材料未提供的具体表现。"
+      },
+      {
+        "id": "T043",
+        "semantic_usable": true,
+        "reason": "询问可能的制作调整，没有假定确实调整过；虽偏原因分析，仍基本相关。"
+      },
+      {
+        "id": "T053",
+        "semantic_usable": true,
+        "reason": "砖头翻身贴合既有比喻，自然庆祝成功。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T032",
+      "T043"
+    ],
+    "reason": "T032陪伴成功后的开心并留白；T043请用户进入配方或发酵改动的原因分析，互动方向不同。"
+  },
+  {
+    "scene_id": "G06",
+    "candidates": [
+      {
+        "id": "T008",
+        "semantic_usable": true,
+        "reason": "认可不自在后轻问偏好，没有明确禁问边界。"
+      },
+      {
+        "id": "T018",
+        "semantic_usable": true,
+        "reason": "承接担心发声的不自在，肯定背景声偏好。"
+      },
+      {
+        "id": "T020",
+        "semantic_usable": true,
+        "reason": "展开自我监控和松弛的区别，与用户体验相符。"
+      },
+      {
+        "id": "T022",
+        "semantic_usable": true,
+        "reason": "对静与放松的关系表述偏满，但整体仍是相关的体验解释。"
+      },
+      {
+        "id": "T028",
+        "semantic_usable": true,
+        "reason": "说明外界评价与个人感受的落差，无具体虚构。"
+      },
+      {
+        "id": "T035",
+        "semantic_usable": true,
+        "reason": "区分安静和适合自己，肯定偏好辨识；肯定稍强但可交付。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T008",
+      "T018"
+    ],
+    "reason": "T008轻问平时会去的场所，邀请继续分享；T018只承接紧张与偏好后留白。"
+  },
+  {
+    "scene_id": "G07",
+    "candidates": [
+      {
+        "id": "T007",
+        "semantic_usable": false,
+        "reason": "我看到了及吹散成这样让未提供的直接观察成为既成事实。"
+      },
+      {
+        "id": "T016",
+        "semantic_usable": true,
+        "reason": "只接住云的变化和随便说话，没有提问。"
+      },
+      {
+        "id": "T049",
+        "semantic_usable": true,
+        "reason": "想说的时候再说不要求现在补充信息，尊重不回答的意愿。"
+      },
+      {
+        "id": "T065",
+        "semantic_usable": true,
+        "reason": "表示听到当前分享就足够，未要求回答或补充云的细节。"
+      },
+      {
+        "id": "T066",
+        "semantic_usable": true,
+        "reason": "用可能描述观看时形状印象的变化，未断言用户真的遗忘。"
+      },
+      {
+        "id": "T067",
+        "semantic_usable": true,
+        "reason": "虽省略不管使句子稍拗口，但整句落在看着舒服就好，没有实际索取形状答案。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T016",
+      "T049"
+    ],
+    "reason": "T016接住云变化即收尾；T049额外留下想说时再说的自愿延续入口，均不要求回答现时问题。"
+  },
+  {
+    "scene_id": "G08",
+    "candidates": [
+      {
+        "id": "T021",
+        "semantic_usable": true,
+        "reason": "接住返工的泄气，明确不问，未加入新要求。"
+      },
+      {
+        "id": "T023",
+        "semantic_usable": true,
+        "reason": "评价返工负担并宽慰慢慢来，尊重禁问。"
+      },
+      {
+        "id": "T026",
+        "semantic_usable": true,
+        "reason": "未来自愿吐槽的机会不要求当前作答，回应完整自然。"
+      },
+      {
+        "id": "T030",
+        "semantic_usable": true,
+        "reason": "评价设计并表示可协助，没有要求解释书架细节。"
+      },
+      {
+        "id": "T044",
+        "semantic_usable": false,
+        "reason": "将今天对说明书回答很多为什么扩大为回答了一整天，具体耗时无依据。"
+      },
+      {
+        "id": "T048",
+        "semantic_usable": true,
+        "reason": "休息建议相关；用户禁止的是提问，没有禁止此类建议。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T021",
+      "T048"
+    ],
+    "reason": "T021承接泄气并让用户自行安排；T048提出先休息再拆的具体行动，构成明显的互动选择。"
+  },
+  {
+    "scene_id": "G09",
+    "candidates": [
+      {
+        "id": "T003",
+        "semantic_usable": true,
+        "reason": "理解留白体验并展开原有观点，无额外事实或边界问题。"
+      },
+      {
+        "id": "T010",
+        "semantic_usable": true,
+        "reason": "观众从参与转成听讲是清楚的审美比喻。"
+      },
+      {
+        "id": "T015",
+        "semantic_usable": true,
+        "reason": "比较结尾方式，以大概保留对用户偏好的推断。"
+      },
+      {
+        "id": "T027",
+        "semantic_usable": true,
+        "reason": "围绕解释程度和位置提出分析问题，适合当前电影讨论。"
+      },
+      {
+        "id": "T037",
+        "semantic_usable": true,
+        "reason": "解释像怕观众没接住是有保留的审美解读。"
+      },
+      {
+        "id": "T038",
+        "semantic_usable": true,
+        "reason": "允许两种结尾并存，提出解释与情绪的关系，属于相关观点交流。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T010",
+      "T027"
+    ],
+    "reason": "T010用比喻回应现有结尾观点后留白；T027主动让用户区分解释程度与位置，推进分析。"
+  },
+  {
+    "scene_id": "G10",
+    "candidates": [
+      {
+        "id": "T011",
+        "semantic_usable": true,
+        "reason": "询问观看细节与分享相关，没有暗设未述经历。"
+      },
+      {
+        "id": "T029",
+        "semantic_usable": true,
+        "reason": "评价画面后以应该猜测心情，保留不确定性。"
+      },
+      {
+        "id": "T042",
+        "semantic_usable": true,
+        "reason": "把等待添趣作为一般体验评价，没有断定用户明确烦躁。"
+      },
+      {
+        "id": "T056",
+        "semantic_usable": true,
+        "reason": "下雨和鸭子晃动的拟人接话自然、完整。"
+      },
+      {
+        "id": "T064",
+        "semantic_usable": true,
+        "reason": "治愈是对想象画面的评价，不是用户心理事实。"
+      },
+      {
+        "id": "T071",
+        "semantic_usable": true,
+        "reason": "欣赏可爱细节，多看两眼是一般表达。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T056",
+      "T011"
+    ],
+    "reason": "T056轻巧欣赏画面后留白；T011进一步询问用户如何观察到它，提供继续说的机会。"
+  },
+  {
+    "scene_id": "G11",
+    "candidates": [
+      {
+        "id": "T013",
+        "semantic_usable": true,
+        "reason": "建议休息与长时间剪辑相关；虽没接住庆祝重点，仍无事实或边界问题。"
+      },
+      {
+        "id": "T031",
+        "semantic_usable": true,
+        "reason": "对反复观看而不想改作满意的普通肯定，有当前喜悦表达支持。"
+      },
+      {
+        "id": "T046",
+        "semantic_usable": false,
+        "reason": "把最后一段配乐调整已久当作事实，而材料仅给出昨天仍在调。"
+      },
+      {
+        "id": "T047",
+        "semantic_usable": true,
+        "reason": "依据自己连看两遍夸剪得顺，属于合理的社交性作品评价。"
+      },
+      {
+        "id": "T054",
+        "semantic_usable": true,
+        "reason": "以应该表达对完成后松口气的可能感受。"
+      },
+      {
+        "id": "T057",
+        "semantic_usable": true,
+        "reason": "三周与连看两遍均有材料依据，庆贺完成感贴切。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T054",
+      "T013"
+    ],
+    "reason": "T054用有保留的松口气共感承接完成；T013将互动转成先休息的行动建议，可用但重心明显不同。"
+  },
+  {
+    "scene_id": "G12",
+    "candidates": [
+      {
+        "id": "T002",
+        "semantic_usable": true,
+        "reason": "认可不同逛法，无沟通建议，虽简略但适切。"
+      },
+      {
+        "id": "T012",
+        "semantic_usable": true,
+        "reason": "以吧保留对随意逛体验的猜测，无沟通方案。"
+      },
+      {
+        "id": "T041",
+        "semantic_usable": true,
+        "reason": "比较覆盖与停留的取舍，不要求用户与朋友沟通。"
+      },
+      {
+        "id": "T051",
+        "semantic_usable": true,
+        "reason": "对逛法及分开看作一般评价，没吵架就挺好略有多虑，但没有明确施压或沟通话术。"
+      },
+      {
+        "id": "T062",
+        "semantic_usable": true,
+        "reason": "地图和兴趣的比喻准确承接两种方式，尊重边界。"
+      },
+      {
+        "id": "T070",
+        "semantic_usable": false,
+        "reason": "没争执不足以证明双方接受对方方式，却被当作确定心理结论。"
+      }
+    ],
+    "at_least_two_distinct_usable": true,
+    "distinct_pair": [
+      "T012",
+      "T062"
+    ],
+    "reason": "T012关注用户随意逛的体验和意外感；T062关注两种逛法本身的组织方式，均无沟通建议。"
+  }
+]

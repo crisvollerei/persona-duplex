@@ -1,0 +1,221 @@
+{
+  "id": "N02-coverage",
+  "case": "N02",
+  "generation": "coverage",
+  "pool_call": "N02-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿，我这边收到这个宣布了。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "两片新叶，还凑近看了好一会儿。要是还想说说它们长什么样，我听着。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "能让你专门凑过去看上一阵，这两片叶子出现得挺是时候。想多讲讲这份高兴也行。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。",
+      "attention": 1,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N02-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿，我这边收到这个宣布了。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这两片叶子大概挺让你高兴的"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两片新叶，还凑近看了好一会儿"
+          },
+          {
+            "kind": "experience",
+            "quote": "要是还想说说它们长什么样，我听着"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是还想说说它们长什么样，我听着。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "能让你专门凑过去看上一阵"
+          },
+          {
+            "kind": "experience",
+            "quote": "想多讲讲这份高兴也行"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "想多讲讲这份高兴也行。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两片新叶，凑近看了好一会儿"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种小变化确实值得专门宣布一下"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "能让你专门凑过去看上一阵，这两片叶子出现得挺是时候。想多讲讲这份高兴也行。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C06",
+    "X03": "C03",
+    "X04": "C04",
+    "X05": "C01",
+    "X06": "C05"
+  }
+}

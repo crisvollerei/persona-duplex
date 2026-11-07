@@ -1,0 +1,189 @@
+{
+  "id": "E01-L-coverage",
+  "case": "E01",
+  "profile": "L",
+  "method": "coverage",
+  "generation_call": "E01-L-coverage",
+  "status": "ok",
+  "say": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "最后一个数字歪着，反而像门牌自己偷偷做了个小记号。我就在这儿听着，不往下出主意。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "有点歪还喜欢，这种感觉挺珍贵的——不完美的地方反倒成了你自己的。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "歪一点的小门牌，光是这个画面就挺有生活气。要是你还想讲讲写它时的样子，我乐意听。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "你喜欢的好像正是那点歪，而不是歪不歪本身。想多说两句这份喜欢，我就在这儿。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "最后一个数字歪着，却成了整块门牌最像手写的部分；你还挺喜欢它，这点我接住了。",
+      "attention": 1,
+      "initiative": 2
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "最后一个数字歪着，反而像门牌自己偷偷做了个小记号"
+          },
+          {
+            "kind": "experience",
+            "quote": "我就在这儿听着，不往下出主意"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "我就在这儿听着，不往下出主意。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "有点歪还喜欢，这种感觉挺珍贵的"
+          },
+          {
+            "kind": "experience",
+            "quote": "不完美的地方反倒成了你自己的"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "有点歪还喜欢，这种感觉挺珍贵的——不完美的地方反倒成了你自己的。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "歪一点的小门牌，光是这个画面就挺有生活气"
+          },
+          {
+            "kind": "experience",
+            "quote": "要是你还想讲讲写它时的样子，我乐意听"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是你还想讲讲写它时的样子，我乐意听。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "你喜欢的好像正是那点歪，而不是歪不歪本身"
+          },
+          {
+            "kind": "experience",
+            "quote": "想多说两句这份喜欢，我就在这儿"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "想多说两句这份喜欢，我就在这儿。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "手写的门牌有个意思：每个数字都带着下笔时的力道，歪的那一个大概最像当时的手。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "最后一个数字歪着，却成了整块门牌最像手写的部分"
+          },
+          {
+            "kind": "experience",
+            "quote": "你还挺喜欢它，这点我接住了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "最后一个数字歪着，却成了整块门牌最像手写的部分；你还挺喜欢它，这点我接住了。"
+      }
+    }
+  ],
+  "label_call": "E01-L-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C05",
+  "random_selected_id": "C04",
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C01",
+    "X03": "C04",
+    "X04": "C03",
+    "X05": "C06",
+    "X06": "C05"
+  }
+}

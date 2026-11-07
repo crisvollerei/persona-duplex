@@ -1,0 +1,15 @@
+{
+  "id": "E02-L-direct",
+  "case": "E02",
+  "profile": "L",
+  "method": "direct",
+  "generation_call": "E02-L-direct",
+  "status": "ok",
+  "say": "收到，报到记下啦。两枚邮票换一张明信片，这笔小交换挺有画面感，先不打扰你。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

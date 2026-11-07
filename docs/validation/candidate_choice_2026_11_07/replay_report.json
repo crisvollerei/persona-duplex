@@ -1,0 +1,12 @@
+{
+  "network_calls": 0,
+  "new_independent_samples": 0,
+  "passed": true,
+  "stages": [
+    {
+      "phase": "pools",
+      "reproduced_units": 12,
+      "exact_requests_matched": 12
+    }
+  ]
+}

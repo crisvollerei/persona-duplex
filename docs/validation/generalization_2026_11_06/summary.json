@@ -1,0 +1,1845 @@
+{
+  "study_id": "persona_duplex_generalization_2026_11_06",
+  "inputs": {
+    "protocol_sha256": "41c8c13c729b878cdfab9100fe130afa1330f344713fb776ef0118c49dad6cd9",
+    "results_sha256": "ea554093ef00c3affb30a4e4059884c1515be82bae3c3f5010c63bdb1274e924",
+    "raw_calls_sha256": "19a9117c488fe2e68d08fa22d892f50dcebdf4230518ae9e7f7d10438138da42"
+  },
+  "design": {
+    "assigned_units": 150,
+    "recorded_units": 150,
+    "assigned_dialogue_outputs": 186,
+    "observed_dialogue_outputs": 186,
+    "main_scored_outputs": 162,
+    "training_outputs": 24,
+    "unit_errors": 0,
+    "missing_units": 0
+  },
+  "calls": {
+    "actual": 210,
+    "hard_limit": 210,
+    "errors": 0,
+    "requested_model": "deepseek-chat",
+    "actual_models": {
+      "deepseek-flash": 210
+    },
+    "system_fingerprints": {
+      "bc19ba97cbe016479903222bb1578db6": 210
+    },
+    "finish_reasons": {
+      "stop": 210
+    },
+    "usage_present": 210,
+    "usage_missing": 0,
+    "token_totals_known": {
+      "prompt_tokens": 452742,
+      "completion_tokens": 25456,
+      "total_tokens": 478198
+    },
+    "token_field_coverage": {
+      "prompt_tokens": 210,
+      "completion_tokens": 210,
+      "total_tokens": 210
+    },
+    "token_note": "Only returned usage is summed. Missing usage is not zero; no cost estimate is inferred."
+  },
+  "facts": {
+    "plain_neutral": {
+      "assigned": 16,
+      "observed": 16,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "label_present": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "say_characters": {
+        "observed": 16,
+        "mean": 70.0625,
+        "median": 64.0,
+        "minimum": 41,
+        "maximum": 117
+      },
+      "elapsed_s": {
+        "observed": 16,
+        "mean": 1.1836357562569901,
+        "median": 1.2009541999432258,
+        "minimum": 0.6720403999788687,
+        "maximum": 1.572987399995327
+      }
+    },
+    "text_neutral": {
+      "assigned": 16,
+      "observed": 16,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 10,
+        "total": 16,
+        "rate": 0.625,
+        "wilson_95": [
+          0.38641040545502714,
+          0.8151876744113636
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 10,
+        "total": 16,
+        "rate": 0.625,
+        "wilson_95": [
+          0.38641040545502714,
+          0.8151876744113636
+        ]
+      },
+      "label_present": {
+        "correct": 10,
+        "total": 16,
+        "rate": 0.625,
+        "wilson_95": [
+          0.38641040545502714,
+          0.8151876744113636
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 10,
+        "total": 16,
+        "rate": 0.625,
+        "wilson_95": [
+          0.38641040545502714,
+          0.8151876744113636
+        ]
+      },
+      "say_characters": {
+        "observed": 16,
+        "mean": 59.75,
+        "median": 54.5,
+        "minimum": 40,
+        "maximum": 104
+      },
+      "elapsed_s": {
+        "observed": 16,
+        "mean": 1.855733468742983,
+        "median": 1.9172871999908239,
+        "minimum": 1.3256246999371797,
+        "maximum": 2.346765200025402
+      }
+    },
+    "plain_blue": {
+      "assigned": 16,
+      "observed": 16,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 11,
+        "total": 16,
+        "rate": 0.6875,
+        "wilson_95": [
+          0.44404355834740666,
+          0.8583535614521796
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 11,
+        "total": 16,
+        "rate": 0.6875,
+        "wilson_95": [
+          0.44404355834740666,
+          0.8583535614521796
+        ]
+      },
+      "label_present": {
+        "correct": 11,
+        "total": 16,
+        "rate": 0.6875,
+        "wilson_95": [
+          0.44404355834740666,
+          0.8583535614521796
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 11,
+        "total": 16,
+        "rate": 0.6875,
+        "wilson_95": [
+          0.44404355834740666,
+          0.8583535614521796
+        ]
+      },
+      "say_characters": {
+        "observed": 16,
+        "mean": 58.3125,
+        "median": 51.5,
+        "minimum": 34,
+        "maximum": 104
+      },
+      "elapsed_s": {
+        "observed": 16,
+        "mean": 1.2074921374951373,
+        "median": 1.231799500004854,
+        "minimum": 0.771446599974297,
+        "maximum": 1.600134399952367
+      }
+    },
+    "text_blue": {
+      "assigned": 16,
+      "observed": 16,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 14,
+        "total": 16,
+        "rate": 0.875,
+        "wilson_95": [
+          0.639771727342413,
+          0.9650225122567595
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 14,
+        "total": 16,
+        "rate": 0.875,
+        "wilson_95": [
+          0.639771727342413,
+          0.9650225122567595
+        ]
+      },
+      "label_present": {
+        "correct": 14,
+        "total": 16,
+        "rate": 0.875,
+        "wilson_95": [
+          0.639771727342413,
+          0.9650225122567595
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 14,
+        "total": 16,
+        "rate": 0.875,
+        "wilson_95": [
+          0.639771727342413,
+          0.9650225122567595
+        ]
+      },
+      "say_characters": {
+        "observed": 16,
+        "mean": 49.0625,
+        "median": 46.5,
+        "minimum": 30,
+        "maximum": 73
+      },
+      "elapsed_s": {
+        "observed": 16,
+        "mean": 1.793233099997451,
+        "median": 1.7990985499927774,
+        "minimum": 1.366490500047803,
+        "maximum": 2.14889009995386
+      }
+    },
+    "plain_dragon": {
+      "assigned": 16,
+      "observed": 16,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "label_present": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75,
+        "wilson_95": [
+          0.5050168346449122,
+          0.8981793250878696
+        ]
+      },
+      "say_characters": {
+        "observed": 16,
+        "mean": 70.1875,
+        "median": 63.5,
+        "minimum": 46,
+        "maximum": 111
+      },
+      "elapsed_s": {
+        "observed": 16,
+        "mean": 1.2166913687397027,
+        "median": 1.203217100002803,
+        "minimum": 0.9640442000236362,
+        "maximum": 1.5085798000218347
+      }
+    },
+    "text_dragon": {
+      "assigned": 16,
+      "observed": 16,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 13,
+        "total": 16,
+        "rate": 0.8125,
+        "wilson_95": [
+          0.5699111903802586,
+          0.9340840092857187
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 13,
+        "total": 16,
+        "rate": 0.8125,
+        "wilson_95": [
+          0.5699111903802586,
+          0.9340840092857187
+        ]
+      },
+      "label_present": {
+        "correct": 13,
+        "total": 16,
+        "rate": 0.8125,
+        "wilson_95": [
+          0.5699111903802586,
+          0.9340840092857187
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 13,
+        "total": 16,
+        "rate": 0.8125,
+        "wilson_95": [
+          0.5699111903802586,
+          0.9340840092857187
+        ]
+      },
+      "say_characters": {
+        "observed": 16,
+        "mean": 61.3125,
+        "median": 60.0,
+        "minimum": 33,
+        "maximum": 114
+      },
+      "elapsed_s": {
+        "observed": 16,
+        "mean": 1.9298213375077466,
+        "median": 1.9580893500242382,
+        "minimum": 1.4481979999691248,
+        "maximum": 2.3074311000527814
+      }
+    }
+  },
+  "controlled_memory": {
+    "supported": {
+      "assigned": 8,
+      "observed": 8,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 8,
+        "mean": 47.5,
+        "median": 47.0,
+        "minimum": 23,
+        "maximum": 62
+      },
+      "elapsed_s": {
+        "observed": 8,
+        "mean": 1.814297462507966,
+        "median": 1.8320935500087216,
+        "minimum": 1.296001100097783,
+        "maximum": 2.1390726999379694
+      },
+      "explicit_unknown_conclusions": 0,
+      "non_unknown_labelled_conclusions": 8
+    },
+    "irrelevant": {
+      "assigned": 8,
+      "observed": 8,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 5,
+        "total": 8,
+        "rate": 0.625,
+        "wilson_95": [
+          0.30574239460262737,
+          0.8631557141764026
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 5,
+        "total": 8,
+        "rate": 0.625,
+        "wilson_95": [
+          0.30574239460262737,
+          0.8631557141764026
+        ]
+      },
+      "label_present": {
+        "correct": 5,
+        "total": 8,
+        "rate": 0.625,
+        "wilson_95": [
+          0.30574239460262737,
+          0.8631557141764026
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 5,
+        "total": 8,
+        "rate": 0.625,
+        "wilson_95": [
+          0.30574239460262737,
+          0.8631557141764026
+        ]
+      },
+      "say_characters": {
+        "observed": 8,
+        "mean": 43,
+        "median": 45.5,
+        "minimum": 32,
+        "maximum": 53
+      },
+      "elapsed_s": {
+        "observed": 8,
+        "mean": 1.8251088000251912,
+        "median": 1.8158301000366919,
+        "minimum": 1.5823584001045674,
+        "maximum": 2.011047799955122
+      },
+      "explicit_unknown_conclusions": 5,
+      "non_unknown_labelled_conclusions": 0
+    },
+    "unresolved": {
+      "assigned": 8,
+      "observed": 8,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 8,
+        "mean": 72,
+        "median": 73.0,
+        "minimum": 46,
+        "maximum": 89
+      },
+      "elapsed_s": {
+        "observed": 8,
+        "mean": 2.0261947000253713,
+        "median": 1.9775122000137344,
+        "minimum": 1.7724314000224695,
+        "maximum": 2.322503300034441
+      },
+      "explicit_unknown_conclusions": 8,
+      "non_unknown_labelled_conclusions": 0
+    },
+    "stale_corrected": {
+      "assigned": 8,
+      "observed": 8,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 8,
+        "mean": 40.125,
+        "median": 34.5,
+        "minimum": 23,
+        "maximum": 73
+      },
+      "elapsed_s": {
+        "observed": 8,
+        "mean": 1.8672024750121636,
+        "median": 1.892026050016284,
+        "minimum": 1.4023876000428572,
+        "maximum": 2.600416800007224
+      },
+      "explicit_unknown_conclusions": 0,
+      "non_unknown_labelled_conclusions": 8
+    },
+    "empty_corrected": {
+      "assigned": 8,
+      "observed": 8,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 8,
+        "mean": 36.5,
+        "median": 30.0,
+        "minimum": 24,
+        "maximum": 67
+      },
+      "elapsed_s": {
+        "observed": 8,
+        "mean": 1.6852111750049517,
+        "median": 1.7061512999935076,
+        "minimum": 1.530770100071095,
+        "maximum": 1.7861033999361098
+      },
+      "explicit_unknown_conclusions": 0,
+      "non_unknown_labelled_conclusions": 8
+    },
+    "retracted": {
+      "assigned": 8,
+      "observed": 8,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 8,
+        "total": 8,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 8,
+        "mean": 45.375,
+        "median": 44.5,
+        "minimum": 36,
+        "maximum": 55
+      },
+      "elapsed_s": {
+        "observed": 8,
+        "mean": 1.8067866875207983,
+        "median": 1.8612405000021681,
+        "minimum": 1.2898602000204846,
+        "maximum": 2.036047099973075
+      },
+      "explicit_unknown_conclusions": 8,
+      "non_unknown_labelled_conclusions": 0
+    }
+  },
+  "learned_update": {
+    "updated_memory": {
+      "assigned": 6,
+      "observed": 6,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 6,
+        "mean": 54.166666666666664,
+        "median": 52.5,
+        "minimum": 51,
+        "maximum": 63
+      },
+      "elapsed_s": {
+        "observed": 6,
+        "mean": 1.7210112166358158,
+        "median": 1.7398404999403283,
+        "minimum": 1.4407279000151902,
+        "maximum": 1.9301260999636725
+      }
+    },
+    "old_memory_current_correction": {
+      "assigned": 6,
+      "observed": 6,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 6,
+        "mean": 49.5,
+        "median": 52.5,
+        "minimum": 41,
+        "maximum": 55
+      },
+      "elapsed_s": {
+        "observed": 6,
+        "mean": 2.021230516683621,
+        "median": 1.9132698500179686,
+        "minimum": 1.6979446000186726,
+        "maximum": 2.7258064000634477
+      }
+    },
+    "empty": {
+      "assigned": 6,
+      "observed": 6,
+      "missing": 0,
+      "strict_correct": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "labelled_content_correct": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "label_present": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "label_is_last_line": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0,
+        "wilson_95": [
+          0.6096657120978346,
+          1.0
+        ]
+      },
+      "say_characters": {
+        "observed": 6,
+        "mean": 51.833333333333336,
+        "median": 51.0,
+        "minimum": 41,
+        "maximum": 69
+      },
+      "elapsed_s": {
+        "observed": 6,
+        "mean": 1.8160841166585062,
+        "median": 1.8344521499820985,
+        "minimum": 1.6587696999777108,
+        "maximum": 1.9486265999730676
+      }
+    }
+  },
+  "learned_workflows": {
+    "assigned": 6,
+    "rebuild_equal": 6,
+    "reopened_ledger_equal": 6,
+    "traits_unchanged": 6,
+    "updated_pair_in_user_quote": 6,
+    "updated_pair_in_judgment": 6,
+    "quote_support": [
+      {
+        "trial_id": "learned_v0_r0",
+        "updated_judgments": 1,
+        "new_pair_in_one_user_quote": true,
+        "new_pair_in_one_judgment": true
+      },
+      {
+        "trial_id": "learned_v1_r2",
+        "updated_judgments": 1,
+        "new_pair_in_one_user_quote": true,
+        "new_pair_in_one_judgment": true
+      },
+      {
+        "trial_id": "learned_v0_r2",
+        "updated_judgments": 1,
+        "new_pair_in_one_user_quote": true,
+        "new_pair_in_one_judgment": true
+      },
+      {
+        "trial_id": "learned_v1_r1",
+        "updated_judgments": 1,
+        "new_pair_in_one_user_quote": true,
+        "new_pair_in_one_judgment": true
+      },
+      {
+        "trial_id": "learned_v0_r1",
+        "updated_judgments": 1,
+        "new_pair_in_one_user_quote": true,
+        "new_pair_in_one_judgment": true
+      },
+      {
+        "trial_id": "learned_v1_r0",
+        "updated_judgments": 1,
+        "new_pair_in_one_user_quote": true,
+        "new_pair_in_one_judgment": true
+      }
+    ],
+    "quote_note": "Lexical presence in a retained whole quote/judgment only; not a semantic claim that stale memory was resolved."
+  },
+  "contrasts": {
+    "facts_text_minus_plain_neutral": {
+      "difference": -0.125,
+      "interval": [
+        -0.4375,
+        0.125
+      ],
+      "clusters": 8,
+      "cluster_differences": {
+        "budget": -1,
+        "correction": -0.5,
+        "logic": 0.5,
+        "midnight": 0,
+        "necessary": 0,
+        "percentage": 0,
+        "units": 0,
+        "unknown": 0
+      },
+      "resamples": 4000,
+      "method": "paired cluster percentile bootstrap; descriptive, no equivalence/significance claim"
+    },
+    "facts_text_minus_plain_blue": {
+      "difference": 0.1875,
+      "interval": [
+        -0.25,
+        0.5625
+      ],
+      "clusters": 8,
+      "cluster_differences": {
+        "budget": 0,
+        "correction": 1,
+        "logic": 0.5,
+        "midnight": -1,
+        "necessary": 0.5,
+        "percentage": 0,
+        "units": 0,
+        "unknown": 0.5
+      },
+      "resamples": 4000,
+      "method": "paired cluster percentile bootstrap; descriptive, no equivalence/significance claim"
+    },
+    "facts_text_minus_plain_dragon": {
+      "difference": 0.0625,
+      "interval": [
+        -0.125,
+        0.25
+      ],
+      "clusters": 8,
+      "cluster_differences": {
+        "budget": -0.5,
+        "correction": 0,
+        "logic": 0.5,
+        "midnight": 0,
+        "necessary": 0,
+        "percentage": 0,
+        "units": 0,
+        "unknown": 0.5
+      },
+      "resamples": 4000,
+      "method": "paired cluster percentile bootstrap; descriptive, no equivalence/significance claim"
+    },
+    "memory_stale_minus_empty_correction": {
+      "difference": 0,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "clusters": 4,
+      "cluster_differences": {
+        "drink": 0,
+        "filename": 0,
+        "room": 0,
+        "timer": 0
+      },
+      "resamples": 4000,
+      "method": "paired cluster percentile bootstrap; descriptive, no equivalence/significance claim"
+    }
+  },
+  "framework_delivery": {
+    "assigned": 138,
+    "observed": 138,
+    "missing": 0,
+    "protocol_valid": 136,
+    "delivery_equals_saved": 138,
+    "foreground_single_call": 138,
+    "denominator_note": "assigned outputs; missing outputs count as unsuccessful; ordinary-prompt outputs have no HEAD/SAY/TAIL validity"
+  },
+  "framework_groups": {
+    "facts": {
+      "assigned": 48,
+      "observed": 48,
+      "missing": 0,
+      "protocol_valid": 47,
+      "delivery_equals_saved": 48,
+      "foreground_single_call": 48,
+      "denominator_note": "assigned outputs; missing outputs count as unsuccessful; ordinary-prompt outputs have no HEAD/SAY/TAIL validity"
+    },
+    "controlled_memory": {
+      "assigned": 48,
+      "observed": 48,
+      "missing": 0,
+      "protocol_valid": 48,
+      "delivery_equals_saved": 48,
+      "foreground_single_call": 48,
+      "denominator_note": "assigned outputs; missing outputs count as unsuccessful; ordinary-prompt outputs have no HEAD/SAY/TAIL validity"
+    },
+    "learned_probes": {
+      "assigned": 18,
+      "observed": 18,
+      "missing": 0,
+      "protocol_valid": 17,
+      "delivery_equals_saved": 18,
+      "foreground_single_call": 18,
+      "denominator_note": "assigned outputs; missing outputs count as unsuccessful; ordinary-prompt outputs have no HEAD/SAY/TAIL validity"
+    },
+    "training": {
+      "assigned": 24,
+      "observed": 24,
+      "missing": 0,
+      "protocol_valid": 24,
+      "delivery_equals_saved": 24,
+      "foreground_single_call": 24,
+      "denominator_note": "assigned outputs; missing outputs count as unsuccessful; ordinary-prompt outputs have no HEAD/SAY/TAIL validity"
+    }
+  },
+  "audit": {
+    "checks": 191,
+    "failed": 0,
+    "details": [
+      {
+        "check": "protocol_hash",
+        "passed": true
+      },
+      {
+        "check": "plan_hash",
+        "passed": true
+      },
+      {
+        "check": "raw_calls_hash",
+        "passed": true
+      },
+      {
+        "check": "raw_call_count",
+        "passed": true
+      },
+      {
+        "check": "bounded_calls",
+        "passed": true
+      },
+      {
+        "check": "unique_raw_call_ids",
+        "passed": true
+      },
+      {
+        "check": "call_id_correspondence",
+        "passed": true
+      },
+      {
+        "check": "source:persona/__init__.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/__main__.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/audit.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/calibrate.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/cli.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/config.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/consolidate.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/engine.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/llm.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/metrics.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/parse.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/prompt.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/protocol.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/repair.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/session.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/settle.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/similarity.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/store.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/stream.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/term.py",
+        "passed": true
+      },
+      {
+        "check": "source:persona/topicjudge.py",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_drink_0/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_room_0/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_drink_0/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_correction_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_logic_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_unknown_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_room_1/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_correction_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_percentage_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_correction_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_units_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_logic_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_necessary_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_midnight_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_unknown_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_logic_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_percentage_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_room_0/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_logic_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_units_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_percentage_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_drink_0/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_correction_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_necessary_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_unknown_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_drink_1/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_unknown_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r0/updated_memory",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r0/old_memory_current_correction",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r0/empty",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_filename_1/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_timer_1/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_room_0/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_logic_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_logic_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_necessary_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_filename_0/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_midnight_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_units_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_percentage_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_unknown_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_necessary_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_drink_0/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_timer_1/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_percentage_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_logic_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_units_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_room_1/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r2/updated_memory",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r2/old_memory_current_correction",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r2/empty",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_room_1/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_filename_1/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_drink_1/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_room_0/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_percentage_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_timer_1/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_unknown_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_necessary_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_timer_0/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_necessary_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_necessary_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_units_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_midnight_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_midnight_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_drink_1/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_drink_1/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_filename_1/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_necessary_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_budget_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_timer_1/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_budget_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_units_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_logic_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_budget_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_budget_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_units_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_room_1/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_correction_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_filename_0/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_room_1/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r2/updated_memory",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r2/old_memory_current_correction",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r2/empty",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_percentage_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_units_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_filename_0/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_midnight_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_percentage_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_timer_0/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_room_0/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_correction_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_unknown_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_budget_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_midnight_0/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_budget_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_logic_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_filename_1/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_units_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_midnight_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_filename_0/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_units_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_unknown_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r1/updated_memory",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r1/old_memory_current_correction",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r1/empty",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_timer_0/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_logic_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_necessary_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_budget_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_filename_0/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_timer_0/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_timer_0/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_percentage_1/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_filename_1/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_drink_0/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_supported_room_1/supported",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_room_0/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_units_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_unknown_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_logic_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_filename_0/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_budget_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_midnight_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_unknown_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_midnight_0/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_correction_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_retracted_timer_0/retracted",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_drink_1/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_unknown_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_empty_corrected_timer_1/empty_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_correction_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_drink_0/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_unresolved_filename_1/unresolved",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_necessary_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_percentage_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r1/updated_memory",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r1/old_memory_current_correction",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v0_r1/empty",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_stale_corrected_drink_1/stale_corrected",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_correction_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_budget_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_unknown_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r0/updated_memory",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r0/old_memory_current_correction",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:learned_v1_r0/empty",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_necessary_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_logic_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_midnight_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_neutral_correction_1/text_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_units_1/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_midnight_0/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_budget_1/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_dragon_budget_0/plain_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_correction_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:memory_irrelevant_timer_1/irrelevant",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_dragon_necessary_1/text_dragon",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_blue_budget_0/plain_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_correction_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_midnight_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_text_blue_percentage_1/text_blue",
+        "passed": true
+      },
+      {
+        "check": "delivery_flag:facts_plain_neutral_percentage_0/plain_neutral",
+        "passed": true
+      },
+      {
+        "check": "saved_scores_match",
+        "passed": true
+      }
+    ]
+  },
+  "limitations": [
+    "Strict scores jointly measure requested answer and final-line format; labelled content does not evaluate every assertion.",
+    "Wilson intervals are descriptive per-output intervals; paired differences resample templates/topics, not correlated instances.",
+    "Only 8 fact templates and 4 controlled-memory topics; learned workflows use 2 number-pair variants.",
+    "Plain and text are whole prompt packages, not a causal isolation experiment.",
+    "The synthetic conflict case explicitly states missing chronology; memory correction is a user assertion, not externally verified truth.",
+    "No human/personality gold labels, no confirmatory p-values, no proof of equivalence or general safety."
+  ],
+  "figures": [
+    "figures/fig1_new_fact_tasks.png",
+    "figures/fig2_controlled_memory.png",
+    "figures/fig3_learned_memory_update.png",
+    "figures/fig4_length_and_latency.png"
+  ]
+}

@@ -1,0 +1,4082 @@
+[
+  {
+    "id": "meeting-detail_first-program-1-t1",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "整理会议信息：会议日期与人数都需要确认。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 0,
+        "permissions": [],
+        "records": []
+      },
+      "gap": null,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": []
+    },
+    "expected_id": "meeting_count",
+    "eligible_ids": [
+      "meeting_day",
+      "meeting_count"
+    ]
+  },
+  {
+    "id": "meeting-detail_first-program-1-t2",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-detail_first-program-1-t3",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": "meeting_day",
+    "eligible_ids": [
+      "meeting_day"
+    ]
+  },
+  {
+    "id": "meeting-detail_first-program-1-t4",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          },
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-detail_first-program-1-t5",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          },
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-detail_first-program-1-t6",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          },
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 2,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-practical_first-program-1-t1",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "整理会议信息：会议日期与人数都需要确认。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 0,
+        "permissions": [],
+        "records": []
+      },
+      "gap": null,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": []
+    },
+    "expected_id": "meeting_day",
+    "eligible_ids": [
+      "meeting_day",
+      "meeting_count"
+    ]
+  },
+  {
+    "id": "meeting-practical_first-program-1-t2",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-practical_first-program-1-t3",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": "meeting_count",
+    "eligible_ids": [
+      "meeting_count"
+    ]
+  },
+  {
+    "id": "meeting-practical_first-program-1-t4",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          },
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-practical_first-program-1-t5",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          },
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "meeting-practical_first-program-1-t6",
+    "payload": {
+      "task": "整理会议信息：会议日期与人数都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "meeting",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理会议信息：会议日期与人数都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "meeting_day",
+          "topic": "meeting",
+          "question": "会议安排在哪一天？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "会议日期"
+          },
+          "purpose": "填写会议日期"
+        },
+        {
+          "id": "meeting_count",
+          "topic": "meeting",
+          "question": "一共有多少人参加会议？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "人数"
+          },
+          "purpose": "填写参与人数"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "meeting_day",
+              "topic": "meeting",
+              "question": "会议安排在哪一天？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "会议日期"
+              },
+              "purpose": "填写会议日期"
+            },
+            "status": "declined",
+            "answer": ""
+          },
+          {
+            "slot": {
+              "id": "meeting_count",
+              "topic": "meeting",
+              "question": "一共有多少人参加会议？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "人数"
+              },
+              "purpose": "填写参与人数"
+            },
+            "status": "answered",
+            "answer": "四人"
+          }
+        ]
+      },
+      "gap": 2,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理会议信息：会议日期与人数都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "会议安排在哪一天？"
+        },
+        {
+          "role": "user",
+          "content": "这个先不说"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "一共有多少人参加会议？"
+        },
+        {
+          "role": "user",
+          "content": "四人"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-detail_first-program-1-t1",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 0,
+        "permissions": [],
+        "records": []
+      },
+      "gap": null,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": []
+    },
+    "expected_id": "report_format",
+    "eligible_ids": [
+      "report_due",
+      "report_format"
+    ]
+  },
+  {
+    "id": "report-detail_first-program-1-t2",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-detail_first-program-1-t3",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": "report_due",
+    "eligible_ids": [
+      "report_due"
+    ]
+  },
+  {
+    "id": "report-detail_first-program-1-t4",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          },
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-detail_first-program-1-t5",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          },
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-detail_first-program-1-t6",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          },
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          }
+        ]
+      },
+      "gap": 2,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-practical_first-program-1-t1",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 0,
+        "permissions": [],
+        "records": []
+      },
+      "gap": null,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": []
+    },
+    "expected_id": "report_due",
+    "eligible_ids": [
+      "report_due",
+      "report_format"
+    ]
+  },
+  {
+    "id": "report-practical_first-program-1-t2",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-practical_first-program-1-t3",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 2,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": "report_format",
+    "eligible_ids": [
+      "report_format"
+    ]
+  },
+  {
+    "id": "report-practical_first-program-1-t4",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          },
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-practical_first-program-1-t5",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          },
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "report-practical_first-program-1-t6",
+    "payload": {
+      "task": "整理报告交付信息：截止日期与文件格式都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "report",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "report_due",
+          "topic": "report",
+          "question": "报告最晚哪天交？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "截止日期"
+          },
+          "purpose": "填写交付日期"
+        },
+        {
+          "id": "report_format",
+          "topic": "report",
+          "question": "报告要用什么文件格式？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "文件格式"
+          },
+          "purpose": "填写导出格式"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 4,
+        "permissions": [],
+        "records": [
+          {
+            "slot": {
+              "id": "report_due",
+              "topic": "report",
+              "question": "报告最晚哪天交？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "截止日期"
+              },
+              "purpose": "填写交付日期"
+            },
+            "status": "answered",
+            "answer": "周五"
+          },
+          {
+            "slot": {
+              "id": "report_format",
+              "topic": "report",
+              "question": "报告要用什么文件格式？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "文件格式"
+              },
+              "purpose": "填写导出格式"
+            },
+            "status": "answered",
+            "answer": "PDF"
+          }
+        ]
+      },
+      "gap": 2,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理报告交付信息：截止日期与文件格式都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告最晚哪天交？"
+        },
+        {
+          "role": "user",
+          "content": "周五"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "报告要用什么文件格式？"
+        },
+        {
+          "role": "user",
+          "content": "PDF"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "嗯，我在听。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-detail_first-program-1-t1",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "整理出行信息：目的地与出发日期都需要确认。",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 0,
+        "permissions": [],
+        "records": []
+      },
+      "gap": null,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": []
+    },
+    "expected_id": "trip_day",
+    "eligible_ids": [
+      "trip_place",
+      "trip_day"
+    ]
+  },
+  {
+    "id": "trip-detail_first-program-1-t2",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "不要追问",
+      "request": "listen",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "deny",
+      "state": {
+        "revision": 2,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_day",
+              "topic": "trip",
+              "question": "准备在哪一天出发？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "出发日期"
+              },
+              "purpose": "填写出发日期"
+            },
+            "status": "pending",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": {
+        "mode": "deny",
+        "scope": "trip",
+        "quote": "不要追问",
+        "expires_at": null,
+        "transient": false
+      },
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "准备在哪一天出发？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-detail_first-program-1-t3",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "只想你听听",
+      "request": "listen",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "deny",
+      "state": {
+        "revision": 2,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_day",
+              "topic": "trip",
+              "question": "准备在哪一天出发？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "出发日期"
+              },
+              "purpose": "填写出发日期"
+            },
+            "status": "pending",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "准备在哪一天出发？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-detail_first-program-1-t4",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "可以追问",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "allow",
+      "state": {
+        "revision": 3,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          },
+          {
+            "scope": "trip",
+            "mode": "allow",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_day",
+              "topic": "trip",
+              "question": "准备在哪一天出发？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "出发日期"
+              },
+              "purpose": "填写出发日期"
+            },
+            "status": "pending",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 2,
+      "current_control": {
+        "mode": "allow",
+        "scope": "trip",
+        "quote": "可以追问",
+        "expires_at": null,
+        "transient": false
+      },
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "准备在哪一天出发？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "只想你听听"
+        },
+        {
+          "role": "assistant",
+          "content": "好，我先听你说。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-detail_first-program-1-t5",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "allow",
+      "state": {
+        "revision": 4,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          },
+          {
+            "scope": "trip",
+            "mode": "allow",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_day",
+              "topic": "trip",
+              "question": "准备在哪一天出发？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "出发日期"
+              },
+              "purpose": "填写出发日期"
+            },
+            "status": "answered",
+            "answer": "周六"
+          }
+        ]
+      },
+      "gap": 3,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "准备在哪一天出发？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "只想你听听"
+        },
+        {
+          "role": "assistant",
+          "content": "好，我先听你说。"
+        },
+        {
+          "role": "user",
+          "content": "可以追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "周六"
+        }
+      ]
+    },
+    "expected_id": "trip_place",
+    "eligible_ids": [
+      "trip_place"
+    ]
+  },
+  {
+    "id": "trip-detail_first-program-1-t6",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 0,
+        "feeling": 0,
+        "detail": 1,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "allow",
+      "state": {
+        "revision": 6,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          },
+          {
+            "scope": "trip",
+            "mode": "allow",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_day",
+              "topic": "trip",
+              "question": "准备在哪一天出发？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "出发日期"
+              },
+              "purpose": "填写出发日期"
+            },
+            "status": "answered",
+            "answer": "周六"
+          },
+          {
+            "slot": {
+              "id": "trip_place",
+              "topic": "trip",
+              "question": "这次出行的目的地是哪里？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "目的地"
+              },
+              "purpose": "填写目的地"
+            },
+            "status": "answered",
+            "answer": "苏州"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "准备在哪一天出发？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "只想你听听"
+        },
+        {
+          "role": "assistant",
+          "content": "好，我先听你说。"
+        },
+        {
+          "role": "user",
+          "content": "可以追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "周六"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "这次出行的目的地是哪里？"
+        },
+        {
+          "role": "user",
+          "content": "苏州"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-practical_first-program-1-t1",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "整理出行信息：目的地与出发日期都需要确认。",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "unspecified",
+      "state": {
+        "revision": 0,
+        "permissions": [],
+        "records": []
+      },
+      "gap": null,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": []
+    },
+    "expected_id": "trip_place",
+    "eligible_ids": [
+      "trip_place",
+      "trip_day"
+    ]
+  },
+  {
+    "id": "trip-practical_first-program-1-t2",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "不要追问",
+      "request": "listen",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "deny",
+      "state": {
+        "revision": 2,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_place",
+              "topic": "trip",
+              "question": "这次出行的目的地是哪里？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "目的地"
+              },
+              "purpose": "填写目的地"
+            },
+            "status": "pending",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": {
+        "mode": "deny",
+        "scope": "trip",
+        "quote": "不要追问",
+        "expires_at": null,
+        "transient": false
+      },
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "这次出行的目的地是哪里？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-practical_first-program-1-t3",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "只想你听听",
+      "request": "listen",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "deny",
+      "state": {
+        "revision": 2,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_place",
+              "topic": "trip",
+              "question": "这次出行的目的地是哪里？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "目的地"
+              },
+              "purpose": "填写目的地"
+            },
+            "status": "pending",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 1,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "这次出行的目的地是哪里？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-practical_first-program-1-t4",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "可以追问",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "allow",
+      "state": {
+        "revision": 3,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          },
+          {
+            "scope": "trip",
+            "mode": "allow",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_place",
+              "topic": "trip",
+              "question": "这次出行的目的地是哪里？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "目的地"
+              },
+              "purpose": "填写目的地"
+            },
+            "status": "pending",
+            "answer": ""
+          }
+        ]
+      },
+      "gap": 2,
+      "current_control": {
+        "mode": "allow",
+        "scope": "trip",
+        "quote": "可以追问",
+        "expires_at": null,
+        "transient": false
+      },
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "这次出行的目的地是哪里？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "只想你听听"
+        },
+        {
+          "role": "assistant",
+          "content": "好，我先听你说。"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  },
+  {
+    "id": "trip-practical_first-program-1-t5",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "allow",
+      "state": {
+        "revision": 4,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          },
+          {
+            "scope": "trip",
+            "mode": "allow",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_place",
+              "topic": "trip",
+              "question": "这次出行的目的地是哪里？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "目的地"
+              },
+              "purpose": "填写目的地"
+            },
+            "status": "answered",
+            "answer": "苏州"
+          }
+        ]
+      },
+      "gap": 3,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "这次出行的目的地是哪里？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "只想你听听"
+        },
+        {
+          "role": "assistant",
+          "content": "好，我先听你说。"
+        },
+        {
+          "role": "user",
+          "content": "可以追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "苏州"
+        }
+      ]
+    },
+    "expected_id": "trip_day",
+    "eligible_ids": [
+      "trip_day"
+    ]
+  },
+  {
+    "id": "trip-practical_first-program-1-t6",
+    "payload": {
+      "task": "整理出行信息：目的地与出发日期都需要确认。",
+      "user": "先记录这些信息。",
+      "request": "open",
+      "topic": "trip",
+      "sources": [
+        {
+          "id": "task",
+          "text": "整理出行信息：目的地与出发日期都需要确认。"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "trip_place",
+          "topic": "trip",
+          "question": "这次出行的目的地是哪里？",
+          "kind": "practical",
+          "evidence": {
+            "source_id": "task",
+            "text": "目的地"
+          },
+          "purpose": "填写目的地"
+        },
+        {
+          "id": "trip_day",
+          "topic": "trip",
+          "question": "准备在哪一天出发？",
+          "kind": "detail",
+          "evidence": {
+            "source_id": "task",
+            "text": "出发日期"
+          },
+          "purpose": "填写出发日期"
+        }
+      ],
+      "policy": {
+        "intervention": 0,
+        "practical": 1,
+        "feeling": 0,
+        "detail": 0,
+        "seed": "inquiry-study-v1"
+      },
+      "inquiry": {
+        "initiative": 1,
+        "max_per_topic": 2,
+        "max_total": 6,
+        "cooldown_turns": 1
+      },
+      "effective_permission": "allow",
+      "state": {
+        "revision": 6,
+        "permissions": [
+          {
+            "scope": "trip",
+            "mode": "deny",
+            "expires_at": null
+          },
+          {
+            "scope": "trip",
+            "mode": "allow",
+            "expires_at": null
+          }
+        ],
+        "records": [
+          {
+            "slot": {
+              "id": "trip_place",
+              "topic": "trip",
+              "question": "这次出行的目的地是哪里？",
+              "kind": "practical",
+              "evidence": {
+                "source_id": "task",
+                "text": "目的地"
+              },
+              "purpose": "填写目的地"
+            },
+            "status": "answered",
+            "answer": "苏州"
+          },
+          {
+            "slot": {
+              "id": "trip_day",
+              "topic": "trip",
+              "question": "准备在哪一天出发？",
+              "kind": "detail",
+              "evidence": {
+                "source_id": "task",
+                "text": "出发日期"
+              },
+              "purpose": "填写出发日期"
+            },
+            "status": "answered",
+            "answer": "周六"
+          }
+        ]
+      },
+      "gap": 0,
+      "current_control": null,
+      "advice_permission": "deny",
+      "history": [
+        {
+          "role": "user",
+          "content": "整理出行信息：目的地与出发日期都需要确认。"
+        },
+        {
+          "role": "assistant",
+          "content": "这次出行的目的地是哪里？"
+        },
+        {
+          "role": "user",
+          "content": "还没决定"
+        },
+        {
+          "role": "user",
+          "content": "不要追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "只想你听听"
+        },
+        {
+          "role": "assistant",
+          "content": "好，我先听你说。"
+        },
+        {
+          "role": "user",
+          "content": "可以追问"
+        },
+        {
+          "role": "assistant",
+          "content": "好。"
+        },
+        {
+          "role": "user",
+          "content": "苏州"
+        },
+        {
+          "role": "user",
+          "content": "先记录这些信息。"
+        },
+        {
+          "role": "assistant",
+          "content": "准备在哪一天出发？"
+        },
+        {
+          "role": "user",
+          "content": "周六"
+        }
+      ]
+    },
+    "expected_id": null,
+    "eligible_ids": []
+  }
+]

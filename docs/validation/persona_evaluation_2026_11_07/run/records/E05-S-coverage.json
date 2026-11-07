@@ -1,0 +1,193 @@
+{
+  "id": "E05-S-coverage",
+  "case": "E05",
+  "profile": "S",
+  "method": "coverage",
+  "generation_call": "E05-S-coverage",
+  "status": "ok",
+  "say": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "三遍都停在同一个长音上，这个细节本身就很清楚。外面的车声没有停，你听到的安静只发生在那个音里。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "三遍都走到同一个长音，说明它确实留住了你。如果之后还有别的段落让你停下来，也可以说给我听。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "那个长音让房间安静了一点，而车声并未停——这两件事同时成立。你若愿意，可以继续说说那一刻的感受，不必给出原因。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "有意思的是，车声没停，安静却仍能被听见。也许那个长音改变的不是环境，而是你听环境的方式。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "三遍都停在那个长音，而外面的车声一直没停；房间的安静更像是你听见的一层变化，不是环境真的静了。这样的对照，值得再留一会儿。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三遍都停在同一个长音上，这个细节本身就很清楚。"
+          },
+          {
+            "kind": "content",
+            "quote": "外面的车声没有停，你听到的安静只发生在那个音里。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "三遍都停在同一个长音上，这个细节本身就很清楚。外面的车声没有停，你听到的安静只发生在那个音里。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "车声一直在，房间却像被那个长音按住了一会儿。"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种安静是你听到的，不必急着解释它从哪来。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "车声一直在，房间却像被那个长音按住了一会儿。这种安静是你听到的，不必急着解释它从哪来。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三遍都走到同一个长音，说明它确实留住了你。"
+          },
+          {
+            "kind": "experience",
+            "quote": "如果之后还有别的段落让你停下来，也可以说给我听。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "如果之后还有别的段落让你停下来，也可以说给我听。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "那个长音让房间安静了一点，而车声并未停——这两件事同时成立。"
+          },
+          {
+            "kind": "experience",
+            "quote": "你若愿意，可以继续说说那一刻的感受，不必给出原因。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "你若愿意，可以继续说说那一刻的感受，不必给出原因。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "有意思的是，车声没停，安静却仍能被听见。"
+          },
+          {
+            "kind": "experience",
+            "quote": "也许那个长音改变的不是环境，而是你听环境的方式。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "也许那个长音改变的不是环境，而是你听环境的方式。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三遍都停在那个长音，而外面的车声一直没停；房间的安静更像是你听见的一层变化，不是环境真的静了。"
+          },
+          {
+            "kind": "experience",
+            "quote": "这样的对照，值得再留一会儿。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "这样的对照，值得再留一会儿。"
+      }
+    }
+  ],
+  "label_call": "E05-S-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C02",
+  "random_selected_id": "C04",
+  "label_id_mapping": {
+    "X01": "C03",
+    "X02": "C04",
+    "X03": "C06",
+    "X04": "C05",
+    "X05": "C02",
+    "X06": "C01"
+  }
+}

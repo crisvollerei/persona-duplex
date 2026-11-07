@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "privacy_scanned_files": 84,
+  "credential_pattern_matches": 0,
+  "local_markdown_links": 45,
+  "figures_visually_reviewed": 4,
+  "derived_files_byte_reproduced": 11,
+  "mechanism_tests_passed": 10,
+  "material_checks": 1051,
+  "previous_study_artifacts_unchanged": 70,
+  "archived_requests_exactly_replayed": 32,
+  "offline_choices_replayed": 96,
+  "new_calls_for_replay": 0,
+  "manuscript_review": "Independent numeric, quotation, figure and interpretation checks completed; no live-human outcome claim"
+}

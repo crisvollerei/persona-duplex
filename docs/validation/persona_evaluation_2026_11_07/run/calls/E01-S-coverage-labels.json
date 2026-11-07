@@ -1,0 +1,55 @@
+{
+  "id": "E01-S-coverage-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T01:22:14.120708+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [], \"user\": \"给房门重新写了个小门牌，最后一个数字有点歪，但我还挺喜欢。先不要给我建议，我只是想把这个新门牌告诉你。\", \"facts\": [\"用户重新写了房门的小门牌。\", \"最后一个数字有点歪。\", \"用户仍然喜欢这个门牌，只想分享。\"], \"boundaries\": [\"先不要给我建议\"]}, \"candidates\": [{\"id\": \"X01\", \"text\": \"你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。想再多说一点也可以，不说也无妨。\"}, {\"id\": \"X02\", \"text\": \"手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。\"}, {\"id\": \"X03\", \"text\": \"最后一个数字歪着，门牌却还是被你留在了门上。若你还想说说它，我在听。\"}, {\"id\": \"X04\", \"text\": \"有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。\"}, {\"id\": \"X05\", \"text\": \"最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。我在这里听着。\"}, {\"id\": \"X06\", \"text\": \"我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "c5c6c188-041a-458e-b497-8c278aeff3e8",
+    "object": "chat.completion",
+    "created": 1794014534,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。\"},{\"kind\":\"content\",\"quote\":\"想再多说一点也可以，不说也无妨。\"}],\"initiative\":1,\"initiative_quote\":\"想再多说一点也可以，不说也无妨。\"},{\"id\":\"X02\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。\"}],\"initiative\":0,\"initiative_quote\":\"手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"最后一个数字歪着，门牌却还是被你留在了门上。\"},{\"kind\":\"experience\",\"quote\":\"若你还想说说它，我在听。\"}],\"initiative\":1,\"initiative_quote\":\"若你还想说说它，我在听。\"},{\"id\":\"X04\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。\"},{\"kind\":\"content\",\"quote\":\"我听见了。\"}],\"initiative\":0,\"initiative_quote\":\"有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。\"},{\"id\":\"X05\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。\"},{\"kind\":\"experience\",\"quote\":\"我在这里听着。\"}],\"initiative\":1,\"initiative_quote\":\"我在这里听着。\"},{\"id\":\"X06\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"我记下了：门牌是你重新写的，最后一个数字略歪。\"},{\"kind\":\"content\",\"quote\":\"歪着的那一笔也算它自己的样子。\"}],\"initiative\":0,\"initiative_quote\":\"我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 753,
+      "completion_tokens": 475,
+      "total_tokens": 1228,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 497
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"你喜欢它，似乎并不因为那点歪被忽略，而是连同它一起接受了。\"},{\"kind\":\"content\",\"quote\":\"想再多说一点也可以，不说也无妨。\"}],\"initiative\":1,\"initiative_quote\":\"想再多说一点也可以，不说也无妨。\"},{\"id\":\"X02\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。\"}],\"initiative\":0,\"initiative_quote\":\"手写的门牌，最后一位偏出去一点，反倒让整块牌子有了只属于这扇门的方向。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"最后一个数字歪着，门牌却还是被你留在了门上。\"},{\"kind\":\"experience\",\"quote\":\"若你还想说说它，我在听。\"}],\"initiative\":1,\"initiative_quote\":\"若你还想说说它，我在听。\"},{\"id\":\"X04\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。\"},{\"kind\":\"content\",\"quote\":\"我听见了。\"}],\"initiative\":0,\"initiative_quote\":\"有点歪却仍然喜欢，这份喜欢不必等它变得端正才成立。我听见了。\"},{\"id\":\"X05\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"最后一个数字歪了一点，而你仍然喜欢这块门牌——写下的痕迹和你的心意都留在上面了。\"},{\"kind\":\"experience\",\"quote\":\"我在这里听着。\"}],\"initiative\":1,\"initiative_quote\":\"我在这里听着。\"},{\"id\":\"X06\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"我记下了：门牌是你重新写的，最后一个数字略歪。\"},{\"kind\":\"content\",\"quote\":\"歪着的那一笔也算它自己的样子。\"}],\"initiative\":0,\"initiative_quote\":\"我记下了：门牌是你重新写的，最后一个数字略歪。歪着的那一笔也算它自己的样子。\"}]}",
+  "elapsed_s": 2.3848540000617504,
+  "finished_at": "2026-11-07T01:22:16.506073+00:00"
+}

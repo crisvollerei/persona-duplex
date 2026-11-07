@@ -1,0 +1,12 @@
+{
+  "fixed_at": "2026-11-07T00:16:31+08:00",
+  "fixed_before_generation": true,
+  "pairs": 112,
+  "codebook_sha256": "37ae92252e31692cadc29d09a9429240da0529d50baed905f7379591348054ac",
+  "assignment_sha256": "b86852de0c5386ea47f594b9edb7951a8fd1e58b8bb3b5b699d2f920d37f14ad",
+  "method_blinding": true,
+  "profile_blinding": false,
+  "rater_type": "two separately started Codex coding tasks, not independent humans",
+  "primary": "requested-target verdict for all complete visible replies plus frozen automatic extraction/coverage",
+  "score_aggregation": "each rater separately; no consensus overwrite, no persona noninferiority claim"
+}

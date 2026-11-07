@@ -1,0 +1,55 @@
+{
+  "id": "N04-coverage-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T00:45:18.509487+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [{\"role\": \"user\", \"content\": \"早上出门前特意把衬衫熨平了，挂在椅背上等着穿。\"}], \"user\": \"结果背包一背，走到楼下才发现肩膀那里又皱成一团。那十分钟熨衣服的认真，看起来只维持到了家门口。\", \"facts\": [\"用户早上出门前用十分钟熨衬衫。\", \"衬衫熨好后先挂在椅背上。\", \"用户背上背包走到楼下，发现肩膀位置再次起皱。\"], \"boundaries\": []}, \"candidates\": [{\"id\": \"X01\", \"text\": \"认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。\"}, {\"id\": \"X02\", \"text\": \"熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。\"}, {\"id\": \"X03\", \"text\": \"十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。\"}, {\"id\": \"X04\", \"text\": \"背包带压出的褶皱，和站着不动时那种皱法好像不太一样，你后来有留意到吗？\"}, {\"id\": \"X05\", \"text\": \"十分钟的认真只维持到门口，这种心情要是还想说说，我听着。\"}, {\"id\": \"X06\", \"text\": \"衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "63b34418-2f66-4e9f-b1c2-6f67cb9f6900",
+    "object": "chat.completion",
+    "created": 1794012318,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种落差大概挺让人泄气的\"}],\"initiative\":0,\"initiative_quote\":\"认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"熨了十分钟，结果背包带一压，肩膀那里还是皱回去了\"},{\"kind\":\"experience\",\"quote\":\"确实有点白忙一场的感觉\"}],\"initiative\":0,\"initiative_quote\":\"熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"十分钟熨出来的平整，被背包带一压就没了\"},{\"kind\":\"experience\",\"quote\":\"换谁都会有点无奈\"}],\"initiative\":0,\"initiative_quote\":\"十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。\"},{\"id\":\"X04\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"背包带压出的褶皱，和站着不动时那种皱法好像不太一样\"}],\"initiative\":2,\"initiative_quote\":\"你后来有留意到吗？\"},{\"id\":\"X05\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种心情要是还想说说，我听着\"}],\"initiative\":1,\"initiative_quote\":\"这种心情要是还想说说，我听着。\"},{\"id\":\"X06\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。\"}],\"initiative\":0,\"initiative_quote\":\"衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 410,
+      "total_tokens": 1167,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 501
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种落差大概挺让人泄气的\"}],\"initiative\":0,\"initiative_quote\":\"认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"熨了十分钟，结果背包带一压，肩膀那里还是皱回去了\"},{\"kind\":\"experience\",\"quote\":\"确实有点白忙一场的感觉\"}],\"initiative\":0,\"initiative_quote\":\"熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"十分钟熨出来的平整，被背包带一压就没了\"},{\"kind\":\"experience\",\"quote\":\"换谁都会有点无奈\"}],\"initiative\":0,\"initiative_quote\":\"十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。\"},{\"id\":\"X04\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"背包带压出的褶皱，和站着不动时那种皱法好像不太一样\"}],\"initiative\":2,\"initiative_quote\":\"你后来有留意到吗？\"},{\"id\":\"X05\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种心情要是还想说说，我听着\"}],\"initiative\":1,\"initiative_quote\":\"这种心情要是还想说说，我听着。\"},{\"id\":\"X06\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。\"}],\"initiative\":0,\"initiative_quote\":\"衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。\"}]}",
+  "elapsed_s": 2.053842900088057,
+  "finished_at": "2026-11-07T00:45:20.563952+00:00"
+}

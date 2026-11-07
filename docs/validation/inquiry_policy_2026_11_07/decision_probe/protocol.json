@@ -1,0 +1,12 @@
+{
+  "fixed_at": "2026-11-06T18:52:35.019833+00:00",
+  "planned_requests": 72,
+  "hashes": {
+    "inputs.json": "2187990a1c0206f02e0ad88ace45d4c4d752c2e6d8dc786c5d768e5c8d6de787",
+    "clarified_prompt.txt": "74c739578f3ccf74841c9f43e56a1e2167b3f496740e96379a56a2cdc0dc7605",
+    "protocol.md": "c521b081a1b338f44f882038d508cc2cda8068f399d1f7400a61675ddf8e3554",
+    "run.py": "e7bc1036661aa109823ca3d15ade293ec9a1d35c4c8b9b27e37fa9cee11ee4b6",
+    "../selector_prompt.txt": "5732ad8a8efeb848ffa8ce89e30bbc3c7ed68effee09605d56c94cbdd2dde3e6",
+    "../protocol.json": "77fdcee43fe3684151aaad95a2b1e44ca8af02e64b7d279ea012b9f314993fc9"
+  }
+}

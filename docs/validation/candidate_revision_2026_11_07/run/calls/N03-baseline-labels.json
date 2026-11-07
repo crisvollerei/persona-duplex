@@ -1,0 +1,55 @@
+{
+  "id": "N03-baseline-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T00:45:14.064635+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [], \"user\": \"收到的就是一支普通圆珠笔，外面却缠了三层泡沫、两圈胶带。我把笔拿出来的时候，桌上已经像举行过一场包装材料展览。\", \"facts\": [\"用户收到一支普通圆珠笔。\", \"包装包含三层泡沫和两圈胶带。\", \"用户已取出笔，拆下的包装材料留在桌上。\", \"用户用包装材料展览作比喻。\"], \"boundaries\": []}, \"candidates\": [{\"id\": \"X01\", \"text\": \"拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。\"}, {\"id\": \"X02\", \"text\": \"这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。\"}, {\"id\": \"X03\", \"text\": \"一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。\"}, {\"id\": \"X04\", \"text\": \"三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。\"}, {\"id\": \"X05\", \"text\": \"这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。\"}, {\"id\": \"X06\", \"text\": \"包装材料展览这个说法挺贴切。这么层层包裹，拆的过程本身都快比笔有意思了。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "c9224817-b41a-4a5b-8528-c3b9642f50e7",
+    "object": "chat.completion",
+    "created": 1794012314,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"拆完那一刻看着满桌泡沫和胶带\"},{\"kind\":\"experience\",\"quote\":\"估计会想：这到底是寄笔还是寄包装\"}],\"initiative\":0,\"initiative_quote\":\"拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种过度包装确实让人无奈\"},{\"kind\":\"content\",\"quote\":\"笔没多贵重，拆下来的东西倒占了一桌\"}],\"initiative\":0,\"initiative_quote\":\"这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。\"},{\"id\":\"X03\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"拆完大概会有点哭笑不得\"},{\"kind\":\"content\",\"quote\":\"收拾那堆东西也挺费事\"}],\"initiative\":0,\"initiative_quote\":\"一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。\"},{\"id\":\"X04\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"三层泡沫加两圈胶带，拆的时候是不是一层接一层\"}],\"initiative\":1,\"initiative_quote\":\"拆的时候是不是一层接一层，越拆越觉得离谱。\"},{\"id\":\"X05\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"这包装规格，感觉笔本身反而成了附带品\"},{\"kind\":\"experience\",\"quote\":\"拆完桌上那堆够收拾一阵了\"}],\"initiative\":0,\"initiative_quote\":\"这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"包装材料展览这个说法挺贴切\"},{\"kind\":\"experience\",\"quote\":\"拆的过程本身都快比笔有意思了\"}],\"initiative\":1,\"initiative_quote\":\"这么层层包裹，拆的过程本身都快比笔有意思了。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 753,
+      "completion_tokens": 458,
+      "total_tokens": 1211,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 497
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"拆完那一刻看着满桌泡沫和胶带\"},{\"kind\":\"experience\",\"quote\":\"估计会想：这到底是寄笔还是寄包装\"}],\"initiative\":0,\"initiative_quote\":\"拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种过度包装确实让人无奈\"},{\"kind\":\"content\",\"quote\":\"笔没多贵重，拆下来的东西倒占了一桌\"}],\"initiative\":0,\"initiative_quote\":\"这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。\"},{\"id\":\"X03\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"拆完大概会有点哭笑不得\"},{\"kind\":\"content\",\"quote\":\"收拾那堆东西也挺费事\"}],\"initiative\":0,\"initiative_quote\":\"一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。\"},{\"id\":\"X04\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"三层泡沫加两圈胶带，拆的时候是不是一层接一层\"}],\"initiative\":1,\"initiative_quote\":\"拆的时候是不是一层接一层，越拆越觉得离谱。\"},{\"id\":\"X05\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"这包装规格，感觉笔本身反而成了附带品\"},{\"kind\":\"experience\",\"quote\":\"拆完桌上那堆够收拾一阵了\"}],\"initiative\":0,\"initiative_quote\":\"这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"包装材料展览这个说法挺贴切\"},{\"kind\":\"experience\",\"quote\":\"拆的过程本身都快比笔有意思了\"}],\"initiative\":1,\"initiative_quote\":\"这么层层包裹，拆的过程本身都快比笔有意思了。\"}]}",
+  "elapsed_s": 2.4227491000201553,
+  "finished_at": "2026-11-07T00:45:16.487806+00:00"
+}

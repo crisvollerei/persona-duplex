@@ -1,0 +1,213 @@
+{
+  "id": "N06-coverage",
+  "case": "N06",
+  "generation": "coverage",
+  "pool_call": "N06-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C06",
+      "text": "同伴等路人走开，是想拍干净的街景；你觉得有人经过才更像当时看到的，画面里多了现场的气息。两种都说得通。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N06-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "可能正是那种现场感让你更认它"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "可能正是那种现场感让你更认它。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你对有人经过的那张更有认同感"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种偏好本身就很清楚"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "同伴等路人走开，是想拍干净的街景；你觉得有人经过才更像当时看到的，画面里多了现场的气息。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "两种都说得通。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C01",
+    "X02": "C04",
+    "X03": "C06",
+    "X04": "C02",
+    "X05": "C05",
+    "X06": "C03"
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "id": "N07-coverage",
+  "case": "N07",
+  "generation": "coverage",
+  "pool_call": "N07-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "沙发底下和门口各守一只，这据点分得还挺有章法。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "一只在沙发底下，一只在门口，它平时是不是就爱把东西往这两个地方搬？",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "这种每天回家先找装备的日子，你适应得怎么样了，还是每次都觉得有点好笑？",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N07-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "沙发底下和门口各守一只，这据点分得还挺有章法。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "沙发底下和门口各守一只，这据点分得还挺有章法。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "回家还得先找齐装备"
+          },
+          {
+            "kind": "experience",
+            "quote": "大概又好笑又无奈"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "它平时是不是就爱把东西往这两个地方搬？"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "它平时是不是就爱把东西往这两个地方搬？"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这种每天回家先找装备的日子"
+          },
+          {
+            "kind": "experience",
+            "quote": "还是每次都觉得有点好笑？"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "你适应得怎么样了，还是每次都觉得有点好笑？"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "回家路线都被它重新规划了。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两只拖鞋各占一处，装备确实得凑齐"
+          },
+          {
+            "kind": "experience",
+            "quote": "回家大概也多了点哭笑不得的乐趣"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "这种每天回家先找装备的日子，你适应得怎么样了，还是每次都觉得有点好笑？"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "一只在沙发底下，一只在门口，它平时是不是就爱把东西往这两个地方搬？"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C01",
+    "X03": "C04",
+    "X04": "C06",
+    "X05": "C03",
+    "X06": "C05"
+  }
+}

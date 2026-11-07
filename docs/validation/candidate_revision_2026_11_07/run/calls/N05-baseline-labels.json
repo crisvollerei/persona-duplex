@@ -1,0 +1,55 @@
+{
+  "id": "N05-baseline-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T00:45:24.081718+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [], \"user\": \"朋友说桌游开心就好，不用那么认真算分。我倒觉得最后把分数一项项算出来也是乐趣。我们没有闹别扭，就是好像把好玩的部分放在了不同地方。\", \"facts\": [\"朋友认为玩桌游开心就好，不必认真算分。\", \"用户觉得逐项结算分数也是乐趣。\", \"用户明确说双方没有闹别扭。\", \"用户认为两人关注的乐趣不同。\"], \"boundaries\": []}, \"candidates\": [{\"id\": \"X01\", \"text\": \"能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。这种差异放着不管，往往也不影响一起玩。\"}, {\"id\": \"X02\", \"text\": \"那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。\"}, {\"id\": \"X03\", \"text\": \"算分对有些人来说是负担，对你来说是一局游戏的收尾仪式。朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。\"}, {\"id\": \"X04\", \"text\": \"这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。\"}, {\"id\": \"X05\", \"text\": \"你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。\"}, {\"id\": \"X06\", \"text\": \"逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "5d84e599-b3fc-41ce-9841-8c81e62cadfd",
+    "object": "chat.completion",
+    "created": 1794012324,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。\"},{\"kind\":\"content\",\"quote\":\"这种差异放着不管，往往也不影响一起玩。\"}],\"initiative\":0,\"initiative_quote\":\"能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。这种差异放着不管，往往也不影响一起玩。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"算分这段可能就变成你的专属环节了\"},{\"kind\":\"experience\",\"quote\":\"朋友在旁边等着看结果，也算一种分工。\"}],\"initiative\":2,\"initiative_quote\":\"那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"算分对有些人来说是负担，对你来说是一局游戏的收尾仪式。\"},{\"kind\":\"experience\",\"quote\":\"朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。\"}],\"initiative\":1,\"initiative_quote\":\"朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。\"},{\"id\":\"X04\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"就是乐趣的落点不一样。\"},{\"kind\":\"experience\",\"quote\":\"你享受最后把账算清楚的那一下，两种都挺合理的。\"}],\"initiative\":0,\"initiative_quote\":\"这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。\"},{\"id\":\"X05\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。\"},{\"kind\":\"content\",\"quote\":\"比硬要对方改成自己的玩法轻松多了。\"}],\"initiative\":0,\"initiative_quote\":\"你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐项算分那种感觉我懂，把一局的东西摊开来对一遍\"},{\"kind\":\"experience\",\"quote\":\"本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。\"}],\"initiative\":0,\"initiative_quote\":\"逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 818,
+      "completion_tokens": 594,
+      "total_tokens": 1412,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 562
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。\"},{\"kind\":\"content\",\"quote\":\"这种差异放着不管，往往也不影响一起玩。\"}],\"initiative\":0,\"initiative_quote\":\"能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。这种差异放着不管，往往也不影响一起玩。\"},{\"id\":\"X02\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"算分这段可能就变成你的专属环节了\"},{\"kind\":\"experience\",\"quote\":\"朋友在旁边等着看结果，也算一种分工。\"}],\"initiative\":2,\"initiative_quote\":\"那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"算分对有些人来说是负担，对你来说是一局游戏的收尾仪式。\"},{\"kind\":\"experience\",\"quote\":\"朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。\"}],\"initiative\":1,\"initiative_quote\":\"朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。\"},{\"id\":\"X04\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"就是乐趣的落点不一样。\"},{\"kind\":\"experience\",\"quote\":\"你享受最后把账算清楚的那一下，两种都挺合理的。\"}],\"initiative\":0,\"initiative_quote\":\"这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。\"},{\"id\":\"X05\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。\"},{\"kind\":\"content\",\"quote\":\"比硬要对方改成自己的玩法轻松多了。\"}],\"initiative\":0,\"initiative_quote\":\"你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐项算分那种感觉我懂，把一局的东西摊开来对一遍\"},{\"kind\":\"experience\",\"quote\":\"本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。\"}],\"initiative\":0,\"initiative_quote\":\"逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。\"}]}",
+  "elapsed_s": 2.507455399958417,
+  "finished_at": "2026-11-07T00:45:26.589694+00:00"
+}

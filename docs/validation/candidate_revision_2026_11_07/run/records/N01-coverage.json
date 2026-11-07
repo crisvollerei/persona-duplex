@@ -1,0 +1,229 @@
+{
+  "id": "N01-coverage",
+  "case": "N01",
+  "generation": "coverage",
+  "pool_call": "N01-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "一遍就过去，和之前总要跟着旁边人找节奏比，感觉完全不一样了。后来排练里还有再唱到这一段吗？",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "之前要跟着旁边人重新找节奏，今天一遍就稳，说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。",
+      "attention": 1,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "那段从总抢拍到一遍跟稳，是实打实的进步；指挥点头之后你走路都带着拍子，这份高兴也挺感染人。",
+      "attention": 2,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N01-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "能从抢拍变成一遍就过，这一段应该练得挺扎实了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "走路都还带着那个拍子"
+          },
+          {
+            "kind": "experience",
+            "quote": "看来今天这一遍确实让你挺轻快的"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "一遍就过去，和之前总要跟着旁边人找节奏比"
+          },
+          {
+            "kind": "experience",
+            "quote": "感觉完全不一样了"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "后来排练里还有再唱到这一段吗？"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "现在走路都想照着那个拍子走，这种状态挺难得的"
+          },
+          {
+            "kind": "experience",
+            "quote": "要是想说说当时站在那儿的感受，我听着"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是想说说当时站在那儿的感受，我听着。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "之前要跟着旁边人重新找节奏，今天一遍就稳"
+          },
+          {
+            "kind": "experience",
+            "quote": "合唱里这种自己起得来的感觉，和跟着别人走确实不太一样"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "那段从总抢拍到一遍跟稳，是实打实的进步"
+          },
+          {
+            "kind": "experience",
+            "quote": "指挥点头之后你走路都带着拍子，这份高兴也挺感染人"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "那段从总抢拍到一遍跟稳，是实打实的进步；指挥点头之后你走路都带着拍子，这份高兴也挺感染人。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "之前要跟着旁边人重新找节奏，今天一遍就稳，说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "一遍就过去，和之前总要跟着旁边人找节奏比，感觉完全不一样了。后来排练里还有再唱到这一段吗？"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C05",
+    "X03": "C01",
+    "X04": "C03",
+    "X05": "C06",
+    "X06": "C04"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "E06-S-coverage",
+  "case": "E06",
+  "profile": "S",
+  "method": "coverage",
+  "generation_call": "E06-S-coverage",
+  "status": "ok",
+  "say": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "你在门口看了一会儿，觉得它们凑在一起整齐——这种整齐大概不在于同步，而在于它们都在。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "五只钟的钟摆各晃各的，凑在一起却有了秩序。若你还想说说那铺子里的别的，我在听。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "你看着它们，觉得挺整齐。这份感觉若还有下文，我愿意听；没有也不必勉强。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。五只钟放在一起，倒像是在各守各的时间。",
+      "attention": 1,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "五只钟的摆各自晃着，没有谁去对齐谁；你看着它们，却觉得凑在一起整齐。不同步与整齐能同时成立，这一点挺有意思。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "五只钟各走各的，钟摆却一起占满了柜台那点地方。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "五只钟各走各的，钟摆却一起占满了柜台那点地方。不同步的东西放在一处，有时反而显得安稳。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你在门口看了一会儿，觉得它们凑在一起整齐"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种整齐大概不在于同步，而在于它们都在。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "这种整齐大概不在于同步，而在于它们都在。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "五只钟的钟摆各晃各的，凑在一起却有了秩序。"
+          },
+          {
+            "kind": "experience",
+            "quote": "若你还想说说那铺子里的别的，我在听。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "若你还想说说那铺子里的别的，我在听。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "你看着它们，觉得挺整齐。"
+          },
+          {
+            "kind": "experience",
+            "quote": "这份感觉若还有下文，我愿意听；没有也不必勉强。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "这份感觉若还有下文，我愿意听；没有也不必勉强。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "钟摆不同步，眼睛却会把相近的节奏归成一组，所以“整齐”未必来自一致。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "五只钟的摆各自晃着，没有谁去对齐谁"
+          },
+          {
+            "kind": "experience",
+            "quote": "不同步与整齐能同时成立，这一点挺有意思。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "不同步与整齐能同时成立，这一点挺有意思。"
+      }
+    }
+  ],
+  "label_call": "E06-S-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C01",
+  "random_selected_id": "C01",
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C03",
+    "X03": "C02",
+    "X04": "C06",
+    "X05": "C05",
+    "X06": "C01"
+  }
+}

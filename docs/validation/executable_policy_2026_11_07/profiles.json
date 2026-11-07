@@ -1,0 +1,26 @@
+{
+  "i0_practical": {
+    "intervention": 0,
+    "practical": 1.0,
+    "feeling": 0.0,
+    "detail": 0.0
+  },
+  "i0_feeling": {
+    "intervention": 0,
+    "practical": 0.0,
+    "feeling": 1.0,
+    "detail": 0.0
+  },
+  "i1_practical": {
+    "intervention": 1,
+    "practical": 1.0,
+    "feeling": 0.0,
+    "detail": 0.0
+  },
+  "i1_feeling": {
+    "intervention": 1,
+    "practical": 0.0,
+    "feeling": 1.0,
+    "detail": 0.0
+  }
+}

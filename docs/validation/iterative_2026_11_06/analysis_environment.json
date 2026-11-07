@@ -1,0 +1,7 @@
+{
+  "collected_at": "2026-11-06T23:30:07.208395+08:00",
+  "scope": "Analysis environment observed after online execution",
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "matplotlib": "3.11.2"
+}

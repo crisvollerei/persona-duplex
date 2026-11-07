@@ -1,0 +1,15 @@
+{
+  "id": "E01-L-direct",
+  "case": "E01",
+  "profile": "L",
+  "method": "direct",
+  "generation_call": "E01-L-direct",
+  "status": "ok",
+  "say": "这个门牌一下子就有你的手作感了，最后一个数字歪一点，反而像它自己留了个小记号。我记下啦，不改，也不劝你改。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

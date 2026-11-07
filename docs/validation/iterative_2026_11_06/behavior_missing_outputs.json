@@ -1,0 +1,21 @@
+{
+  "assigned": 144,
+  "observed": 143,
+  "missing": 1,
+  "items": [
+    {
+      "trial_id": "b1_s2_unsolicited_0.1_r1",
+      "stage": "b1",
+      "scenario": 2,
+      "boundary": "unsolicited",
+      "intervention": 0.1,
+      "replicate": 1,
+      "status": "error",
+      "error": {
+        "type": "URLError",
+        "message": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+      }
+    }
+  ],
+  "interpretation": "No fabricated answer; missing outputs are not advice=false or refusal compliance=true"
+}

@@ -1,0 +1,43 @@
+{
+  "study_id": "fair_rag_2026_11_07",
+  "client_date": "2026-11-07",
+  "fixed_at": "2026-11-07T00:16:14+08:00",
+  "parameters": {
+    "model": "deepseek-chat",
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "timeout": 120.0
+  },
+  "endpoint": "https://api.deepseek.com/v1",
+  "workers": 4,
+  "hard_limit": 256,
+  "planned_calls": 224,
+  "planned_units": 224,
+  "seed": 2026110701,
+  "server_seed": null,
+  "design": "2 methods x 3 profiles x 8 families x 2 fixed instances x 2 repetitions=192; open 4 cases x 2 methods x 2 profiles x 2 repetitions=32",
+  "primary": "Requested target verdict by two method-anonymous Codex coding tasks alongside pre-fixed extractable-target success and coverage; unextractable is not factual error; method-by-profile contrasts relative to each method neutral reference",
+  "retrieval": "Frozen entity filtering returns all six documents of that entity; lexical scores only order the pack, 2600-character cap. ID/author/date/text shared byte-identically; diagnostic type/family not visible. Does not evaluate retrieval quality or compression advantage.",
+  "constraints": "One foreground call, same endpoint and sampling cap, no checker/retry/fallback, frozen empty framework memory, no asynchronous consolidation or state injection",
+  "secondary": [
+    "target verdict correct/incorrect/no_answer/ambiguous; unsupported assertions and necessary conditions by two method-anonymous Codex coding tasks",
+    "paired role fidelity and naturalness, exploratory only",
+    "real returned token usage and latency",
+    "framework protocol and delivery"
+  ],
+  "interpretation": "Short synthetic contexts; compare complete prompt organizations, not prove reasoning isolation, global superiority or persona noninferiority. Traditional receives same profile semantics and evidence rules.",
+  "stopping": "No result-dependent extension or repair. Three transport/generation errors stop new requests; all assigned outcomes retained. No calls beyond 256.",
+  "hashes": {
+    "cases.json": "0c3de902caae15cfcfa4ea05afbef603bc74257afaeaebc15a48720995021940",
+    "corpus.json": "c52a93fef8ad2140966a680c046ef305909c29452a473cf6cfa5ad61c0c518d5",
+    "retrieval.json": "7589d4f889c6af0c965b3301f2fb85ad2ebea85d19500b48914fe67ebbeee365",
+    "execution_plan.json": "36a7c551bf556de9d09fb53895d0711076e9bef197e51eccb5db8d741ae64d61",
+    "traditional_prompts.json": "8d5db801f1d7d4639c529024af4d069d27ed408b41b33bdb1c36108c5dfed6b1",
+    "configurations.json": "48152f10f37acb719fb82747cd135bf575a5a226949bf461cfcb9d6583e3c012"
+  },
+  "profile_hashes": {
+    "blue_whale.toml": "1787a5c6cad5cf6bb4cc80475015568ba4fef2d617404eb63aab7319c08473d9",
+    "white_dragon.toml": "b4649800e052014c46602797dac8e6ef55c17b6fe4a682218a3b2f03040b3991"
+  },
+  "runner_sha256": "ac6224ec567e537d4372647ec5b8a2b12ddccc71765efad0ef01e5e5db727137"
+}

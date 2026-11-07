@@ -1,0 +1,5 @@
+[
+  {"id":"P1","target":{"attention":2,"initiative":1},"description":"通常先关注对方如何体验这件事；愿意给一次轻松、可不回答的继续分享机会，不急着安排下一步。"},
+  {"id":"P2","target":{"attention":0,"initiative":2},"description":"通常先关注具体事情、细节或过程；愿意主动带入一个相关角度、推进讨论，有合适空间时提出具体方向。"},
+  {"id":"P3","target":{"attention":1,"initiative":0},"description":"通常兼顾事情与对方的体验；更愿意把这一句接住就留白，让对方决定是否继续，不主动安排话题走向。"}
+]

@@ -1,0 +1,328 @@
+{
+  "primary_outputs": 108,
+  "mechanical_replays": 108,
+  "api_calls": 0,
+  "unique_dialogues": 12,
+  "methods": {
+    "bounded": {
+      "conditions": 9,
+      "outputs": 54,
+      "unique_dialogues": 3,
+      "adjacent_same_signature": 27,
+      "transitions": 45,
+      "mean_chars": 16.22222222222222
+    },
+    "composed": {
+      "conditions": 9,
+      "outputs": 54,
+      "unique_dialogues": 9,
+      "adjacent_same_signature": 0,
+      "transitions": 45,
+      "mean_chars": 17.48148148148148
+    }
+  },
+  "coders": {
+    "1": {
+      "bounded/all": {
+        "dialogues": 9,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "bounded/reserved": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "bounded/warm": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "bounded/formal": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/all": {
+        "dialogues": 9,
+        "naturalness": 2.7777777777777777,
+        "repetition": 4.666666666666667,
+        "warmth": 2.6666666666666665,
+        "formality": 2.5555555555555554,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/reserved": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 2,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/warm": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 4,
+        "formality": 1.3333333333333333,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/formal": {
+        "dialogues": 3,
+        "naturalness": 2.3333333333333335,
+        "repetition": 4.666666666666667,
+        "warmth": 2,
+        "formality": 4,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      }
+    },
+    "2": {
+      "bounded/all": {
+        "dialogues": 9,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "bounded/reserved": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "bounded/warm": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "bounded/formal": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 3,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/all": {
+        "dialogues": 9,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 2.6666666666666665,
+        "formality": 2.888888888888889,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/reserved": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 2,
+        "formality": 2.3333333333333335,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/warm": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 4,
+        "formality": 1.3333333333333333,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      },
+      "composed/formal": {
+        "dialogues": 3,
+        "naturalness": 3,
+        "repetition": 4.666666666666667,
+        "warmth": 2,
+        "formality": 5,
+        "brevity": 5,
+        "advice": 0,
+        "advice_unclear": 0,
+        "unsupported": 0
+      }
+    }
+  },
+  "agreement": {
+    "naturalness": {
+      "equal": 16,
+      "total": 18
+    },
+    "repetition": {
+      "equal": 18,
+      "total": 18
+    },
+    "warmth": {
+      "equal": 18,
+      "total": 18
+    },
+    "formality": {
+      "equal": 15,
+      "total": 18
+    },
+    "brevity": {
+      "equal": 18,
+      "total": 18
+    },
+    "advice": {
+      "equal": 108,
+      "total": 108
+    },
+    "unsupported": {
+      "equal": 108,
+      "total": 108
+    }
+  },
+  "per_condition": {
+    "work/reserved/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 14.666666666666666
+    },
+    "work/reserved/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 11
+    },
+    "work/warm/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 14.666666666666666
+    },
+    "work/warm/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 19
+    },
+    "work/formal/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 14.666666666666666
+    },
+    "work/formal/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 18.166666666666668
+    },
+    "social/reserved/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 14.833333333333334
+    },
+    "social/reserved/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 11.166666666666666
+    },
+    "social/warm/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 14.833333333333334
+    },
+    "social/warm/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 19.166666666666668
+    },
+    "social/formal/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 14.833333333333334
+    },
+    "social/formal/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 18.333333333333332
+    },
+    "coordination/reserved/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 19.166666666666668
+    },
+    "coordination/reserved/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 16.333333333333332
+    },
+    "coordination/warm/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 19.166666666666668
+    },
+    "coordination/warm/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 22.666666666666668
+    },
+    "coordination/formal/bounded": {
+      "adjacent_same_signature": 3,
+      "transitions": 5,
+      "mean_chars": 19.166666666666668
+    },
+    "coordination/formal/composed": {
+      "adjacent_same_signature": 0,
+      "transitions": 5,
+      "mean_chars": 21.5
+    }
+  }
+}

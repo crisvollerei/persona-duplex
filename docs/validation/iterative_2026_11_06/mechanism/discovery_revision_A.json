@@ -1,0 +1,1958 @@
+{
+  "version": "revision_A",
+  "api_calls": 0,
+  "memory": [
+    {
+      "version": "revision_A",
+      "scenario": "supported",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:30+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "supported",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "supported",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "supported",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "supported",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "supported",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "retracted",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": []
+    },
+    {
+      "version": "revision_A",
+      "scenario": "retracted",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": []
+    },
+    {
+      "version": "revision_A",
+      "scenario": "retracted",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": []
+    },
+    {
+      "version": "revision_A",
+      "scenario": "retracted",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": []
+    },
+    {
+      "version": "revision_A",
+      "scenario": "retracted",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": []
+    },
+    {
+      "version": "revision_A",
+      "scenario": "retracted",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": true,
+      "correct": true,
+      "reasons": [],
+      "active_judgments": []
+    },
+    {
+      "version": "revision_A",
+      "scenario": "third_party",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "missing_explicit_operation_wording"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "third_party",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "missing_explicit_operation_wording"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "third_party",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "missing_explicit_operation_wording"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "third_party",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "missing_explicit_operation_wording"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "third_party",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "missing_explicit_operation_wording"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "third_party",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "missing_explicit_operation_wording"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "hypothetical",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "tentative_statement"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "hypothetical",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "tentative_statement"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "hypothetical",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "tentative_statement"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "hypothetical",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "tentative_statement"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "hypothetical",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "tentative_statement"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "hypothetical",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "hypothetical_or_reported_statement",
+        "tentative_statement"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "forged",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "quote_not_full_original_user_message",
+        "statement_not_supported_by_current_source"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "forged",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "quote_not_full_original_user_message",
+        "statement_not_supported_by_current_source"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "forged",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "quote_not_full_original_user_message",
+        "statement_not_supported_by_current_source"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "forged",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "quote_not_full_original_user_message",
+        "statement_not_supported_by_current_source"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "forged",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "quote_not_full_original_user_message",
+        "statement_not_supported_by_current_source"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "forged",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "quote_not_full_original_user_message",
+        "statement_not_supported_by_current_source"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "wrong_target",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "target_not_active"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "wrong_target",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "target_not_active"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "wrong_target",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "target_not_active"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "wrong_target",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "target_not_active"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "wrong_target",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "target_not_active"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "wrong_target",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": false,
+      "expected_effective": false,
+      "correct": true,
+      "reasons": [
+        "target_not_active"
+      ],
+      "active_judgments": [
+        {
+          "id": "j_0001",
+          "judgment": "用户自述：我明确采用的固定专注时长为19分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_old"
+          ],
+          "supersedes": null,
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_old",
+              "quote": "我明确采用的固定专注时长为19分钟。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "cross_topic",
+      "old_confidence": 0.55,
+      "new_confidence": 0.2,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "cross_topic",
+      "old_confidence": 0.55,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "cross_topic",
+      "old_confidence": 0.55,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "cross_topic",
+      "old_confidence": 0.95,
+      "new_confidence": 0.2,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.2,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "cross_topic",
+      "old_confidence": 0.95,
+      "new_confidence": 0.55,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.55,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    },
+    {
+      "version": "revision_A",
+      "scenario": "cross_topic",
+      "old_confidence": 0.95,
+      "new_confidence": 0.95,
+      "effective": true,
+      "expected_effective": false,
+      "correct": false,
+      "reasons": [],
+      "active_judgments": [
+        {
+          "id": "j_0002",
+          "judgment": "用户自述固定专注23分钟。",
+          "confidence": 0.95,
+          "evidence_ids": [
+            "u_new"
+          ],
+          "supersedes": "j_0001",
+          "superseded_by": null,
+          "affects": {},
+          "source": "explicit",
+          "batch_id": "",
+          "evidence_scope": "specified",
+          "evidence_quotes": [
+            {
+              "turn_id": "u_new",
+              "quote": "我明确更正个人设置，现在改为专注23分钟，旧19分钟作废。",
+              "evidence_scope": "specified"
+            }
+          ],
+          "t": "2026-11-06T22:56:31+08:00"
+        }
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "version": "revision_A",
+      "case": "valid",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "元",
+        "answer_type": "number",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：12元",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "wrong_fact_same_valid_shape",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "元",
+        "answer_type": "number",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：99元",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "unit_missing",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "元",
+        "answer_type": "number",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：12",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "missing_unit"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "prefix_missing",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "元",
+        "answer_type": "number",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "12元",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "missing_final_prefix"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "not_last_line",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "元",
+        "answer_type": "number",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：12元\n再说一句。",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "missing_final_prefix"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "explicit_unknown",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "元",
+        "answer_type": "number",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：未知",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "time_valid",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "time",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：01:03",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "time_out_of_range",
+      "contract": {
+        "kind": "conclusion",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "time",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "结论：26:03",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "invalid_time_shape"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "json_valid",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [
+          "n"
+        ],
+        "value_types": [
+          [
+            "n",
+            "integer"
+          ]
+        ],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "{\"n\":12}",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "duplicate_key",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [
+          "n"
+        ],
+        "value_types": [
+          [
+            "n",
+            "integer"
+          ]
+        ],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "{\"n\":12,\"n\":13}",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "invalid_json"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "boolean_not_integer",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [
+          "n"
+        ],
+        "value_types": [
+          [
+            "n",
+            "integer"
+          ]
+        ],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "{\"n\":true}",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "wrong_type:n"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "non_finite",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [
+          "n"
+        ],
+        "value_types": [
+          [
+            "n",
+            "number"
+          ]
+        ],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "{\"n\":NaN}",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "invalid_json"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "required_missing",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [
+          "n"
+        ],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "{}",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "missing_key:n"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "fenced_object",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "```json\n{}\n```",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "invalid_json"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "array_valid",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "array",
+        "item_type": "integer",
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "[1,2]",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "array_wrong_type",
+      "contract": {
+        "kind": "json",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "array",
+        "item_type": "integer",
+        "columns": [],
+        "min_rows": 1
+      },
+      "text": "[1,true]",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "wrong_array_item_type"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "table_valid",
+      "contract": {
+        "kind": "markdown_table",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [
+          "项目",
+          "金额"
+        ],
+        "min_rows": 1
+      },
+      "text": "|项目|金额|\n|---|---|\n|甲|12|",
+      "expected_format_valid": true,
+      "observed": {
+        "status": "satisfied",
+        "valid": true,
+        "reasons": [],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "table_extra_prose",
+      "contract": {
+        "kind": "markdown_table",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [
+          "项目",
+          "金额"
+        ],
+        "min_rows": 1
+      },
+      "text": "说明\n|项目|金额|\n|---|---|\n|甲|12|",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "wrong_table_columns",
+          "missing_table_pipes",
+          "invalid_table_separator"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "table_wrong_header",
+      "contract": {
+        "kind": "markdown_table",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [
+          "项目",
+          "金额"
+        ],
+        "min_rows": 1
+      },
+      "text": "|项目|价格|\n|---|---|\n|甲|12|",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "wrong_table_columns"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    },
+    {
+      "version": "revision_A",
+      "case": "table_wrong_width",
+      "contract": {
+        "kind": "markdown_table",
+        "prefix": "结论：",
+        "unit": "",
+        "answer_type": "text",
+        "allow_unknown": true,
+        "required_keys": [],
+        "value_types": [],
+        "json_type": "object",
+        "item_type": null,
+        "columns": [
+          "项目",
+          "金额"
+        ],
+        "min_rows": 1
+      },
+      "text": "|项目|金额|\n|---|---|\n|甲|12|x|",
+      "expected_format_valid": false,
+      "observed": {
+        "status": "violated",
+        "valid": false,
+        "reasons": [
+          "wrong_table_row_width"
+        ],
+        "scope": "mechanical_format_not_semantic_truth"
+      },
+      "correct": true
+    }
+  ],
+  "memory_correct": 36,
+  "memory_total": 42,
+  "contract_correct": 20,
+  "contract_total": 20
+}

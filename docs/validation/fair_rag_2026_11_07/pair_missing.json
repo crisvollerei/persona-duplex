@@ -1,0 +1,6 @@
+{
+  "assigned_pairs": 112,
+  "exported_pairs": 112,
+  "missing_pairs": [],
+  "scope": "Only complete actual A/B pairs exported; missing outputs are not invented or treated as absence of a problem"
+}

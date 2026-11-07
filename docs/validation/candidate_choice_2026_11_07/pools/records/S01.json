@@ -1,0 +1,43 @@
+{
+  "case": "S01",
+  "call_id": "S01",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "三周的活儿终于落地了，能连看两遍都不想改，这感觉挺难得的。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C02",
+      "text": "六分多钟，三周磨下来，导出那一刻应该挺松一口气的。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "连看两遍都没想改，说明你自己是真的满意了，这比导出本身还难得。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "恭喜收工。最后那段配乐调了那么久，现在听着应该顺了吧。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "导出完还能自己看两遍不腻，说明剪得挺顺的。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C06",
+      "text": "先歇一歇吧，三周盯着一支片子也够累的。",
+      "attention": 2,
+      "initiative": 0
+    }
+  ]
+}

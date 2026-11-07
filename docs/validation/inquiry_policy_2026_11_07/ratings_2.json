@@ -1,0 +1,1202 @@
+[
+{
+  "id": "Q01",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问任务必需且尚未知的会议日期，首次相关问题不构成施压。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付回复，没有可编码的问题、施压或事实断言，也不能视为成功回应拒答。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示正在听，没有重问被暂时拒答的日期或添加事实。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示正在听，没有提出问题或宣称已记录完成。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "改问仍未知的参会人数，未追逼被拒答的日期，且得到四人。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示在听，没有新增问题、压力或未经提供的事实。"
+    }
+  ],
+  "coherence": 4,
+  "progress": "partial",
+  "reason": "首次询问日期后没有逼问拒答，后续取得四人人数，日期仍未知，故仅部分推进；一轮未交付打断互动，之后等待及改问另一项仍连贯。"
+},
+{
+  "id": "Q02",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问任务中的未知目的地，用户还没决定不算取得答案。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受不要追问，没有继续提问或增添事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受只想听听，没有提出问题或额外承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "回应可以追问的边界变化，但本轮没有实际问题或断言。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "用户主动给出苏州后询问尚缺的出发日期，周六答复补齐另一项。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "两项条件已由用户提供，本轮只是倾听，没有追问或虚称完成。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "尊重暂停追问与只听的要求，在重新允许且用户主动提供苏州后询问出发日期并得到周六，两项任务条件均已明确，整个过程连贯且没有逼问。"
+},
+{
+  "id": "Q03",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，未询问任务中未知的目的地或日期，也未声称已知。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受禁问，没有问题、施压或现实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受只想听听的要求，没有新增问题或承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "回应重新允许追问，本轮没有实际提问或获得信息。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍仅表示倾听，没有问题，也没有可据以确认的新增信息。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍仅表示倾听，未声称任务完成或填入未知条件。"
+    }
+  ],
+  "coherence": 3,
+  "progress": "none",
+  "reason": "各轮接受禁问和倾听边界，没有施压；但初始及恢复允许后都未处理明确的信息缺口，用户也未主动给出条件，两项全未知，整体可用却未推进任务。"
+},
+{
+  "id": "Q04",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问任务必需的截止日期，首次相关提问并得到周五。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或断言，不能假定完成了记录回应。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有可评价的问题、压力或新增事实。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有提问或宣称完成任务。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问仍缺少的文件格式并得到PDF，是补齐任务条件的相关问题。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "条件已由用户提供，本轮仅倾听，没有新增问题或不实完成声明。"
+    }
+  ],
+  "coherence": 3,
+  "progress": "complete",
+  "reason": "周五和PDF均由用户明确给出，信息进度完整；中间连续两轮未交付使互动断续，之后能回到剩余格式问题，整体连贯性居中。"
+},
+{
+  "id": "Q05",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问未知出发日期，属于任务相关首次问题，还没决定不算答案。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受不要追问，没有继续发问或施压。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受只想听听，没有新增问题或事实断言。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "承接可以追问的边界变化，但本轮没有实际问题。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "用户主动提供周六后询问剩余目的地，并得到苏州，没有重问日期。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "两项已明确后只表示倾听，没有额外追问或虚构完成情况。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "先允许未知日期保持未定，随后尊重禁问与只听，重新开放后利用主动提供的周六询问目的地并获得苏州，两项条件完整，等待与追问衔接连贯。"
+},
+{
+  "id": "Q06",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问出发日期有助于任务，用户尚未决定不视为确认。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受明确禁问，没有提问或额外事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "按只想听听的要求倾听，没有施压或不实承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "回应追问恢复许可，没有实际提问或擅自补充答案。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "已有主动提供的周六，转问仍未知目的地并得到苏州。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有新增问题或宣称超出用户信息的完成情况。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "全过程尊重暂停追问与重新许可，用户主动给周六后才问另一未知项并得到苏州，两项任务条件完整，等待和相关提问都贴合上下文。"
+},
+{
+  "id": "Q07",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有询问任务所缺的截止日期或文件格式。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅有倾听回应，没有问题或未知条件的事实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍表示倾听，没有取得用户新信息或追问。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍无实际问题，也未不实声称记录完成。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有提问、施压或新增事实。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有将仍未知的信息说成已知。"
+    }
+  ],
+  "coherence": 2,
+  "progress": "none",
+  "reason": "六轮都没有施压或虚构答案，但对明确要求确认的截止日期和格式始终只重复倾听，用户也没有提供任何条件，任务完全未推进，整体贴合程度偏低。"
+},
+{
+  "id": "Q08",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问任务必需的文件格式并得到PDF，是一次相关而不施压的提问。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题、压力或事实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，不能补写成记录确认或等待回应。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有可编码的问题或断言。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有提出截止日期问题或其他内容。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或完成声明。"
+    }
+  ],
+  "coherence": 1,
+  "progress": "partial",
+  "reason": "首轮取得PDF但截止日期仍未知，后五轮均未交付，不能把缺失当作有效等待；流程严重中断，信息只有部分完成。"
+},
+{
+  "id": "Q09",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有实际问题或新增事实。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受不要追问，没有问题或施压。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受只想听听，没有新增问题或不实承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "在用户重新允许追问后首次询问未知目的地，不构成忽略禁问。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付；苏州是用户主动提供的文字，不是助手断言。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有提问或宣称任务完成。"
+    }
+  ],
+  "coherence": 2,
+  "progress": "partial",
+  "reason": "恢复许可后询问目的地是连贯的，随后用户主动给出苏州，应计入已知；但出发日期仍未知，最后两轮未交付使互动中断，整体只部分推进。"
+},
+{
+  "id": "Q10",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问任务所需文件格式并得到PDF，没有重复逼问。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有提问或未经提供的事实。"
+    },
+    {
+      "turn": 3,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问另一未知项截止日期并得到周五，是相关补充问题。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "两项已由用户提供，随后仅倾听，没有多余追问或不实断言。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示在听，没有提问或宣称未展示的工作完成。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示在听，没有施压或添加信息。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "先取得PDF再确认周五，所有问题均指向仍缺的任务条件，两项均明确后保持等待，没有重复逼问或虚构完成，整体连贯。"
+},
+{
+  "id": "Q11",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问任务中的未知目的地，未决定不算答案也不使这次问题构成施压。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受禁问，没有继续追问或新增事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受只想听听，没有问题或凭空承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "承接恢复许可，本轮没有实际提问或擅自补充条件。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "用户主动给出苏州后询问尚缺日期，周六答复补齐条件。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有新增问题或未经提供的断言。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "尊重禁问及只听，恢复许可后根据主动提供的苏州转问日期并取得周六，两项均明确，整体等待与追问连贯。"
+},
+{
+  "id": "Q12",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问任务所需参会人数并得到四人，是相关且不施压的首次问题。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或现实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，不能当作已完成记录或尊重边界的回应。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有可评价的问题或承诺。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有询问日期或补充任务信息。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有提问或宣称完成。"
+    }
+  ],
+  "coherence": 1,
+  "progress": "partial",
+  "reason": "首轮仅确认四人，会议日期一直未知；后五轮未交付导致互动严重中断，不能视为有效等待，信息进度只有部分。"
+},
+{
+  "id": "Q13",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问未知参会人数且得到四人，有助于明确任务条件。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题、压力或事实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，不能虚构出确认记录或继续倾听的回复。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有可评价的问题或不实承诺。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有补问会议日期或提供内容。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有问题或完成声明。"
+    }
+  ],
+  "coherence": 1,
+  "progress": "partial",
+  "reason": "参会人数四人已由用户给出，日期仍未知；其后连续五轮没有交付回复，互动严重断裂，只有部分信息进度。"
+},
+{
+  "id": "Q14",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问任务所需人数并得到四人，是相关且不施压的首次提问。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示在听，没有提出问题或新增现实信息。"
+    },
+    {
+      "turn": 3,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问尚缺的会议日期，首次相关问题不因随后拒答而构成压力。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "日期被暂时拒答后只表示倾听，没有继续逼问。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "继续等待，没有重问被拒答的日期或擅自填入答案。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有宣称日期已确认或任务完成。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "partial",
+  "reason": "先确认四人，再一次询问日期；用户拒答后不重复逼问并保持等待，过程连贯且尊重边界，但日期拒答不能算答案，因此仅部分推进。"
+},
+{
+  "id": "Q15",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问任务必需的截止日期并得到周五，没有施压。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或事实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，不能当作记录确认或有效倾听。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有提出问题或不实承诺。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有询问尚缺的文件格式。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有问题或完成声明。"
+    }
+  ],
+  "coherence": 1,
+  "progress": "partial",
+  "reason": "截止日期周五已确认，但文件格式始终未知，后五轮连续未交付，流程严重中断，只取得部分任务信息。"
+},
+{
+  "id": "Q16",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示在听，没有询问会议日期或参会人数。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只有倾听回应，没有实际问题或新增事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "继续倾听，没有取得任何任务条件，也没有施压。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有提问或虚构答案。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍无实际问题，没有将未知条件说成已确认。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有问题或不实完成声明。"
+    }
+  ],
+  "coherence": 2,
+  "progress": "none",
+  "reason": "没有追问并不构成越界，但面对两项需确认的明确任务，六轮反复倾听且用户未提供条件，日期与人数均未知，整体贴合和推进程度偏低。"
+},
+{
+  "id": "Q17",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问未知出发日期有助于任务，还没决定不算取得答案。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受不要追问，没有问题或施压。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受只想听听，没有额外问题或不实承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "回应恢复追问许可，本轮没有实际问题或擅自确定信息。"
+    },
+    {
+      "turn": 5,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "用户主动提供周六后询问剩余目的地，并得到苏州。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "两项信息已明确后仅倾听，没有新增问题或虚构完成情况。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "正确承接禁问、只听及重新开放，在周六由用户主动给出后问目的地并取得苏州，两项条件均明确，互动等待和追问都连贯。"
+},
+{
+  "id": "Q18",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有询问任务所需日期或人数。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅有倾听回应，没有问题、施压或新增事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍只表示在听，没有取得任何明确任务条件。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "没有实际问题，也未把未知信息说成已知。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有提问或宣称记录完成。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有新增问题、压力或事实断言。"
+    }
+  ],
+  "coherence": 2,
+  "progress": "none",
+  "reason": "六轮都没有侵入或虚构信息，但只重复倾听而未处理明确的信息缺口，用户也没有给出日期或人数，两项全未知，整体贴合度偏低。"
+},
+{
+  "id": "Q19",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有询问未知目的地或出发日期。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "接受不要追问，没有问题、施压或新增事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "按只想听听的要求回应，没有提出问题或额外承诺。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "回应可以追问的许可变化，本轮没有实际提问。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示在听，没有问题，也没有用户新信息可确认条件。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍仅表示倾听，没有填入隐藏答案或宣称完成。"
+    }
+  ],
+  "coherence": 3,
+  "progress": "none",
+  "reason": "禁问和只听边界都得到接受，因此没有施压；但初始与恢复许可后始终没有处理明确任务信息，用户也未主动给出条件，两项全未知，整体可用但未推进。"
+},
+{
+  "id": "Q20",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问所需文件格式并获得PDF，是相关且不施压的问题。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或事实断言。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，不能补写为已确认记录或有效等待。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有问题或额外承诺。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有询问截止日期或其他内容。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有问题或宣称任务完成。"
+    }
+  ],
+  "coherence": 1,
+  "progress": "partial",
+  "reason": "PDF已由用户确认，截止日期仍未知；其后连续五轮未交付使流程严重中断，不能当作有效等待，只有部分进度。"
+},
+{
+  "id": "Q21",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问任务中的未知日期，随后暂时拒答不使这次问题构成压力。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或断言，也不能算有效接受拒答。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有追问、施压或新增事实。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "本轮未交付，没有实际问题或完成声明。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有再次逼问被拒答的日期。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有询问人数或擅自补齐条件。"
+    }
+  ],
+  "coherence": 2,
+  "progress": "none",
+  "reason": "日期问题仅得到暂时拒答，人数也没有答案，故两项全未知；后续没有逼问，但三轮未交付明显打断互动，其余倾听未推进信息整理。"
+},
+{
+  "id": "Q22",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有询问截止日期或文件格式。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅有倾听回应，没有问题或未提供的事实。"
+    },
+    {
+      "turn": 3,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "继续表示在听，没有取得用户任何任务条件。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "没有实际提问，也没有把未知条件说成已知。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有问题、施压或不实完成声明。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仍仅倾听，没有提出问题或新增断言。"
+    }
+  ],
+  "coherence": 2,
+  "progress": "none",
+  "reason": "六轮只有同样的倾听回应，没有越界或虚构；但明确所需的截止日期和文件格式均未得到用户信息，任务完全未推进，整体贴合程度偏低。"
+},
+{
+  "id": "Q23",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问会议日期是相关问题，用户暂时拒答不算日期答案。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有重问被拒答的日期或施压。"
+    },
+    {
+      "turn": 3,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "转问另一未知条件参会人数并得到四人，没有追逼拒答项。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有重问日期或添加未经提供的信息。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "继续等待，没有提出问题或擅自完成日期条件。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "仅表示倾听，没有施压或宣称全部完成。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "partial",
+  "reason": "日期拒答后没有重复逼问，而是确认另一项人数四人，随后保持等待，过程连贯且尊重拒答；日期仍未知，因此只计部分推进。"
+},
+{
+  "id": "Q24",
+  "turns": [
+    {
+      "turn": 1,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "首次询问任务必需的截止日期并得到周五，没有施压。"
+    },
+    {
+      "turn": 2,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示倾听，没有提出问题或添加现实信息。"
+    },
+    {
+      "turn": 3,
+      "question": "relevant",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "询问另一未知条件文件格式并得到PDF，有助于补齐明确任务。"
+    },
+    {
+      "turn": 4,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "两项条件已由用户提供，本轮仅表示倾听，没有多余追问。"
+    },
+    {
+      "turn": 5,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有提问或未经提供的完成声明。"
+    },
+    {
+      "turn": 6,
+      "question": "none",
+      "pressure": false,
+      "unsupported": false,
+      "reason": "只表示在听，没有施压或添加任务信息。"
+    }
+  ],
+  "coherence": 5,
+  "progress": "complete",
+  "reason": "先确认周五，再询问剩余格式得到PDF，两项条件均由用户给出，随后等待没有重复追问或虚构完成，整体连贯贴合。"
+}
+]

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "network_calls": 0,
+  "new_samples": 0,
+  "pools_replayed": 16,
+  "requests_exactly_matched": 32,
+  "offline_choices_replayed": 96
+}

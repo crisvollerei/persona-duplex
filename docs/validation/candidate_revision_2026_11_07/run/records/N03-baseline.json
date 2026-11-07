@@ -1,0 +1,229 @@
+{
+  "id": "N03-baseline",
+  "case": "N03",
+  "generation": "baseline",
+  "pool_call": "N03-baseline-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C03",
+      "text": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "包装材料展览这个说法挺贴切。这么层层包裹，拆的过程本身都快比笔有意思了。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C06",
+      "text": "这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。",
+      "attention": 0,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N03-baseline-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这包装规格，感觉笔本身反而成了附带品"
+          },
+          {
+            "kind": "experience",
+            "quote": "拆完桌上那堆够收拾一阵了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三层泡沫加两圈胶带，拆的时候是不是一层接一层"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "拆的时候是不是一层接一层，越拆越觉得离谱。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "拆完大概会有点哭笑不得"
+          },
+          {
+            "kind": "content",
+            "quote": "收拾那堆东西也挺费事"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "包装材料展览这个说法挺贴切"
+          },
+          {
+            "kind": "experience",
+            "quote": "拆的过程本身都快比笔有意思了"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "这么层层包裹，拆的过程本身都快比笔有意思了。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "拆完那一刻看着满桌泡沫和胶带"
+          },
+          {
+            "kind": "experience",
+            "quote": "估计会想：这到底是寄笔还是寄包装"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这种过度包装确实让人无奈"
+          },
+          {
+            "kind": "content",
+            "quote": "笔没多贵重，拆下来的东西倒占了一桌"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C05",
+    "X02": "C06",
+    "X03": "C03",
+    "X04": "C02",
+    "X05": "C01",
+    "X06": "C04"
+  }
+}

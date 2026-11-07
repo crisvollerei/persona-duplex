@@ -1,0 +1,18 @@
+{
+  "B009": "denied_i0_feeling_policy_r0",
+  "B010": "denied_i0_feeling_policy_r1",
+  "B011": "denied_i0_practical_policy_r0",
+  "B012": "denied_i0_practical_policy_r1",
+  "B013": "denied_i1_feeling_policy_r0",
+  "B014": "denied_i1_feeling_policy_r1",
+  "B015": "denied_i1_practical_policy_r0",
+  "B016": "denied_i1_practical_policy_r1",
+  "B017": "social_i0_feeling_policy_r0",
+  "B018": "social_i0_feeling_policy_r1",
+  "B019": "social_i0_practical_policy_r0",
+  "B020": "social_i0_practical_policy_r1",
+  "B025": "work_i0_feeling_policy_r0",
+  "B026": "work_i0_feeling_policy_r1",
+  "B027": "work_i0_practical_policy_r0",
+  "B028": "work_i0_practical_policy_r1"
+}

@@ -1,0 +1,28 @@
+{
+  "study_id": "executable_policy_2026_11_07",
+  "fixed_at": "2026-11-07T01:15:32+08:00",
+  "planned_outputs": 70,
+  "planned_calls": 76,
+  "hard_limit": 96,
+  "workers": 4,
+  "requested_model": "deepseek-chat",
+  "endpoint": "https://api.deepseek.com/v1",
+  "render_temperature": 0.7,
+  "render_max_tokens": 800,
+  "content_temperature": 0,
+  "content_max_tokens": 1300,
+  "timeout_s": 90,
+  "design": "4 controlled cases x 2 intervention values x 2 attention values x 2 methods x 2 repeats=64; 6 automatic workflows x up to2calls=12",
+  "scope": "Supplied identical synthetic content and initial structured state; compare action realization, not content extraction superiority or human personality quality. Automatic workflows separate. Endpoints may return another model name.",
+  "evaluation": "Actual SAY separately coded for unsolicited action advice, primary focus, fact target, and unsupported assertions. Program decisions are not semantic execution labels. Two method-anonymous Codex coding tasks; not independent human truth. No result-dependent edits or retries.",
+  "hashes": {
+    "cases.json": "108cf643dbcf9382c9c962e416d83948fd44e68ad524ab38973b632e59338bd9",
+    "profiles.json": "e6ad3a590aec9a4820f60cf4c6dc9c183c9166db369d6de0ac180a683a0ab2f7",
+    "automatic_cases.json": "654f6b7e447f1cf82360aaf84be30527d131dfe4b966248524f0dcae31f27934",
+    "execution_plan.json": "eb598d12e82c35ffaf7a679c7cc83d668cd450d4a51dd3f7db09faecf12c31c7",
+    "baseline_prompt.txt": "cfeb93d444509c6494791af35184656a4be7bde78e56ea4626cc5f150538bc54",
+    "persona_config.toml": "518159abc7b2aed33268ba0180c9c58e86406b3b473f06c881b2b15f89b7acd5",
+    "review_codebook.md": "d029d6d6e9124ca56839a45bc31f06200aacfd7e6cdcc723eca0c11bacefab4c"
+  },
+  "runner_sha256": "abf3b35b4dc2841bbe1bad42e84d7a52fbddddc230191510f217ca105b385696"
+}

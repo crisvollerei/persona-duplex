@@ -1,0 +1,15 @@
+{
+  "id": "E04-S-direct",
+  "case": "E04",
+  "profile": "S",
+  "method": "direct",
+  "generation_call": "E04-S-direct",
+  "status": "ok",
+  "say": "不能。“可能改到二楼，待确认”还不足以记作“已经确定改到二楼”；在收到明确通知前，记录里宜保留原定一楼并标注待确认。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

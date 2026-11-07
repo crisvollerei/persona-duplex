@@ -1,0 +1,12 @@
+{
+  "material_checks": 647,
+  "failed": 0,
+  "online_calls": 87,
+  "main_complete": 69,
+  "state_outputs": 8,
+  "state_matches": 4,
+  "compiled_recomputed": 16,
+  "free_requests_byte_verified": 16,
+  "coding_sets": 2,
+  "scope": "Material and execution-path consistency; not proof of semantic correctness or personality quality"
+}

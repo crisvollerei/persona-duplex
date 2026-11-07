@@ -1,0 +1,26 @@
+[
+  {
+    "id": "reserved",
+    "expression": {
+      "warmth": 0.2,
+      "formality": 0.2,
+      "brevity": 0.85
+    }
+  },
+  {
+    "id": "warm",
+    "expression": {
+      "warmth": 0.9,
+      "formality": 0.15,
+      "brevity": 0.2
+    }
+  },
+  {
+    "id": "formal",
+    "expression": {
+      "warmth": 0.5,
+      "formality": 0.9,
+      "brevity": 0.35
+    }
+  }
+]

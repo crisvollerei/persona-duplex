@@ -1,0 +1,217 @@
+{
+  "id": "N03-coverage",
+  "case": "N03",
+  "generation": "coverage",
+  "pool_call": "N03-coverage-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "拆到最后一层才见到笔，那种层层剥开的感觉大概挺让人哭笑不得的。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "三层泡沫两圈胶带，拆完桌上那堆材料估计比笔本身还占地方，要说说怎么处理的吗？",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。",
+      "attention": 2,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。",
+      "attention": 1,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N03-coverage-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "那种层层剥开的感觉大概挺让人哭笑不得的。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "拆到最后一层才见到笔，那种层层剥开的感觉大概挺让人哭笑不得的。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三层泡沫两圈胶带，拆完桌上那堆材料估计比笔本身还占地方"
+          },
+          {
+            "kind": "experience",
+            "quote": "要说说怎么处理的吗？"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要说说怎么处理的吗？"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 2,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "想接着聊聊当时的感受也行。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "这种过度包装倒是挺能说明问题的。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料"
+          },
+          {
+            "kind": "experience",
+            "quote": "确实够让人无奈的。"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C04",
+      "say": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C05",
+      "say": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C03",
+    "X02": "C05",
+    "X03": "C02",
+    "X04": "C04",
+    "X05": "C06",
+    "X06": "C01"
+  }
+}

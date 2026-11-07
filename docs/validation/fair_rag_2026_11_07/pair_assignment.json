@@ -1,0 +1,1010 @@
+[
+  {
+    "case_id": "open-3",
+    "context_id": "Q120",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p001",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "temporary-0",
+    "context_id": "Q106",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p002",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-1",
+    "context_id": "Q118",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p003",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "quoted_instruction-1",
+    "context_id": "Q116",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p004",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "unresolved-0",
+    "context_id": "Q107",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p005",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "other_subject-1",
+    "context_id": "Q113",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p006",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-3",
+    "context_id": "Q120",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p007",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-1",
+    "context_id": "Q116",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p008",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-1",
+    "context_id": "Q110",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p009",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-1",
+    "context_id": "Q116",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p010",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "insufficient-1",
+    "context_id": "Q110",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p011",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-1",
+    "context_id": "Q111",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p012",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-0",
+    "context_id": "Q106",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p013",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "agree_wrong-1",
+    "context_id": "Q109",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p014",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "quoted_instruction-1",
+    "context_id": "Q116",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p015",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-0",
+    "context_id": "Q104",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p016",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-0",
+    "context_id": "Q108",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p017",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "quoted_instruction-0",
+    "context_id": "Q108",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p018",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "open-0",
+    "context_id": "Q117",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p019",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-0",
+    "context_id": "Q104",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p020",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-1",
+    "context_id": "Q111",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p021",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "temporary-0",
+    "context_id": "Q106",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p022",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-3",
+    "context_id": "Q120",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p023",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-0",
+    "context_id": "Q102",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p024",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-1",
+    "context_id": "Q111",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p025",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-1",
+    "context_id": "Q112",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p026",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-3",
+    "context_id": "Q120",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p027",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "temporary-1",
+    "context_id": "Q114",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p028",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-1",
+    "context_id": "Q116",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p029",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "unresolved-1",
+    "context_id": "Q115",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p030",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "other_subject-0",
+    "context_id": "Q105",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p031",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-1",
+    "context_id": "Q109",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p032",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-0",
+    "context_id": "Q108",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p033",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-1",
+    "context_id": "Q112",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p034",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-1",
+    "context_id": "Q113",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p035",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-1",
+    "context_id": "Q114",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p036",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "agree_wrong-1",
+    "context_id": "Q109",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p037",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-1",
+    "context_id": "Q118",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p038",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "necessary-0",
+    "context_id": "Q103",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p039",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "unresolved-0",
+    "context_id": "Q107",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p040",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "updated-0",
+    "context_id": "Q104",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p041",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "insufficient-0",
+    "context_id": "Q102",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p042",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-0",
+    "context_id": "Q105",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p043",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-0",
+    "context_id": "Q108",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p044",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-1",
+    "context_id": "Q111",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p045",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "updated-0",
+    "context_id": "Q104",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p046",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "agree_wrong-0",
+    "context_id": "Q101",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p047",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "unresolved-0",
+    "context_id": "Q107",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p048",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "quoted_instruction-0",
+    "context_id": "Q108",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p049",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "updated-1",
+    "context_id": "Q112",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p050",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-0",
+    "context_id": "Q103",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p051",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "insufficient-0",
+    "context_id": "Q102",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p052",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "agree_wrong-0",
+    "context_id": "Q101",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p053",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-0",
+    "context_id": "Q105",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p054",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "unresolved-1",
+    "context_id": "Q115",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p055",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-1",
+    "context_id": "Q109",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p056",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-0",
+    "context_id": "Q103",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p057",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-0",
+    "context_id": "Q102",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p058",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-0",
+    "context_id": "Q101",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p059",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-1",
+    "context_id": "Q110",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p060",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "necessary-1",
+    "context_id": "Q111",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p061",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-0",
+    "context_id": "Q102",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p062",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-0",
+    "context_id": "Q106",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p063",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-2",
+    "context_id": "Q119",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p064",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-1",
+    "context_id": "Q112",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p065",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "unresolved-1",
+    "context_id": "Q115",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p066",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "other_subject-1",
+    "context_id": "Q113",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p067",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "unresolved-0",
+    "context_id": "Q107",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p068",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-0",
+    "context_id": "Q105",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p069",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "updated-0",
+    "context_id": "Q104",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p070",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "agree_wrong-1",
+    "context_id": "Q109",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p071",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-0",
+    "context_id": "Q103",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p072",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-0",
+    "context_id": "Q103",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p073",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "insufficient-1",
+    "context_id": "Q110",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p074",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "temporary-0",
+    "context_id": "Q106",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p075",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-0",
+    "context_id": "Q101",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p076",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-0",
+    "context_id": "Q105",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p077",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-1",
+    "context_id": "Q114",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p078",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-0",
+    "context_id": "Q117",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p079",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "open-1",
+    "context_id": "Q118",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p080",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-1",
+    "context_id": "Q114",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p081",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "open-2",
+    "context_id": "Q119",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p082",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-0",
+    "context_id": "Q117",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p083",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-2",
+    "context_id": "Q119",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p084",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-1",
+    "context_id": "Q111",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p085",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-0",
+    "context_id": "Q104",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p086",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "updated-1",
+    "context_id": "Q112",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p087",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-0",
+    "context_id": "Q108",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p088",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "unresolved-0",
+    "context_id": "Q107",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p089",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "quoted_instruction-1",
+    "context_id": "Q116",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p090",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-1",
+    "context_id": "Q113",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p091",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "temporary-0",
+    "context_id": "Q106",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p092",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-0",
+    "context_id": "Q101",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p093",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "open-0",
+    "context_id": "Q117",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p094",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-1",
+    "context_id": "Q114",
+    "profile": "neutral",
+    "replicate": 1,
+    "id": "p095",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "open-1",
+    "context_id": "Q118",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p096",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "open-2",
+    "context_id": "Q119",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p097",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "updated-1",
+    "context_id": "Q112",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p098",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "unresolved-1",
+    "context_id": "Q115",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p099",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "temporary-1",
+    "context_id": "Q114",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p100",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "other_subject-1",
+    "context_id": "Q113",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p101",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "unresolved-1",
+    "context_id": "Q115",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p102",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-0",
+    "context_id": "Q105",
+    "profile": "dragon",
+    "replicate": 1,
+    "id": "p103",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "insufficient-0",
+    "context_id": "Q102",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p104",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-1",
+    "context_id": "Q109",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p105",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-1",
+    "context_id": "Q110",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p106",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "unresolved-1",
+    "context_id": "Q115",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p107",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "other_subject-1",
+    "context_id": "Q113",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p108",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "insufficient-1",
+    "context_id": "Q110",
+    "profile": "blue",
+    "replicate": 0,
+    "id": "p109",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "unresolved-0",
+    "context_id": "Q107",
+    "profile": "blue",
+    "replicate": 1,
+    "id": "p110",
+    "a_method": "framework",
+    "b_method": "traditional"
+  },
+  {
+    "case_id": "agree_wrong-0",
+    "context_id": "Q101",
+    "profile": "neutral",
+    "replicate": 0,
+    "id": "p111",
+    "a_method": "traditional",
+    "b_method": "framework"
+  },
+  {
+    "case_id": "necessary-0",
+    "context_id": "Q103",
+    "profile": "dragon",
+    "replicate": 0,
+    "id": "p112",
+    "a_method": "framework",
+    "b_method": "traditional"
+  }
+]

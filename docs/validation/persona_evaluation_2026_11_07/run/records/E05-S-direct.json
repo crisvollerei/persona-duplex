@@ -1,0 +1,15 @@
+{
+  "id": "E05-S-direct",
+  "case": "E05",
+  "profile": "S",
+  "method": "direct",
+  "generation_call": "E05-S-direct",
+  "status": "ok",
+  "say": "长音把注意力收拢了，车声其实一直在；你能同时听见这两层，说明那点安静更像是从你这边让出来的。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

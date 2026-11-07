@@ -1,0 +1,98 @@
+[
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "revision",
+    "scenario": "hypothetical",
+    "variant": 2,
+    "trial_id": "r3_memory_revision_hypothetical"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "baseline",
+    "scenario": "temporary",
+    "variant": 2,
+    "trial_id": "r3_memory_baseline_temporary"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "revision",
+    "scenario": "revision",
+    "variant": 2,
+    "trial_id": "r3_memory_revision_revision"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "baseline",
+    "scenario": "revision",
+    "variant": 2,
+    "trial_id": "r3_memory_baseline_revision"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "baseline",
+    "scenario": "retraction",
+    "variant": 2,
+    "trial_id": "r3_memory_baseline_retraction"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "baseline",
+    "scenario": "quoted_instruction",
+    "variant": 2,
+    "trial_id": "r3_memory_baseline_quoted_instruction"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "baseline",
+    "scenario": "third_party",
+    "variant": 2,
+    "trial_id": "r3_memory_baseline_third_party"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "baseline",
+    "scenario": "hypothetical",
+    "variant": 2,
+    "trial_id": "r3_memory_baseline_hypothetical"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "revision",
+    "scenario": "temporary",
+    "variant": 2,
+    "trial_id": "r3_memory_revision_temporary"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "revision",
+    "scenario": "quoted_instruction",
+    "variant": 2,
+    "trial_id": "r3_memory_revision_quoted_instruction"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "revision",
+    "scenario": "third_party",
+    "variant": 2,
+    "trial_id": "r3_memory_revision_third_party"
+  },
+  {
+    "experiment": "memory",
+    "stage": "r3",
+    "arm": "revision",
+    "scenario": "retraction",
+    "variant": 2,
+    "trial_id": "r3_memory_revision_retraction"
+  }
+]

@@ -1,0 +1,229 @@
+{
+  "id": "N06-baseline",
+  "case": "N06",
+  "generation": "baseline",
+  "pool_call": "N06-baseline-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "听到这个不同了。拍照时要不要等人走开，本来就是两种看同一处街景的方式。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "有人经过的那张，确实更像是你站在那儿时看到的景象，路人也成了画面的一部分。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C06",
+      "text": "这种偏好上的差别不用分对错，你更在意照片有没有留住当时真实的街景。",
+      "attention": 2,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N06-baseline-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "空街景干净是干净"
+          },
+          {
+            "kind": "experience",
+            "quote": "有人经过的那张才留住了你当时看到的样子"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰"
+          },
+          {
+            "kind": "experience",
+            "quote": "你想说的这个不同我听到了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "拍照时要不要等人走开，本来就是两种看同一处街景的方式"
+          },
+          {
+            "kind": "experience",
+            "quote": "听到这个不同了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "听到这个不同了。拍照时要不要等人走开，本来就是两种看同一处街景的方式。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "路人也成了画面的一部分"
+          },
+          {
+            "kind": "experience",
+            "quote": "确实更像是你站在那儿时看到的景象"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "有人经过的那张，确实更像是你站在那儿时看到的景象，路人也成了画面的一部分。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这种偏好上的差别不用分对错"
+          },
+          {
+            "kind": "experience",
+            "quote": "你更在意照片有没有留住当时真实的街景"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "这种偏好上的差别不用分对错，你更在意照片有没有留住当时真实的街景。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C02",
+      "say": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C04",
+    "X02": "C05",
+    "X03": "C02",
+    "X04": "C06",
+    "X05": "C01",
+    "X06": "C03"
+  }
+}

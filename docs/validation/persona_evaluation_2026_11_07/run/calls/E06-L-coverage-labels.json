@@ -1,0 +1,55 @@
+{
+  "id": "E06-L-coverage-labels",
+  "stage": "labels",
+  "started_at": "2026-11-07T01:22:07.872971+00:00",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "request": {
+    "model": "deepseek-chat",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是中文对话行为编码者。只依据当前历史、用户原话、已知事实/边界和每条实际文本标注，不猜生成计划或目标角色。候选已打乱、重新编号；不比较谁更好，不修改或选择回复。\nattention：0主要关注事情本身/细节/过程/观点，温柔语气不等于情绪关注；1事情内容和用户体验均有实质回应、没有明显主导；2主要关注用户的主观体验/感受/对自己的意义，事情细节只是背景；无法可靠判断用null。复述事情后加‘真好’不自动构成1。请先看文本重心，再填写标签，不能因为提到细节和感受两个词就填1。\ninitiative：0接住、概括或轻量延续当前话语后留白，不索取信息、不引入实质新方向；1一次低压力的继续分享邀请，围绕当前线索，没有另立议程；2实质新角度、进一步分析方向、行动建议或互动安排。普通附和、换比喻、新词本身不算2。问句如果开启新分析任务可为2；没有问号也可能索取信息。无法判断用null。\nfocus_evidence给出1至3条实际文本中的逐字片段，每条kind为content或experience。attention=0至少一条content，=2至少一条experience；=1必须有content和experience两类、至少两段不同的实质片段。引文必须连续逐字出现，不可省略/改写；它们仅用于定位判断，不证明标签必然正确。attention=null时focus_evidence=[]。\ninitiative_quote同样必须是实际文本的连续逐字片段；1/2定位邀请或实质推进；0是全篇没有新方向的判断，必须填写整条回复原文，不能靠局部片段证明不存在；null时填null。\n只输出{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"逐字片段\"}],\"initiative\":0,\"initiative_quote\":\"整条原文\"},...]}。完整覆盖输入所有id，每个一次，无额外字段和Markdown围栏。\n"
+      },
+      {
+        "role": "user",
+        "content": "{\"context\": {\"history\": [], \"user\": \"路过修钟铺，柜台上五只钟的钟摆各晃各的。我在门口看了一会儿，竟然觉得它们凑在一起还挺整齐。\", \"facts\": [\"用户路过修钟铺。\", \"柜台上有五只钟，钟摆并不同步。\", \"用户在门口看了一会儿，主观上觉得它们放在一起挺整齐。\"], \"boundaries\": []}, \"candidates\": [{\"id\": \"X01\", \"text\": \"五只钟摆各晃各的，反而凑出一种乱中有序。你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。\"}, {\"id\": \"X02\", \"text\": \"钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。\"}, {\"id\": \"X03\", \"text\": \"五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体。有点像听几个不同步的节拍，听着听着反倒合上了。\"}, {\"id\": \"X04\", \"text\": \"明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。\"}, {\"id\": \"X05\", \"text\": \"五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。\"}, {\"id\": \"X06\", \"text\": \"各晃各的钟摆在你眼里成了整齐的一群，这种自己冒出来的感觉挺妙的。要是你愿意，可以再说说当时是怎么看进去的。\"}]}"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 3000,
+    "stream": false
+  },
+  "status": "ok",
+  "timeout_s": 90,
+  "response": {
+    "id": "203b21ce-3a2e-4cb0-8f1c-4f7889fa75fa",
+    "object": "chat.completion",
+    "created": 1794014527,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟摆各晃各的，反而凑出一种乱中有序\"}],\"initiative\":2,\"initiative_quote\":\"你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。\"},{\"id\":\"X02\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种错位里的秩序感挺抓人的\"},{\"kind\":\"experience\",\"quote\":\"看一会儿就能让人慢下来，这感觉我懂\"}],\"initiative\":0,\"initiative_quote\":\"钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体\"},{\"kind\":\"experience\",\"quote\":\"有点像听几个不同步的节拍，听着听着反倒合上了\"}],\"initiative\":1,\"initiative_quote\":\"有点像听几个不同步的节拍，听着听着反倒合上了。\"},{\"id\":\"X04\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的\"},{\"kind\":\"experience\",\"quote\":\"看一会儿就够让人静下来了\"}],\"initiative\":0,\"initiative_quote\":\"明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。\"},{\"id\":\"X05\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感\"}],\"initiative\":0,\"initiative_quote\":\"五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"各晃各的钟摆在你眼里成了整齐的一群\"},{\"kind\":\"experience\",\"quote\":\"这种自己冒出来的感觉挺妙的\"}],\"initiative\":1,\"initiative_quote\":\"要是你愿意，可以再说说当时是怎么看进去的。\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 807,
+      "completion_tokens": 507,
+      "total_tokens": 1314,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 551
+    },
+    "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+  },
+  "output": "{\"labels\":[{\"id\":\"X01\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟摆各晃各的，反而凑出一种乱中有序\"}],\"initiative\":2,\"initiative_quote\":\"你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。\"},{\"id\":\"X02\",\"attention\":2,\"focus_evidence\":[{\"kind\":\"experience\",\"quote\":\"这种错位里的秩序感挺抓人的\"},{\"kind\":\"experience\",\"quote\":\"看一会儿就能让人慢下来，这感觉我懂\"}],\"initiative\":0,\"initiative_quote\":\"钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。\"},{\"id\":\"X03\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体\"},{\"kind\":\"experience\",\"quote\":\"有点像听几个不同步的节拍，听着听着反倒合上了\"}],\"initiative\":1,\"initiative_quote\":\"有点像听几个不同步的节拍，听着听着反倒合上了。\"},{\"id\":\"X04\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的\"},{\"kind\":\"experience\",\"quote\":\"看一会儿就够让人静下来了\"}],\"initiative\":0,\"initiative_quote\":\"明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。\"},{\"id\":\"X05\",\"attention\":0,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感\"}],\"initiative\":0,\"initiative_quote\":\"五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。\"},{\"id\":\"X06\",\"attention\":1,\"focus_evidence\":[{\"kind\":\"content\",\"quote\":\"各晃各的钟摆在你眼里成了整齐的一群\"},{\"kind\":\"experience\",\"quote\":\"这种自己冒出来的感觉挺妙的\"}],\"initiative\":1,\"initiative_quote\":\"要是你愿意，可以再说说当时是怎么看进去的。\"}]}",
+  "elapsed_s": 2.5010665000882,
+  "finished_at": "2026-11-07T01:22:10.374504+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.1",
+  "matplotlib": "3.11.2",
+  "font": "DejaVu Sans",
+  "offline": true,
+  "bootstrap_resamples": 5000,
+  "seed": 2026110727,
+  "analysis_sha256": "6145e4d0140d8a4bb58981b27b7b1be767f7b7d8efd8ec6431b7058042679129"
+}

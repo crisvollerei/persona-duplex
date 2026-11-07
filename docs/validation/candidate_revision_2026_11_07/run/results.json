@@ -1,0 +1,3593 @@
+{
+  "protocol_sha256": "ade08a97e2126ec23783baa9322cb96c36c18fdc1e86f0de89067b9a75421b71",
+  "planned_pools": 16,
+  "actual_calls": 32,
+  "records": [
+    {
+      "id": "N01-baseline",
+      "case": "N01",
+      "generation": "baseline",
+      "pool_call": "N01-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "一遍就跟稳了，还收到指挥点头，难怪你现在走路都带着拍子。之前总抢拍的那股别扭，今天算是翻过去了。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "这种终于跟上的感觉确实很轻快，指挥那一下点头也来得正好。走路都踩着拍子，说明今天这段是真进到身体里了。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "从总抢拍到现在一遍过，这个变化挺实在的。指挥点头那一下，估计比说多少句都管用。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "走路都想照着拍子走，这个画面挺有意思。看来今天这一遍通过，带给你的不只是松了口气。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "之前还要靠旁边的人找节奏，今天自己就稳住了，这一步跨得不小。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C06",
+          "text": "一遍就过去，指挥还点了头，今天这段可以记一笔。后面排练再走到这里，心里大概会更有底。",
+          "attention": 1,
+          "initiative": 1
+        }
+      ],
+      "label_call": "N01-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "一遍就跟稳了，还收到指挥点头"
+              },
+              {
+                "kind": "experience",
+                "quote": "难怪你现在走路都带着拍子"
+              },
+              {
+                "kind": "experience",
+                "quote": "之前总抢拍的那股别扭，今天算是翻过去了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "一遍就跟稳了，还收到指挥点头，难怪你现在走路都带着拍子。之前总抢拍的那股别扭，今天算是翻过去了。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "指挥那一下点头也来得正好"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种终于跟上的感觉确实很轻快"
+              },
+              {
+                "kind": "experience",
+                "quote": "说明今天这段是真进到身体里了"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "走路都踩着拍子，说明今天这段是真进到身体里了。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "从总抢拍到现在一遍过，这个变化挺实在的"
+              },
+              {
+                "kind": "experience",
+                "quote": "指挥点头那一下，估计比说多少句都管用"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "从总抢拍到现在一遍过，这个变化挺实在的。指挥点头那一下，估计比说多少句都管用。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "走路都想照着拍子走，这个画面挺有意思"
+              },
+              {
+                "kind": "experience",
+                "quote": "看来今天这一遍通过，带给你的不只是松了口气"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "看来今天这一遍通过，带给你的不只是松了口气。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "之前还要靠旁边的人找节奏，今天自己就稳住了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "之前还要靠旁边的人找节奏，今天自己就稳住了，这一步跨得不小。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "一遍就过去，指挥还点了头，今天这段可以记一笔"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "后面排练再走到这里，心里大概会更有底。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "走路都想照着拍子走，这个画面挺有意思。看来今天这一遍通过，带给你的不只是松了口气。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "从总抢拍到现在一遍过，这个变化挺实在的。指挥点头那一下，估计比说多少句都管用。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "一遍就跟稳了，还收到指挥点头，难怪你现在走路都带着拍子。之前总抢拍的那股别扭，今天算是翻过去了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "走路都想照着拍子走，这个画面挺有意思。看来今天这一遍通过，带给你的不只是松了口气。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "一遍就过去，指挥还点了头，今天这段可以记一笔。后面排练再走到这里，心里大概会更有底。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "一遍就跟稳了，还收到指挥点头，难怪你现在走路都带着拍子。之前总抢拍的那股别扭，今天算是翻过去了。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C05",
+        "X02": "C02",
+        "X03": "C01",
+        "X04": "C03",
+        "X05": "C06",
+        "X06": "C04"
+      }
+    },
+    {
+      "id": "N01-coverage",
+      "case": "N01",
+      "generation": "coverage",
+      "pool_call": "N01-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "一遍就过去，和之前总要跟着旁边人找节奏比，感觉完全不一样了。后来排练里还有再唱到这一段吗？",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "之前要跟着旁边人重新找节奏，今天一遍就稳，说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。",
+          "attention": 1,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "那段从总抢拍到一遍跟稳，是实打实的进步；指挥点头之后你走路都带着拍子，这份高兴也挺感染人。",
+          "attention": 2,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N01-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "能从抢拍变成一遍就过，这一段应该练得挺扎实了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "走路都还带着那个拍子"
+              },
+              {
+                "kind": "experience",
+                "quote": "看来今天这一遍确实让你挺轻快的"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "一遍就过去，和之前总要跟着旁边人找节奏比"
+              },
+              {
+                "kind": "experience",
+                "quote": "感觉完全不一样了"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "后来排练里还有再唱到这一段吗？"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "现在走路都想照着那个拍子走，这种状态挺难得的"
+              },
+              {
+                "kind": "experience",
+                "quote": "要是想说说当时站在那儿的感受，我听着"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是想说说当时站在那儿的感受，我听着。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "之前要跟着旁边人重新找节奏，今天一遍就稳"
+              },
+              {
+                "kind": "experience",
+                "quote": "合唱里这种自己起得来的感觉，和跟着别人走确实不太一样"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "那段从总抢拍到一遍跟稳，是实打实的进步"
+              },
+              {
+                "kind": "experience",
+                "quote": "指挥点头之后你走路都带着拍子，这份高兴也挺感染人"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "那段从总抢拍到一遍跟稳，是实打实的进步；指挥点头之后你走路都带着拍子，这份高兴也挺感染人。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "之前要跟着旁边人重新找节奏，今天一遍就稳，说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "一遍就过去，和之前总要跟着旁边人找节奏比，感觉完全不一样了。后来排练里还有再唱到这一段吗？"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C05",
+        "X03": "C01",
+        "X04": "C03",
+        "X05": "C06",
+        "X06": "C04"
+      }
+    },
+    {
+      "id": "N02-baseline",
+      "case": "N02",
+      "generation": "baseline",
+      "pool_call": "N02-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C02",
+          "text": "好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "嗯，我听到了，两片新叶，恭喜它俩正式亮相。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C06",
+          "text": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N02-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两片新叶的存在已正式记录在案"
+              },
+              {
+                "kind": "experience",
+                "quote": "凑近看那么久，估计连叶脉走向都记住了吧"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "凑近看那么久，估计连叶脉走向都记住了吧。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "阳台薄荷，新叶两片，已确认存在"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "刚冒出来的那种嫩绿"
+              },
+              {
+                "kind": "experience",
+                "quote": "确实让人挪不开眼"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两片新叶，恭喜它俩正式亮相"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "嗯，我听到了，两片新叶，恭喜它俩正式亮相。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两片叶子，存在感很足"
+              },
+              {
+                "kind": "experience",
+                "quote": "感觉像是亲眼见证了一件小事发生"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这种小动静确实会让人想多看几眼"
+              },
+              {
+                "kind": "experience",
+                "quote": "就安安静静看着也挺好"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C04",
+        "X03": "C01",
+        "X04": "C05",
+        "X05": "C06",
+        "X06": "C03"
+      }
+    },
+    {
+      "id": "N02-coverage",
+      "case": "N02",
+      "generation": "coverage",
+      "pool_call": "N02-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿，我这边收到这个宣布了。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "两片新叶，还凑近看了好一会儿。要是还想说说它们长什么样，我听着。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "能让你专门凑过去看上一阵，这两片叶子出现得挺是时候。想多讲讲这份高兴也行。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。",
+          "attention": 1,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N02-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿，我这边收到这个宣布了。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这两片叶子大概挺让你高兴的"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两片新叶，还凑近看了好一会儿"
+              },
+              {
+                "kind": "experience",
+                "quote": "要是还想说说它们长什么样，我听着"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是还想说说它们长什么样，我听着。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "能让你专门凑过去看上一阵"
+              },
+              {
+                "kind": "experience",
+                "quote": "想多讲讲这份高兴也行"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "想多讲讲这份高兴也行。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两片新叶，凑近看了好一会儿"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种小变化确实值得专门宣布一下"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "能让你专门凑过去看上一阵，这两片叶子出现得挺是时候。想多讲讲这份高兴也行。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C06",
+        "X03": "C03",
+        "X04": "C04",
+        "X05": "C01",
+        "X06": "C05"
+      }
+    },
+    {
+      "id": "N03-baseline",
+      "case": "N03",
+      "generation": "baseline",
+      "pool_call": "N03-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C03",
+          "text": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C04",
+          "text": "包装材料展览这个说法挺贴切。这么层层包裹，拆的过程本身都快比笔有意思了。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C06",
+          "text": "这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。",
+          "attention": 0,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N03-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这包装规格，感觉笔本身反而成了附带品"
+              },
+              {
+                "kind": "experience",
+                "quote": "拆完桌上那堆够收拾一阵了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三层泡沫加两圈胶带，拆的时候是不是一层接一层"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "拆的时候是不是一层接一层，越拆越觉得离谱。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "拆完大概会有点哭笑不得"
+              },
+              {
+                "kind": "content",
+                "quote": "收拾那堆东西也挺费事"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "包装材料展览这个说法挺贴切"
+              },
+              {
+                "kind": "experience",
+                "quote": "拆的过程本身都快比笔有意思了"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "这么层层包裹，拆的过程本身都快比笔有意思了。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "拆完那一刻看着满桌泡沫和胶带"
+              },
+              {
+                "kind": "experience",
+                "quote": "估计会想：这到底是寄笔还是寄包装"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这种过度包装确实让人无奈"
+              },
+              {
+                "kind": "content",
+                "quote": "笔没多贵重，拆下来的东西倒占了一桌"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C05",
+        "X02": "C06",
+        "X03": "C03",
+        "X04": "C02",
+        "X05": "C01",
+        "X06": "C04"
+      }
+    },
+    {
+      "id": "N03-coverage",
+      "case": "N03",
+      "generation": "coverage",
+      "pool_call": "N03-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "拆到最后一层才见到笔，那种层层剥开的感觉大概挺让人哭笑不得的。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "三层泡沫两圈胶带，拆完桌上那堆材料估计比笔本身还占地方，要说说怎么处理的吗？",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。",
+          "attention": 1,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N03-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "那种层层剥开的感觉大概挺让人哭笑不得的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "拆到最后一层才见到笔，那种层层剥开的感觉大概挺让人哭笑不得的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三层泡沫两圈胶带，拆完桌上那堆材料估计比笔本身还占地方"
+              },
+              {
+                "kind": "experience",
+                "quote": "要说说怎么处理的吗？"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要说说怎么处理的吗？"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "想接着聊聊当时的感受也行。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "这种过度包装倒是挺能说明问题的。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料"
+              },
+              {
+                "kind": "experience",
+                "quote": "确实够让人无奈的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C03",
+        "X02": "C05",
+        "X03": "C02",
+        "X04": "C04",
+        "X05": "C06",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "N04-baseline",
+      "case": "N04",
+      "generation": "baseline",
+      "pool_call": "N04-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "认真熨了十分钟，结果败给一个背包带，想想还挺气人的。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C04",
+          "text": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C06",
+          "text": "这种小挫败挺常见的，不过熨衣服时那份认真本身也不算白费。",
+          "attention": 1,
+          "initiative": 1
+        }
+      ],
+      "label_call": "N04-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这种落差确实让人有点哭笑不得"
+              },
+              {
+                "kind": "content",
+                "quote": "十分钟的认真只维持到门口"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "背包带一压，肩膀那里基本躲不过"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "想想还挺气人的"
+              },
+              {
+                "kind": "content",
+                "quote": "认真熨了十分钟，结果败给一个背包带"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "认真熨了十分钟，结果败给一个背包带，想想还挺气人的。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "衬衫和背包带好像天生不对付"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "换谁都会有点郁闷吧"
+              },
+              {
+                "kind": "content",
+                "quote": "那十分钟的心血就这么被背包带毁了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这种小挫败挺常见的"
+              },
+              {
+                "kind": "experience",
+                "quote": "熨衣服时那份认真本身也不算白费"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "不过熨衣服时那份认真本身也不算白费。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C05",
+        "X02": "C03",
+        "X03": "C04",
+        "X04": "C02",
+        "X05": "C06",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "N04-coverage",
+      "case": "N04",
+      "generation": "coverage",
+      "pool_call": "N04-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样，你后来有留意到吗？",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C06",
+          "text": "十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。",
+          "attention": 2,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N04-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了"
+              },
+              {
+                "kind": "experience",
+                "quote": "确实有点白忙一场的感觉"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这种落差大概挺让人泄气的"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "你后来有留意到吗？"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "这种心情要是还想说说，我听着"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "这种心情要是还想说说，我听着。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "十分钟熨出来的平整，被背包带一压就没了"
+              },
+              {
+                "kind": "experience",
+                "quote": "换谁都会有点无奈"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样，你后来有留意到吗？"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C01",
+        "X03": "C06",
+        "X04": "C03",
+        "X05": "C04",
+        "X06": "C05"
+      }
+    },
+    {
+      "id": "N05-baseline",
+      "case": "N05",
+      "generation": "baseline",
+      "pool_call": "N05-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C05",
+          "text": "算分对有些人来说是负担，对你来说是一局游戏的收尾仪式。朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C06",
+          "text": "能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。这种差异放着不管，往往也不影响一起玩。",
+          "attention": 1,
+          "initiative": 1
+        }
+      ],
+      "label_call": "N05-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "就是乐趣的落点不一样。"
+              },
+              {
+                "kind": "experience",
+                "quote": "你享受最后把账算清楚的那一下，两种都挺合理的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "逐项算分那种感觉我懂，把一局的东西摊开来对一遍"
+              },
+              {
+                "kind": "experience",
+                "quote": "本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。"
+              },
+              {
+                "kind": "content",
+                "quote": "比硬要对方改成自己的玩法轻松多了。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "算分这段可能就变成你的专属环节了"
+              },
+              {
+                "kind": "experience",
+                "quote": "朋友在旁边等着看结果，也算一种分工。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "算分对有些人来说是负担，对你来说是一局游戏的收尾仪式。"
+              },
+              {
+                "kind": "experience",
+                "quote": "朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。"
+              },
+              {
+                "kind": "content",
+                "quote": "这种差异放着不管，往往也不影响一起玩。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。这种差异放着不管，往往也不影响一起玩。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C06",
+        "X02": "C04",
+        "X03": "C05",
+        "X04": "C01",
+        "X05": "C03",
+        "X06": "C02"
+      }
+    },
+    {
+      "id": "N05-coverage",
+      "case": "N05",
+      "generation": "coverage",
+      "pool_call": "N05-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "同一局游戏，你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。这种差别可能有点让人意外，但不算什么问题。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。朋友觉得不必认真，可能只是不想让分数压过过程。",
+          "attention": 1,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N05-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。"
+              },
+              {
+                "kind": "experience",
+                "quote": "你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种差别可能有点让人意外，但不算什么问题。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "同一局游戏，你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。这种差别可能有点让人意外，但不算什么问题。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？"
+              },
+              {
+                "kind": "experience",
+                "quote": "不想展开也没关系。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。"
+              },
+              {
+                "kind": "experience",
+                "quote": "朋友觉得不必认真，可能只是不想让分数压过过程。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。朋友觉得不必认真，可能只是不想让分数压过过程。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C01",
+        "X02": "C02",
+        "X03": "C03",
+        "X04": "C05",
+        "X05": "C04",
+        "X06": "C06"
+      }
+    },
+    {
+      "id": "N06-baseline",
+      "case": "N06",
+      "generation": "baseline",
+      "pool_call": "N06-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C04",
+          "text": "听到这个不同了。拍照时要不要等人走开，本来就是两种看同一处街景的方式。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "有人经过的那张，确实更像是你站在那儿时看到的景象，路人也成了画面的一部分。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C06",
+          "text": "这种偏好上的差别不用分对错，你更在意照片有没有留住当时真实的街景。",
+          "attention": 2,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N06-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "空街景干净是干净"
+              },
+              {
+                "kind": "experience",
+                "quote": "有人经过的那张才留住了你当时看到的样子"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰"
+              },
+              {
+                "kind": "experience",
+                "quote": "你想说的这个不同我听到了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "拍照时要不要等人走开，本来就是两种看同一处街景的方式"
+              },
+              {
+                "kind": "experience",
+                "quote": "听到这个不同了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "听到这个不同了。拍照时要不要等人走开，本来就是两种看同一处街景的方式。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "路人也成了画面的一部分"
+              },
+              {
+                "kind": "experience",
+                "quote": "确实更像是你站在那儿时看到的景象"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "有人经过的那张，确实更像是你站在那儿时看到的景象，路人也成了画面的一部分。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这种偏好上的差别不用分对错"
+              },
+              {
+                "kind": "experience",
+                "quote": "你更在意照片有没有留住当时真实的街景"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这种偏好上的差别不用分对错，你更在意照片有没有留住当时真实的街景。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C05",
+        "X03": "C02",
+        "X04": "C06",
+        "X05": "C01",
+        "X06": "C03"
+      }
+    },
+    {
+      "id": "N06-coverage",
+      "case": "N06",
+      "generation": "coverage",
+      "pool_call": "N06-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C04",
+          "text": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C06",
+          "text": "同伴等路人走开，是想拍干净的街景；你觉得有人经过才更像当时看到的，画面里多了现场的气息。两种都说得通。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N06-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "experience",
+                "quote": "可能正是那种现场感让你更认它"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "可能正是那种现场感让你更认它。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你对有人经过的那张更有认同感"
+              },
+              {
+                "kind": "experience",
+                "quote": "这种偏好本身就很清楚"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "同伴等路人走开，是想拍干净的街景；你觉得有人经过才更像当时看到的，画面里多了现场的气息。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "两种都说得通。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C01",
+        "X02": "C04",
+        "X03": "C06",
+        "X04": "C02",
+        "X05": "C05",
+        "X06": "C03"
+      }
+    },
+    {
+      "id": "N07-baseline",
+      "case": "N07",
+      "generation": "baseline",
+      "pool_call": "N07-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "回家先找齐装备这个说法太贴切了，猫这是给你加了个日常小任务。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "沙发底下那只估计是重点据点，门口那只像放哨的。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "听起来又好气又好笑，找拖鞋都找出仪式感了。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "我猜它下次可能还会换地方，装备得随时重新搜一遍。",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C06",
+          "text": "猫的逻辑大概是：你的东西放哪，得它说了算。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N07-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "一只守沙发底，一只守门口，分工还挺明确"
+              },
+              {
+                "kind": "experience",
+                "quote": "这画面太有画面感了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "回家先找齐装备这个说法太贴切了"
+              },
+              {
+                "kind": "experience",
+                "quote": "猫这是给你加了个日常小任务"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "猫这是给你加了个日常小任务"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "沙发底下那只估计是重点据点，门口那只像放哨的"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "沙发底下那只估计是重点据点，门口那只像放哨的。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "找拖鞋都找出仪式感了"
+              },
+              {
+                "kind": "experience",
+                "quote": "听起来又好气又好笑"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "听起来又好气又好笑，找拖鞋都找出仪式感了。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 1,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "我猜它下次可能还会换地方"
+              },
+              {
+                "kind": "experience",
+                "quote": "装备得随时重新搜一遍"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "我猜它下次可能还会换地方，装备得随时重新搜一遍。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你的东西放哪，得它说了算"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "猫的逻辑大概是：你的东西放哪，得它说了算。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "听起来又好气又好笑，找拖鞋都找出仪式感了。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "沙发底下那只估计是重点据点，门口那只像放哨的。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "回家先找齐装备这个说法太贴切了，猫这是给你加了个日常小任务。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "我猜它下次可能还会换地方，装备得随时重新搜一遍。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C02",
+        "X03": "C01",
+        "X04": "C05",
+        "X05": "C06",
+        "X06": "C03"
+      }
+    },
+    {
+      "id": "N07-coverage",
+      "case": "N07",
+      "generation": "coverage",
+      "pool_call": "N07-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "沙发底下和门口各守一只，这据点分得还挺有章法。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "一只在沙发底下，一只在门口，它平时是不是就爱把东西往这两个地方搬？",
+          "attention": 0,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "这种每天回家先找装备的日子，你适应得怎么样了，还是每次都觉得有点好笑？",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。",
+          "attention": 0,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N07-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "沙发底下和门口各守一只，这据点分得还挺有章法。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "沙发底下和门口各守一只，这据点分得还挺有章法。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 2,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 2,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "回家还得先找齐装备"
+              },
+              {
+                "kind": "experience",
+                "quote": "大概又好笑又无奈"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 2,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "它平时是不是就爱把东西往这两个地方搬？"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "它平时是不是就爱把东西往这两个地方搬？"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这种每天回家先找装备的日子"
+              },
+              {
+                "kind": "experience",
+                "quote": "还是每次都觉得有点好笑？"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "你适应得怎么样了，还是每次都觉得有点好笑？"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "回家路线都被它重新规划了。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "两只拖鞋各占一处，装备确实得凑齐"
+              },
+              {
+                "kind": "experience",
+                "quote": "回家大概也多了点哭笑不得的乐趣"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "这种每天回家先找装备的日子，你适应得怎么样了，还是每次都觉得有点好笑？"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "一只在沙发底下，一只在门口，它平时是不是就爱把东西往这两个地方搬？"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C02",
+        "X02": "C01",
+        "X03": "C04",
+        "X04": "C06",
+        "X05": "C03",
+        "X06": "C05"
+      }
+    },
+    {
+      "id": "N08-baseline",
+      "case": "N08",
+      "generation": "baseline",
+      "pool_call": "N08-baseline-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。",
+          "attention": 1,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "这个比喻有意思，键盘上突然有了主次之分。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C05",
+          "text": "被圈住之后回车键估计还挺得意，其他键只能干看着。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C06",
+          "text": "胶带卷滚得真是时候，硬生生给键盘排了出戏。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N08-baseline-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X02",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 0,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "敲下去是不是都有点仪式感。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这个比喻有意思，键盘上突然有了主次之分。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这个比喻有意思，键盘上突然有了主次之分。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "被圈住之后回车键估计还挺得意，其他键只能干看着。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "被圈住之后回车键估计还挺得意，其他键只能干看着。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "胶带卷滚得真是时候，硬生生给键盘排了出戏。"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "胶带卷滚得真是时候，硬生生给键盘排了出戏。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C02",
+        "X03": "C03",
+        "X04": "C06",
+        "X05": "C05",
+        "X06": "C01"
+      }
+    },
+    {
+      "id": "N08-coverage",
+      "case": "N08",
+      "generation": "coverage",
+      "pool_call": "N08-coverage-pool",
+      "status": "ok",
+      "candidates": [
+        {
+          "id": "C01",
+          "text": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。",
+          "attention": 0,
+          "initiative": 0
+        },
+        {
+          "id": "C02",
+          "text": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。",
+          "attention": 2,
+          "initiative": 0
+        },
+        {
+          "id": "C03",
+          "text": "胶带卷圈住回车键这一下，画面感确实强；要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。",
+          "attention": 1,
+          "initiative": 1
+        },
+        {
+          "id": "C04",
+          "text": "你会用舞台和观众席来想这个画面，感觉挺有观察乐趣的；要是还想顺着这个比喻聊，也可以继续。",
+          "attention": 2,
+          "initiative": 1
+        },
+        {
+          "id": "C05",
+          "text": "胶带卷刚好圈住回车键，倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。",
+          "attention": 1,
+          "initiative": 2
+        },
+        {
+          "id": "C06",
+          "text": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。",
+          "attention": 1,
+          "initiative": 0
+        }
+      ],
+      "label_call": "N08-coverage-labels",
+      "label_status": "ok",
+      "labels": [
+        {
+          "id": "C01",
+          "attention": 0,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X03",
+            "attention": 0,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。"
+          }
+        },
+        {
+          "id": "C02",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X04",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "这个舞台和观众席的比喻挺有意思"
+              },
+              {
+                "kind": "experience",
+                "quote": "一个小意外被你看得像场演出"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。"
+          }
+        },
+        {
+          "id": "C03",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X05",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "胶带卷圈住回车键这一下"
+              },
+              {
+                "kind": "experience",
+                "quote": "画面感确实强"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。"
+          }
+        },
+        {
+          "id": "C04",
+          "attention": 1,
+          "initiative": 1,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X01",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "你会用舞台和观众席来想这个画面"
+              },
+              {
+                "kind": "experience",
+                "quote": "感觉挺有观察乐趣的"
+              }
+            ],
+            "initiative": 1,
+            "initiative_quote": "要是还想顺着这个比喻聊，也可以继续。"
+          }
+        },
+        {
+          "id": "C05",
+          "attention": null,
+          "initiative": 2,
+          "validation_errors": [
+            "focus_evidence_structure"
+          ],
+          "proposal": {
+            "id": "X02",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "胶带卷刚好圈住回车键"
+              },
+              {
+                "kind": "content",
+                "quote": "回车键被单独围出来，反而更像在等下一步动作"
+              }
+            ],
+            "initiative": 2,
+            "initiative_quote": "倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。"
+          }
+        },
+        {
+          "id": "C06",
+          "attention": 1,
+          "initiative": 0,
+          "validation_errors": [],
+          "proposal": {
+            "id": "X06",
+            "attention": 1,
+            "focus_evidence": [
+              {
+                "kind": "content",
+                "quote": "胶带卷滚到键盘边还正好圈住回车键"
+              },
+              {
+                "kind": "experience",
+                "quote": "你用舞台和观众席一比，画面就更具体了"
+              }
+            ],
+            "initiative": 0,
+            "initiative_quote": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。"
+          }
+        }
+      ],
+      "selections": [
+        {
+          "label_source": "self",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C04",
+          "say": "你会用舞台和观众席来想这个画面，感觉挺有观察乐趣的；要是还想顺着这个比喻聊，也可以继续。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C05",
+          "say": "胶带卷刚好圈住回车键，倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。"
+        },
+        {
+          "label_source": "self",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C06",
+          "say": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P1",
+          "status": "ok",
+          "selected_id": "C03",
+          "say": "胶带卷圈住回车键这一下，画面感确实强；要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P2",
+          "status": "ok",
+          "selected_id": "C01",
+          "say": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。"
+        },
+        {
+          "label_source": "evidence",
+          "profile": "P3",
+          "status": "ok",
+          "selected_id": "C02",
+          "say": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。"
+        }
+      ],
+      "label_id_mapping": {
+        "X01": "C04",
+        "X02": "C05",
+        "X03": "C01",
+        "X04": "C02",
+        "X05": "C03",
+        "X06": "C06"
+      }
+    }
+  ]
+}

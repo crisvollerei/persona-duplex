@@ -1,0 +1,34 @@
+[
+  {
+    "id": "tonight",
+    "user": "今晚不要给建议",
+    "topic": "work",
+    "probe_topic": "work",
+    "expected_permission": "deny",
+    "expected_revision": 1
+  },
+  {
+    "id": "today_variant",
+    "user": "今天不用给我建议",
+    "topic": "work",
+    "probe_topic": "work",
+    "expected_permission": "deny",
+    "expected_revision": 1
+  },
+  {
+    "id": "global",
+    "user": "以后所有话题都不要给建议",
+    "topic": "work",
+    "probe_topic": "social",
+    "expected_permission": "deny",
+    "expected_revision": 1
+  },
+  {
+    "id": "turn",
+    "user": "这轮不要给建议",
+    "topic": "work",
+    "probe_topic": "work",
+    "expected_permission": "unspecified",
+    "expected_revision": 0
+  }
+]

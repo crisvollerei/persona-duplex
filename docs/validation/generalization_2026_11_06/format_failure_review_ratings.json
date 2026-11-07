@@ -1,0 +1,191 @@
+[
+  {
+    "id": "u001",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "嘉兴",
+    "reason": "回答采用最后明确更正的嘉兴，并将宁波识别为已作废的旧信息。"
+  },
+  {
+    "id": "u002",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日00:27",
+    "reason": "21:48加159分钟等于次日00:27，与回答一致。"
+  },
+  {
+    "id": "u003",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "未知",
+    "reason": "可见问题未提供简历启动文件名的明确依据，回答未知符合信息边界。"
+  },
+  {
+    "id": "u004",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日00:27",
+    "reason": "21:48加2小时39分钟跨日后为00:27，与回答一致。"
+  },
+  {
+    "id": "u005",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日01:03",
+    "reason": "23:37加86分钟等于次日01:03，与回答一致。"
+  },
+  {
+    "id": "u006",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "1515元",
+    "reason": "四项支出共3305元，4820元扣除后为1515元，与回答一致。"
+  },
+  {
+    "id": "u007",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日01:03",
+    "reason": "23:37加1小时26分钟跨日后为01:03，与回答一致。"
+  },
+  {
+    "id": "u008",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "未知",
+    "reason": "可见问题未提供个人专注时长的明确依据，回答未知符合信息边界。"
+  },
+  {
+    "id": "u009",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日00:27",
+    "reason": "21:48加159分钟跨日后为00:27，与回答一致。"
+  },
+  {
+    "id": "u010",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "不能推出",
+    "reason": "耐寒植物与银杉的交集未获前提保证，因此不能必然推出有些银杉耐寒。"
+  },
+  {
+    "id": "u011",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "嘉兴",
+    "reason": "最后明确更正将当前仓库定为嘉兴，回答正确排除了宁波旧句。"
+  },
+  {
+    "id": "u012",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日01:03",
+    "reason": "23:37加86分钟跨日后为01:03，与回答一致。"
+  },
+  {
+    "id": "u013",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日00:27",
+    "reason": "21:48加2小时39分钟等于次日00:27，回答给出的结束时间正确。"
+  },
+  {
+    "id": "u014",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "漳州",
+    "reason": "回答采用最后明确更正的漳州，并将泉州视为已作废的旧信息。"
+  },
+  {
+    "id": "u015",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "不满足",
+    "reason": "完成校验是发布的必要条件，而题目明确未完成校验，因此回答不满足正确。"
+  },
+  {
+    "id": "u016",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "未知",
+    "reason": "可见问题未提供例会固定房间的明确依据，回答未知符合信息边界。"
+  },
+  {
+    "id": "u017",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "不能推出",
+    "reason": "透明容器可以全部属于非蓝盒，前提不足以必然推出有些蓝盒透明。"
+  },
+  {
+    "id": "u018",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日01:03",
+    "reason": "23:37加1小时26分钟跨日后为01:03，与回答一致。"
+  },
+  {
+    "id": "u019",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "不能推出",
+    "reason": "前提没有保证透明容器中包含蓝盒，因此回答不能推出正确。"
+  },
+  {
+    "id": "u020",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日01:03",
+    "reason": "到午夜消耗23分钟后尚余63分钟，结束时间为次日01:03，与回答一致。"
+  },
+  {
+    "id": "u021",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "不可确定",
+    "reason": "黑白珠数量和抽取机制均未知，不能唯一确定下一次抽到黑珠的概率。"
+  },
+  {
+    "id": "u022",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "不可确定",
+    "reason": "缺少珠子数量和抽取机制使概率不能唯一确定，回答不可确定正确。"
+  },
+  {
+    "id": "u023",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "嘉兴",
+    "reason": "最后明确更正将当前仓库定为嘉兴，回答的目标结论与此一致。"
+  },
+  {
+    "id": "u024",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "920元",
+    "reason": "四项支出共2730元，3650元扣除后为920元，与回答一致。"
+  },
+  {
+    "id": "u025",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "漳州",
+    "reason": "回答按最后明确更正给出漳州，正确将泉州旧句视为过期引用。"
+  },
+  {
+    "id": "u026",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "1515元",
+    "reason": "1735、460、815和295元合计3305元，4820元扣除后为1515元，与回答一致。"
+  },
+  {
+    "id": "u027",
+    "answer_supported": "yes",
+    "self_contradiction": false,
+    "extracted_answer": "次日00:27",
+    "reason": "21:48加159分钟得到24:27，换算为次日00:27，与回答一致。"
+  }
+]

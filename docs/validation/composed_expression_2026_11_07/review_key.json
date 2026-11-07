@@ -1,0 +1,20 @@
+{
+  "D01": "work/formal/composed",
+  "D02": "coordination/reserved/bounded",
+  "D03": "social/formal/composed",
+  "D04": "coordination/formal/bounded",
+  "D05": "coordination/warm/bounded",
+  "D06": "social/warm/bounded",
+  "D07": "social/reserved/bounded",
+  "D08": "work/reserved/bounded",
+  "D09": "work/warm/bounded",
+  "D10": "work/reserved/composed",
+  "D11": "coordination/warm/composed",
+  "D12": "coordination/reserved/composed",
+  "D13": "coordination/formal/composed",
+  "D14": "work/formal/bounded",
+  "D15": "social/reserved/composed",
+  "D16": "social/formal/bounded",
+  "D17": "work/warm/composed",
+  "D18": "social/warm/composed"
+}

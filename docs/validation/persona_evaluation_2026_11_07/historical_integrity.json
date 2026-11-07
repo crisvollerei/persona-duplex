@@ -1,0 +1,10 @@
+{
+  "candidate_choice_2026_11_07": {
+    "manifest_sha256": "39c32f05b311134a9b88bd2e6964f37264898fca0a77e062dffd314d04ba5ed2",
+    "file_count": 70
+  },
+  "candidate_revision_2026_11_07": {
+    "manifest_sha256": "955a30379733f6da984cc7b386a507b70d7498e3a47949e7c14c7fe5369792ea",
+    "file_count": 89
+  }
+}

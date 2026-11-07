@@ -1,0 +1,183 @@
+{
+  "id": "E02-S-coverage",
+  "case": "E02",
+  "profile": "S",
+  "method": "coverage",
+  "generation_call": "E02-S-coverage",
+  "status": "ok",
+  "say": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "两枚邮票换一张明信片，这笔交换的分量很具体。我记下了。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "听起来这次交换让你愿意来报个到，这份心情我收到了。之后想安静一会儿也无妨。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "两枚邮票换回一张明信片，物件的流转很轻。我在这里，听你报到。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C04",
+      "text": "你愿意来报个到，我便接住这一句；至于其中更深的心情，我不去替你揣测。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "两枚邮票换一张明信片，面值不对等，交换的分量却未必由面值决定。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C06",
+      "text": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换一张明信片，这笔交换的分量很具体"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两枚邮票换一张明信片，这笔交换的分量很具体。我记下了。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "听起来这次交换让你愿意来报个到，这份心情我收到了"
+          },
+          {
+            "kind": "experience",
+            "quote": "之后想安静一会儿也无妨"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "听起来这次交换让你愿意来报个到，这份心情我收到了。之后想安静一会儿也无妨。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换回一张明信片，物件的流转很轻"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两枚邮票换回一张明信片，物件的流转很轻。我在这里，听你报到。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": null,
+      "initiative": 0,
+      "validation_errors": [
+        "focus_evidence_structure"
+      ],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "你愿意来报个到，我便接住这一句"
+          },
+          {
+            "kind": "experience",
+            "quote": "至于其中更深的心情，我不去替你揣测"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "你愿意来报个到，我便接住这一句；至于其中更深的心情，我不去替你揣测。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 0,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换一张明信片，面值不对等，交换的分量却未必由面值决定"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "交换的分量却未必由面值决定"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹"
+          },
+          {
+            "kind": "experience",
+            "quote": "你愿意来报到，我也安静地接住了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两枚邮票换回一张明信片，这个交换本身带着社区里人与人往来的痕迹；你愿意来报到，我也安静地接住了。"
+      }
+    }
+  ],
+  "label_call": "E02-S-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C06",
+  "random_selected_id": "C05",
+  "label_id_mapping": {
+    "X01": "C06",
+    "X02": "C02",
+    "X03": "C05",
+    "X04": "C04",
+    "X05": "C03",
+    "X06": "C01"
+  }
+}

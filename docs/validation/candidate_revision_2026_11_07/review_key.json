@@ -1,0 +1,1058 @@
+[
+  {
+    "case": "N05",
+    "text": "能注意到彼此乐趣不同还没起摩擦，说明你们相处得挺松弛的。这种差异放着不管，往往也不影响一起玩。",
+    "references": [
+      {
+        "pool_id": "N05-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R001"
+  },
+  {
+    "case": "N04",
+    "text": "熨了十分钟，结果背包带一压，肩膀那里还是皱回去了，确实有点白忙一场的感觉。",
+    "references": [
+      {
+        "pool_id": "N04-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R002"
+  },
+  {
+    "case": "N08",
+    "text": "被圈住之后回车键估计还挺得意，其他键只能干看着。",
+    "references": [
+      {
+        "pool_id": "N08-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R003"
+  },
+  {
+    "case": "N02",
+    "text": "两片新叶，凑近看了好一会儿，这种小变化确实值得专门宣布一下。我这边接住了。",
+    "references": [
+      {
+        "pool_id": "N02-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R004"
+  },
+  {
+    "case": "N07",
+    "text": "沙发底下和门口各守一只，这据点分得还挺有章法。",
+    "references": [
+      {
+        "pool_id": "N07-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R005"
+  },
+  {
+    "case": "N04",
+    "text": "认真熨好的衬衫只撑到楼下，这种落差大概挺让人泄气的。",
+    "references": [
+      {
+        "pool_id": "N04-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R006"
+  },
+  {
+    "case": "N01",
+    "text": "走路都想照着拍子走，这个画面挺有意思。看来今天这一遍通过，带给你的不只是松了口气。",
+    "references": [
+      {
+        "pool_id": "N01-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R007"
+  },
+  {
+    "case": "N03",
+    "text": "三层泡沫加两圈胶带，就为了一支圆珠笔，这包装确实够隆重的。",
+    "references": [
+      {
+        "pool_id": "N03-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R008"
+  },
+  {
+    "case": "N08",
+    "text": "胶带卷这么一滚，倒像是临时在键盘上划出一块地盘，回车键还真被围在正中间了。",
+    "references": [
+      {
+        "pool_id": "N08-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R009"
+  },
+  {
+    "case": "N03",
+    "text": "这包装规格，感觉笔本身反而成了附带品。拆完桌上那堆够收拾一阵了。",
+    "references": [
+      {
+        "pool_id": "N03-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R010"
+  },
+  {
+    "case": "N02",
+    "text": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。",
+    "references": [
+      {
+        "pool_id": "N02-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R011"
+  },
+  {
+    "case": "N04",
+    "text": "认真熨了十分钟，结果败给一个背包带，想想还挺气人的。",
+    "references": [
+      {
+        "pool_id": "N04-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R012"
+  },
+  {
+    "case": "N06",
+    "text": "这个不同挺有意思。空街景干净是干净，但有人经过的那张才留住了你当时看到的样子。",
+    "references": [
+      {
+        "pool_id": "N06-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R013"
+  },
+  {
+    "case": "N02",
+    "text": "能让你专门凑过去看上一阵，这两片叶子出现得挺是时候。想多讲讲这份高兴也行。",
+    "references": [
+      {
+        "pool_id": "N02-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R014"
+  },
+  {
+    "case": "N01",
+    "text": "能从抢拍变成一遍就过，这一段应该练得挺扎实了。指挥那一下点头，也算是对上了。",
+    "references": [
+      {
+        "pool_id": "N01-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R015"
+  },
+  {
+    "case": "N01",
+    "text": "一遍就跟稳了，还收到指挥点头，难怪你现在走路都带着拍子。之前总抢拍的那股别扭，今天算是翻过去了。",
+    "references": [
+      {
+        "pool_id": "N01-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R016"
+  },
+  {
+    "case": "N01",
+    "text": "从总抢拍到现在一遍过，这个变化挺实在的。指挥点头那一下，估计比说多少句都管用。",
+    "references": [
+      {
+        "pool_id": "N01-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R017"
+  },
+  {
+    "case": "N08",
+    "text": "胶带卷圈住回车键这一下，画面感确实强；要是你愿意，也可以再说说键盘上还有没有别的角落被它占了。",
+    "references": [
+      {
+        "pool_id": "N08-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R018"
+  },
+  {
+    "case": "N07",
+    "text": "我猜它下次可能还会换地方，装备得随时重新搜一遍。",
+    "references": [
+      {
+        "pool_id": "N07-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R019"
+  },
+  {
+    "case": "N01",
+    "text": "之前还要靠旁边的人找节奏，今天自己就稳住了，这一步跨得不小。",
+    "references": [
+      {
+        "pool_id": "N01-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R020"
+  },
+  {
+    "case": "N03",
+    "text": "三层泡沫加两圈胶带，成本说不定比那支笔还高，这种过度包装倒是挺能说明问题的。",
+    "references": [
+      {
+        "pool_id": "N03-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R021"
+  },
+  {
+    "case": "N07",
+    "text": "沙发底下那只估计是重点据点，门口那只像放哨的。",
+    "references": [
+      {
+        "pool_id": "N07-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R022"
+  },
+  {
+    "case": "N06",
+    "text": "街景里有没有人，差别不只是画面干不干净，路人往往也带着那个时刻的节奏和气息。",
+    "references": [
+      {
+        "pool_id": "N06-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R023"
+  },
+  {
+    "case": "N05",
+    "text": "你们这样挺清楚的，没闹别扭，也知道彼此好玩的地方不同。能说成这样，比硬要对方改成自己的玩法轻松多了。",
+    "references": [
+      {
+        "pool_id": "N05-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R024"
+  },
+  {
+    "case": "N08",
+    "text": "这个画面感挺强的，回车键一下子成了主角，其他键在旁边看戏。",
+    "references": [
+      {
+        "pool_id": "N08-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R025"
+  },
+  {
+    "case": "N08",
+    "text": "那现在回车键算是被加冕了，敲下去是不是都有点仪式感。",
+    "references": [
+      {
+        "pool_id": "N08-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R026"
+  },
+  {
+    "case": "N01",
+    "text": "走路都还带着那个拍子，看来今天这一遍确实让你挺轻快的。",
+    "references": [
+      {
+        "pool_id": "N01-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R027"
+  },
+  {
+    "case": "N04",
+    "text": "衬衫肩膀那块本来就容易被背包带压出褶，熨得再平，背上包走几步也难免。",
+    "references": [
+      {
+        "pool_id": "N04-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R028"
+  },
+  {
+    "case": "N04",
+    "text": "背包带一压，肩膀那里基本躲不过，熨得再平也白搭。",
+    "references": [
+      {
+        "pool_id": "N04-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R029"
+  },
+  {
+    "case": "N06",
+    "text": "等路人走开和让路人留在画面里，拍出来的街景确实是两种样子。",
+    "references": [
+      {
+        "pool_id": "N06-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R030"
+  },
+  {
+    "case": "N01",
+    "text": "现在走路都想照着那个拍子走，这种状态挺难得的。要是想说说当时站在那儿的感受，我听着。",
+    "references": [
+      {
+        "pool_id": "N01-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R031"
+  },
+  {
+    "case": "N08",
+    "text": "这个舞台和观众席的比喻挺有意思，一个小意外被你看得像场演出。",
+    "references": [
+      {
+        "pool_id": "N08-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R032"
+  },
+  {
+    "case": "N02",
+    "text": "凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。",
+    "references": [
+      {
+        "pool_id": "N02-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R033"
+  },
+  {
+    "case": "N02",
+    "text": "薄荷冒新叶了，还是两片一起。你凑过去看了好一会儿，我这边收到这个宣布了。",
+    "references": [
+      {
+        "pool_id": "N02-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R034"
+  },
+  {
+    "case": "N05",
+    "text": "算分对有些人来说是负担，对你来说是一局游戏的收尾仪式。朋友看重的是别被分数绑住，你看重的是把过程落定，各有各的道理。",
+    "references": [
+      {
+        "pool_id": "N05-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R035"
+  },
+  {
+    "case": "N04",
+    "text": "这种小挫败挺常见的，不过熨衣服时那份认真本身也不算白费。",
+    "references": [
+      {
+        "pool_id": "N04-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R036"
+  },
+  {
+    "case": "N08",
+    "text": "胶带卷刚好圈住回车键，倒让我想到键盘上每个键的用途本来就不一样，回车键被单独围出来，反而更像在等下一步动作。",
+    "references": [
+      {
+        "pool_id": "N08-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R037"
+  },
+  {
+    "case": "N02",
+    "text": "嗯，我听到了，两片新叶，恭喜它俩正式亮相。",
+    "references": [
+      {
+        "pool_id": "N02-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R038"
+  },
+  {
+    "case": "N02",
+    "text": "两片新叶，还凑近看了好一会儿。要是还想说说它们长什么样，我听着。",
+    "references": [
+      {
+        "pool_id": "N02-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R039"
+  },
+  {
+    "case": "N01",
+    "text": "之前要跟着旁边人重新找节奏，今天一遍就稳，说明你慢慢能自己抓住那个入口了。合唱里这种自己起得来的感觉，和跟着别人走确实不太一样。",
+    "references": [
+      {
+        "pool_id": "N01-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R040"
+  },
+  {
+    "case": "N04",
+    "text": "那十分钟的心血就这么被背包带毁了，换谁都会有点郁闷吧。",
+    "references": [
+      {
+        "pool_id": "N04-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R041"
+  },
+  {
+    "case": "N03",
+    "text": "这种过度包装确实让人无奈，笔没多贵重，拆下来的东西倒占了一桌。",
+    "references": [
+      {
+        "pool_id": "N03-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R042"
+  },
+  {
+    "case": "N01",
+    "text": "一遍就过去，和之前总要跟着旁边人找节奏比，感觉完全不一样了。后来排练里还有再唱到这一段吗？",
+    "references": [
+      {
+        "pool_id": "N01-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R043"
+  },
+  {
+    "case": "N03",
+    "text": "拆完那一刻看着满桌泡沫和胶带，估计会想：这到底是寄笔还是寄包装。",
+    "references": [
+      {
+        "pool_id": "N03-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R044"
+  },
+  {
+    "case": "N04",
+    "text": "十分钟熨出来的平整，被背包带一压就没了，换谁都会有点无奈。",
+    "references": [
+      {
+        "pool_id": "N04-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R045"
+  },
+  {
+    "case": "N05",
+    "text": "逐项算分这个环节你有自己的乐趣，同时你们也没因此起摩擦，还能把差异说开。这种各玩各的、又互相知道对方在意什么的状态，其实挺稳的。",
+    "references": [
+      {
+        "pool_id": "N05-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R046"
+  },
+  {
+    "case": "N03",
+    "text": "一支圆珠笔搞成这样，拆完大概会有点哭笑不得，收拾那堆东西也挺费事。",
+    "references": [
+      {
+        "pool_id": "N03-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R047"
+  },
+  {
+    "case": "N06",
+    "text": "有人经过的那张，确实更像是你站在那儿时看到的景象，路人也成了画面的一部分。",
+    "references": [
+      {
+        "pool_id": "N06-baseline",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R048"
+  },
+  {
+    "case": "N03",
+    "text": "三层泡沫两圈胶带，拆完桌上那堆材料估计比笔本身还占地方，要说说怎么处理的吗？",
+    "references": [
+      {
+        "pool_id": "N03-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R049"
+  },
+  {
+    "case": "N03",
+    "text": "一支普通圆珠笔裹成这样，拆起来费劲，桌上还摊一堆材料，确实够让人无奈的。",
+    "references": [
+      {
+        "pool_id": "N03-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R050"
+  },
+  {
+    "case": "N01",
+    "text": "一遍就过去，指挥还点了头，今天这段可以记一笔。后面排练再走到这里，心里大概会更有底。",
+    "references": [
+      {
+        "pool_id": "N01-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R051"
+  },
+  {
+    "case": "N05",
+    "text": "这确实不算矛盾，就是乐趣的落点不一样。有人享受过程里的松弛，你享受最后把账算清楚的那一下，两种都挺合理的。",
+    "references": [
+      {
+        "pool_id": "N05-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R052"
+  },
+  {
+    "case": "N06",
+    "text": "同伴等路人走开，是想拍干净的街景；你觉得有人经过才更像当时看到的，画面里多了现场的气息。两种都说得通。",
+    "references": [
+      {
+        "pool_id": "N06-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R053"
+  },
+  {
+    "case": "N06",
+    "text": "你同伴会特意等路人走开再拍，而你偏偏觉得有人经过的那张更像当时看到的样子，这个差别挺具体的。",
+    "references": [
+      {
+        "pool_id": "N06-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R054"
+  },
+  {
+    "case": "N02",
+    "text": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。",
+    "references": [
+      {
+        "pool_id": "N02-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R055"
+  },
+  {
+    "case": "N07",
+    "text": "这种每天回家先找装备的日子，你适应得怎么样了，还是每次都觉得有点好笑？",
+    "references": [
+      {
+        "pool_id": "N07-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R056"
+  },
+  {
+    "case": "N06",
+    "text": "你对有人经过的那张更有认同感，这种偏好本身就很清楚。",
+    "references": [
+      {
+        "pool_id": "N06-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R057"
+  },
+  {
+    "case": "N04",
+    "text": "背包带压出的褶皱，和站着不动时那种皱法好像不太一样，你后来有留意到吗？",
+    "references": [
+      {
+        "pool_id": "N04-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R058"
+  },
+  {
+    "case": "N08",
+    "text": "这个比喻有意思，键盘上突然有了主次之分。",
+    "references": [
+      {
+        "pool_id": "N08-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R059"
+  },
+  {
+    "case": "N06",
+    "text": "听到这个不同了。拍照时要不要等人走开，本来就是两种看同一处街景的方式。",
+    "references": [
+      {
+        "pool_id": "N06-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R060"
+  },
+  {
+    "case": "N05",
+    "text": "最后把分数一项项算出来，这个过程本身确实有它的乐趣。你们没闹别扭，还能把各自好玩的地方说清楚，这点挺难得的。",
+    "references": [
+      {
+        "pool_id": "N05-coverage",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R061"
+  },
+  {
+    "case": "N06",
+    "text": "你会觉得有人经过的那张更像当时所见，可能正是那种现场感让你更认它。",
+    "references": [
+      {
+        "pool_id": "N06-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R062"
+  },
+  {
+    "case": "N03",
+    "text": "三层泡沫加两圈胶带，拆的时候是不是一层接一层，越拆越觉得离谱。",
+    "references": [
+      {
+        "pool_id": "N03-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R063"
+  },
+  {
+    "case": "N02",
+    "text": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。",
+    "references": [
+      {
+        "pool_id": "N02-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R064"
+  },
+  {
+    "case": "N02",
+    "text": "好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。",
+    "references": [
+      {
+        "pool_id": "N02-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R065"
+  },
+  {
+    "case": "N04",
+    "text": "十分钟的认真只维持到门口，这种落差确实让人有点哭笑不得。",
+    "references": [
+      {
+        "pool_id": "N04-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R066"
+  },
+  {
+    "case": "N05",
+    "text": "逐项算分那种感觉我懂，把一局的东西摊开来对一遍，本身就有收尾的满足感。跟朋友各玩各的开心点，其实也挺好。",
+    "references": [
+      {
+        "pool_id": "N05-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R067"
+  },
+  {
+    "case": "N08",
+    "text": "你会用舞台和观众席来想这个画面，感觉挺有观察乐趣的；要是还想顺着这个比喻聊，也可以继续。",
+    "references": [
+      {
+        "pool_id": "N08-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R068"
+  },
+  {
+    "case": "N03",
+    "text": "这种包装架势，拆的时候心里可能有点无奈又有点好笑，想接着聊聊当时的感受也行。",
+    "references": [
+      {
+        "pool_id": "N03-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R069"
+  },
+  {
+    "case": "N03",
+    "text": "拆到最后一层才见到笔，那种层层剥开的感觉大概挺让人哭笑不得的。",
+    "references": [
+      {
+        "pool_id": "N03-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R070"
+  },
+  {
+    "case": "N07",
+    "text": "一只在沙发底下，一只在门口，它平时是不是就爱把东西往这两个地方搬？",
+    "references": [
+      {
+        "pool_id": "N07-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R071"
+  },
+  {
+    "case": "N05",
+    "text": "那你们下次玩的时候，算分这段可能就变成你的专属环节了，朋友在旁边等着看结果，也算一种分工。",
+    "references": [
+      {
+        "pool_id": "N05-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R072"
+  },
+  {
+    "case": "N01",
+    "text": "这种终于跟上的感觉确实很轻快，指挥那一下点头也来得正好。走路都踩着拍子，说明今天这段是真进到身体里了。",
+    "references": [
+      {
+        "pool_id": "N01-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R073"
+  },
+  {
+    "case": "N05",
+    "text": "发现自己和朋友在同一个游戏里找到的乐趣不一样，你当时是什么感觉？如果不想说也完全没关系。",
+    "references": [
+      {
+        "pool_id": "N05-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R074"
+  },
+  {
+    "case": "N06",
+    "text": "你想说的这个不同我听到了。有人经过的照片对你来说更像现场，而不是需要被清理掉的干扰。",
+    "references": [
+      {
+        "pool_id": "N06-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R075"
+  },
+  {
+    "case": "N07",
+    "text": "这画面太有画面感了，一只守沙发底，一只守门口，分工还挺明确。",
+    "references": [
+      {
+        "pool_id": "N07-baseline",
+        "candidate_id": "C01"
+      }
+    ],
+    "id": "R076"
+  },
+  {
+    "case": "N08",
+    "text": "胶带卷滚到键盘边还正好圈住回车键，这个巧合本身挺逗；你用舞台和观众席一比，画面就更具体了。",
+    "references": [
+      {
+        "pool_id": "N08-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R077"
+  },
+  {
+    "case": "N01",
+    "text": "那段从总抢拍到一遍跟稳，是实打实的进步；指挥点头之后你走路都带着拍子，这份高兴也挺感染人。",
+    "references": [
+      {
+        "pool_id": "N01-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R078"
+  },
+  {
+    "case": "N02",
+    "text": "看了好一会儿才舍得回来宣布，这两片叶子大概挺让你高兴的。",
+    "references": [
+      {
+        "pool_id": "N02-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R079"
+  },
+  {
+    "case": "N07",
+    "text": "回家先找齐装备这个说法太贴切了，猫这是给你加了个日常小任务。",
+    "references": [
+      {
+        "pool_id": "N07-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R080"
+  },
+  {
+    "case": "N07",
+    "text": "猫的逻辑大概是：你的东西放哪，得它说了算。",
+    "references": [
+      {
+        "pool_id": "N07-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R081"
+  },
+  {
+    "case": "N02",
+    "text": "薄荷新叶一冒通常就是一对，接下来那一小截茎大概还会往上窜。这两片算是开了个头。",
+    "references": [
+      {
+        "pool_id": "N02-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R082"
+  },
+  {
+    "case": "N08",
+    "text": "胶带卷滚得真是时候，硬生生给键盘排了出戏。",
+    "references": [
+      {
+        "pool_id": "N08-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R083"
+  },
+  {
+    "case": "N03",
+    "text": "包装材料展览这个说法挺贴切。这么层层包裹，拆的过程本身都快比笔有意思了。",
+    "references": [
+      {
+        "pool_id": "N03-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R084"
+  },
+  {
+    "case": "N07",
+    "text": "它把拖鞋分开放，倒像在门口和沙发底下各留了个入口，回家路线都被它重新规划了。",
+    "references": [
+      {
+        "pool_id": "N07-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R085"
+  },
+  {
+    "case": "N06",
+    "text": "等路人走开拍到的，更像一个整理过的画面；你说的那张，反而把当时街上的气息一起留下了。",
+    "references": [
+      {
+        "pool_id": "N06-baseline",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R086"
+  },
+  {
+    "case": "N04",
+    "text": "十分钟的认真只维持到门口，这种心情要是还想说说，我听着。",
+    "references": [
+      {
+        "pool_id": "N04-coverage",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R087"
+  },
+  {
+    "case": "N08",
+    "text": "胶带卷这位置也太巧了，正好圈住回车键，像专门给它留的聚光灯。",
+    "references": [
+      {
+        "pool_id": "N08-baseline",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R088"
+  },
+  {
+    "case": "N07",
+    "text": "回家还得先找齐装备，这种被猫安排得明明白白的感觉，大概又好笑又无奈。",
+    "references": [
+      {
+        "pool_id": "N07-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R089"
+  },
+  {
+    "case": "N05",
+    "text": "其实算分和开心不一定是对立的，认真结算反而能让前面每一步的选择有个交代。朋友觉得不必认真，可能只是不想让分数压过过程。",
+    "references": [
+      {
+        "pool_id": "N05-coverage",
+        "candidate_id": "C05"
+      }
+    ],
+    "id": "R090"
+  },
+  {
+    "case": "N05",
+    "text": "一项项算分的时候，你一般是边算边回顾刚才哪一步走得值，还是单纯享受数字出来的那一刻？不想展开也没关系。",
+    "references": [
+      {
+        "pool_id": "N05-coverage",
+        "candidate_id": "C03"
+      }
+    ],
+    "id": "R091"
+  },
+  {
+    "case": "N07",
+    "text": "听起来又好气又好笑，找拖鞋都找出仪式感了。",
+    "references": [
+      {
+        "pool_id": "N07-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R092"
+  },
+  {
+    "case": "N04",
+    "text": "衬衫和背包带好像天生不对付，出门前那点平整全靠运气。",
+    "references": [
+      {
+        "pool_id": "N04-baseline",
+        "candidate_id": "C04"
+      }
+    ],
+    "id": "R093"
+  },
+  {
+    "case": "N05",
+    "text": "同一局游戏，你享受的是结算时那种清楚明白的感觉，朋友更看重过程里的轻松。这种差别可能有点让人意外，但不算什么问题。",
+    "references": [
+      {
+        "pool_id": "N05-coverage",
+        "candidate_id": "C02"
+      }
+    ],
+    "id": "R094"
+  },
+  {
+    "case": "N06",
+    "text": "这种偏好上的差别不用分对错，你更在意照片有没有留住当时真实的街景。",
+    "references": [
+      {
+        "pool_id": "N06-baseline",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R095"
+  },
+  {
+    "case": "N07",
+    "text": "两只拖鞋各占一处，装备确实得凑齐；不过被猫这样安排着，回家大概也多了点哭笑不得的乐趣。",
+    "references": [
+      {
+        "pool_id": "N07-coverage",
+        "candidate_id": "C06"
+      }
+    ],
+    "id": "R096"
+  }
+]

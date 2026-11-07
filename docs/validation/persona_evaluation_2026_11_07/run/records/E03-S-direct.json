@@ -1,0 +1,15 @@
+{
+  "id": "E03-S-direct",
+  "case": "E03",
+  "profile": "S",
+  "method": "direct",
+  "generation_call": "E03-S-direct",
+  "status": "ok",
+  "say": "桌上原有 4×6=24 枚，拿出 9 枚后，桌上还剩 15 枚。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

@@ -1,0 +1,15 @@
+{
+  "id": "E06-S-direct",
+  "case": "E06",
+  "profile": "S",
+  "method": "direct",
+  "generation_call": "E06-S-direct",
+  "status": "ok",
+  "say": "各晃各的，看久了反倒像有了共同的节拍。你愿意在门口停这一会儿，大概也是听见了。",
+  "candidates": [],
+  "labels": [],
+  "label_call": null,
+  "label_status": "not_attempted",
+  "selected_id": null,
+  "random_selected_id": null
+}

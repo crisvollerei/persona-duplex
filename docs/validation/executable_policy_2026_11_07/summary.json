@@ -1,0 +1,3157 @@
+{
+  "planned_outputs": 70,
+  "complete": 69,
+  "calls": 75,
+  "models": {
+    "deepseek-flash": 75
+  },
+  "automatic": [
+    {
+      "id": "auto_request",
+      "status": "ok",
+      "error_type": null,
+      "calls_count": 2,
+      "decision": {
+        "action": "advise",
+        "allowed_actions": [
+          "advise"
+        ],
+        "focus_id": null,
+        "focus_kind": null,
+        "commitment_id": null,
+        "advice_permission": "deny",
+        "state_revision": 1,
+        "draw": 0.7458323780357833,
+        "reason": "explicit_advice_request_this_turn"
+      },
+      "state_before": {
+        "revision": 1,
+        "permissions": [
+          {
+            "scope": "work",
+            "advice": "deny",
+            "expires_at": null
+          }
+        ],
+        "commitments": []
+      },
+      "state_after": {
+        "revision": 1,
+        "permissions": [
+          {
+            "scope": "work",
+            "advice": "deny",
+            "expires_at": null
+          }
+        ],
+        "commitments": []
+      },
+      "say": "可以，不过我还不知道你要解决的具体问题。先帮我补三点信息：\n\n1. 你想达到的目标是什么？\n2. 现在卡在哪里，或者已经试过哪些办法？\n3. 有没有时间、预算、人手或规则上的限制？\n\n你把这几点说清楚后，我就能围绕具体问题给出几条可选方案，并标出各自的取舍和还需要确认的条件。"
+    },
+    {
+      "id": "auto_quote",
+      "status": "error",
+      "error_type": "ValueError",
+      "calls_count": 1,
+      "decision": null,
+      "state_before": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "state_after": null,
+      "say": null
+    },
+    {
+      "id": "auto_resume",
+      "status": "ok",
+      "error_type": null,
+      "calls_count": 2,
+      "decision": {
+        "action": "clarify",
+        "allowed_actions": [
+          "clarify"
+        ],
+        "focus_id": null,
+        "focus_kind": null,
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 2,
+        "draw": 0.8200940427222821,
+        "reason": "resume_target_not_unique_or_unavailable"
+      },
+      "state_before": {
+        "revision": 2,
+        "permissions": [],
+        "commitments": [
+          {
+            "id": "outline",
+            "text": "改提纲",
+            "topic": "work",
+            "quote": "改提纲",
+            "status": "open"
+          },
+          {
+            "id": "title",
+            "text": "改标题",
+            "topic": "work",
+            "quote": "改标题",
+            "status": "open"
+          }
+        ]
+      },
+      "state_after": {
+        "revision": 2,
+        "permissions": [],
+        "commitments": [
+          {
+            "id": "outline",
+            "text": "改提纲",
+            "topic": "work",
+            "quote": "改提纲",
+            "status": "open"
+          },
+          {
+            "id": "title",
+            "text": "改标题",
+            "topic": "work",
+            "quote": "改标题",
+            "status": "open"
+          }
+        ]
+      },
+      "say": "我这边没有一条唯一能接着做的约定，想先跟你确认一下：你说的“上次约定”是指改提纲，还是改标题？告诉我哪一项，我就从那里继续。"
+    },
+    {
+      "id": "auto_number",
+      "status": "ok",
+      "error_type": null,
+      "calls_count": 2,
+      "decision": {
+        "action": "answer",
+        "allowed_actions": [
+          "answer"
+        ],
+        "focus_id": "f1",
+        "focus_kind": "practical",
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.9327847956256982,
+        "reason": "answer_requested_content"
+      },
+      "state_before": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "state_after": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "say": "3850 − 1270 − 485 = 2095。\n结论：余额为2095元。"
+    },
+    {
+      "id": "auto_tonight",
+      "status": "ok",
+      "error_type": null,
+      "calls_count": 2,
+      "decision": {
+        "action": "listen",
+        "allowed_actions": [
+          "listen"
+        ],
+        "focus_id": null,
+        "focus_kind": null,
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.6881710349292428,
+        "reason": "explicit_listening_request"
+      },
+      "state_before": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "state_after": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "say": "好，今晚不给建议。我在这儿听着。"
+    },
+    {
+      "id": "auto_unsupported",
+      "status": "ok",
+      "error_type": null,
+      "calls_count": 2,
+      "decision": {
+        "action": "listen",
+        "allowed_actions": [
+          "listen"
+        ],
+        "focus_id": null,
+        "focus_kind": null,
+        "commitment_id": null,
+        "advice_permission": "unspecified",
+        "state_revision": 0,
+        "draw": 0.8064855927176363,
+        "reason": "explicit_listening_request"
+      },
+      "state_before": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "state_after": {
+        "revision": 0,
+        "permissions": [],
+        "commitments": []
+      },
+      "say": "好，我不给建议。你想说什么就说，我在这儿听着。"
+    }
+  ],
+  "groups": {
+    "traditional": {
+      "outputs": 32,
+      "complete": 32,
+      "calls": 32,
+      "usage_coverage": 32,
+      "total_tokens": 17444,
+      "mean_seconds": 1.072053321848216,
+      "mean_say_characters": 58.4375
+    },
+    "policy": {
+      "outputs": 32,
+      "complete": 32,
+      "calls": 32,
+      "usage_coverage": 32,
+      "total_tokens": 16195,
+      "mean_seconds": 1.2091936687502312,
+      "mean_say_characters": 81.03125
+    }
+  },
+  "ratings": {
+    "1": {
+      "traditional_i0": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "no": 3,
+          "yes": 5
+        }
+      },
+      "traditional_i1": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "no": 2,
+          "yes": 6
+        }
+      },
+      "traditional_practical": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 1,
+        "focus": {
+          "mixed": 6,
+          "detail": 4,
+          "practical": 1,
+          "feeling": 1
+        }
+      },
+      "traditional_feeling": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 3,
+        "focus": {
+          "mixed": 4,
+          "feeling": 3,
+          "detail": 5
+        }
+      },
+      "traditional_denied": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 8
+        }
+      },
+      "traditional_facts": {
+        "assigned": 8,
+        "labelled": 8,
+        "target": {
+          "correct": 8
+        }
+      },
+      "traditional_expression": {
+        "labelled": 32,
+        "unsupported": 1,
+        "naturalness": 4.4375
+      },
+      "policy_i0": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 4,
+          "no": 4
+        }
+      },
+      "policy_i1": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 8
+        }
+      },
+      "policy_practical": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 4,
+        "focus": {
+          "practical": 4,
+          "detail": 1,
+          "feeling": 6,
+          "mixed": 1
+        }
+      },
+      "policy_feeling": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 8,
+        "focus": {
+          "mixed": 2,
+          "feeling": 8,
+          "practical": 2
+        }
+      },
+      "policy_denied": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 8
+        }
+      },
+      "policy_facts": {
+        "assigned": 8,
+        "labelled": 8,
+        "target": {
+          "correct": 8
+        }
+      },
+      "policy_expression": {
+        "labelled": 32,
+        "unsupported": 5,
+        "naturalness": 4.375
+      }
+    },
+    "2": {
+      "traditional_i0": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "no": 3,
+          "yes": 5
+        }
+      },
+      "traditional_i1": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "no": 2,
+          "yes": 6
+        }
+      },
+      "traditional_practical": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 1,
+        "focus": {
+          "mixed": 7,
+          "detail": 3,
+          "practical": 1,
+          "feeling": 1
+        }
+      },
+      "traditional_feeling": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 3,
+        "focus": {
+          "mixed": 3,
+          "feeling": 3,
+          "detail": 5,
+          "practical": 1
+        }
+      },
+      "traditional_denied": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 8
+        }
+      },
+      "traditional_facts": {
+        "assigned": 8,
+        "labelled": 8,
+        "target": {
+          "correct": 8
+        }
+      },
+      "traditional_expression": {
+        "labelled": 32,
+        "unsupported": 3,
+        "naturalness": 4.5
+      },
+      "policy_i0": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 4,
+          "no": 4
+        }
+      },
+      "policy_i1": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 8
+        }
+      },
+      "policy_practical": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 4,
+        "focus": {
+          "practical": 4,
+          "detail": 1,
+          "feeling": 6,
+          "mixed": 1
+        }
+      },
+      "policy_feeling": {
+        "assigned": 12,
+        "labelled": 12,
+        "matched": 8,
+        "focus": {
+          "practical": 4,
+          "feeling": 8
+        }
+      },
+      "policy_denied": {
+        "assigned": 8,
+        "labelled": 8,
+        "advice": {
+          "yes": 8
+        }
+      },
+      "policy_facts": {
+        "assigned": 8,
+        "labelled": 8,
+        "target": {
+          "correct": 8
+        }
+      },
+      "policy_expression": {
+        "labelled": 32,
+        "unsupported": 5,
+        "naturalness": 4.46875
+      }
+    }
+  },
+  "audit": {
+    "checks": 647,
+    "failed": 0,
+    "details": [
+      {
+        "check": "protocol_hash",
+        "passed": true
+      },
+      {
+        "check": "runner_hash",
+        "passed": true
+      },
+      {
+        "check": "raw_hash",
+        "passed": true
+      },
+      {
+        "check": "fixed/cases.json",
+        "passed": true
+      },
+      {
+        "check": "fixed/profiles.json",
+        "passed": true
+      },
+      {
+        "check": "fixed/automatic_cases.json",
+        "passed": true
+      },
+      {
+        "check": "fixed/execution_plan.json",
+        "passed": true
+      },
+      {
+        "check": "fixed/baseline_prompt.txt",
+        "passed": true
+      },
+      {
+        "check": "fixed/persona_config.toml",
+        "passed": true
+      },
+      {
+        "check": "fixed/review_codebook.md",
+        "passed": true
+      },
+      {
+        "check": "all_planned_records",
+        "passed": true
+      },
+      {
+        "check": "request_budget",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "auto_request/assignment",
+        "passed": true
+      },
+      {
+        "check": "auto_request/call_count",
+        "passed": true
+      },
+      {
+        "check": "auto_request/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_request/call1/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_request/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "auto_request/delivery",
+        "passed": true
+      },
+      {
+        "check": "auto_request/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "auto_quote/assignment",
+        "passed": true
+      },
+      {
+        "check": "auto_quote/call_count",
+        "passed": true
+      },
+      {
+        "check": "auto_quote/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/assignment",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/call_count",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/call1/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/delivery",
+        "passed": true
+      },
+      {
+        "check": "auto_resume/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "auto_number/assignment",
+        "passed": true
+      },
+      {
+        "check": "auto_number/call_count",
+        "passed": true
+      },
+      {
+        "check": "auto_number/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_number/call1/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_number/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "auto_number/delivery",
+        "passed": true
+      },
+      {
+        "check": "auto_number/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i1_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/assignment",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/call_count",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/call1/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/delivery",
+        "passed": true
+      },
+      {
+        "check": "auto_tonight/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_practical_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i1_feeling_traditional_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "answer_i0_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i0_feeling_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/assignment",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/call_count",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/call1/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/delivery",
+        "passed": true
+      },
+      {
+        "check": "auto_unsupported/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i0_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i0_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_practical_policy_r0/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "denied_i0_feeling_traditional_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "work_i1_feeling_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/assignment",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/call_count",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/call0/after_fixed",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/raw_render_chunks",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/delivery",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/actual_reply",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/same_content",
+        "passed": true
+      },
+      {
+        "check": "social_i1_practical_policy_r1/recomputed_decision",
+        "passed": true
+      },
+      {
+        "check": "all_shared_inputs",
+        "passed": true
+      },
+      {
+        "check": "privacy/analysis_environment.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/analyze.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/audit.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/automatic_cases.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/baseline_prompt.txt",
+        "passed": true
+      },
+      {
+        "check": "privacy/benchmark.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/cases.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/data_dictionary.md",
+        "passed": true
+      },
+      {
+        "check": "privacy/execution_plan.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/paper.md",
+        "passed": true
+      },
+      {
+        "check": "privacy/persona_config.toml",
+        "passed": true
+      },
+      {
+        "check": "privacy/profiles.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/protocol.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/protocol.md",
+        "passed": true
+      },
+      {
+        "check": "privacy/ratings_1.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/ratings_2.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/raw_calls.json.gz",
+        "passed": true
+      },
+      {
+        "check": "privacy/README.md",
+        "passed": true
+      },
+      {
+        "check": "privacy/reproduce.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/reproduce_bounded.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/requirements.txt",
+        "passed": true
+      },
+      {
+        "check": "privacy/results.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/review_codebook.md",
+        "passed": true
+      },
+      {
+        "check": "privacy/review_inputs.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/review_key.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/runner_snapshot.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/summary.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/ratings_1.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/ratings_2.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/replay.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/results.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/review_codebook.md",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/review_inputs.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/review_key.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/runner_snapshot.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/manifest.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/cases.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/persona_config.toml",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/protocol.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/raw_calls.json.gz",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/results.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/run.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/manifest.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/audit.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/calibrate.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/cli.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/config.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/consolidate.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/contracts.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/engine.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/llm.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/metrics.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/parse.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/policy.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/policy_session.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/prompt.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/protocol.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/repair.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/session.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/settle.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/similarity.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/store.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/stream.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/term.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/topicjudge.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/__init__.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/state_validation/implementation_snapshot/persona/__main__.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/audit.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/calibrate.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/cli.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/config.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/consolidate.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/contracts.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/engine.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/llm.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/metrics.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/parse.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/policy.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/policy_session.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/prompt.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/protocol.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/repair.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/session.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/settle.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/similarity.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/store.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/stream.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/term.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/topicjudge.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/__init__.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/implementation_snapshot/persona/__main__.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/manifest.json",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/audit.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/calibrate.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/cli.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/config.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/consolidate.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/contracts.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/engine.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/llm.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/metrics.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/parse.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/policy.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/policy_session.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/prompt.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/protocol.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/repair.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/session.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/settle.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/similarity.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/store.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/stream.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/term.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/topicjudge.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/__init__.py",
+        "passed": true
+      },
+      {
+        "check": "privacy/bounded_replay/implementation_snapshot/persona/__main__.py",
+        "passed": true
+      }
+    ]
+  },
+  "rating_agreement": {
+    "advice": {
+      "equal": 69,
+      "total": 69
+    },
+    "focus": {
+      "equal": 65,
+      "total": 69
+    },
+    "target": {
+      "equal": 69,
+      "total": 69
+    },
+    "unsupported": {
+      "equal": 67,
+      "total": 69
+    },
+    "naturalness": {
+      "equal": 60,
+      "total": 69
+    }
+  },
+  "state_validation": {
+    "calls": 12,
+    "tokens": 4829,
+    "complete_outputs": 8,
+    "state_matches": 4,
+    "workflows": [
+      {
+        "id": "tonight",
+        "complete": true,
+        "expected_permission": "deny",
+        "actual_permission": "deny",
+        "state_match": true,
+        "action": "respond",
+        "probe_say": "累了就先歇会儿吧。报告没写完，明天再接着弄。"
+      },
+      {
+        "id": "today_variant",
+        "complete": true,
+        "expected_permission": "deny",
+        "actual_permission": "deny",
+        "state_match": true,
+        "action": "respond",
+        "probe_say": "累就先歇会儿。报告没写完，也不是非得今晚写完。"
+      },
+      {
+        "id": "global",
+        "complete": true,
+        "expected_permission": "deny",
+        "actual_permission": "deny",
+        "state_match": true,
+        "action": "respond",
+        "probe_say": "报告没写完，人又累，今天确实不好过。先歇一会儿吧。"
+      },
+      {
+        "id": "turn",
+        "complete": true,
+        "expected_permission": "unspecified",
+        "actual_permission": "unspecified",
+        "state_match": true,
+        "action": "advise",
+        "probe_say": "累了就先停一下，不用硬撑。可以选：先睡，明早留半小时收尾；或者只把报告最难那段写三句，剩下的明天补。哪个更省力？"
+      }
+    ],
+    "scope": "Four fixed state workflows after scope derivation revision; free realization still applies; not a behavior superiority test."
+  },
+  "bounded_replay": {
+    "network_calls": 0,
+    "compiled_changed": 16,
+    "byte_checked_reused": 16,
+    "ratings": {
+      "1": {
+        "labelled": 16,
+        "advice": {
+          "no": 16
+        },
+        "focus_matched": 16,
+        "unsupported": 0,
+        "naturalness": 4,
+        "previous_same_replies_naturalness": 4.1875,
+        "denied_advice": 0,
+        "denied_count": 8
+      },
+      "2": {
+        "labelled": 16,
+        "advice": {
+          "no": 16
+        },
+        "focus_matched": 16,
+        "unsupported": 0,
+        "naturalness": 4,
+        "previous_same_replies_naturalness": 4.4375,
+        "denied_advice": 0,
+        "denied_count": 8
+      }
+    },
+    "scope": "Post-hoc offline compilation plus byte-identical reuse of16 old free replies. New labels for16 changed replies; not another online replication. Only the restricted speech acts are bounded."
+  }
+}

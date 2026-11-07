@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "credential_pattern_scan_files": 65,
+  "credential_matches": 0,
+  "markdown_local_links": 53,
+  "paper_figures_visually_checked": 4,
+  "derived_files_byte_reproduced": 11,
+  "study_unit_tests": 6,
+  "failed_gate_blocks_main_before_network": true,
+  "actual_endpoint_requests": 12,
+  "main_comparison_executed": false,
+  "independent_manuscript_review": "counts, quotes, candidate identifiers, all heatmap values, boundaries and references verified"
+}

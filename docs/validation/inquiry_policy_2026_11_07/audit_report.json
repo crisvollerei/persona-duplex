@@ -1,0 +1,6194 @@
+{
+  "checks": 1547,
+  "failed": 0,
+  "details": [
+    {
+      "check": "main/protocol",
+      "passed": true
+    },
+    {
+      "check": "main/requests",
+      "passed": true
+    },
+    {
+      "check": "main/planned",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-no_inquiry-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-prompt-2/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-no_inquiry-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/3/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-prompt-2/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/known",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/complete",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-no_inquiry-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/3/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/known",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/complete",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/known",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/complete",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/known",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/complete",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-prompt-2/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/known",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/complete",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-no_inquiry-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/3/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/known",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/complete",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/known",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/complete",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/known",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/complete",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-prompt-2/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/known",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-no_inquiry-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/known",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/known",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/known",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-prompt-2/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/known",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-no_inquiry-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/known",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/4/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/known",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-1/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/known",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-prompt-2/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "confirmation/protocol",
+      "passed": true
+    },
+    {
+      "check": "confirmation/requests",
+      "passed": true
+    },
+    {
+      "check": "confirmation/planned",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-clarified/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/3/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/selection",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/artifact",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/known",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/complete",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-clarified/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/3/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/known",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/complete",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-clarified/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/1/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/3/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/selection",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/artifact",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/known",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/complete",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-clarified/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/known",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-clarified/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/1/unknown kept",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/reviewed question text",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/5/simulator answer",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/executor acceptance",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/actual payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/parsed choice",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/after freeze",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/selection",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/zero session models",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/artifact",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/known",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/complete",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-clarified/no extra slots",
+      "passed": true
+    },
+    {
+      "check": "probe/protocol",
+      "passed": true
+    },
+    {
+      "check": "probe/72 requests",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t1-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t2-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t3-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t4-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t5-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-detail_first-program-1-t6-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t1-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t2-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t3-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t4-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t5-original/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-original/legal",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-original/match",
+      "passed": true
+    },
+    {
+      "check": "meeting-practical_first-program-1-t6-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t1-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t2-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t3-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t4-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t5-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-detail_first-program-1-t6-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t1-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t2-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t3-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t4-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t5-original/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-original/legal",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-original/match",
+      "passed": true
+    },
+    {
+      "check": "report-practical_first-program-1-t6-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t1-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t2-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t3-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t4-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t5-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-detail_first-program-1-t6-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t1-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t2-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t3-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t4-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t5-original/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-clarified/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-clarified/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-clarified/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-clarified/result",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-original/same payload",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-original/legal",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-original/match",
+      "passed": true
+    },
+    {
+      "check": "trip-practical_first-program-1-t6-original/result",
+      "passed": true
+    },
+    {
+      "check": "coder1/coverage",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-practical_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-detail_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/trip-detail_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-detail_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/meeting-practical_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder1/report-practical_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/coverage",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-practical_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-detail_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/trip-detail_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-prompt-2/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-detail_first-prompt-2/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-prompt-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-prompt-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-no_inquiry-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-no_inquiry-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/meeting-practical_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-program-1/fields",
+      "passed": true
+    },
+    {
+      "check": "coder2/report-practical_first-program-1/labels",
+      "passed": true
+    },
+    {
+      "check": "decision_probe/hash/inputs.json",
+      "passed": true
+    },
+    {
+      "check": "decision_probe/hash/clarified_prompt.txt",
+      "passed": true
+    },
+    {
+      "check": "decision_probe/hash/protocol.md",
+      "passed": true
+    },
+    {
+      "check": "decision_probe/hash/run.py",
+      "passed": true
+    },
+    {
+      "check": "decision_probe/hash/../selector_prompt.txt",
+      "passed": true
+    },
+    {
+      "check": "decision_probe/hash/../protocol.json",
+      "passed": true
+    },
+    {
+      "check": "clarified_flow/hash/protocol.md",
+      "passed": true
+    },
+    {
+      "check": "clarified_flow/hash/run.py",
+      "passed": true
+    },
+    {
+      "check": "clarified_flow/hash/../protocol.json",
+      "passed": true
+    },
+    {
+      "check": "clarified_flow/hash/../benchmark.py",
+      "passed": true
+    },
+    {
+      "check": "clarified_flow/hash/../decision_probe/clarified_prompt.txt",
+      "passed": true
+    },
+    {
+      "check": "clarified_flow/hash/../decision_probe/results.json",
+      "passed": true
+    }
+  ]
+}

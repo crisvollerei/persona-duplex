@@ -75,17 +75,19 @@ python -X utf8 -m persona chat -p shorekeeper -m deepseek-chat -d data/shorekeep
 `direct → baseline` 是普通人格化，`baseline → SAY` 才记录额外位移。
 `displace=none` 是正常状态，仍然保留人格。详见[架构与判断边界](docs/architecture.md)。
 
+显式的[可执行人格策略实验](docs/executable-policy.md)由程序在表达前选择行动和关注点，并维护用户建议边界与应用确认的承诺。倾听、照应、澄清默认由受限语句和原文引用直接表达，其他动作仍由模型生成。使用`PolicySession`或`policy-chat`启用，默认三段路径不自动切换；有限动作的可控性与开放语言体验分别评价。
+
+应用也可显式启用[受约束的信息追问](docs/inquiry-policy.md)：审核问题槽后，由程序按关注偏好选择，等待明确回答，并执行禁问、配额和跨轮节奏。它支持结构化任务，不等同于已经实现通用人格。
+
 ## 论文、实验与可复核材料
 
-实验资料同时保存成功与失败样本。协议有效、答案格式匹配、所问结论正确和全文事实正确是不同指标。
+**[阶段综述：人格工程能控制什么？](docs/validation/research_synthesis_2026_11_07.md)** 汇集 11 月 6–7 日的九项研究。框架能追溯记忆如何更正，也能在已审核的问题中按权限选问；在给定相同资料时，尚未证明它比强提示更能保持事实或表达开放人格。综述按判断、行动、表达三类问题说明证据与限制。
 
-| 研究 | 范围 | 阅读入口 |
-| :--- | :--- | :--- |
-| **初步实证** | 五组实验，65 条对话输出与参数状态快照 | [论文](docs/validation/validation_study_paper.md) · [数据](docs/validation/experiment_results.json) |
-| **重复对照与边界验证** | 528 个主单元及真实记忆补充；516 条输出、744 次请求、九幅图 | [论文](docs/validation/followup_2026_11_05/paper.md) · [数据与复现](docs/validation/followup_2026_11_05/README.md) |
-| **框架修订的定向验证** | 36 个单元；52 条输出、60 次请求及历史流重放 | [验证材料](docs/validation/framework_revision_2026_11_05/README.md) · [数据](docs/validation/framework_revision_2026_11_05/results.json) |
-
-研究版本保留源码快照；现行框架可以继续演进。小样本结果不构成人格与判断因果独立、普遍安全或长期人格成长的证明。
+| 阅读目的 | 入口 |
+| --- | --- |
+| 查看整个阶段的进展、分项论文、原始数据和图表 | [研究目录与复现](docs/research.md) |
+| 看具体对照：两种方法拿到相同资料时表现如何？ | [强传统提示对照](docs/validation/fair_rag_2026_11_07/paper.md) · [共享执行器下的信息追问](docs/validation/inquiry_policy_2026_11_07/paper.md) |
+| 看人格如何评价，以及两位评审究竟在哪里意见不同 | [评价规范](docs/evaluation.md) · [24 条实际回复与评语](docs/validation/persona_evaluation_2026_11_07/final_replies.md) |
 
 ## 按需要继续阅读
 

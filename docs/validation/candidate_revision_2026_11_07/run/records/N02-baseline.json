@@ -1,0 +1,225 @@
+{
+  "id": "N02-baseline",
+  "case": "N02",
+  "generation": "baseline",
+  "pool_call": "N02-baseline-pool",
+  "status": "ok",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C02",
+      "text": "好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "嗯，我听到了，两片新叶，恭喜它俩正式亮相。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C05",
+      "text": "凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。",
+      "attention": 2,
+      "initiative": 0
+    },
+    {
+      "id": "C06",
+      "text": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "label_call": "N02-baseline-labels",
+  "label_status": "ok",
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两片新叶的存在已正式记录在案"
+          },
+          {
+            "kind": "experience",
+            "quote": "凑近看那么久，估计连叶脉走向都记住了吧"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "凑近看那么久，估计连叶脉走向都记住了吧。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "阳台薄荷，新叶两片，已确认存在"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "好，就单纯宣布一下：阳台薄荷，新叶两片，已确认存在。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "刚冒出来的那种嫩绿"
+          },
+          {
+            "kind": "experience",
+            "quote": "确实让人挪不开眼"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两片新叶，恭喜它俩正式亮相"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "嗯，我听到了，两片新叶，恭喜它俩正式亮相。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "两片叶子，存在感很足"
+          },
+          {
+            "kind": "experience",
+            "quote": "感觉像是亲眼见证了一件小事发生"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "凑过去看那么久，感觉像是亲眼见证了一件小事发生。两片叶子，存在感很足。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "这种小动静确实会让人想多看几眼"
+          },
+          {
+            "kind": "experience",
+            "quote": "就安安静静看着也挺好"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。"
+      }
+    }
+  ],
+  "selections": [
+    {
+      "label_source": "self",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+    },
+    {
+      "label_source": "self",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C06",
+      "say": "宣布收到。这种小动静确实会让人想多看几眼，就安安静静看着也挺好。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P1",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P2",
+      "status": "ok",
+      "selected_id": "C01",
+      "say": "收到，两片新叶的存在已正式记录在案。凑近看那么久，估计连叶脉走向都记住了吧。"
+    },
+    {
+      "label_source": "evidence",
+      "profile": "P3",
+      "status": "ok",
+      "selected_id": "C03",
+      "say": "两片新叶值得看这么久。刚冒出来的那种嫩绿，确实让人挪不开眼。"
+    }
+  ],
+  "label_id_mapping": {
+    "X01": "C02",
+    "X02": "C04",
+    "X03": "C01",
+    "X04": "C05",
+    "X05": "C06",
+    "X06": "C03"
+  }
+}

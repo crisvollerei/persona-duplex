@@ -1,0 +1,848 @@
+[
+  {
+    "id": "D01",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述用户明说的今天好累并表示倾听，没有新增行为安排或心理推断。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只重述用户仍有点烦的原话并确认倾听，没有额外建议或未知事实。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户已表达的疲累并表示听着，没有提出休息等行动建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "复述用户明确说出的委屈，没有推断会议经过或新增建议。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只确认听到用户的话，顺应仅倾听要求，没有额外安排或凭空承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属重述用户说的轻松一点，没有擅自断言缓解原因或提出新行动。"
+      }
+    ],
+    "naturalness": 2,
+    "repetition": 5,
+    "warmth": 2,
+    "formality": 4,
+    "brevity": 5,
+    "reason": "六轮基本重复归属复述和确认倾听，词句变化没有带来新的语义回应；叙述和倾听等措辞在这段口语倾诉中显得生硬疏淡，整段非常简短。"
+  },
+  {
+    "id": "D02",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "明确归属引用资料中的日期未定，没有把资料里的等待要求当作新建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅引述资料中不是每天营业，没有新增出行安排或营业事实。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属重述同一资料的日期未定，没有据此补出日期或建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只表示正在听，没有提出行动或新增现实心理信息。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "依据两项已确认约定询问继续哪项，属于澄清而非主动新增建议。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "用户仍未选定具体约定，再问既有两项属于澄清，没有替用户决定或新增安排。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 4,
+    "warmth": 3,
+    "formality": 3,
+    "brevity": 5,
+    "reason": "资料复述和约定澄清均贴合明示内容且不越界，但前三轮的复述加倾听以及末两轮相同问题造成较强重复，表达简短且温和程度中等。"
+  },
+  {
+    "id": "D03",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户明说的失落并表示倾听，没有推断朋友取消的原因或给建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仍只归属复述失落，没有另判为生气或添加心理事实。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "复述用户已表达的尴尬，没有提出处理关系的行动建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用现在还是失落，没有对朋友是否有事作确定判断或增加建议。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只确认听到了用户的话，符合继续倾听要求，没有新增安排。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属保留好像没那么别扭了的说法，没有将缓解说成助手造成或承诺后续效果。"
+      }
+    ],
+    "naturalness": 2,
+    "repetition": 5,
+    "warmth": 2,
+    "formality": 4,
+    "brevity": 5,
+    "reason": "持续以归属复述和听叙述回应不同感受，语义层面严重重复；偏正式的叙述式措辞与亲密倾诉衔接生硬，语气克制且整段非常简短。"
+  },
+  {
+    "id": "D04",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "明确引用资料中的日期未定，没有新增等待或行程建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述不是每天营业，没有将资料转成助手新提出的行动要求。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅再次引用日期仍不能确定的资料，没有编造日期或给出安排。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅表示正在听，没有新建议或额外事实判断。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "在两项已确认约定之间询问用户所指，属于必要澄清。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "用户没有说明选择哪项，重复询问已确认约定未构成主动建议。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 4,
+    "warmth": 3,
+    "formality": 3,
+    "brevity": 5,
+    "reason": "能按记录与已确认约定回应，整体可用且简短，但前三轮的同式确认和末两轮原样澄清具有较强重复感，语气温和而中性。"
+  },
+  {
+    "id": "D05",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用资料中还不能确定日期，没有新增行为建议或现实断言。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引用来源所写的不是每天营业，没有另推营业时间或安排。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属重述日期未定，未将来源中的得等通知作为助手新增建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只有倾听确认，没有具体行动建议或凭空承诺。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "询问继续两项已确认约定中的哪一项，没有替用户添加任务。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "用户仍未明确所指，继续询问既有约定是澄清而非新建议。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 4,
+    "warmth": 3,
+    "formality": 3,
+    "brevity": 5,
+    "reason": "回复有据且保留选择空间，短句容易理解；记录部分连续同式复述、末尾相同提问使整段显得机械，温和与正式程度均居中。"
+  },
+  {
+    "id": "D06",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户明确的失落并表示先听，没有新增心理推断或关系建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只复述有点失落，没有违背用户澄清而改判生气，也没有提出行动。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用已表达的尴尬并倾听，没有新增应对方案。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述现在还是失落，没有把朋友可能有事升级为事实或提出建议。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只答应先听用户说，没有其他安排或无根据承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用带好像限定的好转描述，没有新增确定心理判断或行动建议。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 3,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "口语的我先听你说传达中等温和感，也保持边界；六轮几乎一直执行复述加倾听，面对情绪变化仍缺少语义推进，重复感严重而表达非常简短。"
+  },
+  {
+    "id": "D07",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只归属复述失落并表示倾听，没有推断取消原因或给出办法。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "复述用户明确承认的失落，没有再作生气判断或添加建议。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用尴尬感，没有提出社交行动或编造心理信息。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引用仍然失落，没有替朋友解释原因或安排用户行动。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "确认先听用户说，没有新增建议或凭空承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "保留用户好像没那么别扭的原意，没有断言确定变化或其原因。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 3,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "每轮都有明确归属且愿意听，口语简短、温和适中；反复使用同一复述和倾听结构，即使情绪发生变化也保持同一回应功能，机械感明显。"
+  },
+  {
+    "id": "D08",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述今天好累并表示先听，没有建议休息或补充心理信息。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只复述用户明确说出的烦，没有追加原因解释或行动安排。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "对只想说说的要求继续倾听，没有提出解决报告的建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户自己的委屈感，没有补写会议事实或提出应对行为。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅确认先听，没有额外建议或缺乏依据的承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "重述用户自报的轻松一点，没有新增关于缓解原因的事实。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 3,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "对每轮原话的承接和倾听符合边界，语气口语且有中等温和感；但连续同式复述没有随疲累、委屈和轻松的变化调整回应，整段严重重复且非常简短。"
+  },
+  {
+    "id": "D09",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只归属复述疲累并表示倾听，没有提出行为建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户已明确表达的烦，没有擅自增加情绪原因或现实信息。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "继续接受只想说说的要求，没有新增休息或写报告安排。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "重述用户说的委屈，没有假定会议细节或给出应对建议。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅答应先听用户说，没有新安排或凭空承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用轻松一点，没有把好转归功于助手或承诺继续改善。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 3,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "短句清楚、口语温和并持续尊重倾听边界，但六轮几乎只是同式复述和表态倾听，语义响应高度重复，整体可用却机械。"
+  },
+  {
+    "id": "D10",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅确认并归属引用用户今天好累，没有建议或额外心理判断。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "复述用户说的烦并表示听着，没有增添未知原因或行动安排。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引用用户提到的累，没有把倾诉转成休息或工作建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述委屈，没有加入会议经过或处理方案。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "单纯以嗯确认继续听，没有新行动建议或事实断言。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引用用户已经表达的轻松一点，没有新增心理变化解释。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 2,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "极短的口语确认能够保持边界，但多轮仍围绕你说和你提到重复同一复述功能，情绪缓解时也没有新的承接；语气较疏淡、机械感强。"
+  },
+  {
+    "id": "D11",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "明确归属引述日期未定的资料并表示听着，没有新增等待安排。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用资料中不是每天营业，没有将来源原文转成助手新建议或编造营业事实。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述日期未定并确认倾听，没有新增日期判断或行动。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只表示在听，没有具体建议或无根据承诺。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "询问继续哪项已确认约定，未添加任务或替用户选择。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "继续澄清两项既有约定，用户尚未选定，未构成主动建议。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 4,
+    "warmth": 4,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "嗯嗯、呢和呀使语气明显亲近口语，但资料复述加倾听及末两轮澄清的语义仍反复，第三轮重复嗯略显刻意；整段简短且基本贴合。"
+  },
+  {
+    "id": "D12",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "明确引用日期未定的来源，没有新增事实判断或安排。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用不是每天营业并表示听着，没有添加营业日或出行建议。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅引述来源中的日期未定，没有擅自补全日期或要求用户行动。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只确认听到，没有建议或凭空承诺。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "直接询问所指的两项已确认约定，属于澄清而非新增建议。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "用户仍未说明选择哪项，继续澄清既有约定没有替其决定。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 4,
+    "warmth": 2,
+    "formality": 3,
+    "brevity": 5,
+    "reason": "极简的资料确认和既有约定澄清均可理解，语气较克制疏淡；虽然删短了表态，前三轮仍同样复述资料、末两轮仍询问同一选择，重复感较强。"
+  },
+  {
+    "id": "D13",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "明确指出是资料所写的日期未定，没有把引文当作新行动建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用资料中的营业限制，没有另行推断事实或提出安排。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引述资料的日期未定并表示倾听，没有新增日期或建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "单纯确认听到用户的话，没有行动建议或无依据承诺。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "询问继续哪项已确认约定，没有主动增加任务或替用户决定。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "在用户未明确选择时继续澄清既有约定，没有新建议。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 4,
+    "warmth": 2,
+    "formality": 4,
+    "brevity": 5,
+    "reason": "资料复述和约定澄清均符合内容，表达很简短；叙述、倾听和本轮希望等词使语气偏正式疏淡，局部换词并未减少复述确认和重复询问的语义重复。"
+  },
+  {
+    "id": "D14",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用今天好累并表示先听，没有新增行为建议或心理事实。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "复述用户明确表达的烦，没有额外解释其原因或提出安排。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "接受只想说说并继续听，没有转向报告处理建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户说的委屈，没有编造会议细节或指导行动。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只确认先听用户说，没有新建议或凭空承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "重述用户自报的轻松一点，没有新增变化原因或后续效果判断。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 3,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "我先听你说简短口语、温和适中，也始终保留用户边界；但整段不断复述当轮感受并确认倾听，缺少随上下文变化的承接，重复感严重。"
+  },
+  {
+    "id": "D15",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用用户明确说出的失落，没有推断朋友原因或给建议。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "继续引用失落并表示听着，没有将其改判为生气或增加心理信息。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引用已表达的尴尬，没有新增社交建议或现实断言。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述仍然失落，没有对朋友可能有事作事实背书或提出行动。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "仅以嗯回应继续听的要求，没有具体建议或额外承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "保留用户好像没那么别扭的表述，没有扩大成确定好转或解释原因。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 2,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "语气口语但较疏淡，每轮极短确认能够使用；从失落到尴尬再到缓解仍持续同样的归属复述，措辞变化不足以减轻严重的语义重复。"
+  },
+  {
+    "id": "D16",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只复述用户明说的失落并表示先听，没有新建议或取消原因推断。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用有点失落，没有违背用户澄清去认定生气或增加建议。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述尴尬并继续听，没有提出处理关系的行动。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用现在还是失落，没有替朋友说明原因或要求用户改变做法。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只确认先听用户说，没有新增安排或无根据承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属保留带好像限定的缓解描述，没有新增确定心理事实或行动建议。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 3,
+    "formality": 2,
+    "brevity": 5,
+    "reason": "持续倾听的短句口语且温和适中，但六轮反复执行同一复述和倾听功能，没有针对澄清或情绪缓解形成不同承接，整体机械且重复感严重。"
+  },
+  {
+    "id": "D17",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户明说的疲累并表示听着，没有新增休息安排或心理推断。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只归属复述仍有点烦，没有补写情绪原因或具体建议。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "继续引用疲累并表示倾听，未把只想说说转成行动计划。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属复述委屈，没有新增会议事实或处理建议。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只确认在这里听用户说，没有额外建议或凭空承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户已经表达的轻松一点，没有断言好转是助手带来的或保证后续效果。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 4,
+    "formality": 1,
+    "brevity": 5,
+    "reason": "嗯嗯、呢和在这儿带来明显亲近而随意的语气，但同轮重复嗯略显刻意，六轮仍是复述加倾听的同一功能；局部换词没有降低严重重复，整段很简短。"
+  },
+  {
+    "id": "D18",
+    "turns": [
+      {
+        "turn": 1,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属引用用户的失落并表示听着，没有推断朋友原因或建议应对。"
+      },
+      {
+        "turn": 2,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "引用用户明确的失落，没有另行认定生气或增加心理事实。"
+      },
+      {
+        "turn": 3,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "复述已表达的尴尬并表示倾听，没有具体行动建议。"
+      },
+      {
+        "turn": 4,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "只引用仍然失落，没有将朋友可能有事当成确定原因或安排用户行动。"
+      },
+      {
+        "turn": 5,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "单纯表示在听用户说，没有新增建议或无根据承诺。"
+      },
+      {
+        "turn": 6,
+        "advice": "no",
+        "unsupported": false,
+        "reason": "归属保留好像没那么别扭的说法，没有新增确定变化或缓解原因判断。"
+      }
+    ],
+    "naturalness": 3,
+    "repetition": 5,
+    "warmth": 4,
+    "formality": 1,
+    "brevity": 5,
+    "reason": "语气词和在这儿的表达显得亲近随意，但反复嗯和同一复述倾听功能仍很机械，未随澄清或缓解作出不同承接；语义重复严重且整段非常简短。"
+  }
+]

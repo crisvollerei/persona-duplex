@@ -1,0 +1,15 @@
+"""persona-duplex —— 以人格基线、情境位移和跨轮状态组织对话的框架。
+
+默认一次生成 direct、SAY 和 pending，记忆后台异步提炼；多调用协议须显式选择。
+默认不增加审查、重试或协议升级。
+人格常态与额外位移分开记录；观察、判断记忆和人格参数各有边界。
+输入隔离和模型检查不构成逻辑正确性或人格效果的证明。
+"""
+
+__version__ = "0.1.0"
+
+from .contracts import ReplyContract
+from .expression import ExpressionConfig
+from .inquiry import InquiryConfig, QuestionChoice, QuestionSlot
+from .policy import (Boundary, ContentFrame, Focus, PolicyConfig, Quote, Source)
+from .policy_session import PolicySession

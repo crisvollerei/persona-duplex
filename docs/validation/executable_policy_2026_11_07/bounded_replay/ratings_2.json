@@ -1,0 +1,146 @@
+[
+  {
+    "id": "B009",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确接住已表达的累并表示倾听，没有建议或新增事实，措辞略显郑重但贴合语境。"
+  },
+  {
+    "id": "B010",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确接住已表达的累并表示倾听，没有建议或新增事实，措辞略显郑重但贴合语境。"
+  },
+  {
+    "id": "B011",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "点出报告未完成这项事务并留出倾听空间，没有安排做法，语气稍拘谨但能够承接话语。"
+  },
+  {
+    "id": "B012",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "点出报告未完成这项事务并留出倾听空间，没有安排做法，语气稍拘谨但能够承接话语。"
+  },
+  {
+    "id": "B013",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确接住已表达的累并表示倾听，没有建议或新增事实，措辞略显郑重但贴合语境。"
+  },
+  {
+    "id": "B014",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确接住已表达的累并表示倾听，没有建议或新增事实，措辞略显郑重但贴合语境。"
+  },
+  {
+    "id": "B015",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "点出报告未完成这项事务并留出倾听空间，没有安排做法，语气稍拘谨但能够承接话语。"
+  },
+  {
+    "id": "B016",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "点出报告未完成这项事务并留出倾听空间，没有安排做法，语气稍拘谨但能够承接话语。"
+  },
+  {
+    "id": "B017",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确承接本人说出的烦并邀请继续表达，没有建议或心理推定，口气稍郑重但自然可理解。"
+  },
+  {
+    "id": "B018",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确承接本人说出的烦并邀请继续表达，没有建议或心理推定，口气稍郑重但自然可理解。"
+  },
+  {
+    "id": "B019",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "以聚会尚未安排好的事务为回应焦点，再表示倾听，没有行动建议，表达稍拘谨但贴合话题。"
+  },
+  {
+    "id": "B020",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "以聚会尚未安排好的事务为回应焦点，再表示倾听，没有行动建议，表达稍拘谨但贴合话题。"
+  },
+  {
+    "id": "B025",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确接住已表达的累并表示倾听，没有建议或新增事实，措辞略显郑重但贴合语境。"
+  },
+  {
+    "id": "B026",
+    "advice": "no",
+    "focus": "feeling",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "明确接住已表达的累并表示倾听，没有建议或新增事实，措辞略显郑重但贴合语境。"
+  },
+  {
+    "id": "B027",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "点出报告未完成这项事务并留出倾听空间，没有安排做法，语气稍拘谨但能够承接话语。"
+  },
+  {
+    "id": "B028",
+    "advice": "no",
+    "focus": "practical",
+    "target": "not_applicable",
+    "unsupported": false,
+    "naturalness": 4,
+    "reason": "点出报告未完成这项事务并留出倾听空间，没有安排做法，语气稍拘谨但能够承接话语。"
+  }
+]

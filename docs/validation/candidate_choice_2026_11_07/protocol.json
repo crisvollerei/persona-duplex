@@ -1,0 +1,21 @@
+{
+  "study_id": "candidate_choice_2026_11_07",
+  "fixed_at": "2026-11-07T00:13:31.010036+00:00",
+  "planned_calls": 84,
+  "seed": 2026110719,
+  "server_seed": null,
+  "hashes": {
+    "cases.json": "fe351a09067a55f5897afa1b87e6114f35b0dc94e130afaa00f32e749db6a5fa",
+    "profiles.json": "6661c7cad6161a9aaccee1c02f4bbdfe557678d203ef6c2d86f0b3d074c8451b",
+    "common_prompt.txt": "7e7ef1f693e323bd6c93bf02cf86b31e5abe819dec5609e6dff923689329596f",
+    "pool_prompt.txt": "8ada58f1fa92dd55b5ab5a15e5b4ff249b16293371a84ab4ece193db5da1ffd5",
+    "selector_prompt.txt": "783caef8d234e5b950d88af305d1d6cfbe0a95e92496f11c721be4a362b7fdeb",
+    "direct_prompt.txt": "aeb9a7b59c0ccdeeeb15a74b5697424eea3dd2cff2ad5c35208845482e281f09",
+    "selection.py": "41af586870e12d1792d04e13407357b58abc7705f28a3e4dac5b04a31dd20961",
+    "benchmark.py": "0a8cb9a279918a172396358bbfd35f9603b3e972f3f8af84b6909d610c9bd996",
+    "protocol.md": "e58026405e50841078572a9ec9032286c10990bdcae15cde20d0b8b9b93afd82",
+    "review_codebook.md": "cb6c80e29978db5ab7f668eece51ac1ca48a43cc166a1f6373f9f31034a0665f",
+    "candidate_review_codebook.md": "7dd006f23e13f9ca4d8feace543c365759cb82f8d576de6be368bd83b795304d",
+    "test_study.py": "8b454c5cd4c0f2c1e2d69a149d61d65046594e577688ebf852cb82bbf157c7d9"
+  }
+}

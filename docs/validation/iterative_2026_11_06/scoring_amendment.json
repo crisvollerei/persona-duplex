@@ -1,0 +1,9 @@
+{
+  "fixed_at": "2026-11-06T23:02:46+08:00",
+  "timing": "after r1, before r2 generation",
+  "rule": "Recursive JSON equality distinguishes booleans from numbers; no change in target values, units, tasks or original saved scores",
+  "scope": "r2 runner plus supplementary reconciliation of earlier scores",
+  "earlier_scores_reconciled": 192,
+  "earlier_scores_unchanged": true,
+  "runner_sha256": "45fab1b6f060098f0a0e09cc744f33bc9fc7d30ca318768717bc1f1880356a2e"
+}

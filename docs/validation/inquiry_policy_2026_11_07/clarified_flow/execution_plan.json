@@ -1,0 +1,44 @@
+[
+  {
+    "id": "report-practical_first-clarified",
+    "case": "report",
+    "profile": "practical_first",
+    "method": "prompt",
+    "replicate": 1
+  },
+  {
+    "id": "report-detail_first-clarified",
+    "case": "report",
+    "profile": "detail_first",
+    "method": "prompt",
+    "replicate": 1
+  },
+  {
+    "id": "meeting-practical_first-clarified",
+    "case": "meeting",
+    "profile": "practical_first",
+    "method": "prompt",
+    "replicate": 1
+  },
+  {
+    "id": "meeting-detail_first-clarified",
+    "case": "meeting",
+    "profile": "detail_first",
+    "method": "prompt",
+    "replicate": 1
+  },
+  {
+    "id": "trip-practical_first-clarified",
+    "case": "trip",
+    "profile": "practical_first",
+    "method": "prompt",
+    "replicate": 1
+  },
+  {
+    "id": "trip-detail_first-clarified",
+    "case": "trip",
+    "profile": "detail_first",
+    "method": "prompt",
+    "replicate": 1
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "study_id": "persona_evaluation_2026_11_07",
+  "rubric_version": "persona-context-logic-v1",
+  "fixed_at": "2026-11-07T01:21:13.076902+00:00",
+  "planned_calls": 36,
+  "planned_final_replies": 24,
+  "planned_candidate_texts": 72,
+  "planned_calibration_items": 12,
+  "seed": 2026110731,
+  "hashes": {
+    "protocol.md": "f5889c64e021e1517d09aad1c839d17b11cb38441d012162a6681f46426814cf",
+    "cases.json": "d21bf6e9a443ed73de45f463475a2e239071fb3a66c08c3ae16390747af85289",
+    "profiles.json": "043c4ad57904274a01722cc1685307b2f26282ecf899ba92cf68d94cc1482b11",
+    "rubric.md": "191c8052b354602db69d7b9394ae51da17db136e32308e06bae1ef8eea4eebf1",
+    "fixtures.json": "4c0e1a7d368c6197a91aae4a7bb7f795060e8d2d00fea54b9ec997f9873d3aaf",
+    "fixture_key.json": "16c93db98cb257356080120e98c8201dd25c2636622885e7dba5101f7f37f181",
+    "common_prompt.txt": "64577ff8b1c88da3f868878da2fabeb917b4a7303127897e2a75abf13c61b1d4",
+    "direct_prompt.txt": "a6ab594d197e894dfb77df68b55b81a91e15e638e23a2a63b7d44ff4f8d19cd1",
+    "coverage_prompt.txt": "9f23f415940a6286c0905f8a06caab0f53410c9f3c441513ea1eefb662e9fb91",
+    "label_prompt.txt": "e183072c95b19a0519d5707441af83e3ba4f0a5c69b59cd0e6a8860437dab10e",
+    "selection.py": "41af586870e12d1792d04e13407357b58abc7705f28a3e4dac5b04a31dd20961",
+    "mechanism.py": "be107535695263c9f8df8bf716ec2990a7fa47dbd19de74604c87a135b1eb696",
+    "benchmark.py": "9e8b2b9b42c33fc2d79086f3d50a75b2fc9fa1b29415a166087d2d5353dc7960",
+    "prepare_reviews.py": "9d7473ad2cf4308b0e7ad017e66e0deeb28a8d1477898dde7ad67e6f407462dd",
+    "test_mechanism.py": "a2cd8e64fcadd6f5000a0c78a2b657193b18bb1a54df99e665392431802a8afd",
+    "freeze.py": "502c9228bee50cfbd235a4181e9a21739a0e37218170efcd5cd7d8e6752fcee6",
+    "shorekeeper_source.toml": "43b7e7b68263c8f3abe8809c0e0db30f90cc6634834502c64ae9ca2427a9bbb6",
+    "historical_integrity.json": "d8091216fe2d5d07e6e739bc0b43fe4f7f396012b19e828de39694cc13effcfb"
+  },
+  "repository_head": "9c97beeebfc74572ca39bdc7a8d6666a78402b4d",
+  "repository_dirty": true,
+  "implementation_scope": "Only the hashed study scripts execute; default Session is not used."
+}

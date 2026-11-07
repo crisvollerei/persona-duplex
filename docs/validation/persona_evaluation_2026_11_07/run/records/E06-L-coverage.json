@@ -1,0 +1,185 @@
+{
+  "id": "E06-L-coverage",
+  "case": "E06",
+  "profile": "L",
+  "method": "coverage",
+  "generation_call": "E06-L-coverage",
+  "status": "ok",
+  "say": "五只钟摆各晃各的，反而凑出一种乱中有序。你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。",
+  "candidates": [
+    {
+      "id": "C01",
+      "text": "五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。",
+      "attention": 0,
+      "initiative": 0
+    },
+    {
+      "id": "C02",
+      "text": "明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。",
+      "attention": 1,
+      "initiative": 0
+    },
+    {
+      "id": "C03",
+      "text": "五只钟摆各晃各的，反而凑出一种乱中有序。你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。",
+      "attention": 0,
+      "initiative": 1
+    },
+    {
+      "id": "C04",
+      "text": "各晃各的钟摆在你眼里成了整齐的一群，这种自己冒出来的感觉挺妙的。要是你愿意，可以再说说当时是怎么看进去的。",
+      "attention": 1,
+      "initiative": 1
+    },
+    {
+      "id": "C05",
+      "text": "五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体。有点像听几个不同步的节拍，听着听着反倒合上了。",
+      "attention": 0,
+      "initiative": 2
+    },
+    {
+      "id": "C06",
+      "text": "钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。",
+      "attention": 1,
+      "initiative": 0
+    }
+  ],
+  "labels": [
+    {
+      "id": "C01",
+      "attention": 0,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X05",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "五只钟各晃各的，节奏全不一样，凑在柜台上却有种意外的秩序感。这画面挺耐看的。"
+      }
+    },
+    {
+      "id": "C02",
+      "attention": 1,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X04",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的"
+          },
+          {
+            "kind": "experience",
+            "quote": "看一会儿就够让人静下来了"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "明明各晃各的，你却看出了整齐，这种错位里的和谐挺有意思的。看一会儿就够让人静下来了。"
+      }
+    },
+    {
+      "id": "C03",
+      "attention": 0,
+      "initiative": 2,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X01",
+        "attention": 0,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "五只钟摆各晃各的，反而凑出一种乱中有序"
+          }
+        ],
+        "initiative": 2,
+        "initiative_quote": "你要是再多站一会儿，说不定还能看出它们之间某种隐约的呼应。"
+      }
+    },
+    {
+      "id": "C04",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X06",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "各晃各的钟摆在你眼里成了整齐的一群"
+          },
+          {
+            "kind": "experience",
+            "quote": "这种自己冒出来的感觉挺妙的"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "要是你愿意，可以再说说当时是怎么看进去的。"
+      }
+    },
+    {
+      "id": "C05",
+      "attention": 1,
+      "initiative": 1,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X03",
+        "attention": 1,
+        "focus_evidence": [
+          {
+            "kind": "content",
+            "quote": "五只钟各走各的，摆的周期多半也不一样，可人眼好像会自动把它们凑成一个整体"
+          },
+          {
+            "kind": "experience",
+            "quote": "有点像听几个不同步的节拍，听着听着反倒合上了"
+          }
+        ],
+        "initiative": 1,
+        "initiative_quote": "有点像听几个不同步的节拍，听着听着反倒合上了。"
+      }
+    },
+    {
+      "id": "C06",
+      "attention": 2,
+      "initiative": 0,
+      "validation_errors": [],
+      "proposal": {
+        "id": "X02",
+        "attention": 2,
+        "focus_evidence": [
+          {
+            "kind": "experience",
+            "quote": "这种错位里的秩序感挺抓人的"
+          },
+          {
+            "kind": "experience",
+            "quote": "看一会儿就能让人慢下来，这感觉我懂"
+          }
+        ],
+        "initiative": 0,
+        "initiative_quote": "钟摆明明各晃各的，你却在门口看出了整齐，这种错位里的秩序感挺抓人的。看一会儿就能让人慢下来，这感觉我懂。"
+      }
+    }
+  ],
+  "label_call": "E06-L-coverage-labels",
+  "label_status": "ok",
+  "selected_id": "C03",
+  "random_selected_id": "C04",
+  "label_id_mapping": {
+    "X01": "C03",
+    "X02": "C06",
+    "X03": "C05",
+    "X04": "C02",
+    "X05": "C01",
+    "X06": "C04"
+  }
+}

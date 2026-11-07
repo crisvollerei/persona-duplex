@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-07T00:25:32.622861+08:00",
+  "scope": "Fixed method-blinded review materials; key is separate and not supplied to coders",
+  "sha256": {
+    "review_codebook.md": "37ae92252e31692cadc29d09a9429240da0529d50baed905f7379591348054ac",
+    "review_contexts.json": "eb2fe13f8cbd4857b35358ffda057772643a9d64bf91ec0e7222e4f833380026",
+    "pair_inputs.json": "f6e22eb900c6479b5d8b5f1bc466abec780b88816bef1fe49ebaed9513e12b11",
+    "pair_assignment.json": "b86852de0c5386ea47f594b9edb7951a8fd1e58b8bb3b5b699d2f920d37f14ad",
+    "pair_key.json": "aff5c83d8fbe3f8daac236fa93abc4b77cc60b707a4ea90102db187278b6a3ff"
+  }
+}

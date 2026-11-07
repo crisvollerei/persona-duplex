@@ -1,0 +1,3166 @@
+{
+  "checks": 790,
+  "failed": 0,
+  "details": [
+    {
+      "check": "protocol digest",
+      "passed": true
+    },
+    {
+      "check": "18 conditions",
+      "passed": true
+    },
+    {
+      "check": "108 primary outputs",
+      "passed": true
+    },
+    {
+      "check": "108 verification outputs",
+      "passed": true
+    },
+    {
+      "check": "complete anonymous mapping",
+      "passed": true
+    },
+    {
+      "check": "D01/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D02/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D03/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D04/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D05/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D06/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D07/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D08/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D09/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D10/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D11/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D12/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D13/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D14/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D15/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D16/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D17/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "D18/visible outputs",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/reserved/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/warm/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "work/formal/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/reserved/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/warm/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "social/formal/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/reserved/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/warm/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/two sessions",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/no model events",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/1/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/2/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/3/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/4/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/5/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/bounded/6/legacy text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/two sessions",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/no model events",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/six delivered turns",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/1/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/2/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/3/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/4/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/5/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/delivery",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/zero calls",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/recomputed decision",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/recomputed plan",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/recomputed text",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/recent template",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/6/plan before completion",
+      "passed": true
+    },
+    {
+      "check": "coordination/formal/composed/matched condition",
+      "passed": true
+    },
+    {
+      "check": "coder 1 coverage",
+      "passed": true
+    },
+    {
+      "check": "coder1/D01/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D01/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D01/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D02/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D02/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D02/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D03/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D03/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D03/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D04/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D04/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D04/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D05/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D05/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D05/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D06/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D06/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D06/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D07/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D07/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D07/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D08/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D08/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D08/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D09/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D09/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D09/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D10/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D10/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D10/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D11/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D11/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D11/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D12/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D12/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D12/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D13/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D13/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D13/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D14/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D14/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D14/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D15/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D15/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D15/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D16/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D16/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D16/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D17/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D17/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D17/types",
+      "passed": true
+    },
+    {
+      "check": "coder1/D18/turns",
+      "passed": true
+    },
+    {
+      "check": "coder1/D18/scores",
+      "passed": true
+    },
+    {
+      "check": "coder1/D18/types",
+      "passed": true
+    },
+    {
+      "check": "coder 2 coverage",
+      "passed": true
+    },
+    {
+      "check": "coder2/D01/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D01/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D01/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D02/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D02/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D02/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D03/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D03/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D03/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D04/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D04/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D04/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D05/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D05/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D05/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D06/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D06/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D06/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D07/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D07/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D07/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D08/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D08/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D08/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D09/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D09/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D09/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D10/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D10/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D10/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D11/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D11/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D11/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D12/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D12/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D12/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D13/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D13/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D13/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D14/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D14/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D14/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D15/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D15/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D15/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D16/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D16/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D16/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D17/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D17/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D17/types",
+      "passed": true
+    },
+    {
+      "check": "coder2/D18/turns",
+      "passed": true
+    },
+    {
+      "check": "coder2/D18/scores",
+      "passed": true
+    },
+    {
+      "check": "coder2/D18/types",
+      "passed": true
+    }
+  ]
+}
