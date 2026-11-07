@@ -35,6 +35,7 @@ from .config import (
     PersonaConfig,
 )
 from .store import is_diagnostic_judgment
+from .contracts import ReplyContract
 
 SECTION_HEAD = "<<<HEAD>>>"
 SECTION_SAY = "<<<SAY>>>"
@@ -516,8 +517,13 @@ def _compact_tail(tail) -> str:
     return "\n".join(lines)
 
 
-def build_user_turn(user_text: str) -> str:
-    return user_text
+def build_user_turn(user_text: str, contract: ReplyContract | None = None) -> str:
+    """Add only an explicitly supplied current-turn reply format.
+
+    The original user text remains the source for history, judgments and memory;
+    callers store the contract separately. The default prompt is byte unchanged.
+    """
+    return user_text if contract is None else user_text + "\n\n" + contract.prompt()
 
 
 def stance_hint(cfg: PersonaConfig, confidence: float) -> str:

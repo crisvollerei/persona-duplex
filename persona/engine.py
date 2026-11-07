@@ -30,6 +30,7 @@ if TYPE_CHECKING:
     from .parse import SettleItem
 
 from .config import DISPLACE_NONE, PersonaConfig
+from .contracts import ReplyContract, validate_reply
 from .parse import (Head, ParsedTurn, Tail, has_exit_offer, parse, plain_text,
                     safe_say)
 from .prompt import (
@@ -89,6 +90,7 @@ class TurnResult:
     repair_opened: dict | None = None
     repair_closed: dict | None = None
     validity: dict = field(default_factory=dict)
+    contract_validation: dict = field(default_factory=dict)
 
     @property
     def display(self) -> str:
@@ -203,7 +205,10 @@ class TurnEngine:
     # ------------------------------------------------------------ 主流程
 
     def turn(self, user_text: str,
-             on_delta: Callable[[str], None] | None = None) -> TurnResult:
+             on_delta: Callable[[str], None] | None = None, *,
+             contract: ReplyContract | None = None) -> TurnResult:
+        if contract is not None and not isinstance(contract, ReplyContract):
+            raise TypeError("contract must be ReplyContract or None")
         with self._turn_lock:
             self._current_turn_id = self.store.next_id("t")
             self._calls = []
@@ -221,7 +226,7 @@ class TurnEngine:
                     self._delivered.append(piece)
             before = self._runtime()
             try:
-                return self._turn(user_text, deliver)
+                return self._turn(user_text, deliver, contract)
             except Exception as exc:
                 self.store.recover_commits()
                 for name, value in before.items():
@@ -246,7 +251,7 @@ class TurnEngine:
             "run_id": self.run["run_id"], "turn_id": self._current_turn_id,
             "protocol": self.protocol, "calls": deepcopy(self._calls), **payload})
 
-    def _turn(self, user_text: str, on_delta=None) -> TurnResult:
+    def _turn(self, user_text: str, on_delta=None, contract: ReplyContract | None = None) -> TurnResult:
         """跑一轮。
 
         传入 on_delta 时逐片回调；persona 实验开启 fidelity_check 才先缓冲检查。
@@ -257,7 +262,8 @@ class TurnEngine:
         turn_started = time.monotonic()
         self._probe = {}       # 本轮原始观测值，落账用
         self.store.append("turn_start", {"turn_id": turn_id, "turn_seq": self._turn_seq,
-                                        "run_id": self.run["run_id"], "user": user_text})
+                                        "run_id": self.run["run_id"], "user": user_text,
+                                        "reply_contract": asdict(contract) if contract else None})
 
         # ---- 1. 修复反应判定。这个必须同步：它决定上下文里要不要放
         #        暂定修复提示。只按用户的明确内容收尾，不调模型。
@@ -300,18 +306,18 @@ class TurnEngine:
         messages = [
             {"role": "system", "content": sys_prompt + "\n\n" + ctx},
             *self.history[-12:],
-            {"role": "user", "content": build_user_turn(user_text)},
+            {"role": "user", "content": build_user_turn(user_text, contract)},
         ]
 
         # ---- 4. text 默认一次生成三段；其他协议仅在显式选择时执行。
         generation_protocol = self.protocol
         if self.protocol == "persona":
             raw, parsed = self._generate_persona(
-                ctx, user_text, on_delta, warnings
+                ctx, user_text, on_delta, warnings, contract=contract
             )
         elif self.protocol == "tool":
             raw, parsed = self._generate_two_phase(
-                sys_prompt, ctx, user_text, messages, on_delta, warnings
+                sys_prompt, ctx, user_text, messages, on_delta, warnings, contract=contract
             )
         else:
             raw, parsed = self._generate(messages, on_delta)
@@ -389,6 +395,9 @@ class TurnEngine:
             # 绝不能退回 raw.strip()：那里面是 HEAD，direct 就在里面。
             # 解析不出 SAY 就空着 —— 空回复是可接受的失败，泄露内心不是。
             say = parsed.say or plain_text(raw)
+            contract_validation = validate_reply(say, contract)
+            if contract_validation["valid"] is False:
+                warnings.append("显式回答格式未满足：" + ", ".join(contract_validation["reasons"]))
 
             # 「猜你……」只观测，不改写。
             #
@@ -441,6 +450,8 @@ class TurnEngine:
                           "config": asdict(self.cfg)},
                 "calls": deepcopy(self._calls),
                 "validity": validity,
+                "reply_contract": asdict(contract) if contract else None,
+                "contract_validation": contract_validation,
                 "limits": self.cfg.limits.as_dict(),
                 "user": user_text,
                 "say": say,
@@ -503,6 +514,7 @@ class TurnEngine:
                 relation_changed=relation_changed, warnings=warnings,
                 repair_opened=repair_opened, repair_closed=repair_closed,
                 validity=validity,
+                contract_validation=contract_validation,
             )
 
     # ------------------------------------------------------------ 生成
@@ -599,7 +611,8 @@ class TurnEngine:
             raw = self.llm(text_messages, max_tokens=max_tokens)
         return protocol.parse_object(raw)
 
-    def _generate_persona(self, ctx: str, user_text: str, on_delta, warnings: list[str]):
+    def _generate_persona(self, ctx: str, user_text: str, on_delta, warnings: list[str],
+                          *, contract: ReplyContract | None = None):
         """独立判断 → 人格表达 → 交付 → 观察；默认不增加补救调用。
 
         显式开启 fidelity_check 才缓冲并执行无人设检查，不把模型检查当真值。
@@ -629,6 +642,8 @@ class TurnEngine:
             msgs2 = protocol.build_persona_messages(
                 self.cfg, head, self.history, user_text, ctx,
                 first_turn=not self.history)
+            if contract is not None:
+                msgs2[-1]["content"] = build_user_turn(msgs2[-1]["content"], contract)
             if on_delta is not None and self.stream_llm is not None:
                 sp = StreamParser(expression_only=True)
                 try:
@@ -724,7 +739,8 @@ class TurnEngine:
 
     def _generate_two_phase(self, sys_prompt: str, ctx: str, user_text: str,
                             fallback_messages: list[dict],
-                            on_delta, warnings: list[str]):
+                            on_delta, warnings: list[str], *,
+                            contract: ReplyContract | None = None):
         """phase 1 用 tool call 出 direct，phase 2 用纯文本流式出 say。
 
         失败一律退回文本协议 —— 这是兜底机制，不能自己变成新的故障点。
@@ -762,6 +778,8 @@ class TurnEngine:
         )
         msgs2 = protocol.build_phase2_messages(
             inner, self.history, user_text, system_prompt=phase2_sys, context=ctx)
+        if contract is not None:
+            msgs2[-1]["content"] = build_user_turn(msgs2[-1]["content"], contract)
         say = ""
         say_raw = ""
         emitted: list[str] = []
@@ -1330,13 +1348,14 @@ def _hours_since(iso: str) -> float:
         return 0.0
 
 
-def stream_turn(engine: TurnEngine, user_text: str) -> Iterator[str]:
+def stream_turn(engine: TurnEngine, user_text: str, *,
+                contract: ReplyContract | None = None) -> Iterator[str]:
     """收集回调输出；迭代包装器不保证实时性，实时输出直接使用 turn 的回调。"""
     box: dict[str, str] = {}
 
     def collect(piece: str) -> None:
         box["text"] = box.get("text", "") + piece
 
-    engine.turn(user_text, on_delta=collect)
+    engine.turn(user_text, on_delta=collect, contract=contract)
     for ch in box.get("text", ""):
         yield ch

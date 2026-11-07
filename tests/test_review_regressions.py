@@ -145,11 +145,15 @@ class TestConsolidationRobustness(unittest.TestCase):
 
     def test_supersedes_not_blocked_by_dedup(self):
         """要推翻旧判断的不能被去重挡掉。"""
-        old = self.store.add_judgment("他喜欢猫", 0.5)
-        self._buf(2)
+        old_user = "我喜欢猫。"
+        self.store.append("turn", {"turn_id":"t_old", "user":old_user})
+        old = self.store.add_judgment("他喜欢猫", 0.5, ["t_old"],
+            evidence_quotes=[{"turn_id":"t_old","quote":old_user,"evidence_scope":"specified"}])
+        self.store.push_buffer({"turn_id": "t_0", "user": "明确更正：我不喜欢猫了，今后偏好狗。",
+                                "say": "收到", "direct": "记录用户明确自述", "need": "只想被听"})
         c = Consolidator(self.store, llm=lambda p: (
-            '[{"judgment": "他喜欢猫。", "confidence": 0.9, "supersedes": "'
-            + old["id"] + '"}]'))
+            '[{"judgment": "用户明确更正为不喜欢猫、偏好狗。", "confidence": 0.9, "supersedes": "'
+            + old["id"] + '","target_anchor":"喜欢猫","evidence_ids":["t_0"]}]'))
         c.run_once()
         live = self.store.judgments()
         self.assertTrue(any("。" in j["judgment"] for j in live),

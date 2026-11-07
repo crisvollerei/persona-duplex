@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import re
 import threading
 from contextlib import contextmanager
 from copy import deepcopy
@@ -18,6 +19,61 @@ from uuid import uuid4
 
 _LOCAL_TZ = timezone(timedelta(hours=8))
 MAX_JUDGMENT_QUOTES = 12
+
+
+def _unquoted_statement(text: str) -> str:
+    """Conservatively omit reported quotations when checking an operation cue."""
+    for pattern in (r'“[^”]*”', r'「[^」]*」', r'『[^』]*』', r'"[^"\n]*"', r"‘[^’]*’"):
+        text = re.sub(pattern, "", text)
+    return text
+
+
+def _explicit_memory_wording(statement: str, user: str, kind: str) -> list[str]:
+    """A rejection gate for explicit operations, never a semantic truth oracle."""
+    reasons = []
+    outside = _unquoted_statement(user)
+    if not statement or statement not in user:
+        reasons.append("statement_not_in_user_source")
+    if statement and _unquoted_statement(statement).strip() not in outside:
+        reasons.append("statement_only_in_reported_quote")
+    if re.search(r"如果|假如|假设|倘若|要是|举例|示例|转述|(?:朋友|同事|别人|有人|他|她)(?:说|表示|提到)", outside):
+        reasons.append("hypothetical_or_reported_statement")
+    if re.search(r"我(?:们)?(?:可能|也许|或许|正在考虑|在考虑|考虑)|尚在考虑|还在考虑|要不要", outside):
+        reasons.append("tentative_statement")
+    if re.search(r"(?:没有|并未|未曾|不是要|不想|不打算|不准备|不会).{0,8}(?:更正|更新|改成|改为|改用|调整为|撤回|撤销|取消)", outside):
+        reasons.append("negated_operation")
+    if not re.search(r"我|本人", _unquoted_statement(statement)):
+        reasons.append("not_explicit_self_statement")
+    cue = (r"更正|纠正|更新|改成|改为|改用|改回|调整为" if kind == "revise"
+           else r"作废|撤回|撤销|取消|不再|停止使用|不要再记")
+    if not re.search(cue, _unquoted_statement(statement)):
+        reasons.append("missing_explicit_operation_wording")
+    return reasons
+
+
+def _memory_anchor_core(anchor) -> str:
+    """Remove only declared generic modifiers; never fuzzy-match topic words."""
+    if not isinstance(anchor, str) or not 2 <= len(anchor.strip()) <= 40:
+        return ""
+    if not re.fullmatch(r"[A-Za-z0-9_\-\u4e00-\u9fff ]+", anchor):
+        return ""
+    remaining = anchor.strip()
+    generic = ("明确确认", "明确", "确认", "本人", "我们", "个人", "目前", "当前", "现在",
+               "原来", "原先", "以前", "长期", "固定", "设置", "偏好", "习惯", "约定",
+               "时长", "时间", "分钟", "小时", "更正", "纠正", "更新", "调整", "改为",
+               "改成", "改用", "采用", "使用", "选择", "不再", "作废", "撤回", "撤销",
+               "已经", "之前", "之后", "这个", "那个", "我的", "的", "我", "旧", "新")
+    for word in generic:
+        remaining = remaining.replace(word, "")
+    remaining = re.sub(r"\b(?:my|me|I|personal|preference|settings?|fixed|duration|time|minutes?|hours?)\b",
+                       "", remaining, flags=re.IGNORECASE)
+    remaining = re.sub(r"[\d\s_\-]", "", remaining)
+    return remaining if len(remaining) >= 2 else ""
+
+
+def _specific_memory_anchor(anchor) -> bool:
+    """Require a specific topic core rather than pronouns, settings or units."""
+    return bool(_memory_anchor_core(anchor))
 
 
 def _evidence_quotes(value, *, evidence_ids=None) -> list[dict]:
@@ -494,6 +550,171 @@ class Store:
                 **quoted,
                 "superseded_by": None}
 
+    def apply_memory_operation(self, operation: dict, *, judgment: str = "",
+                               confidence: float = 0.5,
+                               evidence_ids: list[str] | None = None,
+                               evidence_quotes: list[dict] | None = None,
+                               source: str = "explicit", batch_id: str = "",
+                               evidence_scope: str = "specified",
+                               _user_events: list[dict] | None = None) -> dict:
+        """Apply a source-backed preference revision or withdrawal, independently of confidence.
+
+        `_user_events` is for Consolidator's already selected batch, never model
+        output. Source integrity and conservative explicit-wording checks do not
+        prove the model understood the user's meaning. A rejection is auditable
+        and creates no replacement judgment. Legacy `supersedes` is unchanged.
+        """
+        with self.transaction():
+            proposal = operation if isinstance(operation, dict) else {}
+            kind = proposal.get("kind")
+            target_id = proposal.get("target_id")
+            scope = proposal.get("scope")
+            statement = proposal.get("statement")
+            anchor = proposal.get("target_anchor")
+            anchor_core = _memory_anchor_core(anchor)
+            ids = proposal.get("evidence_ids")
+            reasons = []
+            if kind not in ("revise", "retract"):
+                reasons.append("unsupported_operation")
+            if scope not in ("user_preference", "user_agreement"):
+                reasons.append("unsupported_scope")
+            if proposal.get("basis") != "explicit_user_statement":
+                reasons.append("missing_explicit_user_basis")
+            if not isinstance(statement, str):
+                reasons.append("missing_source_statement")
+                statement = ""
+            if not anchor_core:
+                reasons.append("missing_or_generic_target_anchor")
+            if (not isinstance(ids, list) or not ids or
+                    any(not isinstance(item, str) or not item for item in ids)):
+                reasons.append("missing_operation_evidence_ids")
+                ids = []
+            ids = list(dict.fromkeys(ids))
+            candidate_ids = (list(evidence_ids) if isinstance(evidence_ids, list)
+                             and all(isinstance(item, str) and item for item in evidence_ids) else [])
+            if not candidate_ids or any(item not in candidate_ids for item in ids):
+                reasons.append("operation_evidence_outside_candidate")
+            if evidence_scope != "specified":
+                reasons.append("operation_requires_specified_evidence")
+            try:
+                quotes = _evidence_quotes(evidence_quotes, evidence_ids=evidence_ids or [])
+            except (ValueError, TypeError):
+                quotes = []
+                reasons.append("invalid_operation_quotes")
+            if any(q.get("evidence_scope") != "specified" for q in quotes):
+                reasons.append("operation_requires_specified_quotes")
+            quoted = {q["turn_id"]: q["quote"] for q in quotes}
+            if any(len({q["quote"] for q in quotes if q["turn_id"] == ident}) > 1 for ident in quoted):
+                reasons.append("ambiguous_operation_quotes")
+            if not ids or any(item not in quoted for item in ids + candidate_ids):
+                reasons.append("missing_full_source_quotes")
+            ledger = self.read_ledger()
+            live = {item["id"]: item for item in replay_judgments(ledger)}
+            target = live.get(target_id) if isinstance(target_id, str) else None
+            if target is None:
+                reasons.append("target_not_active")
+            elif is_diagnostic_judgment(target):
+                reasons.append("diagnostic_target_not_user_memory")
+            if is_diagnostic_judgment({"source": source, "evidence_scope": evidence_scope}):
+                reasons.append("diagnostic_proposal_not_user_memory")
+            target_index = next((index for index, item in enumerate(ledger)
+                                 if item.get("kind") == "judgment_add"
+                                 and item.get("judgment_id") == target_id), -1)
+            sources = {}
+            ambiguous = set()
+            for index, item in enumerate(ledger):
+                if item.get("kind") != "turn":
+                    continue
+                turn_id, user = item.get("turn_id"), item.get("user")
+                if not isinstance(turn_id, str) or not isinstance(user, str):
+                    continue
+                if turn_id in sources and sources[turn_id][0] != user:
+                    ambiguous.add(turn_id)
+                sources[turn_id] = (user, index, "committed_user_turn")
+            for index, item in enumerate(_user_events or []):
+                turn_id, user = item.get("turn_id"), item.get("user")
+                if not isinstance(turn_id, str) or not isinstance(user, str):
+                    continue
+                if turn_id in sources and sources[turn_id][0] != user:
+                    ambiguous.add(turn_id)
+                sources.setdefault(turn_id, (user, len(ledger) + index, "batch_user_event"))
+            target_quotes = target.get("evidence_quotes", []) if target else []
+            verified_target_quotes = []
+            for quote in target_quotes:
+                ident, text = quote.get("turn_id"), quote.get("quote")
+                found = sources.get(ident)
+                if (ident not in ambiguous and found is not None and found[0] == text
+                        and found[1] < target_index):
+                    verified_target_quotes.append(text)
+            if not target_quotes:
+                reasons.append("target_has_no_user_quote")
+            elif not verified_target_quotes:
+                reasons.append("target_user_quote_not_verified")
+            if anchor_core:
+                if not any(anchor_core in _unquoted_statement(text) for text in verified_target_quotes):
+                    reasons.append("target_anchor_not_in_target_source")
+                if anchor_core not in _unquoted_statement(statement):
+                    reasons.append("target_anchor_not_in_current_statement")
+            supported_statements = []
+            source_kinds = {}
+            for ident in dict.fromkeys(ids + candidate_ids):
+                found = sources.get(ident)
+                if ident in ambiguous:
+                    reasons.append("ambiguous_user_evidence")
+                elif found is None:
+                    reasons.append("source_user_turn_not_found")
+                elif quoted.get(ident) != found[0]:
+                    reasons.append("quote_not_full_original_user_message")
+                elif ident in ids and found[1] <= target_index:
+                    reasons.append("evidence_not_after_target")
+                else:
+                    source_kinds[ident] = found[2]
+                    if ident in ids and statement and statement in found[0]:
+                        supported_statements.append(found[0])
+            if not supported_statements:
+                reasons.append("statement_not_supported_by_current_source")
+            elif kind in ("revise", "retract"):
+                assessments = [_explicit_memory_wording(statement, user, kind)
+                               for user in supported_statements]
+                if not any(not errors for errors in assessments):
+                    reasons.extend(assessments[0])
+            if kind == "revise":
+                if not isinstance(judgment, str) or not judgment.strip():
+                    reasons.append("missing_replacement_judgment")
+                if (isinstance(confidence, bool) or not isinstance(confidence, (int, float))
+                        or not math.isfinite(confidence) or not 0 <= confidence <= 1):
+                    reasons.append("invalid_replacement_confidence")
+            reasons = list(dict.fromkeys(reasons))
+            effective = not reasons
+            replacement = None
+            if effective and kind == "revise":
+                replacement = self.add_judgment(judgment.strip(), confidence,
+                    evidence_ids=list(evidence_ids or []), source=source,
+                    batch_id=batch_id, evidence_scope=evidence_scope, evidence_quotes=quotes)
+                replacement["supersedes"] = target_id
+            operation_id = "mo_" + uuid4().hex
+            audit = {"operation_id": operation_id, "operation": {
+                         "kind": kind if isinstance(kind, str) else None,
+                         "target_id": target_id if isinstance(target_id, str) else None,
+                         "scope": scope if isinstance(scope, str) else None,
+                         "basis": proposal.get("basis") if isinstance(proposal.get("basis"), str) else None,
+                         "evidence_origin": (proposal.get("evidence_origin")
+                                             if isinstance(proposal.get("evidence_origin"), str)
+                                             else "model_specified_sources"),
+                         "statement": statement, "evidence_ids": ids,
+                         "target_anchor": anchor if isinstance(anchor, str) else None,
+                         "target_anchor_core": anchor_core},
+                     "effective": effective, "reasons": reasons,
+                     "replacement_id": replacement["id"] if replacement else None,
+                     "evidence_quotes": quotes, "source_kinds": source_kinds,
+                     "source": source, "batch_id": batch_id,
+                     "anchor_normalization": {"rule":"declared_generic_modifier_removal_v1",
+                         "changed": isinstance(anchor, str) and anchor != anchor_core},
+                     "semantic_status": "model_proposal",
+                     "validation_scope": "source_integrity_explicit_wording_and_topic_anchor_not_semantic_truth"}
+            self.append("judgment_operation", audit)
+            return {**audit, "replacement": replacement}
+
     def attach_judgment_evidence(self, judgment_id: str, evidence_quotes: list[dict]) -> bool:
         """Append caller-verified user statements without changing a judgment or its confidence."""
         with self._lock:
@@ -925,6 +1146,17 @@ def replay_judgments(ledger: list[dict]) -> list[dict]:
     recs: list[dict] = []
     by_id: dict[str, dict] = {}
     for r in ledger:
+        if r.get("kind") == "judgment_operation":
+            operation = r.get("operation") or {}
+            target = by_id.get(operation.get("target_id"))
+            if r.get("effective") is True and target is not None and not target.get("superseded_by"):
+                replacement = by_id.get(r.get("replacement_id"))
+                if operation.get("kind") == "revise" and replacement is not None:
+                    target["superseded_by"] = replacement["id"]
+                    replacement["supersedes"] = target["id"]
+                elif operation.get("kind") == "retract":
+                    target["superseded_by"] = r.get("operation_id")
+            continue
         if r.get("kind") == "judgment_evidence":
             target = by_id.get(r.get("judgment_id"))
             if target is not None:

@@ -440,6 +440,56 @@ def cmd_calibrate(args) -> int:
     return 0
 
 
+def cmd_policy(args) -> int:
+    """Opt-in executable dialogue policy, separate from HEAD/SAY/TAIL."""
+    from .policy import Boundary, ContentFrame, Focus, PolicyConfig, Quote
+    from .policy_session import PolicySession
+
+    cfg = _load_cfg(args.persona)
+    weights = {name: float(name == args.focus) for name in ("practical", "feeling", "detail")}
+    policy = PolicyConfig(intervention=args.intervention, **weights)
+    demo = args.cmd == "policy-demo"
+    demo_replies = (["嗯，先听你说。", "今天的事，听起来还压在心上。", "好，我们一起把下一步理一理。"]
+                    if args.free_realization else ["好，我们一起把下一步理一理。"])
+    llm = ScriptedLLM(demo_replies)
+    if not demo:
+        llm = openai_compatible(args.model, temperature=.7, max_tokens=900)
+    with PolicySession(cfg, Store(args.data), llm, policy=policy,
+                       realization="free" if args.free_realization else "composed" if args.composed_realization else "bounded",
+                       analyze_llm=None if demo else openai_compatible(args.model, temperature=0, max_tokens=1300),
+                       stream_llm=None if demo or args.no_stream else openai_stream(args.model, temperature=.7, max_tokens=900)) as session:
+        if demo:
+            rows = [("不要给建议", ContentFrame(boundaries=(Boundary("deny", "不要给建议"),))),
+                    ("今天的事还没想完。", ContentFrame(focuses=(Focus("detail", "detail", Quote("user", "今天的事")),))),
+                    ("现在帮我想办法。", ContentFrame(request="advice", request_quote="现在帮我想办法"))]
+            for user, frame in rows:
+                result = session.say(user, topic=args.topic, frame=frame)
+                print("你：" + user); print("回复：" + result.say)
+                print(dim(json.dumps({"action": result.decision.action, "focus": result.decision.focus_kind,
+                    "permission": result.decision.advice_permission, "calls": result.calls_count}, ensure_ascii=False)))
+            print("手写内容与回复只演示程序选择及边界，不是人格效果验证。")
+            return 0
+        print("显式策略实验：输入理解后由程序选择行动；倾听等可直接表达，其他行动再调用模型。输入 /quit 退出。")
+        while True:
+            try:
+                user = input("你：").strip()
+            except (EOFError, KeyboardInterrupt):
+                print(); break
+            if user in ("/quit", "/exit"):
+                break
+            if not user:
+                continue
+            try:
+                result = session.say(user, topic=args.topic, on_delta=lambda chunk: print(chunk, end="", flush=True))
+                print()
+                if args.show_decision:
+                    print(dim(json.dumps({"action": result.decision.action, "focus": result.decision.focus_kind,
+                        "permission": result.decision.advice_permission, "calls": result.calls_count}, ensure_ascii=False)))
+            except Exception as exc:
+                print(red(f"本轮失败，未自动重试：{type(exc).__name__}: {exc}"))
+    return 0
+
+
 # ---------------------------------------------------------------- 入口
 
 
@@ -498,6 +548,21 @@ def main(argv: list[str] | None = None) -> int:
     ca = sub.add_parser("calibrate", help="从账本反推阈值该怎么调")
     ca.add_argument("-d", "--data", default="data")
     ca.set_defaults(func=cmd_calibrate)
+
+    for name, help_text in (("policy-demo", "程序人格策略的离线演示"), ("policy-chat", "显式程序人格策略实验")):
+        pp = sub.add_parser(name, help=help_text)
+        pp.add_argument("-p", "--persona", default="default")
+        pp.add_argument("-d", "--data", default="data/policy")
+        pp.add_argument("-m", "--model", default=None)
+        pp.add_argument("--topic", default="conversation", help="应用指定的边界与承诺主题，不由模型自动归类")
+        pp.add_argument("--intervention", type=float, default=.5)
+        pp.add_argument("--focus", choices=["practical", "feeling", "detail"], default="feeling")
+        pp.add_argument("--no-stream", action="store_true")
+        pp.add_argument("--show-decision", action="store_true", help="研究用：同时显示程序决策")
+        realization = pp.add_mutually_exclusive_group()
+        realization.add_argument("--free-realization", action="store_true", help="显式对照：允许倾听等动作也使用自由模型表达")
+        realization.add_argument("--composed-realization", action="store_true", help="实验：按亲和度、正式度和简短度组合有限表达并避免连续套用同一句式")
+        pp.set_defaults(func=cmd_policy)
 
     args = ap.parse_args(argv)
     if (getattr(args, "check_fidelity", False) or getattr(args, "json_fallback", False)) \

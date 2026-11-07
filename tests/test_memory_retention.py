@@ -164,10 +164,13 @@ class MemoryRetentionTests(unittest.TestCase):
         self.assertEqual(self.store.judgments(), [])
 
     def test_source_backed_correction_supersedes_previous_preference(self):
-        old = self.store.add_judgment("用户喜欢冰咖啡", .7)
+        old_user = "我明确偏好冰咖啡。"
+        self.store.append("turn", {"turn_id":"t_old", "user":old_user})
+        old = self.store.add_judgment("用户喜欢冰咖啡", .7, ["t_old"],
+            evidence_quotes=[{"turn_id":"t_old","quote":old_user,"evidence_scope":"specified"}])
         self.events[0]["user"] = "更正以前的偏好，我不喜欢冰咖啡了，今后选热无糖豆浆。"
         record, = self.consolidate(self.item(judgment="用户明确更正为热无糖豆浆。",
-                                            supersedes=old["id"], evidence_ids=["t_1"]))
+                                            supersedes=old["id"], target_anchor="冰咖啡", evidence_ids=["t_1"]))
         self.assertEqual([j["id"] for j in self.store.user_judgments()], [record["id"]])
         self.assertEqual(record["evidence_quotes"][0]["quote"], self.events[0]["user"])
 
