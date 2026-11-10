@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "checks": 102,
+  "scope": "Material/association audit, not semantic validity.",
+  "protocol_sha256": "0477c3d5025783d395051ae258ae4e776354404da7bab930dde8be870308eaf6",
+  "actual_online_requests": 2,
+  "main_outputs": 0
+}

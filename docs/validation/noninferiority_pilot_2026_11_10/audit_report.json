@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": 1394,
+  "endpoint_calls": 132,
+  "main_outputs": 96,
+  "paired_situations": 24,
+  "protocol_sha256": "86e62cab525230124f5e9cc7a22dbc465da450748b5b5fd0d958b3ec4370e279",
+  "scope": "Data association, frozen inputs and bytes; not independent semantic truth or user-experience proof."
+}

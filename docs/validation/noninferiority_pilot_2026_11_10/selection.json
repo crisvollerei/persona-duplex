@@ -1,0 +1,54 @@
+{
+  "selected_id": "examples",
+  "selected_at": "2026-11-10T06:03:14.597053+00:00",
+  "scores": [
+    {
+      "id": "principles",
+      "failed_generations": 0,
+      "error_ratings": 4,
+      "persona_mean": 4.583333333333333,
+      "context_mean": 4.416666666666667,
+      "selection_key": [
+        0,
+        4,
+        -4.416666666666667,
+        -4.5,
+        "principles"
+      ]
+    },
+    {
+      "id": "priorities",
+      "failed_generations": 0,
+      "error_ratings": 4,
+      "persona_mean": 4.541666666666667,
+      "context_mean": 4.375,
+      "selection_key": [
+        0,
+        4,
+        -4.375,
+        -4.458333333333334,
+        "priorities"
+      ]
+    },
+    {
+      "id": "examples",
+      "failed_generations": 0,
+      "error_ratings": 0,
+      "persona_mean": 5.0,
+      "context_mean": 5.0,
+      "selection_key": [
+        0,
+        0,
+        -5.0,
+        -5.0,
+        "examples"
+      ]
+    }
+  ],
+  "protocol_sha256": "86e62cab525230124f5e9cc7a22dbc465da450748b5b5fd0d958b3ec4370e279",
+  "development_results_sha256": "eab0866f777100c5bba0cc6ea5df77af8f6f5c1edc1858b1b80287be481cccd2",
+  "review_sha256": {
+    "1": "2f01259c3ee3e03dc919b62fd5d6d2c6c7070ffc70bc8623a909967896d61f1e",
+    "2": "e743cd9c252e7fb91776879fa0a267337917be46c326013b031999a100739e6e"
+  }
+}

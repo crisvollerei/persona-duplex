@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "frozen_at": "2026-11-10T03:40:13.288129+00:00",
+  "git_head": "84f10a79e7ffeccf0d82e28ca07f0adc0b23b185",
+  "hashes": {
+    "benchmark.py": "59588990ded8b7bb4f05997bb1702696f473335b5d5aacc81eb85da56bd0039a",
+    "mechanism.py": "729b802e2079d4c94ca6faddda6c836459e93289e36c2e9431c31f8f041b14f6",
+    "test_mechanism.py": "2fcc17cd6545ac369eeb1cc180f5159709a2b07a553ffe45a2696c766118415d",
+    "materials.py": "58842f18f8c73d4f0d1c8af6a0a9a2472cc493f367e1d438d12e462ffcc50c94",
+    "gate.py": "a93c3cc34e49a38c825dab6978ce182ce8d0b7fb49bf08480f94915ae7d748f7",
+    "prepare_reviews.py": "622091f840505b8e72fbf0f72638a1b697eea3b0f8feee9e7c5a80dead7f18df",
+    "rubric.md": "400fd20bba8ed64ea902ef402e881535c407d3327dccdce92157bcb7040b03c5",
+    "protocol.md": "e7d7a47a833b772d16df3dac9305219450488f0a3b7a1609c35950ac2db02686",
+    "cases.json": "2557dcdeeee4c8cd6b1499dc8a7938e8a258a1df3c8e3ddbe06d700e89057491",
+    "profiles.json": "bc4419f8448e4cbda27ab515e548aeac8d7d3d730ea62e2df6e11c11668927c5",
+    "calibration_inputs.json": "0c973de7167081604ba23dff1eb41ac4d46d618a57c77ff3c2f70bda9f7b4738",
+    "calibration_key.json": "67b414f50dcd306c947ba4ca5525c4696a9cc79c186adfe22b3ca7e57294f63e"
+  },
+  "max_calls": 194,
+  "planned_calibration_calls": 2,
+  "planned_generation_calls": 192,
+  "temperature": 0.7,
+  "server_seed": null,
+  "retries": 0,
+  "workers": 3,
+  "timeout_s": 90,
+  "calibration_instruction": "Full rubric.md, byte-identical to automated reviewers"
+}

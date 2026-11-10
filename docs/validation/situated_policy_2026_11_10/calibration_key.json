@@ -1,0 +1,338 @@
+{
+  "K001": {
+    "original_id": "N03a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N03",
+    "contrast": "scope_and_boundary",
+    "probe": false
+  },
+  "K002": {
+    "original_id": "N10a",
+    "expected": {
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N10",
+    "contrast": "paraphrase_control",
+    "probe": false
+  },
+  "K003": {
+    "original_id": "N12b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "contradicted"
+    },
+    "pair_id": "N12",
+    "contrast": "error_control",
+    "probe": false
+  },
+  "K004": {
+    "original_id": "N10b",
+    "expected": {
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N10",
+    "contrast": "paraphrase_control",
+    "probe": false
+  },
+  "K005": {
+    "original_id": "N08b",
+    "expected": {
+      "request_presence": "unclear",
+      "fulfillment": "unclear",
+      "extension": "yes",
+      "boundary_kind": "implicit",
+      "boundary": "unclear",
+      "grounding": "supported"
+    },
+    "pair_id": "N08",
+    "contrast": "implicit_boundary_probe",
+    "probe": true
+  },
+  "K006": {
+    "original_id": "N04b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported"
+    },
+    "pair_id": "N04",
+    "contrast": "scope_and_boundary",
+    "probe": false
+  },
+  "K007": {
+    "original_id": "N07b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported"
+    },
+    "pair_id": "N07",
+    "contrast": "implicit_boundary_probe",
+    "probe": true
+  },
+  "K008": {
+    "original_id": "N01a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N01",
+    "contrast": "request_scope",
+    "probe": false
+  },
+  "K009": {
+    "original_id": "N05b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported"
+    },
+    "pair_id": "N05",
+    "contrast": "scope_and_boundary",
+    "probe": false
+  },
+  "K010": {
+    "original_id": "N05a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N05",
+    "contrast": "scope_and_boundary",
+    "probe": false
+  },
+  "K011": {
+    "original_id": "N01b",
+    "expected": {
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "yes",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N01",
+    "contrast": "request_scope",
+    "probe": false
+  },
+  "K012": {
+    "original_id": "N11b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N11",
+    "contrast": "paraphrase_control",
+    "probe": false
+  },
+  "K013": {
+    "original_id": "N06a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N06",
+    "contrast": "request_scope",
+    "probe": false
+  },
+  "K014": {
+    "original_id": "N12a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "contradicted"
+    },
+    "pair_id": "N12",
+    "contrast": "error_control",
+    "probe": false
+  },
+  "K015": {
+    "original_id": "N11a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N11",
+    "contrast": "paraphrase_control",
+    "probe": false
+  },
+  "K016": {
+    "original_id": "N09a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N09",
+    "contrast": "paraphrase_control",
+    "probe": false
+  },
+  "K017": {
+    "original_id": "N08a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N08",
+    "contrast": "implicit_boundary_probe",
+    "probe": true
+  },
+  "K018": {
+    "original_id": "N02b",
+    "expected": {
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "yes",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N02",
+    "contrast": "request_scope",
+    "probe": false
+  },
+  "K019": {
+    "original_id": "N04a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N04",
+    "contrast": "scope_and_boundary",
+    "probe": false
+  },
+  "K020": {
+    "original_id": "N09b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N09",
+    "contrast": "paraphrase_control",
+    "probe": false
+  },
+  "K021": {
+    "original_id": "N07a",
+    "expected": {
+      "request_presence": "unclear",
+      "fulfillment": "unclear",
+      "extension": "yes",
+      "boundary_kind": "implicit",
+      "boundary": "unclear",
+      "grounding": "supported"
+    },
+    "pair_id": "N07",
+    "contrast": "implicit_boundary_probe",
+    "probe": true
+  },
+  "K022": {
+    "original_id": "N06b",
+    "expected": {
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "yes",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N06",
+    "contrast": "request_scope",
+    "probe": false
+  },
+  "K023": {
+    "original_id": "N02a",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported"
+    },
+    "pair_id": "N02",
+    "contrast": "request_scope",
+    "probe": false
+  },
+  "K024": {
+    "original_id": "N03b",
+    "expected": {
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported"
+    },
+    "pair_id": "N03",
+    "contrast": "scope_and_boundary",
+    "probe": false
+  }
+}

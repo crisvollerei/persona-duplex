@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": 1188,
+  "protocol_sha256": "55bb0729d54efe8b604645e796e33dee8b6d5cce740572eb80b309b51580d438",
+  "review_context_protocol_sha256": "23182b356ca6bdd0bc1fe786e954813a5933dba041e0290f5eddb7e6a2fb2178",
+  "raw_archive_sha256": {
+    "calibration_run": "8eaa6634c2b964274a2b10ab3e507255f78a370ac884844d29c0e10af6e6b1d5",
+    "run": "69727fdf4e67c30daebef836595fa9547c7765338ca16fb7e315cb0de145b24e"
+  },
+  "actual_calibration_calls": 2,
+  "actual_generation_calls": 192,
+  "reconstructed_episodes": 48,
+  "reconstructed_units": 192,
+  "interpretation": "Archived-response reconstruction only; no API calls, new samples, or semantic correctness guarantee."
+}

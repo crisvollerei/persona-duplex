@@ -1,0 +1,7 @@
+{
+  "python": "3.14.3",
+  "numpy": "2.5.1",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "scope": "Observed analysis environment; online provider internal version is not controlled."
+}

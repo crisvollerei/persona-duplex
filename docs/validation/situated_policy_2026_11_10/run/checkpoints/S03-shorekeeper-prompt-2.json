@@ -1,0 +1,619 @@
+{
+  "id": "S03-shorekeeper-prompt-2",
+  "case": "S03",
+  "profile": "shorekeeper",
+  "method": "prompt",
+  "rep": 2,
+  "turns": [
+    {
+      "id": "S03-shorekeeper-prompt-2-T1",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 2,
+      "turn": "T1",
+      "user": "六袋邮票还没贴册，年份也没查完。我觉得有点拖沓，这是目前的进度。",
+      "status": "ok",
+      "payload": {
+        "case": "S03",
+        "turn": "T1",
+        "context": "邮票收集记录有六个小袋，每袋四枚，共二十四枚。邮票尚未贴册，发行年份尚未逐枚核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "packets": 6,
+          "stamps_per_packet": 4,
+          "total_stamps": 24,
+          "mounted": false,
+          "issue_years_verified": false
+        },
+        "user": "六袋邮票还没贴册，年份也没查完。我觉得有点拖沓，这是目前的进度。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "boundary": {},
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "年份没核实、贴册也没开始，这份拖着的感觉你已经说出来了。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "六袋各四枚，合计二十四枚；贴册和年份核实都尚未完成。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先依现有六个小袋分别做编号；其余留待核实。",
+            "effects": {
+              "proposal_note": "依现有六个小袋分别做编号"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D03",
+          "draft_title": "远方小集",
+          "draft_status": "draft",
+          "draft_revision": 0,
+          "advice_permission": "allow",
+          "proposal_note": "",
+          "last_action_note": "",
+          "acknowledged_revision": 0
+        },
+        "history": [],
+        "draw": 0.02601783010427703,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "",
+        "acknowledged_revision": 0
+      },
+      "user_update": {},
+      "program_selected_id": "A4",
+      "static_ablation_id": "A4",
+      "model_reported_id": "A1",
+      "executed_id": "A1",
+      "say": "年份尚未核实，贴册也还没有开始；这份拖沓的感觉，你已经说出来了。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": false,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      }
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T2",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 2,
+      "turn": "T2",
+      "user": "现在请给我一个整理邮票资料的两步方案，只要草案，不要说已经执行。",
+      "status": "ok",
+      "payload": {
+        "case": "S03",
+        "turn": "T2",
+        "context": "邮票收集记录有六个小袋，每袋四枚，共二十四枚。邮票尚未贴册，发行年份尚未逐枚核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "packets": 6,
+          "stamps_per_packet": 4,
+          "total_stamps": 24,
+          "mounted": false,
+          "issue_years_verified": false
+        },
+        "user": "现在请给我一个整理邮票资料的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        },
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "六袋各四枚，合计二十四枚；贴册和年份核实都尚未完成。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先写清六袋各四枚的数量，再把年份未核实的项目保留为待查。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先写清六袋各四枚的数量，再把年份未核实的项目保留为待查。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D03",
+          "draft_title": "远方小集",
+          "draft_status": "draft",
+          "draft_revision": 0,
+          "advice_permission": "allow",
+          "proposal_note": "",
+          "last_action_note": "照应用户已表达的感受",
+          "acknowledged_revision": 0
+        },
+        "history": [
+          {
+            "role": "user",
+            "content": "六袋邮票还没贴册，年份也没查完。我觉得有点拖沓，这是目前的进度。"
+          },
+          {
+            "role": "assistant",
+            "content": "年份尚未核实，贴册也还没有开始；这份拖沓的感觉，你已经说出来了。"
+          }
+        ],
+        "draw": 0.25897899700501437,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "user_update": {},
+      "program_selected_id": "A4",
+      "static_ablation_id": "A1",
+      "model_reported_id": "A3",
+      "executed_id": "A3",
+      "say": "第一步，按现有六个小袋分别编号；第二步，逐枚核实年份后，再决定贴册顺序。这只是整理资料的草案，尚未执行。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": false,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      }
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T3",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 2,
+      "turn": "T3",
+      "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚邮票？",
+      "status": "ok",
+      "payload": {
+        "case": "S03",
+        "turn": "T3",
+        "context": "邮票收集记录有六个小袋，每袋四枚，共二十四枚。邮票尚未贴册，发行年份尚未逐枚核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "packets": 6,
+          "stamps_per_packet": 4,
+          "total_stamps": 24,
+          "mounted": false,
+          "issue_years_verified": false
+        },
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚邮票？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        },
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "24枚邮票。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计24枚邮票。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计24枚邮票。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计24枚邮票。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D03",
+          "draft_title": "远方小集",
+          "draft_status": "draft",
+          "draft_revision": 0,
+          "advice_permission": "deny",
+          "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+          "last_action_note": "照应用户已表达的感受",
+          "acknowledged_revision": 0
+        },
+        "history": [
+          {
+            "role": "user",
+            "content": "六袋邮票还没贴册，年份也没查完。我觉得有点拖沓，这是目前的进度。"
+          },
+          {
+            "role": "assistant",
+            "content": "年份尚未核实，贴册也还没有开始；这份拖沓的感觉，你已经说出来了。"
+          },
+          {
+            "role": "user",
+            "content": "现在请给我一个整理邮票资料的两步方案，只要草案，不要说已经执行。"
+          },
+          {
+            "role": "assistant",
+            "content": "第一步，按现有六个小袋分别编号；第二步，逐枚核实年份后，再决定贴册顺序。这只是整理资料的草案，尚未执行。"
+          }
+        ],
+        "draw": 0.4384345513234604,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "user_update": {
+        "advice_permission": "deny"
+      },
+      "program_selected_id": "A1",
+      "static_ablation_id": "A1",
+      "model_reported_id": "A1",
+      "executed_id": "A1",
+      "say": "24枚邮票。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": true,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "回答合计数量",
+        "acknowledged_revision": 0
+      }
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T4",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 2,
+      "turn": "T4",
+      "user": "把模拟备忘D03的草案标题从‘远方小集’改成‘邮票待编’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+      "status": "ok",
+      "payload": {
+        "case": "S03",
+        "turn": "T4",
+        "context": "邮票收集记录有六个小袋，每袋四枚，共二十四枚。邮票尚未贴册，发行年份尚未逐枚核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "packets": 6,
+          "stamps_per_packet": 4,
+          "total_stamps": 24,
+          "mounted": false,
+          "issue_years_verified": false
+        },
+        "user": "把模拟备忘D03的草案标题从‘远方小集’改成‘邮票待编’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        },
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D03的标题现为‘邮票待编’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：邮票待编；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D03的标题现为‘邮票待编’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D03的标题现为‘邮票待编’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D03",
+          "draft_title": "邮票待编",
+          "draft_status": "draft",
+          "draft_revision": 1,
+          "advice_permission": "deny",
+          "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+          "last_action_note": "回答合计数量",
+          "acknowledged_revision": 0
+        },
+        "history": [
+          {
+            "role": "user",
+            "content": "六袋邮票还没贴册，年份也没查完。我觉得有点拖沓，这是目前的进度。"
+          },
+          {
+            "role": "assistant",
+            "content": "年份尚未核实，贴册也还没有开始；这份拖沓的感觉，你已经说出来了。"
+          },
+          {
+            "role": "user",
+            "content": "现在请给我一个整理邮票资料的两步方案，只要草案，不要说已经执行。"
+          },
+          {
+            "role": "assistant",
+            "content": "第一步，按现有六个小袋分别编号；第二步，逐枚核实年份后，再决定贴册顺序。这只是整理资料的草案，尚未执行。"
+          },
+          {
+            "role": "user",
+            "content": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚邮票？"
+          },
+          {
+            "role": "assistant",
+            "content": "24枚邮票。"
+          }
+        ],
+        "draw": 0.6667386393409909,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D03",
+        "draft_title": "远方小集",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "回答合计数量",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D03",
+        "draft_title": "邮票待编",
+        "draft_status": "draft",
+        "draft_revision": 1,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "回答合计数量",
+        "acknowledged_revision": 0
+      },
+      "user_update": {
+        "draft_title": "邮票待编",
+        "draft_status": "draft",
+        "draft_revision": 1
+      },
+      "program_selected_id": "A1",
+      "static_ablation_id": "A1",
+      "model_reported_id": "A1",
+      "executed_id": "A1",
+      "say": "D03的标题现为‘邮票待编’，状态仍是草案。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": true,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D03",
+        "draft_title": "邮票待编",
+        "draft_status": "draft",
+        "draft_revision": 1,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+        "last_action_note": "确认模拟草案标题及状态",
+        "acknowledged_revision": 1
+      }
+    }
+  ]
+}

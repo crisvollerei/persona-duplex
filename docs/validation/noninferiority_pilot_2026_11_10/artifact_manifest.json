@@ -1,0 +1,874 @@
+{
+  "algorithm": "SHA-256",
+  "publication": {
+    "original_delivery_manifest_sha256": "40ada7c962ea0caac2497ffe00867453c91a9bdc10812c37f41cdf36f76f7207",
+    "prepared_at": "2026-11-10T06:34:58.452841+00:00",
+    "figures": [
+      "fig1_quality_noninferiority.png",
+      "fig3_generation_costs.png"
+    ],
+    "scope": "Curated presentation and aggregate record layout; frozen inputs and original observations retained."
+  },
+  "files": {
+    "analysis_environment.json": {
+      "bytes": 189,
+      "sha256": "0f826d78cc85b29d3f4cfcd5cb622bcb5ae1e67bef763d8f508819759f4c8bfd"
+    },
+    "analyze.py": {
+      "bytes": 20285,
+      "sha256": "d8cd43053c1a4dd2f124cd99569d4c0dd54806d03541bf85f16cb928c0eb141a"
+    },
+    "audit.py": {
+      "bytes": 6491,
+      "sha256": "1cb045f0bfab22c72db30a75b5d859fc44b836526b9a3468ae0085118a0abf2f"
+    },
+    "audit_report.json": {
+      "bytes": 320,
+      "sha256": "e875b3ecff1a6a63020cac9c6159643835959ebb21ec3f98757f621a124ca451"
+    },
+    "benchmark.py": {
+      "bytes": 20435,
+      "sha256": "f35244d281a29a919b02c1b569d6be48d056fd363fde944b093e246d492c7dc7"
+    },
+    "calibration.json": {
+      "bytes": 12753,
+      "sha256": "9dc85b53d2be95867211b999cb40e3ce74fb66ff12a25af9645601a4d366a7b4"
+    },
+    "calibration_gate.json": {
+      "bytes": 471,
+      "sha256": "f86fe13be2085ff424bdafbcdb573c6c0538e6603e1858f8c363f9d7f36ff2de"
+    },
+    "data_dictionary.md": {
+      "bytes": 3719,
+      "sha256": "c648f1082aae0fe72ef15ab0c411f0ca42107ddd8fbe9f6b5ab372e27d2cd0e8"
+    },
+    "development/calls/D01-lan-examples.json": {
+      "bytes": 8460,
+      "sha256": "8e17c19a41371ecb425b6b4d23892be1c565d19d2f9b072970630b2ec9f3c349"
+    },
+    "development/calls/D01-lan-principles.json": {
+      "bytes": 7440,
+      "sha256": "0c5ffc415f8a116c7bf49568a7701c8a82bc484a0fa601e9e66328705d431482"
+    },
+    "development/calls/D01-lan-priorities.json": {
+      "bytes": 7982,
+      "sha256": "26b9fa2e8412de748af5e6c707d6d1108e0e562044ab6cbbcf70483ee100939b"
+    },
+    "development/calls/D01-shorekeeper-examples.json": {
+      "bytes": 8611,
+      "sha256": "c67aca1ef19d0ede26e5f16300bc7e762a847e5760398d7df35b1bd2fa7905ba"
+    },
+    "development/calls/D01-shorekeeper-principles.json": {
+      "bytes": 7372,
+      "sha256": "9cad70ac4182a294220f28b06d7c22a58db473042fbe0b50f2147caaa7d154d9"
+    },
+    "development/calls/D01-shorekeeper-priorities.json": {
+      "bytes": 8001,
+      "sha256": "2ec7ae71a987afb91ebb86d6afc77426967a2261d7e7ecdffe30fb28ac8bc47f"
+    },
+    "development/calls/D02-lan-examples.json": {
+      "bytes": 8111,
+      "sha256": "725861fa05429936144ff49bd1e588ff2e8161f72d4f07ecf5b3c6dd3290bb1a"
+    },
+    "development/calls/D02-lan-principles.json": {
+      "bytes": 6910,
+      "sha256": "f4ab4e406ee865ac06d5ad7b069272e8096eaa845fbef474fb832bd73bd7d2a7"
+    },
+    "development/calls/D02-lan-priorities.json": {
+      "bytes": 7548,
+      "sha256": "67b51414cb2350b1f026d4f6c2b8838bdea5ab23c44f47f96b832f98fa16f0aa"
+    },
+    "development/calls/D02-shorekeeper-examples.json": {
+      "bytes": 8321,
+      "sha256": "1122eff576b3ee5d25be2d27fd714b316cfa0bc107ce6f1fd35a2fa417ef893b"
+    },
+    "development/calls/D02-shorekeeper-principles.json": {
+      "bytes": 7126,
+      "sha256": "7c81039832c9f6bbb069eaaaa5a4d1708260dcf2f4f19ee308af03220184e004"
+    },
+    "development/calls/D02-shorekeeper-priorities.json": {
+      "bytes": 7759,
+      "sha256": "20c40083b9ad2f6dcd5ecc7be09494990cd895442528f004407dd6b76660ef2b"
+    },
+    "development/calls/D03-lan-examples.json": {
+      "bytes": 8396,
+      "sha256": "4c257e763559256c3a1546a20d92ced9a3b16b8c794be7559be181be9a59f73f"
+    },
+    "development/calls/D03-lan-principles.json": {
+      "bytes": 7280,
+      "sha256": "c325c2c22e81a4678fcc057e6c18bfe01e6558098a8352dd2c0f0b859fadb55d"
+    },
+    "development/calls/D03-lan-priorities.json": {
+      "bytes": 7868,
+      "sha256": "28cf1add999cc2b3b77e05056b2abf69931734c933aff9098cc23078a9bb3a66"
+    },
+    "development/calls/D03-shorekeeper-examples.json": {
+      "bytes": 8646,
+      "sha256": "10a035599b5c60a7d87f85dd2717044b963fd0167ac075e4242d3179d77136df"
+    },
+    "development/calls/D03-shorekeeper-principles.json": {
+      "bytes": 7405,
+      "sha256": "963a13b7b16257c414ceec353fc1c95ac3edaca9eac4210aa379bdba02605153"
+    },
+    "development/calls/D03-shorekeeper-priorities.json": {
+      "bytes": 8144,
+      "sha256": "9f3448ef5b6811bb7e08de0cea2e57de71b641af5c70608ccca1ed914e702475"
+    },
+    "development/calls/D04-lan-examples.json": {
+      "bytes": 9148,
+      "sha256": "19799b6df1e4e17e29c33b1b1f08578f2974e8cd65b3474dfda10e04952bb49a"
+    },
+    "development/calls/D04-lan-principles.json": {
+      "bytes": 7953,
+      "sha256": "9383e0c7053099cfc1da964f2d43a2fedc9107da817955e5e1d07900385a56e0"
+    },
+    "development/calls/D04-lan-priorities.json": {
+      "bytes": 8586,
+      "sha256": "76f26542485d790b341f2eabfa19314fb05f1bfd8c984390a0f54809fb73d96b"
+    },
+    "development/calls/D04-shorekeeper-examples.json": {
+      "bytes": 9378,
+      "sha256": "6f70116a9b4fba1fea840f3fbef30d211b025098d051de6ba993aacffc22fa71"
+    },
+    "development/calls/D04-shorekeeper-principles.json": {
+      "bytes": 8194,
+      "sha256": "a2281f772b52427753d2baa9a5ab3b1ebd36423256f507d8074f2dc358df1fab"
+    },
+    "development/calls/D04-shorekeeper-priorities.json": {
+      "bytes": 8851,
+      "sha256": "96be4ff0dbc2814aedc6196e761dd9d77d200ae1c5f02e1c49bc7bd6eb4fd195"
+    },
+    "development/calls/D05-lan-examples.json": {
+      "bytes": 9040,
+      "sha256": "26640e64fd06ae081b49e68cdc5466bce53055a3a758d4e1b40a9e0af3bec618"
+    },
+    "development/calls/D05-lan-principles.json": {
+      "bytes": 7845,
+      "sha256": "e8db38470683299270010b5689af377abf5e1a3b0e162776f4581d873e8a7506"
+    },
+    "development/calls/D05-lan-priorities.json": {
+      "bytes": 8474,
+      "sha256": "41c9c6faa2d536ce22b13ef82baa531fd026c61c1882acc78f3bea05de655d96"
+    },
+    "development/calls/D05-shorekeeper-examples.json": {
+      "bytes": 9252,
+      "sha256": "aea082a09d834f9a86dfb109c31876697c367cb2e6b9d698288ba323106edc27"
+    },
+    "development/calls/D05-shorekeeper-principles.json": {
+      "bytes": 8056,
+      "sha256": "fce8b7eaad0e1b6fa5c8cfafe14d8e869fded63a1efa40b25ecf01aabab14b1e"
+    },
+    "development/calls/D05-shorekeeper-priorities.json": {
+      "bytes": 8690,
+      "sha256": "73ee0b8a1fd729a4d4f6b669f59ec60ae541de3f496489e1269e3740f58fdeed"
+    },
+    "development/calls/D06-lan-examples.json": {
+      "bytes": 9150,
+      "sha256": "7bbb3921ad6a0beebcf50a8030fd92728b9e4d101a36d9a408309ecb9f896d29"
+    },
+    "development/calls/D06-lan-principles.json": {
+      "bytes": 7955,
+      "sha256": "f3f3a11b2d107e3e018377e8af3e6bd2ebd044e53bd8372cb0052911b8ac7d57"
+    },
+    "development/calls/D06-lan-priorities.json": {
+      "bytes": 8581,
+      "sha256": "848adb144cd2d025244126b15df896182475659fef459ad372024b2e642bd84f"
+    },
+    "development/calls/D06-shorekeeper-examples.json": {
+      "bytes": 9380,
+      "sha256": "699dabe81026a7b5563706289bb824feac90634e92b0683222da409398883965"
+    },
+    "development/calls/D06-shorekeeper-principles.json": {
+      "bytes": 8166,
+      "sha256": "2bace3a95d91fd16b3362557c5e337da22c338942646ae8b4a28a03f9128af07"
+    },
+    "development/calls/D06-shorekeeper-priorities.json": {
+      "bytes": 8854,
+      "sha256": "64e86b4b5a4259a6adecd9e1e222bc251afd556520b69e9da673542cae4989ef"
+    },
+    "development/manifest.json": {
+      "bytes": 3278,
+      "sha256": "c98fc1b4a1d538f8e6e22c87a579959d679c66a88bcafe18f5bd93adc3244ad6"
+    },
+    "development/raw_calls.json.gz": {
+      "bytes": 15703,
+      "sha256": "2d0ec1f9d9fceb8da4ae733e7a5dad31feea3f3f311c1e4958ff38fb8a91b381"
+    },
+    "development/results.json": {
+      "bytes": 46383,
+      "sha256": "eab0866f777100c5bba0cc6ea5df77af8f6f5c1edc1858b1b80287be481cccd2"
+    },
+    "development_transcripts.md": {
+      "bytes": 5655,
+      "sha256": "b8138a3c5596d82d16629c787ae3b4d839273693b3469f558af03414d8b66428"
+    },
+    "export_transcripts.py": {
+      "bytes": 2020,
+      "sha256": "d88faa3db11008db2e3986bea6a53808b7607cd7e724ef56fd5d3c2ccb90b6a5"
+    },
+    "figures/fig1_quality_noninferiority.png": {
+      "bytes": 144770,
+      "sha256": "7dfaf6a14aa731da50129b11099e33c766e28f472873b9d75f5fd9a33e9253f6"
+    },
+    "figures/fig1_quality_noninferiority.svg": {
+      "bytes": 22873,
+      "sha256": "8da6167b20877cd6c000c3926aa58073ecaee6c33ec4469de11121f3f5d2920f"
+    },
+    "figures/fig3_generation_costs.png": {
+      "bytes": 118525,
+      "sha256": "0c316a6429a37c642a5fb9edcba7062056b40422dec3b77bb0f572ae53bc4a82"
+    },
+    "figures/fig3_generation_costs.svg": {
+      "bytes": 27697,
+      "sha256": "7c8e472380bf10ce438d5f94c8a222ca325615b10a918963cd5e5ad86f5f3f2c"
+    },
+    "generate_figures.py": {
+      "bytes": 8942,
+      "sha256": "fe0cec8e241bbb60f37be28c5d04af8165222469eacdaf5e17c5dafe77b924c7"
+    },
+    "implementation_snapshot/persona/__init__.py": {
+      "bytes": 757,
+      "sha256": "f75a31017f117330c42d35fdbd7f2e8d2471526df0601d14b7c704b3f7afd712"
+    },
+    "implementation_snapshot/persona/__main__.py": {
+      "bytes": 52,
+      "sha256": "13a1a5b340cdcfc1902b62be90e508c7c71886000d5bf087e7854aadf09fb35e"
+    },
+    "implementation_snapshot/persona/audit.py": {
+      "bytes": 3156,
+      "sha256": "041cba6c60076361947fcae477a0f4fa144d7f8f1ff144a67c897e06908850fa"
+    },
+    "implementation_snapshot/persona/calibrate.py": {
+      "bytes": 14780,
+      "sha256": "ee439e4fbb4738d53c26a18efd52162d0a4ffad058cdc5c27252436b551a020c"
+    },
+    "implementation_snapshot/persona/cli.py": {
+      "bytes": 26174,
+      "sha256": "0b93efc52b8f802f3c28f3ffcf06c70051597192a32b1868aa8253471d6b10c6"
+    },
+    "implementation_snapshot/persona/config.py": {
+      "bytes": 22463,
+      "sha256": "484d93f52b82fcafef28a81a1c821497f35ed3eb33537189af82fd7b901fc62b"
+    },
+    "implementation_snapshot/persona/consolidate.py": {
+      "bytes": 60623,
+      "sha256": "75b189a7114dd2bfb9907931684efd9b84d16d78a571570d0812655742a1cd1f"
+    },
+    "implementation_snapshot/persona/contracts.py": {
+      "bytes": 13250,
+      "sha256": "fb22429beeed6a136b7a1c8df90b30d85c160d28795c1d4dc4a96d77af97a300"
+    },
+    "implementation_snapshot/persona/engine.py": {
+      "bytes": 66791,
+      "sha256": "1778c94f6d62d71c915174f96a9598d0fb4b1ca314240b2cd078d753f685f026"
+    },
+    "implementation_snapshot/persona/expression.py": {
+      "bytes": 6433,
+      "sha256": "95cbed8d3cb780769a5fd137c82e6e1e3b948c3b328cc328ee517f1357841393"
+    },
+    "implementation_snapshot/persona/inquiry.py": {
+      "bytes": 13208,
+      "sha256": "5c64ffcf462bddae288a81cfe98c4513c6059d69bceb660eb1c508a91081bed2"
+    },
+    "implementation_snapshot/persona/llm.py": {
+      "bytes": 15661,
+      "sha256": "8451aa02f4b33087aba0c28d33a30187c20dd5612969ea3b4adc2d2b1a83e7f5"
+    },
+    "implementation_snapshot/persona/memory_retrieval.py": {
+      "bytes": 5218,
+      "sha256": "cc3853cae8d6b79041c906084711325f6a30ca7f00a1d864fef5122f989809f3"
+    },
+    "implementation_snapshot/persona/memory_text.py": {
+      "bytes": 2209,
+      "sha256": "7ddf140422238548f76292e97299274956a8d95bc45556da37769d032d9ade1f"
+    },
+    "implementation_snapshot/persona/metrics.py": {
+      "bytes": 17992,
+      "sha256": "ba0505803af76f9dfb769e0a07d121f62f2aa47f74695bc451146da7ea942bd8"
+    },
+    "implementation_snapshot/persona/parse.py": {
+      "bytes": 35911,
+      "sha256": "42acbfe7caa5f74fb2943e3cf236ffde2e1b5f208ce89bbfdbf9286c52c15fbc"
+    },
+    "implementation_snapshot/persona/policy.py": {
+      "bytes": 15682,
+      "sha256": "ce89d2bcd51a447c7a823e8f5d0109f7307922c1dfa682919babee25ad470fca"
+    },
+    "implementation_snapshot/persona/policy_session.py": {
+      "bytes": 31152,
+      "sha256": "57f31b6a9bde96ad75ff7c8caf8cb51fb297a56a03302cde0bcc808bc7891301"
+    },
+    "implementation_snapshot/persona/prompt.py": {
+      "bytes": 29614,
+      "sha256": "96fe5ad22c3bcc7356c1699ccdf89547d7e244d4f4eca8bfa11fa7a3b376a14d"
+    },
+    "implementation_snapshot/persona/protocol.py": {
+      "bytes": 35632,
+      "sha256": "cba6a45247509cb145c4a16dbea2a54f930d5601b8f977fb1ebe380b61e1eefa"
+    },
+    "implementation_snapshot/persona/repair.py": {
+      "bytes": 7636,
+      "sha256": "6e30a5c3b1a16c0f08d23276070c14ce244ffb570b6636bb38efeb24c3a65f2c"
+    },
+    "implementation_snapshot/persona/session.py": {
+      "bytes": 9969,
+      "sha256": "66ebf8f01756a67332d027f921c05ec2bd1b0ef193dc2aee13f480d4a7c89d7d"
+    },
+    "implementation_snapshot/persona/settle.py": {
+      "bytes": 10248,
+      "sha256": "e5c1efd5db7c9075e4ef0564168acdc38e943fea7778c9db20290384cd837a5c"
+    },
+    "implementation_snapshot/persona/similarity.py": {
+      "bytes": 2868,
+      "sha256": "f6e45d0ee5be796f84f4b4f9eae7ac3b9b83978d76d4c06050f22a0581fc9586"
+    },
+    "implementation_snapshot/persona/store.py": {
+      "bytes": 66367,
+      "sha256": "963681524e5b7acd058b3cef8cc696b4c0b77754cf8634623c3a48a1ea53a190"
+    },
+    "implementation_snapshot/persona/stream.py": {
+      "bytes": 20971,
+      "sha256": "7a1f73aa4bd75b7c97c74e21b953fb54cb9bd7d2e375f9f779a8c260b642382a"
+    },
+    "implementation_snapshot/persona/term.py": {
+      "bytes": 3000,
+      "sha256": "d0d623ce466aa678405d5762900ee5a25c259b39bf289bb5e75eb61eb2d572f9"
+    },
+    "implementation_snapshot/persona/topicjudge.py": {
+      "bytes": 14788,
+      "sha256": "5dcc2e0be5bfc72bac57a90085a615f177593734c9b8b63bf618d70c892a215a"
+    },
+    "implementation_snapshot/personas/ache.toml": {
+      "bytes": 1835,
+      "sha256": "cbb3d90afb10889f73824df257082349d7fb7d1dc5e3110c2dd8a2443415cc36"
+    },
+    "implementation_snapshot/personas/default.toml": {
+      "bytes": 1606,
+      "sha256": "518159abc7b2aed33268ba0180c9c58e86406b3b473f06c881b2b15f89b7acd5"
+    },
+    "implementation_snapshot/personas/guarded.toml": {
+      "bytes": 654,
+      "sha256": "25ac0f5de974c634f766000369732b8b6b10f6b2be1c99c4689c48763e5a902d"
+    },
+    "implementation_snapshot/personas/service.toml": {
+      "bytes": 687,
+      "sha256": "148312ba4a643f140db087dcef069fdfed2b15a7ac001df3f9439638436b9b2b"
+    },
+    "implementation_snapshot/personas/shorekeeper.toml": {
+      "bytes": 5017,
+      "sha256": "43b7e7b68263c8f3abe8809c0e0db30f90cc6634834502c64ae9ca2427a9bbb6"
+    },
+    "materials.json": {
+      "bytes": 52368,
+      "sha256": "70c5afb1b0b6e3f244ad1e1a991f35123924b1961dce694ccb1b2108d05847b2"
+    },
+    "materials_notes.md": {
+      "bytes": 3180,
+      "sha256": "6204fec678a68ad90cf93227f049c0ed4d2ecdccb617af3a8193f43501458c61"
+    },
+    "method_review.md": {
+      "bytes": 8926,
+      "sha256": "833aa8068a2b3e0bed1184c89a731ed271ff4eb6bcfb045714f8b77fb4e270fc"
+    },
+    "paper.md": {
+      "bytes": 19903,
+      "sha256": "56ced49e892181f1fcd00efbefac17d358b0830f267dbeba66d33244894c5219"
+    },
+    "profiles.json": {
+      "bytes": 2037,
+      "sha256": "db3d92ccb7746baf3e2f1e895ab56932cf8e1f1733814fb7eb400965804bfcaf"
+    },
+    "prompts.json": {
+      "bytes": 8528,
+      "sha256": "0738de8b05fed5fc7be031a0a4ba550c39bda4138991665057372e8b97fbcc6d"
+    },
+    "protocol.json": {
+      "bytes": 5569,
+      "sha256": "86e62cab525230124f5e9cc7a22dbc465da450748b5b5fd0d958b3ec4370e279"
+    },
+    "protocol.md": {
+      "bytes": 8302,
+      "sha256": "12e489f66d5e5598664231e2783a8fe50aa7736da4a684a8b06b284bffc28b8d"
+    },
+    "README.md": {
+      "bytes": 4346,
+      "sha256": "98dd364c363d62222c9b5829ee2396a3f9b5c81828885714b55301b9bada25fe"
+    },
+    "requirements.txt": {
+      "bytes": 46,
+      "sha256": "38abf6eb2f33cba3ab97dcc79588cc0c5ba24750f4c5eebed23c4bc20187f3d4"
+    },
+    "reviews/calibration_inputs.json": {
+      "bytes": 7013,
+      "sha256": "7b2791953fe6e2ac12130d32bb3c64523a357716bd3f2feb554a0948b5d3bef8"
+    },
+    "reviews/calibration_key.json": {
+      "bytes": 4655,
+      "sha256": "325ecdaf795ed83a7a0084074302e8be52ee6b8baae38c09befd687ae5a78c60"
+    },
+    "reviews/calibration_ratings_1.json": {
+      "bytes": 4789,
+      "sha256": "6b84b2f99babffbbb02052ec550e2686d179bbb942ec32b7086766ebd872eed5"
+    },
+    "reviews/calibration_ratings_2.json": {
+      "bytes": 4823,
+      "sha256": "a1eb4a1d51210b4634340a49428ccc25b061e055ad5d0b54145e32eb578e5e18"
+    },
+    "reviews/development_inputs.json": {
+      "bytes": 55972,
+      "sha256": "65fe3405b5940ee72f2c89a8f8828d8a223e38cd2606d4e5a42cad10877fa161"
+    },
+    "reviews/development_key.json": {
+      "bytes": 1275,
+      "sha256": "3b47537f83c24b8f875ec4e5aa86a6e878ec908098f06cdcdce8604e10225b30"
+    },
+    "reviews/development_ratings_1.json": {
+      "bytes": 13292,
+      "sha256": "2f01259c3ee3e03dc919b62fd5d6d2c6c7070ffc70bc8623a909967896d61f1e"
+    },
+    "reviews/development_ratings_2.json": {
+      "bytes": 13676,
+      "sha256": "e743cd9c252e7fb91776879fa0a267337917be46c326013b031999a100739e6e"
+    },
+    "reviews/main_inputs.json": {
+      "bytes": 170046,
+      "sha256": "689d95b4c7528db469477e91ec6eed54ee449c35860558d4e60b9131d555139b"
+    },
+    "reviews/main_key.json": {
+      "bytes": 3315,
+      "sha256": "cf9aaf9745c09e479efc1c86c842a4a2eb7b10c209aaa109528c18dbb99befc6"
+    },
+    "reviews/main_ratings_1.json": {
+      "bytes": 34848,
+      "sha256": "0f463c1cb8e9c9694579b4e8ae2b6347879689404053d2cb9979d7d9c8b63d5e"
+    },
+    "reviews/main_ratings_2.json": {
+      "bytes": 30892,
+      "sha256": "6c4bbcf904bcf242095db3df7c69622967fa905a2915d0facefb53c61e582cce"
+    },
+    "rubric.md": {
+      "bytes": 7105,
+      "sha256": "f5941e0cd6103dbf1f8aed2c5c31e1daa69b046829ce36b7cf628ba0849acf68"
+    },
+    "run/calls/T01-lan-examples.json": {
+      "bytes": 8443,
+      "sha256": "a2aecee8dc5ff25b1226f887c64ab550a66517889e987ec5090bd37e1dcdbac4"
+    },
+    "run/calls/T01-lan-framework.json": {
+      "bytes": 16762,
+      "sha256": "3d9b88260ef08aeb0e8927964da38c2136a2efee53a8903e89e39b0d5648d999"
+    },
+    "run/calls/T01-shorekeeper-examples.json": {
+      "bytes": 8674,
+      "sha256": "f7e1db8a90c0f96a73203ea311765e552a2ed77adbf3a059abe6ace21b01a1ae"
+    },
+    "run/calls/T01-shorekeeper-framework.json": {
+      "bytes": 16796,
+      "sha256": "16dd0e558971232de4880ce3655b731145209af2e22e65522f5e15695440e8af"
+    },
+    "run/calls/T02-lan-examples.json": {
+      "bytes": 8358,
+      "sha256": "89dc3f91204d432d5b7038f41349c9635d9d2fda8b4e0cc1e375af2e3984d65a"
+    },
+    "run/calls/T02-lan-framework.json": {
+      "bytes": 15904,
+      "sha256": "6dc3e33957bcb5b2f5cf14b8382f02bdf1642a19a8786616cdc6c6012f1b7ad4"
+    },
+    "run/calls/T02-shorekeeper-examples.json": {
+      "bytes": 8491,
+      "sha256": "0da34f878ef41ea3453d0cfc81baa5daf060106c5ce7b5605d91ac3b3c04c97e"
+    },
+    "run/calls/T02-shorekeeper-framework.json": {
+      "bytes": 16194,
+      "sha256": "abfeedd26640268390ae7802b69c49b712af5c608c630edee934fba23dd91f2f"
+    },
+    "run/calls/T03-lan-examples.json": {
+      "bytes": 8717,
+      "sha256": "99e617b6e6b81a2e9d116500307e0de8b6f0b9272c773557b013eb006e6fd8a2"
+    },
+    "run/calls/T03-lan-framework.json": {
+      "bytes": 16602,
+      "sha256": "2968620aaca332f3f88f5f2895caeaa7e2f9e92cdd7c045646c4c6dbc351c71a"
+    },
+    "run/calls/T03-shorekeeper-examples.json": {
+      "bytes": 8800,
+      "sha256": "02fc2014c479510f840cba8779ee35fe45c1def0f69d6b81f0100038fe4ed3b2"
+    },
+    "run/calls/T03-shorekeeper-framework.json": {
+      "bytes": 16561,
+      "sha256": "1825809ec8e961f793856c3662db27588fea47d4d058c0791f3f1207fb8b4c67"
+    },
+    "run/calls/T04-lan-examples.json": {
+      "bytes": 8317,
+      "sha256": "a39ad3fe510acee3db1ed4f290867040860745e71e046c0287475886d2060d6c"
+    },
+    "run/calls/T04-lan-framework.json": {
+      "bytes": 15689,
+      "sha256": "235b95ad4583424d36c14184448d1e421c306eec20d5c8e3c1d7c2d65d098321"
+    },
+    "run/calls/T04-shorekeeper-examples.json": {
+      "bytes": 8516,
+      "sha256": "e73e18064c67650cd876f5f9e0dbae61427e59344b2ea3ffb9c3cd28e2067e59"
+    },
+    "run/calls/T04-shorekeeper-framework.json": {
+      "bytes": 16074,
+      "sha256": "c277ced8ae961a01e0e79991701f4119649760be484711d6bc3d4884a2ef5c70"
+    },
+    "run/calls/T05-lan-examples.json": {
+      "bytes": 8389,
+      "sha256": "8556a57599a392408e79044019eafbf9be6e821dba1fcff2a5df15c873941799"
+    },
+    "run/calls/T05-lan-framework.json": {
+      "bytes": 15873,
+      "sha256": "b4039ac0213f678e33408b693a92d05d3585dfe6f6934aeb38f077892ccc50d1"
+    },
+    "run/calls/T05-shorekeeper-examples.json": {
+      "bytes": 8599,
+      "sha256": "25556d925d996ec4d725b349f0bb5d7c4bc69c020fad400d7e5a78bc9362cd06"
+    },
+    "run/calls/T05-shorekeeper-framework.json": {
+      "bytes": 16253,
+      "sha256": "47bfc328456bfc26a75f0213d443ec526038a40a969377868bddaf4112076613"
+    },
+    "run/calls/T06-lan-examples.json": {
+      "bytes": 8328,
+      "sha256": "908091976fa160f5f590fe360a9132d67bce7502164ca03fee966c79eacece89"
+    },
+    "run/calls/T06-lan-framework.json": {
+      "bytes": 15957,
+      "sha256": "d041265e198b05f46b9b9d78759fc7dfa45367144f93ee3c795268a5bd2b1c8c"
+    },
+    "run/calls/T06-shorekeeper-examples.json": {
+      "bytes": 8539,
+      "sha256": "ca218e33ea02e2bc5238462610a05e0f057194a949c895bbe79f5c57eda5b128"
+    },
+    "run/calls/T06-shorekeeper-framework.json": {
+      "bytes": 16107,
+      "sha256": "067fddc2555e14b855d76acc8f7b260b7dc358b425c2fbb3ae808de3e1da1963"
+    },
+    "run/calls/T07-lan-examples.json": {
+      "bytes": 8583,
+      "sha256": "1efb03db9863d935c0fd985643111920ead2b6916a4dc35f3c5e2d44c86d16ca"
+    },
+    "run/calls/T07-lan-framework.json": {
+      "bytes": 16643,
+      "sha256": "9c3b62b4234f419162b30354be5a1167a2eb54ac85c4d6eb34a9db3e208ec2ae"
+    },
+    "run/calls/T07-shorekeeper-examples.json": {
+      "bytes": 8776,
+      "sha256": "510689af8b6476ce4c46df4e41e085c556046004591b9f3a27bc2e626454e62e"
+    },
+    "run/calls/T07-shorekeeper-framework.json": {
+      "bytes": 16839,
+      "sha256": "1861a325100fb632431971efdcdaca3922eb6120c84deb4a7ab834e57fda7cf8"
+    },
+    "run/calls/T08-lan-examples.json": {
+      "bytes": 8513,
+      "sha256": "93d11a2f94bc9d9fc82409ed85ab809636499323f33014121aea6f14ada6aa19"
+    },
+    "run/calls/T08-lan-framework.json": {
+      "bytes": 16179,
+      "sha256": "acffa65b715eaf8b230051aa64b7a60e6300cfc8116b2e0be7c5c1ced2b30dfc"
+    },
+    "run/calls/T08-shorekeeper-examples.json": {
+      "bytes": 8746,
+      "sha256": "22435fc39f10c4260c35b4fa9a23d2e7f0cabc46cd31490e416d0f8dc5ddc699"
+    },
+    "run/calls/T08-shorekeeper-framework.json": {
+      "bytes": 16386,
+      "sha256": "1d209f116c8e4be4554a6bb22c7199e7729a01fdfebebb46d34745c8a558dda1"
+    },
+    "run/calls/T09-lan-examples.json": {
+      "bytes": 8837,
+      "sha256": "b9e20f81ae66fdff3260397468f1c0448f3dadc772827c5de67ad1ceaf307852"
+    },
+    "run/calls/T09-lan-framework.json": {
+      "bytes": 17103,
+      "sha256": "865f82a685e7c9095f8706cf601c87187e057ac4cf11c1ce144c21eb2732d355"
+    },
+    "run/calls/T09-shorekeeper-examples.json": {
+      "bytes": 8925,
+      "sha256": "6ba48bd06ae5aad99f721d69132c19e5849a83bc05acb796fd1fbd300cb44e4e"
+    },
+    "run/calls/T09-shorekeeper-framework.json": {
+      "bytes": 17655,
+      "sha256": "f18841855a9042d72c4ef3ad94b28daa5eb85c11feed1ddece507d7143806754"
+    },
+    "run/calls/T10-lan-examples.json": {
+      "bytes": 8228,
+      "sha256": "4fbb9b67d63683d1d13a25c7d0eeb46eef09ce9743ec4cdf83cdfded6b790e0e"
+    },
+    "run/calls/T10-lan-framework.json": {
+      "bytes": 15725,
+      "sha256": "2fe0d25909522105edaee0728df846bcc4e8d8794b76a4cedcdc54d93ddb391a"
+    },
+    "run/calls/T10-shorekeeper-examples.json": {
+      "bytes": 8487,
+      "sha256": "d5f36391997a1ee39b951a053d46f7633c03b23cc158f69609494a2385c8dc58"
+    },
+    "run/calls/T10-shorekeeper-framework.json": {
+      "bytes": 16123,
+      "sha256": "d8ec6319725351321beba16acf98360d8e7be126f5201981bc9f092ca3e0739d"
+    },
+    "run/calls/T11-lan-examples.json": {
+      "bytes": 9262,
+      "sha256": "c5cfcdb21d508a0861197699b94757e32149f50a88a64389adc73c064ba5e779"
+    },
+    "run/calls/T11-lan-framework.json": {
+      "bytes": 17664,
+      "sha256": "6af3d62eca4a6810af4f545fc0951704babc2edebad54c7905a2ef4fa2f8852b"
+    },
+    "run/calls/T11-shorekeeper-examples.json": {
+      "bytes": 9564,
+      "sha256": "840f67621859ae2072eabccd86175db8265a5c34c7607a0d8a64fff4957918ec"
+    },
+    "run/calls/T11-shorekeeper-framework.json": {
+      "bytes": 18166,
+      "sha256": "525c475dd7a8a3868fbc2f36a02c8af13808d56027be3b7ba17bdc05f1610bae"
+    },
+    "run/calls/T12-lan-examples.json": {
+      "bytes": 8537,
+      "sha256": "c34a866377170c19603bd066bbd036a7f4d3d12cf9536cf61ba575b75fbc4513"
+    },
+    "run/calls/T12-lan-framework.json": {
+      "bytes": 15835,
+      "sha256": "0960e330d608070af0fc4b3397450aabc646eab009f0b8099c26d75873722734"
+    },
+    "run/calls/T12-shorekeeper-examples.json": {
+      "bytes": 8760,
+      "sha256": "b2d91ff5240ac1f523bdde713268468e489c7ab9577dd1b4fb3f18e49ae0f661"
+    },
+    "run/calls/T12-shorekeeper-framework.json": {
+      "bytes": 15856,
+      "sha256": "e076dbe39a9625a7daeb1f28256ebf1786554ae3e0763fe6313645a580502a6f"
+    },
+    "run/calls/T13-lan-examples.json": {
+      "bytes": 9053,
+      "sha256": "c9e23975201cd8a4f5776bce619c41206e8a389617ca999358805e1bbce41f48"
+    },
+    "run/calls/T13-lan-framework.json": {
+      "bytes": 16738,
+      "sha256": "3cbd8b6570d25271c8b5a61830ed7128e634defb041902bd503de61712123aa4"
+    },
+    "run/calls/T13-shorekeeper-examples.json": {
+      "bytes": 9264,
+      "sha256": "c56212f32e701832a0d60977ecf22b36fb70a9894622154f68a5900780e95da2"
+    },
+    "run/calls/T13-shorekeeper-framework.json": {
+      "bytes": 16876,
+      "sha256": "7d4ab99a22b4497df39885475896cf5872fc52f6073d8fee1b788b89b26d0572"
+    },
+    "run/calls/T14-lan-examples.json": {
+      "bytes": 9356,
+      "sha256": "e75ad6757420d7f03a7c08f5932bab68ae30bd9bad9740d8f82cbf62f91520c2"
+    },
+    "run/calls/T14-lan-framework.json": {
+      "bytes": 17509,
+      "sha256": "ab288acf20c190c535e44d62262f61733999c4900f68ce3adaef526652db6447"
+    },
+    "run/calls/T14-shorekeeper-examples.json": {
+      "bytes": 9556,
+      "sha256": "143532cfeeb2f6b0e06ce7bff980f2643d7c29f1a06daa95071e34fb00404670"
+    },
+    "run/calls/T14-shorekeeper-framework.json": {
+      "bytes": 17911,
+      "sha256": "e6d66214f770a071af00383588d9e3aa8632b63cf9865b03a18a057cbbf584c1"
+    },
+    "run/calls/T15-lan-examples.json": {
+      "bytes": 9083,
+      "sha256": "c9a1552a8ea8c4b06c9c655d03bdf94d47e7cc1041c265055537a050bcaadedc"
+    },
+    "run/calls/T15-lan-framework.json": {
+      "bytes": 17506,
+      "sha256": "aac5d69b6abcced068945cd7abc7207c27c83a74393f069ffe01b1465e4ec3ed"
+    },
+    "run/calls/T15-shorekeeper-examples.json": {
+      "bytes": 9293,
+      "sha256": "883b2a17a6ea3cc7c98804804f47300f032f1ef3d6b42afa2578c327b6c7479e"
+    },
+    "run/calls/T15-shorekeeper-framework.json": {
+      "bytes": 17180,
+      "sha256": "8d763e136acafe41c8f09ee47637c8386065d7112b422c6b81d018cbc201a362"
+    },
+    "run/calls/T16-lan-examples.json": {
+      "bytes": 10239,
+      "sha256": "5b8cf789eaa6dfdc8204274078c803ea8095eddd57419b4a0939c943f2ef2d67"
+    },
+    "run/calls/T16-lan-framework.json": {
+      "bytes": 17767,
+      "sha256": "5b006e1f59952e7bde8e4a1300b9cabf36d4054a6ea554d1dbc9dc1b9d7122c2"
+    },
+    "run/calls/T16-shorekeeper-examples.json": {
+      "bytes": 10450,
+      "sha256": "f37afe554ce295221b33c494fdbd204b868f72ef2facc9746646ca1885ff4b9a"
+    },
+    "run/calls/T16-shorekeeper-framework.json": {
+      "bytes": 18229,
+      "sha256": "5218eeaeedf61aaec13227e802d6c82b48f5fc6a5a63e8aac5cd39cef60ee68b"
+    },
+    "run/calls/T17-lan-examples.json": {
+      "bytes": 10313,
+      "sha256": "25e493c682222aaa9d7f2e918dec551fc6f1b38f74e8487c461507a5cf4875d8"
+    },
+    "run/calls/T17-lan-framework.json": {
+      "bytes": 18027,
+      "sha256": "c5911114bd8a7c1af9a473e8270d169838d98b46aa02cf457bedba8f4da4f427"
+    },
+    "run/calls/T17-shorekeeper-examples.json": {
+      "bytes": 10496,
+      "sha256": "cd8467426274ed0737ba8f8214fd911948603633e3845b96f3432bf72766521c"
+    },
+    "run/calls/T17-shorekeeper-framework.json": {
+      "bytes": 18237,
+      "sha256": "c3ebdc26c6f25b3cd13752298cf0ff990778f366f77194644980d937054c84e9"
+    },
+    "run/calls/T18-lan-examples.json": {
+      "bytes": 10267,
+      "sha256": "df4b67211a00ba817dae3026f1aebd45af743976f8acb638c67aa8da128c0f12"
+    },
+    "run/calls/T18-lan-framework.json": {
+      "bytes": 18199,
+      "sha256": "fac43721cb17d65bcb4d3e60d52493ea55dbe0fda3de0ffa7256b84890f11556"
+    },
+    "run/calls/T18-shorekeeper-examples.json": {
+      "bytes": 10508,
+      "sha256": "56176c45e67e567aad32f6c2f06d519f9658293e959b4cb17c7d000c629c8152"
+    },
+    "run/calls/T18-shorekeeper-framework.json": {
+      "bytes": 18263,
+      "sha256": "99a9af6f74856ab201dd770a526f6a0dd60b7583fe4d9eeffb8748f1df12d408"
+    },
+    "run/calls/T19-lan-examples.json": {
+      "bytes": 9408,
+      "sha256": "649f74a9823816ad84357829025061ba10af124dca63ead9d97ac21e4ded04d6"
+    },
+    "run/calls/T19-lan-framework.json": {
+      "bytes": 17124,
+      "sha256": "9a40627baf82a045eb73e40ea11a466489f9e6de9da64b23e7d43c6e87a4918e"
+    },
+    "run/calls/T19-shorekeeper-examples.json": {
+      "bytes": 9617,
+      "sha256": "7a57e145e1e66ed56c4ce7f12f712eb945ca6a504efc7caf0fb849c34a0d572c"
+    },
+    "run/calls/T19-shorekeeper-framework.json": {
+      "bytes": 17338,
+      "sha256": "9af3ff8dd597440bb386ccad02adca58381a697beb5e22d1178785aa9bb17c2a"
+    },
+    "run/calls/T20-lan-examples.json": {
+      "bytes": 9052,
+      "sha256": "90b60a92f67da5b2f91ffb88bbfc57a48cdd3e1bb6bc4ab641bc8c6ba2394b2e"
+    },
+    "run/calls/T20-lan-framework.json": {
+      "bytes": 16169,
+      "sha256": "ec77265a4613d54cc81e2e6ee79641cc5ae66f7e6cc2d95df3938717ea6dbdfa"
+    },
+    "run/calls/T20-shorekeeper-examples.json": {
+      "bytes": 9263,
+      "sha256": "9d2608e2417e8f8f96073ea1feb268739125b16d7331d5472ae5ca3df04f2dc3"
+    },
+    "run/calls/T20-shorekeeper-framework.json": {
+      "bytes": 16643,
+      "sha256": "f322937c5303564d41595ef9f3bda369e1aed900cfa78b9f5c24f25f5ea4375f"
+    },
+    "run/calls/T21-lan-examples.json": {
+      "bytes": 9044,
+      "sha256": "b6ac4ec6de756f0d8af872e592a1a8ab7a71bff2040be2ba96fca0291d7d96ce"
+    },
+    "run/calls/T21-lan-framework.json": {
+      "bytes": 16639,
+      "sha256": "77a411d7c58713021371c21e990e7fc015616fc6fe2c5ca78741d744bc36dc18"
+    },
+    "run/calls/T21-shorekeeper-examples.json": {
+      "bytes": 9249,
+      "sha256": "aa42b9bfc089cb3ca0f63be1f793621c7d2774741e237f78ee1be7fc468ae032"
+    },
+    "run/calls/T21-shorekeeper-framework.json": {
+      "bytes": 16456,
+      "sha256": "d903168fd2bc787b1fea4e384aa6fe19d6e8841346dab90f34de1f198f87ff54"
+    },
+    "run/calls/T22-lan-examples.json": {
+      "bytes": 8343,
+      "sha256": "e22944be23898c675d8bbaa02a52c77223ad058ef0f22798430f2e566e9e3848"
+    },
+    "run/calls/T22-lan-framework.json": {
+      "bytes": 15927,
+      "sha256": "e82042ddc30ed6c79af262653bcdc3cb05e2c471f85e4cce791207711332d8b2"
+    },
+    "run/calls/T22-shorekeeper-examples.json": {
+      "bytes": 8541,
+      "sha256": "53ff7bb3195394ac243e1ab28055c62998753a8d8feeb23229f8477cec23d271"
+    },
+    "run/calls/T22-shorekeeper-framework.json": {
+      "bytes": 16086,
+      "sha256": "40983bf309be5652189428cb4d0794cea7bcf972199c7f37069b0bb6c2cdb90e"
+    },
+    "run/calls/T23-lan-examples.json": {
+      "bytes": 8769,
+      "sha256": "aafe8d8633c6bae3f08366331186a5cc172f462bf1cd2655c22e952a5b9d2171"
+    },
+    "run/calls/T23-lan-framework.json": {
+      "bytes": 18712,
+      "sha256": "1505a0572f88072852b4de508871c4d345cd10878fac7b2bf76a5034cc5810cb"
+    },
+    "run/calls/T23-shorekeeper-examples.json": {
+      "bytes": 9022,
+      "sha256": "994c1068f7caed7cf20bf0cca4ec5eea231197a669216015ae585f4e16ad3eac"
+    },
+    "run/calls/T23-shorekeeper-framework.json": {
+      "bytes": 17715,
+      "sha256": "27f11063431a7a24d307ca5581078534931476dbc48083f43f7d9134c4dc24a9"
+    },
+    "run/calls/T24-lan-examples.json": {
+      "bytes": 8493,
+      "sha256": "0b40884dc8ce09fcb43bf7e430740f6b2b39007a76f93957df053343cdcb6bbd"
+    },
+    "run/calls/T24-lan-framework.json": {
+      "bytes": 16668,
+      "sha256": "d036639157332f9933b849548792fcccdcc4f2afdccb9d996b761d1a098d8970"
+    },
+    "run/calls/T24-shorekeeper-examples.json": {
+      "bytes": 8741,
+      "sha256": "6410d4b1c27b3811e6ad4cca3d856f231278b0ad559baff48ef918fb893914dc"
+    },
+    "run/calls/T24-shorekeeper-framework.json": {
+      "bytes": 16594,
+      "sha256": "cb64d8d48f2a2e358d950ae64e3974c7aa6418b62d5fbd38c69e9b6fe840e949"
+    },
+    "run/manifest.json": {
+      "bytes": 7785,
+      "sha256": "9f5bdfc1f4c963a1b8d6e804bc92a47077d88a170a822e72c7e94d9f315cd707"
+    },
+    "run/raw_calls.json.gz": {
+      "bytes": 63182,
+      "sha256": "80f16c1361fa29dd3e43c0d3161638b466b8f86e1ce5890b4f251d3eaf745429"
+    },
+    "run/results.json": {
+      "bytes": 3622052,
+      "sha256": "76c83aeb396cfe48aabc6bac95c05808dfa8ef7d4f4566b7c70f62ea3afc3bca"
+    },
+    "selection.json": {
+      "bytes": 1303,
+      "sha256": "fb30ded7bc1f938bbcae715f2377d3a2f32f8604f759fced614b2cdb66233f34"
+    },
+    "summary.json": {
+      "bytes": 60044,
+      "sha256": "c744b0a317059858ebb6f817dd80f5ff79c46e6926ea2b309847709bc1ba0c24"
+    },
+    "supplementary.py": {
+      "bytes": 2313,
+      "sha256": "d9ec716540e7c18161373c85e04282597a6f9fce2bb3f48334f40da3af291a10"
+    },
+    "supplementary_summary.json": {
+      "bytes": 3391,
+      "sha256": "3015ed99148953822aa4fd0371dc2dd264eed5bcd95b949f8b28d7fc27d02f31"
+    },
+    "test_benchmark.py": {
+      "bytes": 3617,
+      "sha256": "8372cc1c06baf5e7f5206083ca37885c17edb541b804500dde23c3fd543812f1"
+    },
+    "transcripts.md": {
+      "bytes": 21735,
+      "sha256": "38185c8dced2ee94c85afdb3e359b884731752d0161a7dc4a7aeb6b45b7226f8"
+    }
+  }
+}

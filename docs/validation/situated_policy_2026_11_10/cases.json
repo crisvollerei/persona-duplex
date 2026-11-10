@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "S01",
+    "topic": "terrace_labels",
+    "context": "露台种植记录有四盆植物，每盆需要两枚标签，合计八枚。标签尚未制作，植物品种尚未逐盆核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+    "facts": {
+      "containers": 4,
+      "labels_per_container": 2,
+      "total_labels": 8,
+      "labels_made": false,
+      "plant_names_verified": false
+    },
+    "initial_state": {
+      "draft_id": "D01",
+      "draft_title": "春芽标签",
+      "draft_status": "draft",
+      "draft_revision": 0,
+      "advice_permission": "allow",
+      "proposal_note": "",
+      "last_action_note": "",
+      "acknowledged_revision": 0
+    },
+    "turns": [
+      {
+        "id": "T1",
+        "user": "四盆植物的标签都还没做，品种也没核实。有点乱，我刚把数量记下来。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "你说现在有点乱。标签和品种信息都还在待处理。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "四盆植物共需八枚标签；标签未制作，品种仍待核实。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先给四盆植物暂编一至四号；其余留待核实。",
+            "effects": {
+              "proposal_note": "给四盆植物暂编一至四号"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "expected_facts": [
+          "四盆植物共需八枚标签；标签未制作，品种仍待核实。"
+        ],
+        "user_update": {},
+        "boundary": {}
+      },
+      {
+        "id": "T2",
+        "user": "现在请给我一个整理植物标签的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "四盆植物共需八枚标签；标签未制作，品种仍待核实。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先分清已知数量与待核实品种，再按盆号整理标签草稿。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先分清已知数量与待核实品种，再按盆号整理标签草稿。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "expected_facts": [
+          "方案仍为草案，未执行。"
+        ],
+        "user_update": {},
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        }
+      },
+      {
+        "id": "T3",
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚标签？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "8枚标签。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计8枚标签。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计8枚标签。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计8枚标签。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "expected_facts": [
+          "8枚标签。"
+        ],
+        "user_update": {
+          "advice_permission": "deny"
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        }
+      },
+      {
+        "id": "T4",
+        "user": "把模拟备忘D01的草案标题从‘春芽标签’改成‘初冬标签’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D01的标题现为‘初冬标签’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：初冬标签；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D01的标题现为‘初冬标签’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D01的标题现为‘初冬标签’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "expected_facts": [
+          "标题为初冬标签，不是春芽标签。",
+          "状态仍是草案，未执行现实事务。"
+        ],
+        "user_update": {
+          "draft_title": "初冬标签",
+          "draft_status": "draft",
+          "draft_revision": 1
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        }
+      }
+    ]
+  },
+  {
+    "id": "S02",
+    "topic": "sky_atlas",
+    "context": "星图资料有五个分区，每区三页，总计十五页。纸页还没有装入页夹，星图使用的版本尚未核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+    "facts": {
+      "sections": 5,
+      "pages_per_section": 3,
+      "total_pages": 15,
+      "inserted": false,
+      "edition_verified": false
+    },
+    "initial_state": {
+      "draft_id": "D02",
+      "draft_title": "夜空索引",
+      "draft_status": "draft",
+      "draft_revision": 0,
+      "advice_permission": "allow",
+      "proposal_note": "",
+      "last_action_note": "",
+      "acknowledged_revision": 0
+    },
+    "turns": [
+      {
+        "id": "T1",
+        "user": "五个分区的纸页都还没装夹，版本也没核对。我有点烦，先把这些告诉你。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "装夹和核对都还挂着，你说这事让自己有点烦。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "五区各三页，共十五页；尚未装夹，版本也未核实。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先按五个分区分开放置纸页；其余留待核实。",
+            "effects": {
+              "proposal_note": "按五个分区分开放置纸页"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "expected_facts": [
+          "五区各三页，共十五页；尚未装夹，版本也未核实。"
+        ],
+        "user_update": {},
+        "boundary": {}
+      },
+      {
+        "id": "T2",
+        "user": "现在请给我一个整理星图资料的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "五区各三页，共十五页；尚未装夹，版本也未核实。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，按五个分区分开放置纸页；第二步，核实版本后再装入页夹。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，按五个分区分开放置纸页；第二步，核实版本后再装入页夹。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先列出五区的页数，再给未核实的版本单独留一栏。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先列出五区的页数，再给未核实的版本单独留一栏。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "expected_facts": [
+          "方案仍为草案，未执行。"
+        ],
+        "user_update": {},
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        }
+      },
+      {
+        "id": "T3",
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少页？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "15页。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计15页。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计15页。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计15页。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "expected_facts": [
+          "15页。"
+        ],
+        "user_update": {
+          "advice_permission": "deny"
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        }
+      },
+      {
+        "id": "T4",
+        "user": "把模拟备忘D02的草案标题从‘夜空索引’改成‘冬夜索引’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D02的标题现为‘冬夜索引’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：冬夜索引；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D02的标题现为‘冬夜索引’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D02的标题现为‘冬夜索引’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "expected_facts": [
+          "标题为冬夜索引，不是夜空索引。",
+          "状态仍是草案，未执行现实事务。"
+        ],
+        "user_update": {
+          "draft_title": "冬夜索引",
+          "draft_status": "draft",
+          "draft_revision": 1
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        }
+      }
+    ]
+  },
+  {
+    "id": "S03",
+    "topic": "stamp_packets",
+    "context": "邮票收集记录有六个小袋，每袋四枚，共二十四枚。邮票尚未贴册，发行年份尚未逐枚核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+    "facts": {
+      "packets": 6,
+      "stamps_per_packet": 4,
+      "total_stamps": 24,
+      "mounted": false,
+      "issue_years_verified": false
+    },
+    "initial_state": {
+      "draft_id": "D03",
+      "draft_title": "远方小集",
+      "draft_status": "draft",
+      "draft_revision": 0,
+      "advice_permission": "allow",
+      "proposal_note": "",
+      "last_action_note": "",
+      "acknowledged_revision": 0
+    },
+    "turns": [
+      {
+        "id": "T1",
+        "user": "六袋邮票还没贴册，年份也没查完。我觉得有点拖沓，这是目前的进度。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "年份没核实、贴册也没开始，这份拖着的感觉你已经说出来了。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "六袋各四枚，合计二十四枚；贴册和年份核实都尚未完成。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先依现有六个小袋分别做编号；其余留待核实。",
+            "effects": {
+              "proposal_note": "依现有六个小袋分别做编号"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "expected_facts": [
+          "六袋各四枚，合计二十四枚；贴册和年份核实都尚未完成。"
+        ],
+        "user_update": {},
+        "boundary": {}
+      },
+      {
+        "id": "T2",
+        "user": "现在请给我一个整理邮票资料的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "六袋各四枚，合计二十四枚；贴册和年份核实都尚未完成。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，依现有六个小袋分别做编号；第二步，核实每枚年份后再决定贴册顺序。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先写清六袋各四枚的数量，再把年份未核实的项目保留为待查。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先写清六袋各四枚的数量，再把年份未核实的项目保留为待查。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "expected_facts": [
+          "方案仍为草案，未执行。"
+        ],
+        "user_update": {},
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        }
+      },
+      {
+        "id": "T3",
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚邮票？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "24枚邮票。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计24枚邮票。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计24枚邮票。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计24枚邮票。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "expected_facts": [
+          "24枚邮票。"
+        ],
+        "user_update": {
+          "advice_permission": "deny"
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        }
+      },
+      {
+        "id": "T4",
+        "user": "把模拟备忘D03的草案标题从‘远方小集’改成‘邮票待编’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D03的标题现为‘邮票待编’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：邮票待编；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D03的标题现为‘邮票待编’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D03的标题现为‘邮票待编’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "expected_facts": [
+          "标题为邮票待编，不是远方小集。",
+          "状态仍是草案，未执行现实事务。"
+        ],
+        "user_update": {
+          "draft_title": "邮票待编",
+          "draft_status": "draft",
+          "draft_revision": 1
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        }
+      }
+    ]
+  },
+  {
+    "id": "S04",
+    "topic": "paper_parts",
+    "context": "纸模材料有八套，每套五张零件纸，共四十张。裁切尚未开始，零件编号尚未逐张核实。草案标题只是备忘名称，不改变模型内容。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+    "facts": {
+      "sets": 8,
+      "sheets_per_set": 5,
+      "total_sheets": 40,
+      "cutting_started": false,
+      "part_numbers_verified": false
+    },
+    "initial_state": {
+      "draft_id": "D04",
+      "draft_title": "城堡部件",
+      "draft_status": "draft",
+      "draft_revision": 0,
+      "advice_permission": "allow",
+      "proposal_note": "",
+      "last_action_note": "",
+      "acknowledged_revision": 0
+    },
+    "turns": [
+      {
+        "id": "T1",
+        "user": "八套零件纸还没裁，编号也没检查齐。我有点累，刚把材料数清。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "材料刚数清，裁切和核对还排着；你已经有点累了。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "八套各五张，总计四十张；裁切未开始，编号未核实。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先按八套分别归放零件纸；其余留待核实。",
+            "effects": {
+              "proposal_note": "按八套分别归放零件纸"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "expected_facts": [
+          "八套各五张，总计四十张；裁切未开始，编号未核实。"
+        ],
+        "user_update": {},
+        "boundary": {}
+      },
+      {
+        "id": "T2",
+        "user": "现在请给我一个整理纸模材料的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "八套各五张，总计四十张；裁切未开始，编号未核实。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，按八套分别归放零件纸；第二步，核对编号后再开始裁切。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，按八套分别归放零件纸；第二步，核对编号后再开始裁切。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先记录每套五张的清点结果，再单列尚未核对的编号。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先记录每套五张的清点结果，再单列尚未核对的编号。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "expected_facts": [
+          "方案仍为草案，未执行。"
+        ],
+        "user_update": {},
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        }
+      },
+      {
+        "id": "T3",
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少张零件纸？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "40张零件纸。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计40张零件纸。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计40张零件纸。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计40张零件纸。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "expected_facts": [
+          "40张零件纸。"
+        ],
+        "user_update": {
+          "advice_permission": "deny"
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        }
+      },
+      {
+        "id": "T4",
+        "user": "把模拟备忘D04的草案标题从‘城堡部件’改成‘桥梁部件’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D04的标题现为‘桥梁部件’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：桥梁部件；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D04的标题现为‘桥梁部件’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D04的标题现为‘桥梁部件’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "expected_facts": [
+          "标题为桥梁部件，不是城堡部件。",
+          "状态仍是草案，未执行现实事务。"
+        ],
+        "user_update": {
+          "draft_title": "桥梁部件",
+          "draft_status": "draft",
+          "draft_revision": 1
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        }
+      }
+    ]
+  },
+  {
+    "id": "S05",
+    "topic": "fabric_cards",
+    "context": "织物色卡有三册，每册九张，共二十七张。色卡尚未归档，最终配色方案还没有选择。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+    "facts": {
+      "booklets": 3,
+      "cards_per_booklet": 9,
+      "total_cards": 27,
+      "archived": false,
+      "palette_selected": false
+    },
+    "initial_state": {
+      "draft_id": "D05",
+      "draft_title": "暖色记录",
+      "draft_status": "draft",
+      "draft_revision": 0,
+      "advice_permission": "allow",
+      "proposal_note": "",
+      "last_action_note": "",
+      "acknowledged_revision": 0
+    },
+    "turns": [
+      {
+        "id": "T1",
+        "user": "三册色卡都还没归档，配色也没定。我有些犹豫，先记下这些状态。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "配色还没选，归档也没完成；你说自己还有些犹豫。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "三册各九张，共二十七张；色卡未归档，配色仍待选择。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先先按三册保留原有分组；其余留待核实。",
+            "effects": {
+              "proposal_note": "先按三册保留原有分组"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "expected_facts": [
+          "三册各九张，共二十七张；色卡未归档，配色仍待选择。"
+        ],
+        "user_update": {},
+        "boundary": {}
+      },
+      {
+        "id": "T2",
+        "user": "现在请给我一个整理织物色卡的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "三册各九张，共二十七张；色卡未归档，配色仍待选择。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，先按三册保留原有分组；第二步，选定配色后再决定归档位置。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，先按三册保留原有分组；第二步，选定配色后再决定归档位置。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先分开记数量与配色状态，再把未选方案保持为待定。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先分开记数量与配色状态，再把未选方案保持为待定。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "expected_facts": [
+          "方案仍为草案，未执行。"
+        ],
+        "user_update": {},
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        }
+      },
+      {
+        "id": "T3",
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少张色卡？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "27张色卡。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计27张色卡。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计27张色卡。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计27张色卡。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "expected_facts": [
+          "27张色卡。"
+        ],
+        "user_update": {
+          "advice_permission": "deny"
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        }
+      },
+      {
+        "id": "T4",
+        "user": "把模拟备忘D05的草案标题从‘暖色记录’改成‘色卡记录’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D05的标题现为‘色卡记录’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：色卡记录；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D05的标题现为‘色卡记录’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D05的标题现为‘色卡记录’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "expected_facts": [
+          "标题为色卡记录，不是暖色记录。",
+          "状态仍是草案，未执行现实事务。"
+        ],
+        "user_update": {
+          "draft_title": "色卡记录",
+          "draft_status": "draft",
+          "draft_revision": 1
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        }
+      }
+    ]
+  },
+  {
+    "id": "S06",
+    "topic": "sound_markers",
+    "context": "声音素材有七段，每段计划做两个标记，合计十四个标记。标记尚未写入文件，录音日期还没有核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+    "facts": {
+      "clips": 7,
+      "markers_per_clip": 2,
+      "total_markers": 14,
+      "markers_written": false,
+      "dates_verified": false
+    },
+    "initial_state": {
+      "draft_id": "D06",
+      "draft_title": "晨间片段",
+      "draft_status": "draft",
+      "draft_revision": 0,
+      "advice_permission": "allow",
+      "proposal_note": "",
+      "last_action_note": "",
+      "acknowledged_revision": 0
+    },
+    "turns": [
+      {
+        "id": "T1",
+        "user": "七段素材的标记都还没写，日期也没确认。我有点分心，刚整理出这些数字。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "标记和日期都还待处理，你也说自己有点分心。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "七段各两个标记，合计十四个；标记未写入，日期未核实。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先先为七段素材编临时序号；其余留待核实。",
+            "effects": {
+              "proposal_note": "先为七段素材编临时序号"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "expected_facts": [
+          "七段各两个标记，合计十四个；标记未写入，日期未核实。"
+        ],
+        "user_update": {},
+        "boundary": {}
+      },
+      {
+        "id": "T2",
+        "user": "现在请给我一个整理声音素材的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "七段各两个标记，合计十四个；标记未写入，日期未核实。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，先为七段素材编临时序号；第二步，核实日期后再写入标记。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，先为七段素材编临时序号；第二步，核实日期后再写入标记。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先记清每段两个的标记计划，再把日期未核实的部分单列。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先记清每段两个的标记计划，再把日期未核实的部分单列。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "expected_facts": [
+          "方案仍为草案，未执行。"
+        ],
+        "user_update": {},
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        }
+      },
+      {
+        "id": "T3",
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少个标记？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "14个标记。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计14个标记。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计14个标记。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计14个标记。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "expected_facts": [
+          "14个标记。"
+        ],
+        "user_update": {
+          "advice_permission": "deny"
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        }
+      },
+      {
+        "id": "T4",
+        "user": "把模拟备忘D06的草案标题从‘晨间片段’改成‘声音片段’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D06的标题现为‘声音片段’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：声音片段；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D06的标题现为‘声音片段’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D06的标题现为‘声音片段’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "expected_facts": [
+          "标题为声音片段，不是晨间片段。",
+          "状态仍是草案，未执行现实事务。"
+        ],
+        "user_update": {
+          "draft_title": "声音片段",
+          "draft_status": "draft",
+          "draft_revision": 1
+        },
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        }
+      }
+    ]
+  }
+]

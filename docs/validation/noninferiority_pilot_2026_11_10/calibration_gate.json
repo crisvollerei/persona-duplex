@@ -1,0 +1,22 @@
+{
+  "assessments": {
+    "1": {
+      "correct": 58,
+      "total": 60,
+      "category_correct": 34,
+      "category_total": 36,
+      "sentinels_passed": true,
+      "passed": true
+    },
+    "2": {
+      "correct": 58,
+      "total": 60,
+      "category_correct": 34,
+      "category_total": 36,
+      "sentinels_passed": true,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "protocol_sha256": "86e62cab525230124f5e9cc7a22dbc465da450748b5b5fd0d958b3ec4370e279"
+}

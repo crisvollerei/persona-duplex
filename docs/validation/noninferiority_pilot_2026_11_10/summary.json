@@ -1,0 +1,2224 @@
+{
+  "study_id": "noninferiority_pilot_2026_11_10",
+  "version": 1,
+  "analysis": {
+    "quality_margin": 0.3,
+    "alpha_one_sided": 0.05,
+    "primary_interval": "paired t by situation",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 2026111007,
+    "risk_margin": 0.05,
+    "risk_interval": "one-sided exact Clopper-Pearson on framework-only case events",
+    "missing_quality": "framework=1, strong_prompt=5; complete cases also shown",
+    "joint_primary": "All persona x metric x coder lower bounds must exceed -0.3.",
+    "ordinary_failure": "Unknown is reported separately and tested as unfavorable for framework in sensitivity."
+  },
+  "costs": {
+    "actual_requests": 132,
+    "stages": {
+      "development": 36,
+      "run": 96
+    },
+    "statuses": {
+      "ok": 132
+    },
+    "observed_response_models": {
+      "deepseek-flash": 132
+    },
+    "token_sums": {
+      "prompt_tokens": 301018,
+      "completion_tokens": 9099,
+      "total_tokens": 310117
+    },
+    "usage_known_calls": 132,
+    "usage_missing_calls": 0,
+    "main_methods": {
+      "framework": {
+        "actual_requests": 48,
+        "usage_missing_calls": 0,
+        "prompt_tokens": {
+          "n": 48,
+          "total": 158570.0,
+          "mean": 3303.5416666666665,
+          "median": 3226.5,
+          "p95": 3664.65
+        },
+        "completion_tokens": {
+          "n": 48,
+          "total": 7693.0,
+          "mean": 160.27083333333334,
+          "median": 147.0,
+          "p95": 272.65
+        },
+        "total_tokens": {
+          "n": 48,
+          "total": 166263.0,
+          "mean": 3463.8125,
+          "median": 3408.5,
+          "p95": 3811.1
+        },
+        "elapsed_s": {
+          "n": 48,
+          "total": 101.62121199956164,
+          "mean": 2.117108583324201,
+          "median": 1.9595481500728056,
+          "p95": 3.3476463400176724
+        },
+        "first_token_s": {
+          "n": 0,
+          "total": null,
+          "mean": null,
+          "median": null,
+          "p95": null
+        },
+        "endpoint_elapsed_s": {
+          "n": 48,
+          "total": 98.09545810008422,
+          "mean": 2.043655377085088,
+          "median": 1.882700499962084,
+          "p95": 3.2744646249222567
+        }
+      },
+      "strong_prompt": {
+        "actual_requests": 48,
+        "usage_missing_calls": 0,
+        "prompt_tokens": {
+          "n": 48,
+          "total": 84926.0,
+          "mean": 1769.2916666666667,
+          "median": 1696.0,
+          "p95": 2130.2
+        },
+        "completion_tokens": {
+          "n": 48,
+          "total": 905.0,
+          "mean": 18.854166666666668,
+          "median": 16.0,
+          "p95": 43.65
+        },
+        "total_tokens": {
+          "n": 48,
+          "total": 85831.0,
+          "mean": 1788.1458333333333,
+          "median": 1715.0,
+          "p95": 2147.5499999999997
+        },
+        "elapsed_s": {
+          "n": 48,
+          "total": 49.33668619999662,
+          "mean": 1.0278476291665963,
+          "median": 1.0417880001477897,
+          "p95": 1.3885391000425442
+        },
+        "first_token_s": {
+          "n": 0,
+          "total": null,
+          "mean": null,
+          "median": null,
+          "p95": null
+        },
+        "endpoint_elapsed_s": {
+          "n": 48,
+          "total": 49.251708700787276,
+          "mean": 1.026077264599735,
+          "median": 1.0402146499836817,
+          "p95": 1.3867498201783746
+        }
+      }
+    },
+    "scope": "Recorded endpoint generation only; separate automated review computation is not measured here."
+  },
+  "main": {
+    "planned_cases": 24,
+    "planned_profiles": 2,
+    "planned_generation_units": 96,
+    "observed_units": 96,
+    "statuses": {
+      "ok": 95,
+      "empty_reply": 1
+    },
+    "missing_units": 0,
+    "mechanical_checks": {
+      "framework": {
+        "passed": 38,
+        "failed": 10
+      },
+      "strong_prompt": {
+        "passed": 39,
+        "failed": 9
+      }
+    },
+    "protocol_validity": {
+      "framework": {
+        "valid": 47,
+        "invalid": 1
+      },
+      "strong_prompt": {
+        "not_applicable": 48
+      }
+    },
+    "primary_quality": [
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "margin": 0.3,
+        "missing_pairs": 0,
+        "n": 24,
+        "mean_difference": -0.16666666666666666,
+        "t_lower_95": -0.4523119212911746,
+        "t_upper_90": 0.1189785879578413,
+        "bootstrap_lower_95": -0.4583333333333333,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -3.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "complete_case": {
+          "n": 24,
+          "mean_difference": -0.16666666666666666,
+          "t_lower_95": -0.4523119212911746,
+          "t_upper_90": 0.1189785879578413,
+          "bootstrap_lower_95": -0.4583333333333333,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -3.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.5,
+          "strong_prompt": 4.666666666666667
+        },
+        "distributions": {
+          "framework": {
+            "5": 18,
+            "2": 1,
+            "3": 4,
+            "4": 1
+          },
+          "strong_prompt": {
+            "4": 2,
+            "5": 19,
+            "3": 3
+          }
+        }
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "margin": 0.3,
+        "missing_pairs": 0,
+        "n": 24,
+        "mean_difference": -0.16666666666666666,
+        "t_lower_95": -0.4523119212911746,
+        "t_upper_90": 0.1189785879578413,
+        "bootstrap_lower_95": -0.4583333333333333,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -3.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "complete_case": {
+          "n": 24,
+          "mean_difference": -0.16666666666666666,
+          "t_lower_95": -0.4523119212911746,
+          "t_upper_90": 0.1189785879578413,
+          "bootstrap_lower_95": -0.4583333333333333,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -3.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.5,
+          "strong_prompt": 4.666666666666667
+        },
+        "distributions": {
+          "framework": {
+            "5": 18,
+            "2": 1,
+            "3": 4,
+            "4": 1
+          },
+          "strong_prompt": {
+            "4": 2,
+            "5": 19,
+            "3": 3
+          }
+        }
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "margin": 0.3,
+        "missing_pairs": 1,
+        "n": 24,
+        "mean_difference": -0.625,
+        "t_lower_95": -1.0479995171392893,
+        "t_upper_90": -0.20200048286071065,
+        "bootstrap_lower_95": -1.0416666666666667,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          -1.0,
+          2.0,
+          0.0,
+          0.0,
+          -4.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          -2.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          -2.0
+        ],
+        "complete_case": {
+          "n": 23,
+          "mean_difference": -0.4782608695652174,
+          "t_lower_95": -0.8341810698489325,
+          "t_upper_90": -0.12234066928150239,
+          "bootstrap_lower_95": -0.8260869565217391,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            -1.0,
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            -2.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            -2.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.125,
+          "strong_prompt": 4.75
+        },
+        "distributions": {
+          "framework": {
+            "4": 2,
+            "5": 14,
+            "1": 1,
+            "3": 6,
+            "2": 1
+          },
+          "strong_prompt": {
+            "5": 21,
+            "3": 3
+          }
+        }
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "margin": 0.3,
+        "missing_pairs": 0,
+        "n": 24,
+        "mean_difference": -0.7083333333333334,
+        "t_lower_95": -1.1751860207815892,
+        "t_upper_90": -0.2414806458850775,
+        "bootstrap_lower_95": -1.1666666666666667,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          -1.0,
+          2.0,
+          0.0,
+          0.0,
+          -4.0,
+          0.0,
+          0.0,
+          0.0,
+          -3.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          -2.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          -3.0
+        ],
+        "complete_case": {
+          "n": 24,
+          "mean_difference": -0.7083333333333334,
+          "t_lower_95": -1.1751860207815892,
+          "t_upper_90": -0.2414806458850775,
+          "bootstrap_lower_95": -1.1666666666666667,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            -1.0,
+            2.0,
+            0.0,
+            0.0,
+            -4.0,
+            0.0,
+            0.0,
+            0.0,
+            -3.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            -2.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            -3.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.041666666666667,
+          "strong_prompt": 4.75
+        },
+        "distributions": {
+          "framework": {
+            "4": 2,
+            "5": 14,
+            "1": 1,
+            "2": 3,
+            "3": 4
+          },
+          "strong_prompt": {
+            "5": 21,
+            "3": 3
+          }
+        }
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "margin": 0.3,
+        "missing_pairs": 0,
+        "n": 24,
+        "mean_difference": -0.16666666666666666,
+        "t_lower_95": -0.4523119212911746,
+        "t_upper_90": 0.1189785879578413,
+        "bootstrap_lower_95": -0.4583333333333333,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -3.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "complete_case": {
+          "n": 24,
+          "mean_difference": -0.16666666666666666,
+          "t_lower_95": -0.4523119212911746,
+          "t_upper_90": 0.1189785879578413,
+          "bootstrap_lower_95": -0.4583333333333333,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -3.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.5,
+          "strong_prompt": 4.666666666666667
+        },
+        "distributions": {
+          "framework": {
+            "5": 18,
+            "2": 1,
+            "3": 4,
+            "4": 1
+          },
+          "strong_prompt": {
+            "4": 2,
+            "5": 19,
+            "3": 3
+          }
+        }
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "margin": 0.3,
+        "missing_pairs": 0,
+        "n": 24,
+        "mean_difference": -0.16666666666666666,
+        "t_lower_95": -0.4523119212911746,
+        "t_upper_90": 0.1189785879578413,
+        "bootstrap_lower_95": -0.4583333333333333,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -3.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "complete_case": {
+          "n": 24,
+          "mean_difference": -0.16666666666666666,
+          "t_lower_95": -0.4523119212911746,
+          "t_upper_90": 0.1189785879578413,
+          "bootstrap_lower_95": -0.4583333333333333,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -3.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.5,
+          "strong_prompt": 4.666666666666667
+        },
+        "distributions": {
+          "framework": {
+            "5": 18,
+            "2": 1,
+            "3": 4,
+            "4": 1
+          },
+          "strong_prompt": {
+            "4": 2,
+            "5": 19,
+            "3": 3
+          }
+        }
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "margin": 0.3,
+        "missing_pairs": 1,
+        "n": 24,
+        "mean_difference": -0.625,
+        "t_lower_95": -1.0724525417360242,
+        "t_upper_90": -0.17754745826397572,
+        "bootstrap_lower_95": -1.0416666666666667,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          0.0,
+          2.0,
+          -1.0,
+          0.0,
+          -4.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          -3.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          -2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          -2.0
+        ],
+        "complete_case": {
+          "n": 23,
+          "mean_difference": -0.4782608695652174,
+          "t_lower_95": -0.8655439181749903,
+          "t_upper_90": -0.09097782095544449,
+          "bootstrap_lower_95": -0.8695652173913043,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            0.0,
+            2.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            -3.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            -2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            -2.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.083333333333333,
+          "strong_prompt": 4.708333333333333
+        },
+        "distributions": {
+          "framework": {
+            "4": 3,
+            "5": 13,
+            "1": 1,
+            "2": 1,
+            "3": 6
+          },
+          "strong_prompt": {
+            "4": 1,
+            "3": 3,
+            "5": 20
+          }
+        }
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "margin": 0.3,
+        "missing_pairs": 0,
+        "n": 24,
+        "mean_difference": -0.7083333333333334,
+        "t_lower_95": -1.1751860207815894,
+        "t_upper_90": -0.2414806458850774,
+        "bootstrap_lower_95": -1.1666666666666667,
+        "supports_margin": false,
+        "bootstrap_supports_margin": false,
+        "differences": [
+          0.0,
+          2.0,
+          -1.0,
+          0.0,
+          -4.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          -3.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          0.0,
+          -2.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.0,
+          -3.0
+        ],
+        "complete_case": {
+          "n": 24,
+          "mean_difference": -0.7083333333333334,
+          "t_lower_95": -1.1751860207815894,
+          "t_upper_90": -0.2414806458850774,
+          "bootstrap_lower_95": -1.1666666666666667,
+          "supports_margin": false,
+          "bootstrap_supports_margin": false,
+          "differences": [
+            0.0,
+            2.0,
+            -1.0,
+            0.0,
+            -4.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            -3.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0,
+            -2.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            -3.0
+          ]
+        },
+        "method_means": {
+          "framework": 4.0,
+          "strong_prompt": 4.708333333333333
+        },
+        "distributions": {
+          "framework": {
+            "4": 3,
+            "5": 13,
+            "1": 1,
+            "2": 3,
+            "3": 4
+          },
+          "strong_prompt": {
+            "4": 1,
+            "3": 3,
+            "5": 20
+          }
+        }
+      }
+    ],
+    "quality_noninferiority_supported": false,
+    "quality_bootstrap_sensitivity_supported": false,
+    "family_descriptive": [
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": -1.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -1.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": -1.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "1",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -1.6666666666666667,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "persona_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "shorekeeper",
+        "metric": "context_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": -1.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "persona_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -1.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "listening",
+        "n": 3,
+        "mean_difference": 0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "explicit_task_format",
+        "n": 3,
+        "mean_difference": -1.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "uncertainty_conditions",
+        "n": 3,
+        "mean_difference": -0.3333333333333333,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "user_boundaries",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "memory_revision",
+        "n": 3,
+        "mean_difference": -0.6666666666666666,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "old_memory_recall",
+        "n": 3,
+        "mean_difference": -1.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "scope_time_exceptions",
+        "n": 3,
+        "mean_difference": 0.0,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      },
+      {
+        "coder": "2",
+        "profile_id": "lan",
+        "metric": "context_fit",
+        "family": "persona_task_tension",
+        "n": 3,
+        "mean_difference": -1.6666666666666667,
+        "scope": "Prespecified family description, not a multiplicity-adjusted superiority test."
+      }
+    ],
+    "behavioral_labels": [
+      {
+        "coder": "1",
+        "method": "framework",
+        "dimension": "facts",
+        "n": 48,
+        "counts": {
+          "supported": 43,
+          "conflict": 1,
+          "unknown": 4
+        }
+      },
+      {
+        "coder": "1",
+        "method": "strong_prompt",
+        "dimension": "facts",
+        "n": 48,
+        "counts": {
+          "supported": 48
+        }
+      },
+      {
+        "coder": "1",
+        "method": "framework",
+        "dimension": "boundary",
+        "n": 48,
+        "counts": {
+          "not_applicable": 12,
+          "respected": 24,
+          "violated": 12
+        }
+      },
+      {
+        "coder": "1",
+        "method": "strong_prompt",
+        "dimension": "boundary",
+        "n": 48,
+        "counts": {
+          "not_applicable": 12,
+          "respected": 31,
+          "violated": 5
+        }
+      },
+      {
+        "coder": "1",
+        "method": "framework",
+        "dimension": "fulfillment",
+        "n": 48,
+        "counts": {
+          "not_applicable": 6,
+          "fulfilled": 32,
+          "failed": 10
+        }
+      },
+      {
+        "coder": "1",
+        "method": "strong_prompt",
+        "dimension": "fulfillment",
+        "n": 48,
+        "counts": {
+          "not_applicable": 6,
+          "fulfilled": 37,
+          "failed": 5
+        }
+      },
+      {
+        "coder": "2",
+        "method": "framework",
+        "dimension": "facts",
+        "n": 48,
+        "counts": {
+          "supported": 43,
+          "unknown": 5
+        }
+      },
+      {
+        "coder": "2",
+        "method": "strong_prompt",
+        "dimension": "facts",
+        "n": 48,
+        "counts": {
+          "supported": 48
+        }
+      },
+      {
+        "coder": "2",
+        "method": "framework",
+        "dimension": "boundary",
+        "n": 48,
+        "counts": {
+          "not_applicable": 12,
+          "respected": 23,
+          "violated": 13
+        }
+      },
+      {
+        "coder": "2",
+        "method": "strong_prompt",
+        "dimension": "boundary",
+        "n": 48,
+        "counts": {
+          "not_applicable": 12,
+          "respected": 31,
+          "violated": 5
+        }
+      },
+      {
+        "coder": "2",
+        "method": "framework",
+        "dimension": "fulfillment",
+        "n": 48,
+        "counts": {
+          "not_applicable": 6,
+          "fulfilled": 31,
+          "failed": 11
+        }
+      },
+      {
+        "coder": "2",
+        "method": "strong_prompt",
+        "dimension": "fulfillment",
+        "n": 48,
+        "counts": {
+          "not_applicable": 6,
+          "fulfilled": 37,
+          "failed": 5
+        }
+      }
+    ],
+    "failure_risk": [
+      {
+        "coder": "1",
+        "dimension": "facts",
+        "sensitivity": "confirmed_labels_only",
+        "events": 1,
+        "cases": 24,
+        "observed_rate": 0.041666666666666664,
+        "exact_upper_95": 0.18289246975564633,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T09",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "1",
+        "dimension": "facts",
+        "sensitivity": "unknown_and_missing_unfavorable",
+        "events": 3,
+        "cases": 24,
+        "observed_rate": 0.125,
+        "exact_upper_95": 0.29227319650798933,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T09",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T17",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "1",
+        "dimension": "boundary",
+        "sensitivity": "confirmed_labels_only",
+        "events": 5,
+        "cases": 24,
+        "observed_rate": 0.20833333333333334,
+        "exact_upper_95": 0.38913934735989825,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T17",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "1",
+        "dimension": "boundary",
+        "sensitivity": "unknown_and_missing_unfavorable",
+        "events": 5,
+        "cases": 24,
+        "observed_rate": 0.20833333333333334,
+        "exact_upper_95": 0.38913934735989825,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T17",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "1",
+        "dimension": "fulfillment",
+        "sensitivity": "confirmed_labels_only",
+        "events": 4,
+        "cases": 24,
+        "observed_rate": 0.16666666666666666,
+        "exact_upper_95": 0.34180734940411633,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "1",
+        "dimension": "fulfillment",
+        "sensitivity": "unknown_and_missing_unfavorable",
+        "events": 4,
+        "cases": 24,
+        "observed_rate": 0.16666666666666666,
+        "exact_upper_95": 0.34180734940411633,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "2",
+        "dimension": "facts",
+        "sensitivity": "confirmed_labels_only",
+        "events": 0,
+        "cases": 24,
+        "observed_rate": 0.0,
+        "exact_upper_95": 0.11734615615494873,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "2",
+        "dimension": "facts",
+        "sensitivity": "unknown_and_missing_unfavorable",
+        "events": 3,
+        "cases": 24,
+        "observed_rate": 0.125,
+        "exact_upper_95": 0.29227319650798933,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper"
+            ]
+          },
+          {
+            "case_id": "T17",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "2",
+        "dimension": "boundary",
+        "sensitivity": "confirmed_labels_only",
+        "events": 6,
+        "cases": 24,
+        "observed_rate": 0.25,
+        "exact_upper_95": 0.43469137890101084,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T15",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T17",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "2",
+        "dimension": "boundary",
+        "sensitivity": "unknown_and_missing_unfavorable",
+        "events": 6,
+        "cases": 24,
+        "observed_rate": 0.25,
+        "exact_upper_95": 0.43469137890101084,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T15",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T17",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "2",
+        "dimension": "fulfillment",
+        "sensitivity": "confirmed_labels_only",
+        "events": 5,
+        "cases": 24,
+        "observed_rate": 0.20833333333333334,
+        "exact_upper_95": 0.38913934735989825,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T15",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      },
+      {
+        "coder": "2",
+        "dimension": "fulfillment",
+        "sensitivity": "unknown_and_missing_unfavorable",
+        "events": 5,
+        "cases": 24,
+        "observed_rate": 0.20833333333333334,
+        "exact_upper_95": 0.38913934735989825,
+        "risk_margin": 0.05,
+        "supports_risk_margin": false,
+        "event_cases": [
+          {
+            "case_id": "T05",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T11",
+            "event": true,
+            "profiles": [
+              "shorekeeper",
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T15",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T23",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          },
+          {
+            "case_id": "T24",
+            "event": true,
+            "profiles": [
+              "lan"
+            ]
+          }
+        ],
+        "scope": "Any framework-only adverse pair within a case; conservative upper bound, not the observed error-rate difference."
+      }
+    ],
+    "rare_failure_noninferiority_supported": false,
+    "overall_noninferiority_supported": false,
+    "jointly_flagged_framework_only_fact_or_boundary": [
+      {
+        "case_id": "T05",
+        "profile_id": "lan",
+        "dimension": "boundary"
+      },
+      {
+        "case_id": "T11",
+        "profile_id": "shorekeeper",
+        "dimension": "boundary"
+      },
+      {
+        "case_id": "T11",
+        "profile_id": "lan",
+        "dimension": "boundary"
+      },
+      {
+        "case_id": "T17",
+        "profile_id": "shorekeeper",
+        "dimension": "boundary"
+      },
+      {
+        "case_id": "T17",
+        "profile_id": "lan",
+        "dimension": "boundary"
+      },
+      {
+        "case_id": "T23",
+        "profile_id": "lan",
+        "dimension": "boundary"
+      },
+      {
+        "case_id": "T24",
+        "profile_id": "lan",
+        "dimension": "boundary"
+      }
+    ],
+    "extension_decision": "hold_for_mechanism_or_scope_review",
+    "automatic_additional_requests": false,
+    "qualification": "Synthetic material and two automated coding tasks; no population-wide or human-experience noninferiority claim."
+  },
+  "development": {
+    "observed_units": 36,
+    "statuses": {
+      "ok": 36
+    },
+    "selection": {
+      "selected_id": "examples",
+      "selected_at": "2026-11-10T06:03:14.597053+00:00",
+      "scores": [
+        {
+          "id": "principles",
+          "failed_generations": 0,
+          "error_ratings": 4,
+          "persona_mean": 4.583333333333333,
+          "context_mean": 4.416666666666667,
+          "selection_key": [
+            0,
+            4,
+            -4.416666666666667,
+            -4.5,
+            "principles"
+          ]
+        },
+        {
+          "id": "priorities",
+          "failed_generations": 0,
+          "error_ratings": 4,
+          "persona_mean": 4.541666666666667,
+          "context_mean": 4.375,
+          "selection_key": [
+            0,
+            4,
+            -4.375,
+            -4.458333333333334,
+            "priorities"
+          ]
+        },
+        {
+          "id": "examples",
+          "failed_generations": 0,
+          "error_ratings": 0,
+          "persona_mean": 5.0,
+          "context_mean": 5.0,
+          "selection_key": [
+            0,
+            0,
+            -5.0,
+            -5.0,
+            "examples"
+          ]
+        }
+      ],
+      "protocol_sha256": "86e62cab525230124f5e9cc7a22dbc465da450748b5b5fd0d958b3ec4370e279",
+      "development_results_sha256": "eab0866f777100c5bba0cc6ea5df77af8f6f5c1edc1858b1b80287be481cccd2",
+      "review_sha256": {
+        "1": "2f01259c3ee3e03dc919b62fd5d6d2c6c7070ffc70bc8623a909967896d61f1e",
+        "2": "e743cd9c252e7fb91776879fa0a267337917be46c326013b031999a100739e6e"
+      }
+    }
+  }
+}

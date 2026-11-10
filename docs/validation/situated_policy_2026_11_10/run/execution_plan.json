@@ -1,0 +1,338 @@
+[
+  {
+    "id": "S04-lan-program-2",
+    "case": "S04",
+    "profile": "lan",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S03-lan-program-2",
+    "case": "S03",
+    "profile": "lan",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S05-lan-program-2",
+    "case": "S05",
+    "profile": "lan",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S06-lan-prompt-2",
+    "case": "S06",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S06-lan-program-2",
+    "case": "S06",
+    "profile": "lan",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S02-lan-prompt-1",
+    "case": "S02",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S01-shorekeeper-prompt-2",
+    "case": "S01",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S02-shorekeeper-program-1",
+    "case": "S02",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S02-shorekeeper-prompt-2",
+    "case": "S02",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S02-shorekeeper-prompt-1",
+    "case": "S02",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S03-lan-prompt-1",
+    "case": "S03",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S01-lan-program-1",
+    "case": "S01",
+    "profile": "lan",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S06-lan-program-1",
+    "case": "S06",
+    "profile": "lan",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S04-lan-prompt-1",
+    "case": "S04",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S06-shorekeeper-prompt-2",
+    "case": "S06",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S01-shorekeeper-program-2",
+    "case": "S01",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S05-shorekeeper-prompt-2",
+    "case": "S05",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S01-shorekeeper-prompt-1",
+    "case": "S01",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S01-lan-prompt-2",
+    "case": "S01",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S06-shorekeeper-program-1",
+    "case": "S06",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S04-lan-prompt-2",
+    "case": "S04",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S05-shorekeeper-prompt-1",
+    "case": "S05",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S03-shorekeeper-prompt-2",
+    "case": "S03",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S06-shorekeeper-prompt-1",
+    "case": "S06",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S03-lan-prompt-2",
+    "case": "S03",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S04-shorekeeper-prompt-2",
+    "case": "S04",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S02-lan-prompt-2",
+    "case": "S02",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S05-shorekeeper-program-2",
+    "case": "S05",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S05-lan-prompt-2",
+    "case": "S05",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 2
+  },
+  {
+    "id": "S02-lan-program-2",
+    "case": "S02",
+    "profile": "lan",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S01-lan-prompt-1",
+    "case": "S01",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S03-lan-program-1",
+    "case": "S03",
+    "profile": "lan",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S05-shorekeeper-program-1",
+    "case": "S05",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S04-shorekeeper-program-1",
+    "case": "S04",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S05-lan-program-1",
+    "case": "S05",
+    "profile": "lan",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S01-shorekeeper-program-1",
+    "case": "S01",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S04-shorekeeper-prompt-1",
+    "case": "S04",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S03-shorekeeper-program-2",
+    "case": "S03",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S05-lan-prompt-1",
+    "case": "S05",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S06-shorekeeper-program-2",
+    "case": "S06",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S03-shorekeeper-program-1",
+    "case": "S03",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S04-shorekeeper-program-2",
+    "case": "S04",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S02-shorekeeper-program-2",
+    "case": "S02",
+    "profile": "shorekeeper",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S01-lan-program-2",
+    "case": "S01",
+    "profile": "lan",
+    "method": "program",
+    "rep": 2
+  },
+  {
+    "id": "S02-lan-program-1",
+    "case": "S02",
+    "profile": "lan",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S04-lan-program-1",
+    "case": "S04",
+    "profile": "lan",
+    "method": "program",
+    "rep": 1
+  },
+  {
+    "id": "S03-shorekeeper-prompt-1",
+    "case": "S03",
+    "profile": "shorekeeper",
+    "method": "prompt",
+    "rep": 1
+  },
+  {
+    "id": "S06-lan-prompt-1",
+    "case": "S06",
+    "profile": "lan",
+    "method": "prompt",
+    "rep": 1
+  }
+]

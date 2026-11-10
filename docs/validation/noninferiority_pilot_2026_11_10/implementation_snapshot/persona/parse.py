@@ -1,0 +1,908 @@
+"""解析 HEAD / SAY / TAIL。
+
+这里有两层规则，看起来矛盾，其实分工不同：
+
+**第一层：结构解析，best-effort**
+    字段缺失、格式跑偏、标记乱序 —— 尽量保留安全正文，同时标记无效。
+    能恢复正文不代表协议有效，也不授权使用异常结构中的状态提议。
+
+**第二层：内容安全，零容忍**
+    只要输出里出现 HEAD 字段行、近似标记、脚手架回显，
+    **整段清空**，不给用户看（safe_say）。
+
+为什么两层规则不同：第一层失败只是「这轮少记了点状态」，
+第二层失败是「把内心独白发给了用户」—— 后者不可恢复。
+空回复用户会再问一句；direct 泄露他可能就再也不说了。
+
+实测的四种漏法（都写过回归测试）：
+  1. 模型完全不写标记，只把四个字段列出来
+  2. 标记写错一个字（少一个 > / 小写 / 内部空格）
+  3. 流式路径走了另一套判定，绕过了整段解析的 guard
+  4. 多阶段的清洗层把「标记之前」当正文
+所以安全判定要宽松（宁可误杀），且必须覆盖所有出口。
+"""
+from __future__ import annotations
+
+import json
+import re
+import math
+from dataclasses import dataclass, field
+
+from .config import DISPLACE_KINDS, DISPLACE_NONE
+from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN, LITERAL_CLOSE
+
+# 一旦输出里出现这些，说明它在「声明位移」—— 这是硬失败，比不做还差。
+_DECLARATION_PATTERNS = [
+    r"我本来想",
+    r"我原本想",
+    r"本来想说",
+    r"我没说出口",
+    r"我差点说",
+    r"我差点儿说",
+    r"其实我刚才想",
+    r"我克制住",
+    r"我忍住没",
+    r"我欲言又止",
+]
+
+# 只观测指向对方的读法；句式本身不能证明强迫解读或是否留有退路。
+# 带否认空间的试探属于允许的表达，不在输出侧删除。
+_READ_ALOUD_PATTERNS = [
+    # —— 指向对方的猜测
+    r"(?:^|[，。！？；：\s])我?猜(?:你|您)",
+    r"(?:^|[，。！？；：\s])我?猜(?:这|那)(?:句|话|个|些|种)?",
+    r"(?:^|[，。！？；：\s])我?猜[“\"「]",
+    # 「猜一句：」「先猜一个：」「先猜：」—— 同一个模式的换皮写法。
+    # 实测：禁掉「我猜你」之后，模型立刻改用它，因为它们意思一样。
+    r"(?:^|[，。！？；：\s])猜(?:一句|一下|一个)?\s*[:：]",
+    r"^先?猜",
+    r"我要猜",
+    # —— 行首的判断式开场（原来的那批）
+    r"^猜(?!他|她|它)",
+    r"^听起来你",
+    r"^感觉你(?:其实|可能|好像)",
+    r"^我觉得你(?:其实|可能)",
+    r"^我读到你",
+    r"^你这不是在说",
+    r"^你不是在说.{1,20}，是",
+    r"^你其实(?:不是|并不)",
+    r"^(?:这|那)不像是在说",
+]
+
+# 一句话里如果出现这些，说明「猜」的对象是第三方或外部事实，不算读人。
+_THIRD_PARTY = re.compile(r"猜(?:他|她|它|他们|她们|别人|对方)")
+
+
+def _is_read_aloud(line: str) -> bool:
+    if _THIRD_PARTY.search(line):
+        return False
+    for pat in _READ_ALOUD_PATTERNS:
+        if re.search(pat, line):
+            return True
+    return False
+
+
+def detect_read_aloud(text: str) -> list[str]:
+    """返回读法句式的短片段，只用于统计，不判定心理事实或拦截正文。"""
+    hits: list[str] = []
+    for raw_line in (text or "").splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if _is_read_aloud(line):
+            hits.append(line[:40])
+    return hits
+
+
+def has_exit_offer(text: str) -> bool:
+    """观测常见退路措辞；未命中不等于语义上没有退路，不参与拦截。"""
+    return bool(_EXIT_OFFER.search(text or ""))
+
+
+# 常见退路措辞的信号，不是语义判决。
+_EXIT_OFFER = re.compile(
+    r"(否认|否掉|能被你|能让你|猜错|不对就|错了就|错了你|你可以反驳|"
+    r"随时否|不认|当我没说|如果我说错|要是我猜错|直接说)"
+)
+
+
+@dataclass
+class Head:
+    need: str = ""
+    confidence: float = 0.0
+    direct: str = ""
+    displace: str = DISPLACE_NONE
+    baseline: str = ""  # 当前人格在本情境下的常态表达，不是 neutral direct
+    constraints: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+
+
+@dataclass
+class SettleItem:
+    pending_id: str
+    outcome: str          # confirmed | refuted
+    evidence: str = ""
+
+
+@dataclass
+class PendingDraft:
+    claim: str = ""
+    confidence: float = 0.0
+    predicts: str = ""
+    errors: list[str] = field(default_factory=list)
+
+
+@dataclass
+class Tail:
+    settle: list[SettleItem] = field(default_factory=list)
+    delta: dict = field(default_factory=dict)
+    pending: PendingDraft | None = None
+    # 模型明确说「再等等」的预言 id。必须保留 ——
+    # 丢掉的话引擎会退回字面判定，可能把「只是附和」判成 CONFIRMED。
+    watch: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+
+
+@dataclass
+class ParsedTurn:
+    head: Head | None
+    say: str
+    tail: Tail | None
+    declared: list[str] = field(default_factory=list)   # 命中的声明句式
+    read_aloud: list[str] = field(default_factory=list)  # 命中的「猜你是……」句式
+    errors: list[str] = field(default_factory=list)
+    structural_errors: list[str] = field(default_factory=list)
+
+    def validity(self, *, protocol="text", probe=None, allowed=True) -> dict:
+        probe = probe or {}
+        reasons = [*self.errors, *self.structural_errors]
+        if self.head is None:
+            reasons.append("missing_head")
+        else:
+            reasons.extend(self.head.errors)
+            for key in ("need", "direct", "baseline"):
+                if not getattr(self.head, key).strip():
+                    reasons.append("missing_" + key)
+        if self.tail is None:
+            reasons.append("missing_tail")
+        else:
+            reasons.extend(self.tail.errors)
+            if self.tail.pending is not None:
+                reasons.extend(self.tail.pending.errors)
+        if not self.say.strip():
+            reasons.append("missing_say")
+        if not allowed:
+            reasons.append("displacement_not_allowed")
+        if self.declared:
+            reasons.append("declared_displacement")
+        if probe.get("stream_interrupted"):
+            reasons.append("stream_interrupted")
+        if probe.get("output_blocked"):
+            reasons.append("output_blocked")
+        if probe.get("observation_failed"):
+            reasons.append("observation_failed")
+        reasons = list(dict.fromkeys(reasons))
+        return {"valid": not reasons, "status": "valid" if not reasons else "invalid",
+                "reasons": reasons, "scope": "local_protocol_not_semantic_truth"}
+
+    @property
+    def ok(self) -> bool:
+        return bool(self.say)
+
+    @property
+    def tail_usable(self) -> bool:
+        """State proposals require valid section structure; fields need their own checks."""
+        return self.tail is not None and not self.structural_errors
+
+    @property
+    def has_displacement(self) -> bool:
+        return (
+            self.head is not None
+            and self.head.displace not in ("", DISPLACE_NONE)
+        )
+
+    @property
+    def is_pure_say(self) -> bool:
+        return self.head is None and self.tail is None
+
+    def is_consistent(self) -> bool:
+        """只检查相对人格基准的位移；旧记录缺基准时不作推断。
+
+        字面相似只是格式诊断，不证明语义位移真的成立。
+        """
+        if self.head is None:
+            return True
+        if self.head.displace in ("", DISPLACE_NONE):
+            return True
+        if not self.head.baseline.strip():
+            return True
+        return not _similar(self.head.baseline, self.say)
+
+
+def _norm(s: str) -> str:
+    return re.sub(r"[\s，。、,.!?！？~～…\"'“”‘’]", "", s)
+
+
+def _similar(a: str, b: str, threshold: float = 0.9) -> bool:
+    """相似度用包含关系近似。
+
+    只查完全相同是不够的：模型很容易把 direct 复制一遍再加个「啊」，
+    那仍然是没有位移的装深沉。
+    """
+    na, nb = _norm(a), _norm(b)
+    if not na or not nb:
+        return False
+    if na == nb:
+        return True
+    shorter, longer = (na, nb) if len(na) <= len(nb) else (nb, na)
+    if len(shorter) < 4:
+        # 短句不能直接判「非复述」。
+        # 实测 direct='别走' say='别走啊' —— 明显是复述，但旧逻辑
+        # 因为 shorter 只有 2 字就 return False，装深沉完全抓不到。
+        # 短句改用「包含」判断：短的整个出现在长的里面就是复述。
+        if len(shorter) >= 2 and shorter in longer:
+            return len(shorter) / len(longer) > 0.5
+        return False
+    common = sum(1 for c in set(shorter) if c in longer)
+    return common / max(1, len(set(shorter))) >= threshold and \
+        len(shorter) / len(longer) > 0.6
+
+
+_HEAD_FIELDS = ("need", "confidence", "direct", "baseline", "displace")
+_HEAD_FIELD_RE = re.compile(
+    r"^[ \t]*(" + "|".join(_HEAD_FIELDS) + r")[ \t]*[:：]", re.IGNORECASE
+)
+
+
+def _after_head_fields(block: str) -> str:
+    """HEAD 块里、最后一个 HEAD 字段之后的内容。
+
+    这里存在一个安全边界：direct 就在 HEAD 里，而 direct 永远不能出现在
+    用户面前。所以只有在**最后一个字段是 displace**时，才把后面的文本
+    当作正文；若后面还有 direct / baseline，续行仍然属于内部字段。
+
+    返回空串是安全的失败：用户看到空回复，但不会看到内心独白。
+    """
+    lines = block.splitlines(keepends=True)
+    last_field = -1
+    last_name = ""
+    for i, line in enumerate(lines):
+        m = _HEAD_FIELD_RE.match(line)
+        if not m:
+            continue
+        last_field = i
+        last_name = m.group(1).lower()
+    if last_name != "displace":
+        return ""
+    return "".join(lines[last_field + 1:])
+
+
+# 宽松的标记识别：容忍大小写、空格、少写一个 ">"
+_SECTION_LOOSE = re.compile(
+    r"<{2,}\s*\^?\s*(HEAD|SAY|TAIL)\s*>{2,}", re.IGNORECASE
+)
+
+_SECTION_EXACT = re.compile("|".join(re.escape(marker) for marker in
+                                     (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)))
+
+
+class SayText(str):
+    """Decoded text plus recheckable wire syntax; not semantic certification."""
+    def __new__(cls, text="", wire=None):
+        value = super().__new__(cls, text)
+        value.wire = str(text) if wire is None else wire
+        return value
+
+    def __getnewargs__(self):
+        return str(self), self.wire
+
+
+def say_wire(text: str) -> str:
+    return text.wire if isinstance(text, SayText) else text
+
+
+def encode_literal_say(text: str) -> str:
+    """Encode literal user content; this does not mark it semantically trusted."""
+    if not isinstance(text, str):
+        raise TypeError("literal text must be a string")
+    quoted = json.dumps(str(text), ensure_ascii=False).replace("<", r"\u003c").replace(">", r"\u003e")
+    return LITERAL_OPEN + quoted + LITERAL_CLOSE
+
+
+def read_literal(text: str) -> tuple[str, int, str]:
+    """Read one opening block: complete, pending, or invalid; never guess JSON."""
+    if not text.startswith(LITERAL_OPEN):
+        return "invalid", 0, ""
+    offset = len(LITERAL_OPEN)
+    offset += len(text[offset:]) - len(text[offset:].lstrip())
+    try:
+        value, end = json.JSONDecoder().raw_decode(text, offset)
+    except json.JSONDecodeError:
+        return "pending", 0, ""
+    if not isinstance(value, str):
+        return "invalid", 0, ""
+    try:
+        value.encode("utf-8")
+    except UnicodeEncodeError:
+        return "invalid", 0, ""
+    end += len(text[end:]) - len(text[end:].lstrip())
+    rest = text[end:]
+    if rest.startswith(LITERAL_CLOSE):
+        return "complete", end + len(LITERAL_CLOSE), value
+    if LITERAL_CLOSE.startswith(rest):
+        return "pending", 0, ""
+    return "invalid", 0, ""
+
+
+def mask_literal_blocks(text: str, *, sections=False) -> str:
+    """Mask complete literal data without moving external marker positions."""
+    token = re.compile("|".join(re.escape(m) for m in
+                               (SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN)))
+    out = list(text)
+    active = not sections
+    cursor = 0
+    while (match := token.search(text, cursor)) is not None:
+        marker = match.group()
+        if marker == LITERAL_OPEN and active:
+            status, consumed, _ = read_literal(text[match.start():])
+            if status == "complete":
+                end = match.start() + consumed
+                out[match.start():end] = " " * consumed
+                cursor = end
+                continue
+        elif sections and marker != LITERAL_OPEN:
+            active = marker == SECTION_SAY
+        cursor = match.end()
+    return "".join(out)
+
+
+def _literal_safety_mask(text: str) -> str:
+    """Hide literal bytes while retaining visible line/indentation context."""
+    pieces, cursor = [], 0
+    while (opening := text.find(LITERAL_OPEN, cursor)) >= 0:
+        pieces.append(text[cursor:opening])
+        status, consumed, value = read_literal(text[opening:])
+        if status != "complete":
+            return "".join(pieces)
+        pieces.append("".join(c if c.isspace() else "#" for c in value))
+        cursor = opening + consumed
+    pieces.append(text[cursor:])
+    return "".join(pieces)
+
+
+def literal_errors(text: str) -> list[str]:
+    cursor = 0
+    while True:
+        opening = text.find(LITERAL_OPEN, cursor)
+        closing = text.find(LITERAL_CLOSE, cursor)
+        if closing >= 0 and (opening < 0 or closing < opening):
+            return ["invalid_literal_say"]
+        if opening < 0:
+            suffix = text[cursor:]
+            if "<<<l" in suffix.lower() or "<<<end_l" in suffix.lower() or re.search(
+                    r"<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)", suffix, re.I):
+                return ["invalid_literal_say"]
+            if any(suffix.endswith(marker[:size]) for marker in (LITERAL_OPEN, LITERAL_CLOSE)
+                   for size in range(4, len(marker))):
+                return ["incomplete_literal_say"]
+            return []
+        status, consumed, value = read_literal(text[opening:])
+        if status != "complete":
+            return ["invalid_literal_say"]
+        cleaned = strip_special_tokens(value, preserve_whitespace=True)
+        if _SPECIAL_TOKEN_START.search(cleaned):
+            return ["invalid_literal_say"]
+        cursor = opening + consumed
+
+
+def section_errors(raw: str, *, expression_only: bool = False) -> list[str]:
+    """Audit order independently of best-effort parsing or streaming delivery.
+
+    An explicit persona expression stage may omit TAIL. Tool-stage plain text
+    does not use this text-protocol audit.
+    """
+    markers = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
+    masked = mask_literal_blocks(raw, sections=True)
+    matches = list(_SECTION_EXACT.finditer(masked))
+    seen = [match.group() for match in matches]
+    errors = []
+    required = markers[:2] if expression_only else markers
+    for marker, name in zip(markers, ("head", "say", "tail")):
+        count = seen.count(marker)
+        if marker in required and count == 0:
+            errors.append("missing_" + name + "_marker")
+        if count > 1:
+            errors.append("duplicate_" + name + "_marker")
+    ranks = [markers.index(marker) for marker in seen]
+    if ranks != sorted(ranks):
+        errors.append("invalid_section_order")
+    if matches and raw[:matches[0].start()].strip():
+        errors.append("text_before_head")
+    if any(match.group() not in markers for match in _SECTION_LOOSE.finditer(masked)):
+        errors.append("invalid_section_marker")
+    return errors
+
+# HEAD 字段行：允许前后空白、全角冒号、大小写
+_FIELD_LINE = re.compile(
+    r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)[ \t]*[:：]",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+# 模型有时不写字段名，而是用脚手架式的括号回显：
+#   （内心：……／位移方式：降级）
+_SCAFFOLD = re.compile(
+    r"[（(]\s*(内心|心里话|素回复|原始回复|人格基准|位移方式|判断)[^）)]*[）)]"
+)
+
+
+def _looks_like_protocol(text: str) -> bool:
+    """这段文本像不像「协议残留」而不是正常回复。
+
+    判据取最宽的那种 —— 宁可误杀也不要漏放：
+      · 任何形式的段落标记（容忍写错大小写/空格/少个 >）
+      · 出现 HEAD 字段行（need:/confidence:/direct:/displace:）
+      · 出现脚手架式回显（（内心：…））
+
+    为什么要这么宽：DIRECT 永不进入输出是硬约束，
+    而模型漏写标记是很常见的漂移。实测四种漏法：
+        1. 完全不写标记，只写四个字段
+        2. 标记写错（<<<SAY>> 少一个 >）
+        3. 流式解析走另一条路，没经过分段的 guard
+        4. tool/persona 的 clean_phase2 把标记之前当正文
+    逐处打补丁总会漏一处，所以统一在这里判。
+    """
+    t = text or ""
+    if not t.strip():
+        return False
+    t = _literal_safety_mask(t)
+    # An unfinished literal is opaque while streaming, never a bare HEAD.
+    opening = t.find(LITERAL_OPEN)
+    if opening >= 0:
+        t = t[:opening]
+    return bool(_SECTION_LOOSE.search(t) or _FIELD_LINE.search(t)
+                or _SCAFFOLD.search(t))
+
+
+# Only unambiguous control syntax is reserved. Generic angle-bracket text can
+# be a user's answer, mathematical notation, or HTML rather than a model token.
+_BARE_MODEL_TOKENS = (
+    "<end_of_turn>", "<end_of_text>", "<endoftext>",
+    "<start_of_turn>", "<start_of_text>", "<eot_id>",
+    "<eos_token>", "<bos_token>", "[INST]", "[/INST]",
+)
+_SPECIAL_TOKEN = re.compile(
+    r"<[|｜][^>]*[|｜]>|" + "|".join(re.escape(token) for token in _BARE_MODEL_TOKENS)
+)
+_SPECIAL_TOKEN_START = re.compile(
+    r"<[|｜]|" + "|".join(re.escape(token) for token in _BARE_MODEL_TOKENS)
+)
+
+
+def special_token_holdback(text: str) -> int:
+    """Hold possible control-token prefixes until streaming can classify them."""
+    best = 0
+    for token in (*_BARE_MODEL_TOKENS, "<|", "<｜"):
+        for size in range(1, len(token)):
+            if text.endswith(token[:size]):
+                best = max(best, size)
+    return best
+
+
+def strip_special_tokens(text: str, *, preserve_whitespace=False) -> str:
+    """去掉模型漏出来的特殊 token。
+
+    仅识别明确的控制 token；不按尖括号内容的语言、字符数或位置推测。
+    普通的 <苏州>、<300>、HTML 标签与不等式都保留。
+    """
+    t = text or ""
+    prev = None
+    while prev != t:
+        prev = t
+        t = _SPECIAL_TOKEN.sub("", t)
+        if not preserve_whitespace:
+            t = t.rstrip()
+    return t
+
+
+def _clean_normal_say_segment(text: str) -> tuple[str, bool]:
+    """Clean unframed text even when it follows a valid literal segment."""
+    starts = [p for prefix in ("<<<l", "<<<end_l")
+              if (p := text.lower().find(prefix)) >= 0]
+    starts.extend(match.start() for match in re.finditer(
+        r"<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)", text, re.I))
+    # Unframed model controls terminate the body, matching streaming. A
+    # suffix after a stop/control token must not be recovered as normal prose.
+    starts.extend(match.start() for match in _SPECIAL_TOKEN_START.finditer(text))
+    for marker in (LITERAL_OPEN, LITERAL_CLOSE):
+        for size in range(len(marker) - 1, 3, -1):
+            if text.endswith(marker[:size]):
+                starts.append(len(text) - size)
+    if starts:
+        return strip_special_tokens(text[:min(starts)], preserve_whitespace=True), True
+    return strip_special_tokens(text, preserve_whitespace=True), False
+
+
+def safe_say(text: str) -> str:
+    """最后一道闸：用户可见的文本必须过这里。
+
+    这是硬约束的落点，**所有出口**都要过：
+        parse 的 SAY 段、stream 的最终文本、clean_phase2 的结果。
+
+    做两件事：
+      1. 去掉漏出来的特殊 token（<｜end▁of▁sentence｜> 之类）
+      2. 看起来像协议残留就整段清空 —— 宁可这轮没回复，
+         也不能把内心独白发出去。空回复用户会再问一句，
+         direct 泄露他可能就再也不说了。
+    """
+    if isinstance(text, SayText):
+        # The carrier alone is not permission: reconstruct and compare against
+        # its framed source on every crossing of the common safety boundary.
+        source = getattr(text, "wire", None)
+        if not isinstance(source, str):
+            return ""
+        checked = safe_say(str(source))
+        return checked if checked == str(text) else ""
+    wire = (text or "").strip()
+    if LITERAL_OPEN in wire or LITERAL_CLOSE in wire:
+        pieces, canonical, cursor = [], [], 0
+        while True:
+            opening = wire.find(LITERAL_OPEN, cursor)
+            closing = wire.find(LITERAL_CLOSE, cursor)
+            if closing >= 0 and (opening < 0 or closing < opening):
+                return safe_say("".join(canonical) + wire[cursor:closing])
+            if opening < 0:
+                remainder = wire[cursor:]
+                cleaned, blocked = _clean_normal_say_segment(remainder)
+                pieces.append(cleaned); canonical.append(cleaned)
+                if blocked:
+                    return safe_say("".join(canonical))
+                if _looks_like_protocol("".join(canonical)):
+                    return ""
+                return SayText("".join(pieces), "".join(canonical))
+            normal = wire[cursor:opening]
+            cleaned_normal, blocked = _clean_normal_say_segment(normal)
+            pieces.append(cleaned_normal); canonical.append(cleaned_normal)
+            if blocked:
+                return safe_say("".join(canonical))
+            status, consumed, value = read_literal(wire[opening:])
+            if status != "complete":
+                return safe_say("".join(canonical))
+            value = strip_special_tokens(value, preserve_whitespace=True)
+            if _SPECIAL_TOKEN_START.search(value):
+                return safe_say("".join(canonical))
+            pieces.append(value); canonical.append(encode_literal_say(value))
+            cursor = opening + consumed
+    # The control namespace remains reserved across all normal segments,
+    # including normal text before or after a successfully decoded literal.
+    t, _ = _clean_normal_say_segment(wire)
+    t = t.rstrip()
+    if not t:
+        return ""
+    if _looks_like_protocol(t):
+        return ""
+    return t
+
+
+def plain_text(raw: str) -> str:
+    """没有任何协议标记时，整段就是回复。
+
+    一旦出现标记 —— 或者看起来像协议残留 —— 就不能拿原文兜底，
+    否则 HEAD 里的 direct 会被当成回复发给用户。宁可空着。
+    """
+    if LITERAL_OPEN in (raw or "") or LITERAL_CLOSE in (raw or ""):
+        return safe_say(raw)
+    if _looks_like_protocol(raw or ""):
+        return ""
+    return (raw or "").strip()
+
+
+def _split_sections(raw: str) -> tuple[str, str, str]:
+    """返回 (head, say, tail) 原文。缺段就是空串。"""
+    text = raw
+
+    masked = mask_literal_blocks(text, sections=True)
+    i_head = masked.find(SECTION_HEAD)
+    i_say = masked.find(SECTION_SAY)
+    i_tail = masked.find(SECTION_TAIL)
+
+    head_raw = ""
+    say_raw = ""
+    tail_raw = ""
+
+    if i_say == -1 and i_head == -1 and i_tail == -1:
+        return "", text.strip(), ""
+
+    # 第一个标记之前先开的口。
+    #
+    # 但这里有个**安全边界**：那段「开头」可能是模型漏写 <<<HEAD>>>
+    # 但把四个字段裸着写出来的内容，而 direct 就在里面。
+    #
+    # 实测踩过（这是最严重的一次）：
+    #   raw = "need: 只想被听\nconfidence: 0.82\ndirect: 你根本不是在问我\n
+    #          displace: 降级\n\n<<<SAY>>>\n我没事。\n"
+    #   旧逻辑把 SAY 之前全当正文 -> direct 原样发给了用户，
+    #   而且写进 history，之后每一轮 prompt 都带着这段内心话。
+    #
+    # 判据：这段里出现 HEAD 字段行 = 它是 HEAD，不是正文。整段丢弃。
+    first = min(x for x in (i_head, i_say, i_tail) if x != -1)
+    if first > 0:
+        prefix = text[:first]
+        if not _HEAD_FIELD_RE.search(prefix):
+            say_raw += prefix
+        # 否则：它是没写标记的 HEAD —— 直接丢掉，一个字都不能发
+
+    if i_head != -1:
+        # HEAD 段的结束位置。
+        #
+        # 注意不能只取「下一个标记」—— 如果模型把顺序写乱了
+        # （SAY 在 HEAD 之前，比如 <<<SAY>>>正文<<<HEAD>>>字段<<<TAIL>>>），
+        # 那 i_say < i_head，min() 会算出负数长度的区间，head 直接变空。
+        #
+        # 实测踩过：同一份字节
+        #   非流式 head=False / displace=None
+        #   流式   head=True  / displace='降级'
+        # 两份账本记下不同的状态，重放可比性直接没了。
+        #
+        # 正确做法：只取 HEAD 之后、且**位置大于 i_head** 的标记。
+        after = [x for x in (i_say, i_tail) if x != -1 and x > i_head]
+        end = min(after) if after else len(text)
+        head_raw = text[i_head + len(SECTION_HEAD):end]  # noqa: E501
+
+    if i_say != -1:
+        end = i_tail if i_tail != -1 else len(text)
+        say_raw += text[i_say + len(SECTION_SAY):end]
+    elif i_head != -1:
+        # SAY 缺失。绝不能把 HEAD 当回复 —— direct 就在里面。
+        say_raw += _after_head_fields(head_raw)
+
+    if i_tail != -1:
+        tail_raw = text[i_tail + len(SECTION_TAIL):]
+
+    # SAY 里如果混进了标记（模型忘记分段），也要切掉
+    if say_raw:
+        masked_say = mask_literal_blocks(say_raw)
+        for marker in (SECTION_HEAD, SECTION_SAY, SECTION_TAIL):
+            if marker in masked_say:
+                say_raw = say_raw[:masked_say.find(marker)]
+                masked_say = masked_say[:len(say_raw)]
+
+    return head_raw.strip(), say_raw.strip(), tail_raw.strip()
+
+
+# 注意：这里一律用 [ \t]* 而不是 \s*。
+# \s 会把换行也吃掉，导致「direct:（空）」直接吞掉下一行的内容，
+# 把一个空字段判成有值。
+_LEAD = r"^[ \t]*"
+_SEP = r"[ \t]*[:：][ \t]*"
+
+
+def _get_field(block: str, name: str, *, multiline: bool = False) -> str:
+    m = re.search(rf"{_LEAD}{name}{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
+    if not m:
+        return ""
+    if not multiline:
+        return m.group(1).strip()
+    # Only free-text reference fields span lines; never consume the next field.
+    boundaries = [next_match.start() for pattern in (_FIELD_LINE, _SECTION_LOOSE)
+                  if (next_match := pattern.search(block, m.end())) is not None]
+    end = min(boundaries) if boundaries else len(block)
+    return block[m.start(1):end].strip()
+
+
+def _to_float(s: str, default: float = 0.0) -> float:
+    raw = s or ""
+    m = re.search(r"-?(?:\d+(?:\.\d*)?|\.\d+)", raw)
+    if not m:
+        return default
+    try:
+        v = float(m.group(0))
+    except ValueError:
+        return default
+    # Only a percent sign belonging to the first number changes its unit.
+    # Thus 1% = .01, but .85 (85%) remains .85.
+    if raw[m.end():].lstrip().startswith(("%", "％")):
+        v /= 100.0
+    return max(0.0, min(1.0, v))
+
+
+def _valid_confidence(raw: str) -> bool:
+    """Validate before compatibility clamping; accept decimal/percent annotations."""
+    match = re.match(r"^[ \t]*([+-]?(?:\d+(?:\.\d*)?|\.\d+))([%％]?)", raw)
+    if not match:
+        return False
+    value = float(match[1])
+    if match[2]:
+        value /= 100
+    suffix = raw[match.end():].strip()
+    return (math.isfinite(value) and 0 <= value <= 1
+            and (not suffix or (suffix.startswith(("(", "（"))
+                                and suffix.endswith((")", "）")))))
+
+
+def parse_head(block: str) -> Head:
+    errors = []
+    values = {key: _get_field(block, key, multiline=key in ("direct", "baseline"))
+              for key in _HEAD_FIELDS}
+    for key in ("need", "confidence", "direct", "baseline", "displace"):
+        if not values[key]:
+            errors.append("missing_" + key)
+    displace = values["displace"].lower()
+    if displace in ("", "无", "-", "null"):
+        displace = DISPLACE_NONE
+    # An annotation may explain one kind, but may not hide a second kind.
+    kinds = {kind for kind in DISPLACE_KINDS if kind != DISPLACE_NONE and kind in displace}
+    if re.search(r"\bnone\b|(?:^|[\s/、,+；;])无(?:$|[\s/、,+；;])", displace):
+        kinds.add(DISPLACE_NONE)
+    if len(kinds) > 1:
+        errors.append("multiple_displace")
+        displace = DISPLACE_NONE
+    elif displace not in DISPLACE_KINDS:
+        annotated = next((kind for kind in kinds if re.fullmatch(
+            re.escape(kind) + r"\s*(?:（[^（）]*）|\([^()]*\))", displace)), None)
+        if annotated is None:
+            errors.append("invalid_displace")
+            displace = DISPLACE_NONE
+        else:
+            displace = annotated
+    confidence = values["confidence"]
+    if confidence and not _valid_confidence(confidence):
+        errors.append("invalid_confidence")
+    return Head(
+        need=values["need"],
+        confidence=_to_float(confidence),
+        direct=values["direct"],
+        displace=displace,
+        baseline=values["baseline"],
+        errors=errors,
+    )
+
+
+def parse_tail(block: str) -> Tail:
+    tail = Tail()
+    if not block.strip():
+        return tail
+    if not re.search(rf"{_LEAD}(settle|pending|delta){_SEP}", block,
+                     re.MULTILINE | re.IGNORECASE):
+        tail.errors.append("invalid_tail_fields")
+
+    # settle: id | outcome | evidence
+    #
+    # 用 finditer 而不是 search —— 模型常写成一行一条：
+    #     settle: p_0001 | confirmed | a
+    #     settle: p_0002 | refuted | b
+    # 只取第一条的话，第二条的判定被静默丢掉，它继续挂着，
+    # 下一轮可能被字面判成 CONFIRMED（污染校准账本）。
+    for m in re.finditer(rf"{_LEAD}settle{_SEP}(.+)$", block,
+                         re.MULTILINE | re.IGNORECASE):
+        raw = m.group(1).strip()
+        if raw in ("-", "无", "none", ""):
+            continue
+        for piece in re.split(r"[;；][ \t]*(?=p_)", raw):
+            parts = [p.strip() for p in piece.split("|")]
+            if len(parts) < 2:
+                continue
+            pid = parts[0].strip(",， ")
+            outcome = parts[1].strip().lower()
+            if outcome == "watch":
+                # 模型明确说「再等等」——必须保留这个意图。
+                # 旧实现直接 continue 丢掉，引擎拿不到 model_item，
+                # 就退回字面判定，可能把「只是附和」判成 CONFIRMED。
+                # 那不接话题记成 refuted 更糟（凭空提高命中率）。
+                tail.watch.append(pid)
+                continue
+            if outcome not in ("confirmed", "refuted"):
+                continue
+            tail.settle.append(
+                SettleItem(pid, outcome, parts[2] if len(parts) > 2 else "")
+            )
+
+    # delta
+    m = re.search(rf"{_LEAD}delta{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
+    if m:
+        rest = block[m.end():]
+        for line in rest.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            if re.match(r"^(pending|settle)[ \t]*[:：]", line, re.IGNORECASE):
+                break
+            dm = re.match(r"^[-*]?[ \t]*([a-zA-Z_.]+)[ \t]*[:：][ \t]*(.+)$", line)
+            if dm:
+                tail.delta[dm.group(1).strip()] = dm.group(2).strip()
+
+    # pending
+    m = re.search(rf"{_LEAD}pending{_SEP}(.*)$", block, re.MULTILINE | re.IGNORECASE)
+    if m:
+        rest = block[m.end():]
+
+        def _is_empty_marker(val: str) -> bool:
+            cleaned = (val or "").strip()
+            if cleaned.startswith(("- ", "* ")):
+                cleaned = cleaned[2:].strip()
+            wrapped = re.fullmatch(r"（([^（）]*)）|\(([^()]*)\)", cleaned)
+            if wrapped:
+                cleaned = next(part for part in wrapped.groups() if part is not None).strip()
+            cleaned = cleaned.lower()
+            return cleaned in ("", "-", "无", "none", "null", "nil", "n/a", "暂无", "不挂")
+
+        if m.group(1).strip() and _is_empty_marker(m.group(1)):
+            return tail
+        p = PendingDraft()
+        seen = set()
+        # Inline prose is malformed pending evidence, not an empty block.
+        non_empty_lines = [m.group(1).strip()] if m.group(1).strip() else []
+        for line in rest.splitlines():
+            if re.match(r"^(settle|delta)[ \t]*[:：]", line.strip(), re.IGNORECASE):
+                break
+            dm = re.match(r"^[ \t]*[-*]?[ \t]*(claim|confidence|predicts)[ \t]*[:：][ \t]*(.+)$",
+                          line, re.IGNORECASE)
+            if dm:
+                k = dm.group(1).lower()
+                seen.add(k)
+                v = dm.group(2).strip()
+                if k == "claim":
+                    p.claim = v
+                elif k == "confidence":
+                    p.confidence = _to_float(v)
+                    if not _valid_confidence(v):
+                        p.errors.append("invalid_pending_confidence")
+                else:
+                    p.predicts = v
+            elif line.strip():
+                non_empty_lines.append(line.strip())
+        if not seen and all(_is_empty_marker(ln) for ln in non_empty_lines):
+            return tail
+        if "claim" in seen and _is_empty_marker(p.claim) and _is_empty_marker(p.predicts):
+            return tail
+        for key in ("claim", "confidence", "predicts"):
+            if key not in seen:
+                p.errors.append("missing_pending_" + key)
+        if p.claim and p.predicts:
+            tail.pending = p
+        else:
+            tail.errors.extend(p.errors)
+
+    return tail
+
+
+def detect_declarations(text: str) -> list[str]:
+    """找出「把位移说出来」的句子。这是硬失败。"""
+    hits = []
+    for pat in _DECLARATION_PATTERNS:
+        for m in re.finditer(pat, text):
+            start = max(0, m.start() - 12)
+            end = min(len(text), m.end() + 24)
+            hits.append(text[start:end].replace("\n", " "))
+    return hits
+
+
+def parse(raw: str, *, expression_only: bool = False) -> ParsedTurn:
+    head_raw, say_raw, tail_raw = _split_sections(raw)
+
+    head = parse_head(head_raw) if head_raw else None
+    tail = parse_tail(tail_raw) if tail_raw else None
+
+    errors: list[str] = []
+    if head is None:
+        errors.append("缺少 HEAD")
+    if tail is None:
+        errors.append("缺少 TAIL")
+    if not say_raw:
+        errors.append("缺少 SAY")
+
+    # 最后一道闸：像协议残留就清空。
+    # 这一步必须在这里，不能只在上游各处判 —— 实测有四种漏法
+    # （无标记只写字段块 / 标记写错 / 流式走另一条路 / clean_phase2 兜底），
+    # 逐处打补丁总会漏。
+    say = safe_say(say_raw)
+    if not say and say_raw:
+        errors.append("SAY 被安全闸清空（疑似协议残留）")
+
+    # 声明检查只看 SAY，因为那才是用户会看到的
+    declared = detect_declarations(say)
+    read_aloud = detect_read_aloud(say)
+
+    return ParsedTurn(head=head, say=say, tail=tail, declared=declared,
+                      read_aloud=read_aloud, errors=errors,
+                      structural_errors=[*section_errors(raw, expression_only=expression_only),
+                                         *literal_errors(say_raw)])

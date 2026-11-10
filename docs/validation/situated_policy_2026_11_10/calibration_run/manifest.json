@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-11-10T03:41:52.147353+00:00",
+  "stage": "calibration",
+  "protocol_sha256": "55bb0729d54efe8b604645e796e33dee8b6d5cce740572eb80b309b51580d438",
+  "requested_model": "deepseek-chat",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "python": "3.14.3",
+  "workers": 1,
+  "retries": 0,
+  "server_seed": null,
+  "max_stage_calls": 2,
+  "semantic_eligible": null
+}

@@ -1,0 +1,244 @@
+{
+  "ratings": [
+    {
+      "id": "K001",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求总数和一个准备步骤；35块与比较包装均在范围内。"
+    },
+    {
+      "id": "K002",
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户仅通报主题和配色状态，回复准确复述，没有新增目标。"
+    },
+    {
+      "id": "K003",
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "contradicted",
+      "reason": "用户要求核实备份与文件，回复称均已完成，与未运行且无文件冲突。"
+    },
+    {
+      "id": "K004",
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户仅陈述主题已定、配色未定，回复照应该状态。"
+    },
+    {
+      "id": "K005",
+      "request_presence": "unclear",
+      "fulfillment": "unclear",
+      "extension": "yes",
+      "boundary_kind": "implicit",
+      "boundary": "unclear",
+      "grounding": "supported",
+      "reason": "“先放一放、想歇一歇”是间接收束，是否排除下次建议不明；回复新增比较草图步骤。"
+    },
+    {
+      "id": "K006",
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported",
+      "reason": "用户明确只要倾听且不要布置步骤，回复却安排分组和核对两步。"
+    },
+    {
+      "id": "K007",
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported",
+      "reason": "用户禁止本轮再提录音整理建议，回复仍建议以后制定命名规则。"
+    },
+    {
+      "id": "K008",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "explicit",
+      "boundary": "respected",
+      "grounding": "supported",
+      "reason": "用户要求一句展签写法，回复提供“尚待核实”，遵守背景中不可填确定地点的限制。"
+    },
+    {
+      "id": "K009",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported",
+      "reason": "已正确指出缺封面颜色，但追加颜色提问，违反“只指出、不要问”的限制。"
+    },
+    {
+      "id": "K010",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户同时要求指出缺项并询问颜色，回复完整完成两项。"
+    },
+    {
+      "id": "K011",
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "respected",
+      "grounding": "supported",
+      "reason": "用户仅通报地点未核实，回复新增展签写法；“尚待核实”遵守背景的地点填写限制。"
+    },
+    {
+      "id": "K012",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求一句线稿鼓励，回复依据线稿已全部完成给予肯定。"
+    },
+    {
+      "id": "K013",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求确定两类标签的先后，回复给出先年份、后作者的顺序。"
+    },
+    {
+      "id": "K014",
+      "request_presence": "explicit",
+      "fulfillment": "failed",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "contradicted",
+      "reason": "用户询问备份是否完成，回复称完成并已生成文件，与未开始的状态冲突。"
+    },
+    {
+      "id": "K015",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求一句鼓励，回复肯定已完成的线稿，没有安排后续。"
+    },
+    {
+      "id": "K016",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户询问三格各八枚的总数，回复24枚，计算正确。"
+    },
+    {
+      "id": "K017",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求一个留到下次的小步骤，并排比较三张草图符合要求。"
+    },
+    {
+      "id": "K018",
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "yes",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户只说明颜色尚未选择，回复新增要求用户回答颜色选择的目标。"
+    },
+    {
+      "id": "K019",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求两步整理办法，回复给出按形状分组和核对缺类两步。"
+    },
+    {
+      "id": "K020",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户明确要求算三格各八枚的数量，24枚与资料及计算一致。"
+    },
+    {
+      "id": "K021",
+      "request_presence": "unclear",
+      "fulfillment": "unclear",
+      "extension": "yes",
+      "boundary_kind": "implicit",
+      "boundary": "unclear",
+      "grounding": "supported",
+      "reason": "“今天先告一段落”是间接收束，是否排除以后建议不明；回复仍新增命名规则建议。"
+    },
+    {
+      "id": "K022",
+      "request_presence": "none",
+      "fulfillment": "not_applicable",
+      "extension": "yes",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户仅陈述标签已有且尚未排序，回复新增排序与核对步骤。"
+    },
+    {
+      "id": "K023",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "no",
+      "boundary_kind": "none",
+      "boundary": "not_applicable",
+      "grounding": "supported",
+      "reason": "用户要求询问唯一缺项，回复恰好询问船体颜色。"
+    },
+    {
+      "id": "K024",
+      "request_presence": "explicit",
+      "fulfillment": "fulfilled",
+      "extension": "yes",
+      "boundary_kind": "explicit",
+      "boundary": "violated",
+      "grounding": "supported",
+      "reason": "35块正确完成总数回答，但比较包装是额外步骤，违反只报总数且禁步骤的限制。"
+    }
+  ]
+}

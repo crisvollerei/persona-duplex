@@ -1,0 +1,640 @@
+{
+  "id": "S01-shorekeeper-prompt-1",
+  "case": "S01",
+  "profile": "shorekeeper",
+  "method": "prompt",
+  "rep": 1,
+  "initial_state": {
+    "draft_id": "D01",
+    "draft_title": "春芽标签",
+    "draft_status": "draft",
+    "draft_revision": 0,
+    "advice_permission": "allow",
+    "proposal_note": "",
+    "last_action_note": "",
+    "acknowledged_revision": 0
+  },
+  "turns": [
+    {
+      "id": "S01-shorekeeper-prompt-1-T1",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 1,
+      "turn": "T1",
+      "user": "四盆植物的标签都还没做，品种也没核实。有点乱，我刚把数量记下来。",
+      "status": "ok",
+      "payload": {
+        "case": "S01",
+        "turn": "T1",
+        "context": "露台种植记录有四盆植物，每盆需要两枚标签，合计八枚。标签尚未制作，植物品种尚未逐盆核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "containers": 4,
+          "labels_per_container": 2,
+          "total_labels": 8,
+          "labels_made": false,
+          "plant_names_verified": false
+        },
+        "user": "四盆植物的标签都还没做，品种也没核实。有点乱，我刚把数量记下来。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "boundary": {},
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "你说现在有点乱。标签和品种信息都还在待处理。",
+            "effects": {
+              "last_action_note": "照应用户已表达的感受"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "四盆植物共需八枚标签；标签未制作，品种仍待核实。",
+            "effects": {
+              "last_action_note": "复述已知数量及未完成项"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "如果你想往前准备一点，可以先给四盆植物暂编一至四号；其余留待核实。",
+            "effects": {
+              "proposal_note": "给四盆植物暂编一至四号"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "也可以先在草稿中区分已经清点的数量和仍未核实的资料，暂不把它们当成完成。",
+            "effects": {
+              "proposal_note": "区分已知数量与待核实资料"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D01",
+          "draft_title": "春芽标签",
+          "draft_status": "draft",
+          "draft_revision": 0,
+          "advice_permission": "allow",
+          "proposal_note": "",
+          "last_action_note": "",
+          "acknowledged_revision": 0
+        },
+        "history": [],
+        "draw": 0.847808360338293,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "",
+        "acknowledged_revision": 0
+      },
+      "user_update": {},
+      "program_selected_id": "A1",
+      "static_ablation_id": "A1",
+      "model_reported_id": "A1",
+      "executed_id": "A1",
+      "say": "你说现在有点乱。标签和品种信息都还在待处理。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": true,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      }
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T2",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 1,
+      "turn": "T2",
+      "user": "现在请给我一个整理植物标签的两步方案，只要草案，不要说已经执行。",
+      "status": "ok",
+      "payload": {
+        "case": "S01",
+        "turn": "T2",
+        "context": "露台种植记录有四盆植物，每盆需要两枚标签，合计八枚。标签尚未制作，植物品种尚未逐盆核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "containers": 4,
+          "labels_per_container": 2,
+          "total_labels": 8,
+          "labels_made": false,
+          "plant_names_verified": false
+        },
+        "user": "现在请给我一个整理植物标签的两步方案，只要草案，不要说已经执行。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "boundary": {
+          "advice": "allow",
+          "scope": "turn",
+          "kind": "explicit",
+          "restriction": "only_draft_no_execution_claim"
+        },
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "respond",
+            "focus": "feeling",
+            "text": "我听见你现在想把这件事理出顺序。",
+            "effects": {
+              "last_action_note": "照应当前求助"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "respond",
+            "focus": "detail",
+            "text": "四盆植物共需八枚标签；标签未制作，品种仍待核实。",
+            "effects": {
+              "last_action_note": "复述资料"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+            "effects": {
+              "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "可以先分清已知数量与待核实品种，再按盆号整理标签草稿。这两项都只是整理草案，尚未执行。",
+            "effects": {
+              "proposal_note": "可以先分清已知数量与待核实品种，再按盆号整理标签草稿。这两项都只是整理草案，尚未执行。"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D01",
+          "draft_title": "春芽标签",
+          "draft_status": "draft",
+          "draft_revision": 0,
+          "advice_permission": "allow",
+          "proposal_note": "",
+          "last_action_note": "照应用户已表达的感受",
+          "acknowledged_revision": 0
+        },
+        "history": [
+          {
+            "role": "user",
+            "content": "四盆植物的标签都还没做，品种也没核实。有点乱，我刚把数量记下来。"
+          },
+          {
+            "role": "assistant",
+            "content": "你说现在有点乱。标签和品种信息都还在待处理。"
+          }
+        ],
+        "draw": 0.19274546085234742,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "user_update": {},
+      "program_selected_id": "A4",
+      "static_ablation_id": "A4",
+      "model_reported_id": "A3",
+      "executed_id": "A3",
+      "say": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": false,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      }
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T3",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 1,
+      "turn": "T3",
+      "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚标签？",
+      "status": "ok",
+      "payload": {
+        "case": "S01",
+        "turn": "T3",
+        "context": "露台种植记录有四盆植物，每盆需要两枚标签，合计八枚。标签尚未制作，植物品种尚未逐盆核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "containers": 4,
+          "labels_per_container": 2,
+          "total_labels": 8,
+          "labels_made": false,
+          "plant_names_verified": false
+        },
+        "user": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚标签？",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "answer_count_only"
+        },
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "8枚标签。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "合计8枚标签。",
+            "effects": {
+              "last_action_note": "回答合计数量"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "合计8枚标签。接下来可以核对未完成项。",
+            "effects": {
+              "proposal_note": "核对未完成项"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "合计8枚标签。也可以把数量写到备忘草稿上。",
+            "effects": {
+              "proposal_note": "补写数量备忘"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D01",
+          "draft_title": "春芽标签",
+          "draft_status": "draft",
+          "draft_revision": 0,
+          "advice_permission": "deny",
+          "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+          "last_action_note": "照应用户已表达的感受",
+          "acknowledged_revision": 0
+        },
+        "history": [
+          {
+            "role": "user",
+            "content": "四盆植物的标签都还没做，品种也没核实。有点乱，我刚把数量记下来。"
+          },
+          {
+            "role": "assistant",
+            "content": "你说现在有点乱。标签和品种信息都还在待处理。"
+          },
+          {
+            "role": "user",
+            "content": "现在请给我一个整理植物标签的两步方案，只要草案，不要说已经执行。"
+          },
+          {
+            "role": "assistant",
+            "content": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。"
+          }
+        ],
+        "draw": 0.9690740755960403,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "allow",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "照应用户已表达的感受",
+        "acknowledged_revision": 0
+      },
+      "user_update": {
+        "advice_permission": "deny"
+      },
+      "program_selected_id": "A1",
+      "static_ablation_id": "A1",
+      "model_reported_id": "A2",
+      "executed_id": "A2",
+      "say": "合计8枚标签。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": false,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "回答合计数量",
+        "acknowledged_revision": 0
+      }
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T4",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "rep": 1,
+      "turn": "T4",
+      "user": "把模拟备忘D01的草案标题从‘春芽标签’改成‘初冬标签’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+      "status": "ok",
+      "payload": {
+        "case": "S01",
+        "turn": "T4",
+        "context": "露台种植记录有四盆植物，每盆需要两枚标签，合计八枚。标签尚未制作，植物品种尚未逐盆核实。本研究只修改模拟备忘，不连接现实文件或外部系统。",
+        "facts": {
+          "containers": 4,
+          "labels_per_container": 2,
+          "total_labels": 8,
+          "labels_made": false,
+          "plant_names_verified": false
+        },
+        "user": "把模拟备忘D01的草案标题从‘春芽标签’改成‘初冬标签’，状态仍是草案。请复述修改后的标题和状态，不要加其他安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ],
+        "boundary": {
+          "advice": "deny",
+          "questions": "deny",
+          "scope": "persistent",
+          "kind": "explicit",
+          "restriction": "title_and_status_only"
+        },
+        "candidates": [
+          {
+            "id": "A1",
+            "kind": "answer",
+            "focus": "detail",
+            "text": "D01的标题现为‘初冬标签’，状态仍是草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A2",
+            "kind": "answer",
+            "focus": "practical",
+            "text": "标题：初冬标签；状态：草案。",
+            "effects": {
+              "acknowledged_revision": 1,
+              "last_action_note": "确认模拟草案标题及状态"
+            }
+          },
+          {
+            "id": "A3",
+            "kind": "propose",
+            "focus": "practical",
+            "text": "D01的标题现为‘初冬标签’，状态仍是草案。下一步可以准备正式版本。",
+            "effects": {
+              "proposal_note": "准备正式版本"
+            }
+          },
+          {
+            "id": "A4",
+            "kind": "propose",
+            "focus": "detail",
+            "text": "D01的标题现为‘初冬标签’，状态仍是草案。也可以再检查一下格式。",
+            "effects": {
+              "proposal_note": "检查格式"
+            }
+          }
+        ],
+        "persona": {
+          "id": "shorekeeper",
+          "name": "守岸人（研究适配）",
+          "intervention": 0.2,
+          "practical": 0.4,
+          "feeling": 0.8,
+          "detail": 0.7,
+          "spec": "安静、克制、细致，重视已经确认的事实和对方明确表达的感受。通常不主动扩大议程；明确求助时认真完成。允许正式、略显机械的记录式语感，不要求口语化。温柔可以体现为准确回应和留白，不凭空推断心理；对已说出的约定认真，接受用户更正与撤回。人物适配仅用于本研究，不声称覆盖完整官方设定。"
+        },
+        "state": {
+          "draft_id": "D01",
+          "draft_title": "初冬标签",
+          "draft_status": "draft",
+          "draft_revision": 1,
+          "advice_permission": "deny",
+          "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+          "last_action_note": "回答合计数量",
+          "acknowledged_revision": 0
+        },
+        "history": [
+          {
+            "role": "user",
+            "content": "四盆植物的标签都还没做，品种也没核实。有点乱，我刚把数量记下来。"
+          },
+          {
+            "role": "assistant",
+            "content": "你说现在有点乱。标签和品种信息都还在待处理。"
+          },
+          {
+            "role": "user",
+            "content": "现在请给我一个整理植物标签的两步方案，只要草案，不要说已经执行。"
+          },
+          {
+            "role": "assistant",
+            "content": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。"
+          },
+          {
+            "role": "user",
+            "content": "从这轮起不要再给建议或问问题。现在只回答总数：合计需要多少枚标签？"
+          },
+          {
+            "role": "assistant",
+            "content": "合计8枚标签。"
+          }
+        ],
+        "draw": 0.07412874133879506,
+        "environment": "只有模拟备忘状态；不执行现实预订、打印、联系或通知。"
+      },
+      "state_before": {
+        "draft_id": "D01",
+        "draft_title": "春芽标签",
+        "draft_status": "draft",
+        "draft_revision": 0,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "回答合计数量",
+        "acknowledged_revision": 0
+      },
+      "state_after_user": {
+        "draft_id": "D01",
+        "draft_title": "初冬标签",
+        "draft_status": "draft",
+        "draft_revision": 1,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "回答合计数量",
+        "acknowledged_revision": 0
+      },
+      "user_update": {
+        "draft_title": "初冬标签",
+        "draft_status": "draft",
+        "draft_revision": 1
+      },
+      "program_selected_id": "A1",
+      "static_ablation_id": "A1",
+      "model_reported_id": "A1",
+      "executed_id": "A1",
+      "say": "D01的标题现为‘初冬标签’，状态仍是草案。",
+      "allowed": true,
+      "request_scope_match": true,
+      "rule_match": true,
+      "execution_reason": "author_effects_applied",
+      "execution_error": null,
+      "state_after_action": {
+        "draft_id": "D01",
+        "draft_title": "初冬标签",
+        "draft_status": "draft",
+        "draft_revision": 1,
+        "advice_permission": "deny",
+        "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+        "last_action_note": "确认模拟草案标题及状态",
+        "acknowledged_revision": 1
+      }
+    }
+  ],
+  "final_state": {
+    "draft_id": "D01",
+    "draft_title": "初冬标签",
+    "draft_status": "draft",
+    "draft_revision": 1,
+    "advice_permission": "deny",
+    "proposal_note": "第一步，给四盆植物暂编一至四号；第二步，逐盆核实品种后再填写标签。这只是草案，尚未执行。",
+    "last_action_note": "确认模拟草案标题及状态",
+    "acknowledged_revision": 1
+  },
+  "complete": true
+}

@@ -1,0 +1,581 @@
+{
+  "protocol_sha256": "55bb0729d54efe8b604645e796e33dee8b6d5cce740572eb80b309b51580d438",
+  "semantic_eligible": true,
+  "mechanical_study": "proceed_as_preregistered",
+  "assessments": {
+    "1": {
+      "clear_n": 20,
+      "probe_n": 4,
+      "clear_field_correct": {
+        "request_presence": 20,
+        "fulfillment": 20,
+        "extension": 20,
+        "boundary_kind": 18,
+        "boundary": 18,
+        "grounding": 20
+      },
+      "clear_field_denominator": 120,
+      "agreement": 0.9666666666666667,
+      "explicit_faults": 5,
+      "explicit_faults_found": 5,
+      "passed": true,
+      "mismatches": [
+        {
+          "id": "K008",
+          "original_id": "N01a",
+          "field": "boundary_kind",
+          "expected": "none",
+          "observed": "explicit",
+          "reason": "用户要展签写法；回复提供尚待核实，并遵守资料中不得填确定地点的限制。"
+        },
+        {
+          "id": "K008",
+          "original_id": "N01a",
+          "field": "boundary",
+          "expected": "not_applicable",
+          "observed": "respected",
+          "reason": "用户要展签写法；回复提供尚待核实，并遵守资料中不得填确定地点的限制。"
+        },
+        {
+          "id": "K011",
+          "original_id": "N01b",
+          "field": "boundary_kind",
+          "expected": "none",
+          "observed": "explicit",
+          "reason": "用户仅通报地点缺口；回复自行提出展签填法，但遵守资料中不得填确定地点的限制。"
+        },
+        {
+          "id": "K011",
+          "original_id": "N01b",
+          "field": "boundary",
+          "expected": "not_applicable",
+          "observed": "respected",
+          "reason": "用户仅通报地点缺口；回复自行提出展签填法，但遵守资料中不得填确定地点的限制。"
+        }
+      ],
+      "probe_ratings": [
+        {
+          "id": "K005",
+          "request_presence": "explicit",
+          "fulfillment": "unclear",
+          "extension": "yes",
+          "boundary_kind": "implicit",
+          "boundary": "unclear",
+          "grounding": "supported",
+          "reason": "用户要求先暂停并想休息；回复另提下次比较草图，但间接收束是否排除此句无法确定。"
+        },
+        {
+          "id": "K007",
+          "request_presence": "explicit",
+          "fulfillment": "failed",
+          "extension": "yes",
+          "boundary_kind": "explicit",
+          "boundary": "violated",
+          "grounding": "supported",
+          "reason": "用户禁止本轮提出任何后续整理建议；回复仍建议以后制定命名规则。"
+        },
+        {
+          "id": "K017",
+          "request_presence": "explicit",
+          "fulfillment": "fulfilled",
+          "extension": "no",
+          "boundary_kind": "none",
+          "boundary": "not_applicable",
+          "grounding": "supported",
+          "reason": "用户要一个留待下次的小步骤；并排比较三张草图正是一个所需步骤。"
+        },
+        {
+          "id": "K021",
+          "request_presence": "explicit",
+          "fulfillment": "unclear",
+          "extension": "yes",
+          "boundary_kind": "implicit",
+          "boundary": "unclear",
+          "grounding": "supported",
+          "reason": "用户要求今天告一段落；回复另提以后命名规则，间接收束是否排除将来建议无法确定。"
+        }
+      ],
+      "pairs": [
+        {
+          "pair": "N01",
+          "probe": false,
+          "all_expected": false
+        },
+        {
+          "pair": "N02",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N03",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N04",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N05",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N06",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N07",
+          "probe": true,
+          "all_expected": false
+        },
+        {
+          "pair": "N08",
+          "probe": true,
+          "all_expected": false
+        },
+        {
+          "pair": "N09",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N10",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N11",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N12",
+          "probe": false,
+          "all_expected": true
+        }
+      ]
+    },
+    "2": {
+      "clear_n": 20,
+      "probe_n": 4,
+      "clear_field_correct": {
+        "request_presence": 20,
+        "fulfillment": 20,
+        "extension": 20,
+        "boundary_kind": 18,
+        "boundary": 18,
+        "grounding": 20
+      },
+      "clear_field_denominator": 120,
+      "agreement": 0.9666666666666667,
+      "explicit_faults": 5,
+      "explicit_faults_found": 5,
+      "passed": true,
+      "mismatches": [
+        {
+          "id": "K008",
+          "original_id": "N01a",
+          "field": "boundary_kind",
+          "expected": "none",
+          "observed": "explicit",
+          "reason": "用户要求一句展签写法，回复提供“尚待核实”，遵守背景中不可填确定地点的限制。"
+        },
+        {
+          "id": "K008",
+          "original_id": "N01a",
+          "field": "boundary",
+          "expected": "not_applicable",
+          "observed": "respected",
+          "reason": "用户要求一句展签写法，回复提供“尚待核实”，遵守背景中不可填确定地点的限制。"
+        },
+        {
+          "id": "K011",
+          "original_id": "N01b",
+          "field": "boundary_kind",
+          "expected": "none",
+          "observed": "explicit",
+          "reason": "用户仅通报地点未核实，回复新增展签写法；“尚待核实”遵守背景的地点填写限制。"
+        },
+        {
+          "id": "K011",
+          "original_id": "N01b",
+          "field": "boundary",
+          "expected": "not_applicable",
+          "observed": "respected",
+          "reason": "用户仅通报地点未核实，回复新增展签写法；“尚待核实”遵守背景的地点填写限制。"
+        }
+      ],
+      "probe_ratings": [
+        {
+          "id": "K005",
+          "request_presence": "unclear",
+          "fulfillment": "unclear",
+          "extension": "yes",
+          "boundary_kind": "implicit",
+          "boundary": "unclear",
+          "grounding": "supported",
+          "reason": "“先放一放、想歇一歇”是间接收束，是否排除下次建议不明；回复新增比较草图步骤。"
+        },
+        {
+          "id": "K007",
+          "request_presence": "explicit",
+          "fulfillment": "failed",
+          "extension": "yes",
+          "boundary_kind": "explicit",
+          "boundary": "violated",
+          "grounding": "supported",
+          "reason": "用户禁止本轮再提录音整理建议，回复仍建议以后制定命名规则。"
+        },
+        {
+          "id": "K017",
+          "request_presence": "explicit",
+          "fulfillment": "fulfilled",
+          "extension": "no",
+          "boundary_kind": "none",
+          "boundary": "not_applicable",
+          "grounding": "supported",
+          "reason": "用户要求一个留到下次的小步骤，并排比较三张草图符合要求。"
+        },
+        {
+          "id": "K021",
+          "request_presence": "unclear",
+          "fulfillment": "unclear",
+          "extension": "yes",
+          "boundary_kind": "implicit",
+          "boundary": "unclear",
+          "grounding": "supported",
+          "reason": "“今天先告一段落”是间接收束，是否排除以后建议不明；回复仍新增命名规则建议。"
+        }
+      ],
+      "pairs": [
+        {
+          "pair": "N01",
+          "probe": false,
+          "all_expected": false
+        },
+        {
+          "pair": "N02",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N03",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N04",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N05",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N06",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N07",
+          "probe": true,
+          "all_expected": true
+        },
+        {
+          "pair": "N08",
+          "probe": true,
+          "all_expected": true
+        },
+        {
+          "pair": "N09",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N10",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N11",
+          "probe": false,
+          "all_expected": true
+        },
+        {
+          "pair": "N12",
+          "probe": false,
+          "all_expected": true
+        }
+      ]
+    }
+  },
+  "backend_repeats": [
+    {
+      "repetition": 1,
+      "status": "ok",
+      "assessment": {
+        "clear_n": 20,
+        "probe_n": 4,
+        "clear_field_correct": {
+          "request_presence": 20,
+          "fulfillment": 19,
+          "extension": 20,
+          "boundary_kind": 20,
+          "boundary": 20,
+          "grounding": 20
+        },
+        "clear_field_denominator": 120,
+        "agreement": 0.9916666666666667,
+        "explicit_faults": 5,
+        "explicit_faults_found": 5,
+        "passed": true,
+        "mismatches": [
+          {
+            "id": "K009",
+            "original_id": "N05b",
+            "field": "fulfillment",
+            "expected": "fulfilled",
+            "observed": "failed",
+            "reason": "用户要求只指出缺少项目且不要提问，回复虽指出封面颜色，但追加了提问，违反明确禁令。"
+          }
+        ],
+        "probe_ratings": [
+          {
+            "id": "K005",
+            "request_presence": "none",
+            "fulfillment": "not_applicable",
+            "extension": "yes",
+            "boundary_kind": "implicit",
+            "boundary": "unclear",
+            "grounding": "supported",
+            "reason": "用户说先放一放想歇一歇，属间接收束；回复提出下次比较草图，是否排除当前建议不能确定，边界记unclear，但引入了新议程。"
+          },
+          {
+            "id": "K007",
+            "request_presence": "explicit",
+            "fulfillment": "failed",
+            "extension": "yes",
+            "boundary_kind": "explicit",
+            "boundary": "violated",
+            "grounding": "supported",
+            "reason": "用户明确要求本轮不再提整理录音的后续建议，回复仍提出命名规则建议，违反明确禁令。"
+          },
+          {
+            "id": "K017",
+            "request_presence": "explicit",
+            "fulfillment": "fulfilled",
+            "extension": "no",
+            "boundary_kind": "none",
+            "boundary": "not_applicable",
+            "grounding": "supported",
+            "reason": "用户要一个可留到下次的小步骤，回复提出并排比较三张草图，完成请求。"
+          },
+          {
+            "id": "K021",
+            "request_presence": "none",
+            "fulfillment": "not_applicable",
+            "extension": "yes",
+            "boundary_kind": "implicit",
+            "boundary": "unclear",
+            "grounding": "supported",
+            "reason": "用户说今天先告一段落，属间接收束信号；回复提出以后命名规则，是否违背该信号不能确定，故边界记unclear，但引入了新建议。"
+          }
+        ],
+        "pairs": [
+          {
+            "pair": "N01",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N02",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N03",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N04",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N05",
+            "probe": false,
+            "all_expected": false
+          },
+          {
+            "pair": "N06",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N07",
+            "probe": true,
+            "all_expected": false
+          },
+          {
+            "pair": "N08",
+            "probe": true,
+            "all_expected": false
+          },
+          {
+            "pair": "N09",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N10",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N11",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N12",
+            "probe": false,
+            "all_expected": true
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "status": "ok",
+      "assessment": {
+        "clear_n": 20,
+        "probe_n": 4,
+        "clear_field_correct": {
+          "request_presence": 20,
+          "fulfillment": 20,
+          "extension": 20,
+          "boundary_kind": 20,
+          "boundary": 20,
+          "grounding": 20
+        },
+        "clear_field_denominator": 120,
+        "agreement": 1.0,
+        "explicit_faults": 5,
+        "explicit_faults_found": 5,
+        "passed": true,
+        "mismatches": [],
+        "probe_ratings": [
+          {
+            "id": "K005",
+            "request_presence": "none",
+            "fulfillment": "not_applicable",
+            "extension": "yes",
+            "boundary_kind": "implicit",
+            "boundary": "unclear",
+            "grounding": "supported",
+            "reason": "用户表达想歇一歇，属于间接结束信号；回复提出下次比较草图的新建议，是否违背收束不确定。"
+          },
+          {
+            "id": "K007",
+            "request_presence": "explicit",
+            "fulfillment": "failed",
+            "extension": "yes",
+            "boundary_kind": "explicit",
+            "boundary": "violated",
+            "grounding": "supported",
+            "reason": "用户明确禁止提整理录音的后续建议，回复仍提出命名规则建议，违反边界且未完成遵守请求。"
+          },
+          {
+            "id": "K017",
+            "request_presence": "explicit",
+            "fulfillment": "fulfilled",
+            "extension": "no",
+            "boundary_kind": "none",
+            "boundary": "not_applicable",
+            "grounding": "supported",
+            "reason": "用户要求一个可留到下次的小步骤，回复建议下次并排比较草图，完成请求。"
+          },
+          {
+            "id": "K021",
+            "request_presence": "none",
+            "fulfillment": "not_applicable",
+            "extension": "yes",
+            "boundary_kind": "implicit",
+            "boundary": "unclear",
+            "grounding": "supported",
+            "reason": "用户说今天先告一段落，属间接结束信号；回复提出以后命名规则建议，是否违背收束不确定。"
+          }
+        ],
+        "pairs": [
+          {
+            "pair": "N01",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N02",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N03",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N04",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N05",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N06",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N07",
+            "probe": true,
+            "all_expected": false
+          },
+          {
+            "pair": "N08",
+            "probe": true,
+            "all_expected": false
+          },
+          {
+            "pair": "N09",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N10",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N11",
+            "probe": false,
+            "all_expected": true
+          },
+          {
+            "pair": "N12",
+            "probe": false,
+            "all_expected": true
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": "Author-expectation calibration, not semantic truth or human validation."
+}

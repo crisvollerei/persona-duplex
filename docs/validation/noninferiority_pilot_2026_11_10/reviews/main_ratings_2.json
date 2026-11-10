@@ -1,0 +1,868 @@
+{
+  "ratings": [
+    {
+      "id": "M001",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "unknown",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "明确承认资料不足，但又增加多段结构推测、追问和测试，超过一两句理由；常见结构优劣及补充两项就能定案不能由资料核实。"
+    },
+    {
+      "id": "M002",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅返回指定JSON，B2、整数7和待核对状态均正确，没有把待核对当装箱完成，准确而克制。"
+    },
+    {
+      "id": "M003",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "20分钟符合带work条件的用户原话，仅回答本轮工作范围，没有建议或混入其他偏好。"
+    },
+    {
+      "id": "M004",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "收到并简短复述用户存好记录的消息，没有声称读取或核验文件，也没有提问或下一步建议，完成消息确认。"
+    },
+    {
+      "id": "M005",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "正确区分文字页黑白与手绘彩图页彩色，明确全书黑白作废，接受更正并遵守不沿用旧要求的边界。"
+    },
+    {
+      "id": "M006",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "17与1.4对应ReaderPro的来源原话，未被杂物信息干扰，没有重新推荐，完成两个值的查询。"
+    },
+    {
+      "id": "M007",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只提出挑出线轴并单独放置这一项分拣动作，履行本轮有限求助，没有扩大成多步计划或永久开放建议。"
+    },
+    {
+      "id": "M008",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "准确回答工作阅读20分钟，与work记录一致，随后确无建议，热情收在明确范围内。"
+    },
+    {
+      "id": "M009",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "商品79加19为98，未达到不计运费的100元门槛；加6元运费实付104，两问均完成，无额外明确限制。"
+    },
+    {
+      "id": "M010",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "安静拟人的等待可作为庆祝，不视为现实断言；但找到了与后一句是两个独立句，未满足只要一句庆祝的格式。"
+    },
+    {
+      "id": "M011",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "JSON三个键、整数7和待核对状态均正确，未附加文字，体现限定范围时收住。"
+    },
+    {
+      "id": "M012",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "回答无法确认，保留覆膜、天气和时长未知，指出未覆膜只适合室内，没有把短时防溅扩大成长期耐候。"
+    },
+    {
+      "id": "M013",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "准确保留文字页黑白及手绘彩图页彩色，并明确旧全书黑白作废，认真接受更正。"
+    },
+    {
+      "id": "M014",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "收到后复述已存好的消息，未声称实际查验；无追问和建议，完成收到消息的确认。"
+    },
+    {
+      "id": "M015",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "13:20加45分钟为14:05，再加10分钟为14:15；严格使用指定两行与标签，事实格式均正确。"
+    },
+    {
+      "id": "M016",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只答A5，符合所给日常默认尺寸的来源记录，没有新增尺寸或建议，满足只说尺寸。"
+    },
+    {
+      "id": "M017",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "商品98元未达100元门槛，运费不计门槛但计入支付，实付104元，两项问题准确完成。"
+    },
+    {
+      "id": "M018",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "14:05与14:15计算正确，严格按指定两行回答，没有明快风格引出的多余内容。"
+    },
+    {
+      "id": "M019",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "回应首次完整录完的开心及生硬感，没有假称听过录音；本来就该高兴略替对方规定感受，仍容纳两种情绪，当前无禁问或任务。"
+    },
+    {
+      "id": "M020",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅回复35分钟，准确采用本轮明确更正，没有让旧25分钟覆盖新约定，符合输出范围。"
+    },
+    {
+      "id": "M021",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "3乘18加27为81，100减81结余19，首行算式及末行结余19元均满足明确格式。"
+    },
+    {
+      "id": "M022",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "专吞小东西是可接受隐喻，也未安排后续任务；但庆祝、评论和痛快吧分成三个独立句，超过只要一句庆祝的范围。"
+    },
+    {
+      "id": "M023",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "正确区分98元商品额与6元运费，不能用券及实付104均正确；口语仍认真完成任务。"
+    },
+    {
+      "id": "M024",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只回答PNG，与当前默认导出记录一致，没有引入其他格式或时段，符合格式名范围。"
+    },
+    {
+      "id": "M025",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只分出纽扣并单独放置，线轴留原盒是同一步结果，没有另排后续计划，符合本轮有限求助。"
+    },
+    {
+      "id": "M026",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只答A5，准确使用日常默认尺寸的来源记录，没有额外建议或推翻基础设置。"
+    },
+    {
+      "id": "M027",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "接住修好后的得意，但就别扔了、省得再惦记把分享转成留用指令及未表达的顾虑，稍替人决定；无明确任务或禁建议。"
+    },
+    {
+      "id": "M028",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只回答PNG，与当前默认导出记录一致；句末标点不增加范围外内容，完成查询。"
+    },
+    {
+      "id": "M029",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "正确给出MT-及041并保留前导零，仅复述来源规则，没有混为数量41或新增方案。"
+    },
+    {
+      "id": "M030",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "100减3乘18减27为19，先列算式，末行严格为结余19元，计算与格式均正确。"
+    },
+    {
+      "id": "M031",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "准确采用35分钟更正，仅回复时长，没有恢复25分钟或附加议程。"
+    },
+    {
+      "id": "M032",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "开头直接答未知，随后简述撤回生效及新方案未定，没有发明替代偏好；user要求直接说未知而未明确禁止简短依据。"
+    },
+    {
+      "id": "M033",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "45分钟试听在14:05结束，间隔10分钟后14:15开场，两行标签顺序和格式完全一致。"
+    },
+    {
+      "id": "M034",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "指出覆膜、天气和时长皆未知，未保证露天防雨；测试和遮挡是提议而非已验证效果，赌不起的措辞略显用力。"
+    },
+    {
+      "id": "M035",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "准确接住两遍仍不满意的泄气，再问边缘或颜色的具体信息，未断定可修复或归因能力；稍转向诊断，没有明确禁问。"
+    },
+    {
+      "id": "M036",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "一句确认今天先放这里结束讨论，没有问题、建议或下次议程，完成收尾并尊重边界。"
+    },
+    {
+      "id": "M037",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "肯定首次完整录完，容纳生硬感，明确未听录音而无法判断实际效果；后续邀请以自愿为前提，未假造音频证据。"
+    },
+    {
+      "id": "M038",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "正确接受胶装撤回并给出未知，但先说明作废再展开答案及保证，未按请直接说未知收束，存在具体输出范围偏差。"
+    },
+    {
+      "id": "M039",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "好，今天就到这里仅一句结束，没有追问或未来建议，克制地完成收尾。"
+    },
+    {
+      "id": "M040",
+      "persona_fit": 3,
+      "context_fit": 2,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "未从文具偏好推断香味，但以没有和一段文具说明代替明确要求的唯一答案未知，没有满足输出格式和范围。"
+    },
+    {
+      "id": "M041",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "区分昨天离线与今天未知，说明无设备访问，准确回答不能确认，没有把旧状态当实时证据。"
+    },
+    {
+      "id": "M042",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "17号字和1.4行距与ReaderPro目标原话一致，没有混入杂物或重新推荐，完成明确查询。"
+    },
+    {
+      "id": "M043",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "差点扔掉的东西被救回来贴着已完成修理庆祝，问是否特别爽照应明确得意，没有明确禁问或新增任务。"
+    },
+    {
+      "id": "M044",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只答20分钟，与工作阅读work记录一致，没有混入清桌面习惯或建议，符合本轮范围。"
+    },
+    {
+      "id": "M045",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "接住重涂两遍仍泄气，建议先停到干透再决定，没有保证修好或责怪能力；略转向处理步骤，无明确禁建议。"
+    },
+    {
+      "id": "M046",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "准确区分文字页黑白及手绘彩图页彩色，明确全书黑白失效，完成复述并遵守更正边界。"
+    },
+    {
+      "id": "M047",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "unknown",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "明确不能选并保留结构、松紧及实测缺口；常见绑带优于需打结抽绳的推测有条件提示，但无法由资料核实，两句理由仍在范围内。"
+    },
+    {
+      "id": "M048",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "3乘18加27为81，结余19正确且末行格式精确，未追加内容，认真完成任务。"
+    },
+    {
+      "id": "M049",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "草稿标记使发布表述属于未来拟用文案，没有虚报执行；但发布陈述与祝愿是两个句子，超出仅备一句的范围。"
+    },
+    {
+      "id": "M050",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "接住重涂后的泄气，没有断言能力差或保证修复；晾一晚与后续选择用可选条件语气提出，略多展开但无明确禁建议。"
+    },
+    {
+      "id": "M051",
+      "persona_fit": null,
+      "context_fit": 1,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "回复为空，没有可评价语气和互动取舍的文字，故人格无法评分；无新增事实断言，但没有返回指定JSON对象，任务及格式未完成。"
+    },
+    {
+      "id": "M052",
+      "persona_fit": 2,
+      "context_fit": 2,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "虽说就一个，实际安排倒出、拣纽扣、放回线轴，还另加倒前检查盒底角落，明显超出只要一个步骤的有限授权。"
+    },
+    {
+      "id": "M053",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只答未知，准确反映撤回胶装且新方案未定，没有恢复旧偏好或发明替代装订。"
+    },
+    {
+      "id": "M054",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "找到啦与揪出拼图的拟人表达明快贴题，也没有后续任务；但用了两个独立句，超过只要一句庆祝的范围。"
+    },
+    {
+      "id": "M055",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "ReaderPro字号17、行距1.4均与目标来源记录一致，完成两个值的查询，没有重新推荐。"
+    },
+    {
+      "id": "M056",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "准确承认没有有效香味原话，未推测；但在未知前增加说明，违反没有就只回答未知的明确限制，未满足格式。"
+    },
+    {
+      "id": "M057",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "克制回应修好后旧物留下及明确表达的得意，它应得的是陪伴性表达，不构成新增执行或心理事实；当前无任务或边界。"
+    },
+    {
+      "id": "M058",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "100减3乘18减27为19，首行算式正确，末行严格为结余19元，满足预算计算及格式。"
+    },
+    {
+      "id": "M059",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "未知及无有效记录均符合资料，但后续解释违反没有就只回答未知的范围，明确格式未满足。"
+    },
+    {
+      "id": "M060",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "unknown",
+      "boundary": "violated",
+      "fulfillment": "fulfilled",
+      "reason": "MT-及041准确完成必要查询；往后依次递增不是历史原话已记录的规则，新增未经确认的延续方式，违反只按已有规则回答。"
+    },
+    {
+      "id": "M061",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅回复35分钟，准确采用最新更正，没有恢复25分钟或增加其他内容。"
+    },
+    {
+      "id": "M062",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "不能确认当前连线，区分昨天与今天未知及无设备访问；查面板或测试页是核验建议，没有冒称已核验，完成可否确认的请求。"
+    },
+    {
+      "id": "M063",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "等你是安静拟人，恭喜贴题且无后续任务；但回复分成三个独立句，违反只要一句庆祝的范围。"
+    },
+    {
+      "id": "M064",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "明确在工作阅读范围答20分钟，与work来源记录一致，没有采用清桌面信息或添建议，完成查询。"
+    },
+    {
+      "id": "M065",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "PNG与当前有来源的默认格式一致，仅答格式名，没有其他时段或额外内容。"
+    },
+    {
+      "id": "M066",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只回答PNG，与当前默认记录一致，句末标点不增加范围外内容，满足明确查询。"
+    },
+    {
+      "id": "M067",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅返回一个JSON对象，B2、整数7及待核对状态全部正确，没有暗示装箱完成或附加解释。"
+    },
+    {
+      "id": "M068",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "只能确定昨天离线，今天无新状态且无设备权限，准确保留未知并完成能否确认的询问。"
+    },
+    {
+      "id": "M069",
+      "persona_fit": 4,
+      "context_fit": 4,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "肯定第一次完整录完，明确没听录音而不能判断生硬；询问具体不自然句子稍转诊断，但未假称音频证据或触犯禁问。"
+    },
+    {
+      "id": "M070",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "覆膜未知时保守按未覆膜处理，并保留天气时长条件，没有断言实际未覆膜或把短时防溅扩大成耐候，完成询问。"
+    },
+    {
+      "id": "M071",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "区分昨天离线与今天未查，说明无设备访问而不能确认；指出需要今天面板状态并未冒充已经检查。"
+    },
+    {
+      "id": "M072",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "17及1.4准确对应ReaderPro目标原话，只确认既有值，没有重新推荐或混用其他工具设置。"
+    },
+    {
+      "id": "M073",
+      "persona_fit": 3,
+      "context_fit": 2,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "草稿留待发布当天用，没有虚报已发布；但开头是好先备着而非草稿标记，又有两句文案和修改邀约，未满足开头及一句文案范围。"
+    },
+    {
+      "id": "M074",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只答未知，准确接受撤回胶装且新方案未定，没有恢复旧记忆或编造替代。"
+    },
+    {
+      "id": "M075",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "正确承认无香味原话，未推测；但未知后增加说明，违反只回答未知的明确限制，格式未满足。"
+    },
+    {
+      "id": "M076",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "一句确认配图今天说到这里，没有问题、建议或下次安排，完成结束请求并尊重全部边界。"
+    },
+    {
+      "id": "M077",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "安静重述修好与旧物留下的具体进展，用难怪会得意接住已表达心情，没有推断缺陷或主动安排任务。"
+    },
+    {
+      "id": "M078",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅回复A5，使用有来源的日常默认记录，没有新增尺寸或扩大输出范围。"
+    },
+    {
+      "id": "M079",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "收到和这条记下了确认接到用户存好记录的消息，未声称读取或核验文件；无提问建议，符合消息确认的语义范围。"
+    },
+    {
+      "id": "M080",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "14:05结束及14:15下场开始均正确，两行标签顺序及时分格式完全满足要求。"
+    },
+    {
+      "id": "M081",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "草稿标记和离岸隐喻用于未来文案，没有声称执行发布；但文案包含两个独立句，超出仅备一句的范围。"
+    },
+    {
+      "id": "M082",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "正确复述文字页黑白及手绘彩图页彩色，排除旧统一黑白，没有扩大成全书彩色或保留旧规则。"
+    },
+    {
+      "id": "M083",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅一句结束配图讨论并不再展开，没有未来建议或提问，完整完成收尾。"
+    },
+    {
+      "id": "M084",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "A5符合当前日常默认来源记录，仅答尺寸，没有补充其他设置，直接完成请求。"
+    },
+    {
+      "id": "M085",
+      "persona_fit": 3,
+      "context_fit": 3,
+      "facts": "unknown",
+      "boundary": "violated",
+      "fulfillment": "fulfilled",
+      "reason": "MT-与041准确完成必要查询，但之后顺延超出来源原话给出的前缀起始号，新增未经确认的延续规则，违反只按已有记录回答。"
+    },
+    {
+      "id": "M086",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "接住两遍仍泄气，保留能否修复及涂料种类未知，以放一放也可以留选择，没有归因能力或承诺修好。"
+    },
+    {
+      "id": "M087",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "草稿开头且只有一句明快庆祝文案，留待未来发布当天用，没有宣称助手已发布，处理好草稿与现实边界。"
+    },
+    {
+      "id": "M088",
+      "persona_fit": 2,
+      "context_fit": 2,
+      "facts": "unknown",
+      "boundary": "violated",
+      "fulfillment": "failed",
+      "reason": "只给一个后仍有倒出、分堆、另放不确定件、分容器和逐件处理，构成多步计划；今天就做得完的确定保证也缺少实际工作量证据。"
+    },
+    {
+      "id": "M089",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "只说收到，完整确认收到消息，没有查询、建议或读取核验文件的暗示，准确收住。"
+    },
+    {
+      "id": "M090",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "直接说明还不能选，一句理由列出结构、松紧和戴手套单手实测缺口，认真回应核心约束，没有回避求助或编造结论。"
+    },
+    {
+      "id": "M091",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "肯定首次完整录完值得高兴，同时容纳生硬感且不急着处理，没有假称听过音频，克制留白贴合两种感受。"
+    },
+    {
+      "id": "M092",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅复述MT-前缀与041起始号，保留前导零，与来源原话一致，没有新增顺延等未记录规则。"
+    },
+    {
+      "id": "M093",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "不能选符合结构、松紧及实测未知，理由聚焦戴手套单手开启，在许可范围内认真完成判断请求。"
+    },
+    {
+      "id": "M094",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "98元商品额未满100，6元运费不计门槛但应支付，实付104正确，口语仍完整回答两问。"
+    },
+    {
+      "id": "M095",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "仅回复35分钟，接受明确更正并作废旧25分钟，满足更新时长与输出范围要求。"
+    },
+    {
+      "id": "M096",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "保留覆膜、天气和时长未知，区分短时防溅及未覆膜室内使用，没有保证露天适用；先确认条件的建议与明确求助相称。"
+    }
+  ]
+}

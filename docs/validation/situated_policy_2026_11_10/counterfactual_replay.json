@@ -1,0 +1,3679 @@
+{
+  "records": [
+    {
+      "id": "S01-lan-program-1-T1",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1395e7a568a50fcfd7753dc1df205bb65b22c86f55090d13657d882f0e199855"
+    },
+    {
+      "id": "S01-lan-program-1-T2",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "655cb2da01e9eca6346e3f2e32eb0eb9131e27a176687168f503eefa807bfa18"
+    },
+    {
+      "id": "S01-lan-program-1-T3",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "16aed50888088ab4237ed2f0ad4d879cffb6de8d9f0da6575425741c2bb160b3"
+    },
+    {
+      "id": "S01-lan-program-1-T4",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c1c13a574de62af545f8257a04de41c36785a71a2d98fd350323f4ee8cd51df7"
+    },
+    {
+      "id": "S01-lan-program-2-T1",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "7df7e77556468506ff78dd134cb23320db84d2fcd0cac9246007575aa2d659eb"
+    },
+    {
+      "id": "S01-lan-program-2-T2",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c913a2d07f271b6ea3391b59110e9a670b285c84a6c325ea333cb2a7a79862c8"
+    },
+    {
+      "id": "S01-lan-program-2-T3",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "82dcedfe316df088335912d863043ca0d46f9baa2e4074292510406f95404814"
+    },
+    {
+      "id": "S01-lan-program-2-T4",
+      "case": "S01",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "46a892789d68027d71b92bda6167701a3b983b577673e215dc51b699048dd7d9"
+    },
+    {
+      "id": "S01-lan-prompt-1-T1",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1395e7a568a50fcfd7753dc1df205bb65b22c86f55090d13657d882f0e199855"
+    },
+    {
+      "id": "S01-lan-prompt-1-T2",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "116203a0cfa660021d8786074800867d12eac99bc9b7d388f6583428d6357fd0"
+    },
+    {
+      "id": "S01-lan-prompt-1-T3",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b27d426e1cf16fe5ad7fac2a72112e0b08178cf9a30c7f5f4cdcdc23c5daad2c"
+    },
+    {
+      "id": "S01-lan-prompt-1-T4",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "7537f2bfa6efb07ab5bec4b5d55545112042a9d37e78359c86e7aa5c26e10f9c"
+    },
+    {
+      "id": "S01-lan-prompt-2-T1",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "7df7e77556468506ff78dd134cb23320db84d2fcd0cac9246007575aa2d659eb"
+    },
+    {
+      "id": "S01-lan-prompt-2-T2",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "da8308a78b0c7140c3f1cfca9a93abd6eae1162e0618f9a3a7ca109bfd5ff79e"
+    },
+    {
+      "id": "S01-lan-prompt-2-T3",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "3b4be87c553d6b2b0137bcf9ef0d29ff35e23af6310e2cea0eb708bbfb4ae530"
+    },
+    {
+      "id": "S01-lan-prompt-2-T4",
+      "case": "S01",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0eba25b32aee62bc1a1c2cd91e904a335841b2aa4d7348659907784ca42c833a"
+    },
+    {
+      "id": "S01-shorekeeper-program-1-T1",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "435374cafd96cef39a1f10aa5dcfbba708ff27910dae5b117f23427ef1533752"
+    },
+    {
+      "id": "S01-shorekeeper-program-1-T2",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c48f36d869fa9b96ada45079cc76efbeca341c4a6c567e678011f89ac2ac3fb9"
+    },
+    {
+      "id": "S01-shorekeeper-program-1-T3",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "199967410d82e76b223bfe7af442b850c716dfe8527f7a9d731c8491f1da4fed"
+    },
+    {
+      "id": "S01-shorekeeper-program-1-T4",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "af56fb6a8f777b06bd88698e74168bd6cacd40b0db22386c5f8793c231a69cee"
+    },
+    {
+      "id": "S01-shorekeeper-program-2-T1",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b97e461b17c7dc38a526939fc169afe72e6e6e37aa0d2161ee546443d0b2e7b6"
+    },
+    {
+      "id": "S01-shorekeeper-program-2-T2",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "d2e6738ab6f1011a1c938e9dc9e14010693f4d5b04e78a5ccab374e2714a87af"
+    },
+    {
+      "id": "S01-shorekeeper-program-2-T3",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "efb4ba003199800f9213a92546429f7a0c3a9fc341ef29aaee0d11255f7ca4ef"
+    },
+    {
+      "id": "S01-shorekeeper-program-2-T4",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "73ef5b30e54be169576ca1d90bc15eba45e55aef1576a49d27078738590b6692"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T1",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "435374cafd96cef39a1f10aa5dcfbba708ff27910dae5b117f23427ef1533752"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T2",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c48f36d869fa9b96ada45079cc76efbeca341c4a6c567e678011f89ac2ac3fb9"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T3",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "ecc2abb75ea303561c3c77d31d2e02871a2c05f50be541b31216b8a041760b53"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-1-T4",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0d60ea4c542c5af8c42b32fa645d0a8aef769440a33d41a369257c747f17f126"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-2-T1",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b97e461b17c7dc38a526939fc169afe72e6e6e37aa0d2161ee546443d0b2e7b6"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-2-T2",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "d2e6738ab6f1011a1c938e9dc9e14010693f4d5b04e78a5ccab374e2714a87af"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-2-T3",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a88823ad7f6c70e3bcb1eb0eb8dfe06bf4a7e3525cc4ed955dcfda10ec9bebff"
+    },
+    {
+      "id": "S01-shorekeeper-prompt-2-T4",
+      "case": "S01",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8a4fa29ccc3d89f643cdb07db7dc26648e5e5bf42ec5091ac182189e40afc454"
+    },
+    {
+      "id": "S02-lan-program-1-T1",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "aa3ea6a417fd1b1eaffff41e5458b14f0992ecccf93535ed30c4227e050f2728"
+    },
+    {
+      "id": "S02-lan-program-1-T2",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8cec2518f7724018caae8f6077371379a1dd5dfb0f1877959991ce8b5ca66438"
+    },
+    {
+      "id": "S02-lan-program-1-T3",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "79fa9a79486b44e5f1863a6d8b39ef8e69ebbc0604f2c9615839b6cde5733ffe"
+    },
+    {
+      "id": "S02-lan-program-1-T4",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c4fc9537a24dc0eaa7cdf10936eff4b93a4ef2ec501097864de5bee2e38804b1"
+    },
+    {
+      "id": "S02-lan-program-2-T1",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b91f69be89dfbcba19cf6f255801e97c4463649b52c78ea406884f34aba6320e"
+    },
+    {
+      "id": "S02-lan-program-2-T2",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8927a50c9f2855403762be46fe6fb1961f8cc8081c63fd3ff406bb99ed831463"
+    },
+    {
+      "id": "S02-lan-program-2-T3",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "915b176233cee471ad2c9c941791870144f4fffcd340a6554f37c77960fc0820"
+    },
+    {
+      "id": "S02-lan-program-2-T4",
+      "case": "S02",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "08073f6bf7688160d5ea09f8def4f67abcd9dc03c159a0765bc69bde15036876"
+    },
+    {
+      "id": "S02-lan-prompt-1-T1",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "aa3ea6a417fd1b1eaffff41e5458b14f0992ecccf93535ed30c4227e050f2728"
+    },
+    {
+      "id": "S02-lan-prompt-1-T2",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "f670713bf20a3883ea4cbf40643060c05db6ac881aa2cb660f6238af3dd3db24"
+    },
+    {
+      "id": "S02-lan-prompt-1-T3",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "146bc7a3bfb55ff36b452842185668bd897d13e86a0c0f4d73b0a2c091ffa073"
+    },
+    {
+      "id": "S02-lan-prompt-1-T4",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "6b04c0dc4d6acec9109be229570812162268c585affc738cb50b63df0834a60e"
+    },
+    {
+      "id": "S02-lan-prompt-2-T1",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b91f69be89dfbcba19cf6f255801e97c4463649b52c78ea406884f34aba6320e"
+    },
+    {
+      "id": "S02-lan-prompt-2-T2",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "752e40c916c0e670ca82eeeb2691533d70209b2773af8fdea17141200872e7c0"
+    },
+    {
+      "id": "S02-lan-prompt-2-T3",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "dc948d1b893963fd6510303e348132435e112a11e8e2de1409d39f619561b19e"
+    },
+    {
+      "id": "S02-lan-prompt-2-T4",
+      "case": "S02",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "dd0e68bd4b834e254df50f43de6d4c2951345f542ea41190ad929fe8c07d5a00"
+    },
+    {
+      "id": "S02-shorekeeper-program-1-T1",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "99f70fa30858f3007144b8648f206b8ef4dfc1f9bb7d3cb9548b04db04d39ddf"
+    },
+    {
+      "id": "S02-shorekeeper-program-1-T2",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "db303eda5510f096bff0b421a8a6f27a34918098cb9d4c49c49ca633687c62a6"
+    },
+    {
+      "id": "S02-shorekeeper-program-1-T3",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "3649046220aa7405e100e850bd5de07a52da66b9633a097ba08d3f6a69578e72"
+    },
+    {
+      "id": "S02-shorekeeper-program-1-T4",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "2e20dec9a2d435a3ba8279839247ff34ed9378e664715c5b9a3c757ef91168c6"
+    },
+    {
+      "id": "S02-shorekeeper-program-2-T1",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c16eb42377c0bc9d494cc7af5333934af851d050665274f24206ab325ff95807"
+    },
+    {
+      "id": "S02-shorekeeper-program-2-T2",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "217688937592a3e4e37fc74f1bc3da3b8c71d9a50bc0dc0ac3aa56fe3bd2dbd2"
+    },
+    {
+      "id": "S02-shorekeeper-program-2-T3",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "6bc17c89899257230353ae05e2dab8a53ca354e3595bdcaffc80dcfa93d051bf"
+    },
+    {
+      "id": "S02-shorekeeper-program-2-T4",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "515b84215dba0abff7291ef894a0607b12a89590b51314c05ecce4bfe79c2dd1"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-1-T1",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "99f70fa30858f3007144b8648f206b8ef4dfc1f9bb7d3cb9548b04db04d39ddf"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-1-T2",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a1859fafa74aa74756d7cc9e615923b70d2abf7f6905c784638e081deb93887a"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-1-T3",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "dc12407e3a570a2f1620a5a90565f8e6b5c15701f41cb4163af38f69e751e1fa"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-1-T4",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "4af5327cf348ab81b7315e6b23c01b89a1d417c8ed1f291bbe55331009680180"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-2-T1",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c16eb42377c0bc9d494cc7af5333934af851d050665274f24206ab325ff95807"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-2-T2",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "e9553232a457a2ae755d66404833bdc129e317688054f733abea15e7aebd1cc1"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-2-T3",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "114897c6fcfb47e5f0b5b180fd62eff1465f14fbc46630227330e11c7d6dc2cf"
+    },
+    {
+      "id": "S02-shorekeeper-prompt-2-T4",
+      "case": "S02",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "fa4c45d2f6500211183c96d1ae842a85c564cfc53c61ca349c22004fbbffc145"
+    },
+    {
+      "id": "S03-lan-program-1-T1",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5b2b54008406740afb32568cbb9fdde8fa78f547985695e8b04b8cc9b653a450"
+    },
+    {
+      "id": "S03-lan-program-1-T2",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0e74331a01f49abad1742db2f81b2749ca0f0ee636dc3ce8117fcbab53837096"
+    },
+    {
+      "id": "S03-lan-program-1-T3",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5605cc1aa8ce83ce7cf0f8223a89e370ba17c7cce149d57eef412627f38656fb"
+    },
+    {
+      "id": "S03-lan-program-1-T4",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5901ea8871086ee89c68fe175c72acba62a7bca203d64e26aafafe2c7d29bb36"
+    },
+    {
+      "id": "S03-lan-program-2-T1",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "914d48dfe57693938f582bcfd7cb34d84b7cec5ae4be9b8f88aa43fbe00a5100"
+    },
+    {
+      "id": "S03-lan-program-2-T2",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "39f3013944a9ea66f80b9b49bbd4e7961314e3fa1d90e0f9ee1d5541092a1066"
+    },
+    {
+      "id": "S03-lan-program-2-T3",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "3f9d15dc6516c12b1aa896ef3a95fcdbc3287e7e974db3abde0f496f14ab9170"
+    },
+    {
+      "id": "S03-lan-program-2-T4",
+      "case": "S03",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "f5e227eb11e85ade23aaf26db97ead6d173af794dde97281653db361a0ab895a"
+    },
+    {
+      "id": "S03-lan-prompt-1-T1",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5b2b54008406740afb32568cbb9fdde8fa78f547985695e8b04b8cc9b653a450"
+    },
+    {
+      "id": "S03-lan-prompt-1-T2",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "cec81e324cc8caa9c2175434812052c898496f68726cecd8fa9d448b9aec9e87"
+    },
+    {
+      "id": "S03-lan-prompt-1-T3",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c0838f9f5d8526c3ef99c3d7d019dbfee208730f466af7526c0c1df247bc95e0"
+    },
+    {
+      "id": "S03-lan-prompt-1-T4",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5a5f4ba3e0f4cf65d6004bdfa677cd1dddb9d9a5ada90cb00cb2a6934e878204"
+    },
+    {
+      "id": "S03-lan-prompt-2-T1",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "914d48dfe57693938f582bcfd7cb34d84b7cec5ae4be9b8f88aa43fbe00a5100"
+    },
+    {
+      "id": "S03-lan-prompt-2-T2",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "2ff0913804b6caee10d796eb74350388fbc88672df544da6088a4b053d22e1e9"
+    },
+    {
+      "id": "S03-lan-prompt-2-T3",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "829ede6dcde491c6c33ba2e0098914fa3c7741c440d2e4d1ea7c334b54ed9f9a"
+    },
+    {
+      "id": "S03-lan-prompt-2-T4",
+      "case": "S03",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a9b04f2398a1b65f0e92174e65dd5e745f52f0bc4aaacefb616db86b8ac4063b"
+    },
+    {
+      "id": "S03-shorekeeper-program-1-T1",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "96bcacde0650acad322841c713d4b539e1b8ab40dd7ae27dff42b6f47fec1df7"
+    },
+    {
+      "id": "S03-shorekeeper-program-1-T2",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "34a96484c1fd20ce37ed3d8dad08ec30c8b00aa888a7073cc83fccd0aa5fbb13"
+    },
+    {
+      "id": "S03-shorekeeper-program-1-T3",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "805d4641ae5a55728f436fb985baf27459276fb90a7aa3e024a1bb768bac1d56"
+    },
+    {
+      "id": "S03-shorekeeper-program-1-T4",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5cedb3fcc833d73d7f802bc1f13e792bb66ae90e61c18d1aeca8bddf0eea2fb9"
+    },
+    {
+      "id": "S03-shorekeeper-program-2-T1",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a1214f16e41b15a02066f2d853e4a4d0110b32e303c30a50feb02046baa0e510"
+    },
+    {
+      "id": "S03-shorekeeper-program-2-T2",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "9d544f9825581f6e07fa7a918523b14603cb7996d2550bc43b9482990a07f701"
+    },
+    {
+      "id": "S03-shorekeeper-program-2-T3",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "2ef9ff2cc94b7fa16f48c9355d8eca1893990f1aa5553813dff3ed493c0010b3"
+    },
+    {
+      "id": "S03-shorekeeper-program-2-T4",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a80d314df40af732f95d9187c11f5d0ff6fff08faf36a33ecdaab7e53c3a984f"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-1-T1",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "96bcacde0650acad322841c713d4b539e1b8ab40dd7ae27dff42b6f47fec1df7"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-1-T2",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "01db2ff4cb9ec78bd13e81e5a5a04f84586f526433e504ab7982c8a8e83f2704"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-1-T3",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "79a34f9570d8a099acc37bb212da66b52019f5449ee6b1d3b343c7b2787130db"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-1-T4",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "74832c8abe14d5731ce0be0e8510c5ef6040a72dee645f3c7b7e43c2579ded2a"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T1",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a1214f16e41b15a02066f2d853e4a4d0110b32e303c30a50feb02046baa0e510"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T2",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "dba28b3a3105800bc77d1b356e3c4ab912e59d766d84996f4f4c2ff3263b4d08"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T3",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "26480190a9430a5663e4ebf187ac2e6161c15abc0f105314368b150ba544b819"
+    },
+    {
+      "id": "S03-shorekeeper-prompt-2-T4",
+      "case": "S03",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "750add5c13106833327ddc304a026162cf4635fbed89f9f4f2004c39d09460da"
+    },
+    {
+      "id": "S04-lan-program-1-T1",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a6b4b25f892aa3034f0b8fca11b9777fbcace6b0facdc7f8f7578a7776bd9f46"
+    },
+    {
+      "id": "S04-lan-program-1-T2",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "e4fa1d3864ca8ee2f74eb91ae97d14c519aabf39fb1826b768654df05cd97adc"
+    },
+    {
+      "id": "S04-lan-program-1-T3",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1b8e73e0da63eee682321c59df0196857d7f4f0c883d6c30bfedac823d4c0582"
+    },
+    {
+      "id": "S04-lan-program-1-T4",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "ecf99b3ae31a6fb1d350ad4ec498b9ea7b38f85e772df262b4f3508c3c5e8756"
+    },
+    {
+      "id": "S04-lan-program-2-T1",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b44566893c67d8e52225fccbbed4daa2d33d3efa92e6fb1dbad7b15c744edbd4"
+    },
+    {
+      "id": "S04-lan-program-2-T2",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "ff6ad9931b9a349e9a64a9f055aaf4860aa9cf8db551f08b2e4564184c68cebd"
+    },
+    {
+      "id": "S04-lan-program-2-T3",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "920fad215ebecf1c4839aaa6fffea8707910a20c55277513f07c0f0629147247"
+    },
+    {
+      "id": "S04-lan-program-2-T4",
+      "case": "S04",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "ecdc3e800f41bf5845231f5ef27e22f10fe0c2e02d96e4220483ac746e6bed32"
+    },
+    {
+      "id": "S04-lan-prompt-1-T1",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a6b4b25f892aa3034f0b8fca11b9777fbcace6b0facdc7f8f7578a7776bd9f46"
+    },
+    {
+      "id": "S04-lan-prompt-1-T2",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "4f0e3adb149036d47a62147aef1b753f487ac5c6ee71cfe80220674f838f1146"
+    },
+    {
+      "id": "S04-lan-prompt-1-T3",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "18065eab9a15c5b4e7f2ba176bcfd091bb1e4cc8c5c6511c6ce86158a9301ec2"
+    },
+    {
+      "id": "S04-lan-prompt-1-T4",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "fc6f1cdc67e4311abdb0010422610d0c680e636bc2e88b2debf31a61ece1b1be"
+    },
+    {
+      "id": "S04-lan-prompt-2-T1",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b44566893c67d8e52225fccbbed4daa2d33d3efa92e6fb1dbad7b15c744edbd4"
+    },
+    {
+      "id": "S04-lan-prompt-2-T2",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b70f9dd719a68ec52551725e88891707b324f2287af6b6a5c3cafe517af24cc1"
+    },
+    {
+      "id": "S04-lan-prompt-2-T3",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "58f561689950b7e3185e110e09d45a6ed803649552da7591d291b01d98454283"
+    },
+    {
+      "id": "S04-lan-prompt-2-T4",
+      "case": "S04",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5393be587ccdf9009f2294df4fd8f0488c0ebc0e9683c83adbfe1c2bcaabe998"
+    },
+    {
+      "id": "S04-shorekeeper-program-1-T1",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "30460ba50767627c49cc0b099e3ef82b1285e9c5e9cc5b2b4c4c18c17a73aeb7"
+    },
+    {
+      "id": "S04-shorekeeper-program-1-T2",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1b88897d84c2300f9b0d563df74ba650070fdd1d140a56f4b7fe0b1177ac7f84"
+    },
+    {
+      "id": "S04-shorekeeper-program-1-T3",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8d4c56701a82cb07707ac5cbce1527efde1eb942ffbe386145925c92e3be7909"
+    },
+    {
+      "id": "S04-shorekeeper-program-1-T4",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "65244060fc93d4fdace9a9ec2d2d1fbb5b21041d754365434130447e3d312f18"
+    },
+    {
+      "id": "S04-shorekeeper-program-2-T1",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1821c34835acf421537525e3e660096482c46ff0516cc7c41b36b14677558eec"
+    },
+    {
+      "id": "S04-shorekeeper-program-2-T2",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "30099031976d3fd836ebe36ad98408620c86bb1767ad9ec4d5b8f229d808a8f0"
+    },
+    {
+      "id": "S04-shorekeeper-program-2-T3",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "4c4ba6625c44b7d6729232702b751d9503eeb1ba340e256228423852f38d3718"
+    },
+    {
+      "id": "S04-shorekeeper-program-2-T4",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0d3cd55d24145a02a4c86e7724467a72b6f9f357e3e4364e3bc6333778f19c6d"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-1-T1",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "30460ba50767627c49cc0b099e3ef82b1285e9c5e9cc5b2b4c4c18c17a73aeb7"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-1-T2",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a58497e4101433cc913d484089c245217744b203cf63e457ac20973b414f728e"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-1-T3",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1685e5c35966ed19335c5211d606e9d6a04fa829a12f14c41cc853b7769ac54e"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-1-T4",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a888425d8a7fd95f02b3f1e31baa888780b85e0f8438325111538be6b0e207c6"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-2-T1",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": false,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "1821c34835acf421537525e3e660096482c46ff0516cc7c41b36b14677558eec"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-2-T2",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "ffaf976e3ef4eeb446318a0566a893c7974926dedccfe98c5df6786f28ff2a1e"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-2-T3",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "00f780dcdeac4274052d56bca3d1181fe7baf402d633f0de206c0be1d4bbb7c0"
+    },
+    {
+      "id": "S04-shorekeeper-prompt-2-T4",
+      "case": "S04",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8374e37d64e7772282bf91082ec5ddd81d312fc5e317c1f65df38931f6df782e"
+    },
+    {
+      "id": "S05-lan-program-1-T1",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "6e39c83f48f0164bcce9eecf543a1ce13af06e4d3ca5f33128d39f2bca466e74"
+    },
+    {
+      "id": "S05-lan-program-1-T2",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "5f1e05a22a0f38edf52478b3a8b4b66f380e6eb2b94a6c8a9ced8690884fb598"
+    },
+    {
+      "id": "S05-lan-program-1-T3",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "3152ef2cceef378f1a57a0444c5d7d841191a81ac7d75b135cebcdbb9f5e68da"
+    },
+    {
+      "id": "S05-lan-program-1-T4",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "9ce9cec663df8c3fdf03b8b4670ffcd805a902b22de5eebb15f8a3805500aa41"
+    },
+    {
+      "id": "S05-lan-program-2-T1",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c3215bd813c92b9910e379e1daa360de6e4b099234bc1663cc2c57f196ab222d"
+    },
+    {
+      "id": "S05-lan-program-2-T2",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "431d8a99d35b77acb13192a078534f40d552eed9ca3bde6bbb0e7154b1202241"
+    },
+    {
+      "id": "S05-lan-program-2-T3",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "4e5bd687d52c087be6303d55fa9f79bc27d90b7b124b73af1b39c9bc341c411e"
+    },
+    {
+      "id": "S05-lan-program-2-T4",
+      "case": "S05",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a21cca9c47c5c182815f85946a20b6f5a4b6405dc25552232c90edba041e6f4a"
+    },
+    {
+      "id": "S05-lan-prompt-1-T1",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "6e39c83f48f0164bcce9eecf543a1ce13af06e4d3ca5f33128d39f2bca466e74"
+    },
+    {
+      "id": "S05-lan-prompt-1-T2",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "7d242a077713cb7e3ea5ec2234d97151fbea69347da8197ac9b699b1384b2bf4"
+    },
+    {
+      "id": "S05-lan-prompt-1-T3",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0aef80d426d18c33c7a37a025d563aaf8dd0b253040e4cb5167fde20e2a2004d"
+    },
+    {
+      "id": "S05-lan-prompt-1-T4",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "e312bfda0de5a4933b54939e8f4b9bbdb5f1b809d01cec6315d124c9996a4e72"
+    },
+    {
+      "id": "S05-lan-prompt-2-T1",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c3215bd813c92b9910e379e1daa360de6e4b099234bc1663cc2c57f196ab222d"
+    },
+    {
+      "id": "S05-lan-prompt-2-T2",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "f73a85cc851dec24b62af9fcc4b828d91306b43cd69909f17160853ba5df8198"
+    },
+    {
+      "id": "S05-lan-prompt-2-T3",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "48aa640ce2c4c1f1b8100eac2102a3a12ed9591d1938edccfd24158bc1fe92e9"
+    },
+    {
+      "id": "S05-lan-prompt-2-T4",
+      "case": "S05",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "131280074bd7365ab51fa95f9f4fbdf4180a35d4ff50396c078c391854bf76bf"
+    },
+    {
+      "id": "S05-shorekeeper-program-1-T1",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "2414c40629e65686c789795fa2845e619eaa2d1bac7ccb395216b55572829927"
+    },
+    {
+      "id": "S05-shorekeeper-program-1-T2",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "7d94a7d402958e00caae5096da6e660813c0bde3f2bb218d4bea237503168a17"
+    },
+    {
+      "id": "S05-shorekeeper-program-1-T3",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "958eb3e510e8a0a3702a84c2982eab1b2096761c267086ea12a29c766842244e"
+    },
+    {
+      "id": "S05-shorekeeper-program-1-T4",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "d32ce1da39d6e02efef44e3647cd0229d4b243daf481ef3a7a271007b617a5ec"
+    },
+    {
+      "id": "S05-shorekeeper-program-2-T1",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8673c9a77db4f92546c399fc9f4b4ff0f63d636f9a5daeb308b3464df575df64"
+    },
+    {
+      "id": "S05-shorekeeper-program-2-T2",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "e3392b7741ae2da33da3edffde9d3b58d3054776eb1e1ee704a13e2eb49faae3"
+    },
+    {
+      "id": "S05-shorekeeper-program-2-T3",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b626e9621513ce9937e0735e0ab83f337310701543e5e851d37aa4ec70704c38"
+    },
+    {
+      "id": "S05-shorekeeper-program-2-T4",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0a05bed7bdd91566f81f5f15576be55fdbd8119527b61dd3baf816582efd6984"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-1-T1",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "2414c40629e65686c789795fa2845e619eaa2d1bac7ccb395216b55572829927"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-1-T2",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a6aed3979695a942ab920c8930cf92dbddf7420083213d8fd7b9a67b65a7abdd"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-1-T3",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b28e8f750e5433a3b197139c7a0f7bed1a6d4db2bcfee82ffcaac87b5506c3fb"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-1-T4",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8fe70c8974af1f8a16466a1b5d4ef2ac4d377a6ac8aa8c96c10c2b0a358a9e7a"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-2-T1",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8673c9a77db4f92546c399fc9f4b4ff0f63d636f9a5daeb308b3464df575df64"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-2-T2",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "2ee4643d75da7b1abc4c90e3843437f7120926a3c07c411dcadbddb3b8d51824"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-2-T3",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "e79b20f10de1ec698af6b68a70c75b0b74952ba0c7aaeb156c22d359bd1d353c"
+    },
+    {
+      "id": "S05-shorekeeper-prompt-2-T4",
+      "case": "S05",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "d4a8cfaf5388e9a759d7ac018d39dd20910e5d4f4b273b563e9132cde32487cc"
+    },
+    {
+      "id": "S06-lan-program-1-T1",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8db514bb268a472b26970b132726a0538b2c5bea0f4a32d0254faa429e0317ad"
+    },
+    {
+      "id": "S06-lan-program-1-T2",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "3adc0fcbfad6d8e3aa4f4a502349b0fd44c4f8b976bbf9e6f2c063865f5fc6c8"
+    },
+    {
+      "id": "S06-lan-program-1-T3",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "695654f216a544107cc21860b31f2b59f4d0a4fbb147fccf7734be6df7237c74"
+    },
+    {
+      "id": "S06-lan-program-1-T4",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "43f2f94da0355334edb8dbd78fee5d3dd79da3774502e0dea654d6a525e990b1"
+    },
+    {
+      "id": "S06-lan-program-2-T1",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "765e2cae0b6234cc51e16d0da2cda07cba8a99b28968139fa26974b6642ae6f8"
+    },
+    {
+      "id": "S06-lan-program-2-T2",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "18b51297aa7e708fac54f3fc31f1849de4b288c85443f1e685c325b5bf9bf4ed"
+    },
+    {
+      "id": "S06-lan-program-2-T3",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "bd0a7c6d96ca48b23ddbcc8e5b4a36a81c3e80b2cbcb9145868317871f4eaf8c"
+    },
+    {
+      "id": "S06-lan-program-2-T4",
+      "case": "S06",
+      "profile": "lan",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "15ab424fc6dc6511e75e995909dbaed4a9c359e1ae4e70af33391fbc1226a825"
+    },
+    {
+      "id": "S06-lan-prompt-1-T1",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "8db514bb268a472b26970b132726a0538b2c5bea0f4a32d0254faa429e0317ad"
+    },
+    {
+      "id": "S06-lan-prompt-1-T2",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b08f1e9ebc7d04c1ed57acca1d060227ae7903c1677a4121da18c2d99a1534ef"
+    },
+    {
+      "id": "S06-lan-prompt-1-T3",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "39603aefb3d7dd6137c531d1d0364cbc7e85e97420cf5afb9c3946e76de18c69"
+    },
+    {
+      "id": "S06-lan-prompt-1-T4",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "e9d3e7f7587f2755b5d320e95bdbfd2004d1fa8b6652ace355a9ae5128ff42e9"
+    },
+    {
+      "id": "S06-lan-prompt-2-T1",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A3",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "765e2cae0b6234cc51e16d0da2cda07cba8a99b28968139fa26974b6642ae6f8"
+    },
+    {
+      "id": "S06-lan-prompt-2-T2",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A3",
+      "choices": {
+        "intervention_0": "A3",
+        "intervention_1": "A3",
+        "persona_swap": "A4",
+        "ignore_request_scope": "A3"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "324e387b0d6a217b43ab4734b8a7cd68b9a450c1375559dfadaaa182d4859297"
+    },
+    {
+      "id": "S06-lan-prompt-2-T3",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "238ca4665cbf42aaec6cf12703c298746418d35158aee89a8ff6e5a5d2af4949"
+    },
+    {
+      "id": "S06-lan-prompt-2-T4",
+      "case": "S06",
+      "profile": "lan",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A2",
+      "choices": {
+        "intervention_0": "A2",
+        "intervention_1": "A2",
+        "persona_swap": "A1",
+        "ignore_request_scope": "A2"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "c4f97b103bc405f05a4ceef65596a8972418d6d3c6459781e0928dd9c30b2cae"
+    },
+    {
+      "id": "S06-shorekeeper-program-1-T1",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "90ba2e3a995a8b55fceb53dc2c157792b4d08b3453e913574b2b11e874f2162a"
+    },
+    {
+      "id": "S06-shorekeeper-program-1-T2",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "d31a5e8f013eb98a22521a0db0bb6e6bbe05c28841c6785c600d5f7e186c704c"
+    },
+    {
+      "id": "S06-shorekeeper-program-1-T3",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "324ddf79628692a34002b8a0ab34c6021024cc1814632e3b44c027b09e6fc42e"
+    },
+    {
+      "id": "S06-shorekeeper-program-1-T4",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a4d08a6072046febedf645d7a9e1d3656be70d45650e69ba69c6eb67c7dddf3a"
+    },
+    {
+      "id": "S06-shorekeeper-program-2-T1",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "cfeb7ba4262ac71921bb641863277d307426dec8a719b277b2cfc80ce26906cf"
+    },
+    {
+      "id": "S06-shorekeeper-program-2-T2",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b481d6ae66e13aafde8d95a44dea8b6597daeaed69d407e1cfdfbe2625c31928"
+    },
+    {
+      "id": "S06-shorekeeper-program-2-T3",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "0cdf163509a13ca496ca932c3c96fb98a1a8b857784b1558227ab1bfa7dccf87"
+    },
+    {
+      "id": "S06-shorekeeper-program-2-T4",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "program",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "9a511d829247fe7d1ee99d44dcb5bc2a7870a37e267c044939426d521eb213e1"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-1-T1",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A4"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "90ba2e3a995a8b55fceb53dc2c157792b4d08b3453e913574b2b11e874f2162a"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-1-T2",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "fbe7afecd25655a1665b7bd3bf0c858b17742bed659aa1e94ca4556315ca8ef8"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-1-T3",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "6303ef2526efb6277c2bcff4fe714c6249555d7b0955224400193f6f30718714"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-1-T4",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "b7c9782328268ebae5122e5e3498c744cbaf2ed332f4fcce1e2b3f1b00917c53"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-2-T1",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T1",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": true,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "cfeb7ba4262ac71921bb641863277d307426dec8a719b277b2cfc80ce26906cf"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-2-T2",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T2",
+      "baseline": "A4",
+      "choices": {
+        "intervention_0": "A4",
+        "intervention_1": "A4",
+        "persona_swap": "A3",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": true,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "62ce94d3f257df5e3388c3300dd1ed45d94fddae241ed49822c3b170ab6d87ec"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-2-T3",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T3",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "a6d95087af6b1953b09f1047db390a5799beec67bbc2eecde617cad1e72d22e6"
+    },
+    {
+      "id": "S06-shorekeeper-prompt-2-T4",
+      "case": "S06",
+      "profile": "shorekeeper",
+      "method": "prompt",
+      "turn": "T4",
+      "baseline": "A1",
+      "choices": {
+        "intervention_0": "A1",
+        "intervention_1": "A1",
+        "persona_swap": "A2",
+        "ignore_request_scope": "A1"
+      },
+      "intervention_changes": false,
+      "persona_swap_changes": true,
+      "request_scope_ablation_changes": false,
+      "preserved_factual_inputs": true,
+      "payload_sha256": "241469ab5ea4ed25a0e3c68163cfac32b663960a8d9a92170ca582d3f820616e"
+    }
+  ],
+  "by_turn": {
+    "T1": {
+      "replayed_records": 48,
+      "intervention_changes": 48,
+      "persona_swap_changes": 36,
+      "request_scope_ablation_changes": 0
+    },
+    "T2": {
+      "replayed_records": 48,
+      "intervention_changes": 0,
+      "persona_swap_changes": 48,
+      "request_scope_ablation_changes": 22
+    },
+    "T3": {
+      "replayed_records": 48,
+      "intervention_changes": 0,
+      "persona_swap_changes": 48,
+      "request_scope_ablation_changes": 0
+    },
+    "T4": {
+      "replayed_records": 48,
+      "intervention_changes": 0,
+      "persona_swap_changes": 48,
+      "request_scope_ablation_changes": 0
+    }
+  },
+  "interpretation": "Offline same-payload deterministic replay; duplicated route states are not new independent observations or generated replies."
+}

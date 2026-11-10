@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "checks": 1962,
+  "protocol_sha256": "55bb0729d54efe8b604645e796e33dee8b6d5cce740572eb80b309b51580d438",
+  "review_context_protocol_sha256": "23182b356ca6bdd0bc1fe786e954813a5933dba041e0290f5eddb7e6a2fb2178",
+  "replay_checks": 1188,
+  "planned_episodes": 48,
+  "planned_generation_units": 192,
+  "actual_requests": 194,
+  "total_recorded_api_tokens": 230175,
+  "stages": {
+    "calibration_run": {
+      "actual_calls": 2,
+      "statuses": {
+        "ok": 2
+      }
+    },
+    "run": {
+      "actual_calls": 192,
+      "statuses": {
+        "ok": 192
+      }
+    }
+  },
+  "reviews": {
+    "available": true,
+    "unique_units": 180,
+    "mapped_generation_units": 192,
+    "final_ratings_available": [
+      "1",
+      "2"
+    ]
+  },
+  "summary_available": true,
+  "scanned_files": 346,
+  "interpretation": "Offline association and byte-integrity audit; not semantic validity, human preference, or new experimental observations."
+}

@@ -1,0 +1,328 @@
+{
+  "ratings": [
+    {
+      "id": "D001",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“选甲室”结合12座容纳10人及无需投影给出依据，一句简洁回答完成选择，直接且收在用户要求的范围内。"
+    },
+    {
+      "id": "D002",
+      "persona_fit": 3,
+      "context_fit": 2,
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "“下一班的时间还没有准信”保留了已知的不确定性，但“赶上了就好”与user“得等下一班”的状态冲突，也没有准确接住错过的懊恼，削弱细致回应。用户仅通报，没有明确任务或禁令。"
+    },
+    {
+      "id": "D003",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“工作排练时，提示音是关闭的”准确使用带work适用条件且有用户原话来源的记录，限定在本轮工作范围内，无额外推断，直接完成查询。"
+    },
+    {
+      "id": "D004",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "“以后按山径找，旧名林间作废”准确接受本轮更正，没有恢复旧记忆，简明确认未来查找名；这是确认任务，没有额外输出范围禁令。"
+    },
+    {
+      "id": "D005",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“按已有记录”明确依据，所答工作排练提示音关闭与work条件的历史用户原话一致；正式简洁地完成查询并遵守工作范围。"
+    },
+    {
+      "id": "D006",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "回复明确“以后按山径找”并确认旧名作废，使用user最新更正而非旧林间记录，直接完成确认，也符合接受更正的规范。当前没有另设输出禁令。"
+    },
+    {
+      "id": "D007",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "240减165为75，“75克”计算与单位均正确，严格只给数字和单位，体现认真答题及克制收束。"
+    },
+    {
+      "id": "D008",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "所答“工作排练时，提示音是关闭的”与来源原话及work适用条件一致；没有混入其他范围，简短明确完成本轮记录查询。"
+    },
+    {
+      "id": "D009",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“.dng”有历史用户原话“相机备份我统一用.dng后缀”支持，只返回后缀，准确完成查询且遵守只说已有记录的限制。"
+    },
+    {
+      "id": "D010",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "“差几步没赶上”准确接住遗憾，下一班仍来且时间未知符合facts；“今天慢了一拍”照应用户感受，未另断言具体事情出错，缓一缓的建议有分寸。当前为通报，没有明确请求或禁令。"
+    },
+    {
+      "id": "D011",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "回复仅“.dng”，准确返回带来源的既有备份后缀，没有猜测或附加议程，完成明确问题并遵守输出范围。"
+    },
+    {
+      "id": "D012",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "历史原话明确统一用.dng，回复“.dng”与记录一致，且只说后缀；在要求收束时直接完成，没有额外角色台词或建议。"
+    },
+    {
+      "id": "D013",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“75克”等于240克减165克，既完成差额计算又严格只输出数字及单位，正式简短与克制、细致的规范一致。"
+    },
+    {
+      "id": "D014",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“75克”是正确差额，用户要求只给数字和单位，回复完全收住并完成必要内容，符合明快角色在范围限定下的调整。"
+    },
+    {
+      "id": "D015",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "240减165得75，回复“75克”无多余内容，事实、单位与格式都正确，体现明确求助时认真完成和留白。"
+    },
+    {
+      "id": "D016",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“工作排练时，提示音是关闭的”对应来源用户原话及work适用范围，准确查回记录，没有扩展议程，符合安静、细致的表达。"
+    },
+    {
+      "id": "D017",
+      "persona_fit": 3,
+      "context_fit": 2,
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "下一班仍来且时间未知正确，但“至少赶上了”与user说要等下一班的错过状态冲突，用错误安慰削弱准确关注；当前没有明确任务或边界限制。"
+    },
+    {
+      "id": "D018",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "“以后按山径查找；旧名林间不再使用”准确确认最新更正，没有把旧记忆当现状；克制完整地完成名称确认，未另设输出禁令。"
+    },
+    {
+      "id": "D019",
+      "persona_fit": 2,
+      "context_fit": 1,
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "user明确还得等下一班，回复却反复说“还好赶上了，没被落下”“至少这班车没让你白跑”，主要安慰建立在相反状态上，明显背离事实标准及接住感受的规范；没有明确任务或禁令。"
+    },
+    {
+      "id": "D020",
+      "persona_fit": 3,
+      "context_fit": 2,
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "“还好赶上了”与user得等下一班冲突，损害准确照应；其后承认未知等候时间并以可选语气提出查班次或歇息，仍有符合处。用户仅通报，没有明确任务或拒绝建议。"
+    },
+    {
+      "id": "D021",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "先明确选甲室，再用一句“10人需要10个座位，甲室有12个，且不需要投影”说明依据，容量判断正确且简洁，完成选择并尊重一句话说明依据的范围。"
+    },
+    {
+      "id": "D022",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“在工作排练这个范围内”明确标明适用范围，“提示音关闭”与有来源的work记录一致；正式的记录式表述贴合人格，完整回答且不越范围。"
+    },
+    {
+      "id": "D023",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“选甲室：10人坐得下，而且不需要投影”正确使用人数容量及无需投影两项条件，一句话完成选择和依据，直接且有分寸。"
+    },
+    {
+      "id": "D024",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“工作排练时提示音是关闭的”仅回答本轮指定范围，来源原话支持关闭状态；没有额外猜测或推进，完成记录查询并尊重范围。"
+    },
+    {
+      "id": "D025",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "“以后按山径找”与“旧名林间作废，不再使用”准确接受最新更正并说明旧名状态，认真确认而不扩大议程；本轮没有额外输出范围限制。"
+    },
+    {
+      "id": "D026",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "甲室12座能够容纳10人，“选甲室：可容纳10人，且不需要投影”准确概括决策条件，一句完成任务；简洁、正式充分符合所给人格。"
+    },
+    {
+      "id": "D027",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“75克”正确回答240减165，严格只保留数字与单位，明确求助时完成任务，并在用户限制下收住。"
+    },
+    {
+      "id": "D028",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "所给历史用户原话明确备份后缀为.dng，回复只给“.dng”，准确、克制地完成记录查询，遵守仅说后缀的限制。"
+    },
+    {
+      "id": "D029",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "选择甲室后，用一句依据说明乙室8座不足10人、甲室12座足够且无需投影，事实与逻辑完整；依据略充分但仍简洁，没有扩展任务范围。"
+    },
+    {
+      "id": "D030",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "回复“75克”准确计算差额，满足只输出数字和单位的明令，直接完成明确问题，未因明快人格增加多余内容。"
+    },
+    {
+      "id": "D031",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“.dng”严格对应有来源的既有记录，未补造其他后缀或说明，正确完成查询且遵守输出范围，体现细致与留白。"
+    },
+    {
+      "id": "D032",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "“以后按山径找。旧名林间作废”准确确认当前用户的更正，未让旧记忆覆盖新信息，明快完成任务；没有额外格式或输出禁令。"
+    },
+    {
+      "id": "D033",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "下一班运行、等待多久不确定均由facts支持；“差几步没赶上，确实会让人有些懊恼”准确回应已表达的遗憾，没有扩展其他失败或议程，符合克制关注。当前没有明确任务或限制。"
+    },
+    {
+      "id": "D034",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "历史原话有明确.dng来源，回复仅“.dng”即完成必要查询，不猜测、不展开，符合只说记录后缀的范围与安静细致的人格。"
+    },
+    {
+      "id": "D035",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“选甲室”后的一句依据说明能容纳全部10人、无需投影且乙室8座不足，正确完成选择；依据保持简洁，符合一句话说明理由的要求与直接语气。"
+    },
+    {
+      "id": "D036",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "“已收到更正”仅确认接到本轮话语，后续明确按山径查找、林间不再使用，与user最新指示一致，没有虚称外部改动完成，认真且克制地完成确认。"
+    }
+  ]
+}

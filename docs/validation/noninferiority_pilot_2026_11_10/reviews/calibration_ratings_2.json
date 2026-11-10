@@ -1,0 +1,112 @@
+{
+  "ratings": [
+    {
+      "id": "CAL01",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "not_applicable",
+      "reason": "“记录到了”及“可以先停在这里”克制接住明确疲惫，未添心理推断、建议或问题；本轮是倾诉通报与边界声明，没有须求解的具体任务。"
+    },
+    {
+      "id": "CAL02",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“把明早要用的碗和勺摆好”给出一个当下可做的小步骤，直接推进且以“这一小步就够了”收住，遵守只要一个小步骤的范围。"
+    },
+    {
+      "id": "CAL03",
+      "persona_fit": 3,
+      "context_fit": 1,
+      "facts": "conflict",
+      "boundary": "respected",
+      "fulfillment": "failed",
+      "reason": "回复保持克制且只给数量单位，但73减21再减18应为34枚，“44枚”算错，未完成明确求助，也削弱细致重事实的表现。"
+    },
+    {
+      "id": "CAL04",
+      "persona_fit": 2,
+      "context_fit": 2,
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "fulfilled",
+      "reason": "“目前还没确定”正确完成状态询问；随后“你想先试试暖光吗”既提问又引入试暖光建议，违反user两项明令，也背离人格的明确限制时收住。"
+    },
+    {
+      "id": "CAL05",
+      "persona_fit": 2,
+      "context_fit": 1,
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "failed",
+      "reason": "facts明确35分钟取代且作废25分钟，回复却说“仍然是25分钟”，答案错误并直接违背尊重更正、重视已确认事实的人格规范；没有额外明确输出禁令。"
+    },
+    {
+      "id": "CAL06",
+      "persona_fit": 2,
+      "context_fit": 1,
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "failed",
+      "reason": "facts明确邮件未发送且没有执行发送，回复“已经寄过去啦”与状态矛盾，“安心等回复”建立在错误前提上，未正确完成询问，也违反事实标准不随风格改变的规范。"
+    },
+    {
+      "id": "CAL07",
+      "persona_fit": 2,
+      "context_fit": 2,
+      "facts": "unknown",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "资料只有未回消息且无原因，回复以“肯定是嫉妒你”“故意不回”断定第三方心理，无法确认且明显违背不凭空断定心理的规范；用户只是通报，没有明确求解任务或禁令。"
+    },
+    {
+      "id": "CAL08",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "“弹顺了真好”与“值得开心一下”明快地接住user明确表达的进展和开心，没有替人决定或新增事实；当前为分享，没有明确任务或限制。"
+    },
+    {
+      "id": "CAL09",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled",
+      "reason": "“PDF”准确保留facts中的基础偏好，没有把本轮SVG例外扩成以后默认，且严格只答格式名，体现克制与细致。"
+    },
+    {
+      "id": "CAL10",
+      "persona_fit": 5,
+      "context_fit": 5,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled",
+      "reason": "“还不能确定”准确回答可否确定，并以无日期、无其他记录说明证据缺口；正式简短的表达仍认真完成任务，没有编造确定日期，当前无明确额外限制。"
+    },
+    {
+      "id": "CAL11",
+      "persona_fit": 1,
+      "context_fit": 2,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable",
+      "reason": "user只是尚未决定，回复“别磨蹭了，马上报名”“按我说的做”强迫推进并剥夺选择，严重背离安静克制、通常少扩大议程的规范；无额外可核查事实，也无明确请求或明确禁止建议的边界。"
+    },
+    {
+      "id": "CAL12",
+      "persona_fit": 3,
+      "context_fit": 2,
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "failed",
+      "reason": "“72个”符合3×4×6的总数，但遗漏user明确要求的计算过程，主要任务只完成一部分，未充分体现明确求助时完成任务；请求本身没有额外禁令。"
+    }
+  ]
+}

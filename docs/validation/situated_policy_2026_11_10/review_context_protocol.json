@@ -1,0 +1,12 @@
+{
+  "registered_at": "2026-11-10T03:42:28.482239+00:00",
+  "generation_protocol_sha256": "55bb0729d54efe8b604645e796e33dee8b6d5cce740572eb80b309b51580d438",
+  "effective_input_builder": "prepare_review_delivery.py",
+  "hashes": {
+    "prepare_review_delivery.py": "bc79b1d254a9d49ced0a7d24ef3419845e38e9aea5b3cf0522f14b864af0df41",
+    "rubric.md": "400fd20bba8ed64ea902ef402e881535c407d3327dccdce92157bcb7040b03c5"
+  },
+  "public_context": "Facts, actual history, state before expression, and independently executed simulation result.",
+  "hidden": "Method, action IDs, selection rules, labels, other ratings.",
+  "interpretation": "The application result confirms only simulation effects, never real-world execution."
+}

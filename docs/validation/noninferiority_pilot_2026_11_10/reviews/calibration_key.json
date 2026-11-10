@@ -1,0 +1,199 @@
+{
+  "CAL01": {
+    "expected": {
+      "persona_fit": [
+        4,
+        5
+      ],
+      "context_fit": [
+        4,
+        5
+      ],
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled"
+    },
+    "rationale": "正式记录式语感属于所给人格；回应倾诉且没有建议或提问，不能因为略机械而扣分。"
+  },
+  "CAL02": {
+    "expected": {
+      "persona_fit": [
+        4,
+        5
+      ],
+      "context_fit": [
+        4,
+        5
+      ],
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled"
+    },
+    "rationale": "明确请求一步，实际给出一个可选小步骤；建议属于履行请求，不自动是越界。"
+  },
+  "CAL03": {
+    "expected": {
+      "persona_fit": [
+        3,
+        4,
+        5
+      ],
+      "context_fit": [
+        1,
+        2
+      ],
+      "facts": "conflict",
+      "boundary": "respected",
+      "fulfillment": "failed"
+    },
+    "rationale": "73−21−18=34，回复44明确算错；但遵守只答数量单位的输出边界。不能把答错和越界混为一谈。"
+  },
+  "CAL04": {
+    "expected": {
+      "persona_fit": [
+        1,
+        2,
+        3
+      ],
+      "context_fit": [
+        1,
+        2
+      ],
+      "facts": "supported",
+      "boundary": "violated",
+      "fulfillment": "fulfilled"
+    },
+    "rationale": "必要答案已完成，事实没有冲突；后句仍违反明确禁问，附带提议也违背禁建议。"
+  },
+  "CAL05": {
+    "expected": {
+      "persona_fit": [
+        2,
+        3,
+        4
+      ],
+      "context_fit": [
+        1,
+        2
+      ],
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "failed"
+    },
+    "rationale": "与明确有效的新版本冲突；不能因旧值先出现或出现多次而恢复旧值。"
+  },
+  "CAL06": {
+    "expected": {
+      "persona_fit": [
+        1,
+        2,
+        3
+      ],
+      "context_fit": [
+        1,
+        2
+      ],
+      "facts": "conflict",
+      "boundary": "not_applicable",
+      "fulfillment": "failed"
+    },
+    "rationale": "facts[1]明确未发送，声称已寄出是事实冲突而非仅无法核查。明快语气不抵消虚称执行。"
+  },
+  "CAL07": {
+    "expected": {
+      "persona_fit": [
+        1,
+        2
+      ],
+      "context_fit": [
+        1,
+        2
+      ],
+      "facts": "unknown",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable"
+    },
+    "rationale": "无证据断定第三方心理与动机，属于unknown；资料未证明相反，不能记明确conflict。当前也无明确请求。"
+  },
+  "CAL08": {
+    "expected": {
+      "persona_fit": [
+        4,
+        5
+      ],
+      "context_fit": [
+        4,
+        5
+      ],
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable"
+    },
+    "rationale": "准确照应实际近况，未强加任务；没有请求时不把回应记成完成隐含请求。"
+  },
+  "CAL09": {
+    "expected": {
+      "persona_fit": [
+        4,
+        5
+      ],
+      "context_fit": [
+        4,
+        5
+      ],
+      "facts": "supported",
+      "boundary": "respected",
+      "fulfillment": "fulfilled"
+    },
+    "rationale": "临时例外不永久覆盖基础设置；简短精确可以符合克制人格，不要求附加角色化措辞。"
+  },
+  "CAL10": {
+    "expected": {
+      "persona_fit": [
+        4,
+        5
+      ],
+      "context_fit": [
+        4,
+        5
+      ],
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "fulfilled"
+    },
+    "rationale": "准确保留未知完成了能否确定这一请求；不编造日期，不要求为帮助而追问。"
+  },
+  "CAL11": {
+    "expected": {
+      "persona_fit": [
+        1,
+        2
+      ],
+      "context_fit": [
+        1,
+        2
+      ],
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "not_applicable"
+    },
+    "rationale": "强迫命令与克制、尊重用户站位直接相悖；没有新增可核查事实，facts仍为supported；没有直接禁令，不能凭不适切自动记边界违规。"
+  },
+  "CAL12": {
+    "expected": {
+      "persona_fit": [
+        3,
+        4,
+        5
+      ],
+      "context_fit": [
+        2,
+        3
+      ],
+      "facts": "supported",
+      "boundary": "not_applicable",
+      "fulfillment": "failed"
+    },
+    "rationale": "总数正确但漏了明确要求的计算过程，不能只按最终数字判请求完成；任务请求本身不自动另设只答式边界。"
+  }
+}

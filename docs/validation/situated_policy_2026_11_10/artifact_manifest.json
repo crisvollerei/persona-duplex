@@ -1,0 +1,1394 @@
+{
+  "algorithm": "SHA-256",
+  "publication": {
+    "original_delivery_manifest_sha256": "84283d4834f8177cd1948cfd03a17d92402e416687c0614a4beebe0c3195d478",
+    "prepared_at": "2026-11-10T06:34:56.862457+00:00",
+    "figures": [
+      "fig2_choice_execution.png",
+      "fig4_quality_cost.png"
+    ],
+    "scope": "Curated presentation and aggregate record layout; frozen inputs and original observations retained."
+  },
+  "files": {
+    "analysis_environment.json": {
+      "bytes": 71,
+      "sha256": "1b60cceaa5d55d6b15283da2e46afa0d65a20e5ec004d4d29c7ff6436c198e3b"
+    },
+    "analyze.py": {
+      "bytes": 25060,
+      "sha256": "6ad38b6c4ac1c93c5ec9bc74afcd32756dae4b9e7f025fdd469399a97a5d438e"
+    },
+    "audit.py": {
+      "bytes": 13341,
+      "sha256": "0e2bc66e68f0c4feda0a7b2448c91001e2fef889a5f5371dc11b74873859542b"
+    },
+    "audit_report.json": {
+      "bytes": 960,
+      "sha256": "660f0ef1d941cdcf6a86599c8f3c6b6d5360103c733338502cc044157f5417b5"
+    },
+    "benchmark.py": {
+      "bytes": 12847,
+      "sha256": "59588990ded8b7bb4f05997bb1702696f473335b5d5aacc81eb85da56bd0039a"
+    },
+    "calibration_gate.json": {
+      "bytes": 17190,
+      "sha256": "669406d3074301c28892f0a5f10b8aa6ea1def3ae5c50d8f6d21d51c42ce9113"
+    },
+    "calibration_inputs.json": {
+      "bytes": 6341,
+      "sha256": "0c973de7167081604ba23dff1eb41ac4d46d618a57c77ff3c2f70bda9f7b4738"
+    },
+    "calibration_key.json": {
+      "bytes": 8199,
+      "sha256": "67b414f50dcd306c947ba4ca5525c4696a9cc79c186adfe22b3ca7e57294f63e"
+    },
+    "calibration_reviews/ratings_1.json": {
+      "bytes": 8578,
+      "sha256": "d65c2a5d113a44195d950a54df9687a99ea62d0fc091dfc9a6f429d7f22aad10"
+    },
+    "calibration_reviews/ratings_2.json": {
+      "bytes": 8102,
+      "sha256": "bb559129e7219b1bc9e8f1a4d19c822ff17b1446ba5e6aaaf5f16ae6faed5ac6"
+    },
+    "calibration_run/calls/calibration-1.json": {
+      "bytes": 29334,
+      "sha256": "951c87ee618602bf1c8f4a2d775cb529705d0ecaf7b67086635d1d39b2e049d1"
+    },
+    "calibration_run/calls/calibration-2.json": {
+      "bytes": 28796,
+      "sha256": "3870ef670de2374cb0a79fa81614bc24ec97d5c99e77a269abf11201bca9e994"
+    },
+    "calibration_run/manifest.json": {
+      "bytes": 400,
+      "sha256": "1e24823de5db75dc7df5aecbdffeada7162c9b76515a8ba47e144ae3026ca947"
+    },
+    "calibration_run/raw_calls.json.gz": {
+      "bytes": 7266,
+      "sha256": "8eaa6634c2b964274a2b10ab3e507255f78a370ac884844d29c0e10af6e6b1d5"
+    },
+    "calibration_run/results.json": {
+      "bytes": 19255,
+      "sha256": "686d00361f9187d7a75c2736a88ffdf7df0cc5c585b9ef740dd7caebcc1b6ce5"
+    },
+    "cases.json": {
+      "bytes": 52351,
+      "sha256": "2557dcdeeee4c8cd6b1499dc8a7938e8a258a1df3c8e3ddbe06d700e89057491"
+    },
+    "counterfactual_replay.json": {
+      "bytes": 112510,
+      "sha256": "32d81be8383113b4270476659a3e5632b0e18298fa1aa6bb7a9fc7eeb488cc27"
+    },
+    "data_dictionary.md": {
+      "bytes": 3778,
+      "sha256": "85561b7ac87c1fa6ea40c17a7b887a95d04cb857ba8ccd66eb526f49142d1fdd"
+    },
+    "export_replies.py": {
+      "bytes": 1396,
+      "sha256": "ed3ed25f49d3571762cb1d2c315c2fcc800a56a60b5c7821724935e1c78ef3ea"
+    },
+    "figures/fig2_choice_execution.png": {
+      "bytes": 69922,
+      "sha256": "84870cf476e2964f39fb1e3804b945806ac3f87dfe5953aba702203926240e9b"
+    },
+    "figures/fig2_choice_execution.svg": {
+      "bytes": 75806,
+      "sha256": "7c9f1eb686a01d32e45e72659b6e4a10b632298b5a7c5ae83cbf4dbeac67a441"
+    },
+    "figures/fig4_quality_cost.png": {
+      "bytes": 147790,
+      "sha256": "781ba7546d68a084b9072d7fdab2dccb4532832639b0adaa37c1e3de4dd837a1"
+    },
+    "figures/fig4_quality_cost.svg": {
+      "bytes": 92691,
+      "sha256": "27a6d4ae2291ef049440429dd501d013de354f97da0ba24c303120eb19bcb35a"
+    },
+    "gate.py": {
+      "bytes": 3549,
+      "sha256": "a93c3cc34e49a38c825dab6978ce182ce8d0b7fb49bf08480f94915ae7d748f7"
+    },
+    "materials.py": {
+      "bytes": 18125,
+      "sha256": "58842f18f8c73d4f0d1c8af6a0a9a2472cc493f367e1d438d12e462ffcc50c94"
+    },
+    "mechanism.py": {
+      "bytes": 7414,
+      "sha256": "729b802e2079d4c94ca6faddda6c836459e93289e36c2e9431c31f8f041b14f6"
+    },
+    "paper.md": {
+      "bytes": 21808,
+      "sha256": "c0f77092d98d30575dbcc0d03fd78acde36604b891a442022c71e8123da9336d"
+    },
+    "prepare_review_delivery.py": {
+      "bytes": 2936,
+      "sha256": "bc79b1d254a9d49ced0a7d24ef3419845e38e9aea5b3cf0522f14b864af0df41"
+    },
+    "prepare_reviews.py": {
+      "bytes": 1753,
+      "sha256": "622091f840505b8e72fbf0f72638a1b697eea3b0f8feee9e7c5a80dead7f18df"
+    },
+    "profiles.json": {
+      "bytes": 1170,
+      "sha256": "bc4419f8448e4cbda27ab515e548aeac8d7d3d730ea62e2df6e11c11668927c5"
+    },
+    "protocol.json": {
+      "bytes": 1493,
+      "sha256": "55bb0729d54efe8b604645e796e33dee8b6d5cce740572eb80b309b51580d438"
+    },
+    "protocol.md": {
+      "bytes": 7716,
+      "sha256": "e7d7a47a833b772d16df3dac9305219450488f0a3b7a1609c35950ac2db02686"
+    },
+    "README.md": {
+      "bytes": 4605,
+      "sha256": "3c4a46fd6fff08044c0436f74991d2ceeb66fcbc4df5703d5c786b7d994a4d11"
+    },
+    "replay.py": {
+      "bytes": 11275,
+      "sha256": "84bcc9e8a4f4ff188b0775042a2ae1e3d495890186c7fd179b5cd22a1d831170"
+    },
+    "replay_report.json": {
+      "bytes": 689,
+      "sha256": "040755b4358ac32e2832371be1f49692bf08a3061705488a93766261069afaee"
+    },
+    "requirements.txt": {
+      "bytes": 28,
+      "sha256": "8cea68d65f194b37d9932653dff5f2730b54e6e2fcdde559db81642a46873a42"
+    },
+    "review_context_protocol.json": {
+      "bytes": 722,
+      "sha256": "23182b356ca6bdd0bc1fe786e954813a5933dba041e0290f5eddb7e6a2fb2178"
+    },
+    "review_key.json": {
+      "bytes": 7203,
+      "sha256": "d063fb6d065203d5b7202e2aa92ba0f914a57448c2df7a510679180e1b7d1578"
+    },
+    "reviews/inputs.json": {
+      "bytes": 490819,
+      "sha256": "ca734f713db51930b4472da27df5c9759fcee72825b1b8632cccce27fcee019c"
+    },
+    "reviews/packets/packet_01.json": {
+      "bytes": 62921,
+      "sha256": "abe5e80d699580e9adfd2fe508ed464093af41613448728a0bb1f5461a98d74e"
+    },
+    "reviews/packets/packet_02.json": {
+      "bytes": 63592,
+      "sha256": "42c07fb348c9168c42f4031f0896e91b9e4a21e954196484b318481fd3756e49"
+    },
+    "reviews/packets/packet_03.json": {
+      "bytes": 65544,
+      "sha256": "4d4cab60140d41bd6277f32acda4790294df2b24b7645dff73c1504b894c5c83"
+    },
+    "reviews/packets/packet_04.json": {
+      "bytes": 63305,
+      "sha256": "d10132abf03b6eece07e9ce98cb5f972091aaa278504ca4a3335fdb080ab20d0"
+    },
+    "reviews/packets/packet_05.json": {
+      "bytes": 71652,
+      "sha256": "3a2ac629050985af63b216bc424fdfff9de2de6dca7dc1b244eac925db0e8231"
+    },
+    "reviews/packets/packet_06.json": {
+      "bytes": 68017,
+      "sha256": "20b90a29cb7f189af8344f51acec80cff8ad2359bccfec772413189ba9e651bd"
+    },
+    "reviews/packets/packet_07.json": {
+      "bytes": 65531,
+      "sha256": "4f42525ae86bbffe7a942492be72df2d687f2452e7d984f1a1be07c470fc1c76"
+    },
+    "reviews/packets/packet_08.json": {
+      "bytes": 30278,
+      "sha256": "8bc9fcc8e580a0a08c1dce8b6d54b1d29ddcb4dffb475d60b8a555dd5027e57d"
+    },
+    "reviews/ratings_1.json": {
+      "bytes": 83159,
+      "sha256": "1e14033b171acae4a21ae05d52617ab9c2dedcc0f545d401498d052a416d55d1"
+    },
+    "reviews/ratings_2.json": {
+      "bytes": 79284,
+      "sha256": "a73dc47fa61c7fce9cd13fca0e6308f3ba5890e6e7bf438b2f78079e4bc38a0d"
+    },
+    "rubric.md": {
+      "bytes": 5748,
+      "sha256": "400fd20bba8ed64ea902ef402e881535c407d3327dccdce92157bcb7040b03c5"
+    },
+    "run/calls/S01-lan-program-1-T1.json": {
+      "bytes": 5424,
+      "sha256": "0c80605385d913081a1e9dceb3f8b04a3001433c079c73f7ae173abb64b2f6a2"
+    },
+    "run/calls/S01-lan-program-1-T2.json": {
+      "bytes": 6129,
+      "sha256": "c9c0f2835e8886e337f8da4655d959a3affa93a759426a01baf10be09258abd8"
+    },
+    "run/calls/S01-lan-program-1-T3.json": {
+      "bytes": 5888,
+      "sha256": "b80c9b49e9038003d3e7ee3d4635601c18fef5ab0d61ed3c59fe4f7782926817"
+    },
+    "run/calls/S01-lan-program-1-T4.json": {
+      "bytes": 6431,
+      "sha256": "fe24bc88f71b1f8d0adbc10480af9319b978f920e9a9c7b8924787a4e427e419"
+    },
+    "run/calls/S01-lan-program-2-T1.json": {
+      "bytes": 5628,
+      "sha256": "218a0dfbdf66b3feb4295abed18c809687b87d65d7887afb7ddbf113a1cd95e4"
+    },
+    "run/calls/S01-lan-program-2-T2.json": {
+      "bytes": 6274,
+      "sha256": "46e4dc047f478fc25901ce9537d49cc389388135724df2f5178f740e36d6ac93"
+    },
+    "run/calls/S01-lan-program-2-T3.json": {
+      "bytes": 5982,
+      "sha256": "598fb14639a00547accdb43805a9dad08f9728ea1ea5c3584e5c289889724883"
+    },
+    "run/calls/S01-lan-program-2-T4.json": {
+      "bytes": 6553,
+      "sha256": "125a6cea72e1b2a992aa3b1abf660696cee48fa4639d914255b4239c47dd5a26"
+    },
+    "run/calls/S01-lan-prompt-1-T1.json": {
+      "bytes": 5538,
+      "sha256": "208a35e6b19846866bfc7bd7fc765472f67d90f89dfe0f96cc6c65517f470955"
+    },
+    "run/calls/S01-lan-prompt-1-T2.json": {
+      "bytes": 6162,
+      "sha256": "9adb7c1a6ddbeb7b317b970786ff152c9749eb8b876e0be80c6c94d4221b43a6"
+    },
+    "run/calls/S01-lan-prompt-1-T3.json": {
+      "bytes": 5900,
+      "sha256": "2ed39e591fee9f5568618bc79d5610279cf1e2ac2f59c20bfc92eb07d56a85f4"
+    },
+    "run/calls/S01-lan-prompt-1-T4.json": {
+      "bytes": 6503,
+      "sha256": "9ade96b6ebf3902229403f28aca57239a85123290495a6c18003d34a799df4d7"
+    },
+    "run/calls/S01-lan-prompt-2-T1.json": {
+      "bytes": 5701,
+      "sha256": "089a1010357bf0dbc2544a48a571e87efe7bdf8b4e49492cfa181305cdaf891a"
+    },
+    "run/calls/S01-lan-prompt-2-T2.json": {
+      "bytes": 6235,
+      "sha256": "73921fa534da0853c7651130825fc25c46f52b304bb41d18d97e5857f196b2cc"
+    },
+    "run/calls/S01-lan-prompt-2-T3.json": {
+      "bytes": 5981,
+      "sha256": "327164812f752c6222ff19198415f24b40010fc74b80aff7f668d241dd540c8f"
+    },
+    "run/calls/S01-lan-prompt-2-T4.json": {
+      "bytes": 6546,
+      "sha256": "94cdca8252ebcfa8563c6674d6d805c14a75c60a8076f67af6657c762f4a6e2b"
+    },
+    "run/calls/S01-shorekeeper-program-1-T1.json": {
+      "bytes": 5364,
+      "sha256": "cd409959a2006cc812cf4e1effabefc10268088a9b05b8edc2bf8605f00fd8ac"
+    },
+    "run/calls/S01-shorekeeper-program-1-T2.json": {
+      "bytes": 6094,
+      "sha256": "42e8ce2994176f991a22df271fa159aaa4ebe4cfc37f9cd8831cabe8f581fec8"
+    },
+    "run/calls/S01-shorekeeper-program-1-T3.json": {
+      "bytes": 5847,
+      "sha256": "ba58f80bd9be2f7848761315d16658998bc3c0e3e13abe716489ba08bf8b34ab"
+    },
+    "run/calls/S01-shorekeeper-program-1-T4.json": {
+      "bytes": 6434,
+      "sha256": "07497965ab8776aab8a7630213b597911dbb55f0240e6a3b4363a942027837dc"
+    },
+    "run/calls/S01-shorekeeper-program-2-T1.json": {
+      "bytes": 5365,
+      "sha256": "5b10c3dc4d6cf97935ef15d6e37b4d02db18a85abd43acbb9364ce98d12f91c0"
+    },
+    "run/calls/S01-shorekeeper-program-2-T2.json": {
+      "bytes": 6093,
+      "sha256": "bc1b6b8f4c4d73e46b0cd8d67de4b9787cd8c64412bf1c912869c1297477ecfb"
+    },
+    "run/calls/S01-shorekeeper-program-2-T3.json": {
+      "bytes": 5848,
+      "sha256": "364a40bed51292b4f4c90c7376d711fa99b7a84472dc7dc4f0efee45f0a35686"
+    },
+    "run/calls/S01-shorekeeper-program-2-T4.json": {
+      "bytes": 6431,
+      "sha256": "364390b36385303294b5d0e4645b75722d133b53c6ef58cab1f9b3f5aee0f679"
+    },
+    "run/calls/S01-shorekeeper-prompt-1-T1.json": {
+      "bytes": 5333,
+      "sha256": "3af440b69553c020e071b7093f03122ff935f162d73b965256e5365c6a54fb69"
+    },
+    "run/calls/S01-shorekeeper-prompt-1-T2.json": {
+      "bytes": 6070,
+      "sha256": "befde72613a26c35e86404ad00d98130e4e85db49d4d5d6d6a69ab26e2877d29"
+    },
+    "run/calls/S01-shorekeeper-prompt-1-T3.json": {
+      "bytes": 5841,
+      "sha256": "f5438d9fe3932a4fcb331edf967b555b1c165abcff90bc8ef848d72649bccec5"
+    },
+    "run/calls/S01-shorekeeper-prompt-1-T4.json": {
+      "bytes": 6414,
+      "sha256": "6fd194bd040362a635ac8a89a9e5ed10f94aa60d2c2b367d0ec810c3672f2bdf"
+    },
+    "run/calls/S01-shorekeeper-prompt-2-T1.json": {
+      "bytes": 5335,
+      "sha256": "9bc94256f4e17e439857b6100e06f03b7ff72211c2d01ce76b350118b7c5b739"
+    },
+    "run/calls/S01-shorekeeper-prompt-2-T2.json": {
+      "bytes": 6183,
+      "sha256": "bc2729c9f56612ebd41c30c49ee39b38fc567a25c552e38614ede58b6d685e11"
+    },
+    "run/calls/S01-shorekeeper-prompt-2-T3.json": {
+      "bytes": 5887,
+      "sha256": "030519ebadeb415d727f92385bad36e607d77bf83af6553a8af355db5b4a40d8"
+    },
+    "run/calls/S01-shorekeeper-prompt-2-T4.json": {
+      "bytes": 6465,
+      "sha256": "70612b2bcc3a3cdf77a0b50fdb92998b96fa404cf484a935519db517f27f6c48"
+    },
+    "run/calls/S02-lan-program-1-T1.json": {
+      "bytes": 5377,
+      "sha256": "463d7323aa1df493215defe0d0c268087f55b78480823150383c87e19ce5e4e9"
+    },
+    "run/calls/S02-lan-program-1-T2.json": {
+      "bytes": 6098,
+      "sha256": "2a945c134b7809ad69314710f8154f87fdc88c729d43331597e57189823eab00"
+    },
+    "run/calls/S02-lan-program-1-T3.json": {
+      "bytes": 5834,
+      "sha256": "13c69bb6c292a71bc1b915b538c530f9b4a7e2d609683e1dd25fcbd01894b056"
+    },
+    "run/calls/S02-lan-program-1-T4.json": {
+      "bytes": 6401,
+      "sha256": "83c2375d4c37b6a01a07ce90f6ab1d2252259f3263ab54a6a9c3a7b81a2f526f"
+    },
+    "run/calls/S02-lan-program-2-T1.json": {
+      "bytes": 5539,
+      "sha256": "4e53625b3f23c33316c7d9594f58bdca6122b968682201e52ddf08d1d7cb7246"
+    },
+    "run/calls/S02-lan-program-2-T2.json": {
+      "bytes": 6134,
+      "sha256": "97df089be86ba81c8463692ce8679e29fd7492d143a2105ec3284b5ce2d1b79e"
+    },
+    "run/calls/S02-lan-program-2-T3.json": {
+      "bytes": 5863,
+      "sha256": "306cf74001d1727048ebb21b9a060310adebabf4dc13da2da4c48f15eed7bbfb"
+    },
+    "run/calls/S02-lan-program-2-T4.json": {
+      "bytes": 6455,
+      "sha256": "628b8dd6b2ccd0ea5aff6f97afee36e23d2917e900a7841cde27266ade94f6db"
+    },
+    "run/calls/S02-lan-prompt-1-T1.json": {
+      "bytes": 5551,
+      "sha256": "94ca5a0fcc5bea7a83fef47decab9d0f56608995ae2acdbb8a74592523eaa7eb"
+    },
+    "run/calls/S02-lan-prompt-1-T2.json": {
+      "bytes": 6157,
+      "sha256": "f6c6f84da2891bedc51484687bb98c98b37800fdcd76fe91eb3abbf31e8d4201"
+    },
+    "run/calls/S02-lan-prompt-1-T3.json": {
+      "bytes": 5871,
+      "sha256": "dd74285b6e537ff9b7f6a66d0ff3a2bdb607dfa8cff0964c52c4a8325b27c23e"
+    },
+    "run/calls/S02-lan-prompt-1-T4.json": {
+      "bytes": 6498,
+      "sha256": "18cb211949258233f5ad6d2a2de3a2c5b2fbd393004c779b5755b5c088226471"
+    },
+    "run/calls/S02-lan-prompt-2-T1.json": {
+      "bytes": 5539,
+      "sha256": "f0e2e7c6a2e8072efd28fca820bf6b821f23e426a7ccf37823e5a0269f704e8c"
+    },
+    "run/calls/S02-lan-prompt-2-T2.json": {
+      "bytes": 6221,
+      "sha256": "56bb82ea4e81467f78dc924211c45d2f27e43bafb8531e9bd653c6a745cfddf6"
+    },
+    "run/calls/S02-lan-prompt-2-T3.json": {
+      "bytes": 5900,
+      "sha256": "4aa1a9739f45d245c62dacf7449b50c1dfb61fde1deadceabf813552996bfe7f"
+    },
+    "run/calls/S02-lan-prompt-2-T4.json": {
+      "bytes": 6490,
+      "sha256": "afb29b2b07cca263e61233638843aded9b0b0b475aff02d7fc86011650015776"
+    },
+    "run/calls/S02-shorekeeper-program-1-T1.json": {
+      "bytes": 5402,
+      "sha256": "8d0d94e6e104e919e6975cb59c07f87fbf6515b5cec6b03d22685ac26600c91c"
+    },
+    "run/calls/S02-shorekeeper-program-1-T2.json": {
+      "bytes": 6099,
+      "sha256": "f7d700f18597bb9794c197068b4c2c518586065f524ef5fd5a41733bd6ed14e9"
+    },
+    "run/calls/S02-shorekeeper-program-1-T3.json": {
+      "bytes": 5835,
+      "sha256": "46108ed05395dcd31d42f2dc41abda3ed33d180a0f049f4581663109a07890fb"
+    },
+    "run/calls/S02-shorekeeper-program-1-T4.json": {
+      "bytes": 6439,
+      "sha256": "1a41077dcab61fd7d0c351a99255324e122bb88278097a44532a2e58a0859e2f"
+    },
+    "run/calls/S02-shorekeeper-program-2-T1.json": {
+      "bytes": 5372,
+      "sha256": "f3fce8a06fe9dc63a4a014e9c716203704b1f01575171933845679831fd7f38e"
+    },
+    "run/calls/S02-shorekeeper-program-2-T2.json": {
+      "bytes": 6078,
+      "sha256": "04e38134bc4e0bcab4cc249bef0a2fb371798d57ea3e7c456adfd50d9988a226"
+    },
+    "run/calls/S02-shorekeeper-program-2-T3.json": {
+      "bytes": 5820,
+      "sha256": "ab4ae96010f5df5c1a2cce61cdce008c12847fa4d629f5a11fd63350519af96a"
+    },
+    "run/calls/S02-shorekeeper-program-2-T4.json": {
+      "bytes": 6423,
+      "sha256": "2cdda34228028e2dda3c947148b5e95327ba34f023ed65f8883f13a872f15b7c"
+    },
+    "run/calls/S02-shorekeeper-prompt-1-T1.json": {
+      "bytes": 5341,
+      "sha256": "1bfdcb8677cf614f3539f7849505521dd259f18a971a967f1bfbdbc710dd0337"
+    },
+    "run/calls/S02-shorekeeper-prompt-1-T2.json": {
+      "bytes": 6025,
+      "sha256": "4d509c32ed132228600d8b30fe3dceee18d25e2f3d1d7492e610d2f0cdcccfd2"
+    },
+    "run/calls/S02-shorekeeper-prompt-1-T3.json": {
+      "bytes": 5781,
+      "sha256": "aca208f32a5285941887382c45e8e529c359d7671e5bcf5673f591dbf242d1af"
+    },
+    "run/calls/S02-shorekeeper-prompt-1-T4.json": {
+      "bytes": 6350,
+      "sha256": "b50808d85c49b8866d7b295fca39b46ac4c427390c965e7fbd08ca932a6f9a2f"
+    },
+    "run/calls/S02-shorekeeper-prompt-2-T1.json": {
+      "bytes": 5341,
+      "sha256": "c6a98d4acd1625fd50cda7fac3b00367567afea419102a41804aec76ddbaa3be"
+    },
+    "run/calls/S02-shorekeeper-prompt-2-T2.json": {
+      "bytes": 6030,
+      "sha256": "efde798641d8a2b69048c66a276343c930a063657d76fa769e679b918313d686"
+    },
+    "run/calls/S02-shorekeeper-prompt-2-T3.json": {
+      "bytes": 5793,
+      "sha256": "3aee194736c44e3fd51d8a5cf0bf85a207d0e718352d1cf3de331c3899cf1547"
+    },
+    "run/calls/S02-shorekeeper-prompt-2-T4.json": {
+      "bytes": 6384,
+      "sha256": "f3d68824e758f11760ec78ba36509d9d965261cbed94fb7748e07f92b2cc4d7c"
+    },
+    "run/calls/S03-lan-program-1-T1.json": {
+      "bytes": 5528,
+      "sha256": "2bb3c8fe0cd424e04e00a5dcc6f4c905b92e2672c48d3ea46d1e093b56de2141"
+    },
+    "run/calls/S03-lan-program-1-T2.json": {
+      "bytes": 6209,
+      "sha256": "3d64b494ea46be9c173153283a93da685a6ecc12ede7aa10538384c4a8a9d0d4"
+    },
+    "run/calls/S03-lan-program-1-T3.json": {
+      "bytes": 5905,
+      "sha256": "6a833d8bf553dd815e24cbe68451e25dfbe8043408fa202d58e0a0a28af74432"
+    },
+    "run/calls/S03-lan-program-1-T4.json": {
+      "bytes": 6474,
+      "sha256": "1ac8a914cbaa8086b9024e7357a272f7bc1969d0b7296f6f19549dd949b0fac6"
+    },
+    "run/calls/S03-lan-program-2-T1.json": {
+      "bytes": 5524,
+      "sha256": "53a599dcc6f218dc60dd50316f594dfabf03eb0a896d09d3c6c613b140dcf091"
+    },
+    "run/calls/S03-lan-program-2-T2.json": {
+      "bytes": 6217,
+      "sha256": "ae89b0b8ba408d9972c43b702904b5cc1d099987a25d45fce3dcbc331234632e"
+    },
+    "run/calls/S03-lan-program-2-T3.json": {
+      "bytes": 5913,
+      "sha256": "51512631aa527424e216557ed15816938159c7f3063a5cdfc6d365afb02b8eb5"
+    },
+    "run/calls/S03-lan-program-2-T4.json": {
+      "bytes": 6474,
+      "sha256": "d135acbef5811debcb699da22ba9d8aae87962916b9e93327d0110a4c92c4f41"
+    },
+    "run/calls/S03-lan-prompt-1-T1.json": {
+      "bytes": 5709,
+      "sha256": "42a79cfc0efe5a188d589ca00ec5b9c96e0cd0df040b7a6fb41dcf638a1400ae"
+    },
+    "run/calls/S03-lan-prompt-1-T2.json": {
+      "bytes": 6321,
+      "sha256": "a2486373cbc3bff0503931e602431ce82d374bb14a437db3f40d3ef0907c5ab7"
+    },
+    "run/calls/S03-lan-prompt-1-T3.json": {
+      "bytes": 5992,
+      "sha256": "6585cb896cdd5015722346feb1075bc1a8447d9956e133cdf0c15f5e1e020860"
+    },
+    "run/calls/S03-lan-prompt-1-T4.json": {
+      "bytes": 6559,
+      "sha256": "8c92f2ad15a8be4273c7c8b9df89f34878b0fdbde5a2a253040d292e52d21c84"
+    },
+    "run/calls/S03-lan-prompt-2-T1.json": {
+      "bytes": 5504,
+      "sha256": "92a9f0b1468eb63998741f996b304e42c9b2d1feec0f04fcd061ff7ea6998894"
+    },
+    "run/calls/S03-lan-prompt-2-T2.json": {
+      "bytes": 6249,
+      "sha256": "814ea9c09e072d16b64012e876b822ae37123b3d1b71c1286a197263154ddc0e"
+    },
+    "run/calls/S03-lan-prompt-2-T3.json": {
+      "bytes": 5903,
+      "sha256": "908a82f398a687e0ec80b4ef9696f546ea2cbb5134d1f0a929ad45216717935e"
+    },
+    "run/calls/S03-lan-prompt-2-T4.json": {
+      "bytes": 6464,
+      "sha256": "58acdb901ac7353ae3e912b7f57aa5eaac587d427b3ab79a3bec2e308a699701"
+    },
+    "run/calls/S03-shorekeeper-program-1-T1.json": {
+      "bytes": 5578,
+      "sha256": "0e0338bc71a7b4ccd10c2f602973e80efe14f032b9d2a4b2400a5256e8fed174"
+    },
+    "run/calls/S03-shorekeeper-program-1-T2.json": {
+      "bytes": 6306,
+      "sha256": "905fa1a756b96080b1c390a159069f593778d8ed4a1a8a8039b9507d6840e3f5"
+    },
+    "run/calls/S03-shorekeeper-program-1-T3.json": {
+      "bytes": 5961,
+      "sha256": "1f461dd41f8c77aa6ae4ae4a738a2ab67ac5d7a7e7832676846dcd9a85d8d91e"
+    },
+    "run/calls/S03-shorekeeper-program-1-T4.json": {
+      "bytes": 6565,
+      "sha256": "78d11ae102a4f15228be0971977b9e153f292610ea15aef22007735712481b8c"
+    },
+    "run/calls/S03-shorekeeper-program-2-T1.json": {
+      "bytes": 5529,
+      "sha256": "9e6641fc0396889e19acf7325747141b0b3179de86d7fbb484cb21cfdc3f5e93"
+    },
+    "run/calls/S03-shorekeeper-program-2-T2.json": {
+      "bytes": 6220,
+      "sha256": "86f8c2eb0fb5945458f0cfd2bb68ce3be80604379e81c80c0a11bc10d1d83b4b"
+    },
+    "run/calls/S03-shorekeeper-program-2-T3.json": {
+      "bytes": 5901,
+      "sha256": "b3ae383f89c18c42cc40aaa84054ca3f220024168fd36e42b0b4103750c6b30e"
+    },
+    "run/calls/S03-shorekeeper-program-2-T4.json": {
+      "bytes": 6510,
+      "sha256": "41d279a48486f907eb5bed2fb30003d26bdf0c232ed98b2da26a81ec12a112bb"
+    },
+    "run/calls/S03-shorekeeper-prompt-1-T1.json": {
+      "bytes": 5385,
+      "sha256": "1fc857c5b96f26f07ed25694426aefd0ca395b9bd13fd8412918efbcb67d5e3a"
+    },
+    "run/calls/S03-shorekeeper-prompt-1-T2.json": {
+      "bytes": 6123,
+      "sha256": "4ff5e3700f5688e1ca72204e28ea6881d8564323ca9833472e209794c1876918"
+    },
+    "run/calls/S03-shorekeeper-prompt-1-T3.json": {
+      "bytes": 5847,
+      "sha256": "2d97770b9f9edd000f53dbb611f35e66fc1e00e931879c940dcd0303e719246f"
+    },
+    "run/calls/S03-shorekeeper-prompt-1-T4.json": {
+      "bytes": 6421,
+      "sha256": "649545cd5ff091b6a9b4c14874f2a64a0fa0599207a86e68bd60eb72a4ce85d2"
+    },
+    "run/calls/S03-shorekeeper-prompt-2-T1.json": {
+      "bytes": 5408,
+      "sha256": "560fae98e07ed869affe296809e1a543128f340ec0f2ff3795423d80408c8c57"
+    },
+    "run/calls/S03-shorekeeper-prompt-2-T2.json": {
+      "bytes": 6172,
+      "sha256": "24f79e2325207a039852a5c05980058249e294d417f5b60d419c5cb28d2d86c0"
+    },
+    "run/calls/S03-shorekeeper-prompt-2-T3.json": {
+      "bytes": 5880,
+      "sha256": "a296a7429f02a77d5759bd98e561e4bfa9e2cf9ea260ad53c9c5e513d5467db1"
+    },
+    "run/calls/S03-shorekeeper-prompt-2-T4.json": {
+      "bytes": 6453,
+      "sha256": "03a1160ec087ed372adf2c8b00bdae35253dc66f7afff94ad8be11e38d88e5ae"
+    },
+    "run/calls/S04-lan-program-1-T1.json": {
+      "bytes": 5563,
+      "sha256": "3abbd39f2c604b35856211508563faf71811a736f122c42234caaec806cfd36d"
+    },
+    "run/calls/S04-lan-program-1-T2.json": {
+      "bytes": 6158,
+      "sha256": "12e6c2665afbfdee6c7f1bd61828b2baf8d8eceae6d8b208b6681f4ae4f6aa04"
+    },
+    "run/calls/S04-lan-program-1-T3.json": {
+      "bytes": 5944,
+      "sha256": "c5f6f33e460d435239ecdbe88b5185d2ecb0c95ae7ded2845a3a6f14dcdf6f6a"
+    },
+    "run/calls/S04-lan-program-1-T4.json": {
+      "bytes": 6497,
+      "sha256": "4c417d51933eacdee3efd0b801beacd6f29d8869a6694a361b2553bc007a86e1"
+    },
+    "run/calls/S04-lan-program-2-T1.json": {
+      "bytes": 5383,
+      "sha256": "447655f65c98e2633a16e6a89ac162907a4841cc363a49da0c7c5310d7f368ac"
+    },
+    "run/calls/S04-lan-program-2-T2.json": {
+      "bytes": 6114,
+      "sha256": "2f43d8015a1b84d75b59bfa163e8ff110ed6e4d5339477445bd902279ffddd28"
+    },
+    "run/calls/S04-lan-program-2-T3.json": {
+      "bytes": 5916,
+      "sha256": "46f0bfb8042c4cc3678fb8b91bdb3e69f52554162ead42533230253a94f8201f"
+    },
+    "run/calls/S04-lan-program-2-T4.json": {
+      "bytes": 6432,
+      "sha256": "fce609757099875432dbad8e9bff516da9cafd2a44342248c22c8b410292c4b7"
+    },
+    "run/calls/S04-lan-prompt-1-T1.json": {
+      "bytes": 5406,
+      "sha256": "4fd1517743011ba2b06bb5e97ed4f42ef2b3254f11b07b1abaf941e4c52335df"
+    },
+    "run/calls/S04-lan-prompt-1-T2.json": {
+      "bytes": 6077,
+      "sha256": "ab52dff8aa5f8bae924ac607e86d9cdd68c058e825132e793859d298b7e74f78"
+    },
+    "run/calls/S04-lan-prompt-1-T3.json": {
+      "bytes": 5894,
+      "sha256": "726ec79681774c0618c8bf9dff8ca742b8c1b826e4115cd6aeb020c803deb1ae"
+    },
+    "run/calls/S04-lan-prompt-1-T4.json": {
+      "bytes": 6446,
+      "sha256": "ab5ac8b6179e7c415252f4473dda0600182362b1698c10dca110ed9e29905331"
+    },
+    "run/calls/S04-lan-prompt-2-T1.json": {
+      "bytes": 5495,
+      "sha256": "cdcd15a8222a3eff326a349157eeda81f706f463ee3cd59ca16f0a4f3b83a53b"
+    },
+    "run/calls/S04-lan-prompt-2-T2.json": {
+      "bytes": 6111,
+      "sha256": "14eafbc96c8ce000fbab3e3822848d4e54077a2180437093b80527ae16f442ea"
+    },
+    "run/calls/S04-lan-prompt-2-T3.json": {
+      "bytes": 5897,
+      "sha256": "2e93b34aa7fd7db0146900aa2343504e9c3f4137c7b83062269f46ce1939ae93"
+    },
+    "run/calls/S04-lan-prompt-2-T4.json": {
+      "bytes": 6485,
+      "sha256": "16904a372713566715bdbed5c7f61ee213714eae57bde6f2de0610df9e3cdc2b"
+    },
+    "run/calls/S04-shorekeeper-program-1-T1.json": {
+      "bytes": 5396,
+      "sha256": "e30fdd4a78aba1249c946fc2d9ae30314aea30bcd52f78cc2bfe6f391433e57f"
+    },
+    "run/calls/S04-shorekeeper-program-1-T2.json": {
+      "bytes": 6093,
+      "sha256": "01f9179ee0d1b83f801ac23de6257ff1995b057bab9179f87f47c30ade323874"
+    },
+    "run/calls/S04-shorekeeper-program-1-T3.json": {
+      "bytes": 5897,
+      "sha256": "ab5a080ea1e616b810cdf03ad2e6d49b1842d13dc69aaea48fe7763a3990043e"
+    },
+    "run/calls/S04-shorekeeper-program-1-T4.json": {
+      "bytes": 6462,
+      "sha256": "d3641f48e27807651cfbcc4842db24afd5cc927ce9efbe1780e9ddc16744bf74"
+    },
+    "run/calls/S04-shorekeeper-program-2-T1.json": {
+      "bytes": 5394,
+      "sha256": "19704616f7450953f1586eae9eef8f6fccd9b354656fd6754d47137b9c825c9a"
+    },
+    "run/calls/S04-shorekeeper-program-2-T2.json": {
+      "bytes": 6088,
+      "sha256": "c542f809a62d81585840242bce3ae0208ba0b92d12b88c78a29f0823235e9d14"
+    },
+    "run/calls/S04-shorekeeper-program-2-T3.json": {
+      "bytes": 5904,
+      "sha256": "c75ca85b3820bb72fd4125a08c3845623cb0a79666a7311b28e5dc2f1d853990"
+    },
+    "run/calls/S04-shorekeeper-program-2-T4.json": {
+      "bytes": 6464,
+      "sha256": "86ec7b28a3a74925283cc3502e49a31ab32d382be04e884fe3e22edd0005f9cd"
+    },
+    "run/calls/S04-shorekeeper-prompt-1-T1.json": {
+      "bytes": 5444,
+      "sha256": "476d6feb83988c45bbb923c7410128363624a03b1a363e02c9d813fa4dd74ddf"
+    },
+    "run/calls/S04-shorekeeper-prompt-1-T2.json": {
+      "bytes": 6095,
+      "sha256": "4571c739c53fd23094918155816c9d4d1755bed2d2e6cb8a5cc73d999049fcbd"
+    },
+    "run/calls/S04-shorekeeper-prompt-1-T3.json": {
+      "bytes": 5918,
+      "sha256": "7192169e6727a8ab3864f981872ff5b16075ccd81a03ed1e52d6d4e92c00cb85"
+    },
+    "run/calls/S04-shorekeeper-prompt-1-T4.json": {
+      "bytes": 6471,
+      "sha256": "74083aff94d1ff45c8cf7ff2d1daf908da91b3ef0aa0cc84831a10f6ca13cf36"
+    },
+    "run/calls/S04-shorekeeper-prompt-2-T1.json": {
+      "bytes": 5417,
+      "sha256": "f96f3f3180bb4136ae59c1c66659783a3c220dff45f1ad0467379615c30d5d2d"
+    },
+    "run/calls/S04-shorekeeper-prompt-2-T2.json": {
+      "bytes": 6085,
+      "sha256": "7e79f750bcda419eeb3abd7b3399b0d2586acf1495409e43d26e60e58ad9743b"
+    },
+    "run/calls/S04-shorekeeper-prompt-2-T3.json": {
+      "bytes": 5907,
+      "sha256": "b57a2d2cd994bc483e9efbecc1ef104979b5596bece7b39e6d150beeca070e8c"
+    },
+    "run/calls/S04-shorekeeper-prompt-2-T4.json": {
+      "bytes": 6459,
+      "sha256": "28c9c6d384614983729ffa3a486119c5048e2acdffe3b1662668b242052d723d"
+    },
+    "run/calls/S05-lan-program-1-T1.json": {
+      "bytes": 5432,
+      "sha256": "b564756ff61f89397008b906b8e453f85b434b3a84f064ef94e6443dc8046a01"
+    },
+    "run/calls/S05-lan-program-1-T2.json": {
+      "bytes": 6142,
+      "sha256": "e28058035932f6922bac652530533db9d32751a980185cf0929c3d760ef3703c"
+    },
+    "run/calls/S05-lan-program-1-T3.json": {
+      "bytes": 5864,
+      "sha256": "466ca2d7a687d25228c00dfa3d7ec4f513fb2394bb30b14610a24f1343f214ed"
+    },
+    "run/calls/S05-lan-program-1-T4.json": {
+      "bytes": 6431,
+      "sha256": "596bee721ff0891e4a2b500903d228d724336a410b4efab54ceaf7a3ad38ecf6"
+    },
+    "run/calls/S05-lan-program-2-T1.json": {
+      "bytes": 5478,
+      "sha256": "10f1dbf29cf67de08afb642afe3a61ca19d858c2e2f82d34ddac5ffdf3dc7466"
+    },
+    "run/calls/S05-lan-program-2-T2.json": {
+      "bytes": 6113,
+      "sha256": "2f048afca71287c5112cd6f8bc5c4774ac49c7a4f0d51a86ddd0f9dbcd4ff83a"
+    },
+    "run/calls/S05-lan-program-2-T3.json": {
+      "bytes": 5871,
+      "sha256": "47e02ae36f5ad6f4c1b7e01762d2f9f84fa7983f32f54221d0017c93b58f91d6"
+    },
+    "run/calls/S05-lan-program-2-T4.json": {
+      "bytes": 6432,
+      "sha256": "c45521eb9c33454e95347d2cd89619966e0dad3770d52082c16b4877aadcf324"
+    },
+    "run/calls/S05-lan-prompt-1-T1.json": {
+      "bytes": 5402,
+      "sha256": "04c63571bc327c1fc3202d7e3b6cd52406a868fef66f72cfe103a1caf5a4dab8"
+    },
+    "run/calls/S05-lan-prompt-1-T2.json": {
+      "bytes": 6145,
+      "sha256": "7d5e3bde43b8a4c2020fd14c83f84b82603bb61030081e95e2e61047dfaa85d2"
+    },
+    "run/calls/S05-lan-prompt-1-T3.json": {
+      "bytes": 5888,
+      "sha256": "370e897c370bd715b29b882f6db6d9f95d6fe38b220598aa0efcbbd23ff28e37"
+    },
+    "run/calls/S05-lan-prompt-1-T4.json": {
+      "bytes": 6452,
+      "sha256": "ca6f4d3a4ff3d0b7986d20412a9ee480110ee189a4262c651a979c38b9a56c50"
+    },
+    "run/calls/S05-lan-prompt-2-T1.json": {
+      "bytes": 5391,
+      "sha256": "2f770c0f3db784f29cea36c4dd7a2c34edd2b75742a5e12ca53c5af7e87fd11b"
+    },
+    "run/calls/S05-lan-prompt-2-T2.json": {
+      "bytes": 6139,
+      "sha256": "494bc571cc22dcce874413dc195690198f8e682f065e37dd6a6c8d39fe583436"
+    },
+    "run/calls/S05-lan-prompt-2-T3.json": {
+      "bytes": 5841,
+      "sha256": "77b276a41c58beed4a5390b0d5df7934f37e4f52169be60ae379094c21023b52"
+    },
+    "run/calls/S05-lan-prompt-2-T4.json": {
+      "bytes": 6443,
+      "sha256": "38a304805dbac89645fa3ad729c3b6c3deb8bf05e0e6a3e587d93c43e753f5e6"
+    },
+    "run/calls/S05-shorekeeper-program-1-T1.json": {
+      "bytes": 5595,
+      "sha256": "4b59facbdb5317bf6e7f46a47e803e625632d53c7066e54461be7effe87ca700"
+    },
+    "run/calls/S05-shorekeeper-program-1-T2.json": {
+      "bytes": 6302,
+      "sha256": "113968640d561106abfada51776c1ea4abbc4307a01142b6cc677fb21a66185c"
+    },
+    "run/calls/S05-shorekeeper-program-1-T3.json": {
+      "bytes": 5979,
+      "sha256": "42cd95cb606d89963885a89b18fa403295d39e62b1e13b626d223842bc6fbd68"
+    },
+    "run/calls/S05-shorekeeper-program-1-T4.json": {
+      "bytes": 6582,
+      "sha256": "cf2dad34f9a74c9d4455a29ea6466a25eb38757c7b73272875f0819c6f1aa1bd"
+    },
+    "run/calls/S05-shorekeeper-program-2-T1.json": {
+      "bytes": 5591,
+      "sha256": "e29192b823c676e7f668e0e3a381d35a09e300c83dadeac1a205a82ef8ce8b65"
+    },
+    "run/calls/S05-shorekeeper-program-2-T2.json": {
+      "bytes": 6282,
+      "sha256": "8c99a45ecdfe71861eef2d60278135f3bbb7c0b6a5796a0450add60ba36acb79"
+    },
+    "run/calls/S05-shorekeeper-program-2-T3.json": {
+      "bytes": 5971,
+      "sha256": "e127fa1ec224f183dd5a02a771c0bfb98a2b9803631293e666613c4342db41d0"
+    },
+    "run/calls/S05-shorekeeper-program-2-T4.json": {
+      "bytes": 6573,
+      "sha256": "e3346abf63fecc88ae06fbd8db645b55d1ca0cb06c8a20aed51bce69d028eeb4"
+    },
+    "run/calls/S05-shorekeeper-prompt-1-T1.json": {
+      "bytes": 5378,
+      "sha256": "1ff61c8f75c3fa17be2cb82cd90cf3370f8d2449728d31c958e6ebbf9f9fb62d"
+    },
+    "run/calls/S05-shorekeeper-prompt-1-T2.json": {
+      "bytes": 6059,
+      "sha256": "ab2da218c016ecb773191cd2bb1a09c9920fe773d76e06244c97140b58565dd3"
+    },
+    "run/calls/S05-shorekeeper-prompt-1-T3.json": {
+      "bytes": 5844,
+      "sha256": "0a68d5c5495ac879c902bc0b42653948cff7f340c5eb68716a624e4a2351ec17"
+    },
+    "run/calls/S05-shorekeeper-prompt-1-T4.json": {
+      "bytes": 6411,
+      "sha256": "fd6ccdb295e672cc82fd08e336ae54b5274547f61f83aa2b341752e710351e25"
+    },
+    "run/calls/S05-shorekeeper-prompt-2-T1.json": {
+      "bytes": 5362,
+      "sha256": "212f309cffe43fab6a4d0f77f9f2fe772aeca120f707cd9e76b6dfa366bec8bc"
+    },
+    "run/calls/S05-shorekeeper-prompt-2-T2.json": {
+      "bytes": 6048,
+      "sha256": "84a5d4cc93243f8349bac70d0020c0a6f4f0a64a47daa86ca7da4696ca1f65aa"
+    },
+    "run/calls/S05-shorekeeper-prompt-2-T3.json": {
+      "bytes": 5824,
+      "sha256": "b610054b3d0ef4d5e5ef41adf9e76ccb138f4364582f4df0d4336e83527546ed"
+    },
+    "run/calls/S05-shorekeeper-prompt-2-T4.json": {
+      "bytes": 6397,
+      "sha256": "a2dc7699a536ffd3c83e1b91cce7939d0812922d91c571cb57d9d449062ee460"
+    },
+    "run/calls/S06-lan-program-1-T1.json": {
+      "bytes": 5578,
+      "sha256": "781670e97f8389aae6aaae7bb77b309c4fe3302f13389f27e08c6faea5a38e93"
+    },
+    "run/calls/S06-lan-program-1-T2.json": {
+      "bytes": 6212,
+      "sha256": "3d96245115880d8f6efd1eff8b33dc17e456cfe7266c0247dde2084d36462168"
+    },
+    "run/calls/S06-lan-program-1-T3.json": {
+      "bytes": 5939,
+      "sha256": "1e71de5686a0d51bc94607b5dd9fac07d51a0b610dab803baa5e6f245c81bfae"
+    },
+    "run/calls/S06-lan-program-1-T4.json": {
+      "bytes": 6507,
+      "sha256": "190bf183586a35ce5f04c963f5ffe8e3417870b5e2c55b9e3c62f3b9ac3e30e4"
+    },
+    "run/calls/S06-lan-program-2-T1.json": {
+      "bytes": 5638,
+      "sha256": "345071dc88070e8300dcb1c07801620475e0e50f5b56ece352544a21f304ab69"
+    },
+    "run/calls/S06-lan-program-2-T2.json": {
+      "bytes": 6250,
+      "sha256": "fd00ea1c20c978b398293c37778c3907aedddb5b916c6c4cd0c55c91b859e943"
+    },
+    "run/calls/S06-lan-program-2-T3.json": {
+      "bytes": 5979,
+      "sha256": "bc46b57c91b12a88e71fcc81a2a3c192fb1831ba1a60122a2f6f6b14c935fb1e"
+    },
+    "run/calls/S06-lan-program-2-T4.json": {
+      "bytes": 6541,
+      "sha256": "4676d43d1777eb2cbdab06f12f58fbaac1e976005e8407011ac357731ea93b88"
+    },
+    "run/calls/S06-lan-prompt-1-T1.json": {
+      "bytes": 5674,
+      "sha256": "6574f85dd8cd9edd794a52c743fc6d43c7fa8511b157272ecd2262cd5d9aae95"
+    },
+    "run/calls/S06-lan-prompt-1-T2.json": {
+      "bytes": 6215,
+      "sha256": "f604e9e1a447db94ea71efd2bca9fe584b5504f9f098959490890104438fe792"
+    },
+    "run/calls/S06-lan-prompt-1-T3.json": {
+      "bytes": 5960,
+      "sha256": "9cd8ef4b0205f128b5c8816603173dd45a3085a063383a5c7ca00ec72f8b751f"
+    },
+    "run/calls/S06-lan-prompt-1-T4.json": {
+      "bytes": 6522,
+      "sha256": "aee38704d3cddca01ced51584c8e2bad117b270de8c6a2d9558f73ef8ed9278b"
+    },
+    "run/calls/S06-lan-prompt-2-T1.json": {
+      "bytes": 5644,
+      "sha256": "19a251196a8059964e51590cc978454f41508710a44c14708bab18cd25b68b6e"
+    },
+    "run/calls/S06-lan-prompt-2-T2.json": {
+      "bytes": 6442,
+      "sha256": "791feb246273901d96354e4bb411dd4ded9141d33cf6c2a65ca4f0cd25716b18"
+    },
+    "run/calls/S06-lan-prompt-2-T3.json": {
+      "bytes": 6066,
+      "sha256": "77d41656c6bca0d44db48bd24afbba5a7d518765db8fe102a5cb8f25ec4fec38"
+    },
+    "run/calls/S06-lan-prompt-2-T4.json": {
+      "bytes": 6628,
+      "sha256": "3633dd353cb9fed2abf8712444809aae73a205613be5be8686849e240b3d1938"
+    },
+    "run/calls/S06-shorekeeper-program-1-T1.json": {
+      "bytes": 5454,
+      "sha256": "9fe0567c8ab334d3760136f317e0f9bca91a25492b6b0b1409b0c92b831658a4"
+    },
+    "run/calls/S06-shorekeeper-program-1-T2.json": {
+      "bytes": 6147,
+      "sha256": "33cce5ea4596bdfba30cf7c24f2ad4dae66fc321ae093e5960c1bd0833cb5ce1"
+    },
+    "run/calls/S06-shorekeeper-program-1-T3.json": {
+      "bytes": 5871,
+      "sha256": "19be327b3ad8840dff7a9185a507cf3da17de31eb67fea1bc414b1f0a825b3ad"
+    },
+    "run/calls/S06-shorekeeper-program-1-T4.json": {
+      "bytes": 6481,
+      "sha256": "8c68889e1fc9a7b9d5f1396cca20083d7edc525f22f187379d70f14ab0fc2eaa"
+    },
+    "run/calls/S06-shorekeeper-program-2-T1.json": {
+      "bytes": 5447,
+      "sha256": "69d8300816f6c6f790e273d261447acd9549d908d7d77f4981520c67ecb69693"
+    },
+    "run/calls/S06-shorekeeper-program-2-T2.json": {
+      "bytes": 6138,
+      "sha256": "e08d5575cb55497ff655af4324c59f5fc2d50a17b96e5fddd8f9c802b797b73c"
+    },
+    "run/calls/S06-shorekeeper-program-2-T3.json": {
+      "bytes": 5903,
+      "sha256": "50ce9e80b3b7efb5745e45873ec2cae92a532286fa46a13db1684c58cb874ac6"
+    },
+    "run/calls/S06-shorekeeper-program-2-T4.json": {
+      "bytes": 6477,
+      "sha256": "33bc546bf73a93dcaedb16640ace02b76d090223f3aed82ee112d1922f3641f2"
+    },
+    "run/calls/S06-shorekeeper-prompt-1-T1.json": {
+      "bytes": 5436,
+      "sha256": "b09ee6720d39820422fb830722144573ddea949950203788c65b436d6f2d90bc"
+    },
+    "run/calls/S06-shorekeeper-prompt-1-T2.json": {
+      "bytes": 6104,
+      "sha256": "92eae6f377eeb4ebd4bf624a9d83602c737d372ae426d982992283dfb5a48584"
+    },
+    "run/calls/S06-shorekeeper-prompt-1-T3.json": {
+      "bytes": 5865,
+      "sha256": "1386e3b4ec24bfc14b2f5fc1e26da56566835b51a9dac7cd73ab000a6808404b"
+    },
+    "run/calls/S06-shorekeeper-prompt-1-T4.json": {
+      "bytes": 6445,
+      "sha256": "95fda0e9edb6986b9837174ac2f391ee124d35c20b1d5defc73c1534d45b493d"
+    },
+    "run/calls/S06-shorekeeper-prompt-2-T1.json": {
+      "bytes": 5410,
+      "sha256": "a8a7d78683aff82db81a38c6737a64881bebe4ce135499bf9281b00d0ef74a13"
+    },
+    "run/calls/S06-shorekeeper-prompt-2-T2.json": {
+      "bytes": 6094,
+      "sha256": "426085c088c35c53189d837168017c5b9da080ec959c00855499e3be70677189"
+    },
+    "run/calls/S06-shorekeeper-prompt-2-T3.json": {
+      "bytes": 5859,
+      "sha256": "671abfdebf7be63c1e2434c6cea005dd0209ce1b71d2e91993a73120a80a687d"
+    },
+    "run/calls/S06-shorekeeper-prompt-2-T4.json": {
+      "bytes": 6432,
+      "sha256": "5ad44876c43656665b6875a3e8e7e76c60c4dc3a3fd4552202f9fedf67937759"
+    },
+    "run/checkpoints/S01-lan-program-1.json": {
+      "bytes": 24043,
+      "sha256": "de0ac2238a6711cc56174b165b8975b113b9c06c3c859e1e1d3bdf3cf8159807"
+    },
+    "run/checkpoints/S01-lan-program-2.json": {
+      "bytes": 24406,
+      "sha256": "a9a3eab1af2f47fa447432e0d9e7881f8940b3bb9aae88b05d75398f346a38ae"
+    },
+    "run/checkpoints/S01-lan-prompt-1.json": {
+      "bytes": 24215,
+      "sha256": "e7a6afda0c25ff1122f532ee7ad0bbb940a55321335112018f67fc89ef45b8ba"
+    },
+    "run/checkpoints/S01-lan-prompt-2.json": {
+      "bytes": 24519,
+      "sha256": "7cc6b15261ba31019d89d1b55bdfded7c5ca62eae577af9757874fd4addce8cd"
+    },
+    "run/checkpoints/S01-shorekeeper-program-1.json": {
+      "bytes": 23975,
+      "sha256": "a622482336b5e423f297f3260d069ba2d3cd90aab9743f703f03be66538ebfbf"
+    },
+    "run/checkpoints/S01-shorekeeper-program-2.json": {
+      "bytes": 23975,
+      "sha256": "0a7ff51a1b98e12aa0c83e4b40ecaf12082de30519fd4f3e42171e5f5873c2e1"
+    },
+    "run/checkpoints/S01-shorekeeper-prompt-1.json": {
+      "bytes": 24015,
+      "sha256": "0aeaf1cb0db7941d118d6df91474d416370387fc920f67c9c3056e59eb2df4fd"
+    },
+    "run/checkpoints/S01-shorekeeper-prompt-2.json": {
+      "bytes": 24173,
+      "sha256": "5d28dca8bef12e8bdad05174d0c257067981a2508dc3f5b62c16ceca7c026c4d"
+    },
+    "run/checkpoints/S02-lan-program-1.json": {
+      "bytes": 23848,
+      "sha256": "0ee0600dfebe2f5b01f09177ed906668155bd2037a46c3034d6289731f9d90c2"
+    },
+    "run/checkpoints/S02-lan-program-2.json": {
+      "bytes": 23982,
+      "sha256": "3dc32773188eaee97896b92234b100415217f7f02d264c8547a02631f2182106"
+    },
+    "run/checkpoints/S02-lan-prompt-1.json": {
+      "bytes": 24122,
+      "sha256": "e2dc363dcb14baed01a08533576c02d1c0536b1c4a3902196b488f246d6180d8"
+    },
+    "run/checkpoints/S02-lan-prompt-2.json": {
+      "bytes": 24185,
+      "sha256": "d2474ae99c28b68633ce7c36760eb01a85d6d8029219644b208bc20a4135d1da"
+    },
+    "run/checkpoints/S02-shorekeeper-program-1.json": {
+      "bytes": 23930,
+      "sha256": "4af8cfb1b84e9e9cbdc9292dedf7034296c7b30738645abb0fc7ea8577a8fe63"
+    },
+    "run/checkpoints/S02-shorekeeper-program-2.json": {
+      "bytes": 23869,
+      "sha256": "ea95763ff48317f1b3bf71549ed2b9527db78a4e07afb157021c1962a47663ed"
+    },
+    "run/checkpoints/S02-shorekeeper-prompt-1.json": {
+      "bytes": 23835,
+      "sha256": "7bda06f89a076c9ff62178355a309cadb9838d6d61d4209d8471611e232a4a3a"
+    },
+    "run/checkpoints/S02-shorekeeper-prompt-2.json": {
+      "bytes": 23864,
+      "sha256": "04264705b58dadf4d6f9b2fe6bf5ecafea4f10fff15a4de2f612bd7a1b17a5c2"
+    },
+    "run/checkpoints/S03-lan-program-1.json": {
+      "bytes": 24234,
+      "sha256": "bae470827be5f964d69d8d1d46942b225fef16d147cd94c8b09626c37df39754"
+    },
+    "run/checkpoints/S03-lan-program-2.json": {
+      "bytes": 24233,
+      "sha256": "11f890550953e46a97dcb4cb0d8c5696aa2a5a57c66136ad7d3cceda37d12115"
+    },
+    "run/checkpoints/S03-lan-prompt-1.json": {
+      "bytes": 24678,
+      "sha256": "39cbf68c7c34107d01e2a709a0fb6a401a59cb63c1483c89b4dc74bc9b7dec04"
+    },
+    "run/checkpoints/S03-lan-prompt-2.json": {
+      "bytes": 24314,
+      "sha256": "921eab008902091eafe0b2d591756f8f4c431fd20f169fdf571ba548699f32c2"
+    },
+    "run/checkpoints/S03-shorekeeper-program-1.json": {
+      "bytes": 24490,
+      "sha256": "d75368f65dec10e4e2b90136ce2ab6b5bdeedf925379fa37e128bee29e6c32a8"
+    },
+    "run/checkpoints/S03-shorekeeper-program-2.json": {
+      "bytes": 24306,
+      "sha256": "0eae97792b6e4eb81b28839627c4f9ddb6ffb2fdcd0a0b1cc172741a623843d0"
+    },
+    "run/checkpoints/S03-shorekeeper-prompt-1.json": {
+      "bytes": 24154,
+      "sha256": "e0ca61d866941afff60aaece310b967013acd06e50198e3018ed0a62a38ed771"
+    },
+    "run/checkpoints/S03-shorekeeper-prompt-2.json": {
+      "bytes": 24283,
+      "sha256": "d5a51a8051e78b4edb2dd197eb8c3d23fbd59f2cc938a5f142160698d0c80d33"
+    },
+    "run/checkpoints/S04-lan-program-1.json": {
+      "bytes": 24128,
+      "sha256": "018a609f5e9493e74bba3223a115b09288a869b613b52fc598db341c97356b2d"
+    },
+    "run/checkpoints/S04-lan-program-2.json": {
+      "bytes": 23963,
+      "sha256": "7a7b69537049860122dfc6f1f90085d6ef5f117ff34090f8bb1352f3639a57af"
+    },
+    "run/checkpoints/S04-lan-prompt-1.json": {
+      "bytes": 24024,
+      "sha256": "42d024283df6495ed7f0e8712558eb8ae3a258a9b3a1c0697c593b9b17fd5cc0"
+    },
+    "run/checkpoints/S04-lan-prompt-2.json": {
+      "bytes": 24066,
+      "sha256": "86a18aed7da00c0cbb5785146a621afb06d76ac5684d4c774c6311ec96c2ffb4"
+    },
+    "run/checkpoints/S04-shorekeeper-program-1.json": {
+      "bytes": 24054,
+      "sha256": "ae39411809ca8d9d02b4ffba4d1af7da4a9eda5d79e8f490f7b2ffb973c241ff"
+    },
+    "run/checkpoints/S04-shorekeeper-program-2.json": {
+      "bytes": 24054,
+      "sha256": "4e65a160a534093e119a4653e307e692c13d32011905e3aaf46301681d124e2d"
+    },
+    "run/checkpoints/S04-shorekeeper-prompt-1.json": {
+      "bytes": 24178,
+      "sha256": "e9f84427815a2c0d1c665aaee7276960a5c2fd5b56629a14a14138457fa6c7f5"
+    },
+    "run/checkpoints/S04-shorekeeper-prompt-2.json": {
+      "bytes": 24130,
+      "sha256": "d1043a6fd6aa07b689c8a858683471ce741ab9c390574442654be99347b2bce3"
+    },
+    "run/checkpoints/S05-lan-program-1.json": {
+      "bytes": 23883,
+      "sha256": "5b0f60909a0e915e0121216f5e3b04554af9017d0542a92301fa8fb3cd9f8d74"
+    },
+    "run/checkpoints/S05-lan-program-2.json": {
+      "bytes": 23911,
+      "sha256": "aeb2b71305cb883d4bca2660ffcc0fdf397cfda652d8537663341ec27af63d7d"
+    },
+    "run/checkpoints/S05-lan-prompt-1.json": {
+      "bytes": 24082,
+      "sha256": "24fa3a81c49ce903831ace8426c38cb02a49d9a6ce33b91e91c313331a7b0078"
+    },
+    "run/checkpoints/S05-lan-prompt-2.json": {
+      "bytes": 23912,
+      "sha256": "df9170b3e61a0d5083975f462ba816134d5b4786e57ae038d8204b8baff5c33a"
+    },
+    "run/checkpoints/S05-shorekeeper-program-1.json": {
+      "bytes": 24400,
+      "sha256": "5c201927a387e15f6368c61a5e40d2d0e226fb5b4d8e824c58e3bd6657b886d9"
+    },
+    "run/checkpoints/S05-shorekeeper-program-2.json": {
+      "bytes": 24374,
+      "sha256": "d59bb31f1eaa8508734b384bf1030ca83295b5e5a3c5a9c6a900fbe00db6424d"
+    },
+    "run/checkpoints/S05-shorekeeper-prompt-1.json": {
+      "bytes": 23985,
+      "sha256": "5c9d9916635370eecacd2cefa2652975264353f2ff77042fc3cd6b10d6c3ea7b"
+    },
+    "run/checkpoints/S05-shorekeeper-prompt-2.json": {
+      "bytes": 23937,
+      "sha256": "2aa29effb1ee07384a83e267012e91bf112ae6d49b95204ac5c6f8c777b404b8"
+    },
+    "run/checkpoints/S06-lan-program-1.json": {
+      "bytes": 24215,
+      "sha256": "c160e53e2e5e5a73a1792b531c2d60ef6237d1804098fcbf3caed2cef1c3f0f4"
+    },
+    "run/checkpoints/S06-lan-program-2.json": {
+      "bytes": 24344,
+      "sha256": "7ee8481a75b1140f3eb4cc93e1c43c4f2dbdfb934edde97d3a9c7f4bea6e784a"
+    },
+    "run/checkpoints/S06-lan-prompt-1.json": {
+      "bytes": 24403,
+      "sha256": "3939bd271e78987d477f5f30344d4b813ae9888e40d307c1f065010488594b1e"
+    },
+    "run/checkpoints/S06-lan-prompt-2.json": {
+      "bytes": 24703,
+      "sha256": "cdbeb0f5607732bca0915a37403361856122c61252b66a14258ad31ab44b9127"
+    },
+    "run/checkpoints/S06-shorekeeper-program-1.json": {
+      "bytes": 24099,
+      "sha256": "1b1e3dee7cf7c7bca3ae43dda6ed017bc5788a581bfd5ae4c71156d9f035ea5c"
+    },
+    "run/checkpoints/S06-shorekeeper-program-2.json": {
+      "bytes": 24183,
+      "sha256": "88161b3e5209888e6286de19b642ba52e6af5cc9fccfe401f4e4f631a659b291"
+    },
+    "run/checkpoints/S06-shorekeeper-prompt-1.json": {
+      "bytes": 24139,
+      "sha256": "5930574fb260ccfe2fde6bcab2207ae58e97a5c5da22b2efdcaadc91edad34a3"
+    },
+    "run/checkpoints/S06-shorekeeper-prompt-2.json": {
+      "bytes": 24090,
+      "sha256": "af670b568c318b17d8c20a2fb8cc0d5736b65642248d92c3f455ad7f067b1a5c"
+    },
+    "run/episodes/S01-lan-program-1.json": {
+      "bytes": 24737,
+      "sha256": "44dd2028ebe4bc3517fbc3abce52d23ae57a14ed5e4fc618d692050d8ddb090e"
+    },
+    "run/episodes/S01-lan-program-2.json": {
+      "bytes": 25100,
+      "sha256": "69bb8edbddf618bbafda00be2beb7ee837f5411c4cca5ee3c2b9744e167ec2b5"
+    },
+    "run/episodes/S01-lan-prompt-1.json": {
+      "bytes": 24909,
+      "sha256": "30ee990bed2157db0b1d59b6bf3fda83f8352713f09ccc087490adccfe408680"
+    },
+    "run/episodes/S01-lan-prompt-2.json": {
+      "bytes": 25213,
+      "sha256": "8e10327697bf868ef9dc7cb2b7faf09d95925a477100bbdf3ddf17856a30677e"
+    },
+    "run/episodes/S01-shorekeeper-program-1.json": {
+      "bytes": 24666,
+      "sha256": "a77917dd75559ca40af264f002869f1c3bc18ff5d11d1708e9fc63e02d8c3119"
+    },
+    "run/episodes/S01-shorekeeper-program-2.json": {
+      "bytes": 24666,
+      "sha256": "17c4ca20ef14f349f54fbd6dc1fdcb26e7703b395eed421e78bdb11d368431b8"
+    },
+    "run/episodes/S01-shorekeeper-prompt-1.json": {
+      "bytes": 24709,
+      "sha256": "3cff42768326257a52c801150bf029c20b633f5d6cdf5eeddcee7072dbfa67ff"
+    },
+    "run/episodes/S01-shorekeeper-prompt-2.json": {
+      "bytes": 24867,
+      "sha256": "bbd6f82011fe3325ec8314fd4b44d16aad28541a791f6c788669a465a8821140"
+    },
+    "run/episodes/S02-lan-program-1.json": {
+      "bytes": 24536,
+      "sha256": "3252712cc21e20ba6646a52c41c987f673315450823ec462fe8b354dc17e16ee"
+    },
+    "run/episodes/S02-lan-program-2.json": {
+      "bytes": 24670,
+      "sha256": "0035b072364a35dd291d558d0ee44180b2a84970759bbd3f3ca325fe6defe757"
+    },
+    "run/episodes/S02-lan-prompt-1.json": {
+      "bytes": 24810,
+      "sha256": "dce38692c8d3fde5635eac07e59a58115deef24f6ccfcebcd33ab23e0470b588"
+    },
+    "run/episodes/S02-lan-prompt-2.json": {
+      "bytes": 24873,
+      "sha256": "2a185c1b16f3f7e74794b46e1a908f0aceca2bf9680dae3048f8e29e2b3ac0f1"
+    },
+    "run/episodes/S02-shorekeeper-program-1.json": {
+      "bytes": 24615,
+      "sha256": "47032acdec87e6564d8816cb8fe478b295d11557d440dc466f4cb9b60b943487"
+    },
+    "run/episodes/S02-shorekeeper-program-2.json": {
+      "bytes": 24554,
+      "sha256": "ce5d0d492be9f9b923f00291c32750f6aa39462590137c7bb7bbe9402c4aa6f3"
+    },
+    "run/episodes/S02-shorekeeper-prompt-1.json": {
+      "bytes": 24523,
+      "sha256": "50a1e30077382d489ab448ce2292cb5851b612ee2e436ab734a5b03068e455fc"
+    },
+    "run/episodes/S02-shorekeeper-prompt-2.json": {
+      "bytes": 24552,
+      "sha256": "f11d6037baaa42bbbc4891ae03cd44708228740cd76923bd3dc8b24326233af3"
+    },
+    "run/episodes/S03-lan-program-1.json": {
+      "bytes": 24937,
+      "sha256": "a616c6c36bb80691fd842113c9843686781b7cf873c85fd11f168be112610af6"
+    },
+    "run/episodes/S03-lan-program-2.json": {
+      "bytes": 24936,
+      "sha256": "0e2ee2077e2072dfc5afeef8119080a88b4bdc2918c0a98043fa7dde104f43d3"
+    },
+    "run/episodes/S03-lan-prompt-1.json": {
+      "bytes": 25381,
+      "sha256": "1cbfbf88864f1b3c162b669164804eb072a26999fb932739a5f7e4e395c2624e"
+    },
+    "run/episodes/S03-lan-prompt-2.json": {
+      "bytes": 25017,
+      "sha256": "41a65d8e46e0ad80ec65e660d579afb23b928ae45b243bc0e297e0495f822a3c"
+    },
+    "run/episodes/S03-shorekeeper-program-1.json": {
+      "bytes": 25190,
+      "sha256": "0adf12d830f9b11dc246b6f1550c9802eff133589c3d70986f32f72555b9ba39"
+    },
+    "run/episodes/S03-shorekeeper-program-2.json": {
+      "bytes": 25006,
+      "sha256": "9e8d0b6522a47ff5dbbb12fab89fb7d2f75f1351cb6e453fdd44bae5a57881ec"
+    },
+    "run/episodes/S03-shorekeeper-prompt-1.json": {
+      "bytes": 24854,
+      "sha256": "b4c3a11d2703847f91f33117ce4ac77814a17af797125a387cdfa90004d5d173"
+    },
+    "run/episodes/S03-shorekeeper-prompt-2.json": {
+      "bytes": 24986,
+      "sha256": "94dc7afa1b5e9444fafa67eb533fb15220a4a3e2b98d245210e0ca17f40bdb86"
+    },
+    "run/episodes/S04-lan-program-1.json": {
+      "bytes": 24813,
+      "sha256": "77f60cd75e06704045f3f79c496739fcdab24c3e9efa39c1185f1d3d8527d274"
+    },
+    "run/episodes/S04-lan-program-2.json": {
+      "bytes": 24648,
+      "sha256": "35ce5f646bf50e6ba93273e5cb3707ae321395c72eef1b3eab8a2e3471c0c86d"
+    },
+    "run/episodes/S04-lan-prompt-1.json": {
+      "bytes": 24709,
+      "sha256": "f5d40b463dbc52dfd065f8ae4f44508d0f1136c4e43d999043e78740c78d5ac8"
+    },
+    "run/episodes/S04-lan-prompt-2.json": {
+      "bytes": 24751,
+      "sha256": "64ef23d93ed489509a364733e075198355a09c749714e11d33de8baf96b378a7"
+    },
+    "run/episodes/S04-shorekeeper-program-1.json": {
+      "bytes": 24742,
+      "sha256": "ae491fc087f2c029b8500dfc1a0fa7e8d5fc80891503e0adc560815a3e09532b"
+    },
+    "run/episodes/S04-shorekeeper-program-2.json": {
+      "bytes": 24742,
+      "sha256": "96839e4a49c36359a5efd2ba04cdddd3523b239044344eea477f359e5a0c1051"
+    },
+    "run/episodes/S04-shorekeeper-prompt-1.json": {
+      "bytes": 24863,
+      "sha256": "b75eeeb12e4051100b50d2a58c8819bc61a55e6c7467a4930f2c83670208b395"
+    },
+    "run/episodes/S04-shorekeeper-prompt-2.json": {
+      "bytes": 24815,
+      "sha256": "d18ccba5ebf8da64e45f31da05d6392d20626cea2ddc591023b538e2fda152b1"
+    },
+    "run/episodes/S05-lan-program-1.json": {
+      "bytes": 24574,
+      "sha256": "c4818f945ba7fe04d49c3606ddee9b62cde5ffdd11f71de8527d920a3d6407b0"
+    },
+    "run/episodes/S05-lan-program-2.json": {
+      "bytes": 24602,
+      "sha256": "287c532d7fcf7c56dfac15e19d1120adba77975459b602b95bfd045f084094d7"
+    },
+    "run/episodes/S05-lan-prompt-1.json": {
+      "bytes": 24773,
+      "sha256": "6bd5539ea45ee7b90301f48580aed2d418fe6af41720fb4ece2834b7305d072d"
+    },
+    "run/episodes/S05-lan-prompt-2.json": {
+      "bytes": 24603,
+      "sha256": "59a62778f17253929d0de7797449210ceb3f6a01d1247bbd2f930177cb63f342"
+    },
+    "run/episodes/S05-shorekeeper-program-1.json": {
+      "bytes": 25088,
+      "sha256": "47c5b758da16b1392b6446c9aa69f20ed72d1e33841cae411868dc0786f837e2"
+    },
+    "run/episodes/S05-shorekeeper-program-2.json": {
+      "bytes": 25062,
+      "sha256": "d6efb5bfd5954904646a911ac86aeb1c528825f0ebf9ed0cceef43658116b07c"
+    },
+    "run/episodes/S05-shorekeeper-prompt-1.json": {
+      "bytes": 24676,
+      "sha256": "2e119eed7bed1bf2974d16943227fa36fbbc0db2029de5b2abdf7e24cb41f455"
+    },
+    "run/episodes/S05-shorekeeper-prompt-2.json": {
+      "bytes": 24628,
+      "sha256": "1df21dbf1aa9194f29f6d33471809b72944f0cdd014475a821a913355874c9ce"
+    },
+    "run/episodes/S06-lan-program-1.json": {
+      "bytes": 24903,
+      "sha256": "316694117141dbc8b5c468ed18e8ee22f2e7860eb8efee74db268b383364a5bd"
+    },
+    "run/episodes/S06-lan-program-2.json": {
+      "bytes": 25032,
+      "sha256": "c72befc8e50a95b08f9a88f5f1c24c88ea9aa104294a84fb0a907b9b8d487054"
+    },
+    "run/episodes/S06-lan-prompt-1.json": {
+      "bytes": 25091,
+      "sha256": "7660d0c0fbfdc9ad7c8a654ce31f2b2c07cd0d3ec80a678fd8ba75d34b21d11b"
+    },
+    "run/episodes/S06-lan-prompt-2.json": {
+      "bytes": 25391,
+      "sha256": "3c60342bbeada9388b6b59814afc8cda28eb03d5d8a3bc9860919f40dedb872e"
+    },
+    "run/episodes/S06-shorekeeper-program-1.json": {
+      "bytes": 24793,
+      "sha256": "785f178c62daf8f2a724f929e5922ff77d775f24c9162f89e155d50e7f793c99"
+    },
+    "run/episodes/S06-shorekeeper-program-2.json": {
+      "bytes": 24877,
+      "sha256": "1569fd905fac6148eb160e0ea48e876e5a53b88ce94d7eee07e48dd953a8f1a6"
+    },
+    "run/episodes/S06-shorekeeper-prompt-1.json": {
+      "bytes": 24827,
+      "sha256": "97121058049e442d81ac6413e2d3159a374d073b12cd3fc919ea62eff25cd93b"
+    },
+    "run/episodes/S06-shorekeeper-prompt-2.json": {
+      "bytes": 24778,
+      "sha256": "967054c0b0780bd149bee66b1e6ba622ea2eba42061fbaf8d094957f8a745fa5"
+    },
+    "run/execution_plan.json": {
+      "bytes": 6051,
+      "sha256": "db64439f34f8999fb822e2e09dbb882641c761c108d3651e063199446725b3e0"
+    },
+    "run/manifest.json": {
+      "bytes": 394,
+      "sha256": "7d7876c13ca9c5cd4265e16e7c813c08f09d4ef061d7f341c5a4b83e4ef29156"
+    },
+    "run/raw_calls.json.gz": {
+      "bytes": 41378,
+      "sha256": "69727fdf4e67c30daebef836595fa9547c7765338ca16fb7e315cb0de145b24e"
+    },
+    "run/results.json": {
+      "bytes": 2467986,
+      "sha256": "6276c20f17ee9bbf546d56a5295c4da89a445595144b4d84d712b29a77692b2b"
+    },
+    "summary.json": {
+      "bytes": 326565,
+      "sha256": "a38db6c8c373366e1d620a619d84d4d578fd46ac8c318663cf84e53ebac714f7"
+    },
+    "test_mechanism.py": {
+      "bytes": 6357,
+      "sha256": "2fcc17cd6545ac369eeb1cc180f5159709a2b07a553ffe45a2696c766118415d"
+    },
+    "transcripts.md": {
+      "bytes": 69866,
+      "sha256": "d29d778c314d42bfc078df1430172f0250baf4490f78f5a2870198454b3ce2c8"
+    }
+  }
+}

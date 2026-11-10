@@ -1,0 +1,480 @@
+[
+  {
+    "id": "H01",
+    "topic": "print_club",
+    "context": "版画小组原定周日下午在南窗教室。负责人正在询问另一间教室，尚无回复。日期已确定，地点未最终确认。用户曾表示等待消息让自己烦躁。",
+    "facts": {
+      "date": "周日下午",
+      "original_venue": "南窗教室",
+      "new_venue_confirmed": false,
+      "user_feeling": "烦"
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "respond",
+        "focus": "feeling",
+        "text": "等了一下午还没有消息，确实磨人。",
+        "effects": {
+          "acknowledged": "feeling"
+        }
+      },
+      {
+        "id": "A2",
+        "kind": "respond",
+        "focus": "detail",
+        "text": "日期已经确定；教室仍在等回复，地点还不能算落实。",
+        "effects": {
+          "acknowledged": "pending_venue"
+        }
+      },
+      {
+        "id": "A3",
+        "kind": "propose",
+        "focus": "practical",
+        "text": "如果你还想推进一点，可以先把地点记成待确认，等回复后再更新。",
+        "effects": {
+          "proposed_goal": "draft_pending_venue"
+        }
+      },
+      {
+        "id": "A4",
+        "kind": "propose",
+        "focus": "detail",
+        "text": "可以先把‘周日下午’与‘地点待确认’分开记，避免把已经定下和仍在等消息的事项混在一起。",
+        "effects": {
+          "proposed_goal": "separate_confirmed_and_pending"
+        }
+      }
+    ],
+    "variants": [
+      {
+        "id": "open",
+        "user": "教室还在等回复。我盯着这事一下午了，有点烦。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      },
+      {
+        "id": "request",
+        "user": "教室还在等回复。请给我一个现在能做的记录或准备方案。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "H02",
+    "topic": "clay_workshop",
+    "context": "陶土工作坊共有七名参加者，每人材料费十二元；七人均已确认参加。场地费由主办方承担，不计入材料费。日期尚未确定。",
+    "facts": {
+      "people": 7,
+      "per_person": 12,
+      "materials_total": 84,
+      "venue_cost_included": false,
+      "date_confirmed": false
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "answer",
+        "focus": "detail",
+        "text": "7×12=84，材料费总共84元。",
+        "effects": {
+          "answered": "materials_total"
+        }
+      },
+      {
+        "id": "A2",
+        "kind": "answer",
+        "focus": "feeling",
+        "text": "这笔已经算清了：七个人的材料费一共84元。",
+        "effects": {
+          "answered": "materials_total",
+          "acknowledged": "calculation_done"
+        }
+      },
+      {
+        "id": "A3",
+        "kind": "propose",
+        "focus": "practical",
+        "text": "材料费合计84元。如果你愿意继续安排，可以接着核对大家方便的日期。",
+        "effects": {
+          "answered": "materials_total",
+          "proposed_goal": "check_date"
+        }
+      },
+      {
+        "id": "A4",
+        "kind": "propose",
+        "focus": "detail",
+        "text": "材料费是84元。也可以先在草稿上注明‘材料费，不含场地费’，之后核对时更清楚。",
+        "effects": {
+          "answered": "materials_total",
+          "proposed_goal": "draft_cost_note"
+        }
+      }
+    ],
+    "variants": [
+      {
+        "id": "open",
+        "user": "七个人的材料费还没汇总，日期也没定。我刚把情况整理到这里。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      },
+      {
+        "id": "request",
+        "user": "帮我算出材料费总额，再给一个接下来可做的小建议。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "H03",
+    "topic": "puzzle_evening",
+    "context": "拼图之夜的场地与时间已经确认，采购清单尚未完成。用户因筹备工作疲倦。没有需要紧急处理的风险。",
+    "facts": {
+      "venue_confirmed": true,
+      "time_confirmed": true,
+      "shopping_list_complete": false,
+      "user_feeling": "疲倦"
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "respond",
+        "focus": "feeling",
+        "text": "嗯，我听着。今天这些事让你很累。",
+        "effects": {
+          "acknowledged": "feeling"
+        }
+      },
+      {
+        "id": "A2",
+        "kind": "respond",
+        "focus": "detail",
+        "text": "场地和时间都已经落实，剩下的事这轮先不展开。我听你说。",
+        "effects": {
+          "acknowledged": "confirmed_items"
+        }
+      },
+      {
+        "id": "A3",
+        "kind": "propose",
+        "focus": "practical",
+        "text": "如果你想继续一点，可以只把采购清单的标题建好，具体内容留到之后。",
+        "effects": {
+          "proposed_goal": "draft_shopping_list_title"
+        }
+      },
+      {
+        "id": "A4",
+        "kind": "propose",
+        "focus": "detail",
+        "text": "也可以先把已经落实的场地和时间勾出来，剩下的事项继续标成待办。",
+        "effects": {
+          "proposed_goal": "draft_confirmed_items_note"
+        }
+      }
+    ],
+    "variants": [
+      {
+        "id": "open",
+        "user": "今天忙了一整天，清单还没写完。我有点累。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      },
+      {
+        "id": "boundary",
+        "user": "我今天已经忙够了。这轮只听我说，别给建议，也别追问安排。",
+        "requested": true,
+        "request_scope": [
+          "respond"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "H04",
+    "topic": "photo_walk",
+    "context": "摄影小队计划周日出行。人数未确认，集合点有近河站和南桥站两个候选，都未最终决定。两处都容纳十人以内，目前预计六至八人。",
+    "facts": {
+      "date": "周日",
+      "people_confirmed": false,
+      "people_estimate": "六至八人",
+      "meeting_point_confirmed": false,
+      "candidate_points": [
+        "近河站",
+        "南桥站"
+      ]
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "respond",
+        "focus": "feeling",
+        "text": "人数和集合点都悬着，要协调的事确实不少。",
+        "effects": {
+          "acknowledged": "coordination_load"
+        }
+      },
+      {
+        "id": "A2",
+        "kind": "respond",
+        "focus": "detail",
+        "text": "日期是周日；人数和两个候选集合点目前都还待确认。",
+        "effects": {
+          "acknowledged": "pending_items"
+        }
+      },
+      {
+        "id": "A3",
+        "kind": "propose",
+        "focus": "practical",
+        "text": "先确认人数，再定集合点。如果你还想顺手准备，可以另外建一张器材清单；它不必现在完成。",
+        "effects": {
+          "proposed_order": [
+            "people",
+            "meeting_point"
+          ],
+          "proposed_goal": "draft_equipment_list"
+        }
+      },
+      {
+        "id": "A4",
+        "kind": "propose",
+        "focus": "detail",
+        "text": "可以先确认人数，再定集合点；另建一行记录两个候选站点，暂时都标成待确认。",
+        "effects": {
+          "proposed_order": [
+            "people",
+            "meeting_point"
+          ],
+          "proposed_goal": "draft_meeting_point_options"
+        }
+      }
+    ],
+    "variants": [
+      {
+        "id": "open",
+        "user": "人数还没有确认，集合点也还没定，我刚把两件事记下。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      },
+      {
+        "id": "request",
+        "user": "帮我排一下确认人数和定集合点的先后，再提一件可以顺手准备的事。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "H05",
+    "topic": "story_circle",
+    "context": "故事会安排在下周，但具体时段未知。用户昨晚明确说由自己询问参与者档期。当前仅知道用户已发出询问，尚未收到回复，不能把征询写成完成。",
+    "facts": {
+      "week": "下周",
+      "time_confirmed": false,
+      "availability_query_sent": true,
+      "availability_reply_received": false,
+      "commitment_owner": "user",
+      "commitment_complete": false
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "respond",
+        "focus": "feeling",
+        "text": "问已经发出去了，却还得继续等，这种悬着的感觉挺磨人。",
+        "effects": {
+          "acknowledged": "waiting"
+        }
+      },
+      {
+        "id": "A2",
+        "kind": "respond",
+        "focus": "detail",
+        "text": "你已经发出征询；还没收到回复，档期这项仍然待确认。",
+        "effects": {
+          "acknowledged": "query_sent_but_pending"
+        }
+      },
+      {
+        "id": "A3",
+        "kind": "propose",
+        "focus": "practical",
+        "text": "如果你想做一点不依赖回复的准备，可以先拟两三个备选时段，等消息到了再核对。",
+        "effects": {
+          "proposed_goal": "draft_time_options"
+        }
+      },
+      {
+        "id": "A4",
+        "kind": "propose",
+        "focus": "detail",
+        "text": "可以先给已经发出的征询记一笔：已发送，待回复。这只整理进度，不把档期写成已落实。",
+        "effects": {
+          "proposed_goal": "draft_query_status_note"
+        }
+      }
+    ],
+    "variants": [
+      {
+        "id": "open",
+        "user": "我昨晚发了档期征询，今天还没人回。原先说我来问，这事还是悬着。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      },
+      {
+        "id": "request",
+        "user": "还没有人回档期征询。给我一件不依赖他们回复、现在能做的准备动作，别替我联系他们。",
+        "requested": true,
+        "request_scope": [
+          "propose"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "H06",
+    "topic": "choir_rehearsal",
+    "context": "合唱排练有九名参与者，每人三页乐谱，需要打印二十七页。打印尚未进行。",
+    "facts": {
+      "people": 9,
+      "pages_per_person": 3,
+      "total_pages": 27,
+      "printed": false
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "answer",
+        "focus": "detail",
+        "text": "27页。",
+        "effects": {
+          "answered": "total_pages"
+        }
+      },
+      {
+        "id": "A2",
+        "kind": "answer",
+        "focus": "practical",
+        "text": "一共27页。",
+        "effects": {
+          "answered": "total_pages"
+        }
+      },
+      {
+        "id": "A3",
+        "kind": "propose",
+        "focus": "practical",
+        "text": "共27页。如果还要准备，可以接着核对是否每人都需要一份纸质乐谱。",
+        "effects": {
+          "answered": "total_pages",
+          "proposed_goal": "check_paper_copy_need"
+        }
+      },
+      {
+        "id": "A4",
+        "kind": "propose",
+        "focus": "detail",
+        "text": "一共27页。也可以先在打印草稿上记下‘九人，每人三页’，实际打印仍待进行。",
+        "effects": {
+          "answered": "total_pages",
+          "proposed_goal": "draft_print_note"
+        }
+      }
+    ],
+    "variants": [
+      {
+        "id": "open",
+        "user": "九个人每人三页乐谱，东西还没打印。我刚整理完这些数字。",
+        "requested": false,
+        "request_scope": [],
+        "allowed_actions": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      },
+      {
+        "id": "boundary",
+        "user": "九个人每人三页，总共要打印多少页？只回答页数，别加别的安排。",
+        "requested": true,
+        "request_scope": [
+          "answer"
+        ],
+        "allowed_actions": [
+          "A1",
+          "A2"
+        ]
+      }
+    ]
+  }
+]
