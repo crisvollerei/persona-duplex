@@ -40,6 +40,16 @@ from .contracts import ReplyContract
 SECTION_HEAD = "<<<HEAD>>>"
 SECTION_SAY = "<<<SAY>>>"
 SECTION_TAIL = "<<<TAIL>>>"
+LITERAL_OPEN = "<<<LITERAL>>>"
+LITERAL_CLOSE = "<<<END_LITERAL>>>"
+
+LITERAL_SPEC = r'''[字面正文]
+正常回复直接写。若用户需要的正文含行首 direct: 等字段、（判断题）或小说中的内心括号，
+将这部分显式写成 <<<LITERAL>>>单个合法JSON字符串<<<END_LITERAL>>>。
+例如 <<<LITERAL>>>"（判断题）这个说法正确。"<<<END_LITERAL>>>。
+JSON中的换行写成\n，引号和反斜杠正确转义；需要展示协议标记时，尖括号可写成\u003c与\u003e。
+标记和外层JSON引号不会显示，只有闭合且解析成功的字符串会交付；未闭合或错误内容不降级为正文。
+这只是区分字面内容与控制语法，不证明所写内容正确。HEAD与TAIL仍不得直接展示；模型控制token不属于字面正文。'''
 
 _STANCE_HINT = {
     STANCE_DIRECT: "直接给，不铺垫，不长篇。",
@@ -353,6 +363,7 @@ def build_system_prompt(cfg: PersonaConfig, *, need: str = "",
          .get(role.legibility_max, "")),
         "",
         "" if expression_only else _section_spec(cfg),
+        LITERAL_SPEC,
         "",
         _RULES,
     ]
@@ -370,6 +381,7 @@ def build_context_block(
     judgments: list[dict],
     style_note: str = "",
     repair_note: str = "",
+    memory_budget_chars: int = 6000,
 ) -> str:
     """把状态物化成一个文本块，塞在对话历史之前。"""
     lines: list[str] = []
@@ -391,7 +403,8 @@ def build_context_block(
         lines.append(repair_note)
         lines.append("这只是暂定信号，最多两次简短试探；没有明确回应就停止，不认定受伤或长期雷区。")
 
-    judgments = [j for j in judgments if not is_diagnostic_judgment(j)]
+    from .memory_retrieval import usable_user_memory
+    judgments = [j for j in judgments if usable_user_memory(j)]
     if judgments:
         lines.append("")
         lines.append("[你对这个人的判断 · 可能过时，别当事实]")
@@ -400,11 +413,14 @@ def build_context_block(
         lines.append("本轮明确更正优先于旧记忆；旧陈述有冲突或缺失细节时保持未知，不补造数字、名称或单位。")
         lines.append("引用中的 batch 仅表示同批背景，不能当成逐条判断的精确支持或重复证据。")
         lines.append("以下由新到旧排列；模型把握度不是用户事实的权威，冲突未解决时不能只挑把握度更高的旧判断。")
-        quote_budget = 6000
+        quote_budget = memory_budget_chars
         for j in reversed(judgments):
             mark = "（后来推翻了）" if j.get("superseded_by") else ""
             provenance = (f"来源 {j.get('source') or 'unknown'}；"
                           f"证据范围 {j.get('evidence_scope') or 'unknown'}")
+            applicability = {k: j[k] for k in ('memory_scope', 'valid_from', 'expires_at') if k in j}
+            if applicability:
+                provenance += "；应用适用条件 " + json.dumps(applicability, ensure_ascii=False)
             lines.append(f"- {j['judgment']}（把握 {j.get('confidence', 0):.2f}；{provenance}）{mark}")
             quotes = j.get("evidence_quotes")
             if mark or not isinstance(quotes, list):
@@ -482,7 +498,10 @@ def build_history_entry(say: str, head=None, tail=None) -> str:
             f"baseline: {head.baseline}\n"
             f"displace: {head.displace}"
         )
-    parts.append(f"{SECTION_SAY}\n{say}")
+    # Preserve validated literal framing in examples rather than laundering a
+    # decoded field/code sample back into unescaped protocol text.
+    from .parse import say_wire
+    parts.append(f"{SECTION_SAY}\n{say_wire(say)}")
     # TAIL 段永远写。哪怕这一轮模型没产出 TAIL，也要补一个空骨架 ——
     # 因为历史是**示范**，不是日志。
     #

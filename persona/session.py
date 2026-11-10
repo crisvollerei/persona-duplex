@@ -30,6 +30,9 @@ class SessionConfig:
     json_fallback: bool = False           # persona 实验：工具失败后改用 JSON
     memory_mode: str = "live"             # live | frozen (fixed long-term judgments)
     condition: str = ""
+    memory_limit: int = 5
+    memory_budget_chars: int = 6000
+    memory_scope: str | None = None
 
 
 class Session:
@@ -49,6 +52,7 @@ class Session:
         tool_llm=None,
         protocol: str = "text",   # text | tool | auto | persona
         options: SessionConfig | None = None,
+        memory_retriever=None,
     ):
         self.opts = options or SessionConfig()
         cfg.validate()
@@ -89,14 +93,17 @@ class Session:
             tool_llm=tool_llm,
             fidelity_check=self.opts.fidelity_check,
             json_fallback=self.opts.json_fallback,
+            memory_retriever=memory_retriever, memory_limit=self.opts.memory_limit,
+            memory_budget_chars=self.opts.memory_budget_chars, memory_scope=self.opts.memory_scope,
             audit_options={"session": asdict(self.opts), "memory_model": model_info(consolidate_llm),
                            "judge_model": model_info(fast_llm)},
         )
         if self.opts.memory_mode == "frozen":
-            self.engine.memory_snapshot = deepcopy(store.user_judgments())
+            self.engine.memory_snapshot = deepcopy(store.user_judgments(limit=None))
         # 慢层固化也走模型：没有 llm 时它只会数 need 出现几次，
         # 那不是「判断」，只是计数。给了模型才可能提炼出有洞察的判断。
         self.consolidator = Consolidator(store, llm=consolidate_llm,
+                                        memory_scope=self.opts.memory_scope,
                                         audit_context={"run_id": self.engine.run["run_id"]})
         self._closed = False
         self._active_turn = False

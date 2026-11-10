@@ -19,6 +19,7 @@ from uuid import uuid4
 
 _LOCAL_TZ = timezone(timedelta(hours=8))
 MAX_JUDGMENT_QUOTES = 12
+_ALL_MEMORY_SCOPES = object()
 
 
 def _unquoted_statement(text: str) -> str:
@@ -489,16 +490,27 @@ class Store:
         return records if limit is None else records[-limit:] if limit > 0 else []
 
     def user_judgments(self, limit: int | None = 5) -> list[dict]:
-        """先排除模型读法计数，再截取供用户记忆使用的暂定判断。"""
-        records = [j for j in self.judgments(limit=None) if not is_diagnostic_judgment(j)]
+        """排除诊断和无来源模型提案；保留显式应用写入及历史兼容。"""
+        from .memory_retrieval import usable_user_memory
+        records = [j for j in self.judgments(limit=None) if usable_user_memory(j)]
         return records if limit is None else records[-limit:] if limit > 0 else []
+
+    def recall_judgments(self, query: str, limit: int | None = 5, *, judgments=None,
+                         budget_chars: int = 6000, scope=None, at=None, retriever=None) -> list[dict]:
+        """从全部有效版本本地召回；judgments可提供固定快照，不读取live记忆。"""
+        from .memory_retrieval import recall
+        records = self.user_judgments(limit=None) if judgments is None else judgments
+        return recall(query, records, limit=limit, budget_chars=budget_chars,
+                      scope=scope, at=at, retriever=retriever)
 
     def add_judgment(self, judgment: str, confidence: float,
                      evidence_ids: list[str] | None = None,
                      supersedes: str | None = None,
                      affects: dict | None = None, source: str = "explicit",
                      batch_id: str = "", evidence_scope: str = "specified",
-                     evidence_quotes: list[dict] | None = None) -> dict:
+                     evidence_quotes: list[dict] | None = None,
+                     memory_scope: str | None = None, valid_from: str | None = None,
+                     expires_at: str | None = None) -> dict:
         """写一条判断。落账本。
 
         affects 是「这条判断指向哪个人格参数、什么方向」：
@@ -506,6 +518,8 @@ class Store:
         中期层靠它把多条判断聚合成一次参数推动。
         没有 affects 的判断只进 prompt，不影响人格。
         """
+        from .memory_retrieval import memory_metadata
+        metadata = memory_metadata(memory_scope, valid_from, expires_at)
         quotes = _evidence_quotes(evidence_quotes, evidence_ids=evidence_ids or [])
         quoted = {"evidence_quotes": quotes} if quotes else {}
         jid = self.next_judgment_id()
@@ -532,6 +546,11 @@ class Store:
             elif float(target.get("confidence", 0.0)) > conf + 0.2:
                 # 置信度差太多，新证据不足以推翻旧的
                 supersedes = None
+            if supersedes and target is not None:
+                inherited = {k: target[k] for k in ('memory_scope', 'valid_from', 'expires_at') if k in target}
+                metadata = memory_metadata(**{**inherited, **metadata})
+                if metadata != inherited:
+                    raise ValueError('A revision cannot change memory scope/window; record temporary exceptions separately')
         self.append("judgment_add", {
             "judgment_id": jid,
             "judgment": judgment,
@@ -540,14 +559,14 @@ class Store:
             "supersedes": supersedes,
             "affects": dict(affects or {}),
             "source": source, "batch_id": batch_id, "evidence_scope": evidence_scope,
-            **quoted,
+            **quoted, **metadata,
         })
         return {"id": jid, "judgment": judgment,
                 "confidence": round(conf, 3),
                 "evidence_ids": evidence_ids or [],
                 "supersedes": supersedes, "affects": dict(affects or {}),
                 "source": source, "batch_id": batch_id, "evidence_scope": evidence_scope,
-                **quoted,
+                **quoted, **metadata,
                 "superseded_by": None}
 
     def apply_memory_operation(self, operation: dict, *, judgment: str = "",
@@ -556,7 +575,8 @@ class Store:
                                evidence_quotes: list[dict] | None = None,
                                source: str = "explicit", batch_id: str = "",
                                evidence_scope: str = "specified",
-                               _user_events: list[dict] | None = None) -> dict:
+                               _user_events: list[dict] | None = None,
+                               _memory_scope_guard: tuple | None = None) -> dict:
         """Apply a source-backed preference revision or withdrawal, independently of confidence.
 
         `_user_events` is for Consolidator's already selected batch, never model
@@ -564,6 +584,10 @@ class Store:
         prove the model understood the user's meaning. A rejection is auditable
         and creates no replacement judgment. Legacy `supersedes` is unchanged.
         """
+        if _memory_scope_guard is not None and (
+                not isinstance(_memory_scope_guard, tuple) or len(_memory_scope_guard) != 1
+                or (_memory_scope_guard[0] is not None and not isinstance(_memory_scope_guard[0], str))):
+            raise ValueError('Memory scope guard must be an application-owned one-item tuple')
         with self.transaction():
             proposal = operation if isinstance(operation, dict) else {}
             kind = proposal.get("kind")
@@ -615,6 +639,8 @@ class Store:
                 reasons.append("target_not_active")
             elif is_diagnostic_judgment(target):
                 reasons.append("diagnostic_target_not_user_memory")
+            elif _memory_scope_guard is not None and target.get('memory_scope') != _memory_scope_guard[0]:
+                reasons.append('target_outside_memory_scope')
             if is_diagnostic_judgment({"source": source, "evidence_scope": evidence_scope}):
                 reasons.append("diagnostic_proposal_not_user_memory")
             target_index = next((index for index, item in enumerate(ledger)
@@ -690,7 +716,8 @@ class Store:
             if effective and kind == "revise":
                 replacement = self.add_judgment(judgment.strip(), confidence,
                     evidence_ids=list(evidence_ids or []), source=source,
-                    batch_id=batch_id, evidence_scope=evidence_scope, evidence_quotes=quotes)
+                    batch_id=batch_id, evidence_scope=evidence_scope, evidence_quotes=quotes,
+                    **{k: target[k] for k in ('memory_scope', 'valid_from', 'expires_at') if k in target})
                 replacement["supersedes"] = target_id
             operation_id = "mo_" + uuid4().hex
             audit = {"operation_id": operation_id, "operation": {
@@ -708,6 +735,8 @@ class Store:
                      "replacement_id": replacement["id"] if replacement else None,
                      "evidence_quotes": quotes, "source_kinds": source_kinds,
                      "source": source, "batch_id": batch_id,
+                     **({"application_memory_scope": _memory_scope_guard[0]}
+                        if _memory_scope_guard is not None else {}),
                      "anchor_normalization": {"rule":"declared_generic_modifier_removal_v1",
                          "changed": isinstance(anchor, str) and anchor != anchor_core},
                      "semantic_status": "model_proposal",
@@ -964,14 +993,19 @@ class Store:
             target = path.with_suffix(f".{uuid4().hex}.invalid")
         path.rename(target)
 
-    def drain_buffer(self, max_items: int = 20) -> list[dict]:
+    def drain_buffer(self, max_items: int = 20, *, memory_scope=_ALL_MEMORY_SCOPES) -> list[dict]:
         """把积压的事件取出来。
 
         **不直接删除** —— 先移到 buffer/processing/，等调用方确认处理完
         再调 commit_drained()。处理失败就调 restore_drained() 放回去。
         """
+        if memory_scope is not _ALL_MEMORY_SCOPES and memory_scope is not None and (
+                not isinstance(memory_scope, str) or not memory_scope.strip()):
+            raise ValueError("memory_scope must be nonempty text or None")
         out, moved = [], []
-        for p in sorted(self.buffer_dir.glob("*.json"))[:max_items]:
+        for p in sorted(self.buffer_dir.glob("*.json")):
+            if len(out) >= max_items:
+                break
             try:
                 rec = json.loads(p.read_text(encoding="utf-8"))
                 if not isinstance(rec, dict):
@@ -980,6 +1014,10 @@ class Store:
                 self._quarantine_buffer(p, exc)
                 continue
             except OSError:
+                continue
+            # Queue ownership is written by the application at turn time.
+            # Legacy unmarked events are global, never the new session's scope.
+            if memory_scope is not _ALL_MEMORY_SCOPES and rec.get("memory_scope") != memory_scope:
                 continue
             rec.setdefault("_event_id", p.stem)
             try:
@@ -1178,6 +1216,7 @@ def replay_judgments(ledger: list[dict]) -> list[dict]:
             "source": r.get("source", "legacy_unknown"),
             "batch_id": r.get("batch_id", ""),
             "evidence_scope": r.get("evidence_scope", "unknown"),
+            **{k: r[k] for k in ('memory_scope', 'valid_from', 'expires_at') if k in r},
             **({"evidence_quotes": _evidence_quotes(r["evidence_quotes"])}
                if r.get("evidence_quotes") else {}),
             "t": r.get("t", ""),

@@ -270,25 +270,44 @@ class PolicyState:
                    tuple(Commitment(**c) for c in obj["commitments"]))
 
 
-def boundary_changes(frame, user, topic, *, at):
+_ADVICE_CONTROL = re.compile(
+    r"(?P<time>今天|今晚|本轮|这轮|这一轮|这次|现在|暂时|目前|以后|今后)?"
+    r"(?P<global>所有话题都|任何话题都|不管聊什么都)?"
+    r"(?P<operation>不要|别|不需要|不用|不必|可以|允许)(?:再)?"
+    r"(?:给(?:我)?建议|替我出主意|帮我想办法)(?:了|吧)?"
+)
+
+
+def parse_advice_control(user, topic, *, at):
+    """Recognize only a supported complete command, independently of a model.
+
+    A question, quote, hypothesis or mixed sentence is not a control. The same
+    grammar gates model proposals; a proposal's clipped span never grants scope.
+    """
+    _text(user, "user"); _text(topic, "topic")
+    if topic == "*":
+        raise ValueError("'*' is reserved for global boundaries")
+    if "?" in user or "？" in user:
+        return None
+    match = _ADVICE_CONTROL.fullmatch(_command(user))
+    if match is None:
+        return None
     current = _instant(at).astimezone(timezone(timedelta(hours=8)))
+    transient = match["time"] in ("本轮", "这轮", "这一轮", "这次", "现在", "暂时", "目前")
+    until = ((current + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+             if not transient and match["time"] in ("今天", "今晚") else None)
+    return {"scope": "*" if match["global"] else topic,
+            "advice": "allow" if match["operation"] in ("可以", "允许") else "deny",
+            "quote": user, "expires_at": until, "transient": transient}
+
+
+def boundary_changes(frame, user, topic, *, at):
+    control = parse_advice_control(user, topic, at=at)
     accepted, rejected = [], []
     for boundary in frame.boundaries:
-        match = re.fullmatch(
-            r"(?P<time>今天|今晚|本轮|这轮|这一轮|这次|现在|暂时|目前|以后|今后)?"
-            r"(?P<global>所有话题都|任何话题都|不管聊什么都)?"
-            r"(?P<operation>不要|别|不需要|不用|不必|可以|允许)(?:再)?"
-            r"(?:给(?:我)?建议|替我出主意|帮我想办法)(?:了|吧)?", _command(user))
-        if match:
-            mode = "allow" if match["operation"] in ("可以", "允许") else "deny"
-            valid = boundary.quote in user and boundary.advice == mode
-            if valid:
-                transient = match["time"] in ("本轮", "这轮", "这一轮", "这次", "现在", "暂时", "目前")
-                until = ((current + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
-                         if not transient and match["time"] in ("今天", "今晚") else None)
-                accepted.append({"scope": "*" if match["global"] else topic,
-                    "advice": mode, "quote": boundary.quote, "expires_at": until, "transient": transient})
-                continue
+        if control is not None and boundary.quote in user and boundary.advice == control["advice"]:
+            accepted.append({**control, "quote": boundary.quote})
+            continue
         rejected.append({**asdict(boundary), "reason": "unsupported_or_ambiguous_full_control_command"})
     return accepted, rejected
 

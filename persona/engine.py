@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 from .config import DISPLACE_NONE, PersonaConfig
 from .contracts import ReplyContract, validate_reply
 from .parse import (Head, ParsedTurn, Tail, has_exit_offer, parse, plain_text,
-                    safe_say)
+                    safe_say, say_wire)
 from .prompt import (
     build_context_block,
     build_history_entry,
@@ -114,6 +114,10 @@ class TurnEngine:
         fidelity_check: bool = False,
         json_fallback: bool = False,
         audit_options: dict | None = None,
+        memory_retriever=None,
+        memory_limit: int = 5,
+        memory_budget_chars: int = 6000,
+        memory_scope: str | None = None,
     ):
         """text 默认单次生成；persona / tool / auto 为显式实验协议。"""
         if protocol not in ("persona", "text", "tool", "auto"):
@@ -121,6 +125,18 @@ class TurnEngine:
         if protocol != "persona" and (fidelity_check or json_fallback):
             raise ValueError("fidelity_check / json_fallback 仅适用于显式选择的 persona 协议")
         self.cfg = cfg
+        if type(memory_limit) is not int or memory_limit < 0:
+            raise ValueError("memory_limit must be a nonnegative integer")
+        if type(memory_budget_chars) is not int or memory_budget_chars < 0:
+            raise ValueError("memory_budget_chars must be a nonnegative integer")
+        if memory_retriever is not None and not callable(memory_retriever):
+            raise TypeError("memory_retriever must be callable")
+        if memory_scope is not None and (not isinstance(memory_scope, str) or not memory_scope.strip()):
+            raise ValueError("memory_scope must be nonempty text or None")
+        self.memory_retriever = memory_retriever
+        self.memory_limit = memory_limit
+        self.memory_budget_chars = memory_budget_chars
+        self.memory_scope = memory_scope
         cfg.validate()
         self.store = store
         self.llm = llm
@@ -157,6 +173,9 @@ class TurnEngine:
                             tool_llm=tool_llm, options={
                                 "fidelity_check": fidelity_check, "json_fallback": json_fallback,
                                 "judge": model_info(judge), "similarity": model_info(similarity),
+                                "memory_retriever": model_info(memory_retriever),
+                                "memory_limit": memory_limit, "memory_budget_chars": memory_budget_chars,
+                                "memory_scope": memory_scope,
                                 **(audit_options or {})})
         self.store.append("run_start", self.run)
         def emit(kind, row):
@@ -282,8 +301,14 @@ class TurnEngine:
 
         relation = self.store.relation()
         pendings = pendings_snapshot
-        judgments = deepcopy(self.memory_snapshot) if getattr(self, "memory_snapshot", None) is not None \
-            else self.store.user_judgments()
+        judgments = self.store.recall_judgments(user_text, self.memory_limit,
+            judgments=getattr(self, "memory_snapshot", None), budget_chars=self.memory_budget_chars,
+            scope=self.memory_scope, retriever=self.memory_retriever)
+        self.store.append("memory_recall", {"run_id": self.run["run_id"],
+            "turn_id": self._current_turn_id, "query": user_text,
+            "judgment_ids": [j["id"] for j in judgments], "scope": self.memory_scope,
+            "mode": "frozen" if getattr(self, "memory_snapshot", None) is not None else "live",
+            "limit": self.memory_limit, "budget_chars": self.memory_budget_chars})
 
         # 先算出这一轮大概是什么 need —— 用它触发分场景句式注入。
         # 这里读的是**上一轮**的 need，因为这一轮还没生成。
@@ -299,6 +324,7 @@ class TurnEngine:
             judgments=judgments,
             style_note=self._style_note(),
             repair_note=self._repair_note(),
+            memory_budget_chars=self.memory_budget_chars,
         )
 
         stance = self.cfg.stance_for(0.0)
@@ -455,6 +481,7 @@ class TurnEngine:
                 "limits": self.cfg.limits.as_dict(),
                 "user": user_text,
                 "say": say,
+                **({"say_wire": say_wire(say)} if say_wire(say) != str(say) else {}),
                 "need": head.need if head else "",
                 "confidence": head.confidence if head else None,
                 "direct": head.direct if head else "",
@@ -470,6 +497,7 @@ class TurnEngine:
                     "traits": self.cfg.role.traits_state(),
                 },
                 "protocol": generation_protocol,
+                "memory_scope": self.memory_scope,
                 "judgment_constraints": head.constraints if head else [],
                 "stance": stance,
                 "relation_delta": relation_changed,
@@ -483,6 +511,7 @@ class TurnEngine:
             if head and head.need and not incomplete and validity["valid"]:
                 self.store.push_buffer({
                     "turn_id": turn_id,
+                    "memory_scope": self.memory_scope,
                     "user": user_text,
                     "say": say,
                     "direct": head.direct,
@@ -580,9 +609,10 @@ class TurnEngine:
                 if visible.strip():
                     # 不补发扣留内容，也不提交尚未完成的 TAIL。
                     parsed = sp.finish(interrupted=True)
-                    parsed.say = visible
+                    if parsed.say != visible:
+                        raise RuntimeError("中断后的已验证正文与实际交付不一致") from exc
                     parsed.errors.append("生成流式中断，仅记录已输出片段，不自动重试")
-                    return visible, parsed
+                    return parsed.say, parsed
                 raise
 
         raw = self.llm(messages)
@@ -668,7 +698,9 @@ class TurnEngine:
                     self._probe["stream_interrupted"] = True
                     probe["stream_interrupted"] = True
                     warnings.append("人格表达流式中断，仅记录已输出片段，不自动重试")
-                    persona_turn = protocol.to_parsed(Head(), "".join(emitted))
+                    persona_turn = sp.finish(interrupted=True)
+                    if persona_turn.say != "".join(emitted):
+                        raise RuntimeError("中断后的人格正文与实际交付不一致")
                 if not self.fidelity_check and not interrupted:
                     visible = "".join(emitted)
                     if persona_turn.say.startswith(visible):
@@ -831,7 +863,9 @@ class TurnEngine:
                     "delivered": "".join(emitted),
                 })
                 warnings.append(f"两阶段 phase 2 失败（{e}），已输出的部分就地收尾")
-                say = safe_say("".join(emitted))
+                say = sp.finish(interrupted=True).say
+                if say != "".join(emitted):
+                    raise RuntimeError("中断后的工具正文与实际交付不一致") from e
             else:
                 self._probe["protocol"] = {
                     **self._probe.get("protocol", {}),
@@ -851,7 +885,9 @@ class TurnEngine:
                     self._probe["output_blocked"] = True
                     warnings.append("流式输出遇到协议残留，已截断可疑内容，不生成后续观察")
                 warnings.append("phase 2 产出被清洗为空，已输出的部分就地收尾")
-                say = safe_say("".join(emitted))
+                say = sp.finish(interrupted=True).say
+                if say != "".join(emitted):
+                    raise RuntimeError("工具正文与实际交付不一致")
             else:
                 if sp_blocked:
                     self._probe.setdefault("protocol", {})["phase2_output_blocked"] = True

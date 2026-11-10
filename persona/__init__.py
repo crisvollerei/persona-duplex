@@ -13,3 +13,4 @@ from .expression import ExpressionConfig
 from .inquiry import InquiryConfig, QuestionChoice, QuestionSlot
 from .policy import (Boundary, ContentFrame, Focus, PolicyConfig, Quote, Source)
 from .policy_session import PolicySession
+from .parse import encode_literal_say

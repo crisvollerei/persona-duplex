@@ -42,6 +42,30 @@ python -X utf8 -m persona chat -p shorekeeper -m deepseek-chat -d data/sk-fixed 
 `SessionConfig(memory_mode="frozen", condition="fixed-judgments")`。
 `--condition` 只是随运行落账的标签，不负责自动分组或复制同一实验初态。
 
+### 本地记忆检索
+
+前台默认按当前问题检索全部有效版本，最多5条，不额外调用模型。可在库接口设置预算和应用作用域：
+
+```python
+from persona.session import SessionConfig
+
+options = SessionConfig(
+    memory_limit=5,
+    memory_budget_chars=12000,
+    memory_scope="work",
+)
+# 应用已确认的局部偏好；时间窗口可另传valid_from、expires_at。
+store.add_judgment("工作阅读器为ReaderPro。", .8, memory_scope="work")
+with Session(cfg, store, openai_compatible("deepseek-chat"), options=options) as session:
+    print(session.chat("我之前选的阅读器是什么？"))
+
+matches = store.recall_judgments("工作阅读器", scope="work", budget_chars=12000)
+```
+
+预算以完整记录的JSON字符数计，不是token上限；超出预算的原话不被截短。`memory_limit=0`或`memory_budget_chars=0`可关闭前台注入。`memory_mode="frozen"`固定完整候选快照，之后仍按问题检索并检查时间窗口。
+
+`Session(..., memory_retriever=rank_ids)`或`Store.recall_judgments(..., retriever=rank_ids)`支持自定义排序器。函数接收`(query, candidates)`，返回候选中唯一的记忆ID列表；不能返回不存在、失效、来源未支撑或其他范围的ID。候选为副本，最终正文由原记录取得；非法返回直接报错，不切换其他模型或重试。自定义排序器自身的服务成本由应用负责。默认实现只有本地词面相关性，不保证语义检索或回答正确。
+
 ## 显式回答格式
 
 调用方可以为单轮回复提供 `ReplyContract`。声明会编译为本轮 SAY 的格式要求，完成后对实际交付文本做本地校验。普通聊天不必声明；`contract=None` 保持原来的请求消息和默认一次前台生成。
@@ -97,5 +121,28 @@ JSON类型使用 `string / number / integer / boolean / object / array / null`�
 ## 交付与数据边界
 
 提供 `on_delta` 时，回调拼接须与最终 `say` 相等；没有配置流式适配器时，也会在同一次生成完成后回调交付。若交付与最终文本出现差异，本轮记录失败与实际交付，不提交正常状态变更或自动重试。
+
+OpenAI兼容流适配器按SSE事件聚合多行`data:`，支持跨字节分块的UTF-8与CRLF；即使事件没有文本或`choices`为空，也保留其中的模型、usage和结束元数据。提供方未返回的用量保持缺失，明确返回的零值不会被当作缺失；这些记录不独立证明提供方计费或模型身份。
+
+### 字面正文通道
+
+未转义的内部字段行和协议标记仍保留给解析器。需要在SAY中展示`direct:`字典项、协议示例、代码块或`（内心：……）`等小说文字时，生成端可使用一个JSON字符串块：
+
+```text
+<<<LITERAL>>>"direct: English adjective meaning immediate"<<<END_LITERAL>>>
+```
+
+测试适配器或应用构造输出时可直接使用帮助函数：
+
+```python
+from persona import encode_literal_say
+
+wire = encode_literal_say('```yaml\ndirect: true\n```\n（内心：终于回来了。）')
+# 将wire放在SAY正文内；tool表达阶段也接受该字面块。
+```
+
+提示中包含该写法，默认调用次数不变。解析器只在整个块闭合且JSON类型为字符串时解码；流式期间按完整块交付，块外普通文字仍增量输出。坏JSON或未闭合块不作为普通正文降级交付，明确的模型控制token仍过滤。模型能否正确选择并输出字面块尚需真实任务评价，这不等于任意无标记输出都能安全保留。
+
+最终`result.say`是可显示的字符串；字面来源随返回值在内部保留，历史使用编码形式，轮次账本在必要时同时记录`say`和`say_wire`。自行序列化并恢复时应保留wire再交给解析器，不能仅把解码后的保留字段重新当成模型原始输出。
 
 账本包含用户原文、内部参考和请求内容，应按敏感数据保管。每个用户、人格、实验条件分别使用数据目录，同一目录只由一个活跃会话或 Store 使用。详见[观察、记忆与持久化](memory-and-storage.md)。

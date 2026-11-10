@@ -24,6 +24,10 @@ from .parse import (
     safe_say,
     section_errors,
     special_token_holdback,
+    read_literal,
+    encode_literal_say,
+    mask_literal_blocks,
+    strip_special_tokens,
 )
 
 # 宽松识别协议残留（和 parse 里那份一致）。
@@ -31,14 +35,18 @@ from .parse import (
 from .parse import _looks_like_protocol as _looks_like_protocol_full
 from .parse import _SECTION_LOOSE
 from .parse import _SPECIAL_TOKEN_START
-from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL
+from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN, LITERAL_CLOSE
 
 MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
 # SAY 段里出现任何标记都算异常，全都得扣留：
 #   · <<<TAIL>>>  —— 正常结束
 #   · <<<HEAD>>>  —— 模型把协议重开了一次，后面那段里有 direct
 #   · <<<SAY>>>   —— 同样要切，否则标记本身会原样吐给用户
-_SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY)
+_SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY, LITERAL_OPEN, LITERAL_CLOSE)
+
+
+class _LiteralPiece(str):
+    """A complete literal segment whose whitespace must not be trimmed."""
 
 # 逐字流式时，缓冲区里至少要攒这么多字符才判「是不是裸文本」——
 # 否则只看到 "n" 就判，既判不出字段行也判不出正文。
@@ -63,7 +71,7 @@ def _safety_holdback(text: str) -> int:
         word = re.sub(r"\s", "", suffix).lstrip("<").lstrip("^").rstrip(">").upper()
         opening = len(suffix) - len(suffix.lstrip("<"))
         possible = (opening >= 2 or suffix == "<") and any(
-            name.startswith(word) for name in ("HEAD", "SAY", "TAIL"))
+            name.startswith(word) for name in ("HEAD", "SAY", "TAIL", "LITERAL", "END_LITERAL"))
         if possible:
             hold = max(hold, len(suffix))
     # Inspect independently: an ordinary inequality before an opening bracket
@@ -89,6 +97,7 @@ SEEK = "seek"
 IN_HEAD = "head"
 IN_SAY = "say"
 IN_TAIL = "tail"
+IN_LITERAL = "literal"
 
 
 def _holdback(buf: str, markers: tuple[str, ...]) -> int:
@@ -131,6 +140,8 @@ class StreamParser:
         self._pending_ws = ""       # 已收下但还没吐的尾部空白
         self._raw_chunks: list[str] = []
         self._expression_only = expression_only
+        self._say_wire: list[str] = []
+        self._literal_errors: list[str] = []
 
         # 流式只负责标记边界，不审查内容。
         # 「猜你」那类问题属于措辞，归 prompt 和统计管 —— 在流式层删句子
@@ -170,6 +181,10 @@ class StreamParser:
                 if not self._say(raw):
                     break
                 continue
+            if self.state == IN_LITERAL:
+                if not self._literal(raw):
+                    break
+                continue
             if self.state == IN_TAIL:
                 self.tail_text += self.buf
                 self.buf = ""
@@ -180,6 +195,10 @@ class StreamParser:
 
     def finish(self, *, interrupted: bool = False) -> ParsedTurn:
         """正常收尾才释放缓冲；中断时丢弃未交付文本和未完成的 TAIL。"""
+        if self.state == IN_LITERAL:
+            self._literal_errors.append("invalid_literal_say")
+            self._blocked = True
+            self.buf = ""
         if interrupted:
             self.buf = ""
             self.tail_text = ""
@@ -189,7 +208,7 @@ class StreamParser:
                 # 还停在 SEEK，说明缓冲区里是半个标记（比如 "\n<<<HEAD"）。
                 # 那不是正文，吞掉。
                 if not _is_marker_prefix(self.buf.lstrip()):
-                    self.say_text += self.buf
+                    self._append_say(self.buf)
             elif self.state == IN_SAY:
                 # 缓冲区里可能是半截标记（"你好<<<HE"）。
                 # 无条件并进 say_text 的话，用户看到「你好」，
@@ -197,7 +216,7 @@ class StreamParser:
                 hold = max(_holdback(self.buf, _SAY_END), _safety_holdback(self.buf))
                 keep = self.buf[:-hold] if hold else self.buf
                 if keep:
-                    self.say_text += keep
+                    self._append_say(keep)
             elif self.state == IN_HEAD:
                 self.head_text += self.buf
             elif self.state == IN_TAIL:
@@ -221,7 +240,7 @@ class StreamParser:
         #   非流式 parse -> '你都想过哪些了。'
         #   流式 StreamParser -> 'need: ...\ndirect: 你其实早就想辞职了\n...'
         # 而 chat 默认走流式 —— 也就是线上走的正是会泄漏的那条。
-        say = safe_say(say)
+        say = safe_say("".join(self._say_wire)) if self._say_wire else safe_say(say)
 
         errors: list[str] = []
         if head is None:
@@ -242,8 +261,9 @@ class StreamParser:
             # 否则上游完全不知道这轮发生过违规。
             read_aloud=detect_read_aloud(say) + list(self._suppressed),
             errors=errors,
-            structural_errors=section_errors("".join(self._raw_chunks),
-                                             expression_only=self._expression_only),
+            structural_errors=[*section_errors("".join(self._raw_chunks),
+                                              expression_only=self._expression_only),
+                               *self._literal_errors],
         )
 
     # ------------------------------------------------------------ 空白处理
@@ -258,6 +278,14 @@ class StreamParser:
         """
         out: list[str] = []
         for piece in pieces:
+            if isinstance(piece, _LiteralPiece):
+                if self._pending_ws:
+                    out.append(self._pending_ws)
+                    self._pending_ws = ""
+                if piece:
+                    out.append(piece)
+                    self._emitted = True
+                continue
             if not self._emitted:
                 stripped = piece.lstrip()
                 if not stripped:
@@ -284,6 +312,32 @@ class StreamParser:
         """确认没有更多正文了，把扣住的尾部空白永久丢弃。"""
         self._pending_ws = ""
 
+    def _append_say(self, piece: str, *, wire=None) -> None:
+        self.say_text += piece
+        self._say_wire.append(str(piece) if wire is None else wire)
+
+    def _literal(self, out: list[str]) -> bool:
+        status, consumed, value = read_literal(self.buf)
+        if status == "pending":
+            return False
+        if status == "invalid":
+            self._blocked = True
+            self._literal_errors.append("invalid_literal_say")
+            self.buf = ""
+            return False
+        value = strip_special_tokens(value, preserve_whitespace=True)
+        if _SPECIAL_TOKEN_START.search(value):
+            self._blocked = True
+            self._literal_errors.append("invalid_literal_say")
+            self.buf = ""
+            return False
+        self._append_say(value, wire=encode_literal_say(value))
+        if value:
+            out.append(_LiteralPiece(value))
+        self.buf = self.buf[consumed:]
+        self.state = IN_SAY
+        return True
+
     # ------------------------------------------------------------ 各状态
 
     def _seek(self, out: list[str]) -> bool:
@@ -292,7 +346,8 @@ class StreamParser:
         注意：判「裸文本」之前必须先排除协议残留 —— 否则模型漏写标记时，
         这里会绕过 parse 的安全闸，把 direct 直接吐给用户。
         """
-        hits = [(self.buf.find(m), m) for m in MARKERS]
+        masked = mask_literal_blocks(self.buf)
+        hits = [(masked.find(m), m) for m in MARKERS]
         hits = [(i, m) for i, m in hits if i >= 0]
         if hits:
             i, m = min(hits)
@@ -300,7 +355,7 @@ class StreamParser:
             self.buf = self.buf[i + len(m):]
             # 标记之前如果已经有正文，说明模型提前开口了，直接当 SAY
             if prefix.strip() and not _looks_like_protocol_full(prefix):
-                self.say_text += prefix
+                self._append_say(prefix)
                 out.append(prefix)
             self.state = {SECTION_HEAD: IN_HEAD,
                           SECTION_SAY: IN_SAY,
@@ -361,6 +416,17 @@ class StreamParser:
         hits = [(i, m) for i, m in hits if i >= 0]
         unsafe = [m.start() for m in _INTERNAL_START.finditer(self.buf)]
         unsafe.extend(m.start() for m in _SPECIAL_TOKEN_START.finditer(self.buf))
+        for match in re.finditer(r"<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)", self.buf, re.I):
+            if not any(self.buf[match.start():].startswith(marker) or marker.startswith(self.buf[match.start():])
+                       for marker in (LITERAL_OPEN, LITERAL_CLOSE)):
+                unsafe.append(match.start())
+        for prefix in ("<<<l", "<<<end_l"):
+            pos = self.buf.lower().find(prefix)
+            if pos >= 0:
+                suffix = self.buf[pos:]
+                if not any(marker.startswith(suffix) or suffix.startswith(marker)
+                           for marker in (LITERAL_OPEN, LITERAL_CLOSE)):
+                    unsafe.append(pos)
         for marker in _SECTION_LOOSE.finditer(self.buf):
             # 两个 > 可能还在长成标准三字符结尾，先扣住再决定。
             complete = marker.end() < len(self.buf) or marker.group().endswith(">>>")
@@ -371,7 +437,7 @@ class StreamParser:
             if (not hits or cut < min(i for i, _ in hits)) \
                     and (field is None or cut < field.start()):
                 piece = self.buf[:cut]
-                self.say_text += piece
+                self._append_say(piece)
                 if piece:
                     out.append(piece)
                 self.buf = ""
@@ -380,7 +446,7 @@ class StreamParser:
         if field and (field.start() > 0 or not previous_line.strip()) \
                 and (not hits or field.start() < min(i for i, _ in hits)):
             piece = self.buf[:field.start()]
-            self.say_text += piece
+            self._append_say(piece)
             if piece:
                 out.append(piece)
             self.buf = self.buf[field.start():]
@@ -391,10 +457,16 @@ class StreamParser:
             i, m = min(hits)
             piece = self.buf[:i]
             if piece:
-                self.say_text += piece
+                self._append_say(piece)
                 out.append(piece)
-            self.buf = self.buf[i + len(m):]
-            if m == SECTION_TAIL:
+            self.buf = self.buf[i:] if m == LITERAL_OPEN else self.buf[i + len(m):]
+            if m == LITERAL_OPEN:
+                self.state = IN_LITERAL
+            elif m == LITERAL_CLOSE:
+                self._blocked = True
+                self._literal_errors.append("invalid_literal_say")
+                self.buf = ""
+            elif m == SECTION_TAIL:
                 self.state = IN_TAIL
             elif m == SECTION_HEAD:
                 # 模型把协议重开了一次。剩下的按 HEAD 收着，
@@ -414,7 +486,7 @@ class StreamParser:
             n = start
         if n > 0:
             piece = self.buf[:n]
-            self.say_text += piece
+            self._append_say(piece)
             out.append(piece)
             self.buf = self.buf[n:]
         return False

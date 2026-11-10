@@ -18,6 +18,7 @@ from typing import Callable
 from .store import (Store, _explicit_memory_wording, is_diagnostic_judgment,
                     now_iso, parse_iso as _parse_dt)
 from .audit import fingerprint, model_info, traced
+from .memory_text import memory_text_key, unsupported_model_memory
 
 # 现在是什么时候。命名成 _now_dt 是为了和 store.now_iso 区分：
 # 后者返回字符串（写账本用），这个返回 datetime（算时间差用）。
@@ -140,15 +141,31 @@ class Consolidator:
     gap_hours: float | None = None
     heuristic_fallback: bool = False
     audit_context: dict = field(default_factory=dict)
+    memory_scope: str | None = None
 
     _stop: threading.Event = field(default_factory=threading.Event, repr=False)
     _thread: threading.Thread | None = field(default=None, repr=False)
     _last_run_at: float = field(default=0.0, repr=False)
 
+    def __post_init__(self):
+        if self.memory_scope is not None and (
+                not isinstance(self.memory_scope, str) or not self.memory_scope.strip()):
+            raise ValueError("memory_scope must be nonempty text or None")
+
     # ------------------------------------------------------------ 活跃度
 
     def _pending_count(self) -> int:
-        return len(list(self.store.buffer_dir.glob("*.json")))
+        count = 0
+        for path in self.store.buffer_dir.glob("*.json"):
+            try:
+                event = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, UnicodeError, ValueError):
+                # drain_buffer quarantines malformed records; they do not
+                # contribute evidence to this scope's activity profile.
+                continue
+            if isinstance(event, dict) and event.get("memory_scope") == self.memory_scope:
+                count += 1
+        return count
 
     def profile(self) -> dict:
         """当前活跃度档位对应的容量与阈值。
@@ -200,7 +217,8 @@ class Consolidator:
         prof = self.profile()
         activity = self._current_activity()
 
-        events = self.store.drain_buffer(max_items=self.max_evidence)
+        events = self.store.drain_buffer(max_items=self.max_evidence,
+                                         memory_scope=self.memory_scope)
         if not events:
             # 返回结构要和有事件时一致 —— 调用方拿 out["activity"] 不该 KeyError
             return {"judgments": 0, "self_story": False, "traits": [],
@@ -224,7 +242,7 @@ class Consolidator:
                                      "batch_id": batch_id, **self.audit_context, **row}))
         candidates = self._draft_judgments(events, prof)
         new_candidates = [item for item in candidates if not item.get("_existing_judgment_id")
-                          and "memory_operation" not in item]
+                          and "memory_operation" not in item and not unsupported_model_memory(item)]
         entry = (self._story_entry_llm(events, new_candidates) if self.llm is not None and self._source == "llm"
                  else self._story_entry_template(new_candidates)) if new_candidates else ""
         with self.store.transaction():
@@ -282,14 +300,16 @@ class Consolidator:
                     evidence_quotes=item.get("evidence_quotes"),
                     source=item.get("source", "llm"), batch_id=batch_id,
                     evidence_scope=item.get("evidence_scope", "unknown"),
-                    _user_events=getattr(self, "_operation_user_events", []))
+                    _user_events=getattr(self, "_operation_user_events", []),
+                    _memory_scope_guard=(self.memory_scope,))
                 self._memory_operations.append({key: value for key, value in result.items()
                                                 if key != "replacement"})
                 if result["replacement"] is not None:
                     out.append(result["replacement"])
                 continue
             duplicate = (None if item.get("supersedes") else self._find_similar(
-                item["judgment"], diagnostic=is_diagnostic_judgment(item)))
+                item["judgment"], diagnostic=is_diagnostic_judgment(item),
+                unsupported=unsupported_model_memory(item)))
             if duplicate is not None:
                 if self.store.attach_judgment_evidence(
                         duplicate["id"], item.get("evidence_quotes", [])):
@@ -450,11 +470,15 @@ class Consolidator:
             ids = specified if specified is not None else evidence
             scope = "specified" if specified is not None else "batch"
             quotes = self._user_evidence_quotes(it, events, ids, scope)
+            if not ids and not quotes:
+                scope = "unsupported"
             candidate = {"judgment": txt, "confidence": conf, "supersedes": sup,
                          "affects": None, "source": self._source,
                          "evidence_ids": ids, "evidence_scope": scope,
+                         **({"memory_scope": self.memory_scope} if self.memory_scope is not None else {}),
                          **({"evidence_quotes": quotes} if quotes else {})}
-            duplicate = None if sup else self._find_similar(txt)
+            duplicate = None if sup else self._find_similar(
+                txt, unsupported=unsupported_model_memory(candidate))
             if duplicate is not None:
                 if not any(quote not in duplicate.get("evidence_quotes", []) for quote in quotes):
                     continue
@@ -490,39 +514,33 @@ class Consolidator:
         return -1 if self._NEG_RE.search(text or "") else 1
 
     def _find_similar(self, text: str, threshold: float = 0.82, *,
-                      diagnostic: bool = False) -> dict | None:
-        """只拦「近乎逐字重复」的判断。措辞不同的判断一律放行。
+                      diagnostic: bool = False,
+                      unsupported: bool | None = None) -> dict | None:
+        """Match conservative textual equivalence, never topic overlap.
 
-        **为什么阈值这么高、而且不做语义判重**：
-
-        实测过 bigram 在这个任务上其实是反着的 ——
-            同义改写：「他在意别人的评价」/「他很在意别人对他的看法」= 0.43
-            反义：    「他在意别人的评价」/「他不在乎别人的评价」  = 0.57
-        反义比同义更像。任何单一阈值都会出错：
-            阈值低 -> 反义被当重复，旧判断永远翻不了案
-            阈值高 -> 同义被当新判断，同一件事反复记
-
-        所以这里只做一件最保守的事：拦「几乎一模一样」的（0.82 以上，
-        基本是同一句话换个标点）。剩下的判重交给模型 ——
-        固化 prompt 里本来就列了已有判断，并明确要求「不要重复」。
-
-        这条边界的代价：措辞差异大的复述会漏进来。但那是可接受的 ——
-        中期层还有一道 min_consensus 门槛，同一件事被记两条也不会
-        单独推参数，只是占一点空间。
+        ``threshold`` is retained for private-call compatibility; no fuzzy
+        score authorizes merging source evidence. Changed numbers, names,
+        negations, units and conditions remain distinct ordinary proposals.
+        Only an explicitly validated memory operation can invalidate a target.
         """
-        from .similarity import bigram_similarity
-        pol = self._polarity(text)
-        best = None
-        best_sim = 0.0
+        key = memory_text_key(text)
+        if not key:
+            return None
         for j in self.store.judgments(limit=None):
             if is_diagnostic_judgment(j) != diagnostic:
                 continue
-            if self._polarity(j["judgment"]) != pol:
-                continue        # 极性相反，绝不是同一件事
-            sim = bigram_similarity(text, j["judgment"])
-            if sim > best_sim:
-                best_sim, best = sim, j
-        return best if best_sim >= threshold else None
+            # Scope comes only from application configuration. Equal wording
+            # cannot merge evidence across scopes or into a time-bound item.
+            candidate_scope = None if diagnostic else self.memory_scope
+            if j.get("memory_scope") != candidate_scope:
+                continue
+            if any(j.get(name) is not None for name in ("valid_from", "expires_at")):
+                continue
+            if unsupported is not None and unsupported_model_memory(j) != unsupported:
+                continue
+            if memory_text_key(j["judgment"]) == key:
+                return j
+        return None
 
     def _heuristic_consolidate(self, events: list[dict],
                                prof: dict | None = None) -> list[dict]:
@@ -603,29 +621,30 @@ class Consolidator:
             json.dumps(current_ids, ensure_ascii=False),
             "当前证据ID清单以外的历史 turn_id 只能理解背景，严禁复制到本次 evidence_ids 或 evidence_quotes。",
             "",
-            "历史目标判断（可用于 target_id 和 target_anchor；其历史原话ID不是本批证据）：",
+            "历史目标判断（仅可操作目标可用于 target_id 和 target_anchor；其历史原话ID不是本批证据）：",
+            "应用指定的本批作用域：" + json.dumps(self.memory_scope, ensure_ascii=False) + "（null表示全局）。",
+            "只有与应用作用域完全相同的目标可以更正或撤销；全局偏好可能是局部会话背景，不能因此修改全局。",
         ]
-        # 列出足够多的已有判断。
-        #
-        # 原来只列 10 条，而 _find_similar 扫的是全量 —— 模型看不到
-        # 第 11 条之后的旧判断，就没法在生成时避免复述，只能靠字面
-        # 相似度兜底（而它在同义 vs 反义上给出的分数是反的）。
-        # 这是「同一件事被记成多条」的上游成因。
-        #
-        # 上限 40 条：再多会挤占事件区的注意力，而且判断本身会累积，
-        # 全列到最后 prompt 全是历史。
+        # Recall relevant active targets instead of hiding everything older
+        # than forty unrelated entries. Quotes remain target background only;
+        # current evidence IDs still come exclusively from this batch.
         all_judgments = self.store.user_judgments(limit=None)
-        shown = all_judgments[-40:]
+        query = "\n".join(e.get("user", "") for e in events if isinstance(e.get("user"), str))
+        shown = self.store.recall_judgments(query, limit=40, budget_chars=24000, scope=self.memory_scope)
         if not shown:
             lines.append("  （还没有）")
         for j in shown:
+            metadata = {name: j.get(name) for name in ("memory_scope", "valid_from", "expires_at")}
+            authority = ("可操作目标" if j.get("memory_scope") == self.memory_scope
+                         else "仅背景，不可作为更正/撤销目标")
             lines.append(f"  [{j['id']}] {j['judgment']}（暂定把握 {j['confidence']}；"
                          f"来源 {j.get('source', 'legacy_unknown')}；"
                          f"证据范围 {j.get('evidence_scope', 'unknown')}）")
+            lines.append("    应用范围与生效窗口：" + json.dumps(metadata, ensure_ascii=False) + "；" + authority)
             for quote in j.get("evidence_quotes", []):
                 lines.append("    历史用户原话（仅目标背景；此处turn_id不能引用为本批证据）：" + json.dumps(quote, ensure_ascii=False))
         if len(all_judgments) > len(shown):
-            lines.append(f"  ……（另有 {len(all_judgments) - len(shown)} 条更早的判断）")
+            lines.append(f"  ……（另有 {len(all_judgments) - len(shown)} 条未列出的活跃判断）")
         lines += ["", "本批当前用户事件（只有本区ID可用于本次证据）："]
         for e in events:
             lines.append(f"  - [{e.get('turn_id', 'unknown')}] 用户原话: {e.get('user', '')}")
@@ -639,7 +658,8 @@ class Consolidator:
                          "evidence_ids": current_ids[:1]}], ensure_ascii=False),
             "明确更正的可选格式（沿用本次调用，不增加模型检查）：",
             json.dumps([{"judgment":"用户自述的新偏好……", "confidence":0.4, "evidence_ids":current_ids[:1],
-                         "memory_operation":{"kind":"revise", "target_id":shown[-1]["id"] if shown else "已有目标ID",
+                         "memory_operation":{"kind":"revise", "target_id":next((j["id"] for j in reversed(shown)
+                                                                     if j.get("memory_scope") == self.memory_scope), "已有可操作目标ID"),
                              "scope":"user_preference", "basis":"explicit_user_statement", "evidence_ids":current_ids[:1],
                              "statement":"本批真实用户明确更改的原文片段", "target_anchor":"目标与当前原话共有的具体主题短语"}}], ensure_ascii=False),
             "撤销使用 kind=retract，其余证据字段相同；不要为未知的新设置编一个 judgment。",

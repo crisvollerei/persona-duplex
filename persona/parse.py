@@ -23,12 +23,13 @@
 """
 from __future__ import annotations
 
+import json
 import re
 import math
 from dataclasses import dataclass, field
 
 from .config import DISPLACE_KINDS, DISPLACE_NONE
-from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL
+from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN, LITERAL_CLOSE
 
 # 一旦输出里出现这些，说明它在「声明位移」—— 这是硬失败，比不做还差。
 _DECLARATION_PATTERNS = [
@@ -285,6 +286,115 @@ _SECTION_EXACT = re.compile("|".join(re.escape(marker) for marker in
                                      (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)))
 
 
+class SayText(str):
+    """Decoded text plus recheckable wire syntax; not semantic certification."""
+    def __new__(cls, text="", wire=None):
+        value = super().__new__(cls, text)
+        value.wire = str(text) if wire is None else wire
+        return value
+
+    def __getnewargs__(self):
+        return str(self), self.wire
+
+
+def say_wire(text: str) -> str:
+    return text.wire if isinstance(text, SayText) else text
+
+
+def encode_literal_say(text: str) -> str:
+    """Encode literal user content; this does not mark it semantically trusted."""
+    if not isinstance(text, str):
+        raise TypeError("literal text must be a string")
+    quoted = json.dumps(str(text), ensure_ascii=False).replace("<", r"\u003c").replace(">", r"\u003e")
+    return LITERAL_OPEN + quoted + LITERAL_CLOSE
+
+
+def read_literal(text: str) -> tuple[str, int, str]:
+    """Read one opening block: complete, pending, or invalid; never guess JSON."""
+    if not text.startswith(LITERAL_OPEN):
+        return "invalid", 0, ""
+    offset = len(LITERAL_OPEN)
+    offset += len(text[offset:]) - len(text[offset:].lstrip())
+    try:
+        value, end = json.JSONDecoder().raw_decode(text, offset)
+    except json.JSONDecodeError:
+        return "pending", 0, ""
+    if not isinstance(value, str):
+        return "invalid", 0, ""
+    try:
+        value.encode("utf-8")
+    except UnicodeEncodeError:
+        return "invalid", 0, ""
+    end += len(text[end:]) - len(text[end:].lstrip())
+    rest = text[end:]
+    if rest.startswith(LITERAL_CLOSE):
+        return "complete", end + len(LITERAL_CLOSE), value
+    if LITERAL_CLOSE.startswith(rest):
+        return "pending", 0, ""
+    return "invalid", 0, ""
+
+
+def mask_literal_blocks(text: str, *, sections=False) -> str:
+    """Mask complete literal data without moving external marker positions."""
+    token = re.compile("|".join(re.escape(m) for m in
+                               (SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN)))
+    out = list(text)
+    active = not sections
+    cursor = 0
+    while (match := token.search(text, cursor)) is not None:
+        marker = match.group()
+        if marker == LITERAL_OPEN and active:
+            status, consumed, _ = read_literal(text[match.start():])
+            if status == "complete":
+                end = match.start() + consumed
+                out[match.start():end] = " " * consumed
+                cursor = end
+                continue
+        elif sections and marker != LITERAL_OPEN:
+            active = marker == SECTION_SAY
+        cursor = match.end()
+    return "".join(out)
+
+
+def _literal_safety_mask(text: str) -> str:
+    """Hide literal bytes while retaining visible line/indentation context."""
+    pieces, cursor = [], 0
+    while (opening := text.find(LITERAL_OPEN, cursor)) >= 0:
+        pieces.append(text[cursor:opening])
+        status, consumed, value = read_literal(text[opening:])
+        if status != "complete":
+            return "".join(pieces)
+        pieces.append("".join(c if c.isspace() else "#" for c in value))
+        cursor = opening + consumed
+    pieces.append(text[cursor:])
+    return "".join(pieces)
+
+
+def literal_errors(text: str) -> list[str]:
+    cursor = 0
+    while True:
+        opening = text.find(LITERAL_OPEN, cursor)
+        closing = text.find(LITERAL_CLOSE, cursor)
+        if closing >= 0 and (opening < 0 or closing < opening):
+            return ["invalid_literal_say"]
+        if opening < 0:
+            suffix = text[cursor:]
+            if "<<<l" in suffix.lower() or "<<<end_l" in suffix.lower() or re.search(
+                    r"<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)", suffix, re.I):
+                return ["invalid_literal_say"]
+            if any(suffix.endswith(marker[:size]) for marker in (LITERAL_OPEN, LITERAL_CLOSE)
+                   for size in range(4, len(marker))):
+                return ["incomplete_literal_say"]
+            return []
+        status, consumed, value = read_literal(text[opening:])
+        if status != "complete":
+            return ["invalid_literal_say"]
+        cleaned = strip_special_tokens(value, preserve_whitespace=True)
+        if _SPECIAL_TOKEN_START.search(cleaned):
+            return ["invalid_literal_say"]
+        cursor = opening + consumed
+
+
 def section_errors(raw: str, *, expression_only: bool = False) -> list[str]:
     """Audit order independently of best-effort parsing or streaming delivery.
 
@@ -292,7 +402,8 @@ def section_errors(raw: str, *, expression_only: bool = False) -> list[str]:
     does not use this text-protocol audit.
     """
     markers = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
-    matches = list(_SECTION_EXACT.finditer(raw))
+    masked = mask_literal_blocks(raw, sections=True)
+    matches = list(_SECTION_EXACT.finditer(masked))
     seen = [match.group() for match in matches]
     errors = []
     required = markers[:2] if expression_only else markers
@@ -307,7 +418,7 @@ def section_errors(raw: str, *, expression_only: bool = False) -> list[str]:
         errors.append("invalid_section_order")
     if matches and raw[:matches[0].start()].strip():
         errors.append("text_before_head")
-    if any(match.group() not in markers for match in _SECTION_LOOSE.finditer(raw)):
+    if any(match.group() not in markers for match in _SECTION_LOOSE.finditer(masked)):
         errors.append("invalid_section_marker")
     return errors
 
@@ -343,6 +454,11 @@ def _looks_like_protocol(text: str) -> bool:
     t = text or ""
     if not t.strip():
         return False
+    t = _literal_safety_mask(t)
+    # An unfinished literal is opaque while streaming, never a bare HEAD.
+    opening = t.find(LITERAL_OPEN)
+    if opening >= 0:
+        t = t[:opening]
     return bool(_SECTION_LOOSE.search(t) or _FIELD_LINE.search(t)
                 or _SCAFFOLD.search(t))
 
@@ -372,7 +488,7 @@ def special_token_holdback(text: str) -> int:
     return best
 
 
-def strip_special_tokens(text: str) -> str:
+def strip_special_tokens(text: str, *, preserve_whitespace=False) -> str:
     """去掉模型漏出来的特殊 token。
 
     仅识别明确的控制 token；不按尖括号内容的语言、字符数或位置推测。
@@ -382,8 +498,28 @@ def strip_special_tokens(text: str) -> str:
     prev = None
     while prev != t:
         prev = t
-        t = _SPECIAL_TOKEN.sub("", t).rstrip()
+        t = _SPECIAL_TOKEN.sub("", t)
+        if not preserve_whitespace:
+            t = t.rstrip()
     return t
+
+
+def _clean_normal_say_segment(text: str) -> tuple[str, bool]:
+    """Clean unframed text even when it follows a valid literal segment."""
+    starts = [p for prefix in ("<<<l", "<<<end_l")
+              if (p := text.lower().find(prefix)) >= 0]
+    starts.extend(match.start() for match in re.finditer(
+        r"<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)", text, re.I))
+    # Unframed model controls terminate the body, matching streaming. A
+    # suffix after a stop/control token must not be recovered as normal prose.
+    starts.extend(match.start() for match in _SPECIAL_TOKEN_START.finditer(text))
+    for marker in (LITERAL_OPEN, LITERAL_CLOSE):
+        for size in range(len(marker) - 1, 3, -1):
+            if text.endswith(marker[:size]):
+                starts.append(len(text) - size)
+    if starts:
+        return strip_special_tokens(text[:min(starts)], preserve_whitespace=True), True
+    return strip_special_tokens(text, preserve_whitespace=True), False
 
 
 def safe_say(text: str) -> str:
@@ -398,7 +534,48 @@ def safe_say(text: str) -> str:
          也不能把内心独白发出去。空回复用户会再问一句，
          direct 泄露他可能就再也不说了。
     """
-    t = strip_special_tokens((text or "").strip())
+    if isinstance(text, SayText):
+        # The carrier alone is not permission: reconstruct and compare against
+        # its framed source on every crossing of the common safety boundary.
+        source = getattr(text, "wire", None)
+        if not isinstance(source, str):
+            return ""
+        checked = safe_say(str(source))
+        return checked if checked == str(text) else ""
+    wire = (text or "").strip()
+    if LITERAL_OPEN in wire or LITERAL_CLOSE in wire:
+        pieces, canonical, cursor = [], [], 0
+        while True:
+            opening = wire.find(LITERAL_OPEN, cursor)
+            closing = wire.find(LITERAL_CLOSE, cursor)
+            if closing >= 0 and (opening < 0 or closing < opening):
+                return safe_say("".join(canonical) + wire[cursor:closing])
+            if opening < 0:
+                remainder = wire[cursor:]
+                cleaned, blocked = _clean_normal_say_segment(remainder)
+                pieces.append(cleaned); canonical.append(cleaned)
+                if blocked:
+                    return safe_say("".join(canonical))
+                if _looks_like_protocol("".join(canonical)):
+                    return ""
+                return SayText("".join(pieces), "".join(canonical))
+            normal = wire[cursor:opening]
+            cleaned_normal, blocked = _clean_normal_say_segment(normal)
+            pieces.append(cleaned_normal); canonical.append(cleaned_normal)
+            if blocked:
+                return safe_say("".join(canonical))
+            status, consumed, value = read_literal(wire[opening:])
+            if status != "complete":
+                return safe_say("".join(canonical))
+            value = strip_special_tokens(value, preserve_whitespace=True)
+            if _SPECIAL_TOKEN_START.search(value):
+                return safe_say("".join(canonical))
+            pieces.append(value); canonical.append(encode_literal_say(value))
+            cursor = opening + consumed
+    # The control namespace remains reserved across all normal segments,
+    # including normal text before or after a successfully decoded literal.
+    t, _ = _clean_normal_say_segment(wire)
+    t = t.rstrip()
     if not t:
         return ""
     if _looks_like_protocol(t):
@@ -412,6 +589,8 @@ def plain_text(raw: str) -> str:
     一旦出现标记 —— 或者看起来像协议残留 —— 就不能拿原文兜底，
     否则 HEAD 里的 direct 会被当成回复发给用户。宁可空着。
     """
+    if LITERAL_OPEN in (raw or "") or LITERAL_CLOSE in (raw or ""):
+        return safe_say(raw)
     if _looks_like_protocol(raw or ""):
         return ""
     return (raw or "").strip()
@@ -421,9 +600,10 @@ def _split_sections(raw: str) -> tuple[str, str, str]:
     """返回 (head, say, tail) 原文。缺段就是空串。"""
     text = raw
 
-    i_head = text.find(SECTION_HEAD)
-    i_say = text.find(SECTION_SAY)
-    i_tail = text.find(SECTION_TAIL)
+    masked = mask_literal_blocks(text, sections=True)
+    i_head = masked.find(SECTION_HEAD)
+    i_say = masked.find(SECTION_SAY)
+    i_tail = masked.find(SECTION_TAIL)
 
     head_raw = ""
     say_raw = ""
@@ -480,9 +660,11 @@ def _split_sections(raw: str) -> tuple[str, str, str]:
 
     # SAY 里如果混进了标记（模型忘记分段），也要切掉
     if say_raw:
+        masked_say = mask_literal_blocks(say_raw)
         for marker in (SECTION_HEAD, SECTION_SAY, SECTION_TAIL):
-            if marker in say_raw:
-                say_raw = say_raw.split(marker)[0]
+            if marker in masked_say:
+                say_raw = say_raw[:masked_say.find(marker)]
+                masked_say = masked_say[:len(say_raw)]
 
     return head_raw.strip(), say_raw.strip(), tail_raw.strip()
 
@@ -722,4 +904,5 @@ def parse(raw: str, *, expression_only: bool = False) -> ParsedTurn:
 
     return ParsedTurn(head=head, say=say, tail=tail, declared=declared,
                       read_aloud=read_aloud, errors=errors,
-                      structural_errors=section_errors(raw, expression_only=expression_only))
+                      structural_errors=[*section_errors(raw, expression_only=expression_only),
+                                         *literal_errors(say_raw)])

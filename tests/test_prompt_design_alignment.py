@@ -109,7 +109,9 @@ class MemoryContextTests(unittest.TestCase):
 
     def test_user_memory_keeps_provenance_and_uncertainty(self):
         prompt = self.context([{"judgment": "Prefers concise answers", "confidence": 0.7,
-                                "source": "llm", "evidence_scope": "user_statements"}])
+                                "source": "llm", "evidence_scope": "user_statements",
+                                "evidence_ids": ["user-turn"],
+                                "evidence_quotes": [{"turn_id": "user-turn", "quote": "I prefer concise answers."}]}])
         self.assertIn("Prefers concise answers", prompt)
         self.assertIn("来源 llm", prompt)
         self.assertIn("证据范围 user_statements", prompt)

@@ -253,17 +253,19 @@ class TestPolicySession(unittest.TestCase):
 
     def test_renderer_disobedience_is_preserved_not_counted_as_execution_success(self):
         session = self.session(["你应该现在就辞职。"])
-        result = session.say("不要给建议", frame=ContentFrame(boundaries=(Boundary("deny", "不要给建议"),)))
+        session.boundary("deny", user="不要给建议", quote="不要给建议")
+        result = session.say("今天工作很累。", frame=ContentFrame())
         self.assertEqual(result.decision.action, "respond")
         self.assertEqual(result.say, "你应该现在就辞职。")
         self.assertEqual(result.semantic_execution, "not_independently_evaluated")
 
-    def test_render_failure_preserves_user_boundary_but_not_successful_turn(self):
+    def test_render_failure_preserves_existing_user_boundary_but_not_successful_turn(self):
         def broken(messages):
             raise RuntimeError("offline")
         session = PolicySession(cfg(), self.store, broken, clock=lambda: NOW, realization="free")
+        session.boundary("deny", user="不要给建议", quote="不要给建议")
         with self.assertRaises(RuntimeError):
-            session.say("不要给建议", frame=ContentFrame(boundaries=(Boundary("deny", "不要给建议"),)))
+            session.say("今天工作很累。", frame=ContentFrame())
         self.assertEqual(session.state.advice_permission("conversation"), "deny")
         self.assertEqual(self.rows("policy_turn"), [])
         self.assertEqual(len(self.rows("policy_failure")), 1)

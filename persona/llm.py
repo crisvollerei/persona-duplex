@@ -5,8 +5,10 @@
 """
 from __future__ import annotations
 
+import codecs
 import json
 import os
+import re
 import threading
 import urllib.error
 import urllib.request
@@ -31,6 +33,97 @@ def _response(payload, choice=None):
             "system_fingerprint": payload.get("system_fingerprint"),
             "usage": payload.get("usage"),
             "finish_reason": (choice or {}).get("finish_reason")}
+
+
+def _merge_response(previous, payload, choice=None):
+    """Keep event metadata even when an event has no text choice.
+
+    A final usage event commonly contains null completion fields. Missing values
+    must not erase observations from earlier events; an actual zero is retained.
+    """
+    def merge(old, new):
+        result = dict(old)
+        for name, value in new.items():
+            if value is None or value == "":
+                continue
+            if isinstance(value, dict) and isinstance(result.get(name), dict):
+                result[name] = merge(result[name], value)
+            else:
+                result[name] = value
+        return result
+    return merge(previous or {}, _response(payload, choice))
+
+
+def _sse_payloads(chunks):
+    """Yield joined data fields, handling arbitrary byte boundaries and lines.
+
+    The chat transport also accepts separator-free complete JSON data lines and
+    a final event at EOF, preserving its earlier compatibility dialect. Normal
+    multiline events are joined before JSON parsing. The caller still requires
+    a completion marker. SSE event names, IDs, retry fields, and comments do not
+    become completion JSON or response metadata.
+    """
+    decoder = codecs.getincrementaldecoder("utf-8-sig")("replace")
+    pending = ""
+    data_lines = []
+
+    def consume(line):
+        if line == "":
+            if data_lines:
+                payload = "\n".join(data_lines)
+                data_lines.clear()
+                return payload
+            return None
+        if line.startswith(":"):
+            return None
+        field, colon, value = line.partition(":")
+        if colon and value.startswith(" "):
+            value = value[1:]
+        if field == "data":
+            # Older compatible endpoints omit the blank line between complete
+            # JSON objects. A second object cannot be a continuation of an
+            # already complete object; keep that dialect without splitting
+            # actual multiline JSON fragments into independent events.
+            if data_lines and (value.lstrip().startswith("{") or value.strip() == "[DONE]"):
+                previous = "\n".join(data_lines)
+                try:
+                    complete_object = isinstance(json.loads(previous), dict)
+                except json.JSONDecodeError:
+                    complete_object = False
+                if complete_object:
+                    data_lines[:] = [value]
+                    return previous
+            data_lines.append(value)
+        return None
+
+    def lines(final=False):
+        nonlocal pending
+        while True:
+            found = re.search(r"\r\n|\r|\n", pending)
+            if found is None:
+                break
+            # A trailing CR may be the first half of a split CRLF delimiter.
+            if not final and found.group() == "\r" and found.end() == len(pending):
+                break
+            line, pending = pending[:found.start()], pending[found.end():]
+            yield line
+        if final and pending:
+            line, pending = pending, ""
+            yield line
+
+    for chunk in chunks:
+        pending += decoder.decode(chunk)
+        for line in lines():
+            payload = consume(line)
+            if payload is not None:
+                yield payload
+    pending += decoder.decode(b"", final=True)
+    for line in lines(final=True):
+        payload = consume(line)
+        if payload is not None:
+            yield payload
+    if data_lines:
+        yield "\n".join(data_lines)
 
 
 def _safe_extra(extra):
@@ -202,8 +295,8 @@ def openai_stream(
 ) -> Callable[[list[Message]], "Iterator[str]"]:
     """流式版本。逐片吐文本增量。
 
-    这里只做 SSE 的最小实现，识别完成、截断与中断，不自动重试。
-    更完整的事件处理和 usage 统计可替换适配器，不改变上层交付约定。
+    按 SSE 事件聚合 data 行；逐片交付正文并保留独立的服务元数据。
+    识别完成、截断与中断，不自动重试，缺失 usage 不计为零。
     """
     _validate_extra(extra)
     url, key, timeout = _endpoint(base_url, api_key, timeout)
@@ -239,28 +332,24 @@ def openai_stream(
                 e.close()
             raise RuntimeError(f"LLM HTTP {e.code}: {detail}") from e
         with resp_ctx as resp:
-            for raw in resp:
-                line = raw.decode("utf-8", "replace").strip()
-                if not line or not line.startswith("data:"):
-                    continue
-                payload = line[5:].strip()
-                if payload == "[DONE]":
+            for payload in _sse_payloads(resp):
+                if payload.strip() == "[DONE]":
                     return
                 try:
                     obj = json.loads(payload)
                 except json.JSONDecodeError:
                     continue
-                if isinstance(obj, dict) and obj.get("error"):
-                    raise RuntimeError(f"流式服务错误：{obj['error']}")
-                choices = obj.get("choices") if isinstance(obj, dict) else None
-                if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+                if not isinstance(obj, dict):
                     continue
-                choice = choices[0]
-                previous = call.observations.response or {}
-                observation = _response(obj, choice)
-                call.observations.response = {**previous, **{
-                    k: v for k, v in observation.items()
-                    if v is not None and (k != "finish_reason" or v != "")}}
+                choices = obj.get("choices")
+                choice = (choices[0] if isinstance(choices, list) and choices
+                          and isinstance(choices[0], dict) else None)
+                call.observations.response = _merge_response(
+                    call.observations.response, obj, choice)
+                if obj.get("error"):
+                    raise RuntimeError(f"流式服务错误：{obj['error']}")
+                if choice is None:
+                    continue
                 delta = choice.get("delta") or {}
                 piece = delta.get("content")
                 if piece:

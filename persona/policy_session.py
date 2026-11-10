@@ -21,7 +21,7 @@ from .inquiry import (InquiryConfig, InquiryState, QuestionChoice, QuestionSlot,
                       resolve as resolve_inquiry, select_question, validate_slots)
 from .policy import (ContentFrame, Decision, PolicyConfig, PolicyState, Source, _direct_span,
                      _text, _tuple, apply_boundary, boundary_changes, decide,
-                     update_commitment)
+                     parse_advice_control, update_commitment)
 from .store import now_iso
 
 ANALYSIS_SYSTEM = """你负责内容理解，不扮演角色，不选择人格动作。只返回一个JSON对象。
@@ -333,7 +333,12 @@ class PolicySession:
             state = self.state
             at = self.clock()
             saved_inquiry = self.inquiry_state
+            advice_control = parse_advice_control(user, topic, at=at)
             control = parse_control(user, topic, at=at) if self.inquiry is not None or saved_inquiry.permissions else None
+            if advice_control is not None:
+                # A complete control has local authority even if extraction would
+                # omit or mislabel it. It is acknowledged, not treated as advice.
+                frame = ContentFrame()
             if control is not None:
                 # Complete, locally understood controls do not depend on model extraction.
                 if not control["transient"]:
@@ -368,14 +373,14 @@ class PolicySession:
             if frame is None:
                 frame = ContentFrame.from_json(self._analyze(analysis_messages(user, sources, history, state.for_topic(topic))))
                 frame.validate_evidence(user, sources)
-            accepted, rejected = boundary_changes(frame, user, topic, at=at)
+            accepted, rejected = ([advice_control], []) if advice_control is not None else boundary_changes(frame, user, topic, at=at)
             # User-evidenced controls survive a subsequent generation failure.
             with self.store.transaction():
                 state = self.state
                 for event in accepted:
                     if not event["transient"]:
                         state = apply_boundary(state, event)
-                        self._save_state(state, {**event, "authority": "evidenced_model_proposal"})
+                        self._save_state(state, {**event, "authority": "direct_control_command" if advice_control is not None else "evidenced_model_proposal"})
                 decision_state = state
                 for event in accepted:
                     if event["transient"]:
@@ -383,6 +388,9 @@ class PolicySession:
                 decision_state = PolicyState(state.revision, decision_state.permissions, decision_state.commitments)
                 sequence = sum(r["kind"] == "policy_input" for r in self._rows()) + 1
                 decision = decide(frame, decision_state, self.policy, topic=topic, key=str(sequence), at=at)
+                if advice_control is not None:
+                    decision = replace(decision, action="respond", allowed_actions=("respond",),
+                                       reason="direct_advice_permission_command")
                 if control is not None and control["mode"] == "allow":
                     decision = replace(decision, action="respond", allowed_actions=("respond",),
                                        reason="direct_question_permission_command")
@@ -391,8 +399,9 @@ class PolicySession:
                 if control is not None and control["transient"]:
                     inquiry_state = apply_control(inquiry_state, control)
                 if self.inquiry is not None:
-                    selection = select_question(frame, decision, self.policy, self.inquiry, inquiry_state, questions,
-                        topic=topic, key=str(sequence), topic_turns_since_question=self._inquiry_gap(topic), at=at)
+                    selection = (dict(selected_id=None, eligible_ids=[], reason="advice_control_command", draw=None)
+                        if advice_control is not None else select_question(frame, decision, self.policy, self.inquiry, inquiry_state, questions,
+                            topic=topic, key=str(sequence), topic_turns_since_question=self._inquiry_gap(topic), at=at))
                     selection = {**selection, "program_selected_id": selection["selected_id"],
                                  "authority": "program" if question_choice is None else "external_proposal"}
                     if question_choice is not None:
@@ -411,8 +420,8 @@ class PolicySession:
                     "sources": [asdict(s) for s in sources], "frame": asdict(frame), "content_hash": fingerprint(asdict(frame)),
                     "decision": asdict(decision), "state_revision": state.revision, "rejected_boundaries": rejected,
                     "accepted_boundaries": accepted, "decision_time": at,
-                    "request_authority": "application_confirmed" if confirmed_request else "content_with_full_command_gate",
-                    "frame_origin": "control_command" if control is not None else "model" if self._calls else "application",
+                    "request_authority": "direct_control_command" if advice_control is not None else "application_confirmed" if confirmed_request else "content_with_full_command_gate",
+                    "frame_origin": "control_command" if advice_control is not None or control is not None else "model" if self._calls else "application",
                     "questions": [asdict(q) for q in questions], "question_selection": selection})
             messages = render_messages(self.cfg, user, sources, frame, decision, state.for_topic(topic), contract)
             stage = "render"
@@ -424,7 +433,7 @@ class PolicySession:
                     "turn_id": self._turn_id, "slot": asdict(question), "selection": selection})
             elif decision.action == "pause":
                 compiled = "目前还不能确定你要继续哪项约定，我先停在这里。"
-            elif control is not None:
+            elif advice_control is not None or control is not None:
                 compiled = "好。"
             elif self.realization == "composed":
                 plan = compose_reply(frame, decision, state.for_topic(topic), config=self.expression,

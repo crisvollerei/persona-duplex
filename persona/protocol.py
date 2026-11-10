@@ -19,7 +19,9 @@ import re
 
 from .config import DISPLACE_KINDS, DISPLACE_NONE
 from .parse import (Head, ParsedTurn, PendingDraft, SettleItem, Tail,
-                    _similar, detect_declarations, detect_read_aloud, safe_say)
+                    _similar, detect_declarations, detect_read_aloud, safe_say,
+                    SayText, mask_literal_blocks, parse)
+from .prompt import LITERAL_OPEN, LITERAL_CLOSE, LITERAL_SPEC
 
 # ---------------------------------------------------------------- schema
 
@@ -89,6 +91,8 @@ PHASE2_SYSTEM = """现在只输出这个人格实际说出口的 say，覆盖前
 - **不要写任何标记符或括号内部注解**（no <<<HEAD>>> / <<<SAY>>> / <<<TAIL>>>，no need/confidence/
   direct/baseline/displace 字段，也不要复述「（素回复：…／人格基准：…／位移方式：…）」这类括号说明）。你不是在填表，你就是在说话。"""
 
+PHASE2_SYSTEM += "\n" + LITERAL_SPEC + "\n上述禁令针对控制语法；用户需要的字面字段和括号正文使用字面通道。"
+
 PERSONA_PHASE2_SUFFIX = """
 [本阶段输出格式 · 覆盖之前的格式]
 素回答已经由独立步骤给出，不要重写 direct。
@@ -110,6 +114,7 @@ displace: 相对于 baseline 的额外位移类型；none 是常态，普通人�
 <<<SAY>>>
 给对方的实际回复
 本阶段不要输出 TAIL。HEAD 与 SAY 边界各出现一次，不重开或重复；内部字段不要出现在 SAY 中。"""
+PERSONA_PHASE2_SUFFIX += "\n" + LITERAL_SPEC
 
 
 # ---------------------------------------------------------------- 结果
@@ -372,212 +377,28 @@ _ANY_MARKER = re.compile(r"<<<(?:HEAD|SAY|TAIL)>>>")
 
 
 class StreamCleanPhase2:
-    """phase 2 的流式增量过滤（兼容与对照实现；TurnEngine 现已统一使用 StreamParser）。
+    """Compatibility adapter using the shared incremental SAY boundary.
 
-    两个需求互相打架：
-      · 用户不该看到任何标记（<<<HEAD>>> / settle: -）
-      · 已经吐出去的字收不回来
-
-    所以只能「扣住可疑片段、确认干净再放行」。可疑的是：
-      · 任何可能长成 <<<XXX>>> 的前缀（以 < 开头）
-      · 行首的 need:/confidence:/direct:/displace:/settle:/delta:/pending:
-
-    其余内容立刻放行 —— phase 2 是正常说话，绝大多数片段都不需要扣。
+    The production tool route and this older feed/finish helper must interpret
+    literal framing, internal fields, and partial markers in the same way.
     """
-
-    _FIELD = re.compile(
-        r"^[ \t]*(need|confidence|direct|baseline|displace|settle|delta|pending)[ \t]*[:：]",
-        re.IGNORECASE,
-    )
-
-    def __init__(self) -> None:
-        self.buf = ""
-        self.text = ""          # 放行过的文本
-        self._emitted_any = False
-        self._in_head = False   # 正处在 HEAD 段（见过 <<<HEAD>>>，还没到 <<<SAY>>>）
-        self._done = False      # 见过 TAIL，之后全丢
+    def __init__(self):
+        from .stream import StreamParser
+        self._parser = StreamParser(expression_only=True)
+        self.text = ""
 
     def feed(self, chunk: str) -> list[str]:
-        self.buf += chunk
-        return self._drain(final=False)
+        pieces = self._parser.feed(chunk)
+        self.text += "".join(pieces)
+        return pieces
 
     def finish(self) -> list[str]:
-        return self._drain(final=True)
-
-    def _drain(self, *, final: bool) -> list[str]:
-        out: list[str] = []
-        while True:
-            cut = self._safe_cut(final=final)
-            if cut is None:
-                break
-            if cut == 0:
-                continue        # 有内容被丢弃，缓冲区已更新，继续看
-            piece, self.buf = self.buf[:cut], self.buf[cut:]
-            out.append(piece)
-            self.text += piece
-            if piece.strip():
-                self._emitted_any = True
-        return out
-
-    _FIELD_INLINE = re.compile(
-        r"(?:^|[。！？；，\s])(?:settle|delta|pending|need|confidence|"
-        r"direct|baseline|displace)[ \t]*[:：]", re.IGNORECASE
-    )
-
-    # 字段名（不带前导条件）—— 用来判断「这一行会不会变成字段行」
-    _FIELD_START = re.compile(
-        r"^[ \t]*(settle|delta|pending|need|confidence|direct|baseline|displace)[ \t]*[:：]",
-        re.IGNORECASE,
-    )
-
-    def _safe_cut(self, *, final: bool) -> int | None:
-        """缓冲区里可以安全放行到哪里。
-
-        用一个最小的状态机消化标记，避免「丢弃」和「放行」互相打架：
-
-            TEXT   —— 正常说话，逐行放行（字段行丢掉）
-            HEAD   —— 见过 <<<HEAD>>>，里面的 direct 一律不要，等 SAY
-            DONE   —— 见过 <<<TAIL>>>，之后全丢
-
-        为什么要处理 HEAD / DONE：模型偶尔会完整照抄文本协议
-        （历史里有旧样例，它会跟着学）。那时 SAY 段才是给用户看的，
-        见到 <<<HEAD>>> 直接关掉的话，整句回复就丢了 —— 实测 3/20。
-        """
-        out_len = 0
-
-        while True:
-            if self._done:
-                self.buf = ""
-                return out_len or None
-
-            m = _ANY_MARKER.search(self.buf)
-            if m:
-                before = self.buf[:m.start()]
-                marker = m.group(0)
-                self.buf = self.buf[m.end():]
-                kept = self._keep_lines(before) if not self._in_head else ""
-                if marker == "<<<HEAD>>>":
-                    self._in_head = True
-                elif marker == "<<<SAY>>>":
-                    self._in_head = False
-                else:
-                    self._done = True
-                if kept:
-                    # 先切换标记状态，再单独放行前缀；否则同一片里的 HEAD
-                    # 会被跳过，后面的 baseline/direct 可能一起被放行。
-                    self.buf = kept + self.buf
-                    return len(kept)
-                continue
-
-            if self._in_head:
-                # HEAD 段里的内容全部丢弃，等下一行
-                nl = self.buf.find("\n")
-                if nl >= 0:
-                    self.buf = self.buf[nl + 1:]
-                    continue
-                if final:
-                    self.buf = ""
-                return out_len or None
-
-            # 正常状态：逐行放行
-            nl = self.buf.find("\n")
-            if nl >= 0:
-                line = self.buf[:nl]
-                if self._FIELD_START.match(line) or self._FIELD_INLINE.search(line):
-                    self.buf = self.buf[nl + 1:]
-                    self._in_head = True
-                    continue
-                return out_len + nl + 1
-
-            # 没有换行符
-            cur = self.buf
-            if self._FIELD_INLINE.search(cur):
-                if final:
-                    self.buf = ""
-                return out_len or None
-            if self._could_be_field(cur, final=final) or self._FIELD_INLINE.search(cur):
-                if final:
-                    # 收尾时还被扣着的内容必须放行 —— 此时不可能再长出字段行。
-                    # 旧实现直接 self.buf = "" 丢掉，实测 "yes" 只输出 "ye"。
-                    self.buf = ""
-                    return out_len + len(cur) if cur else (out_len or None)
-                return out_len or None
-            if final:
-                return out_len + len(cur) if cur else (out_len or None)
-
-            # 末尾可能正在拼标记 -> 扣住
-            stripped = cur.lstrip()
-            if stripped.startswith("<") and any(
-                    mk.startswith(stripped) for mk in
-                    ("<<<HEAD>>>", "<<<SAY>>>", "<<<TAIL>>>")):
-                return out_len or None
-            hold = 0
-            for marker in ("<<<HEAD>>>", "<<<SAY>>>", "<<<TAIL>>>"):
-                for k in range(1, len(marker)):
-                    if cur.endswith(marker[:k]):
-                        hold = max(hold, k)
-            cut = len(cur) - hold
-            return out_len + cut if cut > 0 else (out_len or None)
-
-    def _keep_lines(self, text: str) -> str:
-        """过滤掉字段行，返回能放行的那部分。"""
-        keep = []
-        for ln in text.splitlines(keepends=True):
-            if self._FIELD_START.match(ln) or self._FIELD_INLINE.search(ln):
-                break  # 字段的续行同样属于内部内容，直到下一个明确标记
-            keep.append(ln)
-        return "".join(keep)
-
-    @staticmethod
-    def _could_be_field(line: str, *, final: bool = False) -> bool:
-        """这一行有没有可能正在长成「settle: ...」这样的字段行。
-
-        **必须要求冒号存在或行还没写完** —— 只做前缀匹配会吞掉正常句子：
-        "Sounds good" 逐字喂进来时 "Sounds goo" 的前缀 "s" 以 settle/..."
-        这些词开头的话就会被扣住不放。实测英文被吞字、中文正常
-        （中文前缀不会撞上字段名），所以中文测试抓不到。
-
-        判据：
-          · 已经出现冒号     -> 可能是字段行，扣住
-          · 有冒号但字段名不在前面 -> 是正文，放行
-          · 完全还没冒号且前缀像字段名 -> 再等等（final 时无条件放行）
-        """
-        s = line.lstrip()
-        if not s:
-            return True
-        # 已有冒号 = 这一行已经成形，看字段名是否在冒号前
-        if ":" in s or "：" in s:
-            head = re.split(r"[:：]", s, maxsplit=1)[0].strip().lower()
-            return head in ("settle", "delta", "pending", "need",
-                            "confidence", "direct", "baseline", "displace")
-        if final:
-            # 收尾了还没冒号 —— 不可能是字段行
-            return False
-        # 还没冒号：只有「整行都还是字段名的前缀」才值得等
-        low = s.lower()
-        for word in ("settle", "delta", "pending", "need", "confidence",
-                     "direct", "baseline", "displace"):
-            if word.startswith(low) and low:
-                return True
-        return False
-
-
-def _looks_like_head_fields(text: str) -> bool:
-    """这段文本像不像 HEAD 的字段内容（而不是正常回复）。
-
-    用于 clean_phase2 切分之后 —— 即使标记切对了，
-    切出来的「最后一段」也可能是 HEAD 的残片：
-        "正文。<<<HEAD>>>秘密想法"  ->  '秘密想法'
-    这时候只能靠内容判断：极短、无标点、不像人说的话。
-    """
-    t = (text or "").strip()
-    if not t:
-        return False
-    # 含字段名直接判
-    if re.search(r"(need|confidence|direct|baseline|displace)\s*[:：]", t, re.IGNORECASE):
-        return True
-    # 极短且不含任何句末标点 —— 正常的 SAY 不会这么写
-    return len(t) <= 20 and not re.search(r"[。！？.!?，,~…]", t)
+        result = self._parser.finish()
+        if result.say.startswith(self.text):
+            remainder = result.say[len(self.text):]
+            self.text = result.say
+            return [remainder] if remainder else []
+        return []
 
 
 def _split_head_fields(text: str) -> list[str]:
@@ -600,7 +421,15 @@ def clean_phase2(say: str) -> str:  # noqa: D401
     正文在标记之后，取最后一段；如果标记在前面（比如写了 <<<HEAD>>> 清单），
     那就只有第一段之前的东西是干净的。
     """
+    if isinstance(say, SayText):
+        return safe_say(say)
     text = (say or "").strip()
+    if LITERAL_OPEN in text or LITERAL_CLOSE in text:
+        # Literal payload may itself quote a section marker; only outer markers
+        # may control extraction. Keep legacy cleanup unchanged for other text.
+        if _ANY_MARKER.search(mask_literal_blocks(text)):
+            return parse(text, expression_only=True).say
+        return safe_say(text)
     # 有些端点不写标记、但会补一行 settle:/delta: —— 同样不是用户该看的。
     text = re.sub(r"^[ \t]*(settle|delta|pending)[ \t]*[:：].*$", "",
                   text, flags=re.MULTILINE).strip()
