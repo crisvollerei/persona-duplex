@@ -284,6 +284,64 @@ _SECTION_LOOSE = re.compile(
 
 _SECTION_EXACT = re.compile("|".join(re.escape(marker) for marker in
                                      (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)))
+UNEXPECTED_END = "<<<END>>>"
+_UNEXPECTED_CONTROL = re.compile(r"<{2,}\s*\^?\s*END\s*>{2,}", re.I)
+_END_CONTROL_PREFIX = re.compile(r"<{2,}\s*\^?\s*END(?=[\s<>])", re.I)
+
+
+def mask_head_marker_values(text: str, *, initial_head=False) -> str:
+    """Ignore marker data in recognized HEAD reference-field values.
+
+    An independent marker remains structural. HEAD/TAIL inside a reference
+    field line are data; quoted SAY is data too. Unquoted inline SAY retains
+    the legacy boundary meaning, since arbitrary prose cannot disambiguate it.
+    Positions are preserved for parsers, audit and caller-declared body framing.
+    """
+    tokens = re.compile(_SECTION_LOOSE.pattern + "|" + _UNEXPECTED_CONTROL.pattern
+                        + "|" + re.escape(LITERAL_OPEN), re.I)
+    fields = re.compile(r"^[ \t]*(?:need|direct|baseline)[ \t]*[:：]", re.I)
+    out = list(text)
+    state = SECTION_HEAD if initial_head else None
+    head_start = 0
+    cursor = 0
+
+    def quoted(prefix):
+        closer = None
+        escaped = False
+        pairs = {'"': '"', "'": "'", '`': '`', '“': '”', '‘': '’'}
+        for index, char in enumerate(prefix):
+            if escaped:
+                escaped = False
+            elif char == '\\' and closer is not None:
+                escaped = True
+            elif closer is not None:
+                if char == closer:
+                    closer = None
+            elif char in pairs and not (char == "'" and index and prefix[index-1].isalnum()):
+                closer = pairs[char]
+        return closer is not None
+
+    while (match := tokens.search(text, cursor)) is not None:
+        marker = match.group()
+        if state == SECTION_HEAD:
+            start = max(head_start, text.rfind('\n', 0, match.start()) + 1)
+            prefix = text[start:match.start()]
+            field = fields.match(prefix)
+            if field and (marker != SECTION_SAY or quoted(prefix[field.end():])):
+                out[match.start():match.end()] = ' ' * len(marker)
+                cursor = match.end()
+                continue
+        if marker == LITERAL_OPEN and state == SECTION_SAY:
+            status, consumed, _ = read_literal(text[match.start():])
+            if status == 'complete':
+                cursor = match.start() + consumed
+                continue
+        if marker in (SECTION_HEAD, SECTION_SAY, SECTION_TAIL):
+            state = marker
+            if marker == SECTION_HEAD:
+                head_start = match.end()
+        cursor = match.end()
+    return ''.join(out)
 
 
 class SayText(str):
@@ -310,25 +368,49 @@ def encode_literal_say(text: str) -> str:
 
 
 def read_literal(text: str) -> tuple[str, int, str]:
-    """Read one opening block: complete, pending, or invalid; never guess JSON."""
+    """Decode a string or retain one strictly valid JSON container verbatim.
+
+    An explicit container is literal user-visible JSON, not a request to apply
+    its keys as state. Incomplete/malformed data is never repaired or released.
+    """
     if not text.startswith(LITERAL_OPEN):
         return "invalid", 0, ""
     offset = len(LITERAL_OPEN)
     offset += len(text[offset:]) - len(text[offset:].lstrip())
+    def finite_float(raw):
+        number = float(raw)
+        if not math.isfinite(number):
+            raise ValueError("nonfinite literal number")
+        return number
+    def reject_constant(raw):
+        raise ValueError("nonfinite literal constant")
+    def unique_object(pairs):
+        value = {}
+        for key, item in pairs:
+            if key in value:
+                raise ValueError("duplicate literal key")
+            value[key] = item
+        return value
     try:
-        value, end = json.JSONDecoder().raw_decode(text, offset)
+        value, end = json.JSONDecoder(parse_float=finite_float,
+            parse_constant=reject_constant, object_pairs_hook=unique_object).raw_decode(text, offset)
     except json.JSONDecodeError:
         return "pending", 0, ""
-    if not isinstance(value, str):
+    except (ValueError, RecursionError):
+        return "invalid", 0, ""
+    if not isinstance(value, (str, dict, list)):
         return "invalid", 0, ""
     try:
-        value.encode("utf-8")
-    except UnicodeEncodeError:
+        # Validate nested values and keys too: escaped lone surrogates can be
+        # ASCII in the wire while being invalid Unicode after JSON decoding.
+        json.dumps(value, ensure_ascii=False, allow_nan=False).encode("utf-8")
+    except (UnicodeEncodeError, ValueError, RecursionError):
         return "invalid", 0, ""
+    visible = value if isinstance(value, str) else text[offset:end]
     end += len(text[end:]) - len(text[end:].lstrip())
     rest = text[end:]
     if rest.startswith(LITERAL_CLOSE):
-        return "complete", end + len(LITERAL_CLOSE), value
+        return "complete", end + len(LITERAL_CLOSE), visible
     if LITERAL_CLOSE.startswith(rest):
         return "pending", 0, ""
     return "invalid", 0, ""
@@ -338,10 +420,11 @@ def mask_literal_blocks(text: str, *, sections=False) -> str:
     """Mask complete literal data without moving external marker positions."""
     token = re.compile("|".join(re.escape(m) for m in
                                (SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN)))
-    out = list(text)
+    scan = mask_head_marker_values(text) if sections else text
+    out = list(scan)
     active = not sections
     cursor = 0
-    while (match := token.search(text, cursor)) is not None:
+    while (match := token.search(scan, cursor)) is not None:
         marker = match.group()
         if marker == LITERAL_OPEN and active:
             status, consumed, _ = read_literal(text[match.start():])
@@ -354,6 +437,17 @@ def mask_literal_blocks(text: str, *, sections=False) -> str:
             active = marker == SECTION_SAY
         cursor = match.end()
     return "".join(out)
+
+
+def control_errors(text: str, *, sections=False) -> list[str]:
+    """Unexpected END is protocol damage, even when the visible prefix survives."""
+    masked = mask_literal_blocks(text, sections=sections)
+    if _UNEXPECTED_CONTROL.search(masked) or _END_CONTROL_PREFIX.search(masked):
+        return ['unexpected_control_marker']
+    if any(masked.rstrip().upper().endswith(UNEXPECTED_END[:size])
+           for size in range(4, len(UNEXPECTED_END))):
+        return ['incomplete_control_marker']
+    return []
 
 
 def _literal_safety_mask(text: str) -> str:
@@ -420,7 +514,7 @@ def section_errors(raw: str, *, expression_only: bool = False) -> list[str]:
         errors.append("text_before_head")
     if any(match.group() not in markers for match in _SECTION_LOOSE.finditer(masked)):
         errors.append("invalid_section_marker")
-    return errors
+    return [*errors, *control_errors(raw, sections=True)]
 
 # HEAD 字段行：允许前后空白、全角冒号、大小写
 _FIELD_LINE = re.compile(
@@ -459,7 +553,7 @@ def _looks_like_protocol(text: str) -> bool:
     opening = t.find(LITERAL_OPEN)
     if opening >= 0:
         t = t[:opening]
-    return bool(_SECTION_LOOSE.search(t) or _FIELD_LINE.search(t)
+    return bool(_SECTION_LOOSE.search(t) or control_errors(t) or _FIELD_LINE.search(t)
                 or _SCAFFOLD.search(t))
 
 
@@ -513,9 +607,11 @@ def _clean_normal_say_segment(text: str) -> tuple[str, bool]:
     # Unframed model controls terminate the body, matching streaming. A
     # suffix after a stop/control token must not be recovered as normal prose.
     starts.extend(match.start() for match in _SPECIAL_TOKEN_START.finditer(text))
-    for marker in (LITERAL_OPEN, LITERAL_CLOSE):
+    starts.extend(match.start() for match in _UNEXPECTED_CONTROL.finditer(text))
+    starts.extend(match.start() for match in _END_CONTROL_PREFIX.finditer(text))
+    for marker in (LITERAL_OPEN, LITERAL_CLOSE, UNEXPECTED_END):
         for size in range(len(marker) - 1, 3, -1):
-            if text.endswith(marker[:size]):
+            if text.upper().endswith(marker[:size].upper()):
                 starts.append(len(text) - size)
     if starts:
         return strip_special_tokens(text[:min(starts)], preserve_whitespace=True), True
@@ -683,8 +779,9 @@ def _get_field(block: str, name: str, *, multiline: bool = False) -> str:
     if not multiline:
         return m.group(1).strip()
     # Only free-text reference fields span lines; never consume the next field.
+    masked = mask_head_marker_values(block, initial_head=True)
     boundaries = [next_match.start() for pattern in (_FIELD_LINE, _SECTION_LOOSE)
-                  if (next_match := pattern.search(block, m.end())) is not None]
+                  if (next_match := pattern.search(masked, m.end())) is not None]
     end = min(boundaries) if boundaries else len(block)
     return block[m.start(1):end].strip()
 

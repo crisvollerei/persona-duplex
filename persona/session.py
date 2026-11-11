@@ -14,6 +14,9 @@ from typing import Callable, Iterator
 
 from .config import PersonaConfig
 from .contracts import ReplyContract
+from .scope import ResponseScope
+from .constraints import ConstraintContext
+from .actions import ActionContext
 from .consolidate import Consolidator
 from .engine import TurnEngine, TurnResult
 from .store import Store
@@ -33,6 +36,7 @@ class SessionConfig:
     memory_limit: int = 5
     memory_budget_chars: int = 6000
     memory_scope: str | None = None
+    generation_path: str = "full"
 
 
 class Session:
@@ -95,6 +99,7 @@ class Session:
             json_fallback=self.opts.json_fallback,
             memory_retriever=memory_retriever, memory_limit=self.opts.memory_limit,
             memory_budget_chars=self.opts.memory_budget_chars, memory_scope=self.opts.memory_scope,
+            generation_path=self.opts.generation_path,
             audit_options={"session": asdict(self.opts), "memory_model": model_info(consolidate_llm),
                            "judge_model": model_info(fast_llm)},
         )
@@ -116,7 +121,9 @@ class Session:
     # ------------------------------------------------------------ 对话
 
     def say(self, text: str, on_delta: Callable[[str], None] | None = None, *,
-            contract: ReplyContract | None = None) -> TurnResult:
+            contract: ReplyContract | None = None, scope: ResponseScope | None = None,
+            constraints: ConstraintContext | None = None,
+            actions: ActionContext | None = None) -> TurnResult:
         """说一句，拿回一轮结果。"""
         with self._lock:
             if self._closed:
@@ -125,11 +132,15 @@ class Session:
                 raise RuntimeError("不能在回复回调内重入会话")
             self._active_turn = True
             try:
-                return self.engine.turn(text, on_delta=on_delta, contract=contract)
+                return self.engine.turn(text, on_delta=on_delta, contract=contract, scope=scope,
+                                        constraints=constraints, actions=actions)
             finally:
                 self._active_turn = False
 
-    def say_stream(self, text: str, *, contract: ReplyContract | None = None) -> "_StreamedTurn":
+    def say_stream(self, text: str, *, contract: ReplyContract | None = None,
+                   scope: ResponseScope | None = None,
+                   constraints: ConstraintContext | None = None,
+                   actions: ActionContext | None = None) -> "_StreamedTurn":
         """迭代 SAY；此迭代包装器先完成一轮，实时输出请使用 say 的 on_delta。
 
         返回的对象迭代耗尽后，本轮结果在 .result 上。
@@ -138,11 +149,13 @@ class Session:
         挂不了属性，而调用方需要拿到这一轮的 TurnResult（结算了什么、
         有没有受伤）才能做后续决策。
         """
-        return _StreamedTurn(self, text, contract=contract)
+        return _StreamedTurn(self, text, contract=contract, scope=scope, constraints=constraints, actions=actions)
 
     def chat(self, text: str, on_delta: Callable[[str], None] | None = None, *,
-             contract: ReplyContract | None = None) -> str:
-        return self.say(text, on_delta=on_delta, contract=contract).say
+             contract: ReplyContract | None = None, scope: ResponseScope | None = None,
+             constraints: ConstraintContext | None = None,
+             actions: ActionContext | None = None) -> str:
+        return self.say(text, on_delta=on_delta, contract=contract, scope=scope, constraints=constraints, actions=actions).say
 
     # ------------------------------------------------------------ 后台
 
@@ -199,10 +212,15 @@ class Session:
 class _StreamedTurn:
     """一次流式轮次。迭代时逐片吐 SAY，结束后 .result 可用。"""
 
-    def __init__(self, session: "Session", text: str, *, contract: ReplyContract | None = None):
+    def __init__(self, session: "Session", text: str, *, contract: ReplyContract | None = None,
+                 scope: ResponseScope | None = None, constraints: ConstraintContext | None = None,
+                 actions: ActionContext | None = None):
         self._session = session
         self._text = text
         self._contract = contract
+        self._scope = scope
+        self._constraints = constraints
+        self._actions = actions
         self._pieces: list[str] = []
         self._started = False
         self.result: TurnResult | None = None
@@ -214,7 +232,8 @@ class _StreamedTurn:
         if not self._started:
             self._started = True
             self.result = self._session.say(self._text, on_delta=self._pieces.append,
-                                            contract=self._contract)
+                                            contract=self._contract, scope=self._scope,
+                                            constraints=self._constraints, actions=self._actions)
         if self._pieces:
             return self._pieces.pop(0)
         raise StopIteration

@@ -27,6 +27,7 @@ from .parse import (
     read_literal,
     encode_literal_say,
     mask_literal_blocks,
+    mask_head_marker_values,
     strip_special_tokens,
 )
 
@@ -35,6 +36,7 @@ from .parse import (
 from .parse import _looks_like_protocol as _looks_like_protocol_full
 from .parse import _SECTION_LOOSE
 from .parse import _SPECIAL_TOKEN_START
+from .parse import UNEXPECTED_END, _UNEXPECTED_CONTROL, _END_CONTROL_PREFIX
 from .prompt import SECTION_HEAD, SECTION_SAY, SECTION_TAIL, LITERAL_OPEN, LITERAL_CLOSE
 
 MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
@@ -42,7 +44,7 @@ MARKERS = (SECTION_HEAD, SECTION_SAY, SECTION_TAIL)
 #   · <<<TAIL>>>  —— 正常结束
 #   · <<<HEAD>>>  —— 模型把协议重开了一次，后面那段里有 direct
 #   · <<<SAY>>>   —— 同样要切，否则标记本身会原样吐给用户
-_SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY, LITERAL_OPEN, LITERAL_CLOSE)
+_SAY_END = (SECTION_TAIL, SECTION_HEAD, SECTION_SAY, LITERAL_OPEN, LITERAL_CLOSE, UNEXPECTED_END)
 
 
 class _LiteralPiece(str):
@@ -71,7 +73,7 @@ def _safety_holdback(text: str) -> int:
         word = re.sub(r"\s", "", suffix).lstrip("<").lstrip("^").rstrip(">").upper()
         opening = len(suffix) - len(suffix.lstrip("<"))
         possible = (opening >= 2 or suffix == "<") and any(
-            name.startswith(word) for name in ("HEAD", "SAY", "TAIL", "LITERAL", "END_LITERAL"))
+            name.startswith(word) for name in ("HEAD", "SAY", "TAIL", "LITERAL", "END_LITERAL", "END"))
         if possible:
             hold = max(hold, len(suffix))
     # Inspect independently: an ordinary inequality before an opening bracket
@@ -126,22 +128,26 @@ class StreamParser:
     所以开头和结尾的纯空白都要裁掉，中间的不动。
     """
 
-    def __init__(self, *, expression_only: bool = False) -> None:
+    def __init__(self, *, expression_only: bool = False, plain: bool = False) -> None:
+        if type(plain) is not bool:
+            raise TypeError("plain must be boolean")
         self.buf = ""
-        self.state = SEEK
+        self.state = IN_SAY if plain else SEEK
         self.head_text = ""
         self.say_text = ""
         # 整段被判为协议残留 —— 什么都不输出
         self._dead = False
         self._blocked = False       # 已输出正常前缀后遇到不安全内容，后续全部截断
         self.tail_text = ""
-        self._bare = False          # 模型完全没按协议来，整段都是回复
+        self._bare = plain          # 显式裸正文，或模型完全没按协议来
+        self._plain = plain        # 裸正文不能从意外 HEAD/SAY 中恢复输出
         self._emitted = False       # 是否已经吐过非空白内容
         self._pending_ws = ""       # 已收下但还没吐的尾部空白
         self._raw_chunks: list[str] = []
         self._expression_only = expression_only
         self._say_wire: list[str] = []
         self._literal_errors: list[str] = []
+        self._body_closed = False
 
         # 流式只负责标记边界，不审查内容。
         # 「猜你」那类问题属于措辞，归 prompt 和统计管 —— 在流式层删句子
@@ -349,6 +355,16 @@ class StreamParser:
         masked = mask_literal_blocks(self.buf)
         hits = [(masked.find(m), m) for m in MARKERS]
         hits = [(i, m) for i, m in hits if i >= 0]
+        # A bare/tool response may start a literal whose payload already quotes
+        # HEAD before its closing delimiter arrives. Enter SAY at that first
+        # literal control, so only _literal can inspect its still-opaque bytes.
+        # Malformed literal spellings take the same route to the shared guard.
+        literal = re.search(r"<<<(?:l|end_l)|<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)",
+                            self.buf, re.I)
+        if literal is not None and (not hits or literal.start() < min(i for i, _ in hits)):
+            self._bare = True
+            self.state = IN_SAY
+            return True
         if hits:
             i, m = min(hits)
             prefix = self.buf[:i]
@@ -395,13 +411,18 @@ class StreamParser:
         return False
 
     def _head(self) -> bool:
-        hits = [(self.buf.find(m), m) for m in (SECTION_SAY, SECTION_TAIL)]
+        masked = mask_head_marker_values(self.buf, initial_head=True)
+        hits = [(masked.find(m), m) for m in (SECTION_SAY, SECTION_TAIL)]
         hits = [(i, m) for i, m in hits if i >= 0]
         if not hits:
             return False
         i, m = min(hits)
         self.head_text += self.buf[:i]
         self.buf = self.buf[i + len(m):]
+        if m == SECTION_SAY and self._body_closed:
+            self._blocked = True
+            self.buf = ""
+            return False
         self.state = IN_SAY if m == SECTION_SAY else IN_TAIL
         return True
 
@@ -416,6 +437,9 @@ class StreamParser:
         hits = [(i, m) for i, m in hits if i >= 0]
         unsafe = [m.start() for m in _INTERNAL_START.finditer(self.buf)]
         unsafe.extend(m.start() for m in _SPECIAL_TOKEN_START.finditer(self.buf))
+        unsafe.extend(m.start() for m in _UNEXPECTED_CONTROL.finditer(self.buf)
+                      if m.end() < len(self.buf) or m.group().endswith('>>>'))
+        unsafe.extend(m.start() for m in _END_CONTROL_PREFIX.finditer(self.buf))
         for match in re.finditer(r"<{2,}\s*(?:LITERAL|END_LITERAL)(?=\s|>|$)", self.buf, re.I):
             if not any(self.buf[match.start():].startswith(marker) or marker.startswith(self.buf[match.start():])
                        for marker in (LITERAL_OPEN, LITERAL_CLOSE)):
@@ -449,7 +473,12 @@ class StreamParser:
             self._append_say(piece)
             if piece:
                 out.append(piece)
+            if self._plain:
+                self.buf = ""
+                self._blocked = True
+                return False
             self.buf = self.buf[field.start():]
+            self._body_closed = True
             self.state = IN_HEAD
             return True
 
@@ -466,15 +495,29 @@ class StreamParser:
                 self._blocked = True
                 self._literal_errors.append("invalid_literal_say")
                 self.buf = ""
+            elif m == UNEXPECTED_END:
+                self._blocked = True
+                self._literal_errors.append('unexpected_control_marker')
+                self.buf = ""
+            elif self._plain:
+                # Explicit direct-SAY never interprets model output as a new
+                # protocol envelope, even when a later SAY marker looks usable.
+                self._blocked = True
+                self.buf = ""
+                return False
             elif m == SECTION_TAIL:
                 self.state = IN_TAIL
             elif m == SECTION_HEAD:
                 # 模型把协议重开了一次。剩下的按 HEAD 收着，
                 # 不能当正文吐出去 —— 那里面就是 direct。
                 self.state = IN_HEAD
+                self._body_closed = True
             else:
-                # 重复的 SAY 标记：继续当前段，但标记本身已经吞掉了
-                self.state = IN_SAY
+                # A duplicate SAY is not another authorized body. Keep only
+                # what was delivered before it, matching non-stream parsing.
+                self._blocked = True
+                self.buf = ""
+                return False
             return True
 
         # 没到结尾。扣住可能是标记前缀的尾巴。

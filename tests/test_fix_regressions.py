@@ -220,12 +220,13 @@ class TestStreamingHoldback(Base):
         self.assertNotIn("秘密", sp.finish().say)
 
     def test_repeated_say_marker_never_printed(self):
-        """模型在 SAY 里又写一次 <<<SAY>>> —— 标记本身也不能吐给用户。"""
+        """重复SAY不交付标记，也不把第二份正文接入第一份。"""
         sp = StreamParser()
         out = []
         for ch in "<<<SAY>>>第一段<<<SAY>>>第二段<<<TAIL>>>settle: -":
             out.extend(sp.feed(ch))
-        self.assertEqual("".join(out), "第一段第二段")
+        self.assertEqual("".join(out), "第一段")
+        self.assertIn("duplicate_say_marker", sp.finish().structural_errors)
         self.assertNotIn("<<<", sp.finish().say)
 
 

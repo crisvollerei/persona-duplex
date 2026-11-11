@@ -12,6 +12,8 @@ import math
 import re
 
 _JSON_TYPES = {"string", "number", "integer", "boolean", "object", "array", "null"}
+_CODE_LANGUAGES = frozenset(("yaml", "json", "python", "javascript", "js",
+                             "typescript", "ts", "toml", "text", "sh", "sql"))
 _SCOPE = "mechanical_format_not_semantic_truth"
 
 
@@ -50,9 +52,10 @@ class ReplyContract:
     item_type: str | None = None
     columns: tuple[str, ...] = ()
     min_rows: int = 1
+    code_language: str | None = None
 
     def __post_init__(self):
-        if self.kind not in ("conclusion", "json", "markdown_table"):
+        if self.kind not in ("conclusion", "json", "markdown_table", "code_block"):
             raise ValueError("Unknown reply contract kind")
         if not isinstance(self.prefix, str) or not self.prefix.strip() or any(c in self.prefix for c in "\r\n"):
             raise ValueError("prefix must be a nonempty single-line string")
@@ -95,6 +98,11 @@ class ReplyContract:
                 raise ValueError("Array contracts cannot declare object keys")
             if self.json_type == "object" and self.item_type is not None:
                 raise ValueError("item_type only applies to JSON arrays")
+        if self.kind == "code_block":
+            if not isinstance(self.code_language, str) or self.code_language not in _CODE_LANGUAGES:
+                raise ValueError("Unsupported code language")
+        elif self.code_language is not None:
+            raise ValueError("code_language only applies to code_block")
 
     @classmethod
     def conclusion(cls, *, prefix="结论：", unit="", answer_type="text", allow_unknown=True):
@@ -112,6 +120,11 @@ class ReplyContract:
     @classmethod
     def markdown_table(cls, columns, *, min_rows=1):
         return cls(kind="markdown_table", columns=columns, min_rows=min_rows)
+
+    @classmethod
+    def code_block(cls, *, language):
+        """Require one complete fenced block; no code execution or syntax claim."""
+        return cls(kind="code_block", code_language=language)
 
     def prompt(self) -> str:
         lines = ["[调用方明确指定的本轮 SAY 格式]",
@@ -136,11 +149,18 @@ class ReplyContract:
                 lines.append("以下键必须出现且值类型必须符合：" + json.dumps(dict(self.value_types), ensure_ascii=False))
             if self.item_type:
                 lines.append("每个数组元素的 JSON 类型必须为：" + self.item_type)
-        else:
+        elif self.kind == "markdown_table":
             lines.extend([
                 "SAY 只输出 Markdown 表格，不加代码围栏或前后解释。",
                 "表头按以下顺序逐字使用：" + json.dumps(self.columns, ensure_ascii=False),
                 "表头下一行为标准分隔行；每行列数一致，至少 " + str(self.min_rows) + " 行数据。",
+            ])
+        else:
+            lines.extend([
+                "SAY只输出一个完整的带语言标签代码块，语言逐字使用：" + self.code_language,
+                "使用Markdown反引号围栏，不加前言、解释或第二个代码块；保留代码原文。",
+                "代码中的direct、pending等同名字段及协议标记是所请求的正文，不代表内部状态。",
+                "调用方会为符合本契约的完整代码块建立字面正文边界，不必再手工套JSON字符串。",
             ])
         return "\n".join(lines)
 
@@ -204,7 +224,7 @@ class ReplyContract:
                             reasons.append("wrong_type:" + key)
                 elif self.item_type and any(not _matches_type(item, self.item_type) for item in parsed):
                     reasons.append("wrong_array_item_type")
-        else:
+        elif self.kind == "markdown_table":
             lines = [line.strip() for line in reply.splitlines() if line.strip()]
             cells = [_table_cells(line) for line in lines]
             if len(cells) < 2:
@@ -217,6 +237,10 @@ class ReplyContract:
                     reasons.append("invalid_table_separator")
                 if len(cells) - 2 < self.min_rows: reasons.append("insufficient_table_rows")
                 if any(len(row) != len(self.columns) for row in cells[2:]): reasons.append("wrong_table_row_width")
+        else:
+            from .body import code_block_span
+            if code_block_span(reply, self.code_language) is None:
+                reasons.append("invalid_single_code_block")
         reasons = list(dict.fromkeys(reasons))
         return {"status": "violated" if reasons else "satisfied", "valid": not reasons,
                 "reasons": reasons, "scope": _SCOPE}

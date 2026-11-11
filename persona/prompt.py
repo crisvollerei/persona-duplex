@@ -44,11 +44,13 @@ LITERAL_OPEN = "<<<LITERAL>>>"
 LITERAL_CLOSE = "<<<END_LITERAL>>>"
 
 LITERAL_SPEC = r'''[字面正文]
-正常回复直接写。若用户需要的正文含行首 direct: 等字段、（判断题）或小说中的内心括号，
+正常回复直接写；普通JSON对象或数组也直接放在SAY中，无需套字面块。
+若用户需要的正文含行首 direct: 等保留字段、协议标记、（判断题）或小说中的内心括号，
 将这部分显式写成 <<<LITERAL>>>单个合法JSON字符串<<<END_LITERAL>>>。
 例如 <<<LITERAL>>>"（判断题）这个说法正确。"<<<END_LITERAL>>>。
 JSON中的换行写成\n，引号和反斜杠正确转义；需要展示协议标记时，尖括号可写成\u003c与\u003e。
-标记和外层JSON引号不会显示，只有闭合且解析成功的字符串会交付；未闭合或错误内容不降级为正文。
+字面块也接受完整的JSON对象或数组，按其原始JSON正文交付；禁止重复键、非有限数字或多个根值。
+标记不显示，字符串外层引号不显示；只有闭合且严格解析成功的块会交付，未闭合或错误内容不降级为正文。
 这只是区分字面内容与控制语法，不证明所写内容正确。HEAD与TAIL仍不得直接展示；模型控制token不属于字面正文。'''
 
 _STANCE_HINT = {
@@ -543,6 +545,42 @@ def build_user_turn(user_text: str, contract: ReplyContract | None = None) -> st
     callers store the contract separately. The default prompt is byte unchanged.
     """
     return user_text if contract is None else user_text + "\n\n" + contract.prompt()
+
+
+def build_light_system_prompt(cfg: PersonaConfig, *, generation_path: str,
+                              first_turn=False, need='', user_text='') -> str:
+    """Shared expression instructions for explicit compact/direct experiments."""
+    if generation_path not in ('compact','direct'):
+        raise ValueError('Light prompt requires compact or direct')
+    role=cfg.role
+    parts=[
+        '依据资料和当前用户请求回应，使用下面的人格表达配置。',
+        '人格影响注意、站位、主动和留白，不改变事实、计算、来源或用户权限。',
+        '[人格参考数据]\n'+json.dumps(dict(name=role.name,identity=role.identity,
+            voice=role.voice,attention=_ATTENTION_HINT.get(role.attention,''),
+            bias=role.bias,legibility_max=role.legibility_max),ensure_ascii=False),
+        _trait_block(cfg).replace('baseline/SAY','实际回复').replace('direct','内容判断'),
+        phrase_block(cfg,need=need,first_turn=first_turn,user_text=user_text),
+        '[共同表达边界]\n先完成当前明确请求，在允许范围内表达人格。'
+        '只按记录回答时不补造新规则；开放讨论可提出明确标记且保留条件的假设。'
+        '用户只要一个步骤时给一个主要可执行目标，不另起额外安排；必要子动作不机械算作新目标。'
+        '有明确句数、前缀或结构要求时，完成后停止，不追加开场、建议或新邀请。'
+        '没有这些限制时可自然照应、主动或留白，不要求统一口语化。'
+        '暂定人际读法可被否认，不把沉默当作证实；不通过声明克制或内心过程索取信用。'
+        '事实缺失保持未知，不把草案当执行，不承诺未确认的现实能力。',
+        LITERAL_SPEC,
+    ]
+    special=[s for s in role.special if any(w.casefold() in user_text.casefold() for w in s.get('keywords',[]))]
+    if special:parts.append('[适用表达补充]\n'+json.dumps(special,ensure_ascii=False))
+    if generation_path=='compact':
+        parts.append('[单次生成格式]\n<<<HEAD>>>\nneed: 本轮暂定需求读法\n'
+            'confidence: 0到1的人际读法把握度\ndirect: 简短内容参考，保留必要条件和未知\n'
+            '<<<SAY>>>\n实际给用户的完整回复。\n只生成这两段；'
+            '不填写baseline、displace或TAIL，不展示内部字段。'
+            '内部内容不要求逐项说出口。')
+    else:
+        parts.append('[交付]\n只输出给用户的实际回复，不输出HEAD、SAY、TAIL等外层标记或内部参考字段。')
+    return '\n\n'.join(p for p in parts if p)
 
 
 def stance_hint(cfg: PersonaConfig, confidence: float) -> str:

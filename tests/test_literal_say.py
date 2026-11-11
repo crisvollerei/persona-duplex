@@ -107,7 +107,7 @@ class TestLiteralSay(unittest.TestCase):
     def test_unfinished_or_invalid_literal_does_not_fall_back_to_content(self):
         invalid = (LITERAL_OPEN + '"SENSITIVE_BODY',
                    LITERAL_OPEN + '"SENSITIVE_BODY"',
-                   LITERAL_OPEN + '{"text":"SENSITIVE_BODY"}' + LITERAL_CLOSE,
+                   LITERAL_OPEN + '{"text":"SENSITIVE_BODY",}' + LITERAL_CLOSE,
                    LITERAL_OPEN + '123' + LITERAL_CLOSE,
                    LITERAL_OPEN + '"bad\\qSENSITIVE_BODY"' + LITERAL_CLOSE,
                    LITERAL_OPEN + '"\\ud800"' + LITERAL_CLOSE,

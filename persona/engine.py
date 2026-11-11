@@ -31,12 +31,17 @@ if TYPE_CHECKING:
 
 from .config import DISPLACE_NONE, PersonaConfig
 from .contracts import ReplyContract, validate_reply
+from .scope import ResponseScope, validate_scope
+from .constraints import ConstraintContext
+from .actions import ActionContext
+from . import generation
 from .parse import (Head, ParsedTurn, Tail, has_exit_offer, parse, plain_text,
                     safe_say, say_wire)
 from .prompt import (
     build_context_block,
     build_history_entry,
     build_system_prompt,
+    build_light_system_prompt,
     build_user_turn,
 )
 from .repair import (    RepairBook,
@@ -91,6 +96,9 @@ class TurnResult:
     repair_closed: dict | None = None
     validity: dict = field(default_factory=dict)
     contract_validation: dict = field(default_factory=dict)
+    scope_validation: dict = field(default_factory=dict)
+    constraint_reference: dict = field(default_factory=dict)
+    action_reference: dict = field(default_factory=dict)
 
     @property
     def display(self) -> str:
@@ -118,12 +126,18 @@ class TurnEngine:
         memory_limit: int = 5,
         memory_budget_chars: int = 6000,
         memory_scope: str | None = None,
+        generation_path: str = "full",
     ):
         """text 默认单次生成；persona / tool / auto 为显式实验协议。"""
         if protocol not in ("persona", "text", "tool", "auto"):
             raise ValueError(f"未知协议: {protocol}")
         if protocol != "persona" and (fidelity_check or json_fallback):
             raise ValueError("fidelity_check / json_fallback 仅适用于显式选择的 persona 协议")
+        if generation_path not in generation.PATHS:
+            raise ValueError("generation_path must be full, compact or direct")
+        if generation_path != "full" and protocol != "text":
+            raise ValueError("compact/direct generation paths require the text protocol")
+        self.generation_path = generation_path
         self.cfg = cfg
         if type(memory_limit) is not int or memory_limit < 0:
             raise ValueError("memory_limit must be a nonnegative integer")
@@ -176,6 +190,7 @@ class TurnEngine:
                                 "memory_retriever": model_info(memory_retriever),
                                 "memory_limit": memory_limit, "memory_budget_chars": memory_budget_chars,
                                 "memory_scope": memory_scope,
+                                "generation_path": generation_path,
                                 **(audit_options or {})})
         self.store.append("run_start", self.run)
         def emit(kind, row):
@@ -190,6 +205,7 @@ class TurnEngine:
                  "_pending_topic", "_last_need", "_minimal_streak", "_turn_seq",
                  "_repair_opened_turn", "_protocol_failures")
         return {"persona": self.cfg.role.name, "protocol": self.protocol,
+                "generation_path": self.generation_path,
                 **{name: deepcopy(getattr(self, name)) for name in names}}
 
     def _restore_runtime(self) -> None:
@@ -225,9 +241,24 @@ class TurnEngine:
 
     def turn(self, user_text: str,
              on_delta: Callable[[str], None] | None = None, *,
-             contract: ReplyContract | None = None) -> TurnResult:
+             contract: ReplyContract | None = None,
+             scope: ResponseScope | None = None,
+             constraints: ConstraintContext | None = None,
+             actions: ActionContext | None = None) -> TurnResult:
         if contract is not None and not isinstance(contract, ReplyContract):
             raise TypeError("contract must be ReplyContract or None")
+        if contract is not None and contract.kind == "code_block" and self.protocol != "text":
+            raise ValueError("code_block body framing currently requires the text protocol")
+        if scope is not None and not isinstance(scope, ResponseScope):
+            raise TypeError("scope must be ResponseScope or None")
+        if constraints is not None and not isinstance(constraints, ConstraintContext):
+            raise TypeError("constraints must be ConstraintContext or None")
+        if actions is not None:
+            if not isinstance(actions, ActionContext):
+                raise TypeError("actions must be ActionContext or None")
+            if self.protocol != "text":
+                raise ValueError("action attribution currently requires the text protocol")
+            actions.validate_evidence(user_text)
         with self._turn_lock:
             self._current_turn_id = self.store.next_id("t")
             self._calls = []
@@ -245,7 +276,7 @@ class TurnEngine:
                     self._delivered.append(piece)
             before = self._runtime()
             try:
-                return self._turn(user_text, deliver, contract)
+                return self._turn(user_text, deliver, contract, scope, constraints, actions)
             except Exception as exc:
                 self.store.recover_commits()
                 for name, value in before.items():
@@ -270,7 +301,10 @@ class TurnEngine:
             "run_id": self.run["run_id"], "turn_id": self._current_turn_id,
             "protocol": self.protocol, "calls": deepcopy(self._calls), **payload})
 
-    def _turn(self, user_text: str, on_delta=None, contract: ReplyContract | None = None) -> TurnResult:
+    def _turn(self, user_text: str, on_delta=None, contract: ReplyContract | None = None,
+              scope: ResponseScope | None = None,
+              constraints: ConstraintContext | None = None,
+              actions: ActionContext | None = None) -> TurnResult:
         """跑一轮。
 
         传入 on_delta 时逐片回调；persona 实验开启 fidelity_check 才先缓冲检查。
@@ -280,9 +314,14 @@ class TurnEngine:
         self._turn_seq += 1
         turn_started = time.monotonic()
         self._probe = {}       # 本轮原始观测值，落账用
+        action_reference = actions.record() if actions is not None else {}
         self.store.append("turn_start", {"turn_id": turn_id, "turn_seq": self._turn_seq,
                                         "run_id": self.run["run_id"], "user": user_text,
-                                        "reply_contract": asdict(contract) if contract else None})
+                                        "reply_contract": asdict(contract) if contract else None,
+                                        "response_scope": asdict(scope) if scope else None,
+                                        "constraint_inputs": asdict(constraints) if constraints else None,
+                                        **({"action_reference": action_reference} if actions is not None else {}),
+                                        "generation_path": self.generation_path})
 
         # ---- 1. 修复反应判定。这个必须同步：它决定上下文里要不要放
         #        暂定修复提示。只按用户的明确内容收尾，不调模型。
@@ -315,8 +354,11 @@ class TurnEngine:
         # 差一轮不影响：句式是语感参考，不是精确控制。
         need_hint = self._last_need
         first_turn = self._turn_seq <= 1
-        sys_prompt = build_system_prompt(self.cfg, need=need_hint,
+        sys_prompt = (build_system_prompt(self.cfg, need=need_hint,
                                          first_turn=first_turn, user_text=user_text)
+                      if self.generation_path == "full" else
+                      build_light_system_prompt(self.cfg, need=need_hint, first_turn=first_turn,
+                          user_text=user_text, generation_path=self.generation_path))
         ctx = build_context_block(
             self.cfg,
             relation=relation,
@@ -326,12 +368,23 @@ class TurnEngine:
             repair_note=self._repair_note(),
             memory_budget_chars=self.memory_budget_chars,
         )
+        if scope is not None:
+            ctx += "\n\n" + scope.prompt()
+        constraint_reference = constraints.reference() if constraints else {}
+        if constraints is not None:
+            ctx += "\n\n" + constraints.prompt()
+        if actions is not None:
+            ctx += "\n\n" + actions.prompt()
 
-        stance = self.cfg.stance_for(0.0)
+        stance = self.cfg.stance_for(0.0) if self.generation_path != "direct" else "unobserved"
+        history = self.history[-12:]
+        if self.generation_path != "full":
+            from .protocol import visible_dialogue
+            history = visible_dialogue(history)
 
         messages = [
             {"role": "system", "content": sys_prompt + "\n\n" + ctx},
-            *self.history[-12:],
+            *history,
             {"role": "user", "content": build_user_turn(user_text, contract)},
         ]
 
@@ -346,7 +399,10 @@ class TurnEngine:
                 sys_prompt, ctx, user_text, messages, on_delta, warnings, contract=contract
             )
         else:
-            raw, parsed = self._generate(messages, on_delta)
+            if contract is not None and contract.kind == "code_block":
+                raw, parsed = self._generate(messages, on_delta, contract=contract)
+            else:
+                raw, parsed = self._generate(messages, on_delta)
 
         self._verify_delivery(parsed.say or plain_text(raw), on_delta)
 
@@ -422,6 +478,9 @@ class TurnEngine:
             # 解析不出 SAY 就空着 —— 空回复是可接受的失败，泄露内心不是。
             say = parsed.say or plain_text(raw)
             contract_validation = validate_reply(say, contract)
+            scope_validation = validate_scope(say, scope)
+            if scope_validation["valid"] is False:
+                warnings.append("本轮回应范围的机械要求未满足：" + ", ".join(scope_validation["reasons"]))
             if contract_validation["valid"] is False:
                 warnings.append("显式回答格式未满足：" + ", ".join(contract_validation["reasons"]))
 
@@ -464,8 +523,9 @@ class TurnEngine:
 
             pending_added = self._maybe_add_pending(parsed, turn_id) if usable_tail else None
 
-            validity = parsed.validity(protocol=generation_protocol, probe=self._probe,
-                                       allowed=self.cfg.can_displace(head.displace) if head else True)
+            validity = generation.validity(parsed, self.generation_path,
+                protocol=generation_protocol, probe=self._probe,
+                allowed=self.cfg.can_displace(head.displace) if head else True)
             self.store.append("turn", {
                 "turn_id": turn_id,
                 "turn_seq": self._turn_seq,
@@ -478,6 +538,10 @@ class TurnEngine:
                 "validity": validity,
                 "reply_contract": asdict(contract) if contract else None,
                 "contract_validation": contract_validation,
+                "response_scope": asdict(scope) if scope else None,
+                "scope_validation": scope_validation,
+                "constraint_reference": constraint_reference,
+                **({"action_reference": action_reference} if actions is not None else {}),
                 "limits": self.cfg.limits.as_dict(),
                 "user": user_text,
                 "say": say,
@@ -497,6 +561,9 @@ class TurnEngine:
                     "traits": self.cfg.role.traits_state(),
                 },
                 "protocol": generation_protocol,
+                "generation_path": self.generation_path,
+                "observations": "full" if self.generation_path == "full" else
+                                "content_reference_only" if self.generation_path == "compact" else "not_collected",
                 "memory_scope": self.memory_scope,
                 "judgment_constraints": head.constraints if head else [],
                 "stance": stance,
@@ -508,22 +575,23 @@ class TurnEngine:
                 "probe": self._probe,
             })
 
-            if head and head.need and not incomplete and validity["valid"]:
+            if (head and head.need or self.generation_path == "direct") and not incomplete and validity["valid"]:
                 self.store.push_buffer({
                     "turn_id": turn_id,
                     "memory_scope": self.memory_scope,
                     "user": user_text,
                     "say": say,
-                    "direct": head.direct,
-                    "baseline": head.baseline,
+                    "direct": head.direct if head else "",
+                    "baseline": head.baseline if head else "",
                     "persona": self.cfg.role.name,
-                    "need": head.need,
-                    "displace": head.displace,
+                    "need": head.need if head else "",
+                    "displace": head.displace if head else "",
                 })
 
             # 完整有效的元数据可作格式示范；坏结构只保留可见对话，不洗成正常样例。
             history_content = (build_history_entry(say, head, parsed.tail)
-                               if metadata_usable and validity["valid"] else say)
+                               if self.generation_path == "full" and metadata_usable and validity["valid"]
+                               else say_wire(say))
             self.history.extend([
                 {"role": "user", "content": user_text},
                 {"role": "assistant", "content": history_content},
@@ -544,6 +612,9 @@ class TurnEngine:
                 repair_opened=repair_opened, repair_closed=repair_closed,
                 validity=validity,
                 contract_validation=contract_validation,
+                scope_validation=scope_validation,
+                constraint_reference=constraint_reference,
+                action_reference=action_reference,
             )
 
     # ------------------------------------------------------------ 生成
@@ -566,12 +637,32 @@ class TurnEngine:
         self._probe["delivery"] = {"mode": "callback", "matches_recorded": True,
                                    "characters": len(visible)}
 
-    def _generate(self, messages, on_delta):
+    def _generate(self, messages, on_delta, *, contract=None):
         """一次请求，不因流式失败另发整段请求；已交付片段就地收尾。"""
+        if contract is not None and contract.kind == "code_block":
+            from .body import prepare_code_body
+            # Caller-declared code is atomic. Never release a partial fence or
+            # give an incomplete response a second model request.
+            if on_delta is not None and self.stream_llm is not None:
+                try:
+                    raw = "".join(self.stream_llm(messages))
+                except Exception:
+                    self._probe["stream_interrupted"] = True
+                    raise
+            else:
+                raw = self.llm(messages)
+            framed, framing_errors = prepare_code_body(raw, self.generation_path, contract)
+            self._probe["body_framing"] = {"kind": "application_code_contract",
+                "language": contract.code_language, "applied": framed != raw,
+                "delivery": "complete_body_only", "outer_protocol_errors": framing_errors}
+            parsed = generation.parse_output(framed, self.generation_path)
+            parsed.structural_errors = list(dict.fromkeys([*parsed.structural_errors, *framing_errors]))
+            return framed, parsed
         if on_delta is not None and self.stream_llm is not None:
             from .stream import StreamParser
 
-            sp = StreamParser()
+            sp = StreamParser(expression_only=self.generation_path == "compact",
+                              plain=self.generation_path == "direct")
             delivered: list[str] = []
             callback_failed = False
 
@@ -588,7 +679,7 @@ class TurnEngine:
                 for chunk in self.stream_llm(messages):
                     for piece in sp.feed(chunk):
                         forward(piece)
-                parsed = sp.finish()
+                parsed = generation.adapt(sp.finish(), self.generation_path)
                 if sp.output_blocked:
                     self._probe["output_blocked"] = True
                 visible = "".join(delivered)
@@ -608,7 +699,7 @@ class TurnEngine:
                 })
                 if visible.strip():
                     # 不补发扣留内容，也不提交尚未完成的 TAIL。
-                    parsed = sp.finish(interrupted=True)
+                    parsed = generation.adapt(sp.finish(interrupted=True), self.generation_path)
                     if parsed.say != visible:
                         raise RuntimeError("中断后的已验证正文与实际交付不一致") from exc
                     parsed.errors.append("生成流式中断，仅记录已输出片段，不自动重试")
@@ -616,7 +707,7 @@ class TurnEngine:
                 raise
 
         raw = self.llm(messages)
-        return raw, parse(raw)
+        return raw, generation.parse_output(raw, self.generation_path)
 
 
     # ------------------------------------------------------------ person 协议
@@ -1385,13 +1476,15 @@ def _hours_since(iso: str) -> float:
 
 
 def stream_turn(engine: TurnEngine, user_text: str, *,
-                contract: ReplyContract | None = None) -> Iterator[str]:
+                contract: ReplyContract | None = None, scope: ResponseScope | None = None,
+                constraints: ConstraintContext | None = None,
+                actions: ActionContext | None = None) -> Iterator[str]:
     """收集回调输出；迭代包装器不保证实时性，实时输出直接使用 turn 的回调。"""
     box: dict[str, str] = {}
 
     def collect(piece: str) -> None:
         box["text"] = box.get("text", "") + piece
 
-    engine.turn(user_text, on_delta=collect, contract=contract)
+    engine.turn(user_text, on_delta=collect, contract=contract, scope=scope, constraints=constraints, actions=actions)
     for ch in box.get("text", ""):
         yield ch
