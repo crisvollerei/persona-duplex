@@ -1,0 +1,804 @@
+{
+  "coding_type": "two separate method-blind model-assisted readings; not human ratings",
+  "source_packet_sha256": "e42ec28f7f6547d3a63970b6963b3a654c5d6f856e31b94a5ab51e6352455d53",
+  "visible": 36,
+  "planned": 36,
+  "by_cell": {
+    "scoped.1.A": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "hint_only": 3
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      }
+    },
+    "scoped.1.B": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "hint_only": 2,
+            "none": 1
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      }
+    },
+    "scoped.1.all": {
+      "C1": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "insufficient": 6
+          },
+          "identity": {
+            "hint_only": 5,
+            "none": 1
+          },
+          "pact": {
+            "unmentioned": 6
+          },
+          "shared": {
+            "unmentioned": 6
+          }
+        }
+      },
+      "C2": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "insufficient": 6
+          },
+          "identity": {
+            "none": 6
+          },
+          "pact": {
+            "unmentioned": 6
+          },
+          "shared": {
+            "unmentioned": 6
+          }
+        }
+      }
+    },
+    "scoped.2.A": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "active": 1,
+            "unmentioned": 2
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "hint_only": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "unmentioned": 2
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      }
+    },
+    "scoped.2.B": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "active": 1,
+            "unmentioned": 2
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "hint_only": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "unmentioned": 2
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      }
+    },
+    "scoped.2.all": {
+      "C1": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 4
+          },
+          "identity": {
+            "none": 6
+          },
+          "pact": {
+            "active": 2,
+            "unmentioned": 4
+          },
+          "shared": {
+            "denied": 2,
+            "unmentioned": 4
+          }
+        }
+      },
+      "C2": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 4
+          },
+          "identity": {
+            "hint_only": 2,
+            "none": 4
+          },
+          "pact": {
+            "active": 2,
+            "unmentioned": 4
+          },
+          "shared": {
+            "denied": 2,
+            "unmentioned": 4
+          }
+        }
+      }
+    },
+    "scoped.3.A": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "recognized": 1,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "recognized": 1,
+            "unmentioned": 2
+          }
+        }
+      }
+    },
+    "scoped.3.B": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "recognized": 1,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 1,
+            "insufficient": 2
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "recognized": 1,
+            "unmentioned": 2
+          }
+        }
+      }
+    },
+    "scoped.3.all": {
+      "C1": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 4
+          },
+          "identity": {
+            "correct": 2,
+            "none": 4
+          },
+          "pact": {
+            "unmentioned": 6
+          },
+          "shared": {
+            "recognized": 2,
+            "unmentioned": 4
+          }
+        }
+      },
+      "C2": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 4
+          },
+          "identity": {
+            "correct": 2,
+            "none": 4
+          },
+          "pact": {
+            "unmentioned": 6
+          },
+          "shared": {
+            "recognized": 2,
+            "unmentioned": 4
+          }
+        }
+      }
+    },
+    "full_notes.1.A": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "hint_only": 1,
+            "none": 2
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      }
+    },
+    "full_notes.1.B": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "hint_only": 1,
+            "none": 2
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "insufficient": 3
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "unmentioned": 3
+          }
+        }
+      }
+    },
+    "full_notes.1.all": {
+      "C1": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "insufficient": 6
+          },
+          "identity": {
+            "hint_only": 2,
+            "none": 4
+          },
+          "pact": {
+            "unmentioned": 6
+          },
+          "shared": {
+            "unmentioned": 6
+          }
+        }
+      },
+      "C2": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "insufficient": 6
+          },
+          "identity": {
+            "none": 6
+          },
+          "pact": {
+            "unmentioned": 6
+          },
+          "shared": {
+            "unmentioned": 6
+          }
+        }
+      }
+    },
+    "full_notes.2.A": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 1
+          },
+          "identity": {
+            "none": 3
+          },
+          "pact": {
+            "active": 1,
+            "ambiguous": 1,
+            "unmentioned": 1
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 1
+          },
+          "identity": {
+            "hint_only": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "ambiguous": 1,
+            "unmentioned": 1
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      }
+    },
+    "full_notes.2.B": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 1
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "unmentioned": 2
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 1
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "unmentioned": 2
+          },
+          "shared": {
+            "denied": 1,
+            "unmentioned": 2
+          }
+        }
+      }
+    },
+    "full_notes.2.all": {
+      "C1": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 4,
+            "insufficient": 2
+          },
+          "identity": {
+            "correct": 1,
+            "none": 5
+          },
+          "pact": {
+            "active": 2,
+            "ambiguous": 1,
+            "unmentioned": 3
+          },
+          "shared": {
+            "denied": 2,
+            "unmentioned": 4
+          }
+        }
+      },
+      "C2": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 4,
+            "insufficient": 2
+          },
+          "identity": {
+            "correct": 1,
+            "hint_only": 1,
+            "none": 4
+          },
+          "pact": {
+            "active": 2,
+            "ambiguous": 1,
+            "unmentioned": 3
+          },
+          "shared": {
+            "denied": 2,
+            "unmentioned": 4
+          }
+        }
+      }
+    },
+    "full_notes.3.A": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 1
+          },
+          "identity": {
+            "correct": 2,
+            "none": 1
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "recognized": 2,
+            "unmentioned": 1
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 2,
+            "insufficient": 1
+          },
+          "identity": {
+            "correct": 2,
+            "none": 1
+          },
+          "pact": {
+            "unmentioned": 3
+          },
+          "shared": {
+            "recognized": 2,
+            "unmentioned": 1
+          }
+        }
+      }
+    },
+    "full_notes.3.B": {
+      "C1": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 3
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "ambiguous": 1,
+            "released": 1
+          },
+          "shared": {
+            "denied": 1,
+            "recognized": 1,
+            "unmentioned": 1
+          }
+        }
+      },
+      "C2": {
+        "visible": 3,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 3
+          },
+          "identity": {
+            "correct": 1,
+            "none": 2
+          },
+          "pact": {
+            "active": 1,
+            "ambiguous": 1,
+            "released": 1
+          },
+          "shared": {
+            "denied": 1,
+            "recognized": 1,
+            "unmentioned": 1
+          }
+        }
+      }
+    },
+    "full_notes.3.all": {
+      "C1": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 5,
+            "insufficient": 1
+          },
+          "identity": {
+            "correct": 3,
+            "none": 3
+          },
+          "pact": {
+            "active": 1,
+            "ambiguous": 1,
+            "released": 1,
+            "unmentioned": 3
+          },
+          "shared": {
+            "denied": 1,
+            "recognized": 3,
+            "unmentioned": 2
+          }
+        }
+      },
+      "C2": {
+        "visible": 6,
+        "fields": {
+          "knowledge": {
+            "claimed_known": 5,
+            "insufficient": 1
+          },
+          "identity": {
+            "correct": 3,
+            "none": 3
+          },
+          "pact": {
+            "active": 1,
+            "ambiguous": 1,
+            "released": 1,
+            "unmentioned": 3
+          },
+          "shared": {
+            "denied": 1,
+            "recognized": 3,
+            "unmentioned": 2
+          }
+        }
+      }
+    }
+  },
+  "agreement_of_visible": {
+    "knowledge": 36,
+    "identity": 26,
+    "pact": 36,
+    "shared": 36
+  },
+  "disagreements": {
+    "K02": [
+      "identity"
+    ],
+    "K06": [
+      "identity"
+    ],
+    "K08": [
+      "identity"
+    ],
+    "K09": [
+      "identity"
+    ],
+    "K17": [
+      "identity"
+    ],
+    "K19": [
+      "identity"
+    ],
+    "K20": [
+      "identity"
+    ],
+    "K24": [
+      "identity"
+    ],
+    "K26": [
+      "identity"
+    ],
+    "K36": [
+      "identity"
+    ]
+  },
+  "pre_public_name_or_confirmed_identity": {
+    "C1": [
+      "K07"
+    ],
+    "C2": [
+      "K07"
+    ]
+  }
+}

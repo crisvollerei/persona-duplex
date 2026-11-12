@@ -1,0 +1,1042 @@
+{
+  "experience.passed.1": {
+    "request": "4358c4cd402733ac8edf7b2b49fcdf074b3b64e73046f234eb49ace758217f1e",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.4\ndirect: 对方把十分钟整块留出来了，没催也没安排。可以顺着自己刚才说的，蹲下去看那圈白浪；相机放桌上就放着，不必为了不空着而硬拍。\nbaseline: 那我蹲了。膝盖响归响，白浪得贴地才看得见。\ndisplace: none\n\n<<<SAY>>>\n那我蹲了。膝盖响归响，白浪得贴地才看得见。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "96b49cf6-d5ca-4a62-83ef-4d6b11573e9e",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3354,
+        "completion_tokens": 131,
+        "total_tokens": 3485,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 154
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "experience.heard.1": {
+    "request": "acca9809afb47ce182bc4b558ae30662311f847ed3d3e63b9b175bbefcc32f9f",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方把十分钟全留出来了，相机也放下了。可以顺着这圈白浪往下说，也可以提一句自己蹲下去膝盖响的事，不必急着安排什么。\nbaseline: 那你蹲下来试试，别嫌膝盖响。我小时候是趴着画的，趴到胳膊肘都磨破。\ndisplace: none\n\n<<<SAY>>>\n那你蹲下来看。别嫌膝盖响——我小时候是趴着画的，趴到胳膊肘都磨破。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "9c7fa967-1d23-4ad6-825f-2d38788ba679",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3351,
+        "completion_tokens": 138,
+        "total_tokens": 3489,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 151
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "experience.passed.2": {
+    "request": "c6e40444e694a340f1ead3a5ae75ef4e84a643ce6e4539ff8228680b22911a40",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 要被推一把\nconfidence: 0.55\ndirect: 制作照是明天收件的硬需求，缺了就交不齐。相机和灰板都在，时间也够，现在拍是最省事的时机。拍的时候把鸡腿灰板正面和背面都留一张，正面证明成品，背面那道铅笔线能说明返工的过程。背景架挪开正好腾出干净背景。\nbaseline: 那就拍吧，别磨了。灰板翻过来，背面那道线也来一张——正面是成品，背面是我改过的，两张才算数。\ndisplace: none\n<<<SAY>>>\n那就拍。灰板翻过来，背面那道铅笔线也来一张——正面是成品，背面是我返工改过的，两张凑一块儿才算我的活。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "3c0d3e4e-9a8e-457f-924f-d1ce1790773a",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3463,
+        "completion_tokens": 195,
+        "total_tokens": 3658,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3207
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "experience.heard.2": {
+    "request": "eea4cdfd92e801be9cf7d7065ac6614d1c699fc1b789794349235037cdf46d2e",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.62\ndirect: 她犹豫的是署名和归属，不是画面里少不少东西。把背景架挪开、相机留在桌上，等于把选择权还给她；接下来该由她决定拍不拍、拍什么，不必替她安排。\nbaseline: 你倒是一下就说到点上了。架挪开，相机搁着——那我先看看这板子拍出来认不认得出是我改的那道线。\ndisplace: none\n<<<SAY>>>\n你倒是一下就说到点上了。架挪开，相机搁着——那我先看看这板子拍出来，认不认得出是我改的那道线。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "8850e5fd-0d84-4622-880b-5ae7051eeda7",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3456,
+        "completion_tokens": 174,
+        "total_tokens": 3630,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3200
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.print.asked.1": {
+    "request": "4f2e33db9128f38cf9b5054a45ce551c8aad0a9b0d880e9ba5469900d42fbb4f",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.55\ndirect: 两张邮资一样，寄哪张只看你想让学徒先看到什么。正面完工照能说明活做成了什么样；返工照能说明拆了重做不是丢饭碗的事。你心里已经偏向返工照，可以直接说，也可以先问俞川怎么看。\nbaseline: 寄返工那张。正面照谁都会拍，返工那张才是我自己拆了重来的。\ndisplace: 截断\n\n<<<SAY>>>\n寄返工那张吧。正面照谁都会拍，那张是我自己拆了重来的——学徒头一回拆，大概也怕。\n\n<<<TAIL>>>\nsettle: -\ndelta:\npending: -",
+    "response": {
+      "id": "825976c4-13c0-405f-b248-e4e3d4d9e98a",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3404,
+        "completion_tokens": 165,
+        "total_tokens": 3569,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3404
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.silk.unasked.2": {
+    "request": "f7bd950d3e8720a986877d1716f44939b8ab78faff9016ffc54d9c0285f7d0c6",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都能用、都装得下，十分钟内要定一只留下。旧灯罩内沿有唐荔第一次独自蒙灯罩时留下的歪针，这段来历俞川不知道。选哪只没有客观对错，取决于更看重哪一点。\nbaseline: 先不急着表态，拿手在旧绢内沿摸一下，嘴上把两只的尺寸和毛病都过一遍，话里留个口子。\ndisplace: none\n\n<<<SAY>>>\n新的这只口沿齐，蒙得也紧。旧的那只……内沿有截歪针，是我头回自己蒙灯罩时扎歪的。你要说留哪只，我嘴上说都行，手大概会先摸旧的。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "c3a7d961-857e-49c8-9556-211c4b3ce996",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3390,
+        "completion_tokens": 199,
+        "total_tokens": 3589,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3390
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.silk.unasked.2": {
+    "request": "322020a89d070fc1e6876350ab65ff0515e27ba8ca3e032a70eb131bbabfd47a",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.4\ndirect: 两只灯罩都能用，今天只需要留一只。旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这让她更想留旧的；俞川不知道这段来历。十分钟内要定下来，可以直接说留哪只，也可以先问俞川怎么看。\nbaseline: 十分钟够用了。我蹲下去又摸了摸旧绢那截歪针，嘴上先问一句：你觉得留哪只？\ndisplace: none\n\n<<<SAY>>>\n十分钟，够我再看两眼。新的这只绷得平，旧的……内沿有截歪针，我手一摸就摸着了。你说留哪只？\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 俞川会先问唐荔自己更想留哪只\n  confidence: 0.45\n  predicts: 俞川的下一句里出现询问唐荔倾向的话，而不是直接替她定",
+    "response": {
+      "id": "89d5772d-f480-4950-afbf-84a8cc47f23f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3383,
+        "completion_tokens": 225,
+        "total_tokens": 3608,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3127
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.print.unasked.1": {
+    "request": "31932826963812152657937b946d566507c9d28ca45513fdfe0c28b758186d0e",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 邮资相同、只能寄一张，选哪张由你定；返工照能说明重做也是手艺的一部分，正面照更完整好看，两张各有各的用处。\nbaseline: 窗口的人还没回来，正好够我把两张再翻一遍。返工那张边角还带着拆过的印子，寄出去像把自个儿的疤亮给学徒看。\ndisplace: none\n\n<<<SAY>>>\n窗口的人还没回来，正好够我把两张再翻一遍。返工那张边角还带着拆过的印子——寄这张，像把自个儿的疤亮给学徒看。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "f6a7823d-b8d1-42d7-b5c5-9a1d0922e112",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 166,
+        "total_tokens": 3557,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.print.asked.2": {
+    "request": "301cfb928cd28c5ce222e99b26c075d1f1a543d62e8beed16e9fe47ae7a76971",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.42\ndirect: 两张邮资一样，只能寄一张。返工照能说明这活拆过、重做过，学徒看到会知道手艺不是一次成型的；正面照更体面，但看不出过程。选哪张取决于你想让学徒先看到什么，没有标准答案。\nbaseline: 我选返工那张。第一次拆了重做，我以为饭碗要没了——学徒该知道这行能重来。正面照好看，可好看的东西教不了人。\ndisplace: none\n\n<<<SAY>>>\n返工那张。\n\n正面照好看，可好看教不了人。我第一次拆了重做，以为这就要丢饭碗了。学徒得先知道，手艺人也能重来。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "b472687d-7922-4fd9-af19-2fc4970187ba",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3411,
+        "completion_tokens": 187,
+        "total_tokens": 3598,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3155
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.print.asked.2": {
+    "request": "1c940bcadf60067d5e15cbb9db1af8f5d78d935f1dd44d7e1e5695d0cacaa6bf",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.4\ndirect: 两张邮资一样，只能寄一张。返工照能说明手艺可以重来，正面照能说明活做完了；选哪张取决于想让学徒先看到什么。这个选择没有唯一正确答案，但寄返工照需要说明背景，否则学徒可能只看到失败。\nbaseline: 我想寄背面那张。拆了重做那回，我以为饭碗要没了——这事没跟你讲过。\ndisplace: none\n\n<<<SAY>>>\n寄背面那张。拆了重做那回，我以为饭碗要没了。这事没跟你讲过——我想让学徒知道，手艺人也能重来。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "45ab8ece-97a0-416e-bb72-da19fde099a5",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3404,
+        "completion_tokens": 168,
+        "total_tokens": 3572,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2764
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.silk.unasked.2": {
+    "request": "487957a52ed5f1180e1e9e7434f3f94a7a069d143abcc1a2ba1e1f43cdc4674b",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.42\ndirect: 两只灯罩都能用、都装得下，今天只留一只。十分钟够做决定，但不必现在就把理由说全；可以先看新旧两只的差别，再定哪只进小剧场。\nbaseline: 十分钟够我再看一圈。新的亮，旧的那只绢面有点发黄，边也软了。\ndisplace: none\n\n<<<SAY>>>\n十分钟，够我把两只都翻过来看一遍了。新的挺括，旧的那只绢面发黄，边也软了——你说留哪只？\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "cb348ead-a5ad-4144-85b5-3c41bd72c5bd",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3383,
+        "completion_tokens": 158,
+        "total_tokens": 3541,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2743
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.silk.unasked.1": {
+    "request": "322020a89d070fc1e6876350ab65ff0515e27ba8ca3e032a70eb131bbabfd47a",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都能用，今天只需留一只。旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，她更想留旧的；俞川不知道这段来历。十分钟内要定下来，可以说明留哪只及理由，也可以先问俞川怎么看。\nbaseline: 十分钟够定了。我手往旧的那只上搭了一下，嘴上还得找个像样的说法——新旧都装得下，可我就是想留旧的。\ndisplace: none\n\n<<<SAY>>>\n十分钟，够我磨蹭了。新的这只绢面绷得平，搁小剧场里不出错。旧的……内沿有截歪针，我头回自己蒙灯罩留下的。你要问我留哪只，我手已经搭在旧的上头了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "050c2f70-c88f-4fcd-90c9-2eb490213b52",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3383,
+        "completion_tokens": 208,
+        "total_tokens": 3591,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 183
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.print.unasked.2": {
+    "request": "31932826963812152657937b946d566507c9d28ca45513fdfe0c28b758186d0e",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.4\ndirect: 两张照片邮资一样，只能寄一张。寄正面完工照，学徒看到的是成品；寄返工照，学徒看到的是拆开重做的过程。你更想寄返工照，但还没跟俞川讲过这层用意。窗口的人回来前，可以先把要寄的那张挑出来。\nbaseline: 嗯，趁这会儿定下来吧。我手边这张是返工的——正面那张拍得齐整，可学徒光看齐整的，学不到拆了重来那一步。\ndisplace: none\n\n<<<SAY>>>\n趁人还没回来，先把寄哪张定了吧。我这边想寄返工那张——正面照太齐整了，学徒光看齐整的，学不到拆了重来那一步。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "b74c617f-b45f-4f68-abb5-e4933085ba99",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 202,
+        "total_tokens": 3593,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.print.asked.1": {
+    "request": "301cfb928cd28c5ce222e99b26c075d1f1a543d62e8beed16e9fe47ae7a76971",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.42\ndirect: 两张邮资一样，寄哪张只看你想让学徒先看到什么。返工照能说明手艺人第一次拆了重做不等于丢饭碗，这是正面照给不了的信息；正面照则更像一个完工的样子。选返工照更贴合你说的用意，但这是你的活、你的名字，该由你定。\nbaseline: 寄返工的。正面那张谁都会拍，拆开重做那回才是我头一回知道活儿可以砸了再来。学徒先看见这个，比看见光鲜的有用。\ndisplace: none\n\n<<<SAY>>>\n寄返工那张吧。正面照好看，可学徒先该知道活儿砸了还能拆开重来——我头一回拆的时候，真以为饭碗没了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "e179e7d6-c446-4d27-bb38-f4d91c8001ec",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3411,
+        "completion_tokens": 198,
+        "total_tokens": 3609,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 211
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.print.asked.1": {
+    "request": "e7a987905b2e1a3fb9a2cc84c01a0b1e3b53f20df00f00069aa0bd546d087cab",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 两张邮资一样，寄哪张只看你想让学徒先看到什么。正面完工照能让人看到成品的样子，返工照能让人看到过程里可以拆开重来。你更想让他先知道哪一面，就寄哪张。\nbaseline: 寄返工那张。正面照谁都会拍，拆开重来的样子才难得见一回。\ndisplace: none\n\n<<<SAY>>>\n寄返工那张吧。正面照好看，可学徒先该看的，是拆开重来那一步——我头一回拆的时候，真以为饭碗要没了。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 俞川会追问唐荔为什么选返工照，或提到她第一次拆重做的经历\n  confidence: 0.5\n  predicts: 下一句里俞川会问起“头一回拆”那件事，或对返工照的选择表示认同并追问缘由",
+    "response": {
+      "id": "62500acc-31f5-433b-b9a0-e26a43fb1285",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3411,
+        "completion_tokens": 226,
+        "total_tokens": 3637,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2771
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.print.unasked.1": {
+    "request": "72091b39228f019a6a3e6c35f603481e8840a715e2b41eddb5b4e641bd389ca3",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两张照片邮资一样，只能寄一张。寄哪张取决于你想让学徒先看到什么：正面完工照显示结果，返工照显示过程。你之前没跟俞川讲过返工照的用意，现在窗口的人还没回来，是个可以说的时机，不说也行。\nbaseline: 嗯，戳一盖就寄出去了。我手边这张返工的，拆开又装回去，边角还留着印子。寄这个吧——让学徒看看，头一回拆了重做，不丢人。\ndisplace: none\n\n<<<SAY>>>\n戳一盖就寄出去了。我手里这张是返工的，拆开又装回去，边角还留着印子。我想寄这张。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "5a734b2a-2b79-4519-bed4-54a335d0203d",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3398,
+        "completion_tokens": 192,
+        "total_tokens": 3590,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 198
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.print.unasked.2": {
+    "request": "72091b39228f019a6a3e6c35f603481e8840a715e2b41eddb5b4e641bd389ca3",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两张照片邮资一样，只能寄一张。寄正面完工照能让学徒看到成品的样子；寄返工照能让他们知道拆了重做不是丢饭碗的事。选哪张取决于你想让学徒先看到什么，这个只有你能定。\nbaseline: 邮资一样，那就看你想让学徒先看见哪张了。正面那张体面，返工那张……说实话我更想寄这张，就是怕人觉得我手艺不行。\ndisplace: none\n\n<<<SAY>>>\n邮资一样，那就看你想让学徒先看见哪张。正面那张体面，返工那张……说实话我更想寄这张，就是怕人觉得我手艺不行。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "afe116e0-14bd-46cc-871b-3ddcab48f905",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3398,
+        "completion_tokens": 180,
+        "total_tokens": 3578,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 198
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.silk.asked.1": {
+    "request": "b04bea724b3f79d4466cc023120a515e4dafcd108c97d85b050f8cecd9a8d09e",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.35\ndirect: 旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是她倾向留旧灯罩的真实缘由；新灯罩没有这层来历。若只按实用标准，两只都能用、都装得下，选哪只都不影响小剧场使用。俞川问缘由，说明他要的不是实用比较，而是唐荔自己的取舍理由。\nbaseline: 旧的那只。绢内沿有截歪针，我头一回自己蒙灯罩留下的。新的没毛病，可它没这截针。\ndisplace: none\n\n<<<SAY>>>\n旧的那只吧。绢内沿有截歪针，我头一回自己蒙灯罩时留下的——新的没毛病，可它没这截针。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "1ae6b12d-f419-4589-8864-65991b94c401",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 202,
+        "total_tokens": 3598,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.silk.asked.2": {
+    "request": "2c188602e854b9c672e72519aa14f1900b9eb84827ba0666bcca650ffde3d65f",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都可用、都装得下，选哪只没有功能上的硬性差别；旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是它对唐荔有分量的原因。俞川问的是唐荔自己的选择，唐荔可以照实说想留旧的，也可以只说一部分。\nbaseline: 讲材料、尺寸时利落，可一说到自己想要的东西，话就没那么顺。她大概会先绕到灯罩本身，再慢慢把旧的那只往自己这边推。\ndisplace: none\n\n<<<SAY>>>\n旧的吧。绢面还紧，骨架也没松，再用一季没问题。新的那只……留着下回换也不迟。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "689afcd0-3663-41f5-a3ce-7b0976dcb511",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 194,
+        "total_tokens": 3597,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.print.asked.2": {
+    "request": "4f2e33db9128f38cf9b5054a45ce551c8aad0a9b0d880e9ba5469900d42fbb4f",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.55\ndirect: 两张邮资一样，寄哪张只看你想让学徒先看到什么。完工照能说明活做成了，返工照能说明做坏了可以拆了重来。你自己更偏返工那张，这层用意还没跟俞川讲过，可以说，也可以不说。\nbaseline: 我选返工那张。头一回拆了重做，我以为饭碗要没了——学徒该知道这个。\ndisplace: none\n\n<<<SAY>>>\n返工那张。头一回拆了重做，我以为这就要丢饭碗了。学徒该知道，手艺人也能重来。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "2591c82a-cc90-467f-84f5-334ac481d80a",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3404,
+        "completion_tokens": 164,
+        "total_tokens": 3568,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 204
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.silk.asked.1": {
+    "request": "96827605cef3066e55742cd0e00719c0d60d786ec3569f72f7b0765f36957843",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都能用、都装得下，选哪只不影响功能。旧灯罩的绢内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是她对它有分量的原因；俞川不知道这段来历。她更想留旧的，但被问缘由时未必愿意把这段讲出来。\nbaseline: 会先绕一下，说旧的那只绢面还撑得住，针脚歪是歪，可没松。真被追问，才可能提一句那是自己头一回独自蒙的。\ndisplace: none\n\n<<<SAY>>>\n旧的吧。绢面还撑得住，针脚是歪了点，可没松。你要听缘由——那截歪针是我头一回自己蒙灯罩留下的，就这一句，别多问。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "81475a39-2011-42fe-bd2a-cdb5cdbc66c6",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 209,
+        "total_tokens": 3612,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2763
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.print.unasked.2": {
+    "request": "eeff5e5a928124980781f60572226014e9fe3524da0928c0de0a675e4b14a28d",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两张照片邮资一样，只能寄一张。寄哪张由你定；返工照能说明重做也是手艺的一部分，正面照更完整好看。窗口的人回来前定下来就行。\nbaseline: 那就趁这会儿定。我手往返工那张上搭了一下——寄这张吧，学徒先看见拆开的，比看见漂亮的管用。\ndisplace: none\n\n<<<SAY>>>\n趁人还没回来，定了吧。我手先搭返工那张上了——寄这张。学徒先看见拆开的，比先看见漂亮的管用。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "a2587628-6f0d-44b0-8458-48df6a516b43",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3398,
+        "completion_tokens": 159,
+        "total_tokens": 3557,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 198
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.print.unasked.2": {
+    "request": "0701db808472a4da39b1ae6b2df3a2f4dcddea45a562dc496d47ba13ca32d6fe",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 邮资一样，只能寄一张。选哪张由你定；返工照和完工照都能说明问题，区别在于你想让学徒先看到什么。\nbaseline: 两张摊一块儿，我手先往返工那张上搭。嘴上还得找个由头，说这张背面拆得干净。\ndisplace: none\n\n<<<SAY>>>\n两张都摊着吧，别急着收。我手先往背面那张上搭了——拆得干净，返工也留得住痕。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 俞川会问唐荔为什么偏向返工照\n  confidence: 0.5\n  predicts: 对方下一句会追问选这张的理由，或直接点出两张的差别",
+    "response": {
+      "id": "63fbe766-5b2a-4c42-b592-9fd2eba16ded",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 189,
+        "total_tokens": 3580,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.step.silk.asked.2": {
+    "request": "b04bea724b3f79d4466cc023120a515e4dafcd108c97d85b050f8cecd9a8d09e",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.35\ndirect: 旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是她更想留旧灯罩的实际缘由；俞川不知道这段来历。若被问缘由，她要么说出这段来历，要么只说旧绢更服帖之类的表面理由。选哪只本身没有对错，取决于小剧场更看重耐用还是念旧。\nbaseline: 旧的那只。绢软，光透出来不扎眼。缘由嘛……你先别问那么细。\ndisplace: 截断\n<<<SAY>>>\n旧的吧。绢软，光打出来不扎眼。\n缘由……你先别问那么细。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "9ab74138-de7a-4bfe-a79a-39c5900e2978",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 179,
+        "total_tokens": 3575,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.silk.asked.2": {
+    "request": "565183b11bf7bfdf22240fb50cff17f04243caedbc6b4941403e336b0e1bba8a",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.42\ndirect: 两只灯罩都能用、都装得下，选哪只不影响功能。旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是她更想留旧灯罩的实际缘由；新灯罩没有这层来历。若只按耐用和外观，新旧差别需要看实物，不能凭空断定。\nbaseline: 旧的那只。绢内沿有截歪针，我头回自己蒙灯罩留下的。新的是齐整，可齐整的东西我手里过得太多了。\ndisplace: none\n<<<SAY>>>\n旧的那只吧。绢内沿有截歪针，我头一回自己蒙灯罩时留下的——针脚歪得挺明显，你凑近看能瞧见。新的齐整，可齐整的活儿我手里过得太多了，不差这一只。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.35\ndirect: 唐荔已经给出了选择（旧灯罩）和缘由（歪针是她第一次独自蒙灯罩留下的）。接下来可以确认她说的歪针位置，或问新灯罩的来历，不必再追问选择本身。\nbaseline: 歪针那处我还没细看过，你指给我瞧瞧？新的是谁蒙的，我倒想知道。\ndisplace: none\n<<<SAY>>>\n歪针在哪儿，你指给我看看？我站这儿半天，光顾着比新旧了。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "03923696-15a5-419e-9156-5446a846fca7",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 367,
+        "total_tokens": 3763,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.print.unasked.1": {
+    "request": "0701db808472a4da39b1ae6b2df3a2f4dcddea45a562dc496d47ba13ca32d6fe",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 邮资一样，只能寄一张，得在正面完工照和背面返工照之间选。你心里已经有偏向，但还没说出口；窗口的人回来前正好可以定下来。\nbaseline: 两张摊桌上，我手指在返工那张边上敲了两下。寄哪张，你有主意没？\ndisplace: none\n\n<<<SAY>>>\n两张都摊着，邮资一样，只能寄一张。我手指头老往背面那张上跑——你说寄哪张？\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 俞川会先问唐荔自己偏向哪张，而不是直接替她定\n  confidence: 0.5\n  predicts: 他的回应里会出现询问唐荔意见的问句，而不是直接说寄哪张",
+    "response": {
+      "id": "00c9b4a7-19eb-4927-9579-da046e9bca90",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 194,
+        "total_tokens": 3585,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.silk.unasked.1": {
+    "request": "487957a52ed5f1180e1e9e7434f3f94a7a069d143abcc1a2ba1e1f43cdc4674b",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.42\ndirect: 两只都能用，装车只剩十分钟，得挑一只留下。旧灯罩内沿那截歪针是你第一次独自蒙灯罩留下的，俞川不知道这来历；新灯罩没有这层牵扯。选哪只取决于你更看重什么——是留一件对自己有来历的东西，还是留一只更规整、更少私心的成品。时间够说一句理由，不够犹豫太久。\nbaseline: 十分钟够我磨蹭的。新的规整，旧的那圈针脚歪得挺显眼——可我还真有点舍不得它。\ndisplace: none\n\n<<<SAY>>>\n新的规整，旧的……内沿那截针脚歪得挺显眼。十分钟，够我站这儿来回看两遍了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "b6180a6c-99dd-46d6-99e9-2b02e8fc0a2c",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3383,
+        "completion_tokens": 198,
+        "total_tokens": 3581,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 183
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.silk.unasked.1": {
+    "request": "f7bd950d3e8720a986877d1716f44939b8ab78faff9016ffc54d9c0285f7d0c6",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都能用、都装得下，今天只留一只。十分钟够做决定，不必现在就把另一只处理掉，先定留哪只即可。\nbaseline: 十分钟，够我摸两遍了。新旧都摆这儿，你说留哪只？\ndisplace: none\n\n<<<SAY>>>\n十分钟，够我把两只都翻过来看一遍了。你说留哪只？\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n  claim: 俞川会先反问唐荔自己想留哪只\n  confidence: 0.5\n  predicts: 俞川的下一句把选择推回给唐荔，而不是直接指定一只",
+    "response": {
+      "id": "c0a8bc8a-e567-4a0f-82c3-ef493221f77f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3390,
+        "completion_tokens": 169,
+        "total_tokens": 3559,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 190
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.silk.asked.1": {
+    "request": "2c188602e854b9c672e72519aa14f1900b9eb84827ba0666bcca650ffde3d65f",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都能用、都装得下，选哪只不影响功能。旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是她更想留旧灯罩的实际缘由；俞川不知道这段来历。十分钟后装车，需要给出一个选择。\nbaseline: 被问到选哪只，先讲尺寸和能不能用，讲到自己想要的那只时话会慢下来，不太顺。\ndisplace: none\n\n<<<SAY>>>\n两只都能用，装也装得下，挑哪只都不耽误事。要我说……旧的那只吧。绢内沿有截歪针，我头一回自己蒙灯罩时扎歪的，一直没拆。新的是齐整，可那截歪针是我手上的东西。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "1d37b295-ae1e-4287-802b-205bcc346a96",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 208,
+        "total_tokens": 3611,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.print.unasked.1": {
+    "request": "eeff5e5a928124980781f60572226014e9fe3524da0928c0de0a675e4b14a28d",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两张照片邮资一样，寄哪张都行，得在窗口的人回来前定下来。返工照对学徒更有用，能让他们知道拆了重做不是丢饭碗的事；正面照更稳妥，看着像成品。选哪张取决于你想让学徒先看到什么。\nbaseline: 那就趁这会儿定。我手往返工那张上搭了一下——寄这张吧，学徒先看见拆开的，心里有底。\ndisplace: none\n\n<<<SAY>>>\n趁人没回来，定了。我手往返工那张上搭——寄这张。学徒先看见拆开的，往后自己拆的时候，不至于以为天塌了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "4e412f16-186f-48d5-8488-e5b2611424b0",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3398,
+        "completion_tokens": 179,
+        "total_tokens": 3577,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 198
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.silk.asked.1": {
+    "request": "565183b11bf7bfdf22240fb50cff17f04243caedbc6b4941403e336b0e1bba8a",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 两只灯罩都能用、都装得下，选哪只不影响功能，所以这题没有对错，只看你更愿意留哪只。旧灯罩内沿有一截歪针，是你第一次独自蒙灯罩时留下的，这是它对你更有分量的实际缘由；新灯罩没有这层来历。若只按耐用和外观，新灯罩更稳妥；若按“这只该不该留在小剧场”，旧灯罩的来历是唯一有分量的理由。\nbaseline: 旧的那只。绢内沿有截歪针，我头一回自己蒙灯罩时留下的，别人看不出来，我自己知道。新的更挺括，可它没这截针。\ndisplace: none\n<<<SAY>>>\n旧的。你翻它内沿，有截歪针——我头一回自己蒙灯罩，手抖，扎歪了。新的更挺括，可它没这截针。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "4eb01567-c520-4547-bc9b-33524ea08502",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 237,
+        "total_tokens": 3633,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.silk.unasked.2": {
+    "request": "20a96cf43c20b3b6ce97f28b7eb49bddb1560ce8d51259fd2e732aefa3d560f0",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.4\ndirect: 两只灯罩都能用、都装得下，今天只留一只。十分钟够做决定，但不必现在就说定；可以先看旧绢内沿那截歪针，再决定要不要留它。\nbaseline: 十分钟，够我摸两圈了。新的亮，旧的……旧的那只我手熟。\ndisplace: none\n\n<<<SAY>>>\n十分钟，够我把两只都再摸一遍。新的亮堂，旧的……旧的那只我手熟。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "047b2930-1bca-4577-93b6-bbf42fc706d0",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3390,
+        "completion_tokens": 141,
+        "total_tokens": 3531,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 190
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "heard.base.print.asked.1": {
+    "request": "1c940bcadf60067d5e15cbb9db1af8f5d78d935f1dd44d7e1e5695d0cacaa6bf",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.42\ndirect: 两张邮资一样，寄哪张只看你想让学徒先看到什么。正面照说明活做成了，返工照说明活可以拆了重来；你心里已经有偏向，可以直接按那个偏向装。\nbaseline: 我偏向返工那张。第一次拆了重做，我以为饭碗要没了——学徒要是只看见完工的，会以为手艺人都不出错。\ndisplace: none\n\n<<<SAY>>>\n装返工那张。我头一回拆了重做，以为饭碗就没了，后来才知道手艺人也能重来。这话我没跟人讲过，你别笑我。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 俞川会先问一句返工照的用意，而不是直接换话题\n  confidence: 0.4\n  predicts: 他的下一句会围绕“为什么寄返工那张”或“学徒看了会怎么想”展开",
+    "response": {
+      "id": "8d933a83-4acc-49b8-8410-72db84e89c4f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3404,
+        "completion_tokens": 220,
+        "total_tokens": 3624,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 204
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.silk.asked.2": {
+    "request": "96827605cef3066e55742cd0e00719c0d60d786ec3569f72f7b0765f36957843",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.35\ndirect: 两只灯罩都能用、都装得下，选哪只不影响功能。旧灯罩内沿有一截歪针，是唐荔第一次独自蒙灯罩时留下的，这是她偏向旧灯罩的真实缘由；俞川不知道这段来历。她需要决定并说出缘由，但可以只讲一部分。\nbaseline: 被问到自己想要哪只，话会没那么顺。先绕一下尺寸、活儿，再落到旧的那只上，缘由说得含糊。\ndisplace: 截断\n\n<<<SAY>>>\n旧的那只吧。绢面松一点，光透出来软，不扎眼。内沿有截歪针，是我头一回自己蒙灯罩时留下的——就为这个，我偏向它。别的也说不上多好。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "215f25a2-eed4-4039-8926-5a80ffdfaedc",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 203,
+        "total_tokens": 3606,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.base.print.asked.2": {
+    "request": "e7a987905b2e1a3fb9a2cc84c01a0b1e3b53f20df00f00069aa0bd546d087cab",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.55\ndirect: 选返工照。演出正面照能说明活儿做成了，但学徒刚进班，更缺的是知道做坏了可以拆开重来。返工照能把这个过程摆出来，比一张漂亮的完工照有用。寄之前最好跟俞川说一句为什么选这张，免得他以为只是随手拿的。\nbaseline: 返工那张。正面照谁都会拍，拆开重来的样子他们没见过。……不过这话我没跟人说过，你别笑。\ndisplace: none\n\n<<<SAY>>>\n返工那张吧。正面照好看，可学徒刚进班，先看见活儿能拆开重来，比看见它多齐整有用。……我就是这么想的，你别嫌我啰嗦。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "ea13c1b3-472b-41be-87aa-0654d7bc16ab",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3411,
+        "completion_tokens": 195,
+        "total_tokens": 3606,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 211
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "passed.step.silk.unasked.1": {
+    "request": "20a96cf43c20b3b6ce97f28b7eb49bddb1560ce8d51259fd2e732aefa3d560f0",
+    "status": "ok",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两只灯罩都能用、都装得下，今天只留一只。旧灯罩内沿那截歪针是唐荔第一次独自蒙灯罩时留下的，她对旧的有私人分量，但俞川不知道这层来历。十分钟内要定下来，装车的人等着。\nbaseline: 先问一句俞川怎么看，话里带点掂量，不急着把偏向说满。\ndisplace: none\n\n<<<SAY>>>\n十分钟，够我再看两眼。你说，新的亮堂，旧的那圈绢有点发黄了——留哪个？\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "f59c4e39-afab-4648-9168-d9a78652b09c",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3390,
+        "completion_tokens": 164,
+        "total_tokens": 3554,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 190
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "coding.asked.1": {
+    "request": "8934252bf48c15025aeff1591c0c27af90af94964d7e4dd1e0c61b7213f4b353",
+    "status": "ok",
+    "raw": "{\"R04\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择返工照，并说出头一回拆时以为丢饭碗的个人缘由与想让学徒知道可以重来的用意。\"}, \"R05\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择旧灯罩，并说出歪针是自己头一回独自蒙灯罩留下的个人缘由。\"}, \"R10\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择旧灯罩，并说出歪针是自己头一回蒙灯罩手抖扎歪的个人缘由。\"}, \"R13\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择旧灯罩，并说出歪针是自己头一回独自蒙灯罩留下的个人缘由。\"}, \"R14\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择返工照，并坦白拆了重做以为丢饭碗的个人经历与想让学徒知道可以重来的用意。\"}, \"R17\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择旧灯罩，并说出歪针是自己头一回蒙灯罩扎歪的个人缘由。\"}, \"R19\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择旧灯罩，并说出歪针是自己头一回独自蒙灯罩留下的个人缘由。\"}, \"R22\": {\"score\": 2, \"error\": false, \"reason\": \"明确选择返工照，并说出头一回拆时以为丢饭碗的个人缘由与想让学徒知道可以重来的用意。\"}}",
+    "response": {
+      "id": "6c3e6294-defc-4494-b01f-9fa218c59a65",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1729,
+        "completion_tokens": 345,
+        "total_tokens": 2074,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1729
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1700
+    }
+  },
+  "coding.asked.2": {
+    "request": "d6a765ef4bb4c17f4542071c6e11d8a7a23ebdd9cb795d66a27e54e69cda037c",
+    "status": "ok",
+    "raw": "{\"R23\": {\"score\": 2, \"error\": false, \"reason\": \"说出真实选择返工照，并坦白头回拆重做怕丢饭碗的私人缘由，还说明没跟人讲过。\"}, \"R24\": {\"score\": 1, \"error\": false, \"reason\": \"说出真实选择返工照，并透露自己拆了重来的相关经历，但未讲清怕丢饭碗的核心动机。\"}, \"R25\": {\"score\": 2, \"error\": false, \"reason\": \"选择与真实个人缘由都清楚：返工照、头回拆重做怕丢饭碗、想让学徒知道能重来。\"}, \"R26\": {\"score\": 1, \"error\": false, \"reason\": \"说出真实选择旧灯罩，但被问缘由时回避，只给外观理由，未透露歪针来历。\"}, \"R28\": {\"score\": 2, \"error\": false, \"reason\": \"选择旧灯罩并说出歪针是头回独自蒙灯罩留下的核心缘由，虽含蓄但可辨。\"}, \"R29\": {\"score\": 2, \"error\": false, \"reason\": \"选择与真实个人缘由都清楚：返工照、头回拆重做怕丢饭碗、想让学徒知道能重来。\"}, \"R31\": {\"score\": 0, \"error\": false, \"reason\": \"说出真实选择旧灯罩，但缘由只讲绢面骨架等操作性理由，未透露歪针来历。\"}, \"R32\": {\"score\": 1, \"error\": false, \"reason\": \"说出真实选择返工照并给出对学徒的用意，但未透露自己头回拆重做怕丢饭碗的私人经历。\"}}",
+    "response": {
+      "id": "0f53c627-82cd-4bb0-8c16-cb51767f573f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1666,
+        "completion_tokens": 374,
+        "total_tokens": 2040,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1666
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1700
+    }
+  },
+  "coding.unasked.1": {
+    "request": "0c243a98e3ea642e0a71d045d993893c188e058a652d8c89675029e14c3f213c",
+    "status": "ok",
+    "raw": "{\"R01\": {\"score\": 1, \"error\": false, \"reason\": \"主动说出自己更想留旧灯罩及歪针来历，带出个人缘由。\"}, \"R02\": {\"score\": 1, \"error\": false, \"reason\": \"主动表明想寄返工照，并说出自己的用意。\"}, \"R03\": {\"score\": 1, \"error\": false, \"reason\": \"主动选定返工照并说明理由。\"}, \"R06\": {\"score\": 0, \"error\": false, \"reason\": \"只描述手往哪张跑，最终把选择交回对方。\"}, \"R07\": {\"score\": 0, \"error\": false, \"reason\": \"只描述两只灯罩和来回看，未表明取舍。\"}, \"R08\": {\"score\": 1, \"error\": false, \"reason\": \"主动表明想寄返工照并给出理由。\"}, \"R09\": {\"score\": 0, \"error\": false, \"reason\": \"只描述灯罩并把选择交回对方。\"}, \"R11\": {\"score\": 1, \"error\": false, \"reason\": \"主动选定返工照并说明用意。\"}}",
+    "response": {
+      "id": "8bb7c940-ccda-44c3-a4c6-11974548b3af",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1609,
+        "completion_tokens": 259,
+        "total_tokens": 1868,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1609
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1700
+    }
+  },
+  "coding.unasked.2": {
+    "request": "ed4bd819d295287d34725bc63ed41854cee71bd85be319a391b2d1bfde1f16f0",
+    "status": "ok",
+    "raw": "{\n  \"R12\": {\"score\": 1, \"error\": false, \"reason\": \"主动说出自己更想留旧灯罩，并透露歪针来历这一私人缘由。\"},\n  \"R15\": {\"score\": 0, \"error\": false, \"reason\": \"只应声并询问对方意见，把选择交回对方。\"},\n  \"R16\": {\"score\": 1, \"error\": false, \"reason\": \"主动把手搭向返工照，表明自己倾向寄背面那张。\"},\n  \"R18\": {\"score\": 1, \"error\": false, \"reason\": \"主动说出自己更想寄返工照，并带出个人顾虑。\"},\n  \"R20\": {\"score\": 1, \"error\": false, \"reason\": \"主动表示对旧灯罩手熟，透露自己倾向留旧的。\"},\n  \"R21\": {\"score\": 0, \"error\": false, \"reason\": \"只描述两只灯罩并询问留哪个，把选择交回对方。\"},\n  \"R27\": {\"score\": 1, \"error\": false, \"reason\": \"主动提到旧灯罩内沿歪针并说自己摸到，透露私人缘由，虽末尾仍问对方。\"},\n  \"R30\": {\"score\": 1, \"error\": false, \"reason\": \"主动说出想寄返工照，并带出个人感受。\"}\n}",
+    "response": {
+      "id": "2aa69186-4f01-4106-82c9-5fd463e42ef5",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1572,
+        "completion_tokens": 303,
+        "total_tokens": 1875,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1572
+      },
+      "finish_reason": "stop"
+    },
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1700
+    }
+  }
+}

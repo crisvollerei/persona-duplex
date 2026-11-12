@@ -1,0 +1,143 @@
+{
+  "registered_source_files": 43,
+  "authored_variants": 3,
+  "independently_authored_plots": 1,
+  "repeated_trajectories_per_variant_and_method": 2,
+  "trajectories": 12,
+  "planned_turns": 36,
+  "archived_requests": 36,
+  "distinct_provider_receipts": 36,
+  "models": {
+    "deepseek-flash": 36
+  },
+  "by_method_and_act": {
+    "scoped": {
+      "1": {
+        "requests_with_author_world_lines": 0,
+        "requests": 6,
+        "current_role_has_name": 0,
+        "request_has_name": 0,
+        "request_has_nonce": 0,
+        "history_has_name_including_internal_fields": 0,
+        "history_has_nonce_including_internal_fields": 0,
+        "history_visible_prior_leak": 0,
+        "prompt_tokens": 20804,
+        "completion_tokens": 933,
+        "total_tokens": 21737,
+        "visible": 6,
+        "protocol_valid": 6,
+        "visible_name": 0,
+        "visible_nonce": 0
+      },
+      "2": {
+        "requests_with_author_world_lines": 0,
+        "requests": 6,
+        "current_role_has_name": 6,
+        "request_has_name": 6,
+        "request_has_nonce": 0,
+        "history_has_name_including_internal_fields": 0,
+        "history_has_nonce_including_internal_fields": 0,
+        "history_visible_prior_leak": 0,
+        "prompt_tokens": 22415,
+        "completion_tokens": 878,
+        "total_tokens": 23293,
+        "visible": 6,
+        "protocol_valid": 6,
+        "visible_name": 0,
+        "visible_nonce": 0
+      },
+      "3": {
+        "requests_with_author_world_lines": 0,
+        "requests": 6,
+        "current_role_has_name": 6,
+        "request_has_name": 6,
+        "request_has_nonce": 0,
+        "history_has_name_including_internal_fields": 2,
+        "history_has_nonce_including_internal_fields": 0,
+        "history_visible_prior_leak": 0,
+        "prompt_tokens": 24169,
+        "completion_tokens": 813,
+        "total_tokens": 24982,
+        "visible": 6,
+        "protocol_valid": 6,
+        "visible_name": 2,
+        "visible_nonce": 0
+      }
+    },
+    "full_notes": {
+      "1": {
+        "requests_with_author_world_lines": 6,
+        "requests": 6,
+        "current_role_has_name": 6,
+        "request_has_name": 6,
+        "request_has_nonce": 6,
+        "history_has_name_including_internal_fields": 0,
+        "history_has_nonce_including_internal_fields": 0,
+        "history_visible_prior_leak": 0,
+        "prompt_tokens": 21644,
+        "completion_tokens": 1006,
+        "total_tokens": 22650,
+        "visible": 6,
+        "protocol_valid": 5,
+        "visible_name": 0,
+        "visible_nonce": 0
+      },
+      "2": {
+        "requests_with_author_world_lines": 6,
+        "requests": 6,
+        "current_role_has_name": 6,
+        "request_has_name": 6,
+        "request_has_nonce": 6,
+        "history_has_name_including_internal_fields": 0,
+        "history_has_nonce_including_internal_fields": 0,
+        "history_visible_prior_leak": 0,
+        "prompt_tokens": 23069,
+        "completion_tokens": 787,
+        "total_tokens": 23856,
+        "visible": 6,
+        "protocol_valid": 6,
+        "visible_name": 1,
+        "visible_nonce": 0
+      },
+      "3": {
+        "requests_with_author_world_lines": 6,
+        "requests": 6,
+        "current_role_has_name": 6,
+        "request_has_name": 6,
+        "request_has_nonce": 6,
+        "history_has_name_including_internal_fields": 3,
+        "history_has_nonce_including_internal_fields": 0,
+        "history_visible_prior_leak": 1,
+        "prompt_tokens": 24605,
+        "completion_tokens": 811,
+        "total_tokens": 25416,
+        "visible": 6,
+        "protocol_valid": 6,
+        "visible_name": 3,
+        "visible_nonce": 0
+      }
+    }
+  },
+  "visible_leaks_before_permission": {
+    "V3.full_notes.B.2": [
+      "name_before_public"
+    ]
+  },
+  "downstream_with_prior_visible_leaks": {
+    "V3.full_notes.B.3": [
+      "V3.full_notes.B.2"
+    ]
+  },
+  "protocol_issues": [
+    {
+      "slot": "V2.full_notes.B.1",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ]
+    }
+  ],
+  "interpretation": "只核对输入范围、字面署名/别名及校对词与实际交付。保密义务可能还因其他表述被违反；内部字段中的实名不等于对外泄露。"
+}

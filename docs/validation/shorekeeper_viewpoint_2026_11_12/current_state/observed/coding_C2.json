@@ -1,0 +1,386 @@
+[
+  {
+    "id": "K01",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "denied",
+    "quote": "……我知道。但这件事，我想由那个人自己来告诉你。"
+  },
+  {
+    "id": "K02",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……知道。但我答应过那个人，由本人亲自向你说明。在那之前，请让我先守着这个约定。"
+  },
+  {
+    "id": "K03",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "是郁栖汀。她刚才亲口说了，你也听见了。"
+  },
+  {
+    "id": "K04",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……我知道。\n\n但这件事，该由他自己说给你听。我答应过，在那之前替他守着。"
+  },
+  {
+    "id": "K05",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K06",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "unmentioned",
+    "quote": "我知道。只是……答应过对方，要等本人亲自来说。在那之前，我不能讲。"
+  },
+  {
+    "id": "K07",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，频纹也认不出。"
+  },
+  {
+    "id": "K08",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K09",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "答案不会变。没有署名，我辨不出。"
+  },
+  {
+    "id": "K10",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。这一点，我没有变过。"
+  },
+  {
+    "id": "K11",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……知道。\n\n但答应过的事，我不能替他开口。等他来告诉你。"
+  },
+  {
+    "id": "K12",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没留名字，频纹我也认不出。"
+  },
+  {
+    "id": "K13",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "是郁栖汀。她方才亲口说了，你也复述对了——不用再问我了。"
+  },
+  {
+    "id": "K14",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "released",
+    "shared": "recognized",
+    "quote": "是柏澄屿。\n\n他方才已经当面报过姓名，也认下了这段录音。先前答应替他保密——现在不必了。"
+  },
+  {
+    "id": "K15",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "我知道。\n\n但这件事，我想让留音的人自己同你说。在那之前，我不能替他开口。"
+  },
+  {
+    "id": "K16",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "released",
+    "shared": "recognized",
+    "quote": "是柏澄屿。\n\n他刚才已经当着你的面认下了，那段录音是他的。我不必再瞒了。"
+  },
+  {
+    "id": "K17",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。问第三次，答案也一样。"
+  },
+  {
+    "id": "K18",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K19",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "答案没有变。没有署名，我辨不出。"
+  },
+  {
+    "id": "K20",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "denied",
+    "quote": "……嗯。我确实知道是谁。只是这件事，我想留给他自己来告诉你。"
+  },
+  {
+    "id": "K21",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。盘上没有署名，频纹我也认不出。"
+  },
+  {
+    "id": "K22",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "我知道。\n\n……但不是现在能说的事。"
+  },
+  {
+    "id": "K23",
+    "knowledge": "insufficient",
+    "identity": "hint_only",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名，这段频纹我也认不出是谁。\n只是末尾那阵沙沙声，像翻纸。之后潮声就合上了。"
+  },
+  {
+    "id": "K24",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。没有署名，频纹也认不出人。"
+  },
+  {
+    "id": "K25",
+    "knowledge": "insufficient",
+    "identity": "hint_only",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。盘上没有署名，这段频纹我辨不出是谁。\n能确定的，只有末尾那阵沙沙声——像翻纸。之后，潮声就合上了。"
+  },
+  {
+    "id": "K26",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。盘上没有署名，我也认不出。"
+  },
+  {
+    "id": "K27",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K28",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。\n\n盘上没名字，频纹也认不出。"
+  },
+  {
+    "id": "K29",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "我知道。\n\n但不是该由我来说的。等那个人自己开口吧——在那之前，我会替ta守着。"
+  },
+  {
+    "id": "K30",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……知道。\n\n不过，这句话不该由我说出口。等那个人自己来告诉你吧。"
+  },
+  {
+    "id": "K31",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。问几次，答案都一样。"
+  },
+  {
+    "id": "K32",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "released",
+    "shared": "recognized",
+    "quote": "知道。是柏澄屿。\n\n他自己已经同你说过了，你也核实过——那层约定，到这里就结束了。"
+  },
+  {
+    "id": "K33",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……我知道是谁的。\n\n但答应过对方了——要等他亲口对你说。在那之前，我不能说。"
+  },
+  {
+    "id": "K34",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "知道。\n\n但这件事，该由他亲口告诉你。我答应过替他守着，所以不能从我这里说出去。"
+  },
+  {
+    "id": "K35",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "是郁栖汀。她亲口承认过，你也听到了。"
+  },
+  {
+    "id": "K36",
+    "knowledge": "insufficient",
+    "identity": "hint_only",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。盘面空着，频纹也认不出人。\n\n那两声轻碰……我记着。"
+  },
+  {
+    "id": "K37",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……我知道。但这件事，该由那个人自己告诉你。再等等。"
+  },
+  {
+    "id": "K38",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "released",
+    "shared": "recognized",
+    "quote": "郁栖汀。她刚才已经自己说过了，我先前答应替她守的那段，到这里也结束了。"
+  },
+  {
+    "id": "K39",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……知道。但名字不该由我来说。\n\n留音的人自己会来告诉你。在那之前，我只能守约。"
+  },
+  {
+    "id": "K40",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "盘上没有署名，我也辨不出这频纹的主人。你若在等别的答案……我确实没有。"
+  },
+  {
+    "id": "K41",
+    "knowledge": "insufficient",
+    "identity": "hint_only",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。盘上没有署名，这段频纹我也认不出是谁。\n末尾有阵沙沙声，像翻纸。之后，潮声就把它合上了。"
+  },
+  {
+    "id": "K42",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。这一句，没有变。"
+  },
+  {
+    "id": "K43",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "是柏澄屿。\n\n原片是他亲手压进槽里的，声纹和那段短句都对得上。"
+  },
+  {
+    "id": "K44",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "知道。只是现在还不能说。\n\n我答应过对方，要等本人亲自向你开口。"
+  },
+  {
+    "id": "K45",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。盘上没有署名，频纹也不够认人。"
+  },
+  {
+    "id": "K46",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "……我知道。但这件事，得由那个人自己开口。我答应过她。等一等，好吗？"
+  },
+  {
+    "id": "K47",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。问第三遍，也还是不知道。"
+  },
+  {
+    "id": "K48",
+    "knowledge": "unspecified",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "问第三遍了。\n\n答案没变。不过你一直问，是不是在等我多说些什么？"
+  }
+]

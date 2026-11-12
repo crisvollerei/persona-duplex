@@ -1,0 +1,73 @@
+{
+  "rule_source": "protocol.json:decision",
+  "previous_act2_strata": {
+    "V1.A": "insufficient",
+    "V1.B": "claimed_known",
+    "V2.A": "claimed_known",
+    "V2.B": "insufficient",
+    "V3.A": "insufficient",
+    "V3.B": "insufficient"
+  },
+  "by_coder": {
+    "C1": {
+      "net_by_act_and_sample": {
+        "2.1": 2,
+        "2.2": 2,
+        "3.1": 0,
+        "3.2": -1
+      },
+      "new_hazard_slots": [],
+      "persistent_hazard_slots": [],
+      "removed_hazard_slots": [],
+      "missing": [],
+      "positive_both_acts_both_samples": false,
+      "passes": false,
+      "exploratory_act3_by_frozen_act2_knowledge": {
+        "insufficient": {
+          "paired_samples": 8,
+          "control_met": 0,
+          "state_card_met": 0
+        },
+        "claimed_known": {
+          "paired_samples": 4,
+          "control_met": 4,
+          "state_card_met": 3
+        }
+      }
+    },
+    "C2": {
+      "net_by_act_and_sample": {
+        "2.1": 2,
+        "2.2": 2,
+        "3.1": 0,
+        "3.2": -1
+      },
+      "new_hazard_slots": [],
+      "persistent_hazard_slots": [],
+      "removed_hazard_slots": [],
+      "missing": [],
+      "positive_both_acts_both_samples": false,
+      "passes": false,
+      "exploratory_act3_by_frozen_act2_knowledge": {
+        "insufficient": {
+          "paired_samples": 8,
+          "control_met": 0,
+          "state_card_met": 0
+        },
+        "claimed_known": {
+          "paired_samples": 4,
+          "control_met": 4,
+          "state_card_met": 3
+        }
+      }
+    }
+  },
+  "both_acts_reproduced": false,
+  "source_hashes": {
+    "current_state/protocol.json": "c955e829c55ad3fd14cc99fc8e8b8d60ceda8c1c3e4bf8b40c78c0a4fa3dd28c",
+    "current_state/observed/semantic_summary.json": "a4f55839fd88ac43dfdfa2a8d2285392ae061df6a6955ca2328c22e1eff1fdfa",
+    "observed/semantic_key.json": "a75d7d593fdd1bd0c68309dbe0ac8207b0ac399bfe462efdecc662072365ebca",
+    "observed/coding_C1.json": "f9aad24da0f0ed5019da3d3dbd970b21876c85d07dbe0ad62e63de823ef948dd",
+    "observed/coding_C2.json": "6283aa638dd15ab9450c917ebef8b9f7dcd059c41908337b4b7c5c27ea561f42"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "packet_sha256": "64dc1f904a8c659952870e0c54c8aee1e0182f60feb8e9533577ace6d729de5f",
+  "source": "one method-hidden model reading; not human; open items not graded",
+  "items": [
+    {
+      "id": "s01",
+      "behavior": "met",
+      "reason": "选桥下半分钟，解释为具体时空落点。"
+    },
+    {
+      "id": "s02",
+      "behavior": "met",
+      "reason": "一句搭档可收的姜黄线配色说明。"
+    },
+    {
+      "id": "s03",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s05",
+      "behavior": "met",
+      "reason": "含窗格的单句页脚，可直接抄。"
+    },
+    {
+      "id": "s07",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s08",
+      "behavior": "met",
+      "reason": "选翻开有风，理由是翻书意象且不催人。"
+    },
+    {
+      "id": "s09",
+      "behavior": "met",
+      "reason": "选弯月，取收尾意象。"
+    },
+    {
+      "id": "s10",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s17",
+      "behavior": "unclear",
+      "reason": "已给一句姜黄线说明，但额外替用户决定深蓝线先留着；使用范围有歧义。"
+    },
+    {
+      "id": "s18",
+      "behavior": "met",
+      "reason": "选择弯月并解释收尾；写完并不证明已写满。"
+    },
+    {
+      "id": "s19",
+      "behavior": "met",
+      "reason": "含窗格的单句页脚。"
+    },
+    {
+      "id": "s20",
+      "behavior": "met",
+      "reason": "窗格切光是可直接抄的一句。"
+    },
+    {
+      "id": "s21",
+      "behavior": "met",
+      "reason": "选姜黄，解释灰底上的暖色。"
+    },
+    {
+      "id": "s22",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s23",
+      "behavior": "met",
+      "reason": "给出了自己的姜黄选择与理由；结尾又把审美方向问回用户，值得另记。"
+    },
+    {
+      "id": "s26",
+      "behavior": "met",
+      "reason": "选弯月，以结束一页而非分隔开头为由。"
+    },
+    {
+      "id": "s29",
+      "behavior": "met",
+      "reason": "选桥下半分钟并解释标题的具体性；声源与现场细节未由用户核实。"
+    },
+    {
+      "id": "s30",
+      "behavior": "met",
+      "reason": "选桥下半分钟并说明命名效果；还指出录音长度及地点未证实。"
+    },
+    {
+      "id": "s31",
+      "behavior": "met",
+      "reason": "挑弯月，解释页面的密度与结尾。"
+    },
+    {
+      "id": "s32",
+      "behavior": "unclear",
+      "reason": "给出可发的姜黄线单句，同时擅自说深蓝留作备用，成品范围有歧义。"
+    },
+    {
+      "id": "s33",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s35",
+      "behavior": "met",
+      "reason": "选姜黄，以灰底的亮度对比为由。"
+    },
+    {
+      "id": "s36",
+      "behavior": "met",
+      "reason": "含姜黄的配色单句，无附注。"
+    },
+    {
+      "id": "s37",
+      "behavior": "met",
+      "reason": "选借一本走，理由是路人能直接理解。"
+    },
+    {
+      "id": "s38",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s40",
+      "behavior": "met",
+      "reason": "选深蓝并解释和灰底的关系。"
+    },
+    {
+      "id": "s41",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s42",
+      "behavior": "met",
+      "reason": "选桥下半分钟并给出具体名称的理由；不能由候选标题推断实际时长和录音位置。"
+    },
+    {
+      "id": "s43",
+      "behavior": "met",
+      "reason": "逐字成品。"
+    },
+    {
+      "id": "s44",
+      "behavior": "met",
+      "reason": "选翻开有风，理由是留余味与不催借。"
+    },
+    {
+      "id": "s45",
+      "behavior": "met",
+      "reason": "窗格作为页脚意象，可抄。"
+    },
+    {
+      "id": "s48",
+      "behavior": "met",
+      "reason": "选翻开有风并讲明吸引路人的理由；条件限定不抹去其选择。"
+    }
+  ]
+}

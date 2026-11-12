@@ -1,0 +1,230 @@
+[
+  {
+    "id": "01",
+    "family": "place",
+    "location": "三楼东厅验票口",
+    "turns": [
+      {
+        "speaker": "值班员",
+        "text": "东厅验票口这会儿谁守着？"
+      },
+      {
+        "speaker": "顾眠",
+        "text": "我在东厅验票口扫票。周衡在一楼电梯口等电梯，上来还要走一道走廊。"
+      }
+    ],
+    "expected": {
+      "顾眠": "present",
+      "周衡": "future"
+    }
+  },
+  {
+    "id": "02",
+    "family": "place",
+    "location": "剧场舞台左侧字幕台",
+    "turns": [
+      {
+        "speaker": "顾眠",
+        "text": "我到剧场正门了，往里面的左侧字幕台走。周衡呢？"
+      },
+      {
+        "speaker": "周衡",
+        "text": "我就在左侧字幕台，眼前是字幕键盘。"
+      }
+    ],
+    "expected": {
+      "顾眠": "future",
+      "周衡": "present"
+    }
+  },
+  {
+    "id": "03",
+    "family": "place",
+    "location": "体育馆二楼借球柜台",
+    "turns": [
+      {
+        "speaker": "广播员",
+        "text": "有人说两位都到了体育馆。"
+      },
+      {
+        "speaker": "周衡",
+        "text": "馆是到了，我跟顾眠正把球筐抬上楼，借球柜台还在上一层。"
+      }
+    ],
+    "expected": {
+      "顾眠": "future",
+      "周衡": "future"
+    }
+  },
+  {
+    "id": "04",
+    "family": "place",
+    "location": "阅览楼西侧还书桌",
+    "turns": [
+      {
+        "speaker": "顾眠",
+        "text": "我和周衡都进阅览楼了。"
+      },
+      {
+        "speaker": "周衡",
+        "text": "不只是在楼里，我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+      }
+    ],
+    "expected": {
+      "顾眠": "present",
+      "周衡": "present"
+    }
+  },
+  {
+    "id": "05",
+    "family": "place",
+    "location": "地下展厅音控台",
+    "turns": [
+      {
+        "speaker": "场务",
+        "text": "北门登记册上你俩都签了字，音控台有谁？"
+      },
+      {
+        "speaker": "周衡",
+        "text": "我还在北门，要下去才到。顾眠刚从地下展厅音控台给我开了视频，我看见她正趴在台边接输出线。"
+      }
+    ],
+    "expected": {
+      "顾眠": "present",
+      "周衡": "future"
+    }
+  },
+  {
+    "id": "06",
+    "family": "place",
+    "location": "车站南厅失物招领窗",
+    "turns": [
+      {
+        "speaker": "顾眠",
+        "text": "我到失物招领牌子底下了，还得穿过候车厅才到窗口。"
+      },
+      {
+        "speaker": "周衡",
+        "text": "我就在南厅失物招领窗后面递登记表，走到窗前就能见着我。"
+      }
+    ],
+    "expected": {
+      "顾眠": "future",
+      "周衡": "present"
+    }
+  },
+  {
+    "id": "07",
+    "family": "time",
+    "location": "剧场舞台左侧字幕台",
+    "turns": [
+      {
+        "speaker": "场务",
+        "text": "两个人刚一起试过字幕？"
+      },
+      {
+        "speaker": "顾眠",
+        "text": "刚才都在台边。周衡留在左侧字幕台，我已经出来取电池了，轮到我时还得回那边。"
+      }
+    ],
+    "expected": {
+      "顾眠": "future",
+      "周衡": "present"
+    }
+  },
+  {
+    "id": "08",
+    "family": "time",
+    "location": "三楼东厅验票口",
+    "turns": [
+      {
+        "speaker": "周衡",
+        "text": "早场是我和顾眠一起在东厅验票口。"
+      },
+      {
+        "speaker": "场务",
+        "text": "那是刚才。顾眠现在又在那个验票口验票了，我就在她身边。周衡下楼拿水去了，还没返回验票口。"
+      }
+    ],
+    "expected": {
+      "顾眠": "present",
+      "周衡": "future"
+    }
+  },
+  {
+    "id": "09",
+    "family": "time",
+    "location": "仓库东门发货台",
+    "turns": [
+      {
+        "speaker": "顾眠",
+        "text": "我和周衡前面从发货台一起去门卫取章。"
+      },
+      {
+        "speaker": "周衡",
+        "text": "已经取完回来了，我俩这会儿都在东门发货台盖章。"
+      }
+    ],
+    "expected": {
+      "顾眠": "present",
+      "周衡": "present"
+    }
+  },
+  {
+    "id": "10",
+    "family": "time",
+    "location": "后场西侧器材柜",
+    "turns": [
+      {
+        "speaker": "周衡",
+        "text": "顾眠和我刚在西侧器材柜清了点。"
+      },
+      {
+        "speaker": "顾眠",
+        "text": "清完我俩锁了柜，一起出来吃饭了。下一班都得走回柜边。"
+      }
+    ],
+    "expected": {
+      "顾眠": "future",
+      "周衡": "future"
+    }
+  },
+  {
+    "id": "11",
+    "family": "time",
+    "location": "美术部装裱桌",
+    "turns": [
+      {
+        "speaker": "顾眠",
+        "text": "周衡先走的时候我还守着装裱桌。"
+      },
+      {
+        "speaker": "周衡",
+        "text": "我回来接上了，现在坐在装裱桌旁。顾眠刚换出去领料，下半场她得过来。"
+      }
+    ],
+    "expected": {
+      "顾眠": "future",
+      "周衡": "present"
+    }
+  },
+  {
+    "id": "12",
+    "family": "time",
+    "location": "礼堂走廊抽签台",
+    "turns": [
+      {
+        "speaker": "周衡",
+        "text": "半小时前我们两个都从抽签台撤了。"
+      },
+      {
+        "speaker": "顾眠",
+        "text": "我已经折返走廊抽签台，在台边发号码了。周衡还在楼上，接下来得下来接我。"
+      }
+    ],
+    "expected": {
+      "顾眠": "present",
+      "周衡": "future"
+    }
+  }
+]

@@ -1,0 +1,655 @@
+{
+  "base": {
+    "intervention": 0.2,
+    "warmth": 0.7
+  },
+  "scope": "offline authored attribution labels; no generated dialogue",
+  "cases": {
+    "independent_then_idle": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2012,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [
+              {
+                "episodes": [
+                  "e1",
+                  "e2"
+                ],
+                "direction": 1
+              }
+            ],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "two_notes_one_episode": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2012,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "correction_after_push": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2012,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002"
+        ],
+        "active_judgments": [
+          "j_0003",
+          "j_0004"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "later_opposite_experiences": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003",
+          "j_0004"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003",
+          "j_0004"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [
+              {
+                "episodes": [
+                  "e1",
+                  "e2"
+                ],
+                "direction": 1
+              },
+              {
+                "episodes": [
+                  "e4",
+                  "e5"
+                ],
+                "direction": -1
+              }
+            ],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "two_relations_one_store": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2012,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "one_episode_two_traits": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2012,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7036
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [
+              {
+                "episodes": [
+                  "e1",
+                  "e2"
+                ],
+                "direction": 1
+              }
+            ],
+            "warmth": [
+              {
+                "episodes": [
+                  "e1",
+                  "e6"
+                ],
+                "direction": 1
+              }
+            ]
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "four_independent_one_flush": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.2012,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003",
+          "j_0004"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003",
+          "j_0004"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.20239933,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [
+              {
+                "episodes": [
+                  "e1",
+                  "e2"
+                ],
+                "direction": 1
+              },
+              {
+                "episodes": [
+                  "e4",
+                  "e5"
+                ],
+                "direction": 1
+              }
+            ],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    },
+    "four_independent_four_flushes": {
+      "existing": {
+        "steps": [
+          {
+            "intervention": 0.2,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.2012,
+            "warmth": 0.7
+          },
+          {
+            "intervention": 0.202399,
+            "warmth": 0.7
+          }
+        ],
+        "replayed": {
+          "intervention": 0.202399,
+          "warmth": 0.7
+        },
+        "consumed_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003",
+          "j_0004"
+        ],
+        "active_judgments": [
+          "j_0001",
+          "j_0002",
+          "j_0003",
+          "j_0004"
+        ]
+      },
+      "reference": {
+        "steps": [
+          {
+            "甲": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.2012,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          },
+          {
+            "甲": {
+              "intervention": 0.20239933,
+              "warmth": 0.7
+            },
+            "乙": {
+              "intervention": 0.2,
+              "warmth": 0.7
+            }
+          }
+        ],
+        "active_change_sources": {
+          "甲": {
+            "intervention": [
+              {
+                "episodes": [
+                  "e1",
+                  "e2"
+                ],
+                "direction": 1
+              },
+              {
+                "episodes": [
+                  "e4",
+                  "e5"
+                ],
+                "direction": 1
+              }
+            ],
+            "warmth": []
+          },
+          "乙": {
+            "intervention": [],
+            "warmth": []
+          }
+        }
+      }
+    }
+  }
+}

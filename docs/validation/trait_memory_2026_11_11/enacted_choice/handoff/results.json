@@ -1,0 +1,1172 @@
+{
+  "roles": {
+    "tang": {
+      "main": {
+        "n": 12,
+        "scenes": 4,
+        "rates": {
+          "G": 0.1875,
+          "F": 0.25,
+          "S": 0.3125
+        },
+        "wins": 0,
+        "diff": {
+          "GF": -0.0625,
+          "SF": 0.0625,
+          "GS": -0.125,
+          "G_pooled": -0.09375
+        },
+        "by_scene": {
+          "rest": {
+            "n": 3,
+            "rates": {
+              "G": 0,
+              "F": 0,
+              "S": 0
+            }
+          },
+          "sequence": {
+            "n": 2,
+            "rates": {
+              "G": 0.5,
+              "F": 0.5,
+              "S": 1
+            }
+          },
+          "proof": {
+            "n": 3,
+            "rates": {
+              "G": 0,
+              "F": 0,
+              "S": 0
+            }
+          },
+          "windows": {
+            "n": 4,
+            "rates": {
+              "G": 0.25,
+              "F": 0.5,
+              "S": 0.25
+            }
+          }
+        }
+      },
+      "valid_pair": {
+        "n": 12,
+        "scenes": 4,
+        "rates": {
+          "G": 0.1875,
+          "F": 0.25
+        },
+        "wins": null,
+        "diff": {
+          "GF": -0.0625,
+          "SF": null,
+          "GS": null,
+          "G_pooled": null
+        },
+        "by_scene": {
+          "rest": {
+            "n": 3,
+            "rates": {
+              "G": 0,
+              "F": 0
+            }
+          },
+          "sequence": {
+            "n": 2,
+            "rates": {
+              "G": 0.5,
+              "F": 0.5
+            }
+          },
+          "proof": {
+            "n": 3,
+            "rates": {
+              "G": 0,
+              "F": 0
+            }
+          },
+          "windows": {
+            "n": 4,
+            "rates": {
+              "G": 0.25,
+              "F": 0.5
+            }
+          }
+        }
+      },
+      "layouts": {
+        "target_blue": {
+          "n": 5,
+          "scenes": 3,
+          "rates": {
+            "G": 0.166667,
+            "F": 0.333333,
+            "S": 0.166667
+          },
+          "wins": 0,
+          "diff": {
+            "GF": -0.166667,
+            "SF": -0.166667,
+            "GS": 0.0,
+            "G_pooled": -0.083333
+          },
+          "by_scene": {
+            "rest": {
+              "n": 1,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 0,
+              "rates": {
+                "G": null,
+                "F": null,
+                "S": null
+              }
+            },
+            "proof": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0.5,
+                "F": 1,
+                "S": 0.5
+              }
+            }
+          }
+        },
+        "target_white": {
+          "n": 7,
+          "scenes": 4,
+          "rates": {
+            "G": 0.125,
+            "F": 0.125,
+            "S": 0.25
+          },
+          "wins": 0,
+          "diff": {
+            "GF": 0.0,
+            "SF": 0.125,
+            "GS": -0.125,
+            "G_pooled": -0.0625
+          },
+          "by_scene": {
+            "rest": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 2,
+              "rates": {
+                "G": 0.5,
+                "F": 0.5,
+                "S": 1
+              }
+            },
+            "proof": {
+              "n": 1,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            }
+          }
+        },
+        "target_first": {
+          "n": 6,
+          "scenes": 4,
+          "rates": {
+            "G": 0,
+            "F": 0.125,
+            "S": 0.25
+          },
+          "wins": 0,
+          "diff": {
+            "GF": -0.125,
+            "SF": 0.125,
+            "GS": -0.25,
+            "G_pooled": -0.1875
+          },
+          "by_scene": {
+            "rest": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 1,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 1
+              }
+            },
+            "proof": {
+              "n": 1,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0.5,
+                "S": 0
+              }
+            }
+          }
+        },
+        "target_last": {
+          "n": 6,
+          "scenes": 4,
+          "rates": {
+            "G": 0.375,
+            "F": 0.375,
+            "S": 0.375
+          },
+          "wins": 0,
+          "diff": {
+            "GF": 0.0,
+            "SF": 0.0,
+            "GS": 0.0,
+            "G_pooled": 0.0
+          },
+          "by_scene": {
+            "rest": {
+              "n": 1,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 1,
+              "rates": {
+                "G": 1,
+                "F": 1,
+                "S": 1
+              }
+            },
+            "proof": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0.5,
+                "F": 0.5,
+                "S": 0.5
+              }
+            }
+          }
+        }
+      },
+      "controls": 12,
+      "gf_missing_bounds": [
+        -0.25,
+        0.0625
+      ],
+      "by_scene": {
+        "rest": {
+          "G": {
+            "planned": 4,
+            "committed": 3,
+            "target": 0,
+            "other": 3,
+            "missing": 1,
+            "executed": 3,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "F": {
+            "planned": 4,
+            "committed": 3,
+            "target": 0,
+            "other": 3,
+            "missing": 1,
+            "executed": 3,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        },
+        "sequence": {
+          "G": {
+            "planned": 4,
+            "committed": 3,
+            "target": 2,
+            "other": 1,
+            "missing": 1,
+            "executed": 3,
+            "valid": 4,
+            "valid_and_committed": 3
+          },
+          "F": {
+            "planned": 4,
+            "committed": 3,
+            "target": 2,
+            "other": 1,
+            "missing": 1,
+            "executed": 3,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        },
+        "proof": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "F": {
+            "planned": 4,
+            "committed": 3,
+            "target": 0,
+            "other": 3,
+            "missing": 1,
+            "executed": 3,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        },
+        "windows": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 1,
+            "other": 3,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 2,
+            "other": 2,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 1,
+            "other": 3,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        },
+        "gauge": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        }
+      },
+      "by_family": {
+        "relation": {
+          "G": {
+            "planned": 16,
+            "committed": 14,
+            "target": 3,
+            "other": 11,
+            "missing": 2,
+            "executed": 14,
+            "valid": 15,
+            "valid_and_committed": 14
+          },
+          "F": {
+            "planned": 16,
+            "committed": 13,
+            "target": 4,
+            "other": 9,
+            "missing": 3,
+            "executed": 13,
+            "valid": 13,
+            "valid_and_committed": 13
+          },
+          "S": {
+            "planned": 16,
+            "committed": 16,
+            "target": 5,
+            "other": 11,
+            "missing": 0,
+            "executed": 16,
+            "valid": 16,
+            "valid_and_committed": 16
+          }
+        },
+        "transfer": {
+          "G": {
+            "planned": 0,
+            "committed": 0,
+            "target": 0,
+            "other": 0,
+            "missing": 0,
+            "executed": 0,
+            "valid": 0,
+            "valid_and_committed": 0
+          },
+          "F": {
+            "planned": 0,
+            "committed": 0,
+            "target": 0,
+            "other": 0,
+            "missing": 0,
+            "executed": 0,
+            "valid": 0,
+            "valid_and_committed": 0
+          },
+          "S": {
+            "planned": 0,
+            "committed": 0,
+            "target": 0,
+            "other": 0,
+            "missing": 0,
+            "executed": 0,
+            "valid": 0,
+            "valid_and_committed": 0
+          }
+        },
+        "control": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        }
+      },
+      "transfer": null,
+      "criteria": {
+        "coverage_and_control": true,
+        "magnitude": false,
+        "breadth": false,
+        "layout_robust": false,
+        "valid_sensitivity": false
+      },
+      "support": false
+    },
+    "yu": {
+      "main": {
+        "n": 14,
+        "scenes": 4,
+        "rates": {
+          "G": 0.375,
+          "F": 0.5625,
+          "S": 0.375
+        },
+        "wins": 0,
+        "diff": {
+          "GF": -0.1875,
+          "SF": -0.1875,
+          "GS": 0.0,
+          "G_pooled": -0.09375
+        },
+        "by_scene": {
+          "rest": {
+            "n": 4,
+            "rates": {
+              "G": 0,
+              "F": 0.25,
+              "S": 0
+            }
+          },
+          "sequence": {
+            "n": 2,
+            "rates": {
+              "G": 1,
+              "F": 1,
+              "S": 1
+            }
+          },
+          "proof": {
+            "n": 4,
+            "rates": {
+              "G": 0,
+              "F": 0,
+              "S": 0
+            }
+          },
+          "windows": {
+            "n": 4,
+            "rates": {
+              "G": 0.5,
+              "F": 1,
+              "S": 0.5
+            }
+          }
+        }
+      },
+      "valid_pair": {
+        "n": 12,
+        "scenes": 4,
+        "rates": {
+          "G": 0.416667,
+          "F": 0.5625
+        },
+        "wins": null,
+        "diff": {
+          "GF": -0.145833,
+          "SF": null,
+          "GS": null,
+          "G_pooled": null
+        },
+        "by_scene": {
+          "rest": {
+            "n": 4,
+            "rates": {
+              "G": 0,
+              "F": 0.25
+            }
+          },
+          "sequence": {
+            "n": 1,
+            "rates": {
+              "G": 1,
+              "F": 1
+            }
+          },
+          "proof": {
+            "n": 4,
+            "rates": {
+              "G": 0,
+              "F": 0
+            }
+          },
+          "windows": {
+            "n": 3,
+            "rates": {
+              "G": 0.666667,
+              "F": 1
+            }
+          }
+        }
+      },
+      "layouts": {
+        "target_blue": {
+          "n": 8,
+          "scenes": 4,
+          "rates": {
+            "G": 0.375,
+            "F": 0.625,
+            "S": 0.375
+          },
+          "wins": 0,
+          "diff": {
+            "GF": -0.25,
+            "SF": -0.25,
+            "GS": 0.0,
+            "G_pooled": -0.125
+          },
+          "by_scene": {
+            "rest": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0.5,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 2,
+              "rates": {
+                "G": 1,
+                "F": 1,
+                "S": 1
+              }
+            },
+            "proof": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0.5,
+                "F": 1,
+                "S": 0.5
+              }
+            }
+          }
+        },
+        "target_white": {
+          "n": 6,
+          "scenes": 3,
+          "rates": {
+            "G": 0.166667,
+            "F": 0.333333,
+            "S": 0.166667
+          },
+          "wins": 0,
+          "diff": {
+            "GF": -0.166667,
+            "SF": -0.166667,
+            "GS": 0.0,
+            "G_pooled": -0.083333
+          },
+          "by_scene": {
+            "rest": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 0,
+              "rates": {
+                "G": null,
+                "F": null,
+                "S": null
+              }
+            },
+            "proof": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0.5,
+                "F": 1,
+                "S": 0.5
+              }
+            }
+          }
+        },
+        "target_first": {
+          "n": 7,
+          "scenes": 4,
+          "rates": {
+            "G": 0.25,
+            "F": 0.5,
+            "S": 0.25
+          },
+          "wins": 0,
+          "diff": {
+            "GF": -0.25,
+            "SF": -0.25,
+            "GS": 0,
+            "G_pooled": -0.125
+          },
+          "by_scene": {
+            "rest": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 1,
+              "rates": {
+                "G": 1,
+                "F": 1,
+                "S": 1
+              }
+            },
+            "proof": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 1,
+                "S": 0
+              }
+            }
+          }
+        },
+        "target_last": {
+          "n": 7,
+          "scenes": 4,
+          "rates": {
+            "G": 0.5,
+            "F": 0.625,
+            "S": 0.5
+          },
+          "wins": 0,
+          "diff": {
+            "GF": -0.125,
+            "SF": -0.125,
+            "GS": 0,
+            "G_pooled": -0.0625
+          },
+          "by_scene": {
+            "rest": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0.5,
+                "S": 0
+              }
+            },
+            "sequence": {
+              "n": 1,
+              "rates": {
+                "G": 1,
+                "F": 1,
+                "S": 1
+              }
+            },
+            "proof": {
+              "n": 2,
+              "rates": {
+                "G": 0,
+                "F": 0,
+                "S": 0
+              }
+            },
+            "windows": {
+              "n": 2,
+              "rates": {
+                "G": 1,
+                "F": 1,
+                "S": 1
+              }
+            }
+          }
+        }
+      },
+      "controls": 12,
+      "gf_missing_bounds": [
+        -0.3125,
+        -0.1875
+      ],
+      "by_scene": {
+        "rest": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 1,
+            "other": 3,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        },
+        "sequence": {
+          "G": {
+            "planned": 4,
+            "committed": 2,
+            "target": 2,
+            "other": 0,
+            "missing": 2,
+            "executed": 2,
+            "valid": 1,
+            "valid_and_committed": 1
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "S": {
+            "planned": 4,
+            "committed": 3,
+            "target": 2,
+            "other": 1,
+            "missing": 1,
+            "executed": 3,
+            "valid": 3,
+            "valid_and_committed": 3
+          }
+        },
+        "proof": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 0,
+            "other": 4,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        },
+        "windows": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 2,
+            "other": 2,
+            "missing": 0,
+            "executed": 4,
+            "valid": 3,
+            "valid_and_committed": 3
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 2,
+            "other": 2,
+            "missing": 0,
+            "executed": 4,
+            "valid": 2,
+            "valid_and_committed": 2
+          }
+        },
+        "gauge": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        }
+      },
+      "by_family": {
+        "relation": {
+          "G": {
+            "planned": 16,
+            "committed": 14,
+            "target": 4,
+            "other": 10,
+            "missing": 2,
+            "executed": 14,
+            "valid": 12,
+            "valid_and_committed": 12
+          },
+          "F": {
+            "planned": 16,
+            "committed": 16,
+            "target": 9,
+            "other": 7,
+            "missing": 0,
+            "executed": 16,
+            "valid": 15,
+            "valid_and_committed": 15
+          },
+          "S": {
+            "planned": 16,
+            "committed": 15,
+            "target": 4,
+            "other": 11,
+            "missing": 1,
+            "executed": 15,
+            "valid": 13,
+            "valid_and_committed": 13
+          }
+        },
+        "transfer": {
+          "G": {
+            "planned": 0,
+            "committed": 0,
+            "target": 0,
+            "other": 0,
+            "missing": 0,
+            "executed": 0,
+            "valid": 0,
+            "valid_and_committed": 0
+          },
+          "F": {
+            "planned": 0,
+            "committed": 0,
+            "target": 0,
+            "other": 0,
+            "missing": 0,
+            "executed": 0,
+            "valid": 0,
+            "valid_and_committed": 0
+          },
+          "S": {
+            "planned": 0,
+            "committed": 0,
+            "target": 0,
+            "other": 0,
+            "missing": 0,
+            "executed": 0,
+            "valid": 0,
+            "valid_and_committed": 0
+          }
+        },
+        "control": {
+          "G": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "F": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          },
+          "S": {
+            "planned": 4,
+            "committed": 4,
+            "target": 4,
+            "other": 0,
+            "missing": 0,
+            "executed": 4,
+            "valid": 4,
+            "valid_and_committed": 4
+          }
+        }
+      },
+      "transfer": null,
+      "criteria": {
+        "coverage_and_control": true,
+        "magnitude": false,
+        "breadth": false,
+        "layout_robust": false,
+        "valid_sensitivity": false
+      },
+      "support": false
+    }
+  },
+  "expand": false,
+  "delivery": {
+    "planned": 120,
+    "committed": 112,
+    "target": 53,
+    "other": 59,
+    "missing": 8,
+    "executed": 112,
+    "valid": 107,
+    "valid_and_committed": 106
+  },
+  "statuses": {
+    "executed": 112,
+    "unmarked_or_ambiguous_say": 7,
+    "no_ballot": 1
+  },
+  "calls": 120,
+  "success": 120,
+  "models": {
+    "deepseek-flash": 120
+  },
+  "tokens": 1167026
+}

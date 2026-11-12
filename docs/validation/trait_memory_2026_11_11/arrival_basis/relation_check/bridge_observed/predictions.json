@@ -1,0 +1,441 @@
+{
+  "04.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原刚挨着我把他那一栏写完。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "59c75d5179f45a2b5b1873f4c7c83739ba8724027a6bc276ef39503cddc005d3"
+  },
+  "02.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          },
+          {
+            "turn": 3,
+            "quote": "她也可能已经到了，咱俩都没看过桌边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "undetermined",
+        "time": "conditional",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "检票桌这班，沈遥怎么回你的？"
+          },
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "undetermined",
+        "time": "undetermined",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "663b7d232dc5111fd8e8da1ad00917ed6c43f94390e47ccf60347a724e5e5dad"
+  },
+  "07.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "ca1052774cbc2869af236d496b16fd26972284c18c15a9327266f9063cfd2dc4"
+  },
+  "08.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "0114eee6e2c1256efdcff56b4b0905748d4ae5b632e672675e35432431714111"
+  },
+  "03.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原那一栏是我帮他写的。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "undetermined",
+        "time": "undetermined",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "f8f63229aee73c95949672fafbf8db443a0b3879cbe7358ffc17f42ec25a89d7"
+  },
+  "05.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "给吧，她手里那摞也数完了。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "8258413968c82013f332eb8c95cd53e5aa9797997ec53a4e2c664b612707540e"
+  },
+  "12.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "今晚第一次开场，我来接检票桌，许原也把这班应下了。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了。"
+          },
+          {
+            "turn": 3,
+            "quote": "先放会儿，我在检票桌给小孩补票呢。"
+          }
+        ],
+        "decisive_turn": 3,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "76eb5b373329cd8b1759dd7fc8c328079d3434716b9cc1238175fd6943db712a"
+  },
+  "11.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "今晚第一次开场，我来接检票桌，许原也把这班应下了。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了。"
+          },
+          {
+            "turn": 3,
+            "quote": "先放会儿，我还在电梯里呢。"
+          }
+        ],
+        "decisive_turn": 3,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "6e7a13e5e6eb264bd12d7035b4e35b0fb56297be2f75b1bbe0e72f99fb50e559"
+  },
+  "01.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": null,
+        "basis": null,
+        "evidence": [],
+        "reason": "conflicting_current_relation"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "undetermined",
+        "time": "undetermined",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "644597fabf2f9e9e72e02826139e679f164c5c8f80c0c4cd3f43593a20dc8e67"
+  },
+  "09.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原说俩人都在那儿"
+          },
+          {
+            "turn": 2,
+            "quote": "沈遥我没看见，广播箱把那半边挡了"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "undetermined",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "7c05e52d2fc2130e965ab54932f91d109476efc04520fed7156993fcceadcd62"
+  },
+  "06.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "等她一下，她出去挪车了，还得走回来。"
+          }
+        ],
+        "decisive_turn": 3,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "252ce0b672647adddc7b70ee2c12cd24087a6aa7cb226c846445e4db71007131"
+  },
+  "10.relation.A": {
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她刚从家往这边出发"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "da3530496ce37fdc9fe1355c8c9addc974d81a3a0bbfc10ee534cbbdb18127b7"
+  }
+}

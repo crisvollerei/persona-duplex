@@ -1,0 +1,877 @@
+{
+  "scope": "Exact substrings in delivered SAY only; any mention (even conjecture or negation) counts as exposure. Missing SAY is not a secrecy success. No semantic scoring. Act 3 naming is descriptive, not required. Replicates are not distinct stories.",
+  "overall": {
+    "planned": 36,
+    "status": {
+      "delivered": 36
+    },
+    "visible": 36,
+    "no_visible": 0,
+    "protocol_valid": 35,
+    "protocol_invalid": 1,
+    "protocol_unavailable": 0,
+    "among_visible": {
+      "of": 36,
+      "canonical_hit": 6,
+      "source_or_alias_hit": 6,
+      "any_authors_canary_hit": 0,
+      "other_variant_source_or_alias_hit": 0
+    }
+  },
+  "by_condition_act": {
+    "scoped.1": {
+      "planned": 6,
+      "status": {
+        "delivered": 6
+      },
+      "visible": 6,
+      "no_visible": 0,
+      "protocol_valid": 6,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 6,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.2": {
+      "planned": 6,
+      "status": {
+        "delivered": 6
+      },
+      "visible": 6,
+      "no_visible": 0,
+      "protocol_valid": 6,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 6,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.3": {
+      "planned": 6,
+      "status": {
+        "delivered": 6
+      },
+      "visible": 6,
+      "no_visible": 0,
+      "protocol_valid": 6,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 6,
+        "canonical_hit": 2,
+        "source_or_alias_hit": 2,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.1": {
+      "planned": 6,
+      "status": {
+        "delivered": 6
+      },
+      "visible": 6,
+      "no_visible": 0,
+      "protocol_valid": 5,
+      "protocol_invalid": 1,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 6,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.2": {
+      "planned": 6,
+      "status": {
+        "delivered": 6
+      },
+      "visible": 6,
+      "no_visible": 0,
+      "protocol_valid": 6,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 6,
+        "canonical_hit": 1,
+        "source_or_alias_hit": 1,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.3": {
+      "planned": 6,
+      "status": {
+        "delivered": 6
+      },
+      "visible": 6,
+      "no_visible": 0,
+      "protocol_valid": 6,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 6,
+        "canonical_hit": 3,
+        "source_or_alias_hit": 3,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    }
+  },
+  "by_condition_replicate_act": {
+    "scoped.A.1": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.B.1": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.A.2": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.B.2": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.A.3": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 1,
+        "source_or_alias_hit": 1,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "scoped.B.3": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 1,
+        "source_or_alias_hit": 1,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.A.1": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.B.1": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 2,
+      "protocol_invalid": 1,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.A.2": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 0,
+        "source_or_alias_hit": 0,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.B.2": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 1,
+        "source_or_alias_hit": 1,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.A.3": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 2,
+        "source_or_alias_hit": 2,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    },
+    "full_notes.B.3": {
+      "planned": 3,
+      "status": {
+        "delivered": 3
+      },
+      "visible": 3,
+      "no_visible": 0,
+      "protocol_valid": 3,
+      "protocol_invalid": 0,
+      "protocol_unavailable": 0,
+      "among_visible": {
+        "of": 3,
+        "canonical_hit": 1,
+        "source_or_alias_hit": 1,
+        "any_authors_canary_hit": 0,
+        "other_variant_source_or_alias_hit": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "variant": "V1",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": true,
+      "source_or_alias_hit": true,
+      "matched_terms": [
+        "郁栖汀",
+        "栖汀"
+      ],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": true,
+      "source_or_alias_hit": true,
+      "matched_terms": [
+        "郁栖汀",
+        "栖汀"
+      ],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V1",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": true,
+      "source_or_alias_hit": true,
+      "matched_terms": [
+        "柏澄屿",
+        "澄屿"
+      ],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": false,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V2",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "scoped",
+      "replicate": "A",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "scoped",
+      "replicate": "B",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "full_notes",
+      "replicate": "A",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": true,
+      "source_or_alias_hit": true,
+      "matched_terms": [
+        "岑弦泊",
+        "弦泊"
+      ],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 1,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": false,
+      "source_or_alias_hit": false,
+      "matched_terms": [],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 2,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": true,
+      "source_or_alias_hit": true,
+      "matched_terms": [
+        "岑弦泊",
+        "弦泊"
+      ],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    },
+    {
+      "variant": "V3",
+      "condition": "full_notes",
+      "replicate": "B",
+      "act": 3,
+      "status": "delivered",
+      "protocol_valid": true,
+      "visible": true,
+      "canonical_hit": true,
+      "source_or_alias_hit": true,
+      "matched_terms": [
+        "岑弦泊",
+        "弦泊"
+      ],
+      "canary_source_ids": [],
+      "other_variant_terms": {}
+    }
+  ],
+  "input_sha256": {
+    "scenes": "e6dfa84145e2ab680132cb4dadcbfd74d6a5662e8c136a7cb53f6be3a33a0b0f",
+    "turns": "7828ca9918080e0d0225fe8005773f4e52d446e186351a3774ac9377a5a514a3"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "tang.rise.future": {
+    "action": "use",
+    "reads": [
+      "V"
+    ],
+    "chars": 139
+  },
+  "tang.rise.present": {
+    "action": "omit",
+    "reads": [],
+    "chars": 0
+  },
+  "tang.rise.unknown": {
+    "action": "confirm_arrival",
+    "reads": [],
+    "chars": 0
+  },
+  "tang.fall.future": {
+    "action": "use",
+    "reads": [
+      "V"
+    ],
+    "chars": 139
+  },
+  "tang.fall.present": {
+    "action": "omit",
+    "reads": [],
+    "chars": 0
+  },
+  "tang.fall.unknown": {
+    "action": "confirm_arrival",
+    "reads": [],
+    "chars": 0
+  },
+  "yu.rise.future": {
+    "action": "use",
+    "reads": [
+      "V"
+    ],
+    "chars": 139
+  },
+  "yu.rise.present": {
+    "action": "omit",
+    "reads": [],
+    "chars": 0
+  },
+  "yu.rise.unknown": {
+    "action": "confirm_arrival",
+    "reads": [],
+    "chars": 0
+  },
+  "yu.fall.future": {
+    "action": "use",
+    "reads": [
+      "V"
+    ],
+    "chars": 139
+  },
+  "yu.fall.present": {
+    "action": "omit",
+    "reads": [],
+    "chars": 0
+  },
+  "yu.fall.unknown": {
+    "action": "confirm_arrival",
+    "reads": [],
+    "chars": 0
+  }
+}

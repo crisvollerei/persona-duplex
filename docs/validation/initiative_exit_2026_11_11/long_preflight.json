@@ -1,0 +1,92 @@
+{
+  "authored_session_end_turns": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "ledger_memory_versions": 15,
+  "probes": [
+    {
+      "case": "title",
+      "memory_ids": [
+        "sign",
+        "title-new",
+        "style-new",
+        "quantity",
+        "sticker"
+      ],
+      "expected_source": "title-new",
+      "expected_source_in_prompt": true,
+      "obsolete_or_external_ids": [],
+      "obsolete_or_external_text": [],
+      "visible_history_messages": 12,
+      "shared_context_hash": "85bbae350896b3e85260bfeacdf1ea51a7a484999bb379ce864de3e5bae53671"
+    },
+    {
+      "case": "sign",
+      "memory_ids": [
+        "sign",
+        "binding",
+        "quantity",
+        "box",
+        "card"
+      ],
+      "expected_source": "sign",
+      "expected_source_in_prompt": true,
+      "obsolete_or_external_ids": [],
+      "obsolete_or_external_text": [],
+      "visible_history_messages": 12,
+      "shared_context_hash": "dae35f6fd33d105520af59d0891c421e11417184f68f268d61073a154f0790cd"
+    },
+    {
+      "case": "vote",
+      "memory_ids": [
+        "sign",
+        "title-new",
+        "style-new",
+        "binding",
+        "quantity"
+      ],
+      "expected_source": "style-new",
+      "expected_source_in_prompt": true,
+      "obsolete_or_external_ids": [],
+      "obsolete_or_external_text": [],
+      "visible_history_messages": 12,
+      "shared_context_hash": "a91c765aef12b58ecf3d4b5d8d23a0c1d22c6253e6ec632ecc73a861b0fad02f"
+    },
+    {
+      "case": "override",
+      "memory_ids": [
+        "sign",
+        "title-new",
+        "style-new",
+        "quantity",
+        "box"
+      ],
+      "expected_source": null,
+      "expected_source_in_prompt": null,
+      "obsolete_or_external_ids": [],
+      "obsolete_or_external_text": [],
+      "visible_history_messages": 12,
+      "shared_context_hash": "477a8f5398444efb70c5d002d9a9fc36db872c0911b0a638e81ba2cc422420d3"
+    },
+    {
+      "case": "unconfirmed",
+      "memory_ids": [
+        "sign",
+        "title-new",
+        "style-new",
+        "binding",
+        "quantity"
+      ],
+      "expected_source": "quantity",
+      "expected_source_in_prompt": true,
+      "obsolete_or_external_ids": [],
+      "obsolete_or_external_text": [],
+      "visible_history_messages": 12,
+      "shared_context_hash": "a91c765aef12b58ecf3d4b5d8d23a0c1d22c6253e6ec632ecc73a861b0fad02f"
+    }
+  ],
+  "observation": "curated source-linked writes; frozen extraction; real Session restore and recall"
+}

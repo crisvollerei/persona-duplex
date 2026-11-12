@@ -1,0 +1,1605 @@
+{
+  "n": 288,
+  "committed": 284,
+  "protocol_valid": 286,
+  "status": {
+    "executed": 284,
+    "unmarked_or_ambiguous_say": 2,
+    "no_ballot": 2
+  },
+  "actors": {
+    "tang": {
+      "cells": {
+        "pooled": {
+          "future": {
+            "V": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 8,
+              "planned": 8,
+              "left": 1,
+              "right": 1,
+              "d": 0.0,
+              "discordant": 2,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 5,
+              "d": -0.125,
+              "discordant": 1,
+              "full_bounds": [
+                -0.125,
+                -0.125
+              ]
+            },
+            "V_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 5,
+              "d": -0.125,
+              "discordant": 1,
+              "full_bounds": [
+                -0.125,
+                -0.125
+              ]
+            },
+            "Z_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 5,
+              "d": -0.125,
+              "discordant": 1,
+              "full_bounds": [
+                -0.125,
+                -0.125
+              ]
+            }
+          },
+          "present": {
+            "V": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 8,
+              "planned": 8,
+              "left": 1,
+              "right": 0,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            },
+            "Z": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 6,
+              "d": -0.25,
+              "discordant": 2,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "V_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 6,
+              "d": -0.25,
+              "discordant": 2,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 6,
+              "d": -0.25,
+              "discordant": 2,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            }
+          },
+          "unknown": {
+            "V": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 7,
+              "planned": 8,
+              "left": 1,
+              "right": 2,
+              "d": -0.14285714285714285,
+              "discordant": 3,
+              "full_bounds": [
+                -0.125,
+                0.0
+              ]
+            },
+            "Z": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 5,
+              "d": -0.125,
+              "discordant": 1,
+              "full_bounds": [
+                -0.125,
+                -0.125
+              ]
+            },
+            "V_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 5,
+              "d": -0.125,
+              "discordant": 1,
+              "full_bounds": [
+                -0.125,
+                -0.125
+              ]
+            },
+            "Z_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 4,
+              "right": 5,
+              "d": -0.125,
+              "discordant": 1,
+              "full_bounds": [
+                -0.125,
+                -0.125
+              ]
+            }
+          }
+        },
+        "envelope": {
+          "future": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 1,
+              "right": 0,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            }
+          },
+          "present": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 1,
+              "right": 0,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            }
+          },
+          "unknown": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 3,
+              "planned": 4,
+              "left": 1,
+              "right": 0,
+              "d": 0.3333333333333333,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.5
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            }
+          }
+        },
+        "boards": {
+          "future": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 0,
+              "right": 1,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "present": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 0,
+              "right": 0,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 3,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            }
+          },
+          "unknown": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 0,
+              "right": 2,
+              "d": -0.5,
+              "discordant": 2,
+              "full_bounds": [
+                -0.5,
+                -0.5
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "gate": {
+        "coverage": true,
+        "use": true,
+        "avoidable_spillover": true,
+        "passed": true
+      },
+      "strict_gate": {
+        "coverage": true,
+        "use": true,
+        "avoidable_spillover": true,
+        "passed": true
+      }
+    },
+    "yu": {
+      "cells": {
+        "pooled": {
+          "future": {
+            "V": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 7,
+              "planned": 8,
+              "left": 2,
+              "right": 0,
+              "d": 0.2857142857142857,
+              "discordant": 2,
+              "full_bounds": [
+                0.25,
+                0.375
+              ]
+            },
+            "Z": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 7,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            },
+            "V_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 7,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            },
+            "Z_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 7,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            }
+          },
+          "present": {
+            "V": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 7,
+              "planned": 8,
+              "left": 3,
+              "right": 3,
+              "d": 0.0,
+              "discordant": 2,
+              "full_bounds": [
+                0.0,
+                0.125
+              ]
+            },
+            "Z": {
+              "n": 8,
+              "planned": 8,
+              "left": 7,
+              "right": 6,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            },
+            "V_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 8,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 7,
+              "right": 6,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            },
+            "Z_valid_common": {
+              "n": 8,
+              "planned": 8,
+              "left": 7,
+              "right": 6,
+              "d": 0.125,
+              "discordant": 1,
+              "full_bounds": [
+                0.125,
+                0.125
+              ]
+            }
+          },
+          "unknown": {
+            "V": {
+              "n": 7,
+              "planned": 8,
+              "left": 7,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 7,
+              "full_bounds": [
+                0.875,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 8,
+              "planned": 8,
+              "left": 2,
+              "right": 2,
+              "d": 0.0,
+              "discordant": 4,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z": {
+              "n": 8,
+              "planned": 8,
+              "left": 8,
+              "right": 8,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 7,
+              "planned": 8,
+              "left": 7,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 7,
+              "full_bounds": [
+                0.875,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 7,
+              "planned": 8,
+              "left": 7,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 7,
+              "full_bounds": [
+                0.875,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 7,
+              "planned": 8,
+              "left": 7,
+              "right": 7,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 7,
+              "planned": 8,
+              "left": 7,
+              "right": 7,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "envelope": {
+          "future": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 3,
+              "planned": 4,
+              "left": 1,
+              "right": 0,
+              "d": 0.3333333333333333,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.5
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "present": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 1,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 3,
+              "right": 2,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 3,
+              "right": 2,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 3,
+              "right": 2,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            }
+          },
+          "unknown": {
+            "V": {
+              "n": 3,
+              "planned": 4,
+              "left": 3,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 3,
+              "full_bounds": [
+                0.75,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 2,
+              "right": 1,
+              "d": 0.25,
+              "discordant": 3,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 3,
+              "planned": 4,
+              "left": 3,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 3,
+              "full_bounds": [
+                0.75,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 3,
+              "planned": 4,
+              "left": 3,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 3,
+              "full_bounds": [
+                0.75,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 3,
+              "planned": 4,
+              "left": 3,
+              "right": 3,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 3,
+              "planned": 4,
+              "left": 3,
+              "right": 3,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "boards": {
+          "future": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 1,
+              "right": 0,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 3,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 3,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 3,
+              "d": 0.25,
+              "discordant": 1,
+              "full_bounds": [
+                0.25,
+                0.25
+              ]
+            }
+          },
+          "present": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 3,
+              "planned": 4,
+              "left": 1,
+              "right": 2,
+              "d": -0.3333333333333333,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                0.0
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "unknown": {
+            "V": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "R": {
+              "n": 4,
+              "planned": 4,
+              "left": 0,
+              "right": 1,
+              "d": -0.25,
+              "discordant": 1,
+              "full_bounds": [
+                -0.25,
+                -0.25
+              ]
+            },
+            "Z": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "V_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "V_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 0,
+              "d": 1.0,
+              "discordant": 4,
+              "full_bounds": [
+                1.0,
+                1.0
+              ]
+            },
+            "Z_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "Z_valid_common": {
+              "n": 4,
+              "planned": 4,
+              "left": 4,
+              "right": 4,
+              "d": 0.0,
+              "discordant": 0,
+              "full_bounds": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "gate": {
+        "coverage": true,
+        "use": true,
+        "avoidable_spillover": true,
+        "passed": true
+      },
+      "strict_gate": {
+        "coverage": true,
+        "use": true,
+        "avoidable_spillover": true,
+        "passed": true
+      }
+    }
+  },
+  "supported": true
+}

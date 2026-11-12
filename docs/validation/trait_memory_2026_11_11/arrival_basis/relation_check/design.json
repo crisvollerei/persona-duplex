@@ -1,0 +1,25 @@
+{
+  "people": [
+    "顾眠",
+    "周衡"
+  ],
+  "methods": [
+    "legacy",
+    "typed",
+    "relation"
+  ],
+  "families": [
+    "place",
+    "time"
+  ],
+  "seed": 671113,
+  "model": {
+    "model": "deepseek-chat",
+    "temperature": 0,
+    "max_tokens": 700
+  },
+  "scope": "对新构造、答案来自材料设定的位置与时序控制进行定点压力测试；不属于独立真人判断，更不是线上自然对话评估。",
+  "plan": "12个定位情境，地点和时间各6个。三方法分别调用，固定姓名顺序、随机打乱36个调用位置；失败不补。请求中只有地点、人员和带轮数对话，不含id、family、预期、研究标签。",
+  "derivation": "relation 不输出 state；记录逐字引文、决定轮号、相对地点、时态、到岗必要性和依据类型，再由本地规则映射。时态 current 且位于 target_here -> present；时态 current 且为 elsewhere 且明确 required -> future；其余有效组合 -> unknown。缺字段、虚构引文、未支持的决定轮、互斥字段等记无效，不计为unknown命中。字面可回查不等于理解正确。",
+  "score": "按构造预期报告人物和整题准确数、无效数、各family及混淆矩阵。与两基线分别比较修正/新增错误；无新增、且净修正为正才称相对该基线在这些题有改善。对照材料与人工新题不混算，不借此推出泛化或更改实际回复。"
+}

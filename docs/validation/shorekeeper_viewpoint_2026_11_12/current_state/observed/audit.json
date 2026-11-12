@@ -1,0 +1,128 @@
+{
+  "registered_file_hashes_verified": 46,
+  "plots": 1,
+  "variants": 3,
+  "selected_parent_trajectories": 6,
+  "frozen_history_points": 12,
+  "planned_response_slots": 48,
+  "fresh_unique_provider_receipts": 48,
+  "provider_models": {
+    "deepseek-flash": 48
+  },
+  "independent_same_input_repeats": 24,
+  "parent_fingerprints": {
+    "V1.scoped.A.2": {
+      "messages": "3cd122390689b7456dd3107d32f56765aeb1a14afd3e073a59f64d31ecb92b94",
+      "history": "9ba9f700f1257873b50e11b0939c5d66d9ae4722eb0c2b9d9537f3a27ab261b8",
+      "prior_turns": 1
+    },
+    "V1.scoped.A.3": {
+      "messages": "cbbe57c2b00a983014b1bea0bd2635a329393519fb40d32f925ef03ceb6598e6",
+      "history": "57a70df26c90a9d28fdfec802b0638db416f71d4a0fe22cb4ff31441445c4754",
+      "prior_turns": 2
+    },
+    "V1.scoped.B.2": {
+      "messages": "e0426c0e7c8cf590221020dc6d878cbb426e59541af24bb1eb198b1c622f41f4",
+      "history": "eb50ef2af3d8842b1782e568186db21e8e63afe680ffd3a62bc2324c77cc801d",
+      "prior_turns": 1
+    },
+    "V1.scoped.B.3": {
+      "messages": "cae6f44e6deedeab984a657119ab645a51339ffe1c39a25b109d7399b4d28eef",
+      "history": "43491b1f5ada6864fb4cc0ddb0e9a43cd36944b05774ee4d4be6488ce5dc93c0",
+      "prior_turns": 2
+    },
+    "V2.scoped.A.2": {
+      "messages": "cd1877eb2236e66154fcb356818690782aab46353e248d782a84f3b9275b4024",
+      "history": "3cce4f63afd1850485bdc4cde4bf7e862b4a3881759758b9e1a703a173ddd426",
+      "prior_turns": 1
+    },
+    "V2.scoped.A.3": {
+      "messages": "66de299d6b05847ad247703a929a2df13ab4e82024761f5adff0ca67a37ae916",
+      "history": "1155727b61fc243181e9c5621ddffeebbc42b11c3ce7efa3cc97d9ada979486f",
+      "prior_turns": 2
+    },
+    "V2.scoped.B.2": {
+      "messages": "6136ad0ef33789cb52890cc243f62b28bdaa2f702b10ac77d412baa76e818e2a",
+      "history": "b6cabe18de7ada3abde315d5af2f1865940f60882cd01da28e85d40a601b6298",
+      "prior_turns": 1
+    },
+    "V2.scoped.B.3": {
+      "messages": "85cc516d0f980dab373cfe23ed7cfc609464dcd4accc4cd7585ead8daa6ee8e9",
+      "history": "9900a51750b5e5b0ed7b6609c716a10b570f07f9d4c8d61a9eee6844d30bb922",
+      "prior_turns": 2
+    },
+    "V3.scoped.A.2": {
+      "messages": "3f572ac25b5559a800866bd44d5f468c5bcd68218c5c4c43bdba5153c8278911",
+      "history": "a608e4e11512b74eb01e9fa10f66605cd2f2b2d7844525b031535937e90c408f",
+      "prior_turns": 1
+    },
+    "V3.scoped.A.3": {
+      "messages": "e5282c0dceea4ad62b802967768186a367c9952b38beecea497ff72b68b88ae3",
+      "history": "165a05ac67244d7244ddc27ba52767660d3b4170aa30e7d6b4d070f7e2ab2a2f",
+      "prior_turns": 2
+    },
+    "V3.scoped.B.2": {
+      "messages": "ef087a98feb1eef2a7af0a662156132535793b3af01f90cf37e9b79e42626f55",
+      "history": "c024ce3fa46a84f2567eb8f17852869ab68625d50b4d484582b414e2dc0fc008",
+      "prior_turns": 1
+    },
+    "V3.scoped.B.3": {
+      "messages": "87f96867db5de8f916ae29cc4fea542cfd7177f5cc715ea5756f8df4b80735ef",
+      "history": "3fe9c5c53fefdd31bb75881ba51a33b779f195f5cb8b0b4b57077adbcb780792",
+      "prior_turns": 2
+    }
+  },
+  "by_condition_and_act": {
+    "control.2": {
+      "planned": 12,
+      "fresh_service_responses": 12,
+      "delivered": 12,
+      "empty": 0,
+      "valid_protocol": 12,
+      "literal_source_or_alias_in_SAY": 0,
+      "nonce_in_SAY": 0,
+      "prompt_tokens": 44830,
+      "completion_tokens": 1705,
+      "total_tokens": 46535
+    },
+    "state_card.2": {
+      "planned": 12,
+      "fresh_service_responses": 12,
+      "delivered": 12,
+      "empty": 0,
+      "valid_protocol": 12,
+      "literal_source_or_alias_in_SAY": 0,
+      "nonce_in_SAY": 0,
+      "prompt_tokens": 45454,
+      "completion_tokens": 1884,
+      "total_tokens": 47338
+    },
+    "control.3": {
+      "planned": 12,
+      "fresh_service_responses": 12,
+      "delivered": 12,
+      "empty": 0,
+      "valid_protocol": 12,
+      "literal_source_or_alias_in_SAY": 4,
+      "nonce_in_SAY": 0,
+      "prompt_tokens": 48338,
+      "completion_tokens": 1661,
+      "total_tokens": 49999
+    },
+    "state_card.3": {
+      "planned": 12,
+      "fresh_service_responses": 12,
+      "delivered": 12,
+      "empty": 0,
+      "valid_protocol": 12,
+      "literal_source_or_alias_in_SAY": 4,
+      "nonce_in_SAY": 0,
+      "prompt_tokens": 48866,
+      "completion_tokens": 1667,
+      "total_tokens": 50533
+    }
+  },
+  "failed": [],
+  "protocol_issues": [],
+  "note": "12 个冻结历史点各有2条件、2复采；三幕变体共用一个剧情。第二幕的实名字面命中是披露风险，第三幕只描述是否点名；本审计不编码语义。"
+}

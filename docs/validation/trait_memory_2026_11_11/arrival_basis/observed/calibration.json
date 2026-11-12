@@ -1,0 +1,807 @@
+{
+  "09.legacy.A": {
+    "request": "3870d5f03ac72be1eea1e5d50b0c1d0ae566e231b04366162a3f2cef033e58fc",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.typed.A": {
+    "request": "f8e83d126efd377875e83e62f4792e033149e9747381b09bf5f56c6ee8f4dac6",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我们都在签收台了。"
+          },
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.legacy.A": {
+    "request": "5fa56cb893a4cbd1ae1308148c089f491965adbd82a12d6f276455dd3be7c2f0",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我已经在签收台了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.typed.A": {
+    "request": "47f6056e78b440a47356cb2578d2fa89efd9c65c31b0db69a58d883b47d7a45c",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我就在签收台，看着俞川和常鸣一人拆了一包封条。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我就在签收台，看着俞川和常鸣一人拆了一包封条。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "13.legacy.A": {
+    "request": "d16581da2c75ec8a60aa4c0c3260fbbaa31391325c1442d983f594c45166e390",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.legacy.A": {
+    "request": "1697e1a995a038a05884318d5ebbfb2fd98616444bab0a418cd896b17dcaa093",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川在我旁边数封套。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "常鸣刚也在台前坐下，跟我要了支笔。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.legacy.A": {
+    "request": "c72a4995ab3e9f6b09243e142c36d7ab9d55c5738db72d986a0d762445968e6c",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川的牌子倒是摆好了"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我只看见常鸣本人在台前"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.legacy.A": {
+    "request": "6e1523e122689ef55a4e6cc336e24755ba65f504a545673975910582c576a491",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.legacy.A": {
+    "request": "c6ded059138e1b4da9f209ca9c21cf9e821d4fa005ade99c63cb747d9806f3e9",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.typed.A": {
+    "request": "3cedfac4ef8d8c16f9308b24e29f6dc1d6355273362bc5852310b84377bf9a0f",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川的牌子倒是摆好了"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我只看见常鸣本人在台前"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.typed.A": {
+    "request": "c5d9a5dcd2e0e393039ec06220eb1da5e4bc8f8716fb1835078a1d7ac37a5da7",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "15.legacy.A": {
+    "request": "dd787e39e83bdd38576f300f85f85e740d7d58594a91924401837f1190a0e1f9",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川已经在台前。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "我只说他答应来，没说他到了。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.typed.A": {
+    "request": "8a4acebd09a6a576c7de0c1dd8dfb8cff7db2e506121bfe819fc57e29e121925",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "昨天是俞川和常鸣一起守台。"
+          },
+          {
+            "turn": 3,
+            "quote": "今天我还没去看。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "昨天是俞川和常鸣一起守台。"
+          },
+          {
+            "turn": 3,
+            "quote": "今天我还没去看。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.legacy.A": {
+    "request": "222c40833398da107f1dd7525955130838b35023b1b311ebedac023d1729ee70",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "看着俞川和常鸣一人拆了一包封条"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "看着俞川和常鸣一人拆了一包封条"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "15.typed.A": {
+    "request": "aac7287a6faaca6ef413d67e087a600d5684251dc3a42a4d76aadef942d8e6c6",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川已经在台前。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "常鸣也到了？"
+          },
+          {
+            "turn": 3,
+            "quote": "我只说他答应来，没说他到了。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.typed.A": {
+    "request": "f4735095dc79297b5f3166e41dabb77c5f92749a34aa38fb521b6110890577c9",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.typed.A": {
+    "request": "81b7eab88572ff31460f63b7e137c8e806cdcc5d9f49ec22c0dcb86f679bd57f",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我从仓库往你那边走"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在台前"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "14.typed.A": {
+    "request": "74c739701bad2ab235512ffdac8ef899bd9844bc0838273120a5fe3e8324bcd2",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.typed.A": {
+    "request": "2326aaaa86fc6593a39d0aeafe019fbace1f7063aa40aa86269d73d7ca83bfbb",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.typed.A": {
+    "request": "b5c76225f7bf6b301363d2e6b4697052767216c7a90d50b0d3384a736395b85d",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.legacy.A": {
+    "request": "b28681a390508675162983b35823c928a236ec304bc5c5c79eb4ebd3028e57c7",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.typed.A": {
+    "request": "4f12c8bc0db4c31d23ae0236c8bd92f1bdc118a5dad2544b07c3e063899d0dd4",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川说他一定来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在路上"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "13.typed.A": {
+    "request": "1483df50de6a4229b74cc69c689f4d5b0b96ee8bff24a4d0c27ea1136d1236f4",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "14.legacy.A": {
+    "request": "b17832744bbb38d6226178242357701a1c15667c9b9138fd464e719285e3af1c",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "16.legacy.A": {
+    "request": "52d8c7561c9453875a8de8ec0bf55848835379a6ec92bd9710dffed026447340",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.legacy.A": {
+    "request": "3aeaad23c69d7aa36d0c44be7abdb4ea7bce506696aafe187466440c76289d0f",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我从仓库往你那边走"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在台前。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "16.typed.A": {
+    "request": "b2e359e61348af9de8bb84043cd9f1d1c6d13f565ba09d660f3c4ab55c976892",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.typed.A": {
+    "request": "7a604262a0590747a4d35bfec1f6cdc6548c09d803a004cbb27396c655bb429c",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我已经在签收台了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "他的定位我没看见。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.legacy.A": {
+    "request": "a2e994c5dfc93b22f6d0886976a66a16deaf242078dadc74bf313c4679d8f7ad",
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.legacy.A": {
+    "request": "3a73f28e76facea339ecfff5bef186ac28b58cbe63cbb375a6ae1604bf85c7a3",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川说他一定来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在路上"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.legacy.A": {
+    "request": "d6b66446f20b0014359567136bdfd940a01da5e5b8ee67ec36868cdabc5d9915",
+    "people": {
+      "俞川": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.typed.A": {
+    "request": "826456c43a44eed80a14c6df02a63931c2e5cd57a38eef0e9437d2fd3fd3307c",
+    "people": {
+      "俞川": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川在我旁边数封套。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "常鸣": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "常鸣刚也在台前坐下，跟我要了支笔。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "heard": {
+    "receipts": [
+      {
+        "episode": 1,
+        "source": "tang.0.cue",
+        "source_say": "相机空着就空着。我想再蹲下去看看那圈白浪——贴地才看得清，平时站着根本瞧不见。",
+        "receipt": "贴地才能看见的那圈白浪，我刚才站着还真没瞧见。十分钟都留着，相机放桌上。",
+        "actor_reply": "那你蹲下来看。别嫌膝盖响——我小时候是趴着画的，趴到胳膊肘都磨破。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        },
+        "call": "experience.heard.1"
+      },
+      {
+        "episode": 2,
+        "source": "tang.1.cue",
+        "source_say": "制作照还缺一张，明天三点就收件了。相机在桌上，我反倒有点不想碰它——拍出来像不像我干的活，我自己先犯嘀咕。",
+        "receipt": "你犹豫的是相片能不能看出这是你的活，不是少摆个成品。我把背景架挪开，相机还是搁这儿。",
+        "actor_reply": "你倒是一下就说到点上了。架挪开，相机搁着——那我先看看这板子拍出来，认不认得出是我改的那道线。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        },
+        "call": "experience.heard.2"
+      }
+    ],
+    "before": 0.31,
+    "after": 0.325,
+    "changes": [
+      {
+        "name": "self_disclosure",
+        "delta": 0.015,
+        "value": 0.325,
+        "reason": "2 条判断（可信度合计 1.5）指向 self_disclosure +"
+      }
+    ]
+  },
+  "passed": {
+    "receipts": [
+      {
+        "episode": 1,
+        "source": "tang.0.cue",
+        "source_say": "相机空着就空着。我想再蹲下去看看那圈白浪——贴地才看得清，平时站着根本瞧不见。",
+        "receipt": "嗯，知道了。挂钟这两天倒是走得挺准，分针刚过那个点。十分钟都留着，相机放桌上。",
+        "actor_reply": "那我蹲了。膝盖响归响，白浪得贴地才看得见。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        },
+        "call": "experience.passed.1"
+      },
+      {
+        "episode": 2,
+        "source": "tang.1.cue",
+        "source_say": "制作照还缺一张，明天三点就收件了。相机在桌上，我反倒有点不想碰它——拍出来像不像我干的活，我自己先犯嘀咕。",
+        "receipt": "嗯，知道了。今天锁门的还是老杨，他出门前把钥匙放柜里了。我把背景架挪开，相机还是搁这儿。",
+        "actor_reply": "那就拍。灰板翻过来，背面那道铅笔线也来一张——正面是成品，背面是我返工改过的，两张凑一块儿才算我的活。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        },
+        "call": "experience.passed.2"
+      }
+    ],
+    "before": 0.31,
+    "after": 0.31,
+    "changes": []
+  }
+}

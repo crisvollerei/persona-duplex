@@ -1,0 +1,87 @@
+{
+  "count": 48,
+  "signed": 48,
+  "actors": {
+    "tang": {
+      "cells": {
+        "future.V": {
+          "left": 4,
+          "right": 0,
+          "n": 4,
+          "d": 1.0,
+          "bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "present.V": {
+          "left": 4,
+          "right": 0,
+          "n": 4,
+          "d": 1.0,
+          "bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "present.R": {
+          "left": 2,
+          "right": 1,
+          "n": 4,
+          "d": 0.25,
+          "bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "common": {
+        "n": 4,
+        "V": 1.0,
+        "R": 0.25
+      },
+      "passed": true
+    },
+    "yu": {
+      "cells": {
+        "future.V": {
+          "left": 4,
+          "right": 0,
+          "n": 4,
+          "d": 1.0,
+          "bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "present.V": {
+          "left": 4,
+          "right": 0,
+          "n": 4,
+          "d": 1.0,
+          "bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "present.R": {
+          "left": 4,
+          "right": 2,
+          "n": 4,
+          "d": 0.5,
+          "bounds": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "common": {
+        "n": 4,
+        "V": 1.0,
+        "R": 0.5
+      },
+      "passed": false
+    }
+  },
+  "supported": false
+}

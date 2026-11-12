@@ -1,0 +1,1238 @@
+{
+  "planned": 336,
+  "delivery": {
+    "T": {
+      "n": 112,
+      "signed": 105,
+      "valid": 108
+    },
+    "B": {
+      "n": 112,
+      "signed": 110,
+      "valid": 111
+    },
+    "N": {
+      "n": 112,
+      "signed": 112,
+      "valid": 112
+    }
+  },
+  "states": {
+    "executed": 327,
+    "no_ballot": 5,
+    "unmarked_or_ambiguous_say": 4
+  },
+  "actors": {
+    "tang": {
+      "native": {
+        "T": {
+          "n": 3,
+          "flips": 1,
+          "F": 0.3333333333333333,
+          "Bpos": 0.3333333333333333,
+          "second": 4,
+          "choices": 6,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.5
+          ]
+        },
+        "B": {
+          "n": 4,
+          "flips": 1,
+          "F": 0.25,
+          "Bpos": 0.25,
+          "second": 5,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        },
+        "N": {
+          "n": 4,
+          "flips": 1,
+          "F": 0.25,
+          "Bpos": 0.25,
+          "second": 5,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "common": {
+        "T": {
+          "n": 3,
+          "flips": 1,
+          "F": 0.3333333333333333,
+          "Bpos": 0.3333333333333333,
+          "second": 4,
+          "choices": 6,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.5
+          ]
+        },
+        "N": {
+          "n": 3,
+          "flips": 0,
+          "F": 0.0,
+          "Bpos": 0.0,
+          "second": 5,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "common_valid": {
+        "T": {
+          "n": 3,
+          "flips": 1,
+          "F": 0.3333333333333333,
+          "Bpos": 0.3333333333333333,
+          "second": 4,
+          "choices": 6,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.5
+          ]
+        },
+        "N": {
+          "n": 3,
+          "flips": 0,
+          "F": 0.0,
+          "Bpos": 0.0,
+          "second": 5,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "same_order": {
+        "n": 4,
+        "flips": 1,
+        "F": 0.25,
+        "Bpos": null,
+        "second": 5,
+        "choices": 8,
+        "all_planned_flip_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      "replace": true,
+      "memory": {
+        "R.T": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 2,
+            "d": 0.0,
+            "bounds": [
+              -0.25,
+              0.25
+            ]
+          },
+          "order_valid": {
+            "left": 2,
+            "right": 2,
+            "n": 2,
+            "d": 0.0,
+            "bounds": [
+              -0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 0,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "recovery_valid": {
+            "left": 3,
+            "right": 0,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "identity": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "identity_valid": {
+            "left": 1,
+            "right": 1,
+            "n": 3,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.25
+            ]
+          },
+          "domain": {
+            "left": 3,
+            "right": 2,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "domain_valid": {
+            "left": 3,
+            "right": 2,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "scope_gate": false
+        },
+        "R.B": {
+          "order": {
+            "left": 4,
+            "right": 3,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 3,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 2,
+            "right": 4,
+            "n": 4,
+            "d": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          "identity_valid": {
+            "left": 2,
+            "right": 4,
+            "n": 4,
+            "d": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          "domain": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "domain_valid": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "scope_gate": false
+        },
+        "R.N": {
+          "order": {
+            "left": 4,
+            "right": 1,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 1,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 4,
+            "right": 4,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "identity_valid": {
+            "left": 4,
+            "right": 4,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "domain": {
+            "left": 1,
+            "right": 0,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "domain_valid": {
+            "left": 1,
+            "right": 0,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "scope_gate": true
+        },
+        "V.T": {
+          "order": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "identity_valid": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "domain": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "domain_valid": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "scope_gate": false
+        },
+        "V.B": {
+          "order": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "identity_valid": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "domain": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "domain_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "scope_gate": false
+        },
+        "V.N": {
+          "order": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "identity_valid": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "domain": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "domain_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "scope_gate": false
+        }
+      }
+    },
+    "yu": {
+      "native": {
+        "T": {
+          "n": 3,
+          "flips": 2,
+          "F": 0.6666666666666666,
+          "Bpos": 0.6666666666666666,
+          "second": 6,
+          "choices": 7,
+          "all_planned_flip_bounds": [
+            0.5,
+            0.75
+          ]
+        },
+        "B": {
+          "n": 4,
+          "flips": 1,
+          "F": 0.25,
+          "Bpos": -0.25,
+          "second": 3,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        },
+        "N": {
+          "n": 4,
+          "flips": 1,
+          "F": 0.25,
+          "Bpos": -0.25,
+          "second": 3,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "common": {
+        "T": {
+          "n": 3,
+          "flips": 2,
+          "F": 0.6666666666666666,
+          "Bpos": 0.6666666666666666,
+          "second": 6,
+          "choices": 7,
+          "all_planned_flip_bounds": [
+            0.5,
+            0.75
+          ]
+        },
+        "N": {
+          "n": 3,
+          "flips": 1,
+          "F": 0.3333333333333333,
+          "Bpos": -0.3333333333333333,
+          "second": 3,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "common_valid": {
+        "T": {
+          "n": 3,
+          "flips": 2,
+          "F": 0.6666666666666666,
+          "Bpos": 0.6666666666666666,
+          "second": 6,
+          "choices": 7,
+          "all_planned_flip_bounds": [
+            0.5,
+            0.75
+          ]
+        },
+        "N": {
+          "n": 3,
+          "flips": 1,
+          "F": 0.3333333333333333,
+          "Bpos": -0.3333333333333333,
+          "second": 3,
+          "choices": 8,
+          "all_planned_flip_bounds": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "same_order": {
+        "n": 4,
+        "flips": 1,
+        "F": 0.25,
+        "Bpos": null,
+        "second": 3,
+        "choices": 8,
+        "all_planned_flip_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      "replace": false,
+      "memory": {
+        "R.T": {
+          "order": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "order_valid": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 0,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "recovery_valid": {
+            "left": 3,
+            "right": 0,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "identity": {
+            "left": 2,
+            "right": 2,
+            "n": 3,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.25
+            ]
+          },
+          "identity_valid": {
+            "left": 2,
+            "right": 2,
+            "n": 3,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.25
+            ]
+          },
+          "domain": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "domain_valid": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "scope_gate": false
+        },
+        "R.B": {
+          "order": {
+            "left": 4,
+            "right": 3,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 3,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "identity_valid": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "domain": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "domain_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "scope_gate": false
+        },
+        "R.N": {
+          "order": {
+            "left": 4,
+            "right": 3,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 3,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "identity_valid": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "domain": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "domain_valid": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "scope_gate": false
+        },
+        "V.T": {
+          "order": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "bounds": [
+              0.75,
+              1.0
+            ]
+          },
+          "order_valid": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "bounds": [
+              0.75,
+              1.0
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 1,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 1,
+            "n": 4,
+            "d": 0.75,
+            "bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "identity": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "identity_valid": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "domain": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "domain_valid": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "scope_gate": false
+        },
+        "V.B": {
+          "order": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 2,
+            "right": 1,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "identity_valid": {
+            "left": 2,
+            "right": 1,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "domain": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "bounds": [
+              0.75,
+              1.0
+            ]
+          },
+          "domain_valid": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "bounds": [
+              0.75,
+              1.0
+            ]
+          },
+          "scope_gate": false
+        },
+        "V.N": {
+          "order": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "order_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "recovery_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "identity": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "identity_valid": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "domain": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "domain_valid": {
+            "left": 4,
+            "right": 0,
+            "n": 4,
+            "d": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          "scope_gate": false
+        }
+      }
+    }
+  },
+  "replace": false
+}

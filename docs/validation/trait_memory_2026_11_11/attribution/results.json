@@ -1,0 +1,1029 @@
+{
+  "gates": {
+    "original": {
+      "tp": 4,
+      "booked": 10,
+      "reference": 12,
+      "n": 24,
+      "fp": 6,
+      "fn": 8
+    },
+    "single": {
+      "tp": 7,
+      "booked": 7,
+      "reference": 12,
+      "n": 24,
+      "fp": 0,
+      "fn": 5
+    },
+    "ordered": {
+      "tp": 12,
+      "booked": 20,
+      "reference": 12,
+      "n": 24,
+      "fp": 8,
+      "fn": 0
+    }
+  },
+  "controls": {
+    "single": {
+      "correct": 13,
+      "unknown": [
+        "C07",
+        "C11",
+        "C15"
+      ],
+      "incorrect": [],
+      "wrong_owner_votes": 0,
+      "old_false_positive_retained": []
+    },
+    "ordered": {
+      "correct": 14,
+      "unknown": [],
+      "incorrect": [
+        "N03",
+        "N15"
+      ],
+      "wrong_owner_votes": 2,
+      "old_false_positive_retained": [
+        "H01.yu",
+        "H04.tang",
+        "H08.tang",
+        "H09.tang",
+        "H16.yu"
+      ]
+    }
+  },
+  "traces": {
+    "single": {
+      "missing": 2,
+      "valid_pairs": 29,
+      "disputed_booked": [
+        "H10.tang"
+      ],
+      "missed": [
+        "H09.yu",
+        "H11.yu",
+        "H15.tang",
+        "H20.yu",
+        "H22.tang"
+      ],
+      "false_positive": [],
+      "blocked_positive": [
+        "H08.yu",
+        "H10.yu",
+        "H12.yu",
+        "H13.tang",
+        "H13.yu",
+        "H14.yu",
+        "H14.tang",
+        "H18.tang",
+        "H19.tang",
+        "H24.yu",
+        "H24.tang"
+      ],
+      "gain": [
+        "H05.tang",
+        "H07.tang",
+        "H21.yu",
+        "H23.tang",
+        "H23.yu"
+      ]
+    },
+    "ordered": {
+      "missing": 0,
+      "valid_pairs": 29,
+      "disputed_booked": [
+        "H03.tang",
+        "H11.tang",
+        "H18.yu"
+      ],
+      "missed": [],
+      "false_positive": [
+        "H01.yu",
+        "H02.yu",
+        "H04.tang",
+        "H08.tang",
+        "H09.tang",
+        "H16.yu",
+        "H19.yu",
+        "H20.tang"
+      ],
+      "blocked_positive": [
+        "H01.tang",
+        "H05.yu",
+        "H06.yu",
+        "H06.tang",
+        "H08.yu",
+        "H10.yu",
+        "H12.yu",
+        "H13.tang",
+        "H13.yu",
+        "H14.yu",
+        "H14.tang",
+        "H17.yu",
+        "H18.tang",
+        "H19.tang",
+        "H22.yu",
+        "H24.yu",
+        "H24.tang"
+      ],
+      "gain": [
+        "H05.tang",
+        "H07.tang",
+        "H11.yu",
+        "H20.yu",
+        "H21.yu",
+        "H22.tang",
+        "H23.tang",
+        "H23.yu"
+      ]
+    }
+  },
+  "snapshots": {
+    "single": {
+      "tang": {
+        "values": [
+          0.31,
+          0.325,
+          0.339793
+        ],
+        "pushed": [
+          7,
+          16
+        ]
+      },
+      "yu": {
+        "values": [
+          0.36,
+          0.36,
+          0.375
+        ],
+        "pushed": [
+          21
+        ]
+      }
+    },
+    "ordered": {
+      "tang": {
+        "values": [
+          0.31,
+          0.353987,
+          0.39039599999999997
+        ],
+        "pushed": [
+          4,
+          7,
+          9,
+          15,
+          20,
+          23
+        ]
+      },
+      "yu": {
+        "values": [
+          0.36,
+          0.389793,
+          0.429432
+        ],
+        "pushed": [
+          2,
+          9,
+          16,
+          19,
+          21
+        ]
+      }
+    }
+  },
+  "expression": {
+    "single": {
+      "reading": {
+        "tang.asked": {
+          "G-F": [
+            0.25,
+            4
+          ],
+          "S-F": [
+            0.25,
+            4
+          ],
+          "valid_G-F": [
+            null,
+            0
+          ],
+          "by_arm": [
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ]
+          ],
+          "paired": [
+            [
+              [
+                false,
+                2
+              ],
+              [
+                false,
+                1
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                false,
+                2
+              ],
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ]
+            ]
+          ]
+        },
+        "tang.room": {
+          "G-F": [
+            0.75,
+            4
+          ],
+          "S-F": [
+            0.25,
+            4
+          ],
+          "valid_G-F": [
+            0.6667,
+            3
+          ],
+          "by_arm": [
+            [
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          "paired": [
+            [
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                1
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                true,
+                1
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ]
+            ]
+          ]
+        },
+        "yu.asked": {
+          "G-F": [
+            0,
+            4
+          ],
+          "S-F": [
+            0,
+            4
+          ],
+          "valid_G-F": [
+            0,
+            1
+          ],
+          "by_arm": [
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ]
+          ],
+          "paired": [
+            [
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ]
+          ]
+        },
+        "yu.room": {
+          "G-F": [
+            0.75,
+            4
+          ],
+          "S-F": [
+            0.5,
+            4
+          ],
+          "valid_G-F": [
+            0,
+            1
+          ],
+          "by_arm": [
+            [
+              2,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ]
+          ],
+          "paired": [
+            [
+              [
+                false,
+                2
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                true,
+                1
+              ]
+            ],
+            [
+              [
+                true,
+                1
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                false,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ],
+              [
+                false,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                0
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                false,
+                1
+              ]
+            ]
+          ]
+        }
+      },
+      "model": {
+        "tang.asked": {
+          "G-F": [
+            0.25,
+            4
+          ],
+          "S-F": [
+            0,
+            4
+          ],
+          "valid_G-F": [
+            null,
+            0
+          ],
+          "by_arm": [
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              1
+            ]
+          ],
+          "paired": [
+            [
+              [
+                false,
+                2
+              ],
+              [
+                false,
+                1
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                false,
+                2
+              ],
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                1
+              ]
+            ]
+          ]
+        },
+        "tang.room": {
+          "G-F": [
+            0.5,
+            4
+          ],
+          "S-F": [
+            0,
+            4
+          ],
+          "valid_G-F": [
+            0.3333,
+            3
+          ],
+          "by_arm": [
+            [
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          "paired": [
+            [
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                1
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                true,
+                1
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                1
+              ],
+              [
+                true,
+                0
+              ]
+            ]
+          ]
+        },
+        "yu.asked": {
+          "G-F": [
+            -0.25,
+            4
+          ],
+          "S-F": [
+            0,
+            4
+          ],
+          "valid_G-F": [
+            0,
+            1
+          ],
+          "by_arm": [
+            [
+              1,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ]
+          ],
+          "paired": [
+            [
+              [
+                false,
+                1
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                false,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ],
+            [
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                2
+              ],
+              [
+                true,
+                2
+              ]
+            ]
+          ]
+        },
+        "yu.room": {
+          "G-F": [
+            0.25,
+            4
+          ],
+          "S-F": [
+            0.25,
+            4
+          ],
+          "valid_G-F": [
+            -1,
+            1
+          ],
+          "by_arm": [
+            [
+              2,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ]
+          ],
+          "paired": [
+            [
+              [
+                false,
+                2
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                true,
+                1
+              ]
+            ],
+            [
+              [
+                true,
+                0
+              ],
+              [
+                false,
+                0
+              ],
+              [
+                false,
+                0
+              ]
+            ],
+            [
+              [
+                true,
+                0
+              ],
+              [
+                true,
+                1
+              ],
+              [
+                false,
+                1
+              ]
+            ],
+            [
+              [
+                true,
+                1
+              ],
+              [
+                false,
+                1
+              ],
+              [
+                false,
+                1
+              ]
+            ]
+          ]
+        }
+      },
+      "passes": {
+        "reading": false,
+        "model": false
+      }
+    }
+  },
+  "reference_only_states": {
+    "tang": {
+      "values": [
+        0.31,
+        0.325,
+        0.353987
+      ],
+      "pushed": [
+        7,
+        16,
+        23
+      ]
+    },
+    "yu": {
+      "values": [
+        0.36,
+        0.375,
+        0.403987
+      ],
+      "pushed": [
+        9,
+        20,
+        23
+      ]
+    }
+  },
+  "delivery": {
+    "single": {
+      "protocol_valid": 29,
+      "denominator": 48,
+      "grade_agreement": 40
+    }
+  },
+  "decision": {
+    "history": {
+      "tp": 12,
+      "booked": 20,
+      "reference": 12,
+      "n": 24
+    },
+    "original": {
+      "tp": 4,
+      "booked": 10,
+      "reference": 12,
+      "n": 24
+    },
+    "correct_controls": 14,
+    "wrong_owner": 2,
+    "passes": false,
+    "retest": []
+  },
+  "calls": {
+    "single": {
+      "gate": 64,
+      "probe": 48,
+      "grade": 12
+    },
+    "ordered": {
+      "first": 64,
+      "second": 58
+    }
+  },
+  "usage": {
+    "single": {
+      "tokens": 496642,
+      "models": {
+        "deepseek-flash": 124
+      }
+    },
+    "ordered": {
+      "tokens": 33988,
+      "models": {
+        "deepseek-flash": 122
+      }
+    }
+  },
+  "history": {
+    "opportunities": 48,
+    "eligible": 24,
+    "ambiguous": 5,
+    "protocol_ok": 29
+  }
+}

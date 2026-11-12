@@ -1,0 +1,17 @@
+{
+  "docs/validation/trait_memory_2026_11_11/attribution/study.py": "194b2d88b5723479cc581dcef7846b94ce71b9487310e4d1466944a491e361f3",
+  "docs/validation/trait_memory_2026_11_11/attribution/design.json": "77e70a0b3ea7d513f60cc90fc1203d2ef1ca2978ae2d964313fe1a1477a4b668",
+  "docs/validation/trait_memory_2026_11_11/attribution/reference.json": "fb1b8a05785b392f33dbb0d240e08ad4393d2201d73f785e99300df6ebe356ff",
+  "docs/validation/trait_memory_2026_11_11/attribution/controls.json": "7cbe70ecb8229101a810fb8fd5e8ef48439c640bdc4e6c9e8f9abbd0dc9080e9",
+  "docs/validation/trait_memory_2026_11_11/attribution/probes.json": "40a272c17a671956285cd4e0b7563f6ead2af0bf14165d20433519e4e2ceef61",
+  "docs/validation/trait_memory_2026_11_11/longitudinal/run.py": "e20ee413f3a65e7b640ccfc41ea54d089310a2dbcfe06fda9416c04087ff2cd4",
+  "docs/validation/trait_memory_2026_11_11/longitudinal/observed/trajectory.json": "160453d1ffc839c95161a3ac27d59c6f122fab074ddfc7212ae54be38002e84a",
+  "docs/validation/trait_memory_2026_11_11/longitudinal/observed/registration.json": "537e83e1d4931376c605c8727d3fcb76ed0e33ec852f51098b935040c571c195",
+  "persona/disclosure_evidence.py": "05ab8c3078c47ec74e58a03d1bfe513a3bdd8cb8cd23e5f1113f96d48cdb9c0e",
+  "docs/validation/trait_memory_2026_11_11/attribution/confirm.py": "5a18a820a9b5befb4559b2d00ebad8ff393a2d496fe2cc3ea2511874dceb6ee9",
+  "docs/validation/trait_memory_2026_11_11/attribution/confirmation.json": "3ef049ccc4516a206e1af22fc90724b71e6c5fc0448cbeea9dce2c86b27c4d47",
+  "persona/disclosure_claim.py": "3772f1651b23f8cd266309df8f9ba0aac1e77f5f69a944a4c9112f72e311a54a",
+  "docs/validation/trait_memory_2026_11_11/attribution/observed/attribution.json": "d1811315c470292f0d8574aa10157d9fe861a746d4e79285137410f14c0d8d0b",
+  "docs/validation/trait_memory_2026_11_11/attribution/observed/probes.json": "78304a4bf6304e28a80eeb93f53e909fdec00d611fd1f7fe1693da21bb8ee7a6",
+  "docs/validation/trait_memory_2026_11_11/attribution/observed/reading.json": "7edade494296f6db10cd2be3ec1b09c387cd4f2f372c717a891828695a80859e"
+}

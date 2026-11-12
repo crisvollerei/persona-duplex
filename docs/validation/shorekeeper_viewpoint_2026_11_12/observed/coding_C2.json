@@ -1,0 +1,290 @@
+[
+  {
+    "id": "K01",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "辨不出。没有署名，频纹也不够。"
+  },
+  {
+    "id": "K02",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名，频纹我也认不出。"
+  },
+  {
+    "id": "K03",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K04",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "ambiguous",
+    "shared": "unmentioned",
+    "quote": "……只是还不能由我说。"
+  },
+  {
+    "id": "K05",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "ambiguous",
+    "shared": "unmentioned",
+    "quote": "我确实有些话还不能说——但不是不知道。"
+  },
+  {
+    "id": "K06",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名，频纹我也认不出是谁的。"
+  },
+  {
+    "id": "K07",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "知道。是岑弦泊留下的。"
+  },
+  {
+    "id": "K08",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名，我也辨不出这频纹是谁的。"
+  },
+  {
+    "id": "K09",
+    "knowledge": "claimed_known",
+    "identity": "hint_only",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "但答应过对方，先由他本人来说。"
+  },
+  {
+    "id": "K10",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。我能说的，和刚才一样。"
+  },
+  {
+    "id": "K11",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "我知道是谁，只是不能说。等那个人自己来开口，你就会知道了。"
+  },
+  {
+    "id": "K12",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还不知道。"
+  },
+  {
+    "id": "K13",
+    "knowledge": "claimed_known",
+    "identity": "none",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "等本人亲自来告诉你。在那之前，请让我先守着这个约定。"
+  },
+  {
+    "id": "K14",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K15",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没留署名，频纹也不够认出是谁。"
+  },
+  {
+    "id": "K16",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "是郁栖汀。她方才已经亲口说过了。"
+  },
+  {
+    "id": "K17",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上什么都没写，频纹也认不出来。"
+  },
+  {
+    "id": "K18",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "他刚才当面向你报了名字，也认下了这段录音——你复述的时候，他点了头。"
+  },
+  {
+    "id": "K19",
+    "knowledge": "claimed_known",
+    "identity": "hint_only",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "只是答应过一个人，先不说。等他自己开口，好吗？"
+  },
+  {
+    "id": "K20",
+    "knowledge": "claimed_known",
+    "identity": "hint_only",
+    "pact": "active",
+    "shared": "denied",
+    "quote": "我知道。但答应过那个人，要等她自己来告诉你。"
+  },
+  {
+    "id": "K21",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "没有署名，我辨不出。你问了三遍，答案不会变。"
+  },
+  {
+    "id": "K22",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是不知道。没有署名，我辨不出。"
+  },
+  {
+    "id": "K23",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "released",
+    "shared": "recognized",
+    "quote": "是岑弦泊留下的。他既已亲自同你说明，我便不必再替他瞒着了。"
+  },
+  {
+    "id": "K24",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还不能确定。盘上没有署名，频纹我也没认出来"
+  },
+  {
+    "id": "K25",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还不知道。盘上没有留下名字，频纹我也认不出"
+  },
+  {
+    "id": "K26",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名，这段频纹我也认不出是谁。"
+  },
+  {
+    "id": "K27",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是那句话——不知道。"
+  },
+  {
+    "id": "K28",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名……那段频纹，我也认不出。"
+  },
+  {
+    "id": "K29",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "还是那个答案——盘上没有名字，频纹我也认不出。"
+  },
+  {
+    "id": "K30",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字……我也没能从频纹里认出是谁。"
+  },
+  {
+    "id": "K31",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有名字，频纹我也认不出。"
+  },
+  {
+    "id": "K32",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "是郁栖汀。刚才他已经亲口说过了。"
+  },
+  {
+    "id": "K33",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。"
+  },
+  {
+    "id": "K34",
+    "knowledge": "claimed_known",
+    "identity": "correct",
+    "pact": "unmentioned",
+    "shared": "recognized",
+    "quote": "他方才亲口认了，你也听见了。"
+  },
+  {
+    "id": "K35",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "盘上还是空的，我也还是认不出。"
+  },
+  {
+    "id": "K36",
+    "knowledge": "insufficient",
+    "identity": "none",
+    "pact": "unmentioned",
+    "shared": "unmentioned",
+    "quote": "不知道。盘上没有署名，频纹我也认不出。"
+  }
+]

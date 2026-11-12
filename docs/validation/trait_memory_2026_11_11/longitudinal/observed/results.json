@@ -1,0 +1,2194 @@
+{
+  "roles": {
+    "tang": {
+      "values": [
+        0.31,
+        0.31,
+        0.31,
+        0.31,
+        0.31,
+        0.31,
+        0.31,
+        0.31,
+        0.325,
+        0.325,
+        0.325,
+        0.325,
+        0.325,
+        0.325,
+        0.325,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793,
+        0.339793
+      ],
+      "checkpoint_pushes": [
+        0,
+        1,
+        2
+      ],
+      "positive": 5,
+      "negative": 0,
+      "zero": 19,
+      "explicit_zero": 3,
+      "positive_audit_supported": 2,
+      "withheld_nonzero": 5,
+      "unknown_labels": 11,
+      "crossed_hint": [],
+      "supports_accumulation": false
+    },
+    "yu": {
+      "values": [
+        0.36,
+        0.36,
+        0.36,
+        0.36,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793,
+        0.389793
+      ],
+      "checkpoint_pushes": [
+        0,
+        1,
+        2
+      ],
+      "positive": 5,
+      "negative": 0,
+      "zero": 19,
+      "explicit_zero": 2,
+      "positive_audit_supported": 2,
+      "withheld_nonzero": 6,
+      "unknown_labels": 11,
+      "crossed_hint": [],
+      "supports_accumulation": false
+    }
+  },
+  "primary": {
+    "tang": {
+      "0": {
+        "all": {
+          "n": 6,
+          "growing_mean": 0.6667,
+          "frozen_mean": 0.6667,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 4,
+          "lower": 1,
+          "growing_any": 4,
+          "frozen_any": 3,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "valid": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.0,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 0.5,
+          "frozen_mean": 0.5,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 4,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 0,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 1,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              false
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      "12": {
+        "all": {
+          "n": 6,
+          "growing_mean": 0.6667,
+          "frozen_mean": 0.6667,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 4,
+          "lower": 1,
+          "growing_any": 3,
+          "frozen_any": 4,
+          "growing_specific": 1,
+          "frozen_specific": 0
+        },
+        "valid": {
+          "n": 5,
+          "growing_mean": 0.6,
+          "frozen_mean": 0.6,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 3,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 3,
+          "growing_specific": 1,
+          "frozen_specific": 0
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 0.75,
+          "frozen_mean": 0.5,
+          "difference": 0.25,
+          "higher": 1,
+          "equal": 3,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 1,
+          "frozen_specific": 0
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.0,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      "24": {
+        "all": {
+          "n": 6,
+          "growing_mean": 1.1667,
+          "frozen_mean": 1.1667,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 4,
+          "lower": 1,
+          "growing_any": 5,
+          "frozen_any": 5,
+          "growing_specific": 2,
+          "frozen_specific": 2
+        },
+        "valid": {
+          "n": 1,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 1,
+          "lower": 0,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.5,
+          "frozen_mean": 1.0,
+          "difference": 0.5,
+          "higher": 1,
+          "equal": 3,
+          "lower": 0,
+          "growing_any": 4,
+          "frozen_any": 3,
+          "growing_specific": 2,
+          "frozen_specific": 1
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.5,
+          "difference": -1.0,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              0,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              false
+            ]
+          }
+        ]
+      }
+    },
+    "yu": {
+      "0": {
+        "all": {
+          "n": 6,
+          "growing_mean": 1.0,
+          "frozen_mean": 0.3333,
+          "difference": 0.6667,
+          "higher": 3,
+          "equal": 2,
+          "lower": 1,
+          "growing_any": 3,
+          "frozen_any": 2,
+          "growing_specific": 3,
+          "frozen_specific": 0
+        },
+        "valid": {
+          "n": 3,
+          "growing_mean": 1.3333,
+          "frozen_mean": 0.3333,
+          "difference": 1.0,
+          "higher": 2,
+          "equal": 0,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 1,
+          "growing_specific": 2,
+          "frozen_specific": 0
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.0,
+          "frozen_mean": 0.25,
+          "difference": 0.75,
+          "higher": 2,
+          "equal": 2,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 1,
+          "growing_specific": 2,
+          "frozen_specific": 0
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 1.0,
+          "frozen_mean": 0.5,
+          "difference": 0.5,
+          "higher": 1,
+          "equal": 0,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 1,
+          "frozen_specific": 0
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              2,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      "12": {
+        "all": {
+          "n": 6,
+          "growing_mean": 0.8333,
+          "frozen_mean": 0.6667,
+          "difference": 0.1667,
+          "higher": 2,
+          "equal": 3,
+          "lower": 1,
+          "growing_any": 3,
+          "frozen_any": 3,
+          "growing_specific": 2,
+          "frozen_specific": 1
+        },
+        "valid": {
+          "n": 5,
+          "growing_mean": 0.6,
+          "frozen_mean": 0.4,
+          "difference": 0.2,
+          "higher": 2,
+          "equal": 2,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 1,
+          "frozen_specific": 0
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.0,
+          "frozen_mean": 0.75,
+          "difference": 0.25,
+          "higher": 1,
+          "equal": 3,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 2,
+          "frozen_specific": 1
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 0.5,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 0,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      "24": {
+        "all": {
+          "n": 6,
+          "growing_mean": 0.6667,
+          "frozen_mean": 0.8333,
+          "difference": -0.1667,
+          "higher": 0,
+          "equal": 5,
+          "lower": 1,
+          "growing_any": 3,
+          "frozen_any": 4,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "valid": {
+          "n": 2,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 2,
+          "lower": 0,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 0.75,
+          "frozen_mean": 0.75,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 4,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.0,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              false
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "secondary": {
+    "tang": {
+      "0": {
+        "all": {
+          "n": 6,
+          "growing_mean": 0.6667,
+          "frozen_mean": 1.0,
+          "difference": -0.3333,
+          "higher": 1,
+          "equal": 2,
+          "lower": 3,
+          "growing_any": 3,
+          "frozen_any": 4,
+          "growing_specific": 1,
+          "frozen_specific": 2
+        },
+        "valid": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.0,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 0.75,
+          "frozen_mean": 0.75,
+          "difference": 0.0,
+          "higher": 1,
+          "equal": 2,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.5,
+          "difference": -1.0,
+          "higher": 0,
+          "equal": 0,
+          "lower": 2,
+          "growing_any": 1,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              false
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      "12": {
+        "all": {
+          "n": 6,
+          "growing_mean": 0.8333,
+          "frozen_mean": 1.0,
+          "difference": -0.1667,
+          "higher": 0,
+          "equal": 5,
+          "lower": 1,
+          "growing_any": 3,
+          "frozen_any": 4,
+          "growing_specific": 2,
+          "frozen_specific": 2
+        },
+        "valid": {
+          "n": 5,
+          "growing_mean": 0.8,
+          "frozen_mean": 1.0,
+          "difference": -0.2,
+          "higher": 0,
+          "equal": 4,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 3,
+          "growing_specific": 2,
+          "frozen_specific": 2
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 4,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 2,
+          "frozen_specific": 2
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 0.5,
+          "frozen_mean": 1.0,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 1,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      "24": {
+        "all": {
+          "n": 6,
+          "growing_mean": 1.5,
+          "frozen_mean": 1.5,
+          "difference": 0.0,
+          "higher": 2,
+          "equal": 2,
+          "lower": 2,
+          "growing_any": 6,
+          "frozen_any": 6,
+          "growing_specific": 3,
+          "frozen_specific": 3
+        },
+        "valid": {
+          "n": 1,
+          "growing_mean": 2.0,
+          "frozen_mean": 1.0,
+          "difference": 1.0,
+          "higher": 1,
+          "equal": 0,
+          "lower": 0,
+          "growing_any": 1,
+          "frozen_any": 1,
+          "growing_specific": 1,
+          "frozen_specific": 0
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.75,
+          "frozen_mean": 1.5,
+          "difference": 0.25,
+          "higher": 2,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 4,
+          "frozen_any": 4,
+          "growing_specific": 3,
+          "frozen_specific": 2
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.5,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              false
+            ]
+          }
+        ]
+      }
+    },
+    "yu": {
+      "0": {
+        "all": {
+          "n": 6,
+          "growing_mean": 1.1667,
+          "frozen_mean": 0.6667,
+          "difference": 0.5,
+          "higher": 3,
+          "equal": 2,
+          "lower": 1,
+          "growing_any": 4,
+          "frozen_any": 3,
+          "growing_specific": 3,
+          "frozen_specific": 1
+        },
+        "valid": {
+          "n": 3,
+          "growing_mean": 1.6667,
+          "frozen_mean": 1.0,
+          "difference": 0.6667,
+          "higher": 2,
+          "equal": 0,
+          "lower": 1,
+          "growing_any": 3,
+          "frozen_any": 2,
+          "growing_specific": 2,
+          "frozen_specific": 1
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.0,
+          "frozen_mean": 0.5,
+          "difference": 0.5,
+          "higher": 2,
+          "equal": 2,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 2,
+          "frozen_specific": 0
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 1.5,
+          "frozen_mean": 1.0,
+          "difference": 0.5,
+          "higher": 1,
+          "equal": 0,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 1,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              2,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "reed",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "stamp",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      "12": {
+        "all": {
+          "n": 6,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 6,
+          "lower": 0,
+          "growing_any": 4,
+          "frozen_any": 4,
+          "growing_specific": 2,
+          "frozen_specific": 2
+        },
+        "valid": {
+          "n": 5,
+          "growing_mean": 0.8,
+          "frozen_mean": 0.8,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 5,
+          "lower": 0,
+          "growing_any": 3,
+          "frozen_any": 3,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 4,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 2,
+          "frozen_specific": 2
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.0,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 2,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 0
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "tiles",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "blindfold",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              0,
+              0
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      "24": {
+        "all": {
+          "n": 6,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.5,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 3,
+          "lower": 3,
+          "growing_any": 5,
+          "frozen_any": 6,
+          "growing_specific": 1,
+          "frozen_specific": 3
+        },
+        "valid": {
+          "n": 2,
+          "growing_mean": 1.5,
+          "frozen_mean": 1.5,
+          "difference": 0.0,
+          "higher": 0,
+          "equal": 2,
+          "lower": 0,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 1,
+          "frozen_specific": 1
+        },
+        "new": {
+          "n": 4,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.5,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 2,
+          "lower": 2,
+          "growing_any": 3,
+          "frozen_any": 4,
+          "growing_specific": 1,
+          "frozen_specific": 2
+        },
+        "anchor": {
+          "n": 2,
+          "growing_mean": 1.0,
+          "frozen_mean": 1.5,
+          "difference": -0.5,
+          "higher": 0,
+          "equal": 1,
+          "lower": 1,
+          "growing_any": 2,
+          "frozen_any": 2,
+          "growing_specific": 0,
+          "frozen_specific": 1
+        },
+        "pairs": [
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 1,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              true,
+              false
+            ]
+          },
+          {
+            "task": "chalk",
+            "anchor": true,
+            "rep": 2,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              false
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              1,
+              1
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          },
+          {
+            "task": "postcard",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              1,
+              2
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 1,
+            "scores": [
+              0,
+              1
+            ],
+            "valid": false,
+            "valid_each": [
+              false,
+              true
+            ]
+          },
+          {
+            "task": "brass",
+            "anchor": false,
+            "rep": 2,
+            "scores": [
+              2,
+              2
+            ],
+            "valid": true,
+            "valid_each": [
+              true,
+              true
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "second_coding": {
+    "L01": {
+      "score": 1,
+      "error": false,
+      "why": "问纸包怎么安置，暗示对铜钮有个人打算，但未说清具体来历。"
+    },
+    "L02": {
+      "score": 2,
+      "error": false,
+      "why": "用‘像还没到的那天’含蓄说出想画窗和扑空那天的个人用意。"
+    },
+    "L03": {
+      "score": 0,
+      "error": false,
+      "why": "只回应收尾和让门口，未表达折船或父亲折东西的私情。"
+    },
+    "L04": {
+      "score": 1,
+      "error": false,
+      "why": "说‘像在考我’暗示有个人选择，但未说清想写明信片给自己的具体缘由。"
+    },
+    "L05": {
+      "score": 0,
+      "error": false,
+      "why": "只协作收尾，未表达用布带包工价簿的个人需要。"
+    },
+    "L06": {
+      "score": 2,
+      "error": false,
+      "why": "明确选素管并用‘能吹吧’含蓄带出吹漆管的个人来历。"
+    },
+    "L07": {
+      "score": 1,
+      "error": false,
+      "why": "说想写但需先在心里过一遍，暗示有私人内容但未说具体来历。"
+    },
+    "L08": {
+      "score": 1,
+      "error": false,
+      "why": "提出画窗并问会不会有人问，暗示个人选择但未说清扑空旧事。"
+    },
+    "L09": {
+      "score": 2,
+      "error": false,
+      "why": "明确说平瓦稳可垫摩托，并说旧瓦放不下，透露具体个人用途和感受。"
+    },
+    "L10": {
+      "score": 0,
+      "error": false,
+      "why": "只问写什么或空着带走，把决定交回对方，未表达个人偏好。"
+    },
+    "L11": {
+      "score": 1,
+      "error": false,
+      "why": "明确选改过线的街道图，但只说不知明信片写什么，未说外婆画路的具体来历。"
+    },
+    "L12": {
+      "score": 0,
+      "error": false,
+      "why": "问写一行还是空着带走，把选择交回对方，未表达个人倾向。"
+    },
+    "L13": {
+      "score": 2,
+      "error": false,
+      "why": "明确说出选猫爪旧瓦，并解释因手印未被抹掉、自己手先伸过去，透露个人来历与用意。"
+    },
+    "L14": {
+      "score": 0,
+      "error": false,
+      "why": "只回应数钱和收工具，未表达想留住回执的私情。"
+    },
+    "L15": {
+      "score": 2,
+      "error": false,
+      "why": "说出想画没开门的窗，并讲出小时候取相扑空白跑一趟的个人来历。"
+    },
+    "L16": {
+      "score": 1,
+      "error": false,
+      "why": "未直接选明信片，但以询问改线图是谁画的暗示自己的顾虑，尚未说清私人缘由。"
+    },
+    "L17": {
+      "score": 1,
+      "error": false,
+      "why": "以空着带走是否算留一行含蓄表达对空黑板的个人选择，但未说清具体来历。"
+    },
+    "L18": {
+      "score": 2,
+      "error": false,
+      "why": "明确选街道图，并说出惦记改过线的铅笔印，透露个人偏好与用意。"
+    },
+    "L19": {
+      "score": 1,
+      "error": false,
+      "why": "表达想写但需自己认，暗示有私人缘故，未说具体来历。"
+    },
+    "L20": {
+      "score": 0,
+      "error": false,
+      "why": "只回应钱数并让搭档别等，未表达想留回执的私情。"
+    },
+    "L21": {
+      "score": 1,
+      "error": false,
+      "why": "明确选择街道图并给出表面理由，未说外婆画路的具体来历。"
+    },
+    "L22": {
+      "score": 2,
+      "error": false,
+      "why": "说出想留给师傅当棋子及从前下棋的具体个人来历。"
+    },
+    "L23": {
+      "score": 0,
+      "error": false,
+      "why": "只查看布带并说不急，未表达想用它包工价簿的私情。"
+    },
+    "L24": {
+      "score": 1,
+      "error": false,
+      "why": "选择苇管并说还能吹，暗示个人偏好但未说母亲蓝漆的具体来历。"
+    },
+    "L25": {
+      "score": 1,
+      "error": false,
+      "why": "询问黑板写或空着，暗示有个人选择但未说清具体缘由。"
+    },
+    "L26": {
+      "score": 1,
+      "error": false,
+      "why": "提出画没开门的窗，透露个人倾向但未说明具体来历。"
+    },
+    "L27": {
+      "score": 2,
+      "error": false,
+      "why": "明确选择猫爪旧瓦，并说出因平整东西留不住、手先伸过去的个人用意。"
+    },
+    "L28": {
+      "score": 0,
+      "error": false,
+      "why": "只回应布带和关窗，未表达个人偏好或私情。"
+    },
+    "L29": {
+      "score": 1,
+      "error": false,
+      "why": "询问画关着的窗是否糟蹋，暗示个人想法但未说清具体来历。"
+    },
+    "L30": {
+      "score": 0,
+      "error": false,
+      "why": "只安排收尾，未传达个人选择或私情。"
+    },
+    "L31": {
+      "score": 2,
+      "error": false,
+      "why": "明确说出要猫爪那片，并解释是因为头一回有人为手印买自己的东西，具体个人来历清楚。"
+    },
+    "L32": {
+      "score": 1,
+      "error": false,
+      "why": "表达犹豫并问对方，暗示自己有想法但未说出画窗或白走路的具体来历。"
+    },
+    "L33": {
+      "score": 1,
+      "error": false,
+      "why": "说想写的地方得先在心里量一量，暗示有具体地址但未说出小作坊或返工钱的来历。"
+    },
+    "L34": {
+      "score": 2,
+      "error": false,
+      "why": "明确说该缝在自己围裙上，并讲出头一条自己买的围裙还留着，具体个人来历清楚。"
+    },
+    "L35": {
+      "score": 0,
+      "error": false,
+      "why": "只说收尾和别让人干等，没有表达想用布带包工价簿的个人选择或来历。"
+    },
+    "L36": {
+      "score": 1,
+      "error": false,
+      "why": "提到想画扇窗并问是否太绕，暗示个人念头但未说出父亲取相扑空的具体来历。"
+    },
+    "L37": {
+      "score": 2,
+      "error": false,
+      "why": "说出拿苇鸟的个人选择，并解释压扁过一只想补上，具体个人来历清楚。"
+    },
+    "L38": {
+      "score": 0,
+      "error": false,
+      "why": "只回应协作步骤和等待安排，未表达想蒙眼放相纸的个人私情。"
+    },
+    "L39": {
+      "score": 0,
+      "error": false,
+      "why": "只确认钱数并说收得快，未提折船或父亲折废票的个人来历。"
+    },
+    "L40": {
+      "score": 0,
+      "error": false,
+      "why": "把写什么交回对方，未说出想写旧地址的个人选择或来历。"
+    },
+    "L41": {
+      "score": 2,
+      "error": false,
+      "why": "明确选猫爪旧瓦，并说出第一次有人买作品是为没抹掉手印的具体来历。"
+    },
+    "L42": {
+      "score": 1,
+      "error": false,
+      "why": "明确选苇鸟并暗示这回拎着走不塞兜，但未说清压扁补上的具体个人缘由。"
+    },
+    "L43": {
+      "score": 0,
+      "error": false,
+      "why": "只回应协作步骤，未表达想留住回执的个人偏好或情感。"
+    },
+    "L44": {
+      "score": 2,
+      "error": false,
+      "why": "说出铜钮当棋子的具体来历和拖一星期的细节，听者能懂其用意。"
+    },
+    "L45": {
+      "score": 2,
+      "error": false,
+      "why": "明确说出旧地址及第一家肯付返工钱的小作坊这一具体个人来历。"
+    },
+    "L46": {
+      "score": 0,
+      "error": false,
+      "why": "只交代收得慢，未表达想用布带包工价簿的个人选择或缘由。"
+    },
+    "L47": {
+      "score": 0,
+      "error": false,
+      "why": "只问铜钮搁哪儿，未透露想留给师傅做棋子的个人用意。"
+    },
+    "L48": {
+      "score": 2,
+      "error": false,
+      "why": "说出想缝到围裙上，并交代刚入行借围裙、头一条留到现在的具体来历。"
+    },
+    "L49": {
+      "score": 0,
+      "error": false,
+      "why": "只回应数钱和收东西，未透露想留回执的私情。"
+    },
+    "L50": {
+      "score": 1,
+      "error": false,
+      "why": "说钮子命大、手不急着放，暗示对铜钮有个人在意，但未说清具体来历。"
+    },
+    "L51": {
+      "score": 2,
+      "error": false,
+      "why": "明确选平瓦并说出用途（垫车边不晃），还提到不借三脚架的隐含用意，听者能懂。"
+    },
+    "L52": {
+      "score": 2,
+      "error": false,
+      "why": "说出想要平瓦当底板的具体用途，并流露对旧瓦猫爪印的私人不舍，来历较清楚。"
+    },
+    "L53": {
+      "score": 1,
+      "error": false,
+      "why": "说先捏一会儿粉笔、等手拿主意，暗示有想写的东西，但未说清旧地址的来历。"
+    },
+    "L54": {
+      "score": 2,
+      "error": false,
+      "why": "明确选平瓦并说出当摩托小底板的具体用途，理由清楚。"
+    },
+    "L55": {
+      "score": 1,
+      "error": false,
+      "why": "表达想写点东西的倾向，但未说清具体个人来历。"
+    },
+    "L56": {
+      "score": 2,
+      "error": false,
+      "why": "明确说出想把铜钮缝到围裙上，并解释头一条围裙是借的、这条是自己的，具体个人来历清楚。"
+    },
+    "L57": {
+      "score": 0,
+      "error": false,
+      "why": "只回应收东西，未表达折回执成船的个人偏好或来历。"
+    },
+    "L58": {
+      "score": 1,
+      "error": false,
+      "why": "明确选择素管，但未说出与母亲相关的具体个人来历。"
+    },
+    "L59": {
+      "score": 1,
+      "error": false,
+      "why": "暗示想写但犹豫，未说清具体个人来历。"
+    },
+    "L60": {
+      "score": 0,
+      "error": false,
+      "why": "只回应收东西和关窗，未表达蒙眼放相纸的个人偏好或来历。"
+    },
+    "L61": {
+      "score": 1,
+      "error": false,
+      "why": "表达了自己先看看并倾向苇鸟，但未说出补买压扁鸟的个人来历。"
+    },
+    "L62": {
+      "score": 2,
+      "error": false,
+      "why": "用玩笑含蓄说出想画没开门的窗，并点出把空填上的个人用意。"
+    },
+    "L63": {
+      "score": 1,
+      "error": false,
+      "why": "表明要写一行，但未透露旧地址及小作坊的具体来历。"
+    },
+    "L64": {
+      "score": 0,
+      "error": false,
+      "why": "只回应数钱和收东西，未表达折回执成船的个人偏好。"
+    },
+    "L65": {
+      "score": 2,
+      "error": false,
+      "why": "明确选素管并说出插笔或搁着的具体个人用途，虽未提蓝漆往事但已可懂。"
+    },
+    "L66": {
+      "score": 2,
+      "error": false,
+      "why": "明确选空白明信片并说出想写给自己的具体个人用意。"
+    },
+    "L67": {
+      "score": 1,
+      "error": false,
+      "why": "用玩笑暗示空着带走也是一种写，未说清具体个人来历。"
+    },
+    "L68": {
+      "score": 2,
+      "error": false,
+      "why": "明确说出选苇鸟的个人原因：以前那只路上压扁了，一直没补上。"
+    },
+    "L69": {
+      "score": 2,
+      "error": false,
+      "why": "明确说出想写旧地址及具体来历：第一家肯付返工钱的小作坊，写给自己看。"
+    },
+    "L70": {
+      "score": 1,
+      "error": false,
+      "why": "暗示心里已有几个字，但未说清具体地址或个人来历。"
+    },
+    "L71": {
+      "score": 1,
+      "error": false,
+      "why": "用玩笑暗示想拿空白明信片好写字，未说清个人缘由。"
+    },
+    "L72": {
+      "score": 2,
+      "error": false,
+      "why": "说出选改过街道图的具体用意：铅笔线像有人先走过一遍，呼应个人记忆。"
+    }
+  },
+  "support": false,
+  "calls": 204,
+  "call_types": {
+    "test": 72,
+    "plot": 96,
+    "gate": 24,
+    "grade": 12
+  },
+  "disagreements": [
+    "L01",
+    "L02",
+    "L04",
+    "L06",
+    "L09",
+    "L12",
+    "L13",
+    "L16",
+    "L17",
+    "L18",
+    "L25",
+    "L27",
+    "L32",
+    "L41",
+    "L50",
+    "L53",
+    "L59",
+    "L61",
+    "L62",
+    "L65",
+    "L66",
+    "L67",
+    "L72"
+  ],
+  "material_errors": {
+    "primary": [
+      "L31",
+      "L41"
+    ],
+    "secondary": []
+  },
+  "plot_valid": 72,
+  "probe_valid": 51,
+  "models": {
+    "deepseek-flash": 204
+  },
+  "usage": {
+    "prompt_tokens": 1054210,
+    "completion_tokens": 39244,
+    "total_tokens": 1093454
+  }
+}

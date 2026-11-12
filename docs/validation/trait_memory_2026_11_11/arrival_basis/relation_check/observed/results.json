@@ -1,0 +1,375 @@
+{
+  "reference": "constructed_controls",
+  "methods": {
+    "legacy": {
+      "all": {
+        "cases": 12,
+        "case_correct": 12,
+        "people": 24,
+        "correct": 24,
+        "invalid": 0,
+        "incorrect_present": 0,
+        "confusion": {
+          "present": {
+            "present": 12,
+            "future": 0,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "future": {
+            "present": 0,
+            "future": 12,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "unknown": {
+            "present": 0,
+            "future": 0,
+            "unknown": 0,
+            "invalid": 0
+          }
+        },
+        "errors": []
+      },
+      "families": {
+        "place": {
+          "cases": 6,
+          "case_correct": 6,
+          "people": 12,
+          "correct": 12,
+          "invalid": 0,
+          "incorrect_present": 0,
+          "confusion": {
+            "present": {
+              "present": 6,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 6,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          },
+          "errors": []
+        },
+        "time": {
+          "cases": 6,
+          "case_correct": 6,
+          "people": 12,
+          "correct": 12,
+          "invalid": 0,
+          "incorrect_present": 0,
+          "confusion": {
+            "present": {
+              "present": 6,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 6,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    "typed": {
+      "all": {
+        "cases": 12,
+        "case_correct": 10,
+        "people": 24,
+        "correct": 21,
+        "invalid": 0,
+        "incorrect_present": 3,
+        "confusion": {
+          "present": {
+            "present": 12,
+            "future": 0,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "future": {
+            "present": 3,
+            "future": 9,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "unknown": {
+            "present": 0,
+            "future": 0,
+            "unknown": 0,
+            "invalid": 0
+          }
+        },
+        "errors": [
+          {
+            "id": "02",
+            "person": "顾眠",
+            "expected": "future",
+            "observed": "present",
+            "reason": "accepted"
+          },
+          {
+            "id": "03",
+            "person": "顾眠",
+            "expected": "future",
+            "observed": "present",
+            "reason": "accepted"
+          },
+          {
+            "id": "03",
+            "person": "周衡",
+            "expected": "future",
+            "observed": "present",
+            "reason": "accepted"
+          }
+        ]
+      },
+      "families": {
+        "place": {
+          "cases": 6,
+          "case_correct": 4,
+          "people": 12,
+          "correct": 9,
+          "invalid": 0,
+          "incorrect_present": 3,
+          "confusion": {
+            "present": {
+              "present": 6,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 3,
+              "future": 3,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          },
+          "errors": [
+            {
+              "id": "02",
+              "person": "顾眠",
+              "expected": "future",
+              "observed": "present",
+              "reason": "accepted"
+            },
+            {
+              "id": "03",
+              "person": "顾眠",
+              "expected": "future",
+              "observed": "present",
+              "reason": "accepted"
+            },
+            {
+              "id": "03",
+              "person": "周衡",
+              "expected": "future",
+              "observed": "present",
+              "reason": "accepted"
+            }
+          ]
+        },
+        "time": {
+          "cases": 6,
+          "case_correct": 6,
+          "people": 12,
+          "correct": 12,
+          "invalid": 0,
+          "incorrect_present": 0,
+          "confusion": {
+            "present": {
+              "present": 6,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 6,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    "relation": {
+      "all": {
+        "cases": 12,
+        "case_correct": 11,
+        "people": 24,
+        "correct": 23,
+        "invalid": 0,
+        "incorrect_present": 0,
+        "confusion": {
+          "present": {
+            "present": 12,
+            "future": 0,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "future": {
+            "present": 0,
+            "future": 11,
+            "unknown": 1,
+            "invalid": 0
+          },
+          "unknown": {
+            "present": 0,
+            "future": 0,
+            "unknown": 0,
+            "invalid": 0
+          }
+        },
+        "errors": [
+          {
+            "id": "01",
+            "person": "周衡",
+            "expected": "future",
+            "observed": "unknown",
+            "reason": "accepted"
+          }
+        ]
+      },
+      "families": {
+        "place": {
+          "cases": 6,
+          "case_correct": 5,
+          "people": 12,
+          "correct": 11,
+          "invalid": 0,
+          "incorrect_present": 0,
+          "confusion": {
+            "present": {
+              "present": 6,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 5,
+              "unknown": 1,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          },
+          "errors": [
+            {
+              "id": "01",
+              "person": "周衡",
+              "expected": "future",
+              "observed": "unknown",
+              "reason": "accepted"
+            }
+          ]
+        },
+        "time": {
+          "cases": 6,
+          "case_correct": 6,
+          "people": 12,
+          "correct": 12,
+          "invalid": 0,
+          "incorrect_present": 0,
+          "confusion": {
+            "present": {
+              "present": 6,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 6,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          },
+          "errors": []
+        }
+      }
+    }
+  },
+  "relation_vs": {
+    "legacy": {
+      "fixed": [],
+      "added": [
+        [
+          "01",
+          "周衡"
+        ]
+      ],
+      "net": -1,
+      "improved_on_controls": false
+    },
+    "typed": {
+      "fixed": [
+        [
+          "02",
+          "顾眠"
+        ],
+        [
+          "03",
+          "顾眠"
+        ],
+        [
+          "03",
+          "周衡"
+        ]
+      ],
+      "added": [
+        [
+          "01",
+          "周衡"
+        ]
+      ],
+      "net": 2,
+      "improved_on_controls": false
+    }
+  }
+}

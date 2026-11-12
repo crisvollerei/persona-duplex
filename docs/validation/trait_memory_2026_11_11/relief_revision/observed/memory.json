@@ -1,0 +1,2466 @@
+{
+  "tang.early.R": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 103
+  },
+  "tang.fall.O": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜俞川临时接班：五月两次按时到岗。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0001",
+    "raw_ids": [
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：05-21｜俞川临时接班：五月两次按时到岗。",
+    "chars": 130
+  },
+  "tang.fall.R": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21",
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "tang.fall.S": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21",
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "tang.fall.V": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜俞川临时接班：五月两次按时到岗。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      },
+      {
+        "id": "j_0002",
+        "judgment": "07-22｜俞川临时接班：五月两次按时到岗，七月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21",
+          "tang-07-08",
+          "tang-07-22"
+        ],
+        "supersedes": "j_0001",
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-07-08",
+            "quote": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-07-22",
+            "quote": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0002",
+    "raw_ids": [
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：07-22｜俞川临时接班：五月两次按时到岗，七月两次全程未到。",
+    "chars": 139
+  },
+  "tang.flat.O": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜俞川临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0001",
+    "raw_ids": [
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：05-21｜俞川临时接班：五月两次全程未到。",
+    "chars": 130
+  },
+  "tang.flat.R": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21",
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "tang.flat.S": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21",
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "tang.flat.V": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜俞川临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      },
+      {
+        "id": "j_0002",
+        "judgment": "07-22｜俞川临时接班：五月两次全程未到，七月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21",
+          "tang-07-08",
+          "tang-07-22"
+        ],
+        "supersedes": "j_0001",
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-07-08",
+            "quote": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-07-22",
+            "quote": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0002",
+    "raw_ids": [
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：07-22｜俞川临时接班：五月两次全程未到，七月两次全程未到。",
+    "chars": 139
+  },
+  "tang.rise.O": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜俞川临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0001",
+    "raw_ids": [
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n关系簿：05-21｜俞川临时接班：五月两次全程未到。",
+    "chars": 130
+  },
+  "tang.rise.R": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21",
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+    "chars": 207
+  },
+  "tang.rise.S": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "tang-05-04",
+      "tang-05-21",
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+    "chars": 207
+  },
+  "tang.rise.V": {
+    "archive": [
+      {
+        "turn_id": "tang-05-04",
+        "day": "05-04",
+        "topic": "tang.yu.arrival",
+        "user": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-05-21",
+        "day": "05-21",
+        "topic": "tang.yu.arrival",
+        "user": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-08",
+        "day": "07-08",
+        "topic": "tang.yu.arrival",
+        "user": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-22",
+        "day": "07-22",
+        "topic": "tang.yu.arrival",
+        "user": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "tang-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜俞川临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      },
+      {
+        "id": "j_0002",
+        "judgment": "07-22｜俞川临时接班：五月两次全程未到，七月两次按时到岗。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "tang-05-04",
+          "tang-05-21",
+          "tang-07-08",
+          "tang-07-22"
+        ],
+        "supersedes": "j_0001",
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "tang-05-04",
+            "quote": "05-04 北埠·照片认领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-05-21",
+            "quote": "05-21 南堤·底片回收台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-07-08",
+            "quote": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "tang-07-22",
+            "quote": "07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "tang.yu.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0002",
+    "raw_ids": [
+      "tang-07-08",
+      "tang-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜俞川签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n关系簿：07-22｜俞川临时接班：五月两次全程未到，七月两次按时到岗。",
+    "chars": 139
+  },
+  "yu.early.R": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 103
+  },
+  "yu.fall.O": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜唐荔临时接班：五月两次按时到岗。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0001",
+    "raw_ids": [
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：05-21｜唐荔临时接班：五月两次按时到岗。",
+    "chars": 130
+  },
+  "yu.fall.R": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21",
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "yu.fall.S": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21",
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "yu.fall.V": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜唐荔临时接班：五月两次按时到岗。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      },
+      {
+        "id": "j_0002",
+        "judgment": "07-22｜唐荔临时接班：五月两次按时到岗，七月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21",
+          "yu-07-08",
+          "yu-07-22"
+        ],
+        "supersedes": "j_0001",
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-07-08",
+            "quote": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-07-22",
+            "quote": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0002",
+    "raw_ids": [
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：07-22｜唐荔临时接班：五月两次按时到岗，七月两次全程未到。",
+    "chars": 139
+  },
+  "yu.flat.O": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜唐荔临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0001",
+    "raw_ids": [
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：05-21｜唐荔临时接班：五月两次全程未到。",
+    "chars": 130
+  },
+  "yu.flat.R": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21",
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "yu.flat.S": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21",
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+    "chars": 207
+  },
+  "yu.flat.V": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜唐荔临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      },
+      {
+        "id": "j_0002",
+        "judgment": "07-22｜唐荔临时接班：五月两次全程未到，七月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21",
+          "yu-07-08",
+          "yu-07-22"
+        ],
+        "supersedes": "j_0001",
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-07-08",
+            "quote": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-07-22",
+            "quote": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0002",
+    "raw_ids": [
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n关系簿：07-22｜唐荔临时接班：五月两次全程未到，七月两次全程未到。",
+    "chars": 139
+  },
+  "yu.rise.O": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜唐荔临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0001",
+    "raw_ids": [
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n关系簿：05-21｜唐荔临时接班：五月两次全程未到。",
+    "chars": 130
+  },
+  "yu.rise.R": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21",
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+    "chars": 207
+  },
+  "yu.rise.S": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [],
+    "active": null,
+    "raw_ids": [
+      "yu-05-04",
+      "yu-05-21",
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。\n07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+    "chars": 207
+  },
+  "yu.rise.V": {
+    "archive": [
+      {
+        "turn_id": "yu-05-04",
+        "day": "05-04",
+        "topic": "yu.tang.arrival",
+        "user": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-05-21",
+        "day": "05-21",
+        "topic": "yu.tang.arrival",
+        "user": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-02",
+        "day": "06-02",
+        "topic": "station",
+        "user": "展架螺丝重新分了号，按长度收进三只木盒。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-09",
+        "day": "06-09",
+        "topic": "station",
+        "user": "旧底布晒干折好，布边一处毛线用蓝线锁住。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-16",
+        "day": "06-16",
+        "topic": "station",
+        "user": "印厂送来两本色样，墙上的价目表换了纸。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-06-23",
+        "day": "06-23",
+        "topic": "station",
+        "user": "街角装订店搬到桥西，门口的指路牌已经改好。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-08",
+        "day": "07-08",
+        "topic": "yu.tang.arrival",
+        "user": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-22",
+        "day": "07-22",
+        "topic": "yu.tang.arrival",
+        "user": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+        "say": ""
+      },
+      {
+        "turn_id": "yu-07-25",
+        "day": "07-25",
+        "topic": "station",
+        "user": "印好的观展须知换上了双面夹。",
+        "say": ""
+      }
+    ],
+    "versions": [
+      {
+        "id": "j_0001",
+        "judgment": "05-21｜唐荔临时接班：五月两次全程未到。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21"
+        ],
+        "supersedes": null,
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      },
+      {
+        "id": "j_0002",
+        "judgment": "07-22｜唐荔临时接班：五月两次全程未到，七月两次按时到岗。",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "yu-05-04",
+          "yu-05-21",
+          "yu-07-08",
+          "yu-07-22"
+        ],
+        "supersedes": "j_0001",
+        "affects": {},
+        "source": "explicit",
+        "batch_id": "",
+        "evidence_scope": "specified",
+        "evidence_quotes": [
+          {
+            "turn_id": "yu-05-04",
+            "quote": "05-04 北埠·照片认领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-05-21",
+            "quote": "05-21 南堤·底片回收台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人未到岗，交回时仍未出现。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-07-08",
+            "quote": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          },
+          {
+            "turn_id": "yu-07-22",
+            "quote": "07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。",
+            "evidence_scope": "specified"
+          }
+        ],
+        "memory_scope": "yu.tang.arrival",
+        "superseded_by": null
+      }
+    ],
+    "active": "j_0002",
+    "raw_ids": [
+      "yu-07-08",
+      "yu-07-22"
+    ],
+    "visible": "07-08 柳巷·展签换领台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n07-22 礼堂·场刊领取台｜唐荔签字承诺接班二十分钟。现场记录：交接铃响时人在岗位，交回时本人签退。\n关系簿：07-22｜唐荔临时接班：五月两次全程未到，七月两次按时到岗。",
+    "chars": 139
+  }
+}

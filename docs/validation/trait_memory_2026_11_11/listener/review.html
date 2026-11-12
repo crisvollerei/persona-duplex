@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>听话的人 · 六段对话</title>
+<style>
+:root{color-scheme:light;--paper:#faf9f4;--ink:#1d3438;--accent:#12676b;--line:#cdd9d6}*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);margin:0;font:16px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+main{max-width:740px;margin:26px auto 42px;padding:0 20px}header{border-bottom:1px solid var(--line);padding-bottom:8px}
+.mini,small{color:#4c6869}h1{font-size:clamp(22px,4.5vw,32px);margin:.15em 0}h2{font-size:19px;margin:1.1em 0 .3em}p{margin:.3em 0 .7em}
+.scene{padding:12px 0 2px}.quote{background:white;border-left:4px solid var(--accent);padding:12px 16px;margin:6px 0 16px;white-space:pre-wrap}
+.options{display:grid;gap:6px}.choice,.chip{border:1px solid var(--line);border-radius:6px;background:#fff}
+.choice{display:flex;gap:.6em;align-items:baseline;padding:8px 12px;cursor:pointer}.choice:has(input:checked){border-color:var(--accent);background:#edf7f4}
+input{accent-color:var(--accent)}textarea{display:block;width:100%;padding:8px;border:1px solid #9ab0ad;border-radius:5px;font:inherit;resize:vertical}
+button{font:inherit;cursor:pointer}button:disabled{opacity:.65;cursor:wait}.next{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:9px 25px}
+footer{border-top:1px solid var(--line);margin-top:20px;padding-top:12px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.chip{display:inline-block;font-size:14px;text-align:left;margin:4px 5px 4px 0;padding:3px 8px;color:#264b50}.err{color:#952f23}
+[hidden]{display:none!important}progress{height:7px;width:100%;accent-color:var(--accent)}.familiar{display:block;margin:14px 0 3px}
+@media(max-width:500px){main{margin-top:12px;padding:0 14px}.quote{padding:10px 12px}}
+</style>
+<main>
+  <header><div class="mini">沿河放映队 · 听者研究</div><h1>听话的人</h1><p id="intro">正在载入本机材料…</p>
+    <div id="progress" hidden><small id="status"></small><progress id="bar" max="18" value="0"></progress></div></header>
+  <section id="start" hidden><h2>怎么读</h2><p>六段彼此独立的对话。你是坐在旁边的听者，不需要读过故事，也不用猜角色应该怎么说。</p>
+    <p>先读六段，用自己的话说听到了什么，或直接选“听不出来”。随后再各用一遍，判断人物的打算和可能的理由。每次点“保存并继续”后，该答案即锁定；刷新可以从上次保存处继续。</p>
+    <p>这里没有答对提示。如果以前看过这一段、或已经知道角色当时的私人设定，请在那一题勾选“此前知道”。</p><button class="next" type="button" id="begin">开始阅读</button></section>
+  <form id="card" hidden>
+    <div class="scene"><strong>现场</strong><p id="context"></p><strong>搭档说</strong><p id="partner"></p></div>
+    <strong id="who"></strong><div id="say" class="quote"></div>
+    <h2 id="question"></h2><p class="mini" id="hint"></p><div class="options" id="options"></div>
+    <div id="noteBox" hidden><label for="note">你听出的意思（一句话即可）</label><textarea id="note" rows="2" maxlength="350"></textarea></div>
+    <div id="quoteBox" hidden><label for="quote">这句话里的依据</label><p class="mini">点一小段原话即可，也可以只保留其中几个字。</p><div id="chips"></div><textarea id="quote" rows="2" maxlength="600"></textarea></div>
+    <label class="familiar" id="familiarBox"><input id="familiar" type="checkbox"> 此前知道：我看过这条回复，或已经知道这个角色在这幕的私情。</label>
+    <p id="err" class="err" role="alert"></p>
+    <footer><button id="next" class="next">保存并继续</button><small>只保存在本机，不显示标准答案。</small></footer>
+  </form><section id="done" hidden><h2>六段都评完了</h2><p>回答已保存在本机。回到对话，说“评完了”即可，不需要复制答案。</p><small id="receipt"></small></section>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id), phases={free:"第一遍 · 自由听读",action:"第二遍 · 当下打算",motive:"第三遍 · 私人缘由"};
+let state=null, started=false, busy=false;
+const pick=()=>document.querySelector('input[name="pick"]:checked')?.value;
+function boxes(){
+  const v=pick();$("noteBox").hidden=!(state.phase==="free"&&v==="heard");
+  $("quoteBox").hidden=!(state.phase!=="free"&&v&&v!=="unclear");
+}
+function option(v,label){
+  const l=document.createElement("label");l.className="choice";
+  const r=document.createElement("input");r.type="radio";r.name="pick";r.value=v;r.addEventListener("change",boxes);
+  l.append(r,document.createTextNode(label));$("options").append(l);
+}
+function draw(s){
+  state=s;$("err").textContent="";$("next").disabled=false;busy=false;
+  $("done").hidden=!s.done;$("card").hidden=true;$("start").hidden=true;$("progress").hidden=s.done;
+  if(s.done){$("intro").textContent="感谢你读完这些对话。";$("receipt").textContent="本机回执："+s.receipt;return;}
+  $("bar").value=s.step;$("status").textContent=phases[s.phase]+"　"+s.index+" / 6";
+  if(!started&&s.step===0){$("start").hidden=false;$("intro").textContent="听得出来的就写，听不出来也是有效回答。";return;}
+  $("card").hidden=false;$("intro").textContent=s.phase==="free"?"先只读台词，不给候选解释。":"只根据角色说出口的话判断。不需要选出一个故事上最合理的答案。";
+  const z=s.item;$("context").textContent=z.context;$("partner").textContent=z.partner;$("who").textContent=z.actor+"回答";$("say").textContent=z.say;
+  $("options").replaceChildren();$("chips").replaceChildren();$("note").value="";$("quote").value="";$("familiar").checked=false;
+  $("familiarBox").hidden=s.phase!=="free";
+  if(s.phase==="free"){
+    $("question").textContent="这句话让你听出了这个人自己的什么事？";
+    $("hint").textContent="只听出一个打算也可以；不必替角色补原因。";
+    option("heard","我听出了一点，想用自己的话说。");option("unclear","听不出来，或只是在接搭档的话。");
+  }else{
+    $("question").textContent=s.phase==="action"?"你能听出角色自己当下的打算吗？":"你能听出角色背后的私人缘由吗？";
+    $("hint").textContent=s.phase==="action"?"选台词支持的读法。":"即使听出了要做什么，也可能听不出为什么。";
+    for(const k of ["A","B"])option(k,z.choices[k]);
+    option("unclear","仅凭这句话分不出来。");option("other","我听出了别的意思，这两个解释都不符。");
+    for(const snippet of z.say.match(/[^。！？；\n]+[。！？；]?/gu)||[z.say]){
+      if(!snippet.trim())continue;
+      const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=snippet.trim();
+      b.addEventListener("click",()=>{$("quote").value=snippet.trim();});$("chips").append(b);
+    }
+  }
+  boxes();$("next").textContent=s.step===17?"保存最后一题":"保存并继续";window.scrollTo(0,0);
+}
+$("begin").addEventListener("click",()=>{started=true;draw(state);});
+$("card").addEventListener("submit",async ev=>{
+  ev.preventDefault();if(busy)return;
+  const v=pick();if(!v){$("err").textContent="请先选一个读法。";return;}
+  const body={step:state.step,choice:v};
+  if(state.phase==="free"){body.familiar=$("familiar").checked;body.note=v==="heard"?$("note").value:"";}
+  else{body.quote=v==="unclear"?"":$("quote").value;}
+  busy=true;$("next").disabled=true;
+  try{const r=await fetch("/answer",{method:"POST",headers:{"Content-Type":"application/json","X-Review-Key":state.nonce},body:JSON.stringify(body)});
+    const z=await r.json();if(!r.ok)throw Error(z.error||"未保存");draw(z);
+  }catch(e){$("err").textContent=e.message+"。若网络中断，可刷新查看已保存的位置。";busy=false;$("next").disabled=false;}
+});
+fetch("/state",{cache:"no-store"}).then(r=>r.json()).then(draw).catch(()=>{$("intro").textContent="本机服务未连接，请从对话中的本地网址打开。";});
+</script>
+</html>

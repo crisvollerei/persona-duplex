@@ -1,0 +1,475 @@
+{
+  "study": "character_continuity_2026_11_11",
+  "packet_sha256": "04be59bbec93b404fe8432befdec6421d1042c1c73656421e657676ca1f4cd34",
+  "scenes": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "humans": {
+    "respondents": 3,
+    "by_respondent": {
+      "H01": {
+        "decoded": {
+          "S1": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          },
+          "S2": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          },
+          "S3": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          }
+        },
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 3,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 3,
+              "examples": 0
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 3,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 3,
+              "examples": 0
+            }
+          }
+        },
+        "same_option": 3,
+        "different_option": 0
+      },
+      "H02": {
+        "decoded": {
+          "S1": {
+            "fit": "framework",
+            "continue_chat": "examples"
+          },
+          "S2": {
+            "fit": "examples",
+            "continue_chat": "framework"
+          },
+          "S3": {
+            "fit": "examples",
+            "continue_chat": "examples"
+          }
+        },
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 1,
+              "examples": 2,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 2
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 1,
+              "examples": 2,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 2
+            }
+          }
+        },
+        "same_option": 1,
+        "different_option": 2
+      },
+      "H03": {
+        "decoded": {
+          "S1": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          },
+          "S2": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          },
+          "S3": {
+            "fit": "examples",
+            "continue_chat": "examples"
+          }
+        },
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 2,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 2,
+              "examples": 1
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 2,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 2,
+              "examples": 1
+            }
+          }
+        },
+        "same_option": 3,
+        "different_option": 0
+      }
+    },
+    "by_scene": {
+      "S1": {
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 3,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 3,
+              "examples": 0
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 2,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 2,
+              "examples": 1
+            }
+          }
+        },
+        "same_option": 2,
+        "different_option": 1
+      },
+      "S2": {
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 2,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 2,
+              "examples": 1
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 3,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 3,
+              "examples": 0
+            }
+          }
+        },
+        "same_option": 2,
+        "different_option": 1
+      },
+      "S3": {
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 1,
+              "examples": 2,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 2
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 1,
+              "examples": 2,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 2
+            }
+          }
+        },
+        "same_option": 3,
+        "different_option": 0
+      }
+    },
+    "overall": {
+      "respondent_scene_pairs": 9,
+      "by_question": {
+        "fit": {
+          "choices": {
+            "framework": 6,
+            "examples": 3,
+            "both": 0,
+            "neither": 0,
+            "uncertain": 0
+          },
+          "selected_alone_or_together": {
+            "framework": 6,
+            "examples": 3
+          }
+        },
+        "continue_chat": {
+          "choices": {
+            "framework": 6,
+            "examples": 3,
+            "both": 0,
+            "neither": 0,
+            "uncertain": 0
+          },
+          "selected_alone_or_together": {
+            "framework": 6,
+            "examples": 3
+          }
+        }
+      },
+      "same_option": 7,
+      "different_option": 2
+    }
+  },
+  "ai_reference": {
+    "respondents": 1,
+    "by_respondent": {
+      "M01": {
+        "decoded": {
+          "S1": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          },
+          "S2": {
+            "fit": "examples",
+            "continue_chat": "examples"
+          },
+          "S3": {
+            "fit": "framework",
+            "continue_chat": "framework"
+          }
+        },
+        "respondent_scene_pairs": 3,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 2,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 2,
+              "examples": 1
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 2,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 2,
+              "examples": 1
+            }
+          }
+        },
+        "same_option": 3,
+        "different_option": 0
+      }
+    },
+    "by_scene": {
+      "S1": {
+        "respondent_scene_pairs": 1,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 1,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 0
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 1,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 0
+            }
+          }
+        },
+        "same_option": 1,
+        "different_option": 0
+      },
+      "S2": {
+        "respondent_scene_pairs": 1,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 0,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 0,
+              "examples": 1
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 0,
+              "examples": 1,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 0,
+              "examples": 1
+            }
+          }
+        },
+        "same_option": 1,
+        "different_option": 0
+      },
+      "S3": {
+        "respondent_scene_pairs": 1,
+        "by_question": {
+          "fit": {
+            "choices": {
+              "framework": 1,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 0
+            }
+          },
+          "continue_chat": {
+            "choices": {
+              "framework": 1,
+              "examples": 0,
+              "both": 0,
+              "neither": 0,
+              "uncertain": 0
+            },
+            "selected_alone_or_together": {
+              "framework": 1,
+              "examples": 0
+            }
+          }
+        },
+        "same_option": 1,
+        "different_option": 0
+      }
+    },
+    "overall": {
+      "respondent_scene_pairs": 3,
+      "by_question": {
+        "fit": {
+          "choices": {
+            "framework": 2,
+            "examples": 1,
+            "both": 0,
+            "neither": 0,
+            "uncertain": 0
+          },
+          "selected_alone_or_together": {
+            "framework": 2,
+            "examples": 1
+          }
+        },
+        "continue_chat": {
+          "choices": {
+            "framework": 2,
+            "examples": 1,
+            "both": 0,
+            "neither": 0,
+            "uncertain": 0
+          },
+          "selected_alone_or_together": {
+            "framework": 2,
+            "examples": 1
+          }
+        }
+      },
+      "same_option": 3,
+      "different_option": 0
+    }
+  }
+}

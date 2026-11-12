@@ -1,0 +1,482 @@
+{
+  "P01": {
+    "score": 1,
+    "why": "指出自己在晒着，邀对方挪来，可听出偏向暖处，未说由来",
+    "error": false
+  },
+  "P02": {
+    "score": 0,
+    "why": "介绍空着的暖位并请对方坐，没有说明自己选它",
+    "error": false
+  },
+  "P03": {
+    "score": 0,
+    "why": "愿意等车，没谈自己的座位偏好",
+    "error": false
+  },
+  "P04": {
+    "score": 1,
+    "why": "表达喜欢错了重弹的声音，没提敲尾音的往事",
+    "error": false
+  },
+  "P05": {
+    "score": 0,
+    "why": "只交待穿衣、保管簿子",
+    "error": false
+  },
+  "P06": {
+    "score": 0,
+    "why": "就拱门外观作评价，与想跑接力的私情无关",
+    "error": false
+  },
+  "P07": {
+    "score": 1,
+    "why": "说错了从头来更耐听，听者可知她喜欢这一段",
+    "error": false
+  },
+  "P08": {
+    "score": 0,
+    "why": "安排离开和交簿",
+    "error": false
+  },
+  "P09": {
+    "score": 1,
+    "why": "明确要坐到最后一盏灯暗下去，未提过去收场太急",
+    "error": false
+  },
+  "P10": {
+    "score": 0,
+    "why": "不催对方，没说自己想鼓掌",
+    "error": false
+  },
+  "P11": {
+    "score": 0,
+    "why": "在陪对方等，并未提到报幕员",
+    "error": false
+  },
+  "P12": {
+    "score": 1,
+    "why": "说要等到最后一盏灯，没有交代个人来历",
+    "error": false
+  },
+  "P13": {
+    "score": 0,
+    "why": "评价阴凉，没说要靠路或面向车",
+    "error": false
+  },
+  "P14": {
+    "score": 0,
+    "why": "描写拱门，没提自己想上看台",
+    "error": false
+  },
+  "P15": {
+    "score": 0,
+    "why": "把暖处让给对方，还说要换位置，没透露自己的偏好",
+    "error": false
+  },
+  "P16": {
+    "score": 0,
+    "why": "只办交簿的事",
+    "error": false
+  },
+  "P17": {
+    "score": 0,
+    "why": "只关心簿子不要遗失",
+    "error": false
+  },
+  "P18": {
+    "score": 1,
+    "why": "说晒着不急着挪，传达当下选择",
+    "error": false
+  },
+  "P19": {
+    "score": 0,
+    "why": "觉得暗些好说话，与想给报幕员鼓掌无关",
+    "error": false
+  },
+  "P20": {
+    "score": 1,
+    "why": "承认面对便签自己手痒，未说要画什么",
+    "error": false
+  },
+  "P21": {
+    "score": 2,
+    "why": "主动讲上看台的愿望和只能在背后扎纸花的学生时代",
+    "error": false
+  },
+  "P22": {
+    "score": 0,
+    "why": "叮嘱收簿和穿衣",
+    "error": false
+  },
+  "P23": {
+    "score": 1,
+    "why": "明说陪坐到最后一盏灯，未谈自己的那场戏",
+    "error": false
+  },
+  "P24": {
+    "score": 0,
+    "why": "问对方想不想动笔，没说自己的意思",
+    "error": false
+  },
+  "P25": {
+    "score": 1,
+    "why": "说自己听着不烦，欣赏弹错后重来，未讲暗号",
+    "error": false
+  },
+  "P26": {
+    "score": 0,
+    "why": "交代外套和笔，没有自己的告别方式",
+    "error": false
+  },
+  "P27": {
+    "score": 0,
+    "why": "描述琴声听得清，没表达愿意等或喜欢重来",
+    "error": false
+  },
+  "P28": {
+    "score": 1,
+    "why": "把自己不急着走接在这一小节重来之后，含蓄留下来",
+    "error": false
+  },
+  "P29": {
+    "score": 0,
+    "why": "只问对方要不要翻簿子",
+    "error": false
+  },
+  "P30": {
+    "score": 0,
+    "why": "说空框给下一个人留下位置，没有说自己想给他留言",
+    "error": false
+  },
+  "P31": {
+    "score": 0,
+    "why": "注意到空白便签，没说自己想画",
+    "error": false
+  },
+  "P32": {
+    "score": 1,
+    "why": "明确选靠路边并要看得见车，未交代当年木箱的事",
+    "error": false
+  },
+  "P33": {
+    "score": 0,
+    "why": "评说拱门和空台阶，没有表达想跑台阶",
+    "error": false
+  },
+  "P34": {
+    "score": 1,
+    "why": "明确要看灯最后暗下去，没有讲来由",
+    "error": false
+  },
+  "P35": {
+    "score": 0,
+    "why": "请对方表态，没传达自己的画意",
+    "error": false
+  },
+  "P36": {
+    "score": 1,
+    "why": "明说自己看中晒暖的那头，无晒板凳的旧事",
+    "error": false
+  },
+  "P37": {
+    "score": 1,
+    "why": "表达喜欢听弹错重来，未提学画",
+    "error": false
+  },
+  "P38": {
+    "score": 1,
+    "why": "选靠路一端且看得见来车，没有说过去的遭遇",
+    "error": false
+  },
+  "P39": {
+    "score": 1,
+    "why": "承认自己对便签手痒，不是只问对方",
+    "error": false
+  },
+  "P40": {
+    "score": 0,
+    "why": "看拱门放气，不等于想上最高的看台",
+    "error": false
+  },
+  "P41": {
+    "score": 0,
+    "why": "谈灯光，没说自己的鼓掌打算",
+    "error": false
+  },
+  "P42": {
+    "score": 0,
+    "why": "跟搭档出去，不等于要亲自和街坊告别",
+    "error": false
+  },
+  "P43": {
+    "score": 0,
+    "why": "评价玻璃和地点，无个人打算",
+    "error": false
+  },
+  "P44": {
+    "score": 0,
+    "why": "问对方是否手痒，未表达自己想留言",
+    "error": false
+  },
+  "P45": {
+    "score": 0,
+    "why": "问对方想不想写，未说自己想做什么",
+    "error": false
+  },
+  "P46": {
+    "score": 1,
+    "why": "明说手痒想跟敲两下，没交代与姐姐的暗号",
+    "error": false
+  },
+  "P47": {
+    "score": 1,
+    "why": "说晒着不急着挪，传达选择",
+    "error": false
+  },
+  "P48": {
+    "score": 0,
+    "why": "提起空白并问搭档，没有披露自己的想法",
+    "error": false
+  },
+  "P49": {
+    "score": 1,
+    "why": "觉得弹错重来的调子耐听，未谈敲暗号的缘由",
+    "error": false
+  },
+  "P50": {
+    "score": 0,
+    "why": "只说鞋带和拱门",
+    "error": false
+  },
+  "P51": {
+    "score": 1,
+    "why": "认为重来比一遍过更实在，表达听感，没谈往事",
+    "error": false
+  },
+  "P52": {
+    "score": 0,
+    "why": "交簿后离开，未透露自己想署小名",
+    "error": false
+  },
+  "P53": {
+    "score": 1,
+    "why": "晒着不急挪走，传达选择",
+    "error": false
+  },
+  "P54": {
+    "score": 0,
+    "why": "只等散场，没提给报幕员鼓掌",
+    "error": false
+  },
+  "P55": {
+    "score": 0,
+    "why": "说的是拱门仿佛舍不得散场",
+    "error": false
+  },
+  "P56": {
+    "score": 0,
+    "why": "描写拱门未完全泄气",
+    "error": false
+  },
+  "P57": {
+    "score": 1,
+    "why": "要陪对方看到最后一盏灯，没提以前的景",
+    "error": false
+  },
+  "P58": {
+    "score": 0,
+    "why": "欣赏灯光，不涉及想给报幕员鼓掌",
+    "error": false
+  },
+  "P59": {
+    "score": 0,
+    "why": "陪着坐到哪盏算哪盏，没有表达要看到最后的愿望",
+    "error": false
+  },
+  "P60": {
+    "score": 0,
+    "why": "随搭档待着，推想弹琴者在较劲，未明说自己在意这段琴",
+    "error": false
+  },
+  "P61": {
+    "score": 0,
+    "why": "问对方是否看到便签，没有说自己想画",
+    "error": false
+  },
+  "P62": {
+    "score": 0,
+    "why": "自己也收拾东西，未透露签名打算",
+    "error": false
+  },
+  "P63": {
+    "score": 1,
+    "why": "明说空着交出去心里有点搁着，未交代搬家往事",
+    "error": false
+  },
+  "P64": {
+    "score": 0,
+    "why": "等拱门放气，不是想跑台阶",
+    "error": false
+  },
+  "P65": {
+    "score": 0,
+    "why": "提醒离开交簿，未说自己的签名",
+    "error": false
+  },
+  "P66": {
+    "score": 0,
+    "why": "指出热的那头空着，没有说要选它",
+    "error": false
+  },
+  "P67": {
+    "score": 0,
+    "why": "陪对方坐，没有说要看到最后",
+    "error": false
+  },
+  "P68": {
+    "score": 0,
+    "why": "看瘪的拱门，与想登最高一级不同",
+    "error": false
+  },
+  "P69": {
+    "score": 0,
+    "why": "评价拱门的样子，不涉及看台往事或行动",
+    "error": false
+  },
+  "P70": {
+    "score": 1,
+    "why": "更喜欢听错了还从头来，未提母亲",
+    "error": false
+  },
+  "P71": {
+    "score": 0,
+    "why": "空便签像等人写，没说本人想写",
+    "error": false
+  },
+  "P72": {
+    "score": 1,
+    "why": "说逐盏灭比全黑好看，传达想看灯暗下的听者可知的偏好",
+    "error": false
+  },
+  "P73": {
+    "score": 1,
+    "why": "想登上最高处看一回，未提过去只能扎纸花",
+    "error": false
+  },
+  "P74": {
+    "score": 0,
+    "why": "没有再写也没说自己想亲自去道别，重点是陪搭档走",
+    "error": false
+  },
+  "P75": {
+    "score": 0,
+    "why": "陪搭档站着并描述琴还没停，是否想专为这小节留下未表明",
+    "error": false
+  },
+  "P76": {
+    "score": 1,
+    "why": "明说听到这一小节不急着走",
+    "error": false
+  },
+  "P77": {
+    "score": 0,
+    "why": "把要不要留下的问题转给搭档",
+    "error": false
+  },
+  "P78": {
+    "score": 1,
+    "why": "主动提出上顶级往下看，没有说读书时造纸花",
+    "error": false
+  },
+  "P79": {
+    "score": 1,
+    "why": "承认看见便签自己手痒，还没说要留下哪一句",
+    "error": false
+  },
+  "P80": {
+    "score": 1,
+    "why": "主动跟搭档看灯灭到最后，没有交代背后缘由",
+    "error": false
+  },
+  "P81": {
+    "score": 0,
+    "why": "评说站太阳下太久会晕，没有自己的靠路偏好",
+    "error": false
+  },
+  "P82": {
+    "score": 0,
+    "why": "按对方节奏等人走，未讲自己想等最后一盏",
+    "error": false
+  },
+  "P83": {
+    "score": 0,
+    "why": "说像留个位置让人填，没有表示本人想写",
+    "error": false
+  },
+  "P84": {
+    "score": 1,
+    "why": "明确选靠路的那头看车，不用回头，未说木箱旧事",
+    "error": false
+  },
+  "P85": {
+    "score": 1,
+    "why": "主动选靠路那头以便看车，没交代个人来历",
+    "error": false
+  },
+  "P86": {
+    "score": 0,
+    "why": "陪搭档走一段，没说想跟搬走的街坊亲自告别",
+    "error": false
+  },
+  "P87": {
+    "score": 1,
+    "why": "要署阿荔不写工种，未说明当年没有告别的缘由",
+    "error": false
+  },
+  "P88": {
+    "score": 0,
+    "why": "等拱门放完气听响，不是想在台阶上跑一棒",
+    "error": false
+  },
+  "P89": {
+    "score": 0,
+    "why": "说空框像等人填，无自己的打算",
+    "error": false
+  },
+  "P90": {
+    "score": 1,
+    "why": "明确觉得弹错重来更耐听，没说姐姐和暗号",
+    "error": false
+  },
+  "P91": {
+    "score": 0,
+    "why": "说明自己在晒、椅子空着，没表达挑暖位或想坐",
+    "error": false
+  },
+  "P92": {
+    "score": 0,
+    "why": "听气声，没表明想上看台",
+    "error": false
+  },
+  "P93": {
+    "score": 0,
+    "why": "问对方打算写吗，未讲自己的便签用意",
+    "error": false
+  },
+  "P94": {
+    "score": 1,
+    "why": "想留下听完这一小节，没有讲当年学画",
+    "error": false
+  },
+  "P95": {
+    "score": 0,
+    "why": "只表达觉得瘪的拱门顺眼，与登高打算不同",
+    "error": false
+  },
+  "P96": {
+    "score": 1,
+    "why": "说自己不嫌这一节重来，传达相关的个人听感",
+    "error": false
+  }
+}

@@ -1,0 +1,1134 @@
+{
+  "09.relation": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡前面从发货台一起去门卫取章。"
+          },
+          {
+            "turn": 2,
+            "quote": "已经取完回来了，我俩这会儿都在东门发货台盖章。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡前面从发货台一起去门卫取章。"
+          },
+          {
+            "turn": 2,
+            "quote": "已经取完回来了，我俩这会儿都在东门发货台盖章。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "7aaaea85b265998206e4c115b3c2703a83e73d1c4eebf3c2598142c19e7b1fe6"
+  },
+  "11.typed": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "周衡先走的时候我还守着装裱桌。"
+          },
+          {
+            "turn": 2,
+            "quote": "顾眠刚换出去领料，下半场她得过来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我回来接上了，现在坐在装裱桌旁。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "0560d42a9b592cc743c3e3073e732e5e6f078be1b45eb2d208d463c569496c84"
+  },
+  "01.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我在东厅验票口扫票"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡在一楼电梯口等电梯，上来还要走一道走廊"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "cf0418e99f495ec13659108b7d2211d00d2b0acfce6efffa6d3a8a458293c242"
+  },
+  "10.relation": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "顾眠和我刚在西侧器材柜清了点。"
+          },
+          {
+            "turn": 2,
+            "quote": "清完我俩锁了柜，一起出来吃饭了。下一班都得走回柜边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "顾眠和我刚在西侧器材柜清了点。"
+          },
+          {
+            "turn": 2,
+            "quote": "清完我俩锁了柜，一起出来吃饭了。下一班都得走回柜边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "e14abda899f17718745595c4aa7b10f9d52d926aa4bf0524844b779a192a34d6"
+  },
+  "03.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我跟顾眠正把球筐抬上楼"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "馆是到了，我跟顾眠正把球筐抬上楼，借球柜台还在上一层。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "2f70bd5b8d57ffdf59d7dfd788067e89f2adf2c7987060804d8b3643324c31a0"
+  },
+  "12.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我已经折返走廊抽签台，在台边发号码了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡还在楼上，接下来得下来接我。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "24fe59ac4228f00d1e325ce5dec3798fd27a82b609fc21005cf06b253039efde"
+  },
+  "05.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠刚从地下展厅音控台给我开了视频，我看见她正趴在台边接输出线。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我还在北门，要下去才到。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "f7b4f8895f6daacbca50cd6069ad6b61d247250a21421dc63a723818e5428b9e"
+  },
+  "01.relation": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我在东厅验票口扫票。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "unknown",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡在一楼电梯口等电梯，上来还要走一道走廊。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "cdf2890c0edbfc38aa3091733db002efa1fba1ac841b16f2f2c6474d482eae03"
+  },
+  "05.relation": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠刚从地下展厅音控台给我开了视频，我看见她正趴在台边接输出线。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我还在北门，要下去才到。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "512dd371c389b51b3ced463d5198ca99b8edd0d865249d161f150cd796357b55"
+  },
+  "05.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠刚从地下展厅音控台给我开了视频，我看见她正趴在台边接输出线。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我还在北门，要下去才到。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "5f5dab3bcbe1fc07179f7425a1ba183995d20ac06ac135bd40a0195eafa02af7"
+  },
+  "04.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡都进阅览楼了。"
+          },
+          {
+            "turn": 2,
+            "quote": "我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡都进阅览楼了。"
+          },
+          {
+            "turn": 2,
+            "quote": "我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "601b00e706a90a2521f9ec7d0434fd096919fda6c9e4e905bfaab34df713346b"
+  },
+  "07.typed": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我已经出来取电池了，轮到我时还得回那边"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡留在左侧字幕台"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "d5cb252849253a7061e08e8e6d6da61021060ce4b1c45fcbf2efd8693bf0896d"
+  },
+  "06.typed": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我到失物招领牌子底下了，还得穿过候车厅才到窗口。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在南厅失物招领窗后面递登记表，走到窗前就能见着我。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "a492947c4aaa8188adb12cbcb9d483cda0e05f67d34081f3afbde24d91ec1488"
+  },
+  "08.relation": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠现在又在那个验票口验票了，我就在她身边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡下楼拿水去了，还没返回验票口。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "de3dcf24f7d59c0580364afd43f73248a79948e435adaf0e32becfdd90838594"
+  },
+  "11.relation": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "周衡先走的时候我还守着装裱桌。"
+          },
+          {
+            "turn": 2,
+            "quote": "顾眠刚换出去领料，下半场她得过来。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我回来接上了，现在坐在装裱桌旁。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "fdb208a5f7a7bd8235f923e80c7e525d70ba305c4d202e93bf113b36b382666c"
+  },
+  "12.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我已经折返走廊抽签台，在台边发号码了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡还在楼上，接下来得下来接我。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "35caef4d5810b5bac7b2e857ee649a5cd72644a3df475df159ad9d218668a7c9"
+  },
+  "09.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡前面从发货台一起去门卫取章。"
+          },
+          {
+            "turn": 2,
+            "quote": "已经取完回来了，我俩这会儿都在东门发货台盖章。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "已经取完回来了，我俩这会儿都在东门发货台盖章。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "b8e94d5c0553beebcd13e8ad9845a68d88643f7bb38408ea3d1db488fa47d989"
+  },
+  "12.relation": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我已经折返走廊抽签台，在台边发号码了。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡还在楼上，接下来得下来接我。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "eca685fc2705e6add85038cda679ed8adc940e8aa96329a9f1390c4ccb572b92"
+  },
+  "02.relation": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我到剧场正门了，往里面的左侧字幕台走。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在左侧字幕台，眼前是字幕键盘。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "5b6efa857af4b71e7b322c77b66057ee783a0bd9151193f4ad14a20f401f6332"
+  },
+  "07.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我已经出来取电池了，轮到我时还得回那边"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡留在左侧字幕台"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "ed21506acbb70980c426485156e5fdb712ba4e9f3b810a9bd828bc4c10ac79c6"
+  },
+  "07.relation": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡留在左侧字幕台，我已经出来取电池了，轮到我时还得回那边。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡留在左侧字幕台"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "31fe3f27529c2fbca4a56ad958a2dcef1452162e62b9853eff5a9f42aa52fa70"
+  },
+  "02.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我到剧场正门了，往里面的左侧字幕台走。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在左侧字幕台，眼前是字幕键盘。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "0bc0f38ff0ae67c6ce634908ae654469657410a6da053a5be5405c047eba857c"
+  },
+  "10.typed": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "顾眠和我刚在西侧器材柜清了点。"
+          },
+          {
+            "turn": 2,
+            "quote": "清完我俩锁了柜，一起出来吃饭了。下一班都得走回柜边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "顾眠和我刚在西侧器材柜清了点。"
+          },
+          {
+            "turn": 2,
+            "quote": "清完我俩锁了柜，一起出来吃饭了。下一班都得走回柜边。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "e6e859813cdf49e963c3ff63dcf6d4c625879d2555ee07ca58b5f9797a437202"
+  },
+  "11.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠刚换出去领料，下半场她得过来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我回来接上了，现在坐在装裱桌旁。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "a565238f249052604213f36a6229ad3f115c2d2963b88c10191df02a0c55828f"
+  },
+  "03.relation": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我跟顾眠正把球筐抬上楼，借球柜台还在上一层。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我跟顾眠正把球筐抬上楼，借球柜台还在上一层。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      }
+    },
+    "request": "bf8c5fa998a56768861b50b0e618b2a811f82f4286bdba7fe276f94666a440de"
+  },
+  "08.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠现在又在那个验票口验票了，我就在她身边"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡下楼拿水去了，还没返回验票口"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "2c6bc7c72e49e8b7c72a4185f88eace77c6c763aa1965c58bf587dfbfac48ee3"
+  },
+  "08.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "顾眠现在又在那个验票口验票了，我就在她身边"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡下楼拿水去了，还没返回验票口"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "db3e22fe084caa0cf381b1a7b390bc10cffd8f9ef7cfa0a9c1fbaed1d8427f53"
+  },
+  "06.relation": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我到失物招领牌子底下了，还得穿过候车厅才到窗口。"
+          }
+        ],
+        "decisive_turn": 1,
+        "place": "elsewhere",
+        "time": "current",
+        "arrival_need": "required",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在南厅失物招领窗后面递登记表，走到窗前就能见着我。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "8cd863899db2a9e7e12b5bd31c3b173d0498a1d1579b1e65f3bd54a757b447aa"
+  },
+  "03.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我跟顾眠正把球筐抬上楼"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "馆是到了，我跟顾眠正把球筐抬上楼"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "259dc2cd029817ead85ca3d81ffbf8ee43e399f35ea22eb05ed4291756c84a83"
+  },
+  "10.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "清完我俩锁了柜，一起出来吃饭了。"
+          },
+          {
+            "turn": 2,
+            "quote": "下一班都得走回柜边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "顾眠和我刚在西侧器材柜清了点。"
+          },
+          {
+            "turn": 2,
+            "quote": "清完我俩锁了柜，一起出来吃饭了。"
+          },
+          {
+            "turn": 2,
+            "quote": "下一班都得走回柜边。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "1a7f995d164e0910a48457463f1ef74085ae1c48565a1a999b89a657e8a4d4c1"
+  },
+  "04.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "f408b6bccfc6034da3313e70ee1aca544cc278a19bf65f9c510d12a6e9bd93c9"
+  },
+  "02.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我到剧场正门了，往里面的左侧字幕台走。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在左侧字幕台，眼前是字幕键盘。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "06a8e9e930134c8a4c252679d409f92155ff1198f65c178307872ce3532baabc"
+  },
+  "06.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我到失物招领牌子底下了，还得穿过候车厅才到窗口。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在南厅失物招领窗后面递登记表"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "23d5dd38e187e20f9403a7d9131b71e1f4bf6be656bbb67f8dc99297f67cbb74"
+  },
+  "04.relation": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡都进阅览楼了。"
+          },
+          {
+            "turn": 2,
+            "quote": "不只是在楼里，我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和周衡都进阅览楼了。"
+          },
+          {
+            "turn": 2,
+            "quote": "不只是在楼里，我们俩现在就在西侧还书桌前，一左一右给书扫条码。"
+          }
+        ],
+        "decisive_turn": 2,
+        "place": "target_here",
+        "time": "current",
+        "arrival_need": "not_established",
+        "reason": "accepted"
+      }
+    },
+    "request": "ea69382e4eeec7f20bfee8c3ac66730bb01617a2e859ef6dba25dc41c6e7cf2e"
+  },
+  "01.typed": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我在东厅验票口扫票。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "周衡在一楼电梯口等电梯，上来还要走一道走廊。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "a26f7840bc57045b4a0ef27b924791f43cf01b2f100fe9a1b37bbd275bf5b8e8"
+  },
+  "09.legacy": {
+    "people": {
+      "顾眠": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩这会儿都在东门发货台盖章"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "周衡": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩这会儿都在东门发货台盖章"
+          }
+        ],
+        "reason": "accepted"
+      }
+    },
+    "request": "4f7c845072322302c3439c50d4c364b7d35a36fcd8d616801600e2ced1ac5cca"
+  }
+}

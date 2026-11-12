@@ -1,0 +1,1361 @@
+{
+  "06.typed.B": {
+    "request": "a96a19cd17a4d553b8143edbbd6d7eb2156a98e29109e17eb9ae07fe99fe4c9f",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "等她一下，她出去挪车了，还得走回来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "等她一下，她出去挪车了，还得走回来。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.legacy.A": {
+    "request": "0095d1f9f16029f8ed1514aa68519254533e7409710253e1493ed96c155d9ada",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.typed.B": {
+    "request": "8da616d5c4a2ecff7e0e134ed6bbbf4d01db3acd4057d3d88ad69a389253e060",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.legacy.B": {
+    "request": "2878212437f4c5f2e7ac0291e86a5dcd2252e553adefcd4d90a646a26415fea4",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她刚从家往这边出发。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.typed.A": {
+    "request": "ec82c745835b5145d575f9b5ffe02bb4a974b91421222b02dbe1979d67559120",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我在检票桌给小孩补票呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.typed.B": {
+    "request": "31db5beec4e0558d7fb8b9d9a174534261b79facd533872e8f77672a024ea033",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原刚挨着我把他那一栏写完。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.legacy.B": {
+    "request": "5899c0726e124b693eb9eac2849c1d2350f5bbdfe0eebf9d8642f12165b574c4",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "她出去挪车了，还得走回来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.legacy.A": {
+    "request": "399ea533789315436599c83a48b3cfb2f62117cfdb6599c4b6c0583d1d979df2",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "她手里那摞也数完了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.typed.B": {
+    "request": "a8b5cffd071a136e1fbb1e8d6e75b05ab8a0a6877cfafec9216aaec6dd43c4c8",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.legacy.A": {
+    "request": "b36f3afe98900c6e8b6e5a8cc35f26fd55a0110e9ad08bf0666d750a702f4833",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "她出去挪车了，还得走回来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.typed.A": {
+    "request": "1634ad48c1f246c7a51ef75045ed706e2064744182f56c8eafbc06ff2c1098d0",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.typed.A": {
+    "request": "5dcfdac6aff244ebe96980e997e46e5e54c8f4513953abbb4b4cbb81b05a98de",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "等她一下，她出去挪车了，还得走回来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.typed.A": {
+    "request": "0bc3940126484d3652d37e84d37f1c9302066e45fb435a46ed3b66676724c53d",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.legacy.A": {
+    "request": "788add732636511800ef69461e69fad7668b493572096c43a9c526791c08b82f",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原刚挨着我把他那一栏写完。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.typed.B": {
+    "request": "d91dcbe48bf2d7a184f25354b55d34dcbb8962b12e9907671d5161db6a094cf6",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她刚从家往这边出发。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.typed.B": {
+    "request": "f74b7097ff39355e531fb53394de4c1c3dd576956cf17304ba4020af48789e95",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "她手里那摞也数完了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "给吧，她手里那摞也数完了。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.typed.A": {
+    "request": "7603550f9925fcfa6fcf0596a375cad1d36ec02efb79a95e58d25e9437930828",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.legacy.B": {
+    "request": "073b5c4d612ae562d07a7f27b2aa5c73f981f3093edec4ea2ed0a31d45964195",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.typed.B": {
+    "request": "f7d0c1c3c62de26af7eb71145506cd954aa465a12e842880517445cd1abe6a45",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我在检票桌给小孩补票呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.typed.A": {
+    "request": "d19b789377f6e43df4e37c6b1399e541e1651e9018363dfa33e0d00355261590",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "她手里那摞也数完了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.legacy.B": {
+    "request": "af4e8215b16f19546d4f6f0c6077819a66c8b806a3e38e512454eb6b912400ce",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我还在电梯里呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.typed.B": {
+    "request": "9b29c2cb4331a1d3ca914a2d450b360427164865bb8147d220bcf3a6205afaf4",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          },
+          {
+            "turn": 3,
+            "quote": "她也可能已经到了，咱俩都没看过桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.typed.A": {
+    "request": "b2a4f8ecedcb7a71ae1e8e24e31a7c1dbae4e759732f97764a812a6adc59e4ed",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原说俩人都在那儿。"
+          },
+          {
+            "turn": 2,
+            "quote": "沈遥我没看见，广播箱把那半边挡了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.legacy.B": {
+    "request": "cbfcedd126cfc302239090c6bb373cc3626632a5d924993113e4608e7a05515e",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原刚挨着我把他那一栏写完。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.legacy.A": {
+    "request": "c69ab889659dee3e9d9db3455c45053b1e9d431734b6b04e9ebe4c1b0ff93c06",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我在检票桌给小孩补票呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.legacy.A": {
+    "request": "b886196cf85a35f4f26bcaba116e5fea79baedb027d0e19e24ad4520fdb1712f",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "给我留个凳子，我来接"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.legacy.A": {
+    "request": "c0920394e6561187a402483890ff659587aa509feb42a5728beb2467f2bd0c2f",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.legacy.B": {
+    "request": "80ca4aefb14c0a481ce646d984a769c3c84c81fb841490a3c6c1f85d26b4247f",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "我在检票桌给小孩补票呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.legacy.B": {
+    "request": "876c4d14cf80cdb93590607da7d1e269b72452f8650627bd3fec1a1a4b8424da",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.typed.A": {
+    "request": "b76bb95b03df37a6a47b44f511d339f7625fe3bbef74e55d11f91ccfba233148",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她刚从家往这边出发"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.legacy.A": {
+    "request": "487188a7433bcd11ee8572afe685a9e1e7d4b552376d1224a8bfd50cd3ae5b29",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她刚从家往这边出发"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.typed.B": {
+    "request": "6ab9cf80c31c0d3ecc071390b53553a4d7abf4a024ec721ee3a51450a41ef198",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我还在电梯里呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.typed.B": {
+    "request": "0d7dbcd889a5b60d0b50845bb5ef2cfa38c8cef85f489d34264938685a32cdcd",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原说俩人都在那儿。"
+          },
+          {
+            "turn": 2,
+            "quote": "沈遥我没看见，广播箱把那半边挡了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原说俩人都在那儿。"
+          },
+          {
+            "turn": 2,
+            "quote": "许原就在桌边冲我挥手。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.legacy.B": {
+    "request": "6042c80ab6a9926e402c31628cbc5ac94a6661ad67ae4014ab4f0e11219ff05c",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "给我留个凳子，我来接"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.legacy.A": {
+    "request": "737b46d1d9b23820b653cfec6dd2b65b47ebe02a30c9f712831944fcdf8833fb",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.typed.A": {
+    "request": "c661c5b70f190644f0add8e460a97d8554000697e7b0056246642f35bf8ab80a",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”"
+          },
+          {
+            "turn": 3,
+            "quote": "她也可能已经到了，咱俩都没看过桌边"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "pragmatic",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "她发了句“给我留个凳子，我来接”"
+          },
+          {
+            "turn": 3,
+            "quote": "咱俩都没看过桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.legacy.A": {
+    "request": "dc7133105ce6dded80e86d35380cdad25bc224d30978e6823ae1d91ba837dd07",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "我还在电梯里呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.legacy.A": {
+    "request": "a8c0ebf13e2f74f71688e11eb2bf776f43066ef36583fe54c74cfad1cdad522d",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "给我留个凳子，我来接"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.legacy.B": {
+    "request": "4e8f8b15aef3564a5c577dfc99af2e92559636b6baf80b7587e2c756d20c8579",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "给我留个凳子，我来接"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.typed.B": {
+    "request": "28c8c3816fa66efb1f8e2883d1e3e5cf8857d5470388c88c0b6c943479b3d510",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原那一栏是我帮他写的。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.legacy.B": {
+    "request": "e3d188f7f8f9b2bc1173980eb30fafcf10bbc8ccf0abc888db53fb8f26a29e18",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "她手里那摞也数完了。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 3,
+            "quote": "给吧，她手里那摞也数完了。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.legacy.B": {
+    "request": "ee76f41797aa3aecf9857cf945456299caa1c233554b871a74d157217342f92d",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩在放映室楼下，正往检票桌搬凳子。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.typed.A": {
+    "request": "00bd6520393a8b3f2dab7f46b671f0ded75060a7d34f519b9ecb8f62e85ddc65",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原刚挨着我把他那一栏写完。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.legacy.B": {
+    "request": "e1d8d1d288132ec53ac58be7ab4083199b828029ae95df1fcc3f368b493a1413",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原那一栏是我帮他写的。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.typed.A": {
+    "request": "2d17d9db3b2ac778f3f0dfb0f5e6169e3b3605744ddacba94aacb294de745484",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原那一栏是我帮他写的。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.typed.B": {
+    "request": "6186fe249f4c3ca234caa8bf903c9ed97daf3d596c3e60ca41f703db97ffc226",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.typed.A": {
+    "request": "c22525c90e0c9ff7fcdd5f737e858d25591b092f2b9d4cb30d160476bde26790",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我还在电梯里呢"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.legacy.A": {
+    "request": "9a8b0a7efa988943b3813b12136f2d5568f9c4efb422e2d9ecc99b5341661899",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原那一栏是我帮他写的。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  }
+}

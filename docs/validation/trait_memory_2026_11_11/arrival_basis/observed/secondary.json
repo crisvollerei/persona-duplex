@@ -1,0 +1,98 @@
+{
+  "calibration_known_old_human": {
+    "legacy": {
+      "counts": {
+        "person_n": 32,
+        "people_correct": 30,
+        "cases": 16,
+        "cases_correct": 15
+      },
+      "differences": [
+        {
+          "case": "03",
+          "person": "俞川",
+          "reference": "present",
+          "observer": "unknown"
+        },
+        {
+          "case": "03",
+          "person": "常鸣",
+          "reference": "present",
+          "observer": "unknown"
+        }
+      ],
+      "control_explicit_disagreements": []
+    },
+    "typed": {
+      "counts": {
+        "person_n": 32,
+        "people_correct": 26,
+        "cases": 16,
+        "cases_correct": 13
+      },
+      "differences": [
+        {
+          "case": "10",
+          "person": "俞川",
+          "reference": "future",
+          "observer": "present"
+        },
+        {
+          "case": "10",
+          "person": "常鸣",
+          "reference": "future",
+          "observer": "present"
+        },
+        {
+          "case": "14",
+          "person": "俞川",
+          "reference": "future",
+          "observer": "present"
+        },
+        {
+          "case": "14",
+          "person": "常鸣",
+          "reference": "future",
+          "observer": "present"
+        },
+        {
+          "case": "01",
+          "person": "俞川",
+          "reference": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "01",
+          "person": "常鸣",
+          "reference": "future",
+          "observer": "unknown"
+        }
+      ],
+      "control_explicit_disagreements": []
+    }
+  },
+  "controlled_latest_turn_not_human": {
+    "legacy": {
+      "counts": {
+        "person_n": 24,
+        "people_correct": 24,
+        "cases": 12,
+        "cases_correct": 12
+      },
+      "differences": [],
+      "control_explicit_disagreements": []
+    },
+    "typed": {
+      "counts": {
+        "person_n": 24,
+        "explicit_state_n": 16,
+        "explicit_state_correct": 16,
+        "people_correct": 24,
+        "cases": 12,
+        "cases_correct": 12
+      },
+      "differences": [],
+      "control_explicit_disagreements": []
+    }
+  }
+}

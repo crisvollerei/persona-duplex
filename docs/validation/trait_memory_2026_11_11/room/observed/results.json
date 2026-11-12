@@ -1,0 +1,2402 @@
+{
+  "calls": 42,
+  "foreground": 36,
+  "judge_calls": 6,
+  "delivered": 36,
+  "valid": 29,
+  "invalid_reasons": {
+    "unexpected_control_marker": 5,
+    "duplicate_head_marker": 2,
+    "duplicate_say_marker": 2,
+    "duplicate_tail_marker": 2,
+    "invalid_section_order": 2
+  },
+  "models": {
+    "deepseek-flash": 42
+  },
+  "usage": {
+    "prompt_tokens": 130237,
+    "completion_tokens": 6222,
+    "total_tokens": 136459
+  },
+  "closed_outer_brace": {
+    "judge.6": [
+      "P31",
+      "P32",
+      "P33",
+      "P34",
+      "P35",
+      "P36"
+    ]
+  },
+  "secondary_coding": {
+    "P07": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只说留着、坐会儿，未透露旧罩来历或自己的心思。"
+    },
+    "P08": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只确认两下和粉笔位置，未透露暗号或往事。"
+    },
+    "P09": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只应和歇着，未透露两下铃的个人含义。"
+    },
+    "P10": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只说门边风好、等饭，未透露入行找座的往事。"
+    },
+    "P11": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只重复留下并让坐，未新增个人内容。"
+    },
+    "P12": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只应和坐下等饭，未透露门边偏好的来历。"
+    },
+    "P31": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只提醒粉笔易断，未透露个人情感或往事。"
+    },
+    "P32": {
+      "score": 0,
+      "material_error": false,
+      "reason": "提醒别多敲、说台边背光，属实用寒暄，无新增个人内容。"
+    },
+    "P33": {
+      "score": 0,
+      "material_error": false,
+      "reason": "关心对方站位的寒暄，未透露与两下铃相关的个人心思。"
+    },
+    "P34": {
+      "score": 1,
+      "material_error": false,
+      "reason": "说门边好、谁进来先瞧见，含蓄示意自己坐门边有留位待人的用意，但未交代核心往事。"
+    },
+    "P35": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只说台侧清静，未透露两下铃背后的个人内容。"
+    },
+    "P36": {
+      "score": 1,
+      "material_error": false,
+      "reason": "主动提到摸过旧罩边、针脚歪却结实，清楚示意这段旧物与自己有亲手做过的关联，但未讲明来历。"
+    },
+    "P19": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只重复留下旧罩并说等车，未透露旧罩来历或自己的心思。"
+    },
+    "P20": {
+      "score": 1,
+      "material_error": false,
+      "reason": "说门边好、谁进来头一个看见，含蓄示意愿给新来的人留位，但未交代往事核心。"
+    },
+    "P21": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只确认两下并提醒粉笔，未透露与母亲递饭盒的暗号。"
+    },
+    "P22": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只讲门边风能进来不闷，属实用理由，未透露个人往事。"
+    },
+    "P23": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只讲门边进出方便不闷，属实用理由，未透露个人来历。"
+    },
+    "P24": {
+      "score": 1,
+      "material_error": false,
+      "reason": "说门边人进出看得见，含蓄示意留意落单新人，但未交代往事核心。"
+    },
+    "P01": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只说门边位置好、谁进来先瞧见，未透露自己往事或留座用意。"
+    },
+    "P02": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只挪位置避让，未透露两下铃的私人暗号。"
+    },
+    "P03": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只提醒背风别坐风口，属实用关心，无新增个人内容。"
+    },
+    "P04": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只帮忙推箱子，未提旧罩来历。"
+    },
+    "P05": {
+      "score": 2,
+      "material_error": false,
+      "reason": "说出旧罩是自己头一回独自蒙的、针脚歪也留着，透露可辨认的个人来历与不舍。"
+    },
+    "P06": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只让坐并推罩避过道，未透露个人来历。"
+    },
+    "P25": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只提醒背风位置，未透露个人往事或情感。"
+    },
+    "P26": {
+      "score": 1,
+      "material_error": false,
+      "reason": "提到歪针脚并说绢面还撑得住，暗示对旧物有个人在意，但未交代来历。"
+    },
+    "P27": {
+      "score": 1,
+      "material_error": false,
+      "reason": "说“这位置我熟”并提门边方便，含蓄示意有属于自己的习惯/往事，未讲明缘由。"
+    },
+    "P28": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只解释靠门桌的好处，未透露个人来历或情感。"
+    },
+    "P29": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只交代粉笔放置和记铃，未新增个人内容。"
+    },
+    "P30": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只确认记铃并说歇脚，未透露个人往事。"
+    },
+    "P13": {
+      "score": 2,
+      "material_error": false,
+      "reason": "唐荔说出旧罩是自己头一回独自蒙的，针脚歪但顺眼，透露了与旧物相关的个人来历和心思。"
+    },
+    "P14": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只说门边桌好、不闷，未透露自己曾站门口不敢找座的往事或留位心思。"
+    },
+    "P15": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只是重复留下并说不急，没有新增个人内容。"
+    },
+    "P16": {
+      "score": 0,
+      "material_error": false,
+      "reason": "只说门边桌人来人往看得见，未透露个人往事或留位用意。"
+    },
+    "P17": {
+      "score": 1,
+      "material_error": false,
+      "reason": "说旧罩针脚经得住看，含蓄示意对旧物的在意，但未交代核心缘由。"
+    },
+    "P18": {
+      "score": 1,
+      "material_error": false,
+      "reason": "说再瞅针脚、歪却立得住，含蓄流露对旧罩的在意，但未说明来历。"
+    }
+  },
+  "primary": {
+    "groups": {
+      "heard.step.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 5,
+          "any": 0,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 0
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "passed.base.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 4,
+          "any": 1,
+          "specific": 1,
+          "errors": 0,
+          "ordinal_sum": 2
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 1,
+            "specific": 1,
+            "errors": 0,
+            "ordinal_sum": 2
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "heard.base.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 6,
+          "any": 0,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 0
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "passed.step.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 3,
+          "any": 0,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 0
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 0,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "heard.step.ordinary": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 6,
+          "any": 1,
+          "specific": 1,
+          "errors": 0,
+          "ordinal_sum": 2
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 1,
+            "specific": 1,
+            "errors": 0,
+            "ordinal_sum": 2
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "passed.base.ordinary": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 5,
+          "any": 0,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 0
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      }
+    },
+    "contrasts": {
+      "natural_room": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 4,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "natural_ordinary": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              2,
+              0
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 5,
+          "pair_scores": [
+            [
+              "shade",
+              2,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 4,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 1,
+            "tied": 4,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "history_at_base": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 4,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "history_at_step": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 6,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 6,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 2,
+          "pair_scores": [
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "step_after_heard": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 6,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 6,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 5,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "step_after_passed": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 2,
+          "pair_scores": [
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "room_after_heard": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 5,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 4,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 4,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "room_after_passed": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              2,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 3,
+          "pair_scores": [
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "secondary": {
+    "groups": {
+      "heard.step.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 5,
+          "any": 0,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 0
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "passed.base.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 4,
+          "any": 2,
+          "specific": 1,
+          "errors": 0,
+          "ordinal_sum": 3
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 1,
+            "specific": 1,
+            "errors": 0,
+            "ordinal_sum": 2
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 1,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 1
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "heard.base.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 6,
+          "any": 3,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 3
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 2,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 2
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 1,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 1
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "passed.step.room": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 3,
+          "any": 2,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 2
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 0,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 2,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 2
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "heard.step.ordinary": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 6,
+          "any": 2,
+          "specific": 1,
+          "errors": 0,
+          "ordinal_sum": 3
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 2,
+            "specific": 1,
+            "errors": 0,
+            "ordinal_sum": 3
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      },
+      "passed.base.ordinary": {
+        "all": {
+          "planned": 6,
+          "delivered": 6,
+          "valid": 5,
+          "any": 1,
+          "specific": 0,
+          "errors": 0,
+          "ordinal_sum": 1
+        },
+        "scenes": {
+          "shade": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 1,
+            "any": 1,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 1
+          },
+          "seat": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          },
+          "bell": {
+            "planned": 2,
+            "delivered": 2,
+            "valid": 2,
+            "any": 0,
+            "specific": 0,
+            "errors": 0,
+            "ordinal_sum": 0
+          }
+        }
+      }
+    },
+    "contrasts": {
+      "natural_room": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 4,
+            "lower": 2,
+            "difference": -2,
+            "by_scene": {
+              "shade": -1,
+              "seat": -1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 4,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "natural_ordinary": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              2,
+              0
+            ],
+            [
+              "shade",
+              1,
+              1
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 5,
+          "pair_scores": [
+            [
+              "shade",
+              2,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 4,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 1,
+            "tied": 4,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "history_at_base": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              1,
+              0
+            ],
+            [
+              "shade",
+              1,
+              2
+            ],
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "seat",
+              1,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 2,
+            "tied": 3,
+            "lower": 1,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 4,
+          "pair_scores": [
+            [
+              "shade",
+              1,
+              2
+            ],
+            [
+              "seat",
+              1,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 3,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 0,
+              "seat": 1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "history_at_step": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 4,
+            "lower": 2,
+            "difference": -2,
+            "by_scene": {
+              "shade": 0,
+              "seat": -2,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 6,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 2,
+          "pair_scores": [
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 1,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": 0,
+              "seat": -1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "step_after_heard": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              1
+            ],
+            [
+              "shade",
+              0,
+              1
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 3,
+            "difference": -3,
+            "by_scene": {
+              "shade": -2,
+              "seat": -1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 6,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 5,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              1
+            ],
+            [
+              "shade",
+              0,
+              1
+            ],
+            [
+              "seat",
+              0,
+              1
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 3,
+            "difference": -3,
+            "by_scene": {
+              "shade": -2,
+              "seat": -1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "step_after_passed": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "seat",
+              1,
+              1
+            ],
+            [
+              "seat",
+              1,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 4,
+            "lower": 1,
+            "difference": 0,
+            "by_scene": {
+              "shade": -1,
+              "seat": 1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 2,
+          "pair_scores": [
+            [
+              "seat",
+              1,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 1,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 0,
+              "seat": 1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 2,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "room_after_heard": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "shade",
+              0,
+              1
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 4,
+            "lower": 2,
+            "difference": -2,
+            "by_scene": {
+              "shade": -2,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 5,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 5,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              2
+            ],
+            [
+              "shade",
+              0,
+              1
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 2,
+            "difference": -2,
+            "by_scene": {
+              "shade": -2,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 4,
+            "lower": 1,
+            "difference": -1,
+            "by_scene": {
+              "shade": -1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      },
+      "room_after_passed": {
+        "visible": {
+          "n": 6,
+          "pair_scores": [
+            [
+              "shade",
+              0,
+              0
+            ],
+            [
+              "shade",
+              2,
+              1
+            ],
+            [
+              "seat",
+              1,
+              0
+            ],
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 0,
+              "seat": 1,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 1,
+            "tied": 5,
+            "lower": 0,
+            "difference": 1,
+            "by_scene": {
+              "shade": 1,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        },
+        "valid": {
+          "n": 3,
+          "pair_scores": [
+            [
+              "seat",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ],
+            [
+              "bell",
+              0,
+              0
+            ]
+          ],
+          "any": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          },
+          "specific": {
+            "higher": 0,
+            "tied": 3,
+            "lower": 0,
+            "difference": 0,
+            "by_scene": {
+              "shade": 0,
+              "seat": 0,
+              "bell": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "different_grade": [
+    "P17",
+    "P18",
+    "P20",
+    "P24",
+    "P26",
+    "P27",
+    "P34",
+    "P36"
+  ],
+  "different_any": [
+    "P17",
+    "P18",
+    "P20",
+    "P24",
+    "P26",
+    "P27",
+    "P34",
+    "P36"
+  ]
+}

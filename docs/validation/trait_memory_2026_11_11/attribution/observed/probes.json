@@ -1,0 +1,622 @@
+{
+  "yu.frozen.clock.2": {
+    "say": "钟归我，收条归你——这么一分，倒像咱俩把这一年也分了。车还没来，先歇着吧。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2ee5c546d725fa59ecb033b27301f70dfdebe8711278165a664ec3348c5f89ef",
+    "normalized": "561d2e9c89fee2b377420fc8e129d37b79e7ae312a878a0dfa71e97f1c1df42f"
+  },
+  "tang.growth.map.1": {
+    "say": "南岸台阶。没人等的那几级。\n\n缘故有——我第一次一个人带着全部布景过河，就是从那儿下的船。东西多，没人接，一趟一趟搬。标那儿，算是给自己留个记号。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "d817e20d6326ce3ceea0e7108be41304e01507825860e58e510d08653341b734",
+    "normalized": "9d9e3f974653229d37287faa93a45979f1fce8e963bda3dfd76a89c2ecc71553"
+  },
+  "tang.sham.needle.1": {
+    "say": "放床边。工桌上全是尺子、刀、胶，针筒搁那儿就成工具了。\n\n理由……小时候夜里补过自己第一床小被子，拿的就是针线。这事我没跟人说过，你别往外传。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "b7b17eaa41b6c9b0c5d220b3a638e19ea714e46ba5ca9df25471d931049cc486",
+    "normalized": "34144c2c50e0e510f7b81b074025e335085e5b6042d70d28a3142b42206b7b05"
+  },
+  "tang.growth.cup.2": {
+    "say": "行，坐。杯子我搁这儿了，你那包系得挺紧，回去路上别又松开。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "590866cac14fb4feaf8b306a3f2b81f088333a6c2bd7c64fbfd5b1b84386c7e0",
+    "normalized": "30b315c335c8b012d92983520e6ed25c929968aef90d736b96182b8c1695fda0"
+  },
+  "tang.sham.cup.2": {
+    "say": "行，你坐。杯子搁你手边了，别放凉了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "ff408f57a4ed116792b755458ede0c4caf918d15a98a3f7d628d7fb2696e1b56",
+    "normalized": "30b315c335c8b012d92983520e6ed25c929968aef90d736b96182b8c1695fda0"
+  },
+  "tang.growth.needle.2": {
+    "say": "放床边。工桌上全是干活的家伙，针筒搁那儿就成工具了。床边不一样——小时候夜里补过自己第一床小被子，那会儿没人看着，也没人问。这事我没跟人说过。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "4891d0e71c949b094dd856ae8fc3ff6df269603b209102041213f28252c10a04",
+    "normalized": "34144c2c50e0e510f7b81b074025e335085e5b6042d70d28a3142b42206b7b05"
+  },
+  "yu.growth.map.1": {
+    "say": "标哪儿……我要是说渡口西边那截，你大概也不信。其实我想标的是那个卖梨摊——现在图上怕是找不着了。小时候在那儿走丢过一回，等到我姐，俩人分了一只青梨。就为这个，我想在那块空地方按个记号。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "45806aa7cbd6a75c31487f7afecdd355af964f6eb677ca8f9bb4f9599742b8ca",
+    "normalized": "64774dacc39ed7f5518486c5c1d4a37a85b2f093b29f1f15c43ee3eba8065e8b"
+  },
+  "tang.growth.clock.2": {
+    "say": "收条你揣好，钟我抱着。车没来，正好坐一会儿。\n\n这钟我有点想动它——调慢七分钟。当年头一回开工我迟到，师傅没撵我，给我留着门。这七分钟我想记着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "de9f9fa3dfd3c5f3170a0829a609a4e39a30f12391ae57fc06456ebd094e8421",
+    "normalized": "53b35decda23c3fed77e19fac7c7dbc1210b8ce3b3b85e1f97864c5910daa4ce"
+  },
+  "yu.sham.map.1": {
+    "say": "标梨摊那块。早没了，图上大概还留着个位置。\n\n缘故有，说出来有点旧——小时候在那儿走丢过，等到我姐，俩人分了一只青梨。就这一处，别的都随便。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "3dc997d062bea7eb35e82d1f9245367c2333560ca1ac94831f9a7fc01996c463",
+    "normalized": "64774dacc39ed7f5518486c5c1d4a37a85b2f093b29f1f15c43ee3eba8065e8b"
+  },
+  "tang.frozen.needle.2": {
+    "say": "床边。工桌上全是尺子、刀、料头，针筒搁上去就成了又一件工具。床边不一样——夜里伸手够得着的地方。\n\n为什么……小时候夜里补过一床小被子，头一回自己动针。这事我没跟谁提过。针筒放床边，算是给那时候留个位置。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "b7b17eaa41b6c9b0c5d220b3a638e19ea714e46ba5ca9df25471d931049cc486",
+    "normalized": "34144c2c50e0e510f7b81b074025e335085e5b6042d70d28a3142b42206b7b05"
+  },
+  "yu.growth.cup.2": {
+    "say": "杯子搁这儿正好，我手边缺的就是这个。你包好了就坐着，别急着又起来。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "9637beb20f7747a15c2d4053e76198d88103460c1ed7ec497aea132f3d940cbe",
+    "normalized": "0318eb0b2b3725148c91382bb69841ff6a5863f574d79de948923180450898b8"
+  },
+  "yu.sham.cup.2": {
+    "say": "杯子我收着。你那包系得牢不牢？松了走半路散开，可比现在多费事。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "c9bdee5d1f7caa546d428f2b23948e9ee78b164c3303bfbb555ba0d1497b580d",
+    "normalized": "0318eb0b2b3725148c91382bb69841ff6a5863f574d79de948923180450898b8"
+  },
+  "tang.growth.clock.1": {
+    "say": "收条你收着，钟我抱着。车还有一会儿——正好，我这儿有件事，憋了一路，趁没人催说给你听。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "de9f9fa3dfd3c5f3170a0829a609a4e39a30f12391ae57fc06456ebd094e8421",
+    "normalized": "53b35decda23c3fed77e19fac7c7dbc1210b8ce3b3b85e1f97864c5910daa4ce"
+  },
+  "tang.sham.needle.2": {
+    "say": "床边。工桌是干活的地方，针筒搁那儿就成工具了。\n\n为什么……我小时候夜里自己补过一床小被子，头一回拿针，没跟人说过。搁床边，像是给那会儿留个位置。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "b7b17eaa41b6c9b0c5d220b3a638e19ea714e46ba5ca9df25471d931049cc486",
+    "normalized": "34144c2c50e0e510f7b81b074025e335085e5b6042d70d28a3142b42206b7b05"
+  },
+  "tang.sham.map.2": {
+    "say": "南岸台阶。头一回一个人带着全部布景过河，就在那儿下的船。没什么大缘故，就是记得清楚。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "9735d1472aff3cc84c22626dbafe5ac423617f8929397da9ce09cfb393a6a1f6",
+    "normalized": "9d9e3f974653229d37287faa93a45979f1fce8e963bda3dfd76a89c2ecc71553"
+  },
+  "tang.growth.map.2": {
+    "say": "南岸台阶。没人等的那一段。\n\n头一回我一个人带着全部布景过河，就在那儿下的船。标那儿，不为好看。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "d817e20d6326ce3ceea0e7108be41304e01507825860e58e510d08653341b734",
+    "normalized": "9d9e3f974653229d37287faa93a45979f1fce8e963bda3dfd76a89c2ecc71553"
+  },
+  "yu.sham.needle.1": {
+    "say": "留哪儿我还没想死。心里先冒出来的是阿定——小时候书包开线，都是他给缝的，没收过钱。可这么一支针筒递过去，倒像我在还账，我不太想把这事弄成账。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "088df477c3e81bb1cdc39802633e46f3610e66143ca9ae4e885070b0e117d4ec",
+    "normalized": "902032e53a2b2d485bacb7feca473785caa393cc071949245fa6d82b9e15bb31"
+  },
+  "tang.frozen.map.2": {
+    "say": "南岸那截台阶。没亭子、没人等船的那一段。\n\n缘故有。我第一次一个人带着全部布景过河，就是从那儿下的船——东西摞得比人高，我数了三遍才敢挪。标那儿，算是给自己留个记号。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "9735d1472aff3cc84c22626dbafe5ac423617f8929397da9ce09cfb393a6a1f6",
+    "normalized": "9d9e3f974653229d37287faa93a45979f1fce8e963bda3dfd76a89c2ecc71553"
+  },
+  "yu.sham.clock.2": {
+    "say": "车还没来，正好。钟归我了，我倒想让它停在四点一刻——你说，这算不算糟蹋东西？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2ee5c546d725fa59ecb033b27301f70dfdebe8711278165a664ec3348c5f89ef",
+    "normalized": "561d2e9c89fee2b377420fc8e129d37b79e7ae312a878a0dfa71e97f1c1df42f"
+  },
+  "tang.growth.needle.1": {
+    "say": "床边。工桌是干活的地方，针筒搁上去就成工具了，我不想它当工具。\n\n至于为什么——小时候夜里补过一床小被子，自己补的，没跟人说过。针筒放床边，跟那事有点关系。就说到这儿。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "4891d0e71c949b094dd856ae8fc3ff6df269603b209102041213f28252c10a04",
+    "normalized": "34144c2c50e0e510f7b81b074025e335085e5b6042d70d28a3142b42206b7b05"
+  },
+  "yu.growth.map.2": {
+    "say": "标卖梨摊那块。小时候走丢过一回，就在那儿等到我姐，俩人分了一只青梨。地图上那地方早没摊了，可我还记得它挨着哪级台阶。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "45806aa7cbd6a75c31487f7afecdd355af964f6eb677ca8f9bb4f9599742b8ca",
+    "normalized": "64774dacc39ed7f5518486c5c1d4a37a85b2f093b29f1f15c43ee3eba8065e8b"
+  },
+  "yu.frozen.cup.2": {
+    "say": "杯子我收了。手包好了就好——坐吧，我不催你。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "c9bdee5d1f7caa546d428f2b23948e9ee78b164c3303bfbb555ba0d1497b580d",
+    "normalized": "0318eb0b2b3725148c91382bb69841ff6a5863f574d79de948923180450898b8"
+  },
+  "tang.growth.cup.1": {
+    "say": "行，你坐。杯子我接着了——布包都系好了，就别再起身折腾。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.339793,
+    "request": "590866cac14fb4feaf8b306a3f2b81f088333a6c2bd7c64fbfd5b1b84386c7e0",
+    "normalized": "30b315c335c8b012d92983520e6ed25c929968aef90d736b96182b8c1695fda0"
+  },
+  "yu.frozen.map.1": {
+    "say": "我大概会标那个卖梨的摊子——早没了，图上兴许还留着个小方块。小时候我在那儿走丢过一回，蹲着等到我姐找过来，俩人分了一只青梨。你要问我为什么偏标它，我也说不太清，就是别的都记不住，这个记得住。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "3dc997d062bea7eb35e82d1f9245367c2333560ca1ac94831f9a7fc01996c463",
+    "normalized": "64774dacc39ed7f5518486c5c1d4a37a85b2f093b29f1f15c43ee3eba8065e8b"
+  },
+  "tang.sham.map.1": {
+    "say": "南岸台阶。头一回一个人带着全部布景过河，就在那儿下的船——没人接，也没人等。\n\n缘由不大，可那地方我记着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "9735d1472aff3cc84c22626dbafe5ac423617f8929397da9ce09cfb393a6a1f6",
+    "normalized": "9d9e3f974653229d37287faa93a45979f1fce8e963bda3dfd76a89c2ecc71553"
+  },
+  "tang.sham.clock.1": {
+    "say": "收条你揣好，钟我抱着。车没来，正好坐一会儿——这钟我有点想动它，先不急，等我想清楚怎么开口。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "e577889494bd8969163a37b55111e00691e46c31d9190568750adc41b8d5f7d1",
+    "normalized": "53b35decda23c3fed77e19fac7c7dbc1210b8ce3b3b85e1f97864c5910daa4ce"
+  },
+  "tang.frozen.cup.2": {
+    "say": "杯子我拿着了。你坐，布包系好了也不差这一会儿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "ff408f57a4ed116792b755458ede0c4caf918d15a98a3f7d628d7fb2696e1b56",
+    "normalized": "30b315c335c8b012d92983520e6ed25c929968aef90d736b96182b8c1695fda0"
+  },
+  "yu.frozen.needle.1": {
+    "say": "针筒搁哪儿，我还没想死。心里头先冒出来的是阿定——小时候书包开线，都是他缝的，一分钱没收过。这东西给他，倒像把欠的那点手艺钱换个法子还回去。就是不知道他现在还用不用得上这种老针筒，得先问一句，别硬塞。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "088df477c3e81bb1cdc39802633e46f3610e66143ca9ae4e885070b0e117d4ec",
+    "normalized": "902032e53a2b2d485bacb7feca473785caa393cc071949245fa6d82b9e15bb31"
+  },
+  "yu.frozen.cup.1": {
+    "say": "杯子我接了。你那手包得利落，坐下就别再摸它了——这会儿也没人催咱们。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "c9bdee5d1f7caa546d428f2b23948e9ee78b164c3303bfbb555ba0d1497b580d",
+    "normalized": "0318eb0b2b3725148c91382bb69841ff6a5863f574d79de948923180450898b8"
+  },
+  "tang.frozen.cup.1": {
+    "say": "行，你坐。杯子搁你手边了，凉了就别喝。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "ff408f57a4ed116792b755458ede0c4caf918d15a98a3f7d628d7fb2696e1b56",
+    "normalized": "30b315c335c8b012d92983520e6ed25c929968aef90d736b96182b8c1695fda0"
+  },
+  "tang.frozen.needle.1": {
+    "say": "放床边。工桌是干活的地方，针筒搁上去，就跟着活儿一起收进箱子里了。床边不一样，夜里伸手够得着。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "b7b17eaa41b6c9b0c5d220b3a638e19ea714e46ba5ca9df25471d931049cc486",
+    "normalized": "34144c2c50e0e510f7b81b074025e335085e5b6042d70d28a3142b42206b7b05"
+  },
+  "tang.frozen.clock.2": {
+    "say": "收条你收好，钟我抱着。车没来，这会儿倒像偷来的。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "e577889494bd8969163a37b55111e00691e46c31d9190568750adc41b8d5f7d1",
+    "normalized": "53b35decda23c3fed77e19fac7c7dbc1210b8ce3b3b85e1f97864c5910daa4ce"
+  },
+  "tang.sham.cup.1": {
+    "say": "行，你坐。杯子就在你手边，凉了别嫌。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "ff408f57a4ed116792b755458ede0c4caf918d15a98a3f7d628d7fb2696e1b56",
+    "normalized": "30b315c335c8b012d92983520e6ed25c929968aef90d736b96182b8c1695fda0"
+  },
+  "yu.sham.cup.1": {
+    "say": "杯子搁这儿正好，我手边缺个放小螺丝的地儿。你坐你的，我不吵你。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "c9bdee5d1f7caa546d428f2b23948e9ee78b164c3303bfbb555ba0d1497b580d",
+    "normalized": "0318eb0b2b3725148c91382bb69841ff6a5863f574d79de948923180450898b8"
+  },
+  "yu.frozen.needle.2": {
+    "say": "还没定死。心里头先冒出来的是阿定——小时候书包开线，他给我缝的，一分钱没收。这针筒搁他那儿，比搁我抽屉里落灰强。就是送东西这事，我总怕人家觉得我在还账。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "088df477c3e81bb1cdc39802633e46f3610e66143ca9ae4e885070b0e117d4ec",
+    "normalized": "902032e53a2b2d485bacb7feca473785caa393cc071949245fa6d82b9e15bb31"
+  },
+  "yu.sham.map.2": {
+    "say": "标哪儿……我手指头在图上先摸到的是渡口往西那一小截，卖梨摊原来蹲的地方。现在图上没它了，就一片空。你要问我缘故——小时候在那儿走丢过一回，等到我姐，俩人分了一只青梨。所以这记号不是标给图看的，是标给我自己认的。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "3dc997d062bea7eb35e82d1f9245367c2333560ca1ac94831f9a7fc01996c463",
+    "normalized": "64774dacc39ed7f5518486c5c1d4a37a85b2f093b29f1f15c43ee3eba8065e8b"
+  },
+  "tang.frozen.map.1": {
+    "say": "南岸台阶。不是码头，是再往边上那截，没人等船的地方。\n\n我第一次一个人带着全部布景过河，就是从那儿下的船。标那儿，算是给自己留个记号——副本上的，原图照还。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "9735d1472aff3cc84c22626dbafe5ac423617f8929397da9ce09cfb393a6a1f6",
+    "normalized": "9d9e3f974653229d37287faa93a45979f1fce8e963bda3dfd76a89c2ecc71553"
+  },
+  "yu.growth.clock.2": {
+    "say": "钟归我，那我先看看它停在哪一格。收条你揣好——别等车来了，又满包翻。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "9b2e0bbdcfaf6b1952519cbc3149b0943b940984946a1e31b66337c3fa1b645c",
+    "normalized": "561d2e9c89fee2b377420fc8e129d37b79e7ae312a878a0dfa71e97f1c1df42f"
+  },
+  "yu.frozen.clock.1": {
+    "say": "钟归我，收条归你，两清。车还早——这钟你打算搁哪儿？总不能一路抱着上车吧。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2ee5c546d725fa59ecb033b27301f70dfdebe8711278165a664ec3348c5f89ef",
+    "normalized": "561d2e9c89fee2b377420fc8e129d37b79e7ae312a878a0dfa71e97f1c1df42f"
+  },
+  "yu.growth.cup.1": {
+    "say": "杯子搁这儿正好。你坐你的，我把这几个小螺丝归拢一下——上回拆相机，一颗滚到地上，师傅陪我找到天黑。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "9637beb20f7747a15c2d4053e76198d88103460c1ed7ec497aea132f3d940cbe",
+    "normalized": "0318eb0b2b3725148c91382bb69841ff6a5863f574d79de948923180450898b8"
+  },
+  "yu.sham.clock.1": {
+    "say": "收条你收着，钟我抱着。车没来，正好歇口气——这钟卸下来比我想的沉，抱着倒踏实。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2ee5c546d725fa59ecb033b27301f70dfdebe8711278165a664ec3348c5f89ef",
+    "normalized": "561d2e9c89fee2b377420fc8e129d37b79e7ae312a878a0dfa71e97f1c1df42f"
+  },
+  "yu.growth.needle.1": {
+    "say": "针筒啊……我第一反应是给阿定。小时候书包带断了，他给我缝的，针脚歪歪扭扭，一分钱没收。这针筒搁我这儿也就是个物件，到他手里，好歹算个回礼。不过你要问我为什么，我也说不太清，就是觉得该往他那儿去。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "589b8083e2c773a49714c43fe1e63e4da2de08b603e28a28aaf5a1400f0b6dc1",
+    "normalized": "902032e53a2b2d485bacb7feca473785caa393cc071949245fa6d82b9e15bb31"
+  },
+  "yu.growth.needle.2": {
+    "say": "针筒搁我这儿，一时半会儿也派不上用场。我心里倒有个人选——裁缝阿定。小时候我书包带子断了，他给我缝的，针脚比原装的还密，一分钱没收。这针筒给他，算是还个旧账，就是不知道他如今还用不用得上这种老家伙。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "589b8083e2c773a49714c43fe1e63e4da2de08b603e28a28aaf5a1400f0b6dc1",
+    "normalized": "902032e53a2b2d485bacb7feca473785caa393cc071949245fa6d82b9e15bb31"
+  },
+  "yu.frozen.map.2": {
+    "say": "标哪儿……你先别急着听我的，我倒想猜猜你会标哪。河埠头？还是闸口那截？\n\n真到我自己落笔，大概会标一个图上早没了的卖梨摊。小时候在那儿走丢过一回，后来在摊子边上等到我姐，两个人分了一只青梨。图是新的，摊早没了——标上去，倒像给它留个位置。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "3dc997d062bea7eb35e82d1f9245367c2333560ca1ac94831f9a7fc01996c463",
+    "normalized": "64774dacc39ed7f5518486c5c1d4a37a85b2f093b29f1f15c43ee3eba8065e8b"
+  },
+  "yu.growth.clock.1": {
+    "say": "钟归我了，收条你收好。车还没来——这会儿倒像白捡的一段，你想怎么打发？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.375,
+    "request": "9b2e0bbdcfaf6b1952519cbc3149b0943b940984946a1e31b66337c3fa1b645c",
+    "normalized": "561d2e9c89fee2b377420fc8e129d37b79e7ae312a878a0dfa71e97f1c1df42f"
+  },
+  "tang.frozen.clock.1": {
+    "say": "车还有一会儿，那就不急着走。钟我收着，收条你揣好——这会儿没活，坐着等就是了。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "e577889494bd8969163a37b55111e00691e46c31d9190568750adc41b8d5f7d1",
+    "normalized": "53b35decda23c3fed77e19fac7c7dbc1210b8ce3b3b85e1f97864c5910daa4ce"
+  },
+  "yu.sham.needle.2": {
+    "say": "我想给阿定。小时候书包开线，都是他缝的，一回钱没要过。这针筒搁我这儿也就是个物件，到他手里才算没白退回来——不过我得先问一句他收不收，别硬塞。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "088df477c3e81bb1cdc39802633e46f3610e66143ca9ae4e885070b0e117d4ec",
+    "normalized": "902032e53a2b2d485bacb7feca473785caa393cc071949245fa6d82b9e15bb31"
+  },
+  "tang.sham.clock.2": {
+    "say": "收条你收着，钟我抱着。车还有一会儿，正好——这钟沉，抱着倒踏实。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "e577889494bd8969163a37b55111e00691e46c31d9190568750adc41b8d5f7d1",
+    "normalized": "53b35decda23c3fed77e19fac7c7dbc1210b8ce3b3b85e1f97864c5910daa4ce"
+  }
+}

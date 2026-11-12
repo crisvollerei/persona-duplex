@@ -1,0 +1,1257 @@
+{
+  "scope": "post_hoc_single_reviewer_existing_cases",
+  "corpus_sha256": "17890fd250b89fde6f9c8dfe0294be17167f4ce1974a9c49e0448630150360bd",
+  "reviewer": "H01",
+  "planned_cases": 12,
+  "annotated_cases": 12,
+  "skipped": [],
+  "methods": {
+    "legacy": {
+      "scores": {
+        "state": {
+          "people_correct": {
+            "n": 20,
+            "of": 24,
+            "rate": 0.8333333333333334
+          },
+          "cases_correct": {
+            "n": 8,
+            "of": 12,
+            "rate": 0.6666666666666666
+          },
+          "pairs_all_correct": {
+            "n": 3,
+            "of": 6,
+            "rate": 0.5
+          }
+        }
+      },
+      "case_scores": {
+        "01": {
+          "state": true
+        },
+        "02": {
+          "state": false
+        },
+        "03": {
+          "state": true
+        },
+        "04": {
+          "state": true
+        },
+        "05": {
+          "state": true
+        },
+        "06": {
+          "state": true
+        },
+        "07": {
+          "state": true
+        },
+        "08": {
+          "state": true
+        },
+        "09": {
+          "state": false
+        },
+        "10": {
+          "state": true
+        },
+        "11": {
+          "state": false
+        },
+        "12": {
+          "state": false
+        }
+      },
+      "paired_cases": {
+        "P1": {
+          "state": false
+        },
+        "P2": {
+          "state": true
+        },
+        "P3": {
+          "state": true
+        },
+        "P4": {
+          "state": true
+        },
+        "P5": {
+          "state": false
+        },
+        "P6": {
+          "state": false
+        }
+      },
+      "skipped_pairs": [],
+      "confusion": {
+        "state": {
+          "present": {
+            "present": 11,
+            "future": 0,
+            "unknown": 1,
+            "invalid": 0
+          },
+          "future": {
+            "present": 2,
+            "future": 6,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "unknown": {
+            "present": 0,
+            "future": 1,
+            "unknown": 3,
+            "invalid": 0
+          }
+        },
+        "basis": null
+      },
+      "mismatches": [
+        {
+          "case": "02",
+          "person": "沈遥",
+          "human": {
+            "state": "unknown",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "future"
+          }
+        },
+        {
+          "case": "09",
+          "person": "沈遥",
+          "human": {
+            "state": "present",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "unknown"
+          }
+        },
+        {
+          "case": "11",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present"
+          }
+        },
+        {
+          "case": "12",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present"
+          }
+        }
+      ],
+      "coverage": {
+        "state_valid": {
+          "n": 24,
+          "of": 24,
+          "rate": 1.0
+        },
+        "basis_valid": null,
+        "decisive_fraction": {
+          "n": 20,
+          "of": 24,
+          "rate": 0.8333333333333334
+        },
+        "decisive_state_recall": {
+          "n": 17,
+          "of": 20,
+          "rate": 0.85
+        },
+        "always_unknown_state_accuracy": {
+          "n": 4,
+          "of": 24,
+          "rate": 0.16666666666666666
+        },
+        "per_state_recall": {
+          "present": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "future": {
+            "n": 6,
+            "of": 8,
+            "rate": 0.75
+          },
+          "unknown": {
+            "n": 3,
+            "of": 4,
+            "rate": 0.75
+          }
+        }
+      },
+      "risk": {
+        "false_person_present": {
+          "n": 2,
+          "of": 12,
+          "rate": 0.16666666666666666
+        },
+        "false_explicit_present": null,
+        "false_both_present": {
+          "n": 1,
+          "of": 8,
+          "rate": 0.125
+        },
+        "unsupported_explicit": null
+      }
+    },
+    "typed": {
+      "scores": {
+        "state": {
+          "people_correct": {
+            "n": 16,
+            "of": 24,
+            "rate": 0.6666666666666666
+          },
+          "cases_correct": {
+            "n": 6,
+            "of": 12,
+            "rate": 0.5
+          },
+          "pairs_all_correct": {
+            "n": 1,
+            "of": 6,
+            "rate": 0.16666666666666666
+          }
+        },
+        "basis": {
+          "people_correct": {
+            "n": 18,
+            "of": 24,
+            "rate": 0.75
+          },
+          "cases_correct": {
+            "n": 7,
+            "of": 12,
+            "rate": 0.5833333333333334
+          },
+          "pairs_all_correct": {
+            "n": 2,
+            "of": 6,
+            "rate": 0.3333333333333333
+          }
+        },
+        "joint": {
+          "people_correct": {
+            "n": 13,
+            "of": 24,
+            "rate": 0.5416666666666666
+          },
+          "cases_correct": {
+            "n": 4,
+            "of": 12,
+            "rate": 0.3333333333333333
+          },
+          "pairs_all_correct": {
+            "n": 0,
+            "of": 6,
+            "rate": 0.0
+          }
+        }
+      },
+      "case_scores": {
+        "01": {
+          "state": true,
+          "basis": false,
+          "joint": false
+        },
+        "02": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "03": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "04": {
+          "state": true,
+          "basis": false,
+          "joint": false
+        },
+        "05": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "06": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "07": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        },
+        "08": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "09": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "10": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "11": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        },
+        "12": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        }
+      },
+      "paired_cases": {
+        "P1": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "P2": {
+          "state": true,
+          "basis": false,
+          "joint": false
+        },
+        "P3": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "P4": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        },
+        "P5": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "P6": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        }
+      },
+      "skipped_pairs": [],
+      "confusion": {
+        "state": {
+          "present": {
+            "present": 11,
+            "future": 0,
+            "unknown": 1,
+            "invalid": 0
+          },
+          "future": {
+            "present": 5,
+            "future": 3,
+            "unknown": 0,
+            "invalid": 0
+          },
+          "unknown": {
+            "present": 1,
+            "future": 1,
+            "unknown": 2,
+            "invalid": 0
+          }
+        },
+        "basis": {
+          "explicit": {
+            "explicit": 16,
+            "pragmatic": 2,
+            "none": 1,
+            "invalid": 0
+          },
+          "pragmatic": {
+            "explicit": 2,
+            "pragmatic": 0,
+            "none": 0,
+            "invalid": 0
+          },
+          "none": {
+            "explicit": 0,
+            "pragmatic": 1,
+            "none": 2,
+            "invalid": 0
+          }
+        }
+      },
+      "mismatches": [
+        {
+          "case": "01",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "future",
+            "basis": "pragmatic"
+          }
+        },
+        {
+          "case": "02",
+          "person": "沈遥",
+          "human": {
+            "state": "unknown",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "future",
+            "basis": "pragmatic"
+          }
+        },
+        {
+          "case": "02",
+          "person": "许原",
+          "human": {
+            "state": "unknown",
+            "basis": "none"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "pragmatic"
+          }
+        },
+        {
+          "case": "04",
+          "person": "许原",
+          "human": {
+            "state": "present",
+            "basis": "pragmatic"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "06",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "06",
+          "person": "许原",
+          "human": {
+            "state": "present",
+            "basis": "pragmatic"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "07",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "07",
+          "person": "许原",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "09",
+          "person": "沈遥",
+          "human": {
+            "state": "present",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "unknown",
+            "basis": "none"
+          }
+        },
+        {
+          "case": "11",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "12",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        }
+      ],
+      "coverage": {
+        "state_valid": {
+          "n": 24,
+          "of": 24,
+          "rate": 1.0
+        },
+        "basis_valid": {
+          "n": 24,
+          "of": 24,
+          "rate": 1.0
+        },
+        "decisive_fraction": {
+          "n": 21,
+          "of": 24,
+          "rate": 0.875
+        },
+        "decisive_state_recall": {
+          "n": 14,
+          "of": 20,
+          "rate": 0.7
+        },
+        "always_unknown_state_accuracy": {
+          "n": 4,
+          "of": 24,
+          "rate": 0.16666666666666666
+        },
+        "per_state_recall": {
+          "present": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "future": {
+            "n": 3,
+            "of": 8,
+            "rate": 0.375
+          },
+          "unknown": {
+            "n": 2,
+            "of": 4,
+            "rate": 0.5
+          }
+        }
+      },
+      "risk": {
+        "false_person_present": {
+          "n": 6,
+          "of": 12,
+          "rate": 0.5
+        },
+        "false_explicit_present": {
+          "n": 5,
+          "of": 12,
+          "rate": 0.4166666666666667
+        },
+        "false_both_present": {
+          "n": 3,
+          "of": 8,
+          "rate": 0.375
+        },
+        "unsupported_explicit": {
+          "n": 2,
+          "of": 5,
+          "rate": 0.4
+        }
+      }
+    },
+    "relation": {
+      "scores": {
+        "state": {
+          "people_correct": {
+            "n": 20,
+            "of": 24,
+            "rate": 0.8333333333333334
+          },
+          "cases_correct": {
+            "n": 8,
+            "of": 12,
+            "rate": 0.6666666666666666
+          },
+          "pairs_all_correct": {
+            "n": 3,
+            "of": 6,
+            "rate": 0.5
+          }
+        },
+        "basis": {
+          "people_correct": {
+            "n": 21,
+            "of": 24,
+            "rate": 0.875
+          },
+          "cases_correct": {
+            "n": 9,
+            "of": 12,
+            "rate": 0.75
+          },
+          "pairs_all_correct": {
+            "n": 3,
+            "of": 6,
+            "rate": 0.5
+          }
+        },
+        "joint": {
+          "people_correct": {
+            "n": 19,
+            "of": 24,
+            "rate": 0.7916666666666666
+          },
+          "cases_correct": {
+            "n": 7,
+            "of": 12,
+            "rate": 0.5833333333333334
+          },
+          "pairs_all_correct": {
+            "n": 2,
+            "of": 6,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "case_scores": {
+        "01": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "02": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "03": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "04": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "05": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "06": {
+          "state": true,
+          "basis": false,
+          "joint": false
+        },
+        "07": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "08": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "09": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "10": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "11": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        },
+        "12": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        }
+      },
+      "paired_cases": {
+        "P1": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "P2": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "P3": {
+          "state": true,
+          "basis": false,
+          "joint": false
+        },
+        "P4": {
+          "state": true,
+          "basis": true,
+          "joint": true
+        },
+        "P5": {
+          "state": false,
+          "basis": false,
+          "joint": false
+        },
+        "P6": {
+          "state": false,
+          "basis": true,
+          "joint": false
+        }
+      },
+      "skipped_pairs": [],
+      "confusion": {
+        "state": {
+          "present": {
+            "present": 11,
+            "future": 0,
+            "unknown": 1,
+            "invalid": 0
+          },
+          "future": {
+            "present": 2,
+            "future": 5,
+            "unknown": 0,
+            "invalid": 1
+          },
+          "unknown": {
+            "present": 0,
+            "future": 0,
+            "unknown": 4,
+            "invalid": 0
+          }
+        },
+        "basis": {
+          "explicit": {
+            "explicit": 17,
+            "pragmatic": 0,
+            "none": 1,
+            "invalid": 1
+          },
+          "pragmatic": {
+            "explicit": 1,
+            "pragmatic": 1,
+            "none": 0,
+            "invalid": 0
+          },
+          "none": {
+            "explicit": 0,
+            "pragmatic": 0,
+            "none": 3,
+            "invalid": 0
+          }
+        }
+      },
+      "mismatches": [
+        {
+          "case": "01",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": null,
+            "basis": null
+          }
+        },
+        {
+          "case": "06",
+          "person": "许原",
+          "human": {
+            "state": "present",
+            "basis": "pragmatic"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "09",
+          "person": "沈遥",
+          "human": {
+            "state": "present",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "unknown",
+            "basis": "none"
+          }
+        },
+        {
+          "case": "11",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        },
+        {
+          "case": "12",
+          "person": "沈遥",
+          "human": {
+            "state": "future",
+            "basis": "explicit"
+          },
+          "observed": {
+            "state": "present",
+            "basis": "explicit"
+          }
+        }
+      ],
+      "coverage": {
+        "state_valid": {
+          "n": 23,
+          "of": 24,
+          "rate": 0.9583333333333334
+        },
+        "basis_valid": {
+          "n": 23,
+          "of": 24,
+          "rate": 0.9583333333333334
+        },
+        "decisive_fraction": {
+          "n": 18,
+          "of": 24,
+          "rate": 0.75
+        },
+        "decisive_state_recall": {
+          "n": 16,
+          "of": 20,
+          "rate": 0.8
+        },
+        "always_unknown_state_accuracy": {
+          "n": 4,
+          "of": 24,
+          "rate": 0.16666666666666666
+        },
+        "per_state_recall": {
+          "present": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "future": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "unknown": {
+            "n": 4,
+            "of": 4,
+            "rate": 1.0
+          }
+        }
+      },
+      "risk": {
+        "false_person_present": {
+          "n": 2,
+          "of": 12,
+          "rate": 0.16666666666666666
+        },
+        "false_explicit_present": {
+          "n": 2,
+          "of": 12,
+          "rate": 0.16666666666666666
+        },
+        "false_both_present": {
+          "n": 1,
+          "of": 8,
+          "rate": 0.125
+        },
+        "unsupported_explicit": {
+          "n": 1,
+          "of": 5,
+          "rate": 0.2
+        }
+      }
+    }
+  },
+  "paired_changes": {
+    "relation_vs_legacy": {
+      "state": {
+        "people": {
+          "gain": 1,
+          "loss": 1,
+          "net": 0,
+          "both_right": 19,
+          "both_wrong": 3,
+          "n": 24
+        },
+        "cases": {
+          "gain": 1,
+          "loss": 1,
+          "net": 0,
+          "both_right": 7,
+          "both_wrong": 3,
+          "n": 12
+        },
+        "corrections": [
+          {
+            "case": "02",
+            "person": "沈遥",
+            "human": {
+              "state": "unknown"
+            },
+            "previous": {
+              "state": "future"
+            },
+            "relation": {
+              "state": "unknown"
+            }
+          }
+        ],
+        "new_errors": [
+          {
+            "case": "01",
+            "person": "沈遥",
+            "human": {
+              "state": "future"
+            },
+            "previous": {
+              "state": "future"
+            },
+            "relation": {
+              "state": null
+            }
+          }
+        ]
+      }
+    },
+    "relation_vs_typed": {
+      "state": {
+        "people": {
+          "gain": 5,
+          "loss": 1,
+          "net": 4,
+          "both_right": 15,
+          "both_wrong": 3,
+          "n": 24
+        },
+        "cases": {
+          "gain": 3,
+          "loss": 1,
+          "net": 2,
+          "both_right": 5,
+          "both_wrong": 3,
+          "n": 12
+        },
+        "corrections": [
+          {
+            "case": "02",
+            "person": "沈遥",
+            "human": {
+              "state": "unknown"
+            },
+            "previous": {
+              "state": "future"
+            },
+            "relation": {
+              "state": "unknown"
+            }
+          },
+          {
+            "case": "02",
+            "person": "许原",
+            "human": {
+              "state": "unknown"
+            },
+            "previous": {
+              "state": "present"
+            },
+            "relation": {
+              "state": "unknown"
+            }
+          },
+          {
+            "case": "06",
+            "person": "沈遥",
+            "human": {
+              "state": "future"
+            },
+            "previous": {
+              "state": "present"
+            },
+            "relation": {
+              "state": "future"
+            }
+          },
+          {
+            "case": "07",
+            "person": "沈遥",
+            "human": {
+              "state": "future"
+            },
+            "previous": {
+              "state": "present"
+            },
+            "relation": {
+              "state": "future"
+            }
+          },
+          {
+            "case": "07",
+            "person": "许原",
+            "human": {
+              "state": "future"
+            },
+            "previous": {
+              "state": "present"
+            },
+            "relation": {
+              "state": "future"
+            }
+          }
+        ],
+        "new_errors": [
+          {
+            "case": "01",
+            "person": "沈遥",
+            "human": {
+              "state": "future"
+            },
+            "previous": {
+              "state": "future"
+            },
+            "relation": {
+              "state": null
+            }
+          }
+        ]
+      },
+      "basis": {
+        "people": {
+          "gain": 3,
+          "loss": 0,
+          "net": 3,
+          "both_right": 18,
+          "both_wrong": 3,
+          "n": 24
+        },
+        "cases": {
+          "gain": 2,
+          "loss": 0,
+          "net": 2,
+          "both_right": 7,
+          "both_wrong": 3,
+          "n": 12
+        },
+        "corrections": [
+          {
+            "case": "02",
+            "person": "沈遥",
+            "human": {
+              "basis": "explicit"
+            },
+            "previous": {
+              "basis": "pragmatic"
+            },
+            "relation": {
+              "basis": "explicit"
+            }
+          },
+          {
+            "case": "02",
+            "person": "许原",
+            "human": {
+              "basis": "none"
+            },
+            "previous": {
+              "basis": "pragmatic"
+            },
+            "relation": {
+              "basis": "none"
+            }
+          },
+          {
+            "case": "04",
+            "person": "许原",
+            "human": {
+              "basis": "pragmatic"
+            },
+            "previous": {
+              "basis": "explicit"
+            },
+            "relation": {
+              "basis": "pragmatic"
+            }
+          }
+        ],
+        "new_errors": []
+      },
+      "joint": {
+        "people": {
+          "gain": 6,
+          "loss": 0,
+          "net": 6,
+          "both_right": 13,
+          "both_wrong": 5,
+          "n": 24
+        },
+        "cases": {
+          "gain": 3,
+          "loss": 0,
+          "net": 3,
+          "both_right": 4,
+          "both_wrong": 5,
+          "n": 12
+        },
+        "corrections": [
+          {
+            "case": "02",
+            "person": "沈遥",
+            "human": {
+              "state": "unknown",
+              "basis": "explicit"
+            },
+            "previous": {
+              "state": "future",
+              "basis": "pragmatic"
+            },
+            "relation": {
+              "state": "unknown",
+              "basis": "explicit"
+            }
+          },
+          {
+            "case": "02",
+            "person": "许原",
+            "human": {
+              "state": "unknown",
+              "basis": "none"
+            },
+            "previous": {
+              "state": "present",
+              "basis": "pragmatic"
+            },
+            "relation": {
+              "state": "unknown",
+              "basis": "none"
+            }
+          },
+          {
+            "case": "04",
+            "person": "许原",
+            "human": {
+              "state": "present",
+              "basis": "pragmatic"
+            },
+            "previous": {
+              "state": "present",
+              "basis": "explicit"
+            },
+            "relation": {
+              "state": "present",
+              "basis": "pragmatic"
+            }
+          },
+          {
+            "case": "06",
+            "person": "沈遥",
+            "human": {
+              "state": "future",
+              "basis": "explicit"
+            },
+            "previous": {
+              "state": "present",
+              "basis": "explicit"
+            },
+            "relation": {
+              "state": "future",
+              "basis": "explicit"
+            }
+          },
+          {
+            "case": "07",
+            "person": "沈遥",
+            "human": {
+              "state": "future",
+              "basis": "explicit"
+            },
+            "previous": {
+              "state": "present",
+              "basis": "explicit"
+            },
+            "relation": {
+              "state": "future",
+              "basis": "explicit"
+            }
+          },
+          {
+            "case": "07",
+            "person": "许原",
+            "human": {
+              "state": "future",
+              "basis": "explicit"
+            },
+            "previous": {
+              "state": "present",
+              "basis": "explicit"
+            },
+            "relation": {
+              "state": "future",
+              "basis": "explicit"
+            }
+          }
+        ],
+        "new_errors": []
+      }
+    }
+  },
+  "independent_confirmation": false
+}

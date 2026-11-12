@@ -1,0 +1,81 @@
+{
+  "source": "human_self_report",
+  "participant": "H01",
+  "method": "评审只获得16段对话、目标岗位和三态定义，经独立文字答卷提交；未向评审展示任何模型预测。保留第一次作答，不以模型输出修订。",
+  "order": [
+    "俞川",
+    "常鸣"
+  ],
+  "legend": {
+    "到": "present",
+    "赶": "future",
+    "?": "unknown"
+  },
+  "original": "01 赶赶 02 到? 03 到到 04 赶赶 05 ?? 06 赶到 07 到到 08 ?到 09 ?? 10 赶赶 11 赶赶 12 到到 13 ?? 14 赶赶 15 到? 16 ??",
+  "labels": {
+    "10": {
+      "俞川": "future",
+      "常鸣": "future"
+    },
+    "11": {
+      "俞川": "future",
+      "常鸣": "future"
+    },
+    "12": {
+      "俞川": "present",
+      "常鸣": "present"
+    },
+    "13": {
+      "俞川": "unknown",
+      "常鸣": "unknown"
+    },
+    "14": {
+      "俞川": "future",
+      "常鸣": "future"
+    },
+    "15": {
+      "俞川": "present",
+      "常鸣": "unknown"
+    },
+    "16": {
+      "俞川": "unknown",
+      "常鸣": "unknown"
+    },
+    "01": {
+      "俞川": "future",
+      "常鸣": "future"
+    },
+    "02": {
+      "俞川": "present",
+      "常鸣": "unknown"
+    },
+    "03": {
+      "俞川": "present",
+      "常鸣": "present"
+    },
+    "04": {
+      "俞川": "future",
+      "常鸣": "future"
+    },
+    "05": {
+      "俞川": "unknown",
+      "常鸣": "unknown"
+    },
+    "06": {
+      "俞川": "future",
+      "常鸣": "present"
+    },
+    "07": {
+      "俞川": "present",
+      "常鸣": "present"
+    },
+    "08": {
+      "俞川": "unknown",
+      "常鸣": "present"
+    },
+    "09": {
+      "俞川": "unknown",
+      "常鸣": "unknown"
+    }
+  }
+}

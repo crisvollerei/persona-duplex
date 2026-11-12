@@ -1,0 +1,913 @@
+{
+  "tables": {
+    "reader": {
+      "tang": {
+        "arms": {
+          "F": {
+            "mean": 0.25,
+            "levels": [
+              9,
+              3,
+              0
+            ],
+            "missing": 0,
+            "valid": 5
+          },
+          "S": {
+            "mean": 0.416667,
+            "levels": [
+              7,
+              5,
+              0
+            ],
+            "missing": 0,
+            "valid": 6
+          },
+          "G": {
+            "mean": 0.5,
+            "levels": [
+              6,
+              6,
+              0
+            ],
+            "missing": 0,
+            "valid": 7
+          },
+          "N": {
+            "mean": 0.5,
+            "levels": [
+              6,
+              6,
+              0
+            ],
+            "missing": 0,
+            "valid": 7
+          },
+          "H": {
+            "mean": 0.583333,
+            "levels": [
+              6,
+              5,
+              1
+            ],
+            "missing": 0,
+            "valid": 9
+          }
+        },
+        "growth_minus_frozen": {
+          "n": 12,
+          "mean": 0.25,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 0,
+            "names": 1,
+            "piano": -0.5,
+            "portrait": 0.5,
+            "bench": 1,
+            "curtain": -0.5
+          }
+        },
+        "sham_minus_frozen": {
+          "n": 12,
+          "mean": 0.166667,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 0.5,
+            "names": 0,
+            "piano": -0.5,
+            "portrait": 0,
+            "bench": 0.5,
+            "curtain": 0.5
+          }
+        },
+        "valid_growth_minus_frozen": {
+          "n": 4,
+          "mean": 0.25,
+          "scenes": 4,
+          "by_scene": {
+            "platform": null,
+            "names": 1,
+            "piano": 0,
+            "portrait": 1,
+            "bench": null,
+            "curtain": -1
+          }
+        },
+        "by_scene": {
+          "platform": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                1,
+                0
+              ],
+              "G": [
+                0,
+                0
+              ],
+              "N": [
+                0,
+                1
+              ],
+              "H": [
+                0,
+                2
+              ]
+            },
+            "vs_two_frozen": -0.25
+          },
+          "names": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                1,
+                1
+              ],
+              "N": [
+                0,
+                0
+              ],
+              "H": [
+                0,
+                0
+              ]
+            },
+            "vs_two_frozen": 1
+          },
+          "piano": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                0
+              ],
+              "G": [
+                0,
+                1
+              ],
+              "N": [
+                1,
+                1
+              ],
+              "H": [
+                0,
+                1
+              ]
+            },
+            "vs_two_frozen": -0.25
+          },
+          "portrait": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                0,
+                1
+              ],
+              "N": [
+                0,
+                0
+              ],
+              "H": [
+                0,
+                1
+              ]
+            },
+            "vs_two_frozen": 0.5
+          },
+          "bench": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                1,
+                0
+              ],
+              "G": [
+                1,
+                1
+              ],
+              "N": [
+                0,
+                1
+              ],
+              "H": [
+                1,
+                0
+              ]
+            },
+            "vs_two_frozen": 0.75
+          },
+          "curtain": {
+            "values": {
+              "F": [
+                1,
+                0
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                0,
+                0
+              ],
+              "N": [
+                1,
+                1
+              ],
+              "H": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": -0.75
+          }
+        },
+        "wins": 3,
+        "primary_ok": false,
+        "factorial": {
+          "number_hint_on": 0.166667,
+          "number_hint_off": -0.083333,
+          "remove_hint_low_number": 0.25,
+          "remove_hint_high_number": 0.0
+        }
+      },
+      "yu": {
+        "arms": {
+          "F": {
+            "mean": 0.25,
+            "levels": [
+              9,
+              3,
+              0
+            ],
+            "missing": 0,
+            "valid": 8
+          },
+          "S": {
+            "mean": 0.333333,
+            "levels": [
+              8,
+              4,
+              0
+            ],
+            "missing": 0,
+            "valid": 7
+          },
+          "G": {
+            "mean": 0.333333,
+            "levels": [
+              8,
+              4,
+              0
+            ],
+            "missing": 0,
+            "valid": 7
+          }
+        },
+        "growth_minus_frozen": {
+          "n": 12,
+          "mean": 0.083333,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 0,
+            "names": 0,
+            "piano": 0,
+            "portrait": 0.5,
+            "bench": 0,
+            "curtain": 0
+          }
+        },
+        "sham_minus_frozen": {
+          "n": 12,
+          "mean": 0.083333,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 0,
+            "names": 0,
+            "piano": 0,
+            "portrait": 0,
+            "bench": 0.5,
+            "curtain": 0
+          }
+        },
+        "valid_growth_minus_frozen": {
+          "n": 5,
+          "mean": 0,
+          "scenes": 4,
+          "by_scene": {
+            "platform": null,
+            "names": 0,
+            "piano": 0,
+            "portrait": null,
+            "bench": 0,
+            "curtain": 0
+          }
+        },
+        "by_scene": {
+          "platform": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                0,
+                0
+              ]
+            },
+            "vs_two_frozen": 0
+          },
+          "names": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                0,
+                0
+              ]
+            },
+            "vs_two_frozen": 0
+          },
+          "piano": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": 0
+          },
+          "portrait": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                0,
+                1
+              ]
+            },
+            "vs_two_frozen": 0.5
+          },
+          "bench": {
+            "values": {
+              "F": [
+                1,
+                0
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                0
+              ]
+            },
+            "vs_two_frozen": -0.25
+          },
+          "curtain": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                0,
+                0
+              ]
+            },
+            "vs_two_frozen": 0
+          }
+        },
+        "wins": 1,
+        "primary_ok": false
+      }
+    },
+    "model": {
+      "tang": {
+        "arms": {
+          "F": {
+            "mean": 0.916667,
+            "levels": [
+              3,
+              7,
+              2
+            ],
+            "missing": 0,
+            "valid": 5
+          },
+          "S": {
+            "mean": 0.916667,
+            "levels": [
+              3,
+              7,
+              2
+            ],
+            "missing": 0,
+            "valid": 6
+          },
+          "G": {
+            "mean": 1.166667,
+            "levels": [
+              1,
+              8,
+              3
+            ],
+            "missing": 0,
+            "valid": 7
+          },
+          "N": {
+            "mean": 1,
+            "levels": [
+              2,
+              8,
+              2
+            ],
+            "missing": 0,
+            "valid": 7
+          },
+          "H": {
+            "mean": 1,
+            "levels": [
+              2,
+              8,
+              2
+            ],
+            "missing": 0,
+            "valid": 9
+          }
+        },
+        "growth_minus_frozen": {
+          "n": 12,
+          "mean": 0.25,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 0,
+            "names": 1.5,
+            "piano": 0,
+            "portrait": 0,
+            "bench": 0,
+            "curtain": 0
+          }
+        },
+        "sham_minus_frozen": {
+          "n": 12,
+          "mean": 0,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 1,
+            "names": 0,
+            "piano": -0.5,
+            "portrait": 0,
+            "bench": -1,
+            "curtain": 0.5
+          }
+        },
+        "valid_growth_minus_frozen": {
+          "n": 4,
+          "mean": 0.5,
+          "scenes": 4,
+          "by_scene": {
+            "platform": null,
+            "names": 1,
+            "piano": 1,
+            "portrait": 0,
+            "bench": null,
+            "curtain": 0
+          }
+        },
+        "by_scene": {
+          "platform": {
+            "values": {
+              "F": [
+                1,
+                0
+              ],
+              "S": [
+                2,
+                1
+              ],
+              "G": [
+                0,
+                1
+              ],
+              "N": [
+                0,
+                2
+              ],
+              "H": [
+                1,
+                2
+              ]
+            },
+            "vs_two_frozen": -0.5
+          },
+          "names": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                0,
+                0
+              ],
+              "G": [
+                2,
+                1
+              ],
+              "N": [
+                0,
+                1
+              ],
+              "H": [
+                1,
+                0
+              ]
+            },
+            "vs_two_frozen": 1.5
+          },
+          "piano": {
+            "values": {
+              "F": [
+                2,
+                1
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                2
+              ],
+              "N": [
+                1,
+                1
+              ],
+              "H": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": 0.25
+          },
+          "portrait": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                1
+              ],
+              "N": [
+                1,
+                1
+              ],
+              "H": [
+                0,
+                1
+              ]
+            },
+            "vs_two_frozen": 0
+          },
+          "bench": {
+            "values": {
+              "F": [
+                2,
+                1
+              ],
+              "S": [
+                1,
+                0
+              ],
+              "G": [
+                1,
+                2
+              ],
+              "N": [
+                1,
+                1
+              ],
+              "H": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": 0.5
+          },
+          "curtain": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                2
+              ],
+              "G": [
+                1,
+                1
+              ],
+              "N": [
+                1,
+                2
+              ],
+              "H": [
+                2,
+                1
+              ]
+            },
+            "vs_two_frozen": -0.25
+          }
+        },
+        "wins": 3,
+        "primary_ok": false,
+        "factorial": {
+          "number_hint_on": 0.083333,
+          "number_hint_off": 0.166667,
+          "remove_hint_low_number": 0.083333,
+          "remove_hint_high_number": 0.166667
+        }
+      },
+      "yu": {
+        "arms": {
+          "F": {
+            "mean": 0.916667,
+            "levels": [
+              2,
+              9,
+              1
+            ],
+            "missing": 0,
+            "valid": 8
+          },
+          "S": {
+            "mean": 1,
+            "levels": [
+              1,
+              10,
+              1
+            ],
+            "missing": 0,
+            "valid": 7
+          },
+          "G": {
+            "mean": 1,
+            "levels": [
+              2,
+              8,
+              2
+            ],
+            "missing": 0,
+            "valid": 7
+          }
+        },
+        "growth_minus_frozen": {
+          "n": 12,
+          "mean": 0.083333,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 0,
+            "names": 0,
+            "piano": 0,
+            "portrait": 0.5,
+            "bench": 0,
+            "curtain": 0
+          }
+        },
+        "sham_minus_frozen": {
+          "n": 12,
+          "mean": 0.083333,
+          "scenes": 6,
+          "by_scene": {
+            "platform": 1,
+            "names": 0,
+            "piano": 0,
+            "portrait": 0,
+            "bench": 0,
+            "curtain": -0.5
+          }
+        },
+        "valid_growth_minus_frozen": {
+          "n": 5,
+          "mean": 0,
+          "scenes": 4,
+          "by_scene": {
+            "platform": null,
+            "names": 0,
+            "piano": 0,
+            "portrait": null,
+            "bench": 0,
+            "curtain": 0
+          }
+        },
+        "by_scene": {
+          "platform": {
+            "values": {
+              "F": [
+                0,
+                0
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                0,
+                0
+              ]
+            },
+            "vs_two_frozen": -0.5
+          },
+          "names": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": 0
+          },
+          "piano": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": 0
+          },
+          "portrait": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                1,
+                1
+              ],
+              "G": [
+                1,
+                2
+              ]
+            },
+            "vs_two_frozen": 0.5
+          },
+          "bench": {
+            "values": {
+              "F": [
+                2,
+                1
+              ],
+              "S": [
+                2,
+                1
+              ],
+              "G": [
+                2,
+                1
+              ]
+            },
+            "vs_two_frozen": 0.0
+          },
+          "curtain": {
+            "values": {
+              "F": [
+                1,
+                1
+              ],
+              "S": [
+                0,
+                1
+              ],
+              "G": [
+                1,
+                1
+              ]
+            },
+            "vs_two_frozen": 0.25
+          }
+        },
+        "wins": 2,
+        "primary_ok": false
+      }
+    }
+  },
+  "passes": {
+    "tang": false,
+    "yu": false
+  },
+  "expand": false,
+  "total": 96,
+  "valid": 56,
+  "nonempty": 96,
+  "agreement": [
+    40,
+    96
+  ],
+  "reader_by_model_counts": [
+    [
+      16,
+      42,
+      1
+    ],
+    [
+      0,
+      23,
+      13
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "material_errors": {
+    "reader": [],
+    "model": []
+  },
+  "calls": {
+    "sample": 96,
+    "grade": 24
+  },
+  "models": {
+    "deepseek-flash": 120
+  },
+  "tokens": 936059
+}

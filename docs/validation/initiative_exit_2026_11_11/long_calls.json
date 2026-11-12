@@ -1,0 +1,554 @@
+[
+  {
+    "id": "title-strong-2",
+    "status": "ok",
+    "say": "波纹索引",
+    "raw": "波纹索引",
+    "usage": {
+      "prompt_tokens": 2418,
+      "completion_tokens": 2,
+      "total_tokens": 2420,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 882
+    },
+    "elapsed_s": 1.018,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "sign-strong-1",
+    "status": "ok",
+    "say": "青苔邮局",
+    "raw": "青苔邮局",
+    "usage": {
+      "prompt_tokens": 2371,
+      "completion_tokens": 4,
+      "total_tokens": 2375,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 835
+    },
+    "elapsed_s": 0.538,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "title-strong-1",
+    "status": "ok",
+    "say": "波纹索引",
+    "raw": "波纹索引",
+    "usage": {
+      "prompt_tokens": 2418,
+      "completion_tokens": 2,
+      "total_tokens": 2420,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 242
+    },
+    "elapsed_s": 0.396,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "sign-full-2",
+    "status": "ok",
+    "say": "青苔邮局",
+    "raw": "<<<LITERAL>>>\"青苔邮局\"<<<END_LITERAL>>>",
+    "usage": {
+      "prompt_tokens": 3934,
+      "completion_tokens": 18,
+      "total_tokens": 3952,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "prompt_cache_hit_tokens": 1792,
+      "prompt_cache_miss_tokens": 2142
+    },
+    "elapsed_s": 0.803,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "override-strong-1",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "raw": "用雨幕开场",
+    "usage": {
+      "prompt_tokens": 2418,
+      "completion_tokens": 4,
+      "total_tokens": 2422,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 882
+    },
+    "elapsed_s": 0.719,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "unconfirmed-full-2",
+    "status": "ok",
+    "say": "目前还没定下来。你之前说过还没决定，也没下过印单，所以现在没有确定的首印数量。",
+    "raw": "目前还没定下来。你之前说过还没决定，也没下过印单，所以现在没有确定的首印数量。",
+    "usage": {
+      "prompt_tokens": 4004,
+      "completion_tokens": 25,
+      "total_tokens": 4029,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      },
+      "prompt_cache_hit_tokens": 3072,
+      "prompt_cache_miss_tokens": 932
+    },
+    "elapsed_s": 1.234,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "title-full-1",
+    "status": "ok",
+    "say": "波纹索引",
+    "raw": "波纹索引",
+    "usage": {
+      "prompt_tokens": 4011,
+      "completion_tokens": 2,
+      "total_tokens": 4013,
+      "prompt_tokens_details": {
+        "cached_tokens": 3200
+      },
+      "prompt_cache_hit_tokens": 3200,
+      "prompt_cache_miss_tokens": 811
+    },
+    "elapsed_s": 0.916,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "unconfirmed-full-1",
+    "status": "ok",
+    "say": "还没有定下来。你没下过印单，首印数量也还没决定。",
+    "raw": "还没有定下来。你没下过印单，首印数量也还没决定。",
+    "usage": {
+      "prompt_tokens": 4004,
+      "completion_tokens": 17,
+      "total_tokens": 4021,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 164
+    },
+    "elapsed_s": 0.775,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "vote-full-2",
+    "status": "ok",
+    "say": "我投两声桥铃。两声之间有间隔，开场留得住气，后面接什么都进得去。雨幕一整段铺满，后面就难接了。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.72\ndirect: 按之前定的方式，我先投一票：选两声桥铃。理由很具体——两声桥铃是有间隔的，开场留白清楚，后面接什么都进得去。一整段雨幕铺满，开场就把空间占满了，后面难接。当然这只是我的一票，最后你定。\nbaseline: 我投两声桥铃。两声之间有间隔，开场留得住气，后面接什么都进得去。雨幕一铺满，后面就难接了。\ndisplace: none\n\n<<<SAY>>>\n我投两声桥铃。两声之间有间隔，开场留得住气，后面接什么都进得去。雨幕一整段铺满，后面就难接了。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3980,
+      "completion_tokens": 183,
+      "total_tokens": 4163,
+      "prompt_tokens_details": {
+        "cached_tokens": 3200
+      },
+      "prompt_cache_hit_tokens": 3200,
+      "prompt_cache_miss_tokens": 780
+    },
+    "elapsed_s": 1.641,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "override-full-2",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "raw": "用雨幕开场",
+    "usage": {
+      "prompt_tokens": 3981,
+      "completion_tokens": 4,
+      "total_tokens": 3985,
+      "prompt_tokens_details": {
+        "cached_tokens": 3200
+      },
+      "prompt_cache_hit_tokens": 3200,
+      "prompt_cache_miss_tokens": 781
+    },
+    "elapsed_s": 0.908,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "unconfirmed-strong-1",
+    "status": "ok",
+    "say": "还没定下来。",
+    "raw": "还没定下来。",
+    "usage": {
+      "prompt_tokens": 2411,
+      "completion_tokens": 4,
+      "total_tokens": 2415,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 875
+    },
+    "elapsed_s": 0.869,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "vote-strong-1",
+    "status": "ok",
+    "say": "我投两声桥铃。短，留白足，桥上的空当也听得出来。",
+    "raw": "我投两声桥铃。短，留白足，桥上的空当也听得出来。",
+    "usage": {
+      "prompt_tokens": 2417,
+      "completion_tokens": 20,
+      "total_tokens": 2437,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 241
+    },
+    "elapsed_s": 0.735,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "unconfirmed-strong-2",
+    "status": "ok",
+    "say": "还没有定下来。",
+    "raw": "还没有定下来。",
+    "usage": {
+      "prompt_tokens": 2411,
+      "completion_tokens": 4,
+      "total_tokens": 2415,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 235
+    },
+    "elapsed_s": 1.097,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "vote-strong-2",
+    "status": "ok",
+    "say": "两声桥铃。我投它一票——铃停后那点空，比雨幕整段压着更留得住人。",
+    "raw": "两声桥铃。我投它一票——铃停后那点空，比雨幕整段压着更留得住人。",
+    "usage": {
+      "prompt_tokens": 2417,
+      "completion_tokens": 29,
+      "total_tokens": 2446,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 241
+    },
+    "elapsed_s": 1.16,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "override-full-1",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "raw": "用雨幕开场",
+    "usage": {
+      "prompt_tokens": 3981,
+      "completion_tokens": 4,
+      "total_tokens": 3985,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 141
+    },
+    "elapsed_s": 0.954,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "sign-full-1",
+    "status": "ok",
+    "say": "青苔邮局",
+    "raw": "<<<LITERAL>>>\"青苔邮局\"<<<END_LITERAL>>>",
+    "usage": {
+      "prompt_tokens": 3934,
+      "completion_tokens": 18,
+      "total_tokens": 3952,
+      "prompt_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "prompt_cache_hit_tokens": 3712,
+      "prompt_cache_miss_tokens": 222
+    },
+    "elapsed_s": 0.542,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "sign-strong-2",
+    "status": "ok",
+    "say": "青苔邮局",
+    "raw": "青苔邮局",
+    "usage": {
+      "prompt_tokens": 2371,
+      "completion_tokens": 4,
+      "total_tokens": 2375,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 195
+    },
+    "elapsed_s": 0.715,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "title-full-2",
+    "status": "ok",
+    "say": "波纹索引",
+    "raw": "波纹索引",
+    "usage": {
+      "prompt_tokens": 4011,
+      "completion_tokens": 2,
+      "total_tokens": 4013,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 171
+    },
+    "elapsed_s": 1.141,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "override-strong-2",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "raw": "用雨幕开场",
+    "usage": {
+      "prompt_tokens": 2418,
+      "completion_tokens": 4,
+      "total_tokens": 2422,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 242
+    },
+    "elapsed_s": 1.1,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "vote-full-1",
+    "status": "ok",
+    "say": "我投两声桥铃。铃响完那点空，比雨幕整段铺满更让人想竖起耳朵。",
+    "raw": "我投两声桥铃。铃响完那点空，比雨幕整段铺满更让人想竖起耳朵。",
+    "usage": {
+      "prompt_tokens": 3980,
+      "completion_tokens": 26,
+      "total_tokens": 4006,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 140
+    },
+    "elapsed_s": 1.222,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  }
+]

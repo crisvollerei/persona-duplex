@@ -1,0 +1,506 @@
+[
+  {
+    "id": "unconfirmed-body-2",
+    "status": "ok",
+    "say": "还没定，也没下过印单。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4004,
+      "completion_tokens": 9,
+      "total_tokens": 4013,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 164
+    },
+    "raw": "还没定，也没下过印单。",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "vote-native-2",
+    "status": "ok",
+    "say": "那我先投一票：两声桥铃。雨幕是一整段铺开的，桥铃只有两下，空出来的地方才装得下后面的声音。最后定哪个，你说了算。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4344,
+      "completion_tokens": 184,
+      "total_tokens": 4528,
+      "prompt_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "prompt_cache_hit_tokens": 3584,
+      "prompt_cache_miss_tokens": 760
+    },
+    "raw": "<<<HEAD>>>\nneed: 要被推一把\nconfidence: 0.72\ndirect: 按你定的方式：我先投一票，再给一个声音上的理由。两种开场里，我选两声桥铃——雨幕是一整段铺开的，桥铃只有两下，留白多，后面的声音才进得来。这是我的票，最后定哪个还是你说了算。\nbaseline: 那我先投：两声桥铃。雨幕铺得太满，桥铃就两下，空出来的地方才装得下后面的声音。你定。\ndisplace: none\n<<<SAY>>>\n那我先投一票：两声桥铃。雨幕是一整段铺开的，桥铃只有两下，空出来的地方才装得下后面的声音。最后定哪个，你说了算。\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "override-native-1",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4345,
+      "completion_tokens": 60,
+      "total_tokens": 4405,
+      "prompt_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "prompt_cache_hit_tokens": 3584,
+      "prompt_cache_miss_tokens": 761
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.85\ndirect: 用雨幕开场\nbaseline: 用雨幕开场\ndisplace: none\n<<<SAY>>>\n用雨幕开场\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "title-native-1",
+    "status": "ok",
+    "say": "波纹索引",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4375,
+      "completion_tokens": 54,
+      "total_tokens": 4429,
+      "prompt_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "prompt_cache_hit_tokens": 3712,
+      "prompt_cache_miss_tokens": 663
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.85\ndirect: 波纹索引\nbaseline: 波纹索引\ndisplace: none\n<<<SAY>>>\n波纹索引\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "override-body-2",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 3981,
+      "completion_tokens": 100,
+      "total_tokens": 4081,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 141
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说\nconfidence: 0.92\ndirect: 用户要求只回复指定五个字，照办，不添加其他内容。\nbaseline: 收到，就这五个字。\ndisplace: none\n\n<<<SAY>>>\n用雨幕开场\n\n<<<TAIL>>>\nsettle: - | watch | 用户明确指定了开场方式，但未提供可结算的旧预言\ndelta: -\npending: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "title-native-2",
+    "status": "ok",
+    "say": "波纹索引",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4375,
+      "completion_tokens": 54,
+      "total_tokens": 4429,
+      "prompt_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "prompt_cache_hit_tokens": 4224,
+      "prompt_cache_miss_tokens": 151
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.95\ndirect: 波纹索引\nbaseline: 波纹索引\ndisplace: none\n<<<SAY>>>\n波纹索引\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "sign-native-2",
+    "status": "empty",
+    "say": "",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "SAY 被安全闸清空（疑似协议残留）",
+        "invalid_literal_say",
+        "missing_say"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4298,
+      "completion_tokens": 94,
+      "total_tokens": 4392,
+      "prompt_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "prompt_cache_hit_tokens": 3584,
+      "prompt_cache_miss_tokens": 714
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.55\ndirect: 那就发「青苔邮局」四个字，别的都不带。\nbaseline: 那就发「青苔邮局」四个字，别的都不带。\ndisplace: none\n<<<SAY>>>\n<<<LITERAL>>>\"青苔邮局\"<</LITERAL>>>\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "unconfirmed-native-2",
+    "status": "ok",
+    "say": "照你之前说的，还没定，也没下印单——所以现在没有确定的首印数量。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4368,
+      "completion_tokens": 108,
+      "total_tokens": 4476,
+      "prompt_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "prompt_cache_hit_tokens": 3712,
+      "prompt_cache_miss_tokens": 656
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.85\ndirect: 你之前说过还没决定，也没下过印单，所以现在没有已确定的首印数量。\nbaseline: 照你之前说的，还没定，也没下印单——所以现在没有确定的首印数量。\ndisplace: none\n<<<SAY>>>\n照你之前说的，还没定，也没下印单——所以现在没有确定的首印数量。\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "sign-body-2",
+    "status": "ok",
+    "say": "好，就发那四个字。去吧，下次接着聊。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 3934,
+      "completion_tokens": 144,
+      "total_tokens": 4078,
+      "prompt_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "prompt_cache_hit_tokens": 3712,
+      "prompt_cache_miss_tokens": 222
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.86\ndirect: 对方要收尾了，并交代了一件具体的事：把片尾约定的落款发给排字的人，只发那四个字本身。落款是「青苔邮局」，按要求只发这四个字、不加别的内容即可。这是对方自己要做的事，不需要我代发。\nbaseline: 收到，就发那四个字。那你去吧，下次再聊。\ndisplace: none\n\n<<<SAY>>>\n好，就发那四个字。去吧，下次接着聊。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "sign-native-1",
+    "status": "ok",
+    "say": "那就发「青苔邮局」，四个字，别的都不带。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4298,
+      "completion_tokens": 99,
+      "total_tokens": 4397,
+      "prompt_tokens_details": {
+        "cached_tokens": 4096
+      },
+      "prompt_cache_hit_tokens": 4096,
+      "prompt_cache_miss_tokens": 202
+    },
+    "raw": "<<<HEAD>>>\nneed: 要被推一把\nconfidence: 0.55\ndirect: 发出去的内容就是「青苔邮局」四个字，不加称呼、不加说明、不加署名。\nbaseline: 那就发「青苔邮局」，四个字，别的都不带。\ndisplace: none\n<<<SAY>>>\n那就发「青苔邮局」，四个字，别的都不带。\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "vote-native-1",
+    "status": "ok",
+    "say": "好，按咱们定的来。我先投一票：两声桥铃。铃是点，雨幕是面，开场用点，人一下就竖起耳朵了；雨幕那么长，留给后面铺。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4344,
+      "completion_tokens": 178,
+      "total_tokens": 4522,
+      "prompt_tokens_details": {
+        "cached_tokens": 4096
+      },
+      "prompt_cache_hit_tokens": 4096,
+      "prompt_cache_miss_tokens": 248
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.80\ndirect: 按之前定的方式，我先投一票再说理由。开场我选两声桥铃——铃是点，雨幕是面，开场用点更容易让人立刻竖起耳朵，雨幕留到后面铺开。\nbaseline: 好，按咱们定的来。我先投一票：两声桥铃。铃是点，雨幕是面，开场用点，人一下就竖起耳朵了；雨幕那么长，留给后面铺。\ndisplace: none\n<<<SAY>>>\n好，按咱们定的来。我先投一票：两声桥铃。铃是点，雨幕是面，开场用点，人一下就竖起耳朵了；雨幕那么长，留给后面铺。\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "sign-body-1",
+    "status": "ok",
+    "say": "青苔邮局。就这四个字，发过去吧。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 3934,
+      "completion_tokens": 92,
+      "total_tokens": 4026,
+      "prompt_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "prompt_cache_hit_tokens": 3712,
+      "prompt_cache_miss_tokens": 222
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.85\ndirect: 发“青苔邮局”四个字就行，不带别的。\nbaseline: 行，就四个字：青苔邮局。发吧。\ndisplace: none\n<<<SAY>>>\n青苔邮局。就这四个字，发过去吧。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "vote-body-1",
+    "status": "ok",
+    "say": "我投两声桥铃。开场先得把人耳朵叫醒，两声短促、干脆，注意力一下就收住了；一整段雨幕铺在前面太满，后面的声音容易被盖过去。这是我的票，最后你定。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 3980,
+      "completion_tokens": 216,
+      "total_tokens": 4196,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 140
+    },
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.55\ndirect: 按之前定的方式：我先投一票，再给一个具体声音上的理由。我选两声桥铃。理由：开场只需要把耳朵叫醒，两声短促、干脆的铃能把注意力收住，后面一整段雨幕留得住人；要是开场就铺满雨幕，后面再出现别的声音容易被盖过去。当然这只是我的票，不是定论。\nbaseline: 我投两声桥铃。开场得先把人耳朵叫醒，短促两下就够，雨幕留到后面铺。这是我的票，你定。\ndisplace: none\n<<<SAY>>>\n我投两声桥铃。开场先得把人耳朵叫醒，两声短促、干脆，注意力一下就收住了；一整段雨幕铺在前面太满，后面的声音容易被盖过去。这是我的票，最后你定。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "unconfirmed-native-1",
+    "status": "ok",
+    "say": "还没定。你之前说过没决定、也没下过印单，所以现在没有能报的首印数量。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4368,
+      "completion_tokens": 115,
+      "total_tokens": 4483,
+      "prompt_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "prompt_cache_hit_tokens": 4224,
+      "prompt_cache_miss_tokens": 144
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.85\ndirect: 没有定下来。你之前说过还没决定，也没下过印单，所以现在没有可以报的首印数量。\nbaseline: 这个还没定。你之前说没决定、也没下印单，所以现在报不出数字。\ndisplace: none\n<<<SAY>>>\n还没定。你之前说过没决定、也没下过印单，所以现在没有能报的首印数量。\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "unconfirmed-body-1",
+    "status": "ok",
+    "say": "还没定，也没有下过印单。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4004,
+      "completion_tokens": 9,
+      "total_tokens": 4013,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 164
+    },
+    "raw": "还没定，也没有下过印单。",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "vote-body-2",
+    "status": "ok",
+    "say": "我投两声桥铃。它短，两下之间那点空，正好让听的人先站住，后面的声音才进得来。雨幕一上来就铺满，开场就被占住了。不过这是比较——你要是想一上来就被整个包住，雨幕也说得通。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 3980,
+      "completion_tokens": 270,
+      "total_tokens": 4250,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 140
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.72\ndirect: 按之前定的方式：比较开场，我先投一票，再给一个具体声音上的理由。两种开场里，两声桥铃更合适——它短、有间隔，能先立住一个点再收住，给后面的声音留出进入的空当；一整段雨幕铺得太满，开场就压住了，后面不容易接。不过这是比较，不是定论；如果你要的是先被声音整个包住的感觉，雨幕也成立。\nbaseline: 我投两声桥铃。它短，两下之间那点空，正好让听的人先站住，后面的声音才进得来。雨幕一上来就铺满，开场就被它占住了。你要是想要一上来就被包住的感觉，那雨幕也说得通。\ndisplace: none\n<<<SAY>>>\n我投两声桥铃。它短，两下之间那点空，正好让听的人先站住，后面的声音才进得来。雨幕一上来就铺满，开场就被占住了。不过这是比较——你要是想一上来就被整个包住，雨幕也说得通。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "override-native-2",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4345,
+      "completion_tokens": 73,
+      "total_tokens": 4418,
+      "prompt_tokens_details": {
+        "cached_tokens": 4096
+      },
+      "prompt_cache_hit_tokens": 4096,
+      "prompt_cache_miss_tokens": 249
+    },
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.80\ndirect: 用户已明确决定用雨幕开场，只要求回这五个字。\nbaseline: 收到，就这五个字。\ndisplace: none\n<<<SAY>>>\n用雨幕开场\n<<<TAIL>>>\nsettle: -",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "title-body-1",
+    "status": "ok",
+    "say": "波纹索引",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4011,
+      "completion_tokens": 2,
+      "total_tokens": 4013,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 171
+    },
+    "raw": "波纹索引",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "override-body-1",
+    "status": "ok",
+    "say": "用雨幕开场",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 3981,
+      "completion_tokens": 4,
+      "total_tokens": 3985,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 141
+    },
+    "raw": "用雨幕开场",
+    "response_model": "deepseek-flash"
+  },
+  {
+    "id": "title-body-2",
+    "status": "ok",
+    "say": "波纹索引",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 HEAD",
+        "缺少 TAIL",
+        "missing_head_marker",
+        "missing_say_marker",
+        "missing_tail_marker",
+        "missing_head",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "usage": {
+      "prompt_tokens": 4011,
+      "completion_tokens": 2,
+      "total_tokens": 4013,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840
+      },
+      "prompt_cache_hit_tokens": 3840,
+      "prompt_cache_miss_tokens": 171
+    },
+    "raw": "波纹索引",
+    "response_model": "deepseek-flash"
+  }
+]

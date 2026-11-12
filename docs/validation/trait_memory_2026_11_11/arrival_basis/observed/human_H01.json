@@ -1,0 +1,129 @@
+{
+  "source": "human_self_report",
+  "reviewer": "H01",
+  "corpus_sha256": "17890fd250b89fde6f9c8dfe0294be17167f4ce1974a9c49e0448630150360bd",
+  "collection": "独立聊天答卷，仅看原对话和同一标注说明，未展示新题预测；首份答卷原样保留。",
+  "original": "按“沈遥／许原”顺序：\n03 沈到明，许?无\n11 沈赶明，许赶明\n05 沈到明，许到明\n01 沈赶明，许?无\n09 沈到明，许到明\n08 沈到明，许到明\n12 沈赶明，许到明\n04 沈到明，许到推\n07 沈赶明，许赶明\n02 沈?明，许?无\n06 沈赶明，许到推\n10 沈赶明，许到明",
+  "labels": {
+    "10": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit"
+      }
+    },
+    "11": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit"
+      }
+    },
+    "12": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit"
+      }
+    },
+    "03": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none"
+      }
+    },
+    "05": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit"
+      }
+    },
+    "01": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none"
+      }
+    },
+    "09": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit"
+      }
+    },
+    "08": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit"
+      }
+    },
+    "04": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "pragmatic"
+      }
+    },
+    "07": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit"
+      }
+    },
+    "02": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none"
+      }
+    },
+    "06": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "pragmatic"
+      }
+    }
+  }
+}

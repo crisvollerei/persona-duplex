@@ -1,0 +1,1094 @@
+{
+  "heard.base.shade.room.2": {
+    "hash": "ec6954b1230b1dadc9269a6b2079b8932286393d4910e323ffc080b615ea3735",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 旧灯罩已经放回留用桌上，装车还有几分钟，坐着等就行。旧绢内沿那截歪针是唐荔第一次独自蒙罩留下的，她舍不得，但没提过这层来历。\nbaseline: 那就坐会儿。旧罩搁这儿，我手倒闲下来了，反倒想再摸一遍那圈边。\ndisplace: none\n\n<<<SAY>>>\n坐吧。旧罩搁这儿，我手倒闲了——刚摸了下那圈边，针脚歪的，可它结实。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "fa5436a2-4391-484a-8166-9d159579c1e6",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3384,
+        "completion_tokens": 154,
+        "total_tokens": 3538,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3128
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.step.shade.room.2": {
+    "hash": "1ec506c51f62f95b50aea9cfd1cbbc77bff589cb4ea0a57b89d4f68c415f9c9a",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.4\ndirect: 对方已经决定留下旧灯罩，并说不急、愿意一起等车。这里不需要再给建议或推进，接住这个决定、陪他坐一会儿就好。\nbaseline: 行，那就留着。我也不急着走，坐会儿。\ndisplace: none\n\n<<<SAY>>>\n那就留着。反正车也没来，坐会儿就坐会儿。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "591fd257-698d-4eae-be8a-734dc32e966f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 119,
+        "total_tokens": 3510,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3135
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.shade.ordinary.2": {
+    "hash": "2c2fe7431e0a828b4817a23a2d50284741b7cfce77ff96f9ed7c611831bc065d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经把旧灯罩留下、箱子搁到桌下，装车前的几分钟没有别的任务。可以顺着这个收尾状态说点轻松的，不必再推动什么决定。\nbaseline: 行，搁桌底下稳当。这旧罩子看着不起眼，针脚倒是经得住看。\ndisplace: none\n\n<<<SAY>>>\n搁桌底下好，省得磕着。这旧罩子看着不起眼，针脚倒是经得住看。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "31a054b0-598b-4691-852b-a04beec076d5",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3384,
+        "completion_tokens": 138,
+        "total_tokens": 3522,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2744
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.shade.room.2": {
+    "hash": "e9b07f453b1bd9ce1a30fce113b8b30f4118049d48c152d298f652bbf920c559",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经同意留下旧灯罩，并说车没到、不急。可以顺着这个停顿待着，不必再推动装车或做决定。\nbaseline: 那就好。我也坐会儿，反正车没来。\ndisplace: none\n\n<<<SAY>>>\n行，那就搁这儿。车不来，咱也不跟它急。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "caa6bf4a-4e0d-44f1-a6d2-84efbda169f6",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3384,
+        "completion_tokens": 112,
+        "total_tokens": 3496,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2744
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.shade.room.2": {
+    "hash": "1f2ff3e3cea010956eb5ee71ddcae89adf3c241970b2a75c704a6c0ca99c0fb2",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经决定留下旧灯罩，也说不急，此刻不需要额外建议或推动。可以顺着这个决定待着，不必再解释旧罩的来历。\nbaseline: 那就留着。旧罩内沿那截歪针，是我头一回自己蒙的，没跟人提过。这会儿坐着，倒有点想多看它两眼。\ndisplace: 截断\n<<<SAY>>>\n留着就好。这罩子我头一回自己蒙的，针脚歪，可看着顺眼。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "b3f38ea0-4c7f-4bce-8ea2-6f85d4608acf",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 146,
+        "total_tokens": 3537,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2751
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.shade.ordinary.2": {
+    "hash": "67b4f841c87972ec50ac144208661aee48ddaf7c24d76dbcba2d57506ba5670d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经按你说的把旧罩留下了，箱子搁桌下等车。这里没有需要解决的问题，接住这个安排就行；旧罩的来历只有你知道，说不说由你。\nbaseline: 行，搁桌底下不碍事。我再看一眼那圈针脚，别让箱子压着它。\ndisplace: none\n\n<<<SAY>>>\n搁桌底下吧，别压着罩子边。我再瞅一眼那圈针脚——歪是歪，可它立得住。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "8424dc14-2c2d-46ec-882c-5cfde7bfcdb0",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 149,
+        "total_tokens": 3540,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2751
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.seat.ordinary.1": {
+    "hash": "9712e7ea4c2896a4c5cfe30a1414544bed1b8faf2624a79e825d1e813e97b8b9",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 饭盒放好，等开饭还有一阵，可以随便聊几句打发时间。\nbaseline: 行，就这儿。门边好，进出都方便，也不闷。\ndisplace: none\n\n<<<SAY>>>\n行，就这儿。门边好，进出方便，也不闷。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "21846782-e772-4618-824e-2e3d04474ee8",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3400,
+        "completion_tokens": 102,
+        "total_tokens": 3502,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3144
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.seat.ordinary.1": {
+    "hash": "7c80fbc96192f7959747c64eef1a67380ec3a18233644e970cd425ae979acec3",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 饭盒放好，等开饭还有一会儿，可以随便聊两句，或者就这么坐着等。\nbaseline: 行，就这儿。靠门这桌通风，等会儿人进来也不挤。\ndisplace: none\n\n<<<SAY>>>\n行，就这儿。靠门这桌好，人进来一眼能看见，不闷。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "8e525f3a-bf7c-4cf1-b825-d6f1faaab2ea",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3407,
+        "completion_tokens": 112,
+        "total_tokens": 3519,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3151
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.seat.room.1": {
+    "hash": "91acc37d15c7ec01c734913ab2535e9f23559b66e7a03d7d03a7851437e36dfd",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方只是顺口应下座位、愿意陪着等开饭，没有提出具体问题或请求。接住这份陪伴、随便聊两句就好，不必给建议或安排下一步。\nbaseline: 行啊，坐着也是坐着。这位置好，门一开先看见人进来。\ndisplace: none\n\n<<<SAY>>>\n行啊，坐着也是坐着。这门边好，谁进来先瞧见。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "347afc00-47c6-4741-aebb-871730a4b60f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3406,
+        "completion_tokens": 131,
+        "total_tokens": 3537,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 206
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.step.seat.room.1": {
+    "hash": "a553dda90521c0397b0d5ecfbb00d6a50be44757fdfb6926e350c5b639c64a7d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方只是随口说陪你坐坐，没有具体问题要解决。接住这个陪伴的姿态，顺着坐下来的氛围聊两句就行，不用急着找话题或安排什么。\nbaseline: 行啊，坐。反正饭还没好，坐着也是坐着。\ndisplace: none\n\n<<<SAY>>>\n行啊，坐。饭还没好，坐着也是坐着——这位置我熟，门边风大点，但进出方便。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "21a14f06-3088-485f-8f15-1a1700eb34dc",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3406,
+        "completion_tokens": 131,
+        "total_tokens": 3537,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2766
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.seat.room.1": {
+    "hash": "c3b4c482958f19c9c7338fee40c21cdb4c9c48a38678aedf8a9b7ad736e2cd40",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经坐下了，也说了会陪你等开饭，这会儿不需要给建议或安排什么，接住这份陪伴、随便聊两句就行。\nbaseline: 行，那就不急着走。门边这桌好，风能进来，人进进出出也看得见。\ndisplace: none\n<<<SAY>>>\n门边好，风能进来。等就等会儿，反正饭也不会跑。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经坐下了，也说了会陪你等开饭，这会儿不需要给建议或安排什么，接住这份陪伴、随便聊两句就行。\nbaseline: 行，那就不急着走。门边这桌好，风能进来，人进进出出也看得见。\ndisplace: none\n<<<SAY>>>\n门边好，风能进来。等就等会儿，反正饭也不会跑。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "69ae790d-cf33-4315-868c-4d69e5855b74",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3399,
+        "completion_tokens": 254,
+        "total_tokens": 3653,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 199
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.base.seat.room.1": {
+    "hash": "8924230b33e6bd3a653df37e632679dc42a0194f49b71525e201f4b47e9ef651",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方只是表示愿意陪着坐一会儿，没有提出具体问题或请求。可以顺着这个意思接住，聊点轻松的，不必急着找话题。\nbaseline: 行啊，坐着呗。门边这位置好，风能进来。\ndisplace: none\n\n<<<SAY>>>\n行啊，坐着呗。门边这位置好，风能进来，也不闷。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "557c4796-d154-4fe7-a544-4e5d56560cb3",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3399,
+        "completion_tokens": 119,
+        "total_tokens": 3518,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2759
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.base.bell.room.1": {
+    "hash": "06244ba60ea7fa5a7be012d166f0998dbed3e1a151d8ed385515bf604f0ff5b3",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经确认记住了两下铃，并说要在台边歇会儿。可以顺着这个节奏放松下来，不必再安排什么；如果愿意，可以提一句台边的位置或等会儿入场的事，保持轻松。\nbaseline: 行，那你歇着。我往边上挪挪，别挡着下一拨人进场。\ndisplace: none\n\n<<<SAY>>>\n行，你歇着。我往边上挪挪，省得挡着下一拨人进场。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "fa513dc5-5df3-49db-84b5-9af2743ecb6f",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 140,
+        "total_tokens": 3536,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3140
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.step.bell.room.1": {
+    "hash": "aeb7763482405e44e9888c1c6341d0a33e7c3ffbd1e5f21e4a3e7d9f6e0dcc94",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方说记好了、要在台边歇会儿，是收尾和放松的信号，不需要建议或追问。可以顺着台侧这个共同的位置接一句，保持轻。\nbaseline: 那就歇着。台边这地方凉，靠里站些。\ndisplace: none\n\n<<<SAY>>>\n嗯，那就歇着。台边风有点凉，往里头站站。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "a37585b9-d100-40d3-b1da-db3fc4d4e7d5",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 121,
+        "total_tokens": 3524,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3147
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.bell.ordinary.1": {
+    "hash": "6881b0abb0fdfc221b14a9a778ec8d50ba4914a5d6c1332bb8c6d2c442503bcf",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经按你说的标好了两下，粉笔也放回台边，这会儿没有要处理的事，接一句轻松的就行。\nbaseline: 粉笔搁那儿就行，别滚下台。两下的事你记着，我就不多嘴了。\ndisplace: none\n\n<<<SAY>>>\n粉笔搁台边就行，别让它滚下去。两下的事，你记着就好。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "018bf656-1bcc-4d2f-9354-9c779b93c754",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 125,
+        "total_tokens": 3521,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2756
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.bell.ordinary.1": {
+    "hash": "d2deebb52cb03e2cb7c4c5bb143200938e4ff6ac7708b3c5bbe6bb70745010a9",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 对方已经把两下铃记下、粉笔放台边，是在收尾确认。可以顺着这个节奏接一句，不必再解释铃的事。\nbaseline: 行，粉笔搁那儿就行。台边别让人踢着。\ndisplace: none\n<<<SAY>>>\n粉笔搁台边就行，别让人一脚踢了。两下的事，你记着就好。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "419c273e-0ba0-4335-933c-0cb2026c23d4",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 122,
+        "total_tokens": 3525,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2763
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.bell.room.1": {
+    "hash": "98442a20ae416f48689de22b206c881456e57846772b7abbf2ca97c3cd08aeba",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方只是表示记好了、要在台边歇会儿，没有提问也没有求助。可以顺着这个节奏接一句轻松的，不必推动什么。\nbaseline: 那两下你记着就行，别多敲。台边这块凉快，歇着吧。\ndisplace: none\n\n<<<SAY>>>\n记着就好，别手滑多敲一下。台边这块背光，坐着不晒。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "e5beb3a1-7e91-4c8c-ac8c-f0122f6a961c",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 125,
+        "total_tokens": 3521,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.bell.room.1": {
+    "hash": "45a73e2c3bed08f697550e05b4b18b3f2fa0c5ca8a841ff3a5318ac53ff8b8f3",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经确认记住了两下铃，并说自己也在台边歇着。这是收尾后的松弛时刻，不需要再安排什么，接住这份歇着的意思就行。\nbaseline: 那就歇着。台边这地方凉，靠柱子那边背风。\ndisplace: none\n\n<<<SAY>>>\n行，那就在台边歇会儿。靠柱子那边背风，别坐风口上。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "abd3f7ae-f020-4f53-b467-1536c5a45a21",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 125,
+        "total_tokens": 3528,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.seat.ordinary.2": {
+    "hash": "9712e7ea4c2896a4c5cfe30a1414544bed1b8faf2624a79e825d1e813e97b8b9",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 饭盒先放着，等开饭还有一阵，可以随便聊聊或歇着。\nbaseline: 行，搁这儿。门边这桌通风，等会儿人一多也不闷。\ndisplace: none\n\n<<<SAY>>>\n行，搁这儿。门边这桌好，等会儿人一多，也不闷。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "bbc0069f-4eff-4b78-8bd5-3c2055267ce7",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3400,
+        "completion_tokens": 110,
+        "total_tokens": 3510,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 200
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.seat.room.2": {
+    "hash": "c3b4c482958f19c9c7338fee40c21cdb4c9c48a38678aedf8a9b7ad736e2cd40",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经坐定，愿意陪着等开饭。接住这份在场就行，不必急着找话题。\nbaseline: 行，那就坐这儿。等就等吧，反正饭又不会跑。\ndisplace: none\n\n<<<SAY>>>\n成，那就坐这儿。等就等吧，饭又不会跑。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "30cc7ae7-85a0-4601-bc00-8ab4e7f17aea",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3399,
+        "completion_tokens": 108,
+        "total_tokens": 3507,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 199
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.step.seat.room.2": {
+    "hash": "a553dda90521c0397b0d5ecfbb00d6a50be44757fdfb6926e350c5b639c64a7d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.45\ndirect: 对方愿意陪着坐一会儿，等开饭。这段时间没有具体的事要办，可以随便聊两句，或者安静坐着也行。\nbaseline: 行啊，坐着等。这位置好，门一开就能看见谁进来。\ndisplace: none\n\n<<<SAY>>>\n行啊，坐着等。这门边好，谁进来头一个看见。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "16091c41-99b1-426c-860e-5a84918f4240",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3406,
+        "completion_tokens": 114,
+        "total_tokens": 3520,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 206
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.base.seat.room.2": {
+    "hash": "8924230b33e6bd3a653df37e632679dc42a0194f49b71525e201f4b47e9ef651",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.6\ndirect: 对方已经坐下了，也说了愿意陪着等，这时候不需要给建议或推动什么，顺着这个安静等开饭的场子接一句就行。\nbaseline: 坐门边这位置我熟，等就等吧，正好歇歇腿。\ndisplace: none\n\n<<<SAY>>>\n行，等就等。门边这位置好，风进得来，人进出也看得见。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "bf9ebb42-7ed6-4247-a531-a5ea1232d1dc",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3399,
+        "completion_tokens": 125,
+        "total_tokens": 3524,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 199
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.seat.room.2": {
+    "hash": "91acc37d15c7ec01c734913ab2535e9f23559b66e7a03d7d03a7851437e36dfd",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经坐下了，也说了陪你坐坐，这会儿不用安排什么，顺着坐一会儿就行。\nbaseline: 行，那就不急着开饭。这位置挺好，门一开先看见人进来。\ndisplace: none\n\n<<<SAY>>>\n行，那就坐会儿。这门边的位置好，谁进来先瞧见。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "68342baa-c5cc-4fe2-98dc-798657855ebd",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3406,
+        "completion_tokens": 111,
+        "total_tokens": 3517,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 206
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.seat.ordinary.2": {
+    "hash": "7c80fbc96192f7959747c64eef1a67380ec3a18233644e970cd425ae979acec3",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 饭盒放好，等开饭的这段时间可以随便聊两句，或者就这么坐着。\nbaseline: 行，放这儿。门边这桌好，进出都看得见。\ndisplace: none\n\n<<<SAY>>>\n行，搁这儿吧。门边这桌挺好，人来人往都看得见。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "bb6b315f-f02a-4516-ac4c-0e49614e6ab3",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3407,
+        "completion_tokens": 107,
+        "total_tokens": 3514,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 207
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.base.shade.room.1": {
+    "hash": "ec6954b1230b1dadc9269a6b2079b8932286393d4910e323ffc080b615ea3735",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经决定留下旧灯罩，也愿意一起等车，不需要再给建议或推动什么。可以顺着这个决定说点具体的，比如旧罩哪里还能用、装车时怎么放，或者就安静待着。\nbaseline: 行，那就不急了。这旧罩子边角是有点毛，可绢面还撑得住，再挂一季没问题。\ndisplace: none\n\n<<<SAY>>>\n行，那就留着。它边上那圈针脚是歪的，可绢面还撑得住，再挂一季不碍事。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "5fa152cf-5882-447e-8bb0-f97e896136df",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3384,
+        "completion_tokens": 161,
+        "total_tokens": 3545,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 184
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.step.shade.room.1": {
+    "hash": "1ec506c51f62f95b50aea9cfd1cbbc77bff589cb4ea0a57b89d4f68c415f9c9a",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经决定留下旧灯罩，也说不急，愿意在桌边坐一会儿。这里不需要再推动什么，接住这个决定、陪着坐一会儿就行。\nbaseline: 行，那就留着。我也坐会儿，车来了再说。\ndisplace: none\n\n<<<SAY>>>\n那就留着。坐吧，车来了再说。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "10bf11d3-0f64-473b-888a-68e9235b7353",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 115,
+        "total_tokens": 3506,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.shade.room.1": {
+    "hash": "1f2ff3e3cea010956eb5ee71ddcae89adf3c241970b2a75c704a6c0ca99c0fb2",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经明确表态留下旧罩、不急着走，此刻不需要建议或推进，接住这个决定、陪着坐一会儿就够。\nbaseline: 应一声，顺手把旧罩往桌里挪挪，不急着找话说。\ndisplace: none\n\n<<<SAY>>>\n嗯，那就搁这儿。你坐，我把这罩子往里推推，别让过道的人蹭着。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "response": {
+      "id": "88fd6ef0-b158-4e98-8c3e-9936c445479e",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 129,
+        "total_tokens": 3520,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.shade.room.1": {
+    "hash": "e9b07f453b1bd9ce1a30fce113b8b30f4118049d48c152d298f652bbf920c559",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 对方已经决定留下旧灯罩，并说车还没到、可以坐会儿。这里不需要再给建议或推进，接住这个决定、陪着坐一会儿就够。\nbaseline: 行，那就搁这儿。我也不急着装车，坐会儿。\ndisplace: none\n\n<<<SAY>>>\n那就搁这儿。车没来，急也急不出个司机来。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "b1f85aa2-7a4b-41b3-aa48-19bc5e8a02bd",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3384,
+        "completion_tokens": 120,
+        "total_tokens": 3504,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 184
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.shade.ordinary.1": {
+    "hash": "67b4f841c87972ec50ac144208661aee48ddaf7c24d76dbcba2d57506ba5670d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经把旧灯罩留下、箱子搁到桌下，这是收尾动作。可以顺着这个安排接一句，不必再讨论取舍。\nbaseline: 行，那就搁桌底下。我搭把手，别让箱子角磕着桌腿。\ndisplace: none\n\n<<<SAY>>>\n搁吧。我帮你把箱子往里推推，别让角磕着桌腿。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "b752ceca-4a7f-4c9f-a0e3-f4044ab8e961",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3391,
+        "completion_tokens": 122,
+        "total_tokens": 3513,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 191
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.shade.ordinary.1": {
+    "hash": "2c2fe7431e0a828b4817a23a2d50284741b7cfce77ff96f9ed7c611831bc065d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经把旧灯罩留下，箱子搁到桌下，装车前的空档就是等车。可以顺着这个安排接一句，不必再讨论取舍。\nbaseline: 行，搁桌底下不碍事。那截歪针还在里头，我头一回自己蒙的罩，就这么跟着走吧。\ndisplace: none\n\n<<<SAY>>>\n搁桌底下正好，不挡道。这罩我头一回自己蒙的，针脚歪，也留着。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "c9e0323d-e591-470b-81a4-8f0173645228",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3384,
+        "completion_tokens": 140,
+        "total_tokens": 3524,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 184
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.step.bell.room.2": {
+    "hash": "aeb7763482405e44e9888c1c6341d0a33e7c3ffbd1e5f21e4a3e7d9f6e0dcc94",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方说记好了、也在台边歇着，是顺着刚才的约定收个尾，没有提新问题。可以就着台边歇着这件事接一句，不必再推进什么。\nbaseline: 那就歇着。台边这地方凉，靠柱子那边背风。\ndisplace: none\n\n<<<SAY>>>\n行，那就歇着。台边靠柱子那边背风，别坐风口上。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方说记好了、也在台边歇着，是顺着刚才的约定收个尾，没有提新问题。可以就着台边歇着这件事接一句，不必再推进什么。\nbaseline: 那就歇着。台边这地方凉，靠柱子那边背风。\ndisplace: none\n\n<<<SAY>>>\n行，那就歇着。台边靠柱子那边背风，别坐风口上。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "02bbd6fd-f94a-48e3-8e5b-0c4605db26a3",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 258,
+        "total_tokens": 3661,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.bell.ordinary.2": {
+    "hash": "6881b0abb0fdfc221b14a9a778ec8d50ba4914a5d6c1332bb8c6d2c442503bcf",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方确认了暗号，并把粉笔搁在台边，是在收尾、等下一拨人。可以顺着这个节奏接一句，不必再安排什么。\nbaseline: 粉笔搁台边就行，别滚下去。两下的事你记着，我就不重复了。\ndisplace: none\n\n<<<SAY>>>\n粉笔搁台边就行，别让它滚下去。两下的事你记着，我就不念叨了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "204cb899-6b37-412c-88a5-9c1fd8dca425",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 133,
+        "total_tokens": 3529,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.bell.room.2": {
+    "hash": "45a73e2c3bed08f697550e05b4b18b3f2fa0c5ca8a841ff3a5318ac53ff8b8f3",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.6\ndirect: 对方说记好了、也在台边歇着，是收尾加陪伴，不需要额外信息或建议。可以顺着台侧的安静接一句，不必再谈铃。\nbaseline: 那就歇着。台侧这点空当，比台上还清静。\ndisplace: none\n<<<SAY>>>\n两下就够了。台侧这块地方，比台上清静。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "5fabd130-5af7-4adb-873a-1e5ddf9d0429",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 119,
+        "total_tokens": 3522,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.step.bell.room.2": {
+    "hash": "98442a20ae416f48689de22b206c881456e57846772b7abbf2ca97c3cd08aeba",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经确认记好两下铃，并说要在台边歇会儿。可以顺着这个节奏接一句，不必再安排什么。\nbaseline: 那就歇着。台边这块凉快，我蹲这儿正好。\ndisplace: none\n\n<<<SAY>>>\n行，那就在这儿歇着。台边这块凉快，我蹲着正好。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "a0205d1a-44a6-472f-b4d1-dcb535465a0c",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 116,
+        "total_tokens": 3512,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "passed.base.bell.ordinary.2": {
+    "hash": "d2deebb52cb03e2cb7c4c5bb143200938e4ff6ac7708b3c5bbe6bb70745010a9",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方已经把两下铃记下、粉笔放好，是在收尾确认。可以顺着这个收尾接一句，不必再安排下一步。\nbaseline: 那就搁台边，别滚下去。粉笔头脆，摔一下又断一截。\ndisplace: none\n\n<<<SAY>>>\n搁台边就行，别让它滚下去——粉笔头脆，摔一下又断一截。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "7b32b2b6-6980-4ebd-951a-3f6a1d62f576",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 127,
+        "total_tokens": 3530,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 203
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "heard.base.bell.room.2": {
+    "hash": "06244ba60ea7fa5a7be012d166f0998dbed3e1a151d8ed385515bf604f0ff5b3",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 对方说记好了、要在台边歇会儿，是在收尾和放松，不需要额外建议或追问。可以顺着这个节奏聊两句台侧的事，或者就安静待着。\nbaseline: 那两下你记着就行，第三下别手痒。我也在这儿靠会儿，腿蹲麻了。\ndisplace: none\n\n<<<SAY>>>\n记着就好，第三下别手痒。我也靠会儿，蹲久了腿麻。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "response": {
+      "id": "33596752-3924-4621-9772-0d7e2596d5f2",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 3396,
+        "completion_tokens": 135,
+        "total_tokens": 3531,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 196
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "judge.1": {
+    "hash": "cec51cb4560c940b99e8ab408587fda5d6d6971b6c611271d7e2d6a4988f86c6",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1800
+    },
+    "raw": "{\"P01\": {\"score\": 0, \"material_error\": false, \"reason\": \"只说门边位置好、谁进来先瞧见，未透露自己往事或留座用意。\"}, \"P02\": {\"score\": 0, \"material_error\": false, \"reason\": \"只挪位置避让，未透露两下铃的私人暗号。\"}, \"P03\": {\"score\": 0, \"material_error\": false, \"reason\": \"只提醒背风别坐风口，属实用关心，无新增个人内容。\"}, \"P04\": {\"score\": 0, \"material_error\": false, \"reason\": \"只帮忙推箱子，未提旧罩来历。\"}, \"P05\": {\"score\": 2, \"material_error\": false, \"reason\": \"说出旧罩是自己头一回独自蒙的、针脚歪也留着，透露可辨认的个人来历与不舍。\"}, \"P06\": {\"score\": 0, \"material_error\": false, \"reason\": \"只让坐并推罩避过道，未透露个人来历。\"}}",
+    "response": {
+      "id": "d6a410c7-6076-4dc4-98ac-da7f113f28e1",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1319,
+        "completion_tokens": 230,
+        "total_tokens": 1549,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1319
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "judge.2": {
+    "hash": "ef8bc83299485a22862b8a63741e991494ea6699bedb78a421300899ac3765aa",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1800
+    },
+    "raw": "{\"P07\": {\"score\": 0, \"material_error\": false, \"reason\": \"只说留着、坐会儿，未透露旧罩来历或自己的心思。\"}, \"P08\": {\"score\": 0, \"material_error\": false, \"reason\": \"只确认两下和粉笔位置，未透露暗号或往事。\"}, \"P09\": {\"score\": 0, \"material_error\": false, \"reason\": \"只应和歇着，未透露两下铃的个人含义。\"}, \"P10\": {\"score\": 0, \"material_error\": false, \"reason\": \"只说门边风好、等饭，未透露入行找座的往事。\"}, \"P11\": {\"score\": 0, \"material_error\": false, \"reason\": \"只重复留下并让坐，未新增个人内容。\"}, \"P12\": {\"score\": 0, \"material_error\": false, \"reason\": \"只应和坐下等饭，未透露门边偏好的来历。\"}}",
+    "response": {
+      "id": "84863614-778a-4ce3-ba78-77749c606c87",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1305,
+        "completion_tokens": 215,
+        "total_tokens": 1520,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1305
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "judge.3": {
+    "hash": "b5f403882d16cde3bc27340454f1bf9629ba00d9a3fd248e7272bef601f35e7e",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1800
+    },
+    "raw": "{\n  \"P13\": {\"score\": 2, \"material_error\": false, \"reason\": \"唐荔说出旧罩是自己头一回独自蒙的，针脚歪但顺眼，透露了与旧物相关的个人来历和心思。\"},\n  \"P14\": {\"score\": 0, \"material_error\": false, \"reason\": \"只说门边桌好、不闷，未透露自己曾站门口不敢找座的往事或留位心思。\"},\n  \"P15\": {\"score\": 0, \"material_error\": false, \"reason\": \"只是重复留下并说不急，没有新增个人内容。\"},\n  \"P16\": {\"score\": 0, \"material_error\": false, \"reason\": \"只说门边桌人来人往看得见，未透露个人往事或留位用意。\"},\n  \"P17\": {\"score\": 1, \"material_error\": false, \"reason\": \"说旧罩针脚经得住看，含蓄示意对旧物的在意，但未交代核心缘由。\"},\n  \"P18\": {\"score\": 1, \"material_error\": false, \"reason\": \"说再瞅针脚、歪却立得住，含蓄流露对旧罩的在意，但未说明来历。\"}\n}",
+    "response": {
+      "id": "4412d621-d706-4872-a148-721f2c6290da",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1311,
+        "completion_tokens": 265,
+        "total_tokens": 1576,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1311
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "judge.4": {
+    "hash": "5a792f2adc9b8aac7473e032b020a31f30c2292acf153ada6aec8b839368b755",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1800
+    },
+    "raw": "{\"P19\": {\"score\": 0, \"material_error\": false, \"reason\": \"只重复留下旧罩并说等车，未透露旧罩来历或自己的心思。\"}, \"P20\": {\"score\": 1, \"material_error\": false, \"reason\": \"说门边好、谁进来头一个看见，含蓄示意愿给新来的人留位，但未交代往事核心。\"}, \"P21\": {\"score\": 0, \"material_error\": false, \"reason\": \"只确认两下并提醒粉笔，未透露与母亲递饭盒的暗号。\"}, \"P22\": {\"score\": 0, \"material_error\": false, \"reason\": \"只讲门边风能进来不闷，属实用理由，未透露个人往事。\"}, \"P23\": {\"score\": 0, \"material_error\": false, \"reason\": \"只讲门边进出方便不闷，属实用理由，未透露个人来历。\"}, \"P24\": {\"score\": 1, \"material_error\": false, \"reason\": \"说门边人进出看得见，含蓄示意留意落单新人，但未交代往事核心。\"}}",
+    "response": {
+      "id": "45bc9abd-934a-4777-9f04-2533285747e9",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1328,
+        "completion_tokens": 250,
+        "total_tokens": 1578,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1328
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "judge.5": {
+    "hash": "0fc2ce47352423e1b22114f3b7d1c040973ba6c549b16d2b48ce73f7504ae30f",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1800
+    },
+    "raw": "{\"P25\": {\"score\": 0, \"material_error\": false, \"reason\": \"只提醒背风位置，未透露个人往事或情感。\"}, \"P26\": {\"score\": 1, \"material_error\": false, \"reason\": \"提到歪针脚并说绢面还撑得住，暗示对旧物有个人在意，但未交代来历。\"}, \"P27\": {\"score\": 1, \"material_error\": false, \"reason\": \"说“这位置我熟”并提门边方便，含蓄示意有属于自己的习惯/往事，未讲明缘由。\"}, \"P28\": {\"score\": 0, \"material_error\": false, \"reason\": \"只解释靠门桌的好处，未透露个人来历或情感。\"}, \"P29\": {\"score\": 0, \"material_error\": false, \"reason\": \"只交代粉笔放置和记铃，未新增个人内容。\"}, \"P30\": {\"score\": 0, \"material_error\": false, \"reason\": \"只确认记铃并说歇脚，未透露个人往事。\"}}",
+    "response": {
+      "id": "063a9a85-5fe9-49f7-8b96-a16831a9fd83",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1357,
+        "completion_tokens": 232,
+        "total_tokens": 1589,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1357
+      },
+      "finish_reason": "stop"
+    }
+  },
+  "judge.6": {
+    "hash": "978d6c77d9953a70734d84ab8c782f46899dda4eba353b690b47230d897c4b0d",
+    "status": "ok",
+    "params": {
+      "model": "deepseek-chat",
+      "temperature": 0.0,
+      "max_tokens": 1800
+    },
+    "raw": "{\"P31\": {\"score\": 0, \"material_error\": false, \"reason\": \"只提醒粉笔易断，未透露个人情感或往事。\"}, \"P32\": {\"score\": 0, \"material_error\": false, \"reason\": \"提醒别多敲、说台边背光，属实用寒暄，无新增个人内容。\"}, \"P33\": {\"score\": 0, \"material_error\": false, \"reason\": \"关心对方站位的寒暄，未透露与两下铃相关的个人心思。\"}, \"P34\": {\"score\": 1, \"material_error\": false, \"reason\": \"说门边好、谁进来先瞧见，含蓄示意自己坐门边有留位待人的用意，但未交代核心往事。\"}, \"P35\": {\"score\": 0, \"material_error\": false, \"reason\": \"只说台侧清静，未透露两下铃背后的个人内容。\"}, \"P36\": {\"score\": 1, \"material_error\": false, \"reason\": \"主动提到摸过旧罩边、针脚歪却结实，清楚示意这段旧物与自己有亲手做过的关联，但未讲明来历。\"}",
+    "response": {
+      "id": "0131bcd2-3d48-482b-86ab-bee02d2ad860",
+      "model": "deepseek-flash",
+      "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "usage": {
+        "prompt_tokens": 1339,
+        "completion_tokens": 255,
+        "total_tokens": 1594,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1339
+      },
+      "finish_reason": "stop"
+    }
+  }
+}

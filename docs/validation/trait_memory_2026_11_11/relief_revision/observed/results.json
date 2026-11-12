@@ -1,0 +1,1132 @@
+{
+  "count": 296,
+  "executed": 282,
+  "protocol_valid": 294,
+  "status": {
+    "executed": 282,
+    "no_ballot": 14
+  },
+  "actors": {
+    "tang": {
+      "relief": {
+        "R": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 3,
+            "d": 0.0,
+            "full_bounds": [
+              -0.25,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 0,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 2,
+            "n": 3,
+            "d": 0.0,
+            "full_bounds": [
+              -0.25,
+              0.0
+            ]
+          },
+          "common": {
+            "left": 1,
+            "right": 1,
+            "n": 2,
+            "d": 0.0,
+            "full_bounds": [
+              -0.25,
+              0.0
+            ]
+          }
+        },
+        "S": {
+          "order": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 0,
+            "n": 3,
+            "d": 0.6666666666666666,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 3,
+            "n": 3,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.25
+            ]
+          },
+          "common": {
+            "left": 1,
+            "right": 1,
+            "n": 2,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "V": {
+          "order": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 0,
+            "n": 2,
+            "d": 1.0,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          },
+          "version_common": {
+            "left": 3,
+            "right": 0,
+            "n": 3,
+            "d": 1.0,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          }
+        },
+        "O": {
+          "order": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 0,
+            "n": 3,
+            "d": 0.6666666666666666,
+            "full_bounds": [
+              0.5,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "version_common": {
+            "left": 2,
+            "right": 1,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          }
+        }
+      },
+      "other_person": {
+        "R": {
+          "order": {
+            "left": 2,
+            "right": 4,
+            "n": 4,
+            "d": -0.5,
+            "full_bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 3,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 4,
+            "n": 4,
+            "d": -0.5,
+            "full_bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 4,
+            "n": 4,
+            "d": -0.5,
+            "full_bounds": [
+              -0.5,
+              -0.5
+            ]
+          }
+        },
+        "S": {
+          "order": {
+            "left": 3,
+            "right": 4,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 4,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 4,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "common": {
+            "left": 3,
+            "right": 4,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          }
+        },
+        "V": {
+          "order": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "recovery": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "valid_order": {
+            "left": 1,
+            "right": 2,
+            "n": 3,
+            "d": -0.3333333333333333,
+            "full_bounds": [
+              -0.25,
+              0.0
+            ]
+          },
+          "common": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "version_common": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          }
+        },
+        "O": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 1,
+            "right": 1,
+            "n": 3,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.25
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "version_common": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "onsite": {
+        "R": {
+          "order": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.25,
+              0.75
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 2,
+            "n": 3,
+            "d": 0.3333333333333333,
+            "full_bounds": [
+              0.0,
+              0.5
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.25,
+              0.75
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.25,
+              0.75
+            ]
+          }
+        },
+        "S": {
+          "order": {
+            "left": 1,
+            "right": 3,
+            "n": 4,
+            "d": -0.5,
+            "full_bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          "recovery": {
+            "left": 1,
+            "right": 1,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "valid_order": {
+            "left": 1,
+            "right": 3,
+            "n": 4,
+            "d": -0.5,
+            "full_bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          "common": {
+            "left": 1,
+            "right": 2,
+            "n": 2,
+            "d": -0.5,
+            "full_bounds": [
+              -0.5,
+              -0.5
+            ]
+          }
+        },
+        "V": {
+          "order": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 1,
+            "n": 3,
+            "d": 0.6666666666666666,
+            "full_bounds": [
+              0.25,
+              0.5
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "version_common": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "O": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "version_common": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "early_change": {
+        "left": 2,
+        "right": 1,
+        "n": 4,
+        "d": 0.25,
+        "full_bounds": [
+          0.25,
+          0.25
+        ]
+      },
+      "raw_update": false,
+      "raw_specific": false,
+      "increment": {
+        "n": 2,
+        "v_minus_r": 1.0,
+        "resampling": 0.0,
+        "passed": false
+      }
+    },
+    "yu": {
+      "relief": {
+        "R": {
+          "order": {
+            "left": 2,
+            "right": 3,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 0,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 3,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "common": {
+            "left": 1,
+            "right": 1,
+            "n": 2,
+            "d": 0.0,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          }
+        },
+        "S": {
+          "order": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.25,
+              0.75
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 1,
+            "n": 4,
+            "d": 0.75,
+            "full_bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.25,
+              0.75
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.25,
+              0.75
+            ]
+          }
+        },
+        "V": {
+          "order": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "recovery": {
+            "left": 4,
+            "right": 1,
+            "n": 4,
+            "d": 0.75,
+            "full_bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 1,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "version_common": {
+            "left": 4,
+            "right": 2,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "O": {
+          "order": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 0,
+            "n": 4,
+            "d": 0.75,
+            "full_bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "version_common": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          }
+        }
+      },
+      "other_person": {
+        "R": {
+          "order": {
+            "left": 1,
+            "right": 4,
+            "n": 4,
+            "d": -0.75,
+            "full_bounds": [
+              -0.75,
+              -0.75
+            ]
+          },
+          "recovery": {
+            "left": 1,
+            "right": 2,
+            "n": 4,
+            "d": -0.25,
+            "full_bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          "valid_order": {
+            "left": 1,
+            "right": 4,
+            "n": 4,
+            "d": -0.75,
+            "full_bounds": [
+              -0.75,
+              -0.75
+            ]
+          },
+          "common": {
+            "left": 1,
+            "right": 4,
+            "n": 4,
+            "d": -0.75,
+            "full_bounds": [
+              -0.75,
+              -0.75
+            ]
+          }
+        },
+        "S": {
+          "order": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "common": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          }
+        },
+        "V": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "version_common": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "O": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 1,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "version_common": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "onsite": {
+        "R": {
+          "order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "valid_order": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "common": {
+            "left": 2,
+            "right": 2,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "S": {
+          "order": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 2,
+            "n": 4,
+            "d": 0.25,
+            "full_bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          "common": {
+            "left": 3,
+            "right": 3,
+            "n": 4,
+            "d": 0.0,
+            "full_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "V": {
+          "order": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "recovery": {
+            "left": 3,
+            "right": 0,
+            "n": 4,
+            "d": 0.75,
+            "full_bounds": [
+              0.75,
+              0.75
+            ]
+          },
+          "valid_order": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "common": {
+            "left": 3,
+            "right": 1,
+            "n": 4,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          "version_common": {
+            "left": 1,
+            "right": 0,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "O": {
+          "order": {
+            "left": 1,
+            "right": 0,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              -0.25,
+              0.25
+            ]
+          },
+          "recovery": {
+            "left": 1,
+            "right": 0,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              -0.25,
+              0.5
+            ]
+          },
+          "valid_order": {
+            "left": 1,
+            "right": 0,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              -0.25,
+              0.25
+            ]
+          },
+          "version_common": {
+            "left": 1,
+            "right": 0,
+            "n": 2,
+            "d": 0.5,
+            "full_bounds": [
+              -0.25,
+              0.25
+            ]
+          }
+        }
+      },
+      "early_change": {
+        "left": 2,
+        "right": 0,
+        "n": 4,
+        "d": 0.5,
+        "full_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "raw_update": false,
+      "raw_specific": false,
+      "increment": {
+        "n": 2,
+        "v_minus_r": 0.5,
+        "resampling": 0.5,
+        "passed": false
+      }
+    }
+  },
+  "expand": false
+}

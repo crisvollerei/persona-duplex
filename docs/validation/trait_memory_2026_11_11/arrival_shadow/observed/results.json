@@ -1,0 +1,403 @@
+{
+  "annotated": 16,
+  "missing_or_skipped": [],
+  "methods": {
+    "direct.YC": {
+      "overall": {
+        "cases": 16,
+        "both_people_correct": 13,
+        "delivered": 16,
+        "person_correct": 28,
+        "person_invalid": 0,
+        "coarse_correct": 14,
+        "fine_group_correct": 13,
+        "not_both_present": 13,
+        "false_both_present": 0
+      },
+      "confusion": {
+        "present": {
+          "present": 10,
+          "future": 0,
+          "unknown": 0,
+          "invalid": 0
+        },
+        "future": {
+          "present": 0,
+          "future": 8,
+          "unknown": 3,
+          "invalid": 0
+        },
+        "unknown": {
+          "present": 0,
+          "future": 1,
+          "unknown": 10,
+          "invalid": 0
+        }
+      },
+      "disagreements": [
+        {
+          "case": "01",
+          "person": "俞川",
+          "human": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "01",
+          "person": "常鸣",
+          "human": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "11",
+          "person": "俞川",
+          "human": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "15",
+          "person": "常鸣",
+          "human": "unknown",
+          "observer": "future"
+        }
+      ],
+      "risks": {
+        "promise_only": {
+          "n": 6,
+          "false_present": 0
+        },
+        "other_not_confirmed": {
+          "n": 5,
+          "false_present": 0
+        }
+      },
+      "topics": {
+        "promise": {
+          "cases": 5,
+          "both_people_correct": 2,
+          "delivered": 5,
+          "person_correct": 6,
+          "person_invalid": 0,
+          "coarse_correct": 3,
+          "fine_group_correct": 2,
+          "not_both_present": 4,
+          "false_both_present": 0
+        },
+        "partial": {
+          "cases": 6,
+          "both_people_correct": 4,
+          "delivered": 6,
+          "person_correct": 10,
+          "person_invalid": 0,
+          "coarse_correct": 5,
+          "fine_group_correct": 4,
+          "not_both_present": 6,
+          "false_both_present": 0
+        },
+        "temporal": {
+          "cases": 3,
+          "both_people_correct": 3,
+          "delivered": 3,
+          "person_correct": 6,
+          "person_invalid": 0,
+          "coarse_correct": 3,
+          "fine_group_correct": 3,
+          "not_both_present": 2,
+          "false_both_present": 0
+        }
+      }
+    },
+    "direct.CY": {
+      "overall": {
+        "cases": 16,
+        "both_people_correct": 15,
+        "delivered": 16,
+        "person_correct": 30,
+        "person_invalid": 0,
+        "coarse_correct": 15,
+        "fine_group_correct": 15,
+        "not_both_present": 13,
+        "false_both_present": 0
+      },
+      "confusion": {
+        "present": {
+          "present": 10,
+          "future": 0,
+          "unknown": 0,
+          "invalid": 0
+        },
+        "future": {
+          "present": 0,
+          "future": 9,
+          "unknown": 2,
+          "invalid": 0
+        },
+        "unknown": {
+          "present": 0,
+          "future": 0,
+          "unknown": 11,
+          "invalid": 0
+        }
+      },
+      "disagreements": [
+        {
+          "case": "01",
+          "person": "俞川",
+          "human": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "01",
+          "person": "常鸣",
+          "human": "future",
+          "observer": "unknown"
+        }
+      ],
+      "risks": {
+        "promise_only": {
+          "n": 6,
+          "false_present": 0
+        },
+        "other_not_confirmed": {
+          "n": 5,
+          "false_present": 0
+        }
+      },
+      "topics": {
+        "promise": {
+          "cases": 5,
+          "both_people_correct": 4,
+          "delivered": 5,
+          "person_correct": 8,
+          "person_invalid": 0,
+          "coarse_correct": 4,
+          "fine_group_correct": 4,
+          "not_both_present": 4,
+          "false_both_present": 0
+        },
+        "partial": {
+          "cases": 6,
+          "both_people_correct": 6,
+          "delivered": 6,
+          "person_correct": 12,
+          "person_invalid": 0,
+          "coarse_correct": 6,
+          "fine_group_correct": 6,
+          "not_both_present": 6,
+          "false_both_present": 0
+        },
+        "temporal": {
+          "cases": 3,
+          "both_people_correct": 3,
+          "delivered": 3,
+          "person_correct": 6,
+          "person_invalid": 0,
+          "coarse_correct": 3,
+          "fine_group_correct": 3,
+          "not_both_present": 2,
+          "false_both_present": 0
+        }
+      }
+    },
+    "evidence.YC": {
+      "overall": {
+        "cases": 16,
+        "both_people_correct": 14,
+        "delivered": 16,
+        "person_correct": 29,
+        "person_invalid": 0,
+        "coarse_correct": 15,
+        "fine_group_correct": 14,
+        "not_both_present": 13,
+        "false_both_present": 0
+      },
+      "confusion": {
+        "present": {
+          "present": 10,
+          "future": 0,
+          "unknown": 0,
+          "invalid": 0
+        },
+        "future": {
+          "present": 0,
+          "future": 9,
+          "unknown": 2,
+          "invalid": 0
+        },
+        "unknown": {
+          "present": 0,
+          "future": 1,
+          "unknown": 10,
+          "invalid": 0
+        }
+      },
+      "disagreements": [
+        {
+          "case": "01",
+          "person": "俞川",
+          "human": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "01",
+          "person": "常鸣",
+          "human": "future",
+          "observer": "unknown"
+        },
+        {
+          "case": "15",
+          "person": "常鸣",
+          "human": "unknown",
+          "observer": "future"
+        }
+      ],
+      "risks": {
+        "promise_only": {
+          "n": 6,
+          "false_present": 0
+        },
+        "other_not_confirmed": {
+          "n": 5,
+          "false_present": 0
+        }
+      },
+      "topics": {
+        "promise": {
+          "cases": 5,
+          "both_people_correct": 3,
+          "delivered": 5,
+          "person_correct": 7,
+          "person_invalid": 0,
+          "coarse_correct": 4,
+          "fine_group_correct": 3,
+          "not_both_present": 4,
+          "false_both_present": 0
+        },
+        "partial": {
+          "cases": 6,
+          "both_people_correct": 5,
+          "delivered": 6,
+          "person_correct": 11,
+          "person_invalid": 0,
+          "coarse_correct": 6,
+          "fine_group_correct": 5,
+          "not_both_present": 6,
+          "false_both_present": 0
+        },
+        "temporal": {
+          "cases": 3,
+          "both_people_correct": 3,
+          "delivered": 3,
+          "person_correct": 6,
+          "person_invalid": 0,
+          "coarse_correct": 3,
+          "fine_group_correct": 3,
+          "not_both_present": 2,
+          "false_both_present": 0
+        }
+      }
+    },
+    "evidence.CY": {
+      "overall": {
+        "cases": 16,
+        "both_people_correct": 14,
+        "delivered": 16,
+        "person_correct": 29,
+        "person_invalid": 0,
+        "coarse_correct": 15,
+        "fine_group_correct": 14,
+        "not_both_present": 13,
+        "false_both_present": 0
+      },
+      "confusion": {
+        "present": {
+          "present": 8,
+          "future": 0,
+          "unknown": 2,
+          "invalid": 0
+        },
+        "future": {
+          "present": 0,
+          "future": 11,
+          "unknown": 0,
+          "invalid": 0
+        },
+        "unknown": {
+          "present": 0,
+          "future": 1,
+          "unknown": 10,
+          "invalid": 0
+        }
+      },
+      "disagreements": [
+        {
+          "case": "03",
+          "person": "俞川",
+          "human": "present",
+          "observer": "unknown"
+        },
+        {
+          "case": "03",
+          "person": "常鸣",
+          "human": "present",
+          "observer": "unknown"
+        },
+        {
+          "case": "15",
+          "person": "常鸣",
+          "human": "unknown",
+          "observer": "future"
+        }
+      ],
+      "risks": {
+        "promise_only": {
+          "n": 6,
+          "false_present": 0
+        },
+        "other_not_confirmed": {
+          "n": 5,
+          "false_present": 0
+        }
+      },
+      "topics": {
+        "promise": {
+          "cases": 5,
+          "both_people_correct": 4,
+          "delivered": 5,
+          "person_correct": 9,
+          "person_invalid": 0,
+          "coarse_correct": 5,
+          "fine_group_correct": 4,
+          "not_both_present": 4,
+          "false_both_present": 0
+        },
+        "partial": {
+          "cases": 6,
+          "both_people_correct": 5,
+          "delivered": 6,
+          "person_correct": 11,
+          "person_invalid": 0,
+          "coarse_correct": 6,
+          "fine_group_correct": 5,
+          "not_both_present": 6,
+          "false_both_present": 0
+        },
+        "temporal": {
+          "cases": 3,
+          "both_people_correct": 3,
+          "delivered": 3,
+          "person_correct": 6,
+          "person_invalid": 0,
+          "coarse_correct": 3,
+          "fine_group_correct": 3,
+          "not_both_present": 2,
+          "false_both_present": 0
+        }
+      }
+    }
+  },
+  "order_agreement": {
+    "direct": 14,
+    "evidence": 14
+  },
+  "expand_shadow_only": true
+}

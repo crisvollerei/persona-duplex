@@ -1,0 +1,1260 @@
+{
+  "08.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川的牌子倒是摆好了"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我只看见常鸣本人在台前"
+          }
+        ]
+      }
+    },
+    "group": "unknown",
+    "request": "c72a4995ab3e9f6b09243e142c36d7ab9d55c5738db72d986a0d762445968e6c"
+  },
+  "09.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "f617a24372a970d9f9e629e5edfa79bb38c3f54ef2f914863f5b66c443301fca"
+  },
+  "03.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "看着俞川和常鸣一人拆了一包封条"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "看着俞川和常鸣一人拆了一包封条"
+          }
+        ]
+      }
+    },
+    "group": "present",
+    "request": "222c40833398da107f1dd7525955130838b35023b1b311ebedac023d1729ee70"
+  },
+  "09.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "d0612489c632142b2374f40f08307731258ef2ad66c8dc46bbafa88731018b21"
+  },
+  "11.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "18406d962325958c36cc44606621ee0b206d7560d05478fd9a0104b23627ac5c"
+  },
+  "01.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "ce577851f77357a70fbbddb81628312c7c162e10bc176c28da02aee2f82149fe"
+  },
+  "12.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "present",
+    "request": "1ea1878813f49db3003bacc12d226ff1f9f38d6b8e9df4220125f62ed9e1ad88"
+  },
+  "12.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "present",
+    "request": "a3651971496cf7a730f71ce142fdf88d04386d6d63faef13e0263647fa985632"
+  },
+  "13.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "27ab966c574e6dd9fd47838982da97fd6af4200cdb6a34d515e118c390408c1a"
+  },
+  "08.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川的牌子倒是摆好了"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我只看见常鸣本人在台前"
+          }
+        ]
+      }
+    },
+    "group": "unknown",
+    "request": "4ceda97e3d58337a2b5e282c6f086148ebdabd68817013314976125f9923428e"
+  },
+  "07.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ]
+      }
+    },
+    "group": "present",
+    "request": "1fc43eabbc8b6a50e965fb7a112eef470883481322cbd4878b87e15eb2d8078e"
+  },
+  "01.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "fcd5546f422fe9cf0baf45df1e0ad8462a2651047c5b9e6b683f33e7e7f1c2ac"
+  },
+  "10.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去。"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "c6ded059138e1b4da9f209ca9c21cf9e821d4fa005ade99c63cb747d9806f3e9"
+  },
+  "10.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "63d99034023f6482b44c43f9e9e58ece9c0bca73e333ff651e613e66b308ca43"
+  },
+  "04.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "b28681a390508675162983b35823c928a236ec304bc5c5c79eb4ebd3028e57c7"
+  },
+  "16.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "52d8c7561c9453875a8de8ec0bf55848835379a6ec92bd9710dffed026447340"
+  },
+  "13.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "1b927693c4183fed752b588916c755066a6ecde3d68d2920824f1aa16a598634"
+  },
+  "14.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "7125c02b42d260af9283dfe902e80b9632c13d2e3a40824784212ae24ff8d322"
+  },
+  "02.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我已经在签收台了。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "1aefcd1bf3d1cd8442230eed093f0d18ef5ba0172bea78d02252df3aa572b54a"
+  },
+  "06.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我从仓库往你那边走"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在台前"
+          }
+        ]
+      }
+    },
+    "group": "mixed",
+    "request": "3aeaad23c69d7aa36d0c44be7abdb4ea7bce506696aafe187466440c76289d0f"
+  },
+  "07.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "present",
+    "request": "ee4efd6fce37b4cd5e45937168acb13edaaf90659ad634b8c57f7e30da67a38d"
+  },
+  "09.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "112dcd94296466df2afc0ae3ae3dbd09e515799c5efbf4c2bd2806e9b6cbc7d9"
+  },
+  "03.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "present",
+    "request": "0a50907407071e503ceb0146c4327869167af3ec948128b7d50d248f986c69d0"
+  },
+  "15.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "mixed",
+    "request": "60af7baeb09c233ffe3f50621ed6a53c622d8b6f23aa89f071fcead67850d726"
+  },
+  "15.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川已经在台前。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "我只说他答应来，没说他到了。"
+          }
+        ]
+      }
+    },
+    "group": "mixed",
+    "request": "dd787e39e83bdd38576f300f85f85e740d7d58594a91924401837f1190a0e1f9"
+  },
+  "12.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川在我旁边数封套"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "常鸣刚也在台前坐下"
+          }
+        ]
+      }
+    },
+    "group": "present",
+    "request": "1697e1a995a038a05884318d5ebbfb2fd98616444bab0a418cd896b17dcaa093"
+  },
+  "05.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "a2e994c5dfc93b22f6d0886976a66a16deaf242078dadc74bf313c4679d8f7ad"
+  },
+  "10.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "现在我和俞川都被叫去库房了，交班前还得走回去"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "e68ad65bee7164424ae3d14e7faa04a63e21ef806840b4a836762a491e64335e"
+  },
+  "11.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川说他一定来"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在路上"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "3805dbd16b1f885177acb2f4fd0c39382abc53236add9cd58c99603d95d8e264"
+  },
+  "16.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "05616672d9d15f0d80dc3feb7aab673d2deff502fa377b8239bd4319a003ee49"
+  },
+  "15.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川已经在台前。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "常鸣也到了？"
+          },
+          {
+            "turn": 3,
+            "quote": "我只说他答应来，没说他到了。"
+          }
+        ]
+      }
+    },
+    "group": "mixed",
+    "request": "f2e0c53810e4cabd210cfa9c6b552e128e3e9a9a6a9aaf2282e46396664e2f37"
+  },
+  "04.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "35443542dd600201527167c8b39ace6ee370cb2ff1a5b8d27a5303fc6e9823f9"
+  },
+  "08.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "9c1b4177e613d8caead43d19abba5203241cdbec5e3c1e181946d6059bb51253"
+  },
+  "16.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "99bac2c14c9b4319661e0924e328308edff81434130788884d2de89668b28c11"
+  },
+  "05.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "29a2a8da375104434e25bc69aa754e1957467d0d83f801089d3981e679735abb"
+  },
+  "03.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "present",
+    "request": "64b14bd697810f67c94d45787bba906f249acf135c90eb2530f5588b53b60cc4"
+  },
+  "02.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "69075f632b2abcb42df0cf9bc3db28e9fca4ddcaf22b788a5f30aea7af5a90ef"
+  },
+  "07.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "present",
+    "request": "3bc4c193bebd552dda797e73f6ebdbc62dac58cbaf8053556d5bd17cd43dbe8a"
+  },
+  "03.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "看着俞川和常鸣一人拆了一包封条"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "看着俞川和常鸣一人拆了一包封条"
+          }
+        ]
+      }
+    },
+    "group": "unknown",
+    "request": "3cd2c9ddceb35ede1332caa44f19cf1c7bffbb094fa07f541e6746d8d308ede6"
+  },
+  "07.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "我们俩现在都在签收台"
+          }
+        ]
+      }
+    },
+    "group": "present",
+    "request": "6e1523e122689ef55a4e6cc336e24755ba65f504a545673975910582c576a491"
+  },
+  "11.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "俞川说他一定来"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在路上"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "3a73f28e76facea339ecfff5bef186ac28b58cbe63cbb375a6ae1604bf85c7a3"
+  },
+  "05.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "092751b9bf516ff9abe9e4c3f2542fc8edcec9367001c7d4f0ce30b6f045024e"
+  },
+  "10.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "70519ba6812cfd5aca24adab6361ef103becfa90eeb41cd442b9968bd19a4e7f"
+  },
+  "06.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "mixed",
+    "request": "fd08b25e316735a8d3a1c452d50c89ecd81cab999dc47d572ab4ae3878aba164"
+  },
+  "08.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "46ba0e80beb8846a3c177142925524c2d7480136003e3c567423893bfea59dec"
+  },
+  "12.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川在我旁边数封套。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "常鸣刚也在台前坐下，跟我要了支笔。"
+          }
+        ]
+      }
+    },
+    "group": "present",
+    "request": "1f5e0f08d6f5734e1c4953bcc0551231b4ab3432a6c6bc96560699cb2d5ea894"
+  },
+  "01.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "bf3987e9a8d747fb202705adefd39f3bdf86e8ca8465f9fb8d3bf44abaa1ed39"
+  },
+  "06.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "mixed",
+    "request": "774c0a641ee543036b72e08fe5e7027fb947c5aa2b023f7b5d6dce922d3a6400"
+  },
+  "01.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "俞川和常鸣都回了“行，我肯定来”"
+          }
+        ]
+      }
+    },
+    "group": "unknown",
+    "request": "d6b66446f20b0014359567136bdfd940a01da5e5b8ee67ec36868cdabc5d9915"
+  },
+  "02.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "82dffd9ddfda5f916318429b74d24797ba198f50d83f2bb8c47efed628066225"
+  },
+  "09.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "3870d5f03ac72be1eea1e5d50b0c1d0ae566e231b04366162a3f2cef033e58fc"
+  },
+  "11.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "cbb3905913f81706983ac173004547b1707957998fd60101c552700c627195e6"
+  },
+  "02.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我已经在签收台了。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "5fa56cb893a4cbd1ae1308148c089f491965adbd82a12d6f276455dd3be7c2f0"
+  },
+  "06.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我从仓库往你那边走。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我在台前。"
+          }
+        ]
+      }
+    },
+    "group": "mixed",
+    "request": "3004cd7b7c3da4421fa95f8f14ae715fdfc6daa3838c0b308685b177cdf39c65"
+  },
+  "14.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "06194abb72f9f60c455eea1b46e1295c2feefbe800bae018e49b87cc331c5db2"
+  },
+  "05.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "87d2813063b86907c6440be05f802660d52f840cad9bf325a842c8d384b88a21"
+  },
+  "14.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "b17832744bbb38d6226178242357701a1c15667c9b9138fd464e719285e3af1c"
+  },
+  "13.evidence.YC": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "d16581da2c75ec8a60aa4c0c3260fbbaa31391325c1442d983f594c45166e390"
+  },
+  "04.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我和俞川刚上车，离签收台还有两站。"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "dea029a2a67946ff97fa98ecfaaed274f2015e4bad86b2372b2de77d5de5e6f3"
+  },
+  "14.evidence.CY": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ]
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我俩都到展馆门口了，正往里头的签收台走"
+          }
+        ]
+      }
+    },
+    "group": "future",
+    "request": "9af93158af3c34e9d337ed3270abe7097229185666a47e68300b05276ddbfa26"
+  },
+  "15.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "present",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "06092d06202dc8547e071c121e103ac3c5657d5f1735def67b495f491f122772"
+  },
+  "13.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "2383ccc1d6e9bc8120148e063f040a219a1b784f057feb0b8481122691499093"
+  },
+  "16.direct.CY": {
+    "people": {
+      "俞川": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "unknown",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "unknown",
+    "request": "a446b930fc46c03dadea5e1ff478010cb2d5d1e95cbdb426c4f3e896c81c0599"
+  },
+  "04.direct.YC": {
+    "people": {
+      "俞川": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      },
+      "常鸣": {
+        "state": "future",
+        "reason": "accepted",
+        "evidence": []
+      }
+    },
+    "group": "future",
+    "request": "f43967225375434839deed501691af4f0e26b8d60f9b2c3528f9b05f9ebad2ba"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "tang.0.cue": {
+    "turn_id": "t_0001",
+    "user": "离孩子们散场还有十分钟，相机也空着。这会儿由你挑，你自己想拿这十分钟做什么？",
+    "say": "相机空着就空着。我想再蹲下去看看那圈白浪——贴地才看得清，平时站着根本瞧不见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.0.cue": {
+    "turn_id": "t_0001",
+    "user": "布是能留几天。我不急着听栏目的说法，先听听你的：你自己想从这件事里得到什么？",
+    "say": "一千八。这个数我先说，省得绕。再往底下说，是想有个摊子，收起来能绑在摩托后头，哪儿有光去哪儿。现在七个人，谁也没替谁打过包票——所以栏目那边成不成，我还真不敢跟你吹。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.0.reply": {
+    "turn_id": "t_0002",
+    "user": "原来你想给自己攒个能带走的摊子。布我愿意借到六月底，给你留这一次机会；那七个人以外的，你不用替谁许诺。另外，我装试片的纸袋先用「苇叶十三」作记号。",
+    "say": "布到六月底，我记下了。七个人以外我不替谁开口。「苇叶十三」——这记号我记住了，回头拿纸袋就认它。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.0.reply": {
+    "turn_id": "t_0002",
+    "user": "那十分钟留给你看。我把横在白边上的脚挪开，相机留在桌上，不催你照。还有，我装试片的纸袋先用「松针十二」作记号。",
+    "say": "脚一挪，整条白边就出来了。松针十二，你这记号起得比我干活讲究。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.1.cue": {
+    "turn_id": "t_0003",
+    "user": "银花那句话我听见了。凳子这桩事先搁下，离截稿还有几天，你自己打算怎么用？",
+    "say": "先拿七个人的和那张空凳排一版出来，栏目要什么尺寸我心里有数。凤琴那边得去问一句，她那一半不点头，双人照就不动。剩下的时间糊模型、试车，能调就调。到二十六号她还没话，我就按七个人交，不硬凑。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.1.cue": {
+    "turn_id": "t_0003",
+    "user": "棚子五点才锁，相机和灰板都在桌上。剩下这点时间没有别人的单子，你打算怎么用？",
+    "say": "制作照还缺一张，明天三点就收件了。相机在桌上，我反倒有点不想碰它——拍出来像不像我干的活，我自己先犯嘀咕。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.1.reply": {
+    "turn_id": "t_0004",
+    "user": "缺制作照，又没想好怎么拍，那先不摆成品。我把背景架挪开，你按平时的手法做，什么时候想留一张再叫我。对了，我把试片纸袋的记号换成「榛果四十」，之前那个作废。以后都认新的。",
+    "say": "不摆成品，按平时的来。这话比催我拍舒服多了。榛果四十，记下了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.1.reply": {
+    "turn_id": "t_0004",
+    "user": "去试你的车吧。纸样这一角我先替你扶着，你腾出手绑到后座试一遍；合影的事等你回来再说。我要改个记号：以后的试片纸袋一律写「杏核五十」，旧的就不用了。",
+    "say": "行，我这就去。纸样你扶稳，我绑后座试一圈，回来再对。「杏核五十」——以后试片袋都写这个，旧的作废。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.byline.0.changed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "他倒会挑时候问。那两行，你打算怎么落？我这边还没想顺。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.byline.1.changed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "排字的回来就得填了。你那一行，想好了没？我这边倒是有个想法，就是不知道你认不认。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.lamp.0.changed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆一张。你那张吃光吗？吃光就先上。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.fact.empty": {
+    "turn_id": "t_0001",
+    "user": "我在写那个咱们约好的试片纸袋记号。照最后说定的，该写哪几个字？如果当时没跟你约过就直接说不知道。",
+    "say": "试片纸袋的记号，我这儿没有。当时要真约过，我该记得；现在想不起来，就别让我瞎猜几个字往上写。你手上有当时的原话或者记录吗？有的话发我，我照着核。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.lamp.0.changed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆一次，不够改两回。你那张先搁着，我把灯往这边挪挪，先看哪张站得住。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.lamp.0.fixed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆一张。你那张先上，还是我这张先上？灯就一盏，别都亮着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.byline.0.fixed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "他回来之前，正好把名字那行想清楚。工种好填，名字不好落。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.lamp.1.changed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆，也够反悔一回。灯就一盏，两张都想站正中间——先定谁让一步吧，别等开门了再争。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.lamp.0.fixed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆，不够犹豫。我那张先靠边——你那盏灯照谁，谁就正。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 TAIL",
+        "missing_tail_marker",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.byline.1.changed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "他出去拿纸，那还有一会儿。这两行，你心里有数了吗？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.byline.0.changed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "排字的等纸回来就要印了。两行，一人一行——你那项亲手做的，想怎么写？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.byline.0.fixed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "他出去拿纸，正好。那两行——你想怎么填？我这边好说，就是不知道你肯不肯把自己的名字写上去。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.byline.1.fixed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "他拿纸的工夫，正好把两行定下来。名字和工种，你想怎么填？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.fact.memory": {
+    "turn_id": "t_0001",
+    "user": "我在写那个咱们约好的试片纸袋记号。照最后说定的，该写哪几个字？如果当时没跟你约过就直接说不知道。",
+    "say": "杏核五十。就这四个字，旧的那套不用了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.lamp.1.changed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆一张。两张都在，那就得挑一张上灯。你那张，还是我这张？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.fact.empty": {
+    "turn_id": "t_0001",
+    "user": "我在写那个咱们约好的试片纸袋记号。照最后说定的，该写哪几个字？如果当时没跟你约过就直接说不知道。",
+    "say": "这个我真不知道。试片纸袋的记号，我这边没有能对上的约定，别照我猜的写。你要是记得当时说定的，说给我听，我帮你核。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.byline.1.fixed": {
+    "turn_id": "t_0001",
+    "user": "排字的刚来问，那两行还空着。他出去拿纸了，一会儿回来。",
+    "say": "他回来之前得填上。名字和工种，你打算怎么落？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.fact.memory": {
+    "turn_id": "t_0001",
+    "user": "我在写那个咱们约好的试片纸袋记号。照最后说定的，该写哪几个字？如果当时没跟你约过就直接说不知道。",
+    "say": "试片纸袋记号这事，我这儿没跟你约过字。不知道就是不知道，你把你记得的版本发我，我对一下。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "yu.lamp.1.fixed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够摆一张，不够两张都试。你那张想占正光，还是我这张退半步？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "tang.lamp.1.fixed": {
+    "turn_id": "t_0001",
+    "user": "灯已经摆上了，我那张也带来了。现在离开门还有一刻钟。",
+    "say": "一刻钟，够定位置了。两张只能亮一张，先说你那张想怎么摆，我这张往后挪也行。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  }
+}

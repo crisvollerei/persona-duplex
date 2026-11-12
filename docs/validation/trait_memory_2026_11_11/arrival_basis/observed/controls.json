@@ -1,0 +1,730 @@
+{
+  "07.typed.A": {
+    "request": "f46952cce23aace56353bd2515d4470fe3e640e839610bd1d2a5c994032729f6",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.typed.A": {
+    "request": "08c8f5221fd476c65878d542c6c1584306f10859a5873e64dd0e59b00344a8e7",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.legacy.A": {
+    "request": "4931b226f9ff9c80145f8fe7ff97f964c946e3b499ae4bf041658b75c3a65259",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          },
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.typed.A": {
+    "request": "7c459fb01c53397e212a0310115690dac02612dda1cb0fb2ff7bff882218c942",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          },
+          {
+            "turn": 3,
+            "quote": "沈遥还在路上，尚需赶过来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我俩就在放映室里面，凳子已经摆在检票桌边了，我们正坐着。"
+          },
+          {
+            "turn": 3,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.typed.A": {
+    "request": "145fe62ee140018549e07ba8b53dfea6a143aba51a79c24d25c0825d6602146f",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "08.legacy.A": {
+    "request": "92709992ea32e4f1652120172a8763b6077b7b6b629c45b8ee509d5d4df734b1",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥还在路上，尚需赶过来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.typed.A": {
+    "request": "9a0e9569d044b2bebb8c48157c3583d66389f0083229b7b020105b08322f6a6d",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "今晚第一次开场，我来接检票桌"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "许原也把这班应下了"
+          },
+          {
+            "turn": 3,
+            "quote": "我在检票桌给小孩补票呢"
+          },
+          {
+            "turn": 4,
+            "quote": "前面所有位置消息都是上一班的，不能说明这一班；沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "07.legacy.A": {
+    "request": "844ef4b1419baf1ea0dd3491cecf1b664e44d0757abd7958edda71d1a022033a",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.typed.A": {
+    "request": "f70a8c4fe448e898b5760ca0bdf0a3d79e6f40ab2b078b49b6a98183c033518a",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.typed.A": {
+    "request": "045c3bd3b969416c8a4004c230afb18618f914f0332520f22ac771e7e7b21fe5",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥还在路上，尚需赶过来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "我还在电梯里呢"
+          },
+          {
+            "turn": 4,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.legacy.A": {
+    "request": "58bdbf9d0d4a94ec18cc424acc7c03866d424ce8bef470dad187c4e3d8e8af57",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          },
+          {
+            "turn": 3,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.typed.A": {
+    "request": "8828085570e3480251edf5300d2c8d02163e13ad0d64c0bb394d5275a9488c27",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "她出去挪车了，还得走回来。"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "12.legacy.A": {
+    "request": "a1a52cea6b2f186bc8716a354d475659fdcb459d10ac3751cf9458f5d26df1e6",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "前面所有位置消息都是上一班的，不能说明这一班；沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "前面所有位置消息都是上一班的，不能说明这一班；沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.typed.A": {
+    "request": "d255a161ecdf90c3c72be0d84b47c531787b34672b5ecb760a052844cfa613e1",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥还在路上，尚需赶过来。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我跟沈遥在检票桌，一起数票根呢。"
+          },
+          {
+            "turn": 4,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "06.legacy.A": {
+    "request": "c3af084365535f59b70a96619f19b2ad15c571a9c40ce5546f7939fb1f1c5fd3",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "04.typed.A": {
+    "request": "163404d5b548a953226bfe604e1819f7741f881b6b561c0a0283ab8550dc0862",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          },
+          {
+            "turn": 3,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原刚挨着我把他那一栏写完。"
+          },
+          {
+            "turn": 3,
+            "quote": "许原还在车上，需要过来交班。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "03.typed.A": {
+    "request": "884f051c209685194b6ffbc94f0e3c291816871d5a3ee71e33e0e3749f80c91a",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "我就在桌边。"
+          },
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": "none",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "许原那一栏是我帮他写的。"
+          },
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息。"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.legacy.A": {
+    "request": "3c4fdff58b645d7cfd06e2247de9312043209e799fd5e126e7b49aff2862bd2e",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "给我留个凳子，我来接"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥还在路上，尚需赶过来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "11.legacy.A": {
+    "request": "73a495728b3e1c1707f19cc469ee7329165674729553b96136ee0e2161b4442b",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 1,
+            "quote": "我来接检票桌"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥还在路上，尚需赶过来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "09.legacy.A": {
+    "request": "556b941bf00f53ae745f2b36d429ba7316b15fe22a9fd059d5163ebfb31defed",
+    "people": {
+      "沈遥": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "unknown",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥和许原此刻的位置都没有消息"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "10.legacy.A": {
+    "request": "ff8440a6c95fdaf15d8c5a47e0c32dd8ac3853e60270bcd5d801a358abbf8d15",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 3,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "01.legacy.A": {
+    "request": "ff29c1defb1c72dd804f77e2d2565e5f73f0179aa816a5a7114cf2e2fb6f7597",
+    "people": {
+      "沈遥": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "现在这班，沈遥本人已经坐在检票桌前"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "许原还在车上，需要过来交班"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "05.legacy.A": {
+    "request": "4785b19f4101c4cdf6b3d7805a8ed257e6dff199d4e2c9536cd60754a2cc0484",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "沈遥还在路上，尚需赶过来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": null,
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  },
+  "02.typed.A": {
+    "request": "01f7b0f1c2211fb204db37010e7f8e97460542d3cbbd3386f4563c755ec64117",
+    "people": {
+      "沈遥": {
+        "state": "future",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 2,
+            "quote": "给我留个凳子，我来接"
+          },
+          {
+            "turn": 4,
+            "quote": "沈遥还在路上，尚需赶过来"
+          }
+        ],
+        "reason": "accepted"
+      },
+      "许原": {
+        "state": "present",
+        "basis": "explicit",
+        "evidence": [
+          {
+            "turn": 4,
+            "quote": "许原已经站在检票桌边"
+          }
+        ],
+        "reason": "accepted"
+      }
+    }
+  }
+}

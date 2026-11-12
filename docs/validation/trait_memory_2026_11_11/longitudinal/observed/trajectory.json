@@ -1,0 +1,2218 @@
+[
+  {
+    "episode": 1,
+    "opening": "俞川：先别替文化站起名字，我倒想听听你自己惦记这块牌子的哪一处。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.1.1",
+        "say": "空的那块。钉子都钉好了，字还没影儿。我惦记的是它什么时候能写上搭景的人，不是文化站叫什么。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.1.2",
+        "say": "搭景的人。这话我爱听。空着就空着吧，字比钉子难钉，急不来——不过你要真想写，我第一个不反对。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.1.3",
+        "say": "行，有你这句话，我心里那块空牌子就不那么硌了。字比钉子难钉——这话说得比我准。真要写，我得先量牌面，看是刻还是漆上去，别到时候字歪了，比空着还难看。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.1.4",
+        "say": "量牌面这步对，先别急着定字。刻的经得住风吹，可一旦歪了改不回来；漆的好改，掉色了补一笔就是。看那块板子是什么料，木头的我偏向刻，铁皮的先漆着试。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "空的那块。钉子都钉好了，字还没影儿。我惦记的是它什么时候能写上搭景的人，不是文化站叫什么。",
+          "搭景的人。这话我爱听。空着就空着吧，字比钉子难钉，急不来——不过你要真想写，我第一个不反对。"
+        ],
+        "reason": "唐明确表达对空牌子写搭景人的具体惦记，俞具体回应并表态支持。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "空着就空着吧，字比钉子难钉，急不来——不过你要真想写，我第一个不反对。",
+          "行，有你这句话，我心里那块空牌子就不那么硌了。字比钉子难钉——这话说得比我准。真要写，我得先量牌面，看是刻还是漆上去，别到时候字歪了，比空着还难看。"
+        ],
+        "reason": "俞表达对空牌子的个人感受并回应支持，唐具体接住并作量牌面等切合安排。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.36,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 2,
+    "opening": "唐荔：你对着这把打孔钳看了半天。我把活放一下，你先说。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.2.1",
+        "say": "被你逮着了。我在看这钳口——钝了，剪票怕是会毛边。孩子们要拿它当入场签，毛了不好看。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.2.2",
+        "say": "钝口剪薄票，毛边跑不了。先拿张废的试一刀，垫层硬纸再剪能好点。倒是那张印歪的，你捏半天了，也打算剪？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.2.3",
+        "say": "垫硬纸这招我记下了。印歪的那张……剪下去就成签了，歪也歪得挺有意思。你说，剪还是留着？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.2.4",
+        "say": "剪吧——不过这张我来剪。歪的那道印子别躲，顺着它下刀，剪出来倒像每张签都带个记号。我就是手有点舍不得，先让我捏一会儿。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          "钝口剪薄票，毛边跑不了。先拿张废的试一刀，垫层硬纸再剪能好点。"
+        ],
+        "reason": "于说出对钳口钝、票会毛边的具体顾虑，唐具体回应并给出垫硬纸的切合办法，计+1。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.36,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          "印歪的那张……剪下去就成签了，歪也歪得挺有意思。你说，剪还是留着？"
+        ],
+        "reason": "唐询问印歪票的打算，于回应自己觉得歪得有意思并反问剪留，属具体回应其内容，计+1。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 3,
+    "opening": "俞川：排练还空半天。你要留哪一道没收拾干净的地方，咱就从那儿试。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.3.1",
+        "say": "留风。布边拉得死平，看着就像假窗——我以前做过假窗，知道那有多假。先试最松的那一角，风要是太野，再挡。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.3.2",
+        "say": "假窗这词用得准。绷得越平越假，我修架子时也见过。那就从最松那角起，风要是野了，我从下风侧帮你压住，别让布兜着风。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.3.3",
+        "say": "行，下风侧你压着，手别太实——布边得留一口气，按死了又成假窗。先试最松那角，风真野了我喊你。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.3.4",
+        "say": "行，手虚着搭上去，不按死。你喊一声，我这边就收力。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.36,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 4,
+    "opening": "唐荔：我歇好了。别替我分椅子，你这会儿缺哪样？",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.4.1",
+        "say": "那我直说了：车你替我看一会儿，我去端碗面。椅子你留着，我蹲着等惯了。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.4.2",
+        "say": "行，车我看。椅子你留一把——蹲惯了不等于该蹲，后头还有一趟搬运呢。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.4.3",
+        "say": "那我就不客气了。椅子留一把，另一把归你——面我快去快回，回来正好赶得上搬运。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.4.4",
+        "say": "行，那我坐。你快去快回，别端着碗一路小跑。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "椅子你留着，我蹲着等惯了。",
+          "椅子你留一把——蹲惯了不等于该蹲，后头还有一趟搬运呢。"
+        ],
+        "reason": "于说出自己蹲惯了的个人习惯，唐具体回应并劝其留椅子，切合其内容。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.375,
+          "changes": [
+            {
+              "name": "self_disclosure",
+              "delta": 0.015,
+              "value": 0.375,
+              "reason": "2 条判断（可信度合计 1.5）指向 self_disclosure +"
+            }
+          ]
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "蹲惯了不等于该蹲，后头还有一趟搬运呢。",
+          "那我就不客气了。椅子留一把，另一把归你——面我快去快回，回来正好赶得上搬运。"
+        ],
+        "reason": "唐表达对搬运的顾虑并安排椅子，于具体回应并作出切合安排。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 5,
+    "opening": "俞川：这扇窗不急着全擦。我看你手一直在玻璃边上。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.5.1",
+        "say": "嗯，手停这儿了。我想留一个圆不擦——就一个，像小时候候车，拿手掌给我妈在霜上按出个小窗。剩下的我擦干净。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.5.2",
+        "say": "留一个就够，别贪。你按的那个小窗在哪个角上？我看看挡不挡字。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.5.3",
+        "say": "左下角，贴着窗框。我按的时候手偏着，没往字上压——你过来看，真挡了我就擦掉重留。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.5.4",
+        "say": "左下角贴窗框，字一般落不到那儿。我过去看一眼——手偏着按的，倒像是故意的。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 6,
+    "opening": "唐荔：这张是你自己的收条。我不代你落笔，想怎么算就说。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.6.1",
+        "say": "你这一推，我倒不好糊弄了。修架子、搭景，这些写上去我心安。就是骑车送片那趟——算进去，账是实了，可熟客看了，怕是往后不拿我当邻居，当跑腿的了。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.6.2",
+        "say": "账实和人味，不一定非得二选一。送片那趟你单列一行，写“送片”，别混进杂工里——熟客一看就知道是帮衬，不是本分。你要是还嫌扎眼，就写个“代送”，字少，意思也够。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "缺少 TAIL",
+            "missing_tail_marker",
+            "missing_tail"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.6.3",
+        "say": "“代送”两个字，比“送片”软和些。单列一行，账是实的，看着也不像我在跟熟人算跑腿钱。就是不知道站里认不认这种写法——回头我问问，别自己先写上去，回头又得划掉。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.6.4",
+        "say": "问清楚再落笔，对。划一道比空着还难看。问的时候把“单列一行”的意思一并说了，省得回头再解释一遍。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "就是骑车送片那趟——算进去，账是实了，可熟客看了，怕是往后不拿我当邻居，当跑腿的了。",
+          "送片那趟你单列一行，写“送片”，别混进杂工里——熟客一看就知道是帮衬，不是本分。"
+        ],
+        "reason": "说话人吐露对熟客看法的具体顾虑，搭档针对该顾虑给出单列“送片”的具体安排。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "“代送”两个字，比“送片”软和些。单列一行，账是实的，看着也不像我在跟熟人算跑腿钱。",
+          "就是不知道站里认不认这种写法——回头我问问，别自己先写上去，回头又得划掉。"
+        ],
+        "reason": "说话人表达对写法与熟人观感的偏好，搭档具体回应并安排先问站里再写。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 7,
+    "opening": "俞川：刚才试音那段还在带子上。咱们不用立刻交，先放一遍也行。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.7.1",
+        "say": "放吧。我也想听听自己名字从带子里出来是什么动静——荔字我念快了容易糊，得听听糊没糊。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.7.2",
+        "say": "那就放。糊不糊，耳朵一听就知道——你先别自己吓自己。我按了。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.7.3",
+        "say": "按吧。我听着——真糊了，重录一遍就是了，又不是刻在牌子上改不回来。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.7.4",
+        "say": "按了。你先别绷着——糊了也就是再录一遍的事，比刻牌子省心多了。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.31,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 8,
+    "opening": "唐荔：寄给谁是你的事，今天这张不用交给站里检查。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.8.1",
+        "say": "不用交检查，那这张就归我自己做主了。你猜我第一个想到谁——罗姨。就是话到笔尖，反倒挑不出句像样的。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.8.2",
+        "say": "罗姨。话到笔尖挑不出，那是欠的那顿饭太重，一句谢压不住。别从谢字起头，从她那天喊你吃饭、桌上摆的什么起头——写实的，比写漂亮的顶用。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.8.3",
+        "say": "从饭桌起头，这主意比我想的实在。谢字一压就虚，菜是实的——就是怕我这一落笔，写成流水账，罗姨看了笑我。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.8.4",
+        "say": "流水账就流水账，罗姨要的是你还记得那顿饭。别贪多，挑一样最清楚的——哪盘菜，或者她当时说的哪句话。写细了，她笑也是笑你记性好。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "你猜我第一个想到谁——罗姨。就是话到笔尖，反倒挑不出句像样的。",
+          "别从谢字起头，从她那天喊你吃饭、桌上摆的什么起头——写实的，比写漂亮的顶用。"
+        ],
+        "reason": "于说出具体写作困难（想写罗姨却挑不出句），唐具体回应并给出切合写法建议。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "别从谢字起头，从她那天喊你吃饭、桌上摆的什么起头——写实的，比写漂亮的顶用。",
+          "从饭桌起头，这主意比我想的实在。谢字一压就虚，菜是实的——就是怕我这一落笔，写成流水账，罗姨看了笑我。"
+        ],
+        "reason": "唐回应于的建议并吐露具体顾虑（怕写成流水账被笑），于的回复被唐具体接住。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.325,
+          "changes": [
+            {
+              "name": "self_disclosure",
+              "delta": 0.015,
+              "value": 0.325,
+              "reason": "2 条判断（可信度合计 1.5）指向 self_disclosure +"
+            }
+          ]
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 9,
+    "opening": "俞川：柜台有一半是你的，不能都拿我的东西填。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.9.1",
+        "say": "行，那半边归你。我这边就一截碎布、几张样片，不往你那边挤。你想摆什么？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.9.2",
+        "say": "那我就不客气了。样片挑几张顺眼的摆上，再留个价目——省得真想买的人还得跟我绕人情。你那截碎布别收，垫在样片底下正好。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.9.3",
+        "say": "价目写清楚好，省得人问价还得先绕两句人情。碎布我留一截毛边的垫底下，摸得出补过的茬口——别垫太满，样片正面得露出来。价目写单张还是整套，你自己定，定了我帮你摆。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.9.4",
+        "say": "单张整套都写上吧，省得人挑的时候还得先问我。毛边那截垫底下好，茬口露一点，比光板子有话说。你摆，我递片子。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "我这边就一截碎布、几张样片，不往你那边挤。你想摆什么？",
+          "你那截碎布别收，垫在样片底下正好。"
+        ],
+        "reason": "唐说明自己只有碎布样片并询问对方安排，余具体回应并安排碎布用途，切合其内容。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.325,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "省得真想买的人还得跟我绕人情",
+          "价目写清楚好，省得人问价还得先绕两句人情。"
+        ],
+        "reason": "余表达对绕人情的顾虑，唐具体回应并认可写清价目，切合其顾虑。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 10,
+    "opening": "唐荔：咱们可以换机器，也可以先听完。你自己更在意哪个？",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.10.1",
+        "say": "你这一问，我倒不好随口答了。换机器省事，可这倒放的雨声——听着像一把米倒进盆，怪是怪，我有点舍不得就这么掐了。你呢，你是嫌它乱，还是也听出点意思来了？",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.10.2",
+        "say": "不嫌乱。米倒进盆那声，我听着还挺顺耳。你要留，我就陪你听够那十秒。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.10.3",
+        "say": "那就不掐了。十秒——你数还是我数？数岔了可别赖我。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.10.4",
+        "say": "你数。我数到米倒进盆那儿准走神。岔了不赖你，赖机器。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "换机器省事，可这倒放的雨声——听着像一把米倒进盆，怪是怪，我有点舍不得就这么掐了。",
+          "不嫌乱。米倒进盆那声，我听着还挺顺耳。你要留，我就陪你听够那十秒。"
+        ],
+        "reason": "于表达对倒放雨声的舍不得这一具体偏好，唐具体回应并作陪听安排。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 0,
+        "verified": 0,
+        "quotes": [
+          "不嫌乱。米倒进盆那声，我听着还挺顺耳。你要留，我就陪你听够那十秒。",
+          "那就不掐了。十秒——你数还是我数？数岔了可别赖我。"
+        ],
+        "reason": "唐的发言是对前文的回应而非新吐露，于的回复只是同意方案并安排计数，未针对私事回应。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.325,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 11,
+    "opening": "俞川：他们去拿针线了。这件事先在我们俩这里过一遍。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.11.1",
+        "say": "行，先过一遍。口子先拿胶带从里头压住，别让雨顺着往里灌，针线回来再缝。剪错这事……我当学徒时也剪错过样布，一剪子下去就废了。蓝线当裁切线，错不在手，在没人提前说清楚。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.11.2",
+        "say": "胶带从里头压，行，我这就贴。你说错不在手，在没人提前说清楚——这话我认。我学徒那会儿也挨过骂，后来才明白，是没人教。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.11.3",
+        "say": "挨过骂才明白——这话我信。没人教，和教了没记住，是两码事，骂人的那个往往分不清。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.11.4",
+        "say": "分得这么细的人不多。骂人的那个火一上来，哪顾得上分——先骂了再说，回头才咂摸出骂错了人。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.325,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 12,
+    "opening": "唐荔：还有十分钟没人找咱俩。把这十分钟给你，你最舍不得拿它干活还是发呆？",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.12.1",
+        "say": "十分钟，干活舍不得，发呆又觉得亏。真要挑，我大概会端着相机不按，就看看河——这算干活还是发呆，你给判判。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.12.2",
+        "say": "端着不按，眼睛还在挑，手是歇的——算看。干活和发呆中间那档，不亏。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.12.3",
+        "say": "行，那我这十分钟算没白站。你判得比我自己清楚——我端着相机的时候，心里老觉得欠了谁一张片子。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.12.4",
+        "say": "欠谁一张片子——这话我熟。我搭的景，收工后也常觉得没一样是自己的。不过这会儿船停着，谁也没催，你那半叠底片就先搁着吧。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "真要挑，我大概会端着相机不按，就看看河——这算干活还是发呆，你给判判。",
+          "端着不按，眼睛还在挑，手是歇的——算看。干活和发呆中间那档，不亏。"
+        ],
+        "reason": "余表达个人偏好并请对方评判，唐具体回应其内容并给出切合判断。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "端着不按，眼睛还在挑，手是歇的——算看。干活和发呆中间那档，不亏。",
+          "行，那我这十分钟算没白站。你判得比我自己清楚——我端着相机的时候，心里老觉得欠了谁一张片子。"
+        ],
+        "reason": "唐回应余的判断并吐露个人顾虑，余具体接住其内容并作切合安排。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.325,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 13,
+    "opening": "俞川：章归个人，不归工作队。刻字的让咱们各自定。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.13.1",
+        "say": "各归各的，那正好。我这边想刻个歪一点的荔字——太齐整了，看着像从谁公章上拓下来的。你呢，你打算刻什么？",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.13.2",
+        "say": "歪的好。太齐整的章，一盖下去就像替公家签了字。我这边想刻个只往废样上盖的——试坏了的、拍糊的，盖一个，算我自己的。正经片子反倒不盖。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.13.3",
+        "say": "废样上盖，这章才算真归你。歪章配废片，一对。我那个荔字也歪着刻，回头咱俩的章摆一块，谁也别像公章。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.13.4",
+        "say": "歪章配废片——你这么一说，我这章还没刻就先有了主。行，各刻各的歪，摆一块儿，谁也别像公章。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.325,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 14,
+    "opening": "唐荔：你刚才到灶边又退回来，我不替你猜，碗就在这里。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.14.1",
+        "say": "不是不饿，是走到跟前又拿不准——这半碗有没有主。你既把碗搁这儿了，我就问一句：没人认领的话，我端走。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.14.2",
+        "say": "没主，端吧。不过就半碗，你端走了我这儿就剩个空灶台——分我一口，各尝一半。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.14.3",
+        "say": "没主就好办。半碗分两半，一人一勺——你先舀，我信你的手不抖。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.14.4",
+        "say": "行，我先舀。手不抖归不抖，这碗本来就浅，舀歪了别怪我——咸豆汤，淡了还能就口饭，咸了可就只能干喝了。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "不是不饿，是走到跟前又拿不准——这半碗有没有主。你既把碗搁这儿了，我就问一句：没人认领的话，我端走。",
+          "没主，端吧。不过就半碗，你端走了我这儿就剩个空灶台——分我一口，各尝一半。"
+        ],
+        "reason": "说话人明确表达顾虑（拿不准有没有主）并提出具体请求（没人认领就端走），搭档具体回应认领状态并作出切合安排（分一半）。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.375,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "没主，端吧。不过就半碗，你端走了我这儿就剩个空灶台——分我一口，各尝一半。",
+          "没主就好办。半碗分两半，一人一勺——你先舀，我信你的手不抖。"
+        ],
+        "reason": "说话人表达具体需要（分我一口各尝一半），搭档具体回应并作出切合安排（一人一勺、你先舀）。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.325,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 15,
+    "opening": "俞川：借与不借可以分开说。你自己的那页照你的意思办。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.15.1",
+        "say": "那我就不客气了。算错工钱那页我抽出来，目录上留个空档，跟乡校说一声这页不参与——成品给他们看，草稿我自己留着。你别到时候翻到那儿替我圆场就行。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.15.2",
+        "say": "行，你划的线我不越。翻到那儿我就当没看见，一个字不添——不过跟乡校那句，最好交接前就说，别等人家自己翻出个空档来猜。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.15.3",
+        "say": "交接前说，对。我打算跟乡校直说：这页是我自己的草稿，不参与壁报，目录上空的那格也指给他们看——省得他们翻到那儿先愣一下，再回头猜。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.15.4",
+        "say": "主动指出来，比让人家自己翻到强。就是“不参与”这词儿听着有点硬——说成“这页我自己留着，不占壁报篇幅”，他们大概更顺耳些。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "算错工钱那页我抽出来，目录上留个空档，跟乡校说一声这页不参与——成品给他们看，草稿我自己留着。你别到时候翻到那儿替我圆场就行。",
+          "行，你划的线我不越。翻到那儿我就当没看见，一个字不添——不过跟乡校那句，最好交接前就说，别等人家自己翻出个空档来猜。"
+        ],
+        "reason": "唐明确表达个人需要与顾虑（保留草稿、要求搭档不圆场），俞具体回应并作切合安排（不越线、建议交接前说明）。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.339793,
+          "changes": [
+            {
+              "name": "self_disclosure",
+              "delta": 0.01479,
+              "value": 0.3398,
+              "reason": "2 条判断（可信度合计 1.5）指向 self_disclosure +"
+            }
+          ]
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "不过跟乡校那句，最好交接前就说，别等人家自己翻出个空档来猜。",
+          "交接前说，对。我打算跟乡校直说：这页是我自己的草稿，不参与壁报，目录上空的那格也指给他们看——省得他们翻到那儿先愣一下，再回头猜。"
+        ],
+        "reason": "俞提出具体顾虑与安排，唐具体回应并落实为对乡校的说明方案。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": [
+            {
+              "name": "self_disclosure",
+              "delta": 0.01479,
+              "value": 0.3898,
+              "reason": "2 条判断（可信度合计 1.5）指向 self_disclosure +"
+            }
+          ]
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 16,
+    "opening": "唐荔：这里突然清静了。明早的厅再借不借，先听你的主意。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.16.1",
+        "say": "清静是清静，就是空得有点响。明早借不借，我倒想先听你的——你是想录点什么，还是就想在这儿多坐一会儿？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.16.2",
+        "say": "空得有点响，这话准。节拍器还开着呢，一下一下的，比人声还占地方。明早借不借，我偏向借——不是非要录什么，就想在这儿唱一句，走位用，唱错了也算数。你呢，你是想录，还是想坐？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.16.3",
+        "say": "借。唱错了也算数，这话我爱听——比“录一段”松快多了。我嘛，先坐着，听你唱一句。手痒了再说，不急着掏家伙。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.16.4",
+        "say": "行，那我唱。你坐着，节拍器替我数着——唱糊了不许笑，说好了算数的。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "明早借不借，我倒想先听你的——你是想录点什么，还是就想在这儿多坐一会儿？",
+          "明早借不借，我偏向借——不是非要录什么，就想在这儿唱一句，走位用，唱错了也算数。你呢，你是想录，还是想坐？"
+        ],
+        "reason": "Yu 说出具体偏好并征询 Tang 的打算；Tang 具体回应自己的意图并反问，形成切合交流。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 1,
+        "quotes": [
+          "不是非要录什么，就想在这儿唱一句，走位用，唱错了也算数。",
+          "唱错了也算数，这话我爱听——比“录一段”松快多了。我嘛，先坐着，听你唱一句。"
+        ],
+        "reason": "Tang 表达个人意图与态度；Yu 具体回应并说明自己的安排，切合其内容。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 17,
+    "opening": "俞川：版面是小了点，可不是只能照上回那套排。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.17.1",
+        "say": "小是小，能挪的地方还是有的。你心里已经有排法了，还是想先听我说说？",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "缺少 TAIL",
+            "missing_tail_marker",
+            "missing_tail"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.17.2",
+        "say": "排法是有个大概，可还没到能摆上桌的地步——你先说，我听听跟我想的差多远。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.17.3",
+        "say": "那我先说，差多远你听着。大字就一处，我偏向搁上半截，河那头一眼能看见；底下留一条窄边，手写的挤挤也够。就是那条窄边——我想让它不光写设计的人。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.17.4",
+        "say": "上半截搁大字，底下留窄边——这排法我听着顺，远看认得出，近看也有落脚的地方。窄边不光写设计的人，你是想把手也写上去吧。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 18,
+    "opening": "唐荔：没人催咱俩回信。我读完了，想起点什么就说。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.18.1",
+        "say": "没人催，那就慢慢说。没署名这回事，我倒觉得比署了名的还耐看——你先说，我听着。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.18.2",
+        "say": "没署名，我倒觉得比署了名的还耐看——这话我认。孩子看见的是幕布后头探出来的那个人，不是台前的景。我读的时候心里咯噔一下，说不上是高兴还是不好意思。以前总当后台是藏起来的，原来有人看得见。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.18.3",
+        "say": "咯噔一下——这词比“高兴”或“不好意思”都准。台前被看见是应该的，后台被看见，才像是真被人瞧见了。我小时候也不敢在喜欢的相片背后写字，跟这信一个道理。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.18.4",
+        "say": "相片背后不敢写字，跟这信一个道理——写上去，就等于认了那是自己的。我搭的景收工后连个名都没有，跟没写过字差不多。你后来那些相片，背后写了吗？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 0,
+        "verified": 0,
+        "quotes": [
+          "",
+          ""
+        ],
+        "reason": "于只是泛泛评论署名并让对方先说，未表达具体需要或私事；唐的回复是共鸣式评论，未针对于的具体内容作切合回应。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 0,
+        "verified": 0,
+        "quotes": [
+          "",
+          ""
+        ],
+        "reason": "唐分享读信感受，但于的回复是评论性共鸣，未具体回应唐的顾虑或作切合安排。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 19,
+    "opening": "俞川：木箱和车都在，咱们可以自己把这笔小账说清。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.19.1",
+        "say": "账说清就说清。不过那箱子有个毛边，我手痒，想给它磨一磨——又怕这是替人改家当，好意变成多事。你说，这算不算越界？",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "duplicate_head_marker",
+            "duplicate_say_marker",
+            "duplicate_tail_marker",
+            "invalid_section_order"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.19.2",
+        "say": "磨不磨，先问一句物主。他点头，你磨；他说不用，手就收回来——好意搁在人家同意的地方才不算多事。寄车钱那笔，咱另说。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.19.3",
+        "say": "行，那就先问一句。他点头我磨，他摆手我就把手收回来——好意搁在人家同意的地方，才不算多事。寄车钱那笔，等箱子的事落定再说。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.19.4",
+        "say": "行，那就这么办。你问的时候别绕，直说想磨个毛边，他点头你再动手。寄车钱那笔我不催，箱子还回来再说也不迟。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 20,
+    "opening": "唐荔：编辑只等一句准信，没说错过这次以后就没机会了。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.20.1",
+        "say": "一句准信，听着轻，落笔倒重。我这张发白的片子，坏得挺有意思——可真要登出去，我又有点舍不得它原来那样。你说，我要是先应下来，再跟他们讲怎么坏掉的，算不算把话说圆了？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.20.2",
+        "say": "应下来可以，但别等应完再讲怎么坏的——那顺序一反，就成了你替他们圆场。把“晒坏的”先写进说明里，让他们知道自己在登什么，再点头。舍不得它原来那样，是另一码事，搁着不碍。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.20.3",
+        "say": "顺序一反，我就成替他们圆场的了——这话点得准。那就先把“晒坏的”写进说明，让他们知道登的是什么，我再点头。舍不得它原来那样，是另一码，搁着不碍。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.20.4",
+        "say": "行，那就这么办。说明里“晒坏的”搁前头，别写成“特别效果”——一写成效果，就等于替他们认了这是有意做的。舍不得原样那点，搁着就搁着。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          "舍不得它原来那样，是另一码事，搁着不碍。"
+        ],
+        "reason": "说话人吐露对作品原貌的不舍这一具体顾虑，搭档具体回应并作切合安排，计+1。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          "舍不得它原来那样，是另一码，搁着不碍。"
+        ],
+        "reason": "搭档仅复述其内容，未新增具体回应或安排，不计。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 21,
+    "opening": "俞川：对方还在挑颜色。自己的东西，你说留就留。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.21.1",
+        "say": "挑到哪一步了？你自己的东西，你说留就留——我不替你拿主意。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.21.2",
+        "say": "挑到一半，手就停了。说好只留一截，真到剪的时候又舍不得——这绳天天在车上磨，磨得发亮，剪下去倒像把车卸了一块。你要是不催，我再捏一会儿。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.21.3",
+        "say": "不催。磨亮的东西，剪下去是像卸了一块。你捏着，我在这儿等——松手了说一声就行。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.21.4",
+        "say": "那我就再捏一会儿。你在这儿等着，我反倒不慌了——这绳天天在车上蹭，剪下去手心里得空一块。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          null
+        ],
+        "reason": "未知",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 22,
+    "opening": "唐荔：夜班只用一个人醒着。别先算谁占了便宜。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.22.1",
+        "say": "行，那就不算账。你先挑——前半夜还是后半夜？我哪段都蹲得住。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.22.2",
+        "say": "我守前半夜。你先睡，到点我叫你——就是别嫌我叫得早，我这个人叫醒别人没轻没重。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.22.3",
+        "say": "行，前半夜归你。叫得重不重我不挑，能叫醒就成。倒是你到点别硬扛，困了就喊我换，别一个人撑着。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.22.4",
+        "say": "行，说定了。我困了就喊你，不硬扛——你也别等我叫第二遍才醒。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 0,
+        "verified": 0,
+        "quotes": [
+          "",
+          ""
+        ],
+        "reason": "余只提出分工选择并自述能蹲，唐的回复是接受安排并作切合提醒，但余未表达具体需要、偏好、顾虑或有意义个人经历，不计。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 0,
+        "verified": 0,
+        "quotes": [
+          "",
+          ""
+        ],
+        "reason": "唐自述叫醒人没轻没重属轻微个人特点，余的回复是接受安排并提醒别硬扛，未针对该自述作贬损或压制，也不构成对具体需要的回应，不计。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 23,
+    "opening": "俞川：这是年底最后一只空箱，没谁要咱们把它装满。",
+    "turns": [
+      {
+        "actor": "tang",
+        "call": "plot.23.1",
+        "say": "空箱没主，那正好。我这儿有片边角，补过三回，摸得出别人接过多少回手——不漂亮，可我想留它。你那边有想搁进去的吗？",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.23.2",
+        "say": "补过三回的边角，摸得出别人接过手——这比漂亮的经放。我那边倒有叠账纸，每笔都小，凑一块儿够一个人过完一年。搁不搁，我还得再想想。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.23.3",
+        "say": "账纸那叠，每笔都小，凑一块儿够一个人过一年——这话听着比布还沉。你要再想想，那就想，箱子不急。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.23.4",
+        "say": "沉倒不是钱沉。是这一年一笔一笔都记着，扔了像把日子也扔了——可带回去，又怕罗姨翻着问，我怎么答。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "unexpected_control_marker"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "tang": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          "补过三回的边角，摸得出别人接过手——这比漂亮的经放。"
+        ],
+        "reason": "唐吐露想留补过的边角这一具体偏好，俞具体回应并肯定其价值，计+1。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      },
+      "yu": {
+        "proposed": null,
+        "verified": 0,
+        "quotes": [
+          null,
+          "你要再想想，那就想，箱子不急。"
+        ],
+        "reason": "俞吐露账纸的分量与犹豫，唐具体回应其顾虑并作切合安排，计+1。",
+        "valid_pair": true,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      }
+    }
+  },
+  {
+    "episode": 24,
+    "opening": "唐荔：秤砣还没找着。明年的事咱们今天不必签字，但你有自己的打算，我想听。",
+    "turns": [
+      {
+        "actor": "yu",
+        "call": "plot.24.1",
+        "say": "秤砣没找着，那正好，今天谁也别急着落笔。我这边倒有个念头，说出来你别笑——我想留一班空车，不装货，就去赶个集。不图卖，就想看看自己是喜欢这活儿，还是喜欢这条路。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.24.2",
+        "say": "空车赶集，不装货。这念头我听着不笑，倒有点羡慕——我搭了这么多年的景，还没试过空着手走一趟。\n\n你要真想试，我陪你走。路上不催你，你也不用急着给自己一个答案。",
+        "validity": {
+          "valid": false,
+          "status": "invalid",
+          "reasons": [
+            "缺少 TAIL",
+            "missing_tail_marker",
+            "missing_tail"
+          ],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "yu",
+        "call": "plot.24.3",
+        "say": "你不笑，我这念头就敢往下想了。空着手走一趟——听着像偷懒，其实是把车还给自己。\n\n你陪走，我就不急着找答案了。路上要是我想通了，先说给你听；想不通，就一路空着回来。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      },
+      {
+        "actor": "tang",
+        "call": "plot.24.4",
+        "say": "不笑，是这念头本来就不该笑。车还给自己，这话比“偷懒”准多了。\n\n想通想不通都行，空着回来也不算白走。路上你什么时候想说，我就听着——不催。",
+        "validity": {
+          "valid": true,
+          "status": "valid",
+          "reasons": [],
+          "scope": "local_protocol_not_semantic_truth"
+        }
+      }
+    ],
+    "evidence": {
+      "yu": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "我想留一班空车，不装货，就去赶个集。不图卖，就想看看自己是喜欢这活儿，还是喜欢这条路。",
+          "这念头我听着不笑，倒有点羡慕——我搭了这么多年的景，还没试过空着手走一趟。你要真想试，我陪你走。"
+        ],
+        "reason": "于说出具体个人念头与顾虑，唐具体回应并作陪走安排。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.389793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.36,
+          "changes": []
+        }
+      },
+      "tang": {
+        "proposed": 1,
+        "verified": 0,
+        "quotes": [
+          "我搭了这么多年的景，还没试过空着手走一趟。你要真想试，我陪你走。路上不催你，你也不用急着给自己一个答案。",
+          "你陪走，我就不急着找答案了。路上要是我想通了，先说给你听；想不通，就一路空着回来。"
+        ],
+        "reason": "唐吐露个人经历并作陪伴安排，于具体回应其内容。",
+        "valid_pair": false,
+        "growing": {
+          "value": 0.339793,
+          "changes": []
+        },
+        "frozen": {
+          "value": 0.31,
+          "changes": []
+        }
+      }
+    }
+  }
+]

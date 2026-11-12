@@ -1,0 +1,50 @@
+{
+  "0": {
+    "values": {
+      "tang": {
+        "growing": 0.31,
+        "frozen": 0.31
+      },
+      "yu": {
+        "growing": 0.36,
+        "frozen": 0.36
+      }
+    },
+    "history": {
+      "tang": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "yu": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+    }
+  },
+  "12": {
+    "values": {
+      "tang": {
+        "growing": 0.325,
+        "frozen": 0.31
+      },
+      "yu": {
+        "growing": 0.375,
+        "frozen": 0.36
+      }
+    },
+    "history": {
+      "tang": "d22d35840709d953fd9bdc17ddcb91ef30b2f0139f7e708194b3be416034dd13",
+      "yu": "07cc6dbb4a1eb1a8ea7f61c861b04018bc0132fb724830487b1a67718d4efbb4"
+    }
+  },
+  "24": {
+    "values": {
+      "tang": {
+        "growing": 0.339793,
+        "frozen": 0.31
+      },
+      "yu": {
+        "growing": 0.389793,
+        "frozen": 0.36
+      }
+    },
+    "history": {
+      "tang": "09ac3f1e14bd587c0553df472df11963ae0a5acfbfffec707940db48006e80d9",
+      "yu": "5204aca05580b14bf704540b4e3165aad3ac0ea33fb199a8a7ba617ef23ef2bb"
+    }
+  }
+}

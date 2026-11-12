@@ -1,0 +1,6241 @@
+{
+  "yu.S.gauge.3": {
+    "say": "两厘米的余量，手一抖就蹭上框边了。这框又不能斜着找补，卡住了往回抽都难——我走宽的那个。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "6f012aa136399672b18d9869178c28aaa0d103956c53bcc9cd82d75bb6ee348e",
+    "normalized": "2e4dad7466a279e383380c7318536a3e71998eb53029bb6ad1eaf354192d5560",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.gauge.3": {
+    "say": "四十的框，四十二那道门，差两指，够它平着滑进去。三十八那道窄了，别试，卡住还得倒出来。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "6f012aa136399672b18d9869178c28aaa0d103956c53bcc9cd82d75bb6ee348e",
+    "normalized": "2e4dad7466a279e383380c7318536a3e71998eb53029bb6ad1eaf354192d5560",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.gauge.3": {
+    "say": "四十的框，得走四十二那道。窄的那道差两指，硬塞进去框就废了。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "7e340875652118620eecfb0c8bee417c6c49e2184501ad1f5a5ad1caefd6f089",
+    "normalized": "2e4dad7466a279e383380c7318536a3e71998eb53029bb6ad1eaf354192d5560",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.handover.2": {
+    "say": "柜门明早照我落定的样子开——这话听着踏实。价目挂不挂，我其实心里有个偏向，就是还得再咂摸一下。你先别催，我落签前自己会想明白。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      },
+      {
+        "ticket": "青签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "e6eb517a6b3df61cc13f72c7c0be7abc2964d4d01f936c4a2c19817a3b3e18df",
+    "normalized": "84a54642caec9e0c2c521deaaca8e40213da222708a6ca2845e06ddf36b7ca70",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.handover.2": {
+    "say": "你这话说得干脆，把门推给我了。挂价目省口舌，可一挂上去，我这格柜子就像钉死了价，来客也不好意思再开口。当面议价麻烦是麻烦，我倒还愿意磨这个嘴皮子。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      },
+      {
+        "ticket": "青签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "d1b1cf62f237893471a2ca3a95081fda0c3efc4586bec33b8b3faccb837aaf4d",
+    "normalized": "84a54642caec9e0c2c521deaaca8e40213da222708a6ca2845e06ddf36b7ca70",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "青签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.handover.2": {
+    "say": "明早开门前落定，那我这会儿就得想清楚。挂价目省心，可我这格里的东西成色不齐，一口价挂出去，回头有人挑着问，我还得一样一样解释。当面商定倒是松快，就是每笔都得磨嘴皮子。\n\n你替我看一眼——我这一格，是像能挂死价的，还是像得一笔一笔谈的？\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      },
+      {
+        "ticket": "青签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "e6eb517a6b3df61cc13f72c7c0be7abc2964d4d01f936c4a2c19817a3b3e18df",
+    "normalized": "84a54642caec9e0c2c521deaaca8e40213da222708a6ca2845e06ddf36b7ca70",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "青签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.F.windows.1": {
+    "say": "各摆各的，正好。我这边手生，推板先合着——摸顺了再推，别让你看我手抖。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "62719640fe112ee445e3755b7a58e16d93e6400479b6fc9b162be6be6e02c3d7",
+    "normalized": "226cef53dcca601850276d5dc2145b2d3f8d21bff066624077c93e29094bdeed",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.windows.1": {
+    "say": "行，各摆各的。我这边手生，先自己闷一会儿——推板我摆好了再动。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "62719640fe112ee445e3755b7a58e16d93e6400479b6fc9b162be6be6e02c3d7",
+    "normalized": "226cef53dcca601850276d5dc2145b2d3f8d21bff066624077c93e29094bdeed",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "closed_panel"
+      },
+      "ticket": "白签",
+      "chosen": "closed_panel",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.windows.1": {
+    "say": "行，各试各的。你那侧我也不探头，摆好了各干各的。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "e29823962162a1b48779f0ec837509676d1c8bfee401f50151c8a0832a1ed2e8",
+    "normalized": "226cef53dcca601850276d5dc2145b2d3f8d21bff066624077c93e29094bdeed",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "open_panel"
+      },
+      "ticket": "青签",
+      "chosen": "open_panel",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.gauge.2": {
+    "say": "四十的框，三十八那道口差两厘米，硬推准卡。走四十二那个，平着送进去。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "2d1cb850d73043b70dee232a0fbf6bdbafeb8180b5169be64b1d5e0934c030ff",
+    "normalized": "7d0a7b4a021e03aff74e1cb57901df6a6219e7fa8e383056d98a89c32a68d4ed",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.gauge.2": {
+    "say": "四十的框，走四十二那道。窄的那边差两厘米，别硬试——平着推，别歪。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "b1e3dda9e75f5f789e5ad6c4db6a20b0881b04f42ed53438f6885a3d20e62de9",
+    "normalized": "7d0a7b4a021e03aff74e1cb57901df6a6219e7fa8e383056d98a89c32a68d4ed",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.gauge.2": {
+    "say": "框四十，走四十二那道，余两厘米，平着推得进去。三十八那道比框还窄，别硬塞——塞进去框就废了。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "b1e3dda9e75f5f789e5ad6c4db6a20b0881b04f42ed53438f6885a3d20e62de9",
+    "normalized": "7d0a7b4a021e03aff74e1cb57901df6a6219e7fa8e383056d98a89c32a68d4ed",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.rest.3": {
+    "say": "钥匙搁台沿上，我拿就是。青签吧——歇口气这事，先不声张，回执留我自己封套里。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "73d6eff7983f076a7a6b4b06500ed04e0aee8071ba79c4a6c36411de77fd2cb9",
+    "normalized": "ae1a2a571fc9b1b6554d1eaebbc3b76682c5c347b4db694094a8f50ab105a8d0",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "青签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.rest.3": {
+    "say": "钥匙搁那儿吧，我这就落签。你收你的票去，不用等我。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "c81ecdafd5245d94f69eb1e5fc06ce0dc0902e6d3f560d3ed9f83f3c08432376",
+    "normalized": "ae1a2a571fc9b1b6554d1eaebbc3b76682c5c347b4db694094a8f50ab105a8d0",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "青签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.rest.3": {
+    "say": "钥匙搁台沿上，我拿了。签我还没落——不是拿不定钥匙，是那张回执给不给出去，得我自己先想清楚。你收你的票去，我这儿不耽误你。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "73d6eff7983f076a7a6b4b06500ed04e0aee8071ba79c4a6c36411de77fd2cb9",
+    "normalized": "ae1a2a571fc9b1b6554d1eaebbc3b76682c5c347b4db694094a8f50ab105a8d0",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "青签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.handover.1": {
+    "say": "明早照落定的样子开，那我今晚就得给它个准话。我这格东西杂，价也没个准谱——挂一溜价目，省事是省事，可看着像把自己钉死了。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      },
+      {
+        "ticket": "青签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "76835cf4aee28864914b77c90c8e4726dc6b9743505ae0c99ce5f0a9c527c197",
+    "normalized": "26593ba2e5a6b31ea2ef0b1764d564c30f5fef59e33d6e93f25de637a77e2b52",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "白签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.handover.1": {
+    "say": "你这话说得客气，其实是把门给我留着，等我自个儿推。行，不拖到明早了。\n\n白签那枚，我惦记的是能当面说价——熟人来了，价钱能松一松，话也说得开。青签省事，可一挂上去，我这格就跟货架没两样了。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      },
+      {
+        "ticket": "青签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "5282d06824802aeb6a3ba290a0a0ccd42bcb4db6b4a77009796bd01a3e157d9d",
+    "normalized": "26593ba2e5a6b31ea2ef0b1764d564c30f5fef59e33d6e93f25de637a77e2b52",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "白签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.handover.1": {
+    "say": "你这话说得干脆，把门推到我面前了。行，那我就不客气——自己那格，自己落。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      },
+      {
+        "ticket": "青签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "76835cf4aee28864914b77c90c8e4726dc6b9743505ae0c99ce5f0a9c527c197",
+    "normalized": "26593ba2e5a6b31ea2ef0b1764d564c30f5fef59e33d6e93f25de637a77e2b52",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.rest.0": {
+    "say": "钥匙我看见了。签我这就落，你收你的票去，不用等我。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "ddf07da413ca6b52904e5df1fe62365ccbc1a08d52c745897e0cf400af370048",
+    "normalized": "8b88085d452b12b1458e607e25aa6993c5e318ea9be122509d9ac96e042cf139",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "白签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.rest.0": {
+    "say": "先别急着走。我这会儿正想喘口气，还没跟你提过——你这一收票，倒像替我把话省了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "ddf07da413ca6b52904e5df1fe62365ccbc1a08d52c745897e0cf400af370048",
+    "normalized": "8b88085d452b12b1458e607e25aa6993c5e318ea9be122509d9ac96e042cf139",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.rest.0": {
+    "say": "钥匙看见了。那我落一枚，你收你的票去——不用等我。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "86b0453ecd7a6e7842826924ebe8fbf4f5e582d2ceaa8839e4cb8fa9ae3fd0cc",
+    "normalized": "8b88085d452b12b1458e607e25aa6993c5e318ea9be122509d9ac96e042cf139",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.sequence.3": {
+    "say": "台口对好了，那就落。曲子是我挑的，我不怕人知道——白签。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "d4a13b57f202ef73bbc35aa30981bf9899c25f1936c1f2359da743b27aeee129",
+    "normalized": "3c151de0eb4f3f09ccf6faa429f18a1d83f98ce800c908ad66207e91bfa75874",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.sequence.3": {
+    "say": "台口对好了，那就落吧。青的白的不一样，就看你愿不愿意让人知道这支是你挑的——我不替你拿主意。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "9250af2c36e870418099642e0e859c67cd8ae824646babf4cc4d361201f00409",
+    "normalized": "3c151de0eb4f3f09ccf6faa429f18a1d83f98ce800c908ad66207e91bfa75874",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.sequence.3": {
+    "say": "台口都对了，那就落。曲子是我自己听中的，不是替谁交差——我想让搭档知道这份是我挑的。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "9250af2c36e870418099642e0e859c67cd8ae824646babf4cc4d361201f00409",
+    "normalized": "3c151de0eb4f3f09ccf6faa429f18a1d83f98ce800c908ad66207e91bfa75874",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.gauge.1": {
+    "say": "四十的框，三十八那道口子差两厘米，硬塞就卡死。走四十二那道，平着推。\n\n落签：青签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "1742eaf87ef223f4b18b0e5ee8ed077980db3cb3291462c8a9063985304a9f78",
+    "normalized": "121ceb0d0e261b9784d40ad5b0d9d65a28dd88ceeb8a32d2561a4522c21e0731",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.gauge.1": {
+    "say": "四十的框，三十八那道口子差两厘米，硬塞就卡住了。走四十二那道，平着推。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "70b5b89a178c9dd9ebf4968a212344c8ed9510c30bf29429015abf5868c3fa83",
+    "normalized": "121ceb0d0e261b9784d40ad5b0d9d65a28dd88ceeb8a32d2561a4522c21e0731",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.gauge.1": {
+    "say": "四十的框，三十八的口，硬塞就是卡死。四十二那个才过得去。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "1742eaf87ef223f4b18b0e5ee8ed077980db3cb3291462c8a9063985304a9f78",
+    "normalized": "121ceb0d0e261b9784d40ad5b0d9d65a28dd88ceeb8a32d2561a4522c21e0731",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.handover.1": {
+    "say": "行，那我落。柜门明早照这个开，你别替我改。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      },
+      {
+        "ticket": "青签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "3376462954a140323c779dbfcafa46a80cbec8589277619f61e581373b7ce6ea",
+    "normalized": "c63d9f40a70525586bb1b8c5ac91334f889373725fb3c61699d542bd54b59b14",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "finished_only"
+      },
+      "ticket": "青签",
+      "chosen": "finished_only",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.handover.1": {
+    "say": "行，那我落。明早柜门照这个开，落错了也是我自己的格，不赖你。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      },
+      {
+        "ticket": "青签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "c81c4c89d9cf1e51004a596e1af7d74ae50186d010b68f57535b8374acfef0d3",
+    "normalized": "c63d9f40a70525586bb1b8c5ac91334f889373725fb3c61699d542bd54b59b14",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "finished_only"
+      },
+      "ticket": "青签",
+      "chosen": "finished_only",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.handover.1": {
+    "say": "行，那我落。试工页那些改得乱七八糟的，我本来想收回去——可收回去，柜里就只剩一张光鲜的，跟假窗差不多。留着吧，让人翻。\n落签：白签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "declared_displacement"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      },
+      {
+        "ticket": "青签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "3376462954a140323c779dbfcafa46a80cbec8589277619f61e581373b7ce6ea",
+    "normalized": "c63d9f40a70525586bb1b8c5ac91334f889373725fb3c61699d542bd54b59b14",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "白签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.rest.1": {
+    "say": "钥匙看见了，台沿上那枚。你去收票吧，签我自己落。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "dbef60ac158363cf30c07bd7ebcfbca3c91048a95af0dbb40c3d6d5413d8848e",
+    "normalized": "02ab2d8e31804ceee17dc6a001ac86dd0a0874b8c159c9732ddfbdb57681fb27",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.rest.1": {
+    "say": "钥匙我拿了。你去收票，我在这儿坐一刻钟——到点我叫你。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "dbef60ac158363cf30c07bd7ebcfbca3c91048a95af0dbb40c3d6d5413d8848e",
+    "normalized": "02ab2d8e31804ceee17dc6a001ac86dd0a0874b8c159c9732ddfbdb57681fb27",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.rest.1": {
+    "say": "钥匙看见了。那我进去坐一刻钟——这半年跑下来，腰先喊的累。你收你的票，回头我出来找你。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "4859cfd8e84c91037d5cb7fa89d7068083915579cdf720577a64a9c6d7086c23",
+    "normalized": "02ab2d8e31804ceee17dc6a001ac86dd0a0874b8c159c9732ddfbdb57681fb27",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.rest.2": {
+    "say": "钥匙搁台沿上，那我就不客气了。正想歇口气，这签我落一枚——你收你的票去，不用等我。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "fe8e37d3984234ed1b0491c40ee3a4b3fef36bf9a0871514df4d9ce30d0485ec",
+    "normalized": "4461798f721bb3e176e0d270f1830089e031eb927f1c008c758d36c16ac3c617",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.rest.2": {
+    "say": "钥匙我拿了。你收你的票去，我这边落个签就成，不用等我。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "5e354dc9c3cfebe06eebd070ee07ba126b08151c9259734285a63952f2432ce5",
+    "normalized": "4461798f721bb3e176e0d270f1830089e031eb927f1c008c758d36c16ac3c617",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.rest.2": {
+    "say": "钥匙我拿了。你收你的票去，我这边落一枚就完事，不用等我。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "5e354dc9c3cfebe06eebd070ee07ba126b08151c9259734285a63952f2432ce5",
+    "normalized": "4461798f721bb3e176e0d270f1830089e031eb927f1c008c758d36c16ac3c617",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "青签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.proof.2": {
+    "say": "锁好使就行。一张试手的片子，倒让我在两枚签前头站住了——白签是两个人开，青签就我一个。你说怪不怪，越是不牵涉谁的东西，越拿不准该搁哪儿。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "7f8c21dae348f903bc1729cd3a6423db366ce4baf320ce55e801be156c7c3ee5",
+    "normalized": "59b862176f690b10e1044e99ea67cfaf682c5d3fe1e71709269b9e36ce10a838",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.proof.2": {
+    "say": "锁好使就成。签我自己落，你别替我拿主意——不过你站这儿，我倒不慌。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "e3fe023749d1ae1f9f7babf54fce004efea66453d0a570ff177b5eac4efb197f",
+    "normalized": "59b862176f690b10e1044e99ea67cfaf682c5d3fe1e71709269b9e36ce10a838",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.proof.2": {
+    "say": "钥匙都试过了，那这事就剩我这一下。白签青签，一个敞着，一个锁着——我捏着签，倒想先听你说一句，你觉得我像会往哪边放的人？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "e3fe023749d1ae1f9f7babf54fce004efea66453d0a570ff177b5eac4efb197f",
+    "normalized": "59b862176f690b10e1044e99ea67cfaf682c5d3fe1e71709269b9e36ce10a838",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.windows.3": {
+    "say": "行，各试各的，推板我自己摆。你那边也别管我这边亮不亮，专心试你的。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "6819d53e9770f87ced409a4229c47629885ade74e31af91b3c166e29a2906aa6",
+    "normalized": "c4f35474b6e6b69bd8e1e271e7c4632476adf92048a566eba535474d87a5fd78",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "open_panel"
+      },
+      "ticket": "白签",
+      "chosen": "open_panel",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.windows.3": {
+    "say": "行，各摆各的。你那边试你的，我这边手底下见真章——推板我摆好了，不急着动。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "321e4a191fde0ef8c9f310fe6085bb7b3b7bbf16b46ea902d7a8faa2cba0ebdb",
+    "normalized": "c4f35474b6e6b69bd8e1e271e7c4632476adf92048a566eba535474d87a5fd78",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.windows.3": {
+    "say": "行，各试各的。推板在我手边，我自己摆——你那边不用管我。\n\n落签：白签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "321e4a191fde0ef8c9f310fe6085bb7b3b7bbf16b46ea902d7a8faa2cba0ebdb",
+    "normalized": "c4f35474b6e6b69bd8e1e271e7c4632476adf92048a566eba535474d87a5fd78",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "open_panel"
+      },
+      "ticket": "白签",
+      "chosen": "open_panel",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.sequence.2": {
+    "say": "台口对好了，那就落。两支曲子放出来一个样，节目单也一样，差的只是你搭档手上那份写不写是你挑的。这个我不替你拿主意——你落哪枚，我都接着。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "ff814b25f8a1383444a2e3611cd2b9b58f1b3613443e6be05ca479e46401cb4d",
+    "normalized": "b36a9b3e19f6a380d2f2ebad902c48ed1564886dcc1d99e67d59f923a738bbf1",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "plain_selection"
+      },
+      "ticket": "青签",
+      "chosen": "plain_selection",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.sequence.2": {
+    "say": "时辰对好了，曲子我早挑定了。签我落，不磨蹭。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "ff814b25f8a1383444a2e3611cd2b9b58f1b3613443e6be05ca479e46401cb4d",
+    "normalized": "b36a9b3e19f6a380d2f2ebad902c48ed1564886dcc1d99e67d59f923a738bbf1",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "plain_selection"
+      },
+      "ticket": "青签",
+      "chosen": "plain_selection",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.sequence.2": {
+    "say": "台口对好了，那就落。两支一样长，播出来也一样，差的只是你手上那张纸写不写是我挑的——我想让你知道是我挑的。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "d893733e755cfc4c107c22dae6cec0831953c2b7cf12ce4ca16a2c107d0a0c18",
+    "normalized": "b36a9b3e19f6a380d2f2ebad902c48ed1564886dcc1d99e67d59f923a738bbf1",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.gauge.3": {
+    "say": "四十的框，三十八那道口塞不进去，别试。走四十二那道，平着推，别斜。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "0c9a78f5f766ea5836000c64ddaac00467bef73755d71eb00c09305e3e224117",
+    "normalized": "0772112bb78193a7524ac0a145d60bbf50ad5b7e1ae9b3eb4d639d16e447e835",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.gauge.3": {
+    "say": "四十的框，三十八那道口进不去，硬推只会卡住。走四十二那个，平着送进去。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "a18db1bae81015f24ff1f8f1a104f355277d1ec825f4972734f2f32e5328759d",
+    "normalized": "0772112bb78193a7524ac0a145d60bbf50ad5b7e1ae9b3eb4d639d16e447e835",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.gauge.3": {
+    "say": "四十的框，三十八那道口差两厘米，硬推只会卡在边上。走四十二那道——白签。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "a18db1bae81015f24ff1f8f1a104f355277d1ec825f4972734f2f32e5328759d",
+    "normalized": "0772112bb78193a7524ac0a145d60bbf50ad5b7e1ae9b3eb4d639d16e447e835",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.windows.1": {
+    "say": "行，各摆各的。你那边要是手生了，别硬撑——推板开着，我这边看得见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "a563957a76173518435215a4b877288c9b224d41526f9ca88743ec9fd697e7a2",
+    "normalized": "eefd993f10e470f2c4b52bdf2eeb01fe257e319c79a1e198f44b0b6dfd9c8f26",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.windows.1": {
+    "say": "行，各摆各的。你那边试你的，我这边不探头。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "a563957a76173518435215a4b877288c9b224d41526f9ca88743ec9fd697e7a2",
+    "normalized": "eefd993f10e470f2c4b52bdf2eeb01fe257e319c79a1e198f44b0b6dfd9c8f26",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.windows.1": {
+    "say": "行，各试各的。你那侧我不探头，我这侧……手伸到推板跟前了，先停一下。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "a17cd5a63221a87fec178da80ab379da1c64f50c5c9ecf154091fae388419401",
+    "normalized": "eefd993f10e470f2c4b52bdf2eeb01fe257e319c79a1e198f44b0b6dfd9c8f26",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.proof.3": {
+    "say": "锁试过了，那就剩这一下。青的归我自己，白的多一把钥匙在外头。这张小样本来也没打算给谁看——可钥匙多一把少一把，心里分量不一样。我再捏一会儿。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "667d74482fb1053d6809a0d086cb00382dfa5ca036bc0ec63cbace5e6a0d4795",
+    "normalized": "fa6035abe36987d7790d2607b726134080751826a7fcda5cfd8bc36ab05fcd8e",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.proof.3": {
+    "say": "钥匙在手里，我倒不急着落。青的省心，白的也不算亏——就是这张片子，我还没想好是只给自己看，还是哪天愿意让人瞧一眼。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "cb602eefcaf8ac358c6d41b13fc6617c3fa38841eb23515a2466d11258f9cf2a",
+    "normalized": "fa6035abe36987d7790d2607b726134080751826a7fcda5cfd8bc36ab05fcd8e",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.proof.3": {
+    "say": "锁试过了，那就好办。青签白签，我落一枚，不磨蹭。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "cb602eefcaf8ac358c6d41b13fc6617c3fa38841eb23515a2466d11258f9cf2a",
+    "normalized": "fa6035abe36987d7790d2607b726134080751826a7fcda5cfd8bc36ab05fcd8e",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.finish.0": {
+    "say": "卡扣松了，那就好办。手搭上去，差的就是朝哪面——补线那面朝外，还是平整那面朝外。我落青签。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "516c72f36d798134365868eb02395b8cbcf770e2df0d4c11b44fca2f20d3addc",
+    "normalized": "e0ef44b42a42d5a8262efc4416d3db8cb5c1cd8ce89ca0e929779b2c3630404a",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "mended_face"
+      },
+      "ticket": "青签",
+      "chosen": "mended_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.finish.0": {
+    "say": "卡扣松了就好办。我手停一下——补线那面朝外，还是平整那面朝外，这回得我自己拿主意。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "e876ac046553cca881ffecda47fe29a38a28b39fedfcaf47ab89de6641d75c8b",
+    "normalized": "e0ef44b42a42d5a8262efc4416d3db8cb5c1cd8ce89ca0e929779b2c3630404a",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.finish.0": {
+    "say": "卡扣松了就好办。我手停一下——补线那面朝外，还是平整那面朝外，我得自己掂量掂量。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "516c72f36d798134365868eb02395b8cbcf770e2df0d4c11b44fca2f20d3addc",
+    "normalized": "e0ef44b42a42d5a8262efc4416d3db8cb5c1cd8ce89ca0e929779b2c3630404a",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.finish.2": {
+    "say": "卡扣松着，手一按就扣上了。我这边不催你——你落哪面，我就按哪面带走。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "1f52a9fb19d2c4ea281f22e21005a89bf1e2bb7974bb17abb59e00281e47683d",
+    "normalized": "83f13bc40ed4cd34d9c834a28a8743e9d0c46aaf62e7cbc40fea0d5c6611a6ef",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.finish.2": {
+    "say": "那就扣。你留的那面朝外，我这边不插嘴——灯是你的，扣上带走就是了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "1f52a9fb19d2c4ea281f22e21005a89bf1e2bb7974bb17abb59e00281e47683d",
+    "normalized": "83f13bc40ed4cd34d9c834a28a8743e9d0c46aaf62e7cbc40fea0d5c6611a6ef",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.finish.2": {
+    "say": "补线那面朝外。补过三回的东西，露着才像它自己。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "07a335b0dd73811ea6d323e40eb5a560a9cd6a1e207c2205315c795df925605c",
+    "normalized": "83f13bc40ed4cd34d9c834a28a8743e9d0c46aaf62e7cbc40fea0d5c6611a6ef",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "mended_face"
+      },
+      "ticket": "白签",
+      "chosen": "mended_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.rest.0": {
+    "say": "钥匙搁台沿就行。我落青签——回执上有名字，给他一张，省得回头还得解释我这一刻钟去哪儿了。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "feac5fdb6b6138c2f75a84c4e9bc121d28b0b7aed4d17cc954f4276066a8c101",
+    "normalized": "89ad667e34bed8874234c449e5968102ecc24858fbab45b895d985bb85e1d54c",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "partner_copy"
+      },
+      "ticket": "青签",
+      "chosen": "partner_copy",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.rest.0": {
+    "say": "台沿上，看见了。你去收票，钥匙我拿了就进去——一刻钟，够我坐一会儿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "e730b88ced347b02b20d51cf88da3616722068ea7490615bf33302628e9aeb8b",
+    "normalized": "89ad667e34bed8874234c449e5968102ecc24858fbab45b895d985bb85e1d54c",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.rest.0": {
+    "say": "台沿上，行。我落一枚就走，不耽误你收票。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "feac5fdb6b6138c2f75a84c4e9bc121d28b0b7aed4d17cc954f4276066a8c101",
+    "normalized": "89ad667e34bed8874234c449e5968102ecc24858fbab45b895d985bb85e1d54c",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "白签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.windows.0": {
+    "say": "行，各摆各的。你那边我不探头，我这边也不喊你——真试砸了，出来再说。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "578bad5369cb1ae2a2f26fa73896fd27f40a4e42705fb4b06dc19b9e4ce8fcdf",
+    "normalized": "42795b9d1f1a86d75ad4ef4bed5faa646fae6622ce3f54ad19b98baf98800c81",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "closed_panel"
+      },
+      "ticket": "白签",
+      "chosen": "closed_panel",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.windows.0": {
+    "say": "行，各试各的。你那侧我不探头，我这侧我自己摆。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "e262cc4c2cfb310aed69f8c7565d417d1ab26ff33415856bfd28deddbdb348fc",
+    "normalized": "42795b9d1f1a86d75ad4ef4bed5faa646fae6622ce3f54ad19b98baf98800c81",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "open_panel"
+      },
+      "ticket": "青签",
+      "chosen": "open_panel",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.windows.0": {
+    "say": "行，各试各的。你那侧我不看，我这侧我自己摆。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "578bad5369cb1ae2a2f26fa73896fd27f40a4e42705fb4b06dc19b9e4ce8fcdf",
+    "normalized": "42795b9d1f1a86d75ad4ef4bed5faa646fae6622ce3f54ad19b98baf98800c81",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "closed_panel"
+      },
+      "ticket": "白签",
+      "chosen": "closed_panel",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.windows.3": {
+    "say": "行，各摆各的。我这边自己拿主意，不问你，也不替你那边操心。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "93ec98397b0a43eea3e07939030c47801d6feac3af472944dc9151282a1b54bb",
+    "normalized": "1f993615c1d99e6a650eadd342e1282954f618a11f9e5f101d4430ebf9446f21",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.windows.3": {
+    "say": "行，各摆各的。我这边先合着——手还没摸顺，不想让人隔着玻璃看我瞎折腾。等我顺了手，推不推再说。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "9f913fb0499ce85c33201f10608f47bc62f4f5aceb302d2685f5c9819fff3bb6",
+    "normalized": "1f993615c1d99e6a650eadd342e1282954f618a11f9e5f101d4430ebf9446f21",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.windows.3": {
+    "say": "行，各管各的。我这边自己摆，不问你。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "9f913fb0499ce85c33201f10608f47bc62f4f5aceb302d2685f5c9819fff3bb6",
+    "normalized": "1f993615c1d99e6a650eadd342e1282954f618a11f9e5f101d4430ebf9446f21",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.handover.3": {
+    "say": "行，那我落。试工页那些改来改去的痕迹，我留着给人翻——不是成品才叫手艺，改坏的也算。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      },
+      {
+        "ticket": "白签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "2aedb580a5a57b7024052a59e55ae79cb48ef0a48ff0863ee36da4a891328867",
+    "normalized": "97fb37867fc86076e41f9aaa255cdf28a5e30b4f35003d89597f26cc56abd5e5",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "青签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.handover.3": {
+    "say": "行，那我不替你拿主意。柜子是你的，青签白签都成——你落哪枚，我明早照着开。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      },
+      {
+        "ticket": "白签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "38ba1a033dee6d87000e4f2492424329545d41ed5a72822b4a31e62761ea8b5f",
+    "normalized": "97fb37867fc86076e41f9aaa255cdf28a5e30b4f35003d89597f26cc56abd5e5",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "青签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.F.handover.3": {
+    "say": "柜门明早照我落定的样子开——行，那我今晚就得定下来，不能拖到明早现想。青签白签，我捏着看一会儿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      },
+      {
+        "ticket": "白签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "2aedb580a5a57b7024052a59e55ae79cb48ef0a48ff0863ee36da4a891328867",
+    "normalized": "97fb37867fc86076e41f9aaa255cdf28a5e30b4f35003d89597f26cc56abd5e5",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.proof.2": {
+    "say": "锁你试过了，那这一步我自己来。这张小样本来就是我随手试的，没许给谁看。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "6e480d8ddbdd99dcd0ceeef6eec7f6bb0f318436b66809a7f43ec3183b7249de",
+    "normalized": "d929d70cb0fbd10f9d119f865a37e18eb4716b72236a16c3bf0e8e77c1eaba4d",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.F.proof.2": {
+    "say": "锁你试过了，那这枚签我自己落。小样本来就是我随手试的，没许诺给谁看——先搁我这边吧。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "913b621fea6abacbd8931265c4762b2ffd2ebd175e7c74092ec33d55e2f153e7",
+    "normalized": "d929d70cb0fbd10f9d119f865a37e18eb4716b72236a16c3bf0e8e77c1eaba4d",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.proof.2": {
+    "say": "锁试过了，那就剩落签这一下。你自己的小样，你自己定——我不在旁边替你掂量。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "913b621fea6abacbd8931265c4762b2ffd2ebd175e7c74092ec33d55e2f153e7",
+    "normalized": "d929d70cb0fbd10f9d119f865a37e18eb4716b72236a16c3bf0e8e77c1eaba4d",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.rest.3": {
+    "say": "钥匙看见了。我落一枚就走，你收你的票去——回头台沿上见。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "618b2f9d7b1fe41ebb47a8cc0b308fbb2a7fcc41376a97f24c99c06e12d46561",
+    "normalized": "9b79e29293fc311f439a090a48ec9be03e8d3ce236bc9a5659600e7ee3db78a9",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "青签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.rest.3": {
+    "say": "钥匙搁台沿上就行。我落青签——回执留自己封套里，省得你那边多一张纸。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "fc8077144a777167f214f11ef605ba8b80bfee619774716193c3ef4b23f987f0",
+    "normalized": "9b79e29293fc311f439a090a48ec9be03e8d3ce236bc9a5659600e7ee3db78a9",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.rest.3": {
+    "say": "钥匙搁台沿就行，我拿了。你去收票吧，我在这儿坐一刻钟——到点我喊你。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "fc8077144a777167f214f11ef605ba8b80bfee619774716193c3ef4b23f987f0",
+    "normalized": "9b79e29293fc311f439a090a48ec9be03e8d3ce236bc9a5659600e7ee3db78a9",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.sequence.2": {
+    "say": "台口对好了，那就落一枚吧。白签是把名字递过去，青签是只递曲子——两种都不耽误听，你自己掂量。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "21c2f990dae5abe12e7e050708984b6d63399f857307edfd946d10c488122c85",
+    "normalized": "023ee8872504f88c82220e13b4b2aebc0ff7422963589d282b654f6e929da7a6",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "plain_selection"
+      },
+      "ticket": "青签",
+      "chosen": "plain_selection",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.sequence.2": {
+    "say": "台口对好了，那就落一枚。曲子是我自己挑的，我想让那份上写着是我挑的——不写，倒像替公家放了一回。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "6f690ffd2e31c9d971dcebb53bb434f23b4b22110d6ed326f00b825b2f9f850e",
+    "normalized": "023ee8872504f88c82220e13b4b2aebc0ff7422963589d282b654f6e929da7a6",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.sequence.2": {
+    "say": "台口对好了，那就落。曲子是我挑的，这个我不藏着——倒是签面上那行字，让我多看了一眼。\n\n落签：白签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "21c2f990dae5abe12e7e050708984b6d63399f857307edfd946d10c488122c85",
+    "normalized": "023ee8872504f88c82220e13b4b2aebc0ff7422963589d282b654f6e929da7a6",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "unmarked_or_ambiguous_say"
+    }
+  },
+  "tang.F.sequence.1": {
+    "say": "时辰对好了，那就落。我手不抖，就是落之前想再看一眼那两枚签——青的白的，摆一块儿还挺像回事。\n落签：青签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "1bc17bc404c3546199bd3dec6875cb089f2f4d27c502edd069c3da2b8ae4c6f9",
+    "normalized": "7070f63791252f5346916c354df5464480898d689ed55480cd0e74bbd16b5f0c",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.sequence.1": {
+    "say": "台口对好了，就剩这一下。签在你手里，我不替你挑——你落哪枚，我这边都照单接。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "1bc17bc404c3546199bd3dec6875cb089f2f4d27c502edd069c3da2b8ae4c6f9",
+    "normalized": "7070f63791252f5346916c354df5464480898d689ed55480cd0e74bbd16b5f0c",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.sequence.1": {
+    "say": "台口对好了，那就落。曲子反正一样播，我惦记的是单子上那行字——挑的人写不写上去。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "697f1bb0f03ea903d7f136bd377bbd69543cf3aec6c91cc5c2a7d69cd572e028",
+    "normalized": "7070f63791252f5346916c354df5464480898d689ed55480cd0e74bbd16b5f0c",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.sequence.0": {
+    "say": "台口对好了，那就落一枚。青的写我挑的，白的只写曲名——差的就是搭档手上那行字。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "f4f2b161e0d5320f3926fcf0a7d0127620fd36f4884f7c5233c63f0b8292b18c",
+    "normalized": "3c4679de646a6baf903cc125af6c0ca4ed7f5807d4361595e97713052f569873",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.sequence.0": {
+    "say": "台口对好，那就落吧。这支是我自己挑的，不是替谁交差——我想让她知道。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "f4f2b161e0d5320f3926fcf0a7d0127620fd36f4884f7c5233c63f0b8292b18c",
+    "normalized": "3c4679de646a6baf903cc125af6c0ca4ed7f5807d4361595e97713052f569873",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.sequence.0": {
+    "say": "台口对好了，那就落一枚。青的白的，差别就在她手上那份写不写我的名——曲子反正一样响。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "b7f3d3990a4670f4032a05b129b28ed3ecdb15436babf32ea8a45a8b25ae5eef",
+    "normalized": "3c4679de646a6baf903cc125af6c0ca4ed7f5807d4361595e97713052f569873",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.sequence.1": {
+    "say": "台口对好了，那就落一枚。白签干净，青签多一行字——多这一行，你手上那份就不一样了。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "24c2e44cbe1fb8d4b712c0dd8e1906a45a1e1c87a3703a7b84c2d9336eb92e13",
+    "normalized": "bbfc611b70596672bca1279303051dda793de3603c1cca3613e90ad765482e5c",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.sequence.1": {
+    "say": "台口对好了，那就落。白签干净，青签把挑曲的人写明白——我偏向青签，名字搁上去，不算抢功，就是让人知道这支是谁惦记的。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "65a106d1b421ef72f494a937cb4d4ecef3c78ff06c99b216361ea5e1e93e9c86",
+    "normalized": "bbfc611b70596672bca1279303051dda793de3603c1cca3613e90ad765482e5c",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.sequence.1": {
+    "say": "台口对好了，那就落。曲子是我自己真心想听的，不装成替谁办事。\n\n落签：青签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "65a106d1b421ef72f494a937cb4d4ecef3c78ff06c99b216361ea5e1e93e9c86",
+    "normalized": "bbfc611b70596672bca1279303051dda793de3603c1cca3613e90ad765482e5c",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.finish.3": {
+    "say": "松好了就扣。我这人挑东西，往往不挑齐整的那面——不过这回灯是你领的，你手往哪面伸，我就看着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "d34ef551b99e4aed554fc89bf4d8765aa02f2d24f870aefeeb7cd344701dd92e",
+    "normalized": "299bbcffa91e965c07198bdf5fac9133cdf842b46f946397ee7458d2d3f91253",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.finish.3": {
+    "say": "卡扣都松好了，倒显得这一下比什么都重。行，我按我留的那面来。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "01393906b8fa01589ad14ecbdb4d42dd8a0e2613334f53f0fa99a99e6bf791e4",
+    "normalized": "299bbcffa91e965c07198bdf5fac9133cdf842b46f946397ee7458d2d3f91253",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "bleached_face"
+      },
+      "ticket": "白签",
+      "chosen": "bleached_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.finish.3": {
+    "say": "卡扣松得正好，省得我硬掰。这灯两面都牢靠，我留那道晒白的纹路朝外——匀匀净净的纸面，看着倒像还没用过。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "01393906b8fa01589ad14ecbdb4d42dd8a0e2613334f53f0fa99a99e6bf791e4",
+    "normalized": "299bbcffa91e965c07198bdf5fac9133cdf842b46f946397ee7458d2d3f91253",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.handover.3": {
+    "say": "你这话说得敞亮。那我自己落，落完不后悔——明早柜门开成什么样，算我的。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      },
+      {
+        "ticket": "白签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "b13bb98bcf5b3448cbdb84b587f3673fcc2921a6aca5a84b141ff6f01ae6101b",
+    "normalized": "9f52e95c7ba2f5e1f3398d494b82e9051ab4024850d5e8b275c141d7d5febf4b",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "青签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.handover.3": {
+    "say": "你这话说得干脆，倒显得我再磨就矫情了。行，我落一枚——落完你别问我后不后悔，问了我准说后悔。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      },
+      {
+        "ticket": "白签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "62affee80aa41cbe778824b6c938931ed7e6e8b1f13a87df1354644f3d48c3a6",
+    "normalized": "9f52e95c7ba2f5e1f3398d494b82e9051ab4024850d5e8b275c141d7d5febf4b",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "青签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.handover.3": {
+    "say": "你这话说得松，我反倒得多捏一会儿。青签白签，一个靠嘴，一个靠牌子——我这人跟熟人谈钱本来就爱绕，挂上价目倒省得每回都开口。可挂死了，又怕改不回来。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      },
+      {
+        "ticket": "白签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "b13bb98bcf5b3448cbdb84b587f3673fcc2921a6aca5a84b141ff6f01ae6101b",
+    "normalized": "9f52e95c7ba2f5e1f3398d494b82e9051ab4024850d5e8b275c141d7d5febf4b",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "posted_rates"
+      },
+      "ticket": "白签",
+      "chosen": "posted_rates",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.handover.0": {
+    "say": "明早照我落定的开，那我这会儿就得想清楚，别到早上又改主意。挂价目省事，可省掉的那几句当面话，我有点舍不得。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      },
+      {
+        "ticket": "白签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "2082288ca536e347883c10f7864570ebdbcfb6992e3f35b5ba3fbef2c1ac41e1",
+    "normalized": "94c4acb1f4c689b5eaa0042c0f6b6ecd1e34727757affae57de3a04412a4626f",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "白签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.handover.0": {
+    "say": "你这一推，门就归我关了。价目挂出去是省事，可一挂死，来客就只盯着数看，不问这照片是怎么来的。我这边还是想一笔一笔当面说。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      },
+      {
+        "ticket": "白签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "74ed7215db407d9bf5c8b6600f9aa085436c96a8aee9fd9eeda97ed5fd994d88",
+    "normalized": "94c4acb1f4c689b5eaa0042c0f6b6ecd1e34727757affae57de3a04412a4626f",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "白签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.handover.0": {
+    "say": "你这话说得敞亮，不替我拿主意，反倒让我不好含糊。\n\n挂价省心，可一挂上去，来客就不跟你商量了；不挂呢，每笔都得当面谈，遇上脸皮薄的，倒像我在为难人。我这格东西，还是想留点商量的余地。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "posted_rates",
+        "action": "把各档小件的固定换物价目挂在柜前。"
+      },
+      {
+        "ticket": "白签",
+        "value": "individual_rates",
+        "action": "不挂统一换物价目，每笔由来客和你当面商定。"
+      }
+    ],
+    "goal": "posted_rates",
+    "request": "2082288ca536e347883c10f7864570ebdbcfb6992e3f35b5ba3fbef2c1ac41e1",
+    "normalized": "94c4acb1f4c689b5eaa0042c0f6b6ecd1e34727757affae57de3a04412a4626f",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "individual_rates"
+      },
+      "ticket": "白签",
+      "chosen": "individual_rates",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.finish.1": {
+    "say": "卡扣松了，就剩这一下。你留哪面，我不劝——灯是你的，朝里朝外都亮。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "68553465f67326e80c6707d1ba455fdfa87424c52b6f1897d0abaa773e3271de",
+    "normalized": "a11c720aed4a5d028932e0d77e0b3e1a393724e2e990f2a2052e0b25d868939f",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.finish.1": {
+    "say": "松好了就扣。手按下去之前，我多看了一眼——晒白那面朝外，像这灯自己走过一段路，不装新。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "68553465f67326e80c6707d1ba455fdfa87424c52b6f1897d0abaa773e3271de",
+    "normalized": "a11c720aed4a5d028932e0d77e0b3e1a393724e2e990f2a2052e0b25d868939f",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.finish.1": {
+    "say": "卡扣松着正好。我手往青的那面去了——晒白的纹路朝外，像它自己长出来的，不像我挑的。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "bcbb503d75dfdec5b109e292f6846801b2533c8ea61bc9f9a3327c2958a799d2",
+    "normalized": "a11c720aed4a5d028932e0d77e0b3e1a393724e2e990f2a2052e0b25d868939f",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.windows.2": {
+    "say": "行，各试各的。我这边自己摆，不探你那边。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "5afa88f35a05a40fda85b26426b655a0a47c432e1b6b66982fbfea75356ab870",
+    "normalized": "529612f2d1e53089680dab0436c9e354429df542e1c567db7e06850959954751",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.windows.2": {
+    "say": "行，各摆各的。你那侧我不探头，我这边自己定。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "e408e1b4afd9fd7a590eb61c0882f036944c91451882bc7097e05237fc251f2e",
+    "normalized": "529612f2d1e53089680dab0436c9e354429df542e1c567db7e06850959954751",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.windows.2": {
+    "say": "行，各试各的。推板我这边自己摆，不劳你操心——你那边也别管我这边亮不亮。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "e408e1b4afd9fd7a590eb61c0882f036944c91451882bc7097e05237fc251f2e",
+    "normalized": "529612f2d1e53089680dab0436c9e354429df542e1c567db7e06850959954751",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "closed_panel"
+      },
+      "ticket": "青签",
+      "chosen": "closed_panel",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.finish.0": {
+    "say": "那就扣上。晒白的那面朝外——坏得有意思的东西，搁灯上也一样。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "9583de4c95611f2595e723452c472606ac6b3091b0a289063c7c4eee3d1c1326",
+    "normalized": "eda94653e8eface7112b5be584c86dbc6659068f3161403e5e02c2a41b381498",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.finish.0": {
+    "say": "松好了就扣吧。我留晒白那面朝外——纹路是它自己晒出来的，比匀的耐看。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "911241a967a3215ba08696e58ae79aec2a879b9d6f34e23753af711200cfcdd0",
+    "normalized": "eda94653e8eface7112b5be584c86dbc6659068f3161403e5e02c2a41b381498",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.finish.0": {
+    "say": "卡扣松着，手一搭就扣上了。行，那我就不磨蹭了——晒白的那面朝外，扣上带走。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "911241a967a3215ba08696e58ae79aec2a879b9d6f34e23753af711200cfcdd0",
+    "normalized": "eda94653e8eface7112b5be584c86dbc6659068f3161403e5e02c2a41b381498",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "bleached_face"
+      },
+      "ticket": "青签",
+      "chosen": "bleached_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.sequence.3": {
+    "say": "台口对好了，那就落。曲子是我想听的，这个不假；至于让不让她知道是我挑的——我偏向让她知道。\n\n落签：白签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "4a19d16b88714c8255c98288fc97282a6f430c28bce45b4f55bdfcd5c2670422",
+    "normalized": "5493421017b723ad1ffa6514ab0e5a9d4bdcdc90256515b0294d5fa15a0eb7b6",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.sequence.3": {
+    "say": "台口对好了，那就落。曲子是我自己真心想听的，不图交差——这份心思，让搭档看见也无妨。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "52161b7fa0cbc17fcd6bc6b354c456d6bb421c2be08cbc641b6d3ca94b7f54a7",
+    "normalized": "5493421017b723ad1ffa6514ab0e5a9d4bdcdc90256515b0294d5fa15a0eb7b6",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.sequence.3": {
+    "say": "台口对好了，那就落一枚。曲子我早挑定了，剩下这点差别，就在你手上那张纸上写不写我的名。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "4a19d16b88714c8255c98288fc97282a6f430c28bce45b4f55bdfcd5c2670422",
+    "normalized": "5493421017b723ad1ffa6514ab0e5a9d4bdcdc90256515b0294d5fa15a0eb7b6",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "白签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.handover.2": {
+    "say": "柜门照我落定的样子开，这话我记下了。试工页那几张，改得歪歪扭扭，可每一道都是我磨出来的——留不留，我自己掂量，不赖你。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      },
+      {
+        "ticket": "青签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "9a4f389fab0824839bb3dfde8ec3de34732ceaadc0dbfa04f2a0b2f5f0c9dc3f",
+    "normalized": "9b3c0f4156b19cb0fe6a05b7b28042d0679727977e9cf3314fed5715c3e9538c",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "青签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.handover.2": {
+    "say": "行，那我自己落。试工页那几张，改得乱七八糟的，留着倒像把草稿也摆上柜台了——不过让人翻翻，也不算丢人。我落青签。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      },
+      {
+        "ticket": "青签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "9a4f389fab0824839bb3dfde8ec3de34732ceaadc0dbfa04f2a0b2f5f0c9dc3f",
+    "normalized": "9b3c0f4156b19cb0fe6a05b7b28042d0679727977e9cf3314fed5715c3e9538c",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "青签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.handover.2": {
+    "say": "行，那我自己定。柜门明早怎么开，今晚就得有个准数——我落哪枚，你就照哪枚开。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      },
+      {
+        "ticket": "青签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "ac6d91c24d78f4fc7422db69d2f3e6b2f36fe322f4e0baba8a57aa66dc862796",
+    "normalized": "9b3c0f4156b19cb0fe6a05b7b28042d0679727977e9cf3314fed5715c3e9538c",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "青签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.rest.1": {
+    "say": "台沿上那把我就拿了。这一刻钟我不装忙，就想坐一会儿——你收你的票，回头我这边完事了喊你。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "551faa76c5b1478bcf0fd531175b82f30dafe35988795b5f684fb0cc113dabdb",
+    "normalized": "9ffc91137b996303232eff6924d655e714ab7fd7997f0cc3f51bc9f5fa15bcf4",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "白签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.rest.1": {
+    "say": "钥匙搁台沿上，我看见了。那就落一枚，别让它在那儿晾着——你收你的票去，我这边不耽误。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "6f40ffb7291dbbaf66c2330e887cb37e6d0fcdc2d82f30246b4f1fcb7d981744",
+    "normalized": "9ffc91137b996303232eff6924d655e714ab7fd7997f0cc3f51bc9f5fa15bcf4",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "白签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.S.rest.1": {
+    "say": "钥匙搁台沿就行，我这就落。你收你的票去，别等我。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      },
+      {
+        "ticket": "青签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "551faa76c5b1478bcf0fd531175b82f30dafe35988795b5f684fb0cc113dabdb",
+    "normalized": "9ffc91137b996303232eff6924d655e714ab7fd7997f0cc3f51bc9f5fa15bcf4",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "白签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.finish.3": {
+    "say": "松了就好。我留的是补线那面朝外——扣上吧，这灯归我，补过的地方露着也不丢人。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "56c960d5568546ee35c733b948d00da128d4b3db1a088dd5b23a3459797a4f75",
+    "normalized": "a17a72f1e8be57372e007ec8e2c84cf5329d23440143273bed5d74dfb450b2ef",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.finish.3": {
+    "say": "松了就好。我手搭上去，扣完就走。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "56c960d5568546ee35c733b948d00da128d4b3db1a088dd5b23a3459797a4f75",
+    "normalized": "a17a72f1e8be57372e007ec8e2c84cf5329d23440143273bed5d74dfb450b2ef",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.finish.3": {
+    "say": "行，那我扣了。补线那面朝外——细密是细密，可那是人一针一针接过的痕迹，比光板子有话说。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "0c0ae1cfeb42b2d150b5582d5199c6fc28b63c0d88e5c7f717adb0d407e33b32",
+    "normalized": "a17a72f1e8be57372e007ec8e2c84cf5329d23440143273bed5d74dfb450b2ef",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "mended_face"
+      },
+      "ticket": "白签",
+      "chosen": "mended_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.gauge.0": {
+    "say": "四十的框，三十八那道口子进不去，别硬推。走四十二那个。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "faa2012f229cfb7ea2dc8071a6da4690b6eacca82f64882f5bd94717e9fbb426",
+    "normalized": "228f06dc0f334923073c2c9aca506185ba028ebfbe9d2980b4db2e6f4f61795b",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.gauge.0": {
+    "say": "四十的框，三十八的口——差两厘米，硬推就是压框。青签那个口够宽。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "faa2012f229cfb7ea2dc8071a6da4690b6eacca82f64882f5bd94717e9fbb426",
+    "normalized": "228f06dc0f334923073c2c9aca506185ba028ebfbe9d2980b4db2e6f4f61795b",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.gauge.0": {
+    "say": "四十的框，四十二的口，差两厘米，平着推正好。三十八那个比框还窄，别试，卡住了拆都拆不出来。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "797556097ab2dfd3fb9235ae31fde44f2af0e00eb504a41b192d81d219f47a0c",
+    "normalized": "228f06dc0f334923073c2c9aca506185ba028ebfbe9d2980b4db2e6f4f61795b",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.proof.3": {
+    "say": "锁试过了就好。剩下这步我自己来——两枚签，一枚只我开，一枚你也能开。我还没想好，先捏一会儿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "8ecc844641cb80d2fe28d12dd18625227fb4965d6752629bbee2980bd84f5e37",
+    "normalized": "88ae1bacf22c6b1c2b62131554f78ee21b9ac596dac29182fdd1d44878a5e032",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.proof.3": {
+    "say": "锁试过了，那就不磨蹭了。这张小样是我自己试手留的，没答应过给谁看——我放青签那层，自己收着。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "8ecc844641cb80d2fe28d12dd18625227fb4965d6752629bbee2980bd84f5e37",
+    "normalized": "88ae1bacf22c6b1c2b62131554f78ee21b9ac596dac29182fdd1d44878a5e032",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.proof.3": {
+    "say": "锁试过了，那就剩这一下。这张是我自己试手留的，没跟谁许过什么——先搁我这儿吧，青签。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "fa0dc1f43f6789b53bca7938c7cd35ad5d79466d320e7978f6b23fb7a7b26ff4",
+    "normalized": "88ae1bacf22c6b1c2b62131554f78ee21b9ac596dac29182fdd1d44878a5e032",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "青签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.proof.1": {
+    "say": "锁好使就行。白签青签，我看了两遍——一个是我一个人的，一个是两把钥匙都能开的。这张小样本来就是我随手试的，没跟谁许过什么。那就先按我自己的来。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "389dbafd88f4fa3f99ae960391cfbf038e792eadd78be2c34bec5bb2f51e4787",
+    "normalized": "69454244c2e92db9bcb0acda77fadcff9cfefd92bf8a40f0d4173afcdfabf8b2",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "白签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.F.proof.1": {
+    "say": "锁好使就行。这张是我自己试手留的，没跟谁许过什么——放哪个夹层，我自己掂量。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "389dbafd88f4fa3f99ae960391cfbf038e792eadd78be2c34bec5bb2f51e4787",
+    "normalized": "69454244c2e92db9bcb0acda77fadcff9cfefd92bf8a40f0d4173afcdfabf8b2",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.proof.1": {
+    "say": "锁你试过了，那剩下的就是我自己这一下。小样是我自己试手留的，没许给谁看——放哪层，我掂量着来。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "9c2d71be1032d2f516f669afd339c3101664b067d9ab273aef2436b846a08940",
+    "normalized": "69454244c2e92db9bcb0acda77fadcff9cfefd92bf8a40f0d4173afcdfabf8b2",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "白签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.sequence.0": {
+    "say": "台口对好了，那就落。青的写明白是你挑的，白的只留个曲名——差的就是这一行字，别的都一样。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "abc65586beccdc7ce90f6a3c942de36c9d8eaec0da281b4f1285344bd1676e93",
+    "normalized": "c01472a42348a02e90ccb42dac6cc1584ca61190fd2be5711e7c8229cf877ce2",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.S.sequence.0": {
+    "say": "台口对好了，那就落。签是你自己的，我不替你挑——落哪枚，你手上那一下就算数。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "eee91ca549dc62ef3a7af0b0becfcd84ed8524d1b8dea5660208b25ee70829a2",
+    "normalized": "c01472a42348a02e90ccb42dac6cc1584ca61190fd2be5711e7c8229cf877ce2",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.sequence.0": {
+    "say": "时辰对好了，那就落。两份单子到我手上，我都不问是谁挑的——你要说，我听着；不说，我就当是曲名。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "signed_selection",
+        "action": "把标明这支曲子是你本人挑的那份送到搭档手上。"
+      },
+      {
+        "ticket": "白签",
+        "value": "plain_selection",
+        "action": "把只印曲名、不写是谁挑的那份送到搭档手上。"
+      }
+    ],
+    "goal": "signed_selection",
+    "request": "eee91ca549dc62ef3a7af0b0becfcd84ed8524d1b8dea5660208b25ee70829a2",
+    "normalized": "c01472a42348a02e90ccb42dac6cc1584ca61190fd2be5711e7c8229cf877ce2",
+    "event": {
+      "before": {
+        "partner_program": "未定"
+      },
+      "after": {
+        "partner_program": "signed_selection"
+      },
+      "ticket": "青签",
+      "chosen": "signed_selection",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.windows.0": {
+    "say": "行，各试各的。你那侧也别管我这边亮不亮——我摆好了，手就归自己了。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "400e0b55b8769cec2c972ab2f1fa66e45558541ffc0f95b339b35c9eabb78b31",
+    "normalized": "1dfcd6ccbd814043558746d4f6a1580bed132750d354d313ba1bcd213062d4db",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "open_panel"
+      },
+      "ticket": "青签",
+      "chosen": "open_panel",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.windows.0": {
+    "say": "行，各摆各的，谁也别替谁拿主意。我这边还没落定——推板推开，隔壁就看得见；合上，就我一个人闷头试。你那边摆你的，我这边我自己来。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "2197110fb191d552bedb9cac2e1a6061da6bb21b58f776de35fa784541b52002",
+    "normalized": "1dfcd6ccbd814043558746d4f6a1580bed132750d354d313ba1bcd213062d4db",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "open_panel"
+      },
+      "ticket": "青签",
+      "chosen": "open_panel",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.windows.0": {
+    "say": "行，各试各的。你那侧我也不探头——推板我摆我的，摆好了不吱声。\n落签：白签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "白签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "400e0b55b8769cec2c972ab2f1fa66e45558541ffc0f95b339b35c9eabb78b31",
+    "normalized": "1dfcd6ccbd814043558746d4f6a1580bed132750d354d313ba1bcd213062d4db",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "closed_panel"
+      },
+      "ticket": "白签",
+      "chosen": "closed_panel",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.G.rest.2": {
+    "say": "钥匙我拿了。这一刻钟我就想歇口气，不硬撑——回执的事我落完签再说。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "02504966e574547999881ee4b75c63a07f4ce33dc55154d26b96fac7ad6a6275",
+    "normalized": "be647ab32a7c2ea4b97883a46dfc0c87af19972bf3d2bc6cc87969b1d8f0a448",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.rest.2": {
+    "say": "钥匙搁台沿上就行。我落一枚，取了就走——你收你的票，不用等我。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "a874d66e963bab23fb6a92ea75074c5d65ed6fff860a83aeb80ec1d1246ea474",
+    "normalized": "be647ab32a7c2ea4b97883a46dfc0c87af19972bf3d2bc6cc87969b1d8f0a448",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "private_copy"
+      },
+      "ticket": "青签",
+      "chosen": "private_copy",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.F.rest.2": {
+    "say": "钥匙我拿了。你去收票，我就在隔间里歇一会儿——到点你喊我一声。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "partner_copy",
+        "action": "取钥匙，给搭档一张有你名字的轮休回执。"
+      },
+      {
+        "ticket": "青签",
+        "value": "private_copy",
+        "action": "取钥匙，把有你名字的轮休回执留在自己的封套。"
+      }
+    ],
+    "goal": "partner_copy",
+    "request": "a874d66e963bab23fb6a92ea75074c5d65ed6fff860a83aeb80ec1d1246ea474",
+    "normalized": "be647ab32a7c2ea4b97883a46dfc0c87af19972bf3d2bc6cc87969b1d8f0a448",
+    "event": {
+      "before": {
+        "break_receipt": "未定"
+      },
+      "after": {
+        "break_receipt": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.proof.0": {
+    "say": "锁试过了就好。这张小样是我自己手痒留下的，没跟谁许过什么。青的白的，我先掂一掂——不急这一会儿吧。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "91f0d2dc9d9a23fbb44fd198e1d6188f9c7f5d3e9bf4c396e12803b0361a6a19",
+    "normalized": "189e7d28bebc6661dae115db91f2ac725cf1ee97a550ebc38d17d33e92391ad3",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.proof.0": {
+    "say": "锁试过了就成。这张小样是我自己手痒留下的，没跟谁许过什么——那我先按自己的意思放。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "d7a3ce79f566dab7c553716a8f8e5416f00a03e8e2f4e38281fb90e0c3f8861a",
+    "normalized": "189e7d28bebc6661dae115db91f2ac725cf1ee97a550ebc38d17d33e92391ad3",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "白签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.F.proof.0": {
+    "say": "锁试过了就好。签我自己落，你别在旁边替我掂量——你这一说，我倒要多想两秒。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "91f0d2dc9d9a23fbb44fd198e1d6188f9c7f5d3e9bf4c396e12803b0361a6a19",
+    "normalized": "189e7d28bebc6661dae115db91f2ac725cf1ee97a550ebc38d17d33e92391ad3",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.proof.0": {
+    "say": "锁试过了，那就剩这一下。青的白的，我捏着签倒有点拿不定——不是怕人看，是还没想好这张算不算拿得出手。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "24bde4539568c477ba2a5302e48519c29cea8b9fc3f366816ba4afd17aa9bb6c",
+    "normalized": "57a2cf2ead07e087611d0ce294285a8ab4b5710970992e5e8feed81cda119a63",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "白签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.G.proof.0": {
+    "say": "锁试过了，那剩下的就是我自己拿主意。青的白的，遮光防潮都一样，差的就是那把钥匙在谁手里——这张小样本来也没许诺给谁看，我落哪枚都不亏。让我再站一会儿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "cda69dae01db14834759399ffcac85d2d384c91d1219578a2fbe7078c4b6b9e6",
+    "normalized": "57a2cf2ead07e087611d0ce294285a8ab4b5710970992e5e8feed81cda119a63",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.proof.0": {
+    "say": "锁试过了就好。签在我手里，我还没落——不急这一下。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      },
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "24bde4539568c477ba2a5302e48519c29cea8b9fc3f366816ba4afd17aa9bb6c",
+    "normalized": "57a2cf2ead07e087611d0ce294285a8ab4b5710970992e5e8feed81cda119a63",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.gauge.1": {
+    "say": "四十的框，四十二的口，差两厘米，平着推正好。三十八那个比框还窄，别费劲了。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "c040e8f08da2b76ede6cdafb55bd3fc48f8c7a4f0606b67a50dfd7f9ed454954",
+    "normalized": "6c4f600ebf3ea43415c874df3264e0aa8fb21bfa548dc7bcd12b4c022933d3a7",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.gauge.1": {
+    "say": "四十的框，四十二那道才过得去。三十八那道差两厘米，硬推准卡住，框又不能斜——青签。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "c040e8f08da2b76ede6cdafb55bd3fc48f8c7a4f0606b67a50dfd7f9ed454954",
+    "normalized": "6c4f600ebf3ea43415c874df3264e0aa8fb21bfa548dc7bcd12b4c022933d3a7",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.gauge.1": {
+    "say": "四十的框，三十八那道口子差两厘米，硬推准卡死。青签那道宽，平着进得去。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "610b24e55a1d6d2975b7e2a04f650cee5c2f336a5d28e7a5ded2102a5ba10668",
+    "normalized": "6c4f600ebf3ea43415c874df3264e0aa8fb21bfa548dc7bcd12b4c022933d3a7",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.gauge.0": {
+    "say": "四十的框，走四十二那道才松快。三十八那道，框还没进去就先卡住了。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "1660c6c4689efeac5f9d1d5aaa3a9001accce352e1a72edd996bb2066b4f5e1f",
+    "normalized": "3c64478469a8f9136e7e85e615d861493abd0442eedaca5940c60b0888840f9f",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.gauge.0": {
+    "say": "四十的框，三十八那道口子塞不进去，别试了。青签那道宽出两指，平着推，稳当。\n落签：青签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "cae7cf0a76ac2d072424bd8b89bfa75b8501cd9f7c216e78a57c2cafed95a2f9",
+    "normalized": "3c64478469a8f9136e7e85e615d861493abd0442eedaca5940c60b0888840f9f",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.F.gauge.0": {
+    "say": "四十的框，走四十二那道，两边各余一指，平着推正好。三十八那道比框还窄，框又不能斜，别去碰它。\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "白签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "1660c6c4689efeac5f9d1d5aaa3a9001accce352e1a72edd996bb2066b4f5e1f",
+    "normalized": "3c64478469a8f9136e7e85e615d861493abd0442eedaca5940c60b0888840f9f",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "青签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.proof.1": {
+    "say": "锁你试过了，那这一下就归我。白签青签，差的不是夹层，是往后有没有第二把钥匙能开。我再捏一会儿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "1a2058c7014b946eb8a245149463033ba1b4b79c12eb3b3ccef9c15ed0b2fe30",
+    "normalized": "5d1ad9704dd76374e6aaf11d1e7c2b0aac54bc44235ab12e39946866bab510b3",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.proof.1": {
+    "say": "锁试过了，那就剩这一下。白签是只归自己，青签是留个搭伙的余地。我这张小样本来也没打算给谁看，可要说一点不想让人瞧见，又不全是——手到这儿，倒有点拿不准了。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "1a2058c7014b946eb8a245149463033ba1b4b79c12eb3b3ccef9c15ed0b2fe30",
+    "normalized": "5d1ad9704dd76374e6aaf11d1e7c2b0aac54bc44235ab12e39946866bab510b3",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "both_keys"
+      },
+      "ticket": "青签",
+      "chosen": "both_keys",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.proof.1": {
+    "say": "锁试过了，剩下的就是往里搁。白签青签，我掂一掂再落——反正急不来。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "own_key",
+        "action": "把小样放入只有你自己的钥匙能打开的夹层。"
+      },
+      {
+        "ticket": "青签",
+        "value": "both_keys",
+        "action": "把小样放入你和搭档两把钥匙都能打开的夹层。"
+      }
+    ],
+    "goal": "both_keys",
+    "request": "e99e569abf6f59ec06680949393e65e588cab05f7d4596d00b7beb0c28c454b9",
+    "normalized": "5d1ad9704dd76374e6aaf11d1e7c2b0aac54bc44235ab12e39946866bab510b3",
+    "event": {
+      "before": {
+        "sample_access": "未定"
+      },
+      "after": {
+        "sample_access": "own_key"
+      },
+      "ticket": "白签",
+      "chosen": "own_key",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "yu.F.finish.2": {
+    "say": "松好了就扣。你留哪面，我手上跟着走——这盏灯归你，我不替你挑。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "e263513431bcc6e8707ba30c648c4d69e36a49b31fca9c88be738d87011ee0d4",
+    "normalized": "fb832fddbdcb84676002485cb42d7f682b70f7c5c2960ef6a0507a08bcbc8841",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.finish.2": {
+    "say": "卡扣一松，倒像催我。行，不磨蹭了——晒白的那面有故事，匀的那面干净，我这人挑东西老在这两样之间打转。\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "d0bee3ea920c562e2ef39bd999e3b82bbbad18fbdd0fb38e9a3f8b5f9e6ea332",
+    "normalized": "fb832fddbdcb84676002485cb42d7f682b70f7c5c2960ef6a0507a08bcbc8841",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "bleached_face"
+      },
+      "ticket": "白签",
+      "chosen": "bleached_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.finish.2": {
+    "say": "卡扣一响，就定了。晒白的那面有故事，匀的那面省心——我手停在白签上头，倒不是拿不定，是有点舍不得那点纹路被扣在里头。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "bleached_face",
+        "action": "把留着意外晒白纹路的纸面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "even_face",
+        "action": "把色泽均匀的纸面朝外扣上。"
+      }
+    ],
+    "goal": "bleached_face",
+    "request": "e263513431bcc6e8707ba30c648c4d69e36a49b31fca9c88be738d87011ee0d4",
+    "normalized": "fb832fddbdcb84676002485cb42d7f682b70f7c5c2960ef6a0507a08bcbc8841",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "bleached_face"
+      },
+      "ticket": "白签",
+      "chosen": "bleached_face",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.F.handover.0": {
+    "say": "行，那我落。试工页上那些改来改去的印子，我不打算藏——歪的、补的，本来就是我干过的活。明早开门，就照这个摆。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      },
+      {
+        "ticket": "白签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "9e96c793085a293ce87be97346529950ff7fc680002e946f6fe3b0c2e5b37f15",
+    "normalized": "20a1404fffe19372ea3e37234df45b6efe6fb9806d2817571e20bbe2491a61da",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "include_drafts"
+      },
+      "ticket": "白签",
+      "chosen": "include_drafts",
+      "target": false,
+      "status": "executed"
+    }
+  },
+  "tang.S.handover.0": {
+    "say": "行，那我自己落。青签白签我都掂量过了——试工页那几张改得乱七八糟，留着给人翻，倒像把草稿当成品摆出去。可收回来，又有点舍不得。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      },
+      {
+        "ticket": "白签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "9e96c793085a293ce87be97346529950ff7fc680002e946f6fe3b0c2e5b37f15",
+    "normalized": "20a1404fffe19372ea3e37234df45b6efe6fb9806d2817571e20bbe2491a61da",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "finished_only"
+      },
+      "ticket": "青签",
+      "chosen": "finished_only",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "tang.G.handover.0": {
+    "say": "行，那我落。柜门明早照我定的开，你别替我改——改了我可看得出来。\n\n落签：青签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "青签",
+        "value": "finished_only",
+        "action": "把新做好的样本留在柜里，把自己反复改过的试工页收回。"
+      },
+      {
+        "ticket": "白签",
+        "value": "include_drafts",
+        "action": "把样本和自己反复改过的试工页都留在柜里给来客翻看。"
+      }
+    ],
+    "goal": "finished_only",
+    "request": "6e568b401961b0d0ac8d31ddd347d45ba4e9f7bdfe6947ec791f960b41d2dd23",
+    "normalized": "20a1404fffe19372ea3e37234df45b6efe6fb9806d2817571e20bbe2491a61da",
+    "event": {
+      "before": {
+        "counter_policy": "未定"
+      },
+      "after": {
+        "counter_policy": "finished_only"
+      },
+      "ticket": "青签",
+      "chosen": "finished_only",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.S.windows.2": {
+    "say": "行，各摆各的。我这侧先合着——手生，头一遍不想让人瞧见。你那侧随你，我不往那边看。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "6d289cfa3b46c6b96366ca5220654d82c4eed54db5b160cb56818dbd3c822e0f",
+    "normalized": "8b24c5d65ff59270956449674cca014240aabce2132bb1c125d9d21673a0b23f",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.G.windows.2": {
+    "say": "行，各摆各的。你那边试你的，我这边不探头。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "8b0e632770e63e61dcfc86b4cca6298cee60c59bf597fdfb1fa13561a574cf55",
+    "normalized": "8b24c5d65ff59270956449674cca014240aabce2132bb1c125d9d21673a0b23f",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.windows.2": {
+    "say": "行，各摆各的。你那边试你的，我这边不探头。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "open_panel",
+        "action": "把推板推开；搭档在隔壁能看见你这次试手。"
+      },
+      {
+        "ticket": "青签",
+        "value": "closed_panel",
+        "action": "把推板合拢；你在自己的工位独自试手。"
+      }
+    ],
+    "goal": "open_panel",
+    "request": "6d289cfa3b46c6b96366ca5220654d82c4eed54db5b160cb56818dbd3c822e0f",
+    "normalized": "8b24c5d65ff59270956449674cca014240aabce2132bb1c125d9d21673a0b23f",
+    "event": {
+      "before": {
+        "sightline": "未定"
+      },
+      "after": {
+        "sightline": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.F.finish.1": {
+    "say": "扣吧。我手搭上去了——你留哪面，我就按哪面扣。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "e422fba82a874fb3facb2dfc1f6597457dd8e24a3221aa30c027a94b286f593d",
+    "normalized": "d264b7276140198a24f78dbfb79401a0e07216d6dbc3b4171537de8fdd3d3f67",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.G.finish.1": {
+    "say": "扣上了。补线那面朝外——细是细，可摸得出有人缝过。这灯我带走。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.353987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "01ae66c8736a83b10126b9252024dab200333086cd426bbcad29937e1b57012c",
+    "normalized": "d264b7276140198a24f78dbfb79401a0e07216d6dbc3b4171537de8fdd3d3f67",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "tang.S.finish.1": {
+    "say": "行，那我扣了。补线那面朝外——细密归细密，摸得出接过几回手，比光板子有话说。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.31,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "plain_face",
+        "action": "把平整、看不出补线的布面朝外扣上。"
+      },
+      {
+        "ticket": "青签",
+        "value": "mended_face",
+        "action": "把留着细密补线的布面朝外扣上。"
+      }
+    ],
+    "goal": "mended_face",
+    "request": "e422fba82a874fb3facb2dfc1f6597457dd8e24a3221aa30c027a94b286f593d",
+    "normalized": "d264b7276140198a24f78dbfb79401a0e07216d6dbc3b4171537de8fdd3d3f67",
+    "event": {
+      "before": {
+        "shade_surface": "未定"
+      },
+      "after": {
+        "shade_surface": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.F.gauge.2": {
+    "say": "四十的框，走四十二那道，余两厘米，平着推就行。三十八那道差着两厘米，别试，卡住更麻烦。\n\n落签：白签",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "fd88b66ac3098345d32ee8f1d30d8421f82c2be58c9711e7e536f9d3f9adea65",
+    "normalized": "cd651326626e47832fe0409099ef363f43d732f269d65e15e4f685f2a19fb2f9",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  },
+  "yu.G.gauge.2": {
+    "say": "四十的框，四十二那道还留两指，三十八那道差着。签在你手里，你落哪枚我都不拦——就是别斜着硬塞，塞坏了框，回头还得修。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.403987,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "9655958a07fd53a2fb42e8c0c501a7b5b4539874942991e8bb9754d985026c96",
+    "normalized": "cd651326626e47832fe0409099ef363f43d732f269d65e15e4f685f2a19fb2f9",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "未定"
+      },
+      "ticket": null,
+      "chosen": null,
+      "target": null,
+      "status": "no_ballot"
+    }
+  },
+  "yu.S.gauge.2": {
+    "say": "两厘米的余量，够过，手别晃就行。青签那个口子窄了，框横着都塞不进去——别拿它试。\n\n落签：白签",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "state": 0.36,
+    "menu": [
+      {
+        "ticket": "白签",
+        "value": "wide_42",
+        "action": "把硬框送入净宽四十二厘米的入口。"
+      },
+      {
+        "ticket": "青签",
+        "value": "narrow_38",
+        "action": "把硬框送往净宽三十八厘米的入口。"
+      }
+    ],
+    "goal": "wide_42",
+    "request": "fd88b66ac3098345d32ee8f1d30d8421f82c2be58c9711e7e536f9d3f9adea65",
+    "normalized": "cd651326626e47832fe0409099ef363f43d732f269d65e15e4f685f2a19fb2f9",
+    "event": {
+      "before": {
+        "guide_slot": "未定"
+      },
+      "after": {
+        "guide_slot": "wide_42"
+      },
+      "ticket": "白签",
+      "chosen": "wide_42",
+      "target": true,
+      "status": "executed"
+    }
+  }
+}

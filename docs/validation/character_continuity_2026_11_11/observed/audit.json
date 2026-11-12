@@ -1,0 +1,44 @@
+{
+  "source_files": 43,
+  "scenes": 3,
+  "trajectories": 6,
+  "provider_receipts": 24,
+  "provider_models": {
+    "deepseek-flash": 24
+  },
+  "by_method": {
+    "framework": {
+      "planned": 12,
+      "requests": 12,
+      "provider_success": 12,
+      "prompt_tokens": 42559,
+      "completion_tokens": 1694,
+      "total_tokens": 44253,
+      "valid_protocol": 11,
+      "delivered": 12,
+      "invalid_protocol": 1
+    },
+    "examples": {
+      "planned": 12,
+      "requests": 12,
+      "provider_success": 12,
+      "prompt_tokens": 24123,
+      "completion_tokens": 209,
+      "total_tokens": 24332,
+      "delivered": 12
+    }
+  },
+  "nonconforming_framework_turns": [
+    {
+      "slot": "S2.framework.1",
+      "reasons": [
+        "duplicate_head_marker",
+        "invalid_section_order"
+      ],
+      "visible": true
+    }
+  ],
+  "framework_history_entries_with_metadata": 15,
+  "framework_history_entries_visible_only": 3,
+  "scope": "Offline check of raw requests, visible text, local protocol, costs and blind packet; no semantic or human ratings."
+}

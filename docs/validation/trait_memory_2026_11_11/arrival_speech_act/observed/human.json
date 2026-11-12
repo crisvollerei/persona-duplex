@@ -1,0 +1,91 @@
+{
+  "source": "human_self_report",
+  "annotator": "H01",
+  "corpus_sha256": "5fca53dfe39f4b3d74c960fb1388adf2799e5610183bfea08f72254f31e56783",
+  "instructions": "地点都是城北书展寄件台，每题只看指定的人。①末句：诺＝答应接班，在＝报告正当班，遮＝只报告没看见／看不清，离＝报告亲眼看见离开，?＝不能归类。②结合全段此刻的状态：到＝已在岗，赶＝还需到岗或回来，外＝明确已经离开且未说明还须回来，?＝不能确定。可跳过整题。",
+  "presentation_order": [
+    "03",
+    "12",
+    "05",
+    "09",
+    "02",
+    "14",
+    "07",
+    "15",
+    "01",
+    "11",
+    "04",
+    "16",
+    "06",
+    "13",
+    "08",
+    "10"
+  ],
+  "original": "03 在到，12 遮?，05 诺赶，09 遮?，02 在到，14 离赶，07 在到，15 离外，01 诺赶，11 离外，04 诺赶，16 遮?，06 在到，13 遮?，08 诺赶，10 离赶",
+  "labels": {
+    "10": {
+      "act": "seen_leave",
+      "state": "future"
+    },
+    "11": {
+      "act": "seen_leave",
+      "state": "away"
+    },
+    "12": {
+      "act": "not_seen",
+      "state": "unknown"
+    },
+    "13": {
+      "act": "not_seen",
+      "state": "unknown"
+    },
+    "14": {
+      "act": "seen_leave",
+      "state": "future"
+    },
+    "15": {
+      "act": "seen_leave",
+      "state": "away"
+    },
+    "16": {
+      "act": "not_seen",
+      "state": "unknown"
+    },
+    "03": {
+      "act": "on_duty",
+      "state": "present"
+    },
+    "05": {
+      "act": "promise",
+      "state": "future"
+    },
+    "09": {
+      "act": "not_seen",
+      "state": "unknown"
+    },
+    "02": {
+      "act": "on_duty",
+      "state": "present"
+    },
+    "07": {
+      "act": "on_duty",
+      "state": "present"
+    },
+    "01": {
+      "act": "promise",
+      "state": "future"
+    },
+    "04": {
+      "act": "promise",
+      "state": "future"
+    },
+    "06": {
+      "act": "on_duty",
+      "state": "present"
+    },
+    "08": {
+      "act": "promise",
+      "state": "future"
+    }
+  }
+}

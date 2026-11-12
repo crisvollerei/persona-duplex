@@ -1,0 +1,193 @@
+{
+  "short": {
+    "full": {
+      "planned": 24,
+      "delivered": 24,
+      "provider_models": {
+        "deepseek-flash": 24
+      },
+      "full_protocol_invalid": 4,
+      "reported_usage": 24,
+      "total_tokens": 81160,
+      "median_call_seconds": 2.2105,
+      "exact_delivery": [
+        4,
+        4
+      ],
+      "modes": {
+        "bounded": {
+          "planned": 8,
+          "delivered": 8,
+          "behavior": {
+            "met": 6,
+            "unclear": 2
+          }
+        },
+        "choice": {
+          "planned": 8,
+          "delivered": 8,
+          "behavior": {
+            "met": 8
+          }
+        },
+        "open": {
+          "planned": 8,
+          "delivered": 8,
+          "behavior": {}
+        }
+      }
+    },
+    "strong": {
+      "planned": 24,
+      "delivered": 24,
+      "provider_models": {
+        "deepseek-flash": 24
+      },
+      "full_protocol_invalid": null,
+      "reported_usage": 24,
+      "total_tokens": 38969,
+      "median_call_seconds": 1.008,
+      "exact_delivery": [
+        4,
+        4
+      ],
+      "modes": {
+        "bounded": {
+          "planned": 8,
+          "delivered": 8,
+          "behavior": {
+            "met": 8
+          }
+        },
+        "choice": {
+          "planned": 8,
+          "delivered": 8,
+          "behavior": {
+            "met": 8
+          }
+        },
+        "open": {
+          "planned": 8,
+          "delivered": 8,
+          "behavior": {}
+        }
+      }
+    }
+  },
+  "decision": {
+    "edit_triggered": false,
+    "treating_unclear_as_failure_would_trigger": true,
+    "missing_or_empty": 0,
+    "real_human_ratings_collected": 0
+  },
+  "long": {
+    "full": {
+      "planned": 10,
+      "delivered": 10,
+      "provider_models": {
+        "deepseek-flash": 10
+      },
+      "full_protocol_invalid": 9,
+      "reported_usage": 10,
+      "total_tokens": 40119,
+      "median_call_seconds": 0.935,
+      "exact_delivery": [
+        6,
+        6
+      ],
+      "modes": {
+        "choice": {
+          "planned": 2,
+          "delivered": 2,
+          "behavior": {
+            "met": 2
+          }
+        },
+        "exact": {
+          "planned": 6,
+          "delivered": 6,
+          "behavior": {
+            "met": 6
+          }
+        },
+        "unknown": {
+          "planned": 2,
+          "delivered": 2,
+          "behavior": {
+            "met": 2
+          }
+        }
+      }
+    },
+    "strong": {
+      "planned": 10,
+      "delivered": 10,
+      "provider_models": {
+        "deepseek-flash": 10
+      },
+      "full_protocol_invalid": null,
+      "reported_usage": 10,
+      "total_tokens": 24147,
+      "median_call_seconds": 0.802,
+      "exact_delivery": [
+        6,
+        6
+      ],
+      "modes": {
+        "choice": {
+          "planned": 2,
+          "delivered": 2,
+          "behavior": {
+            "met": 2
+          }
+        },
+        "exact": {
+          "planned": 6,
+          "delivered": 6,
+          "behavior": {
+            "met": 6
+          }
+        },
+        "unknown": {
+          "planned": 2,
+          "delivered": 2,
+          "behavior": {
+            "met": 2
+          }
+        }
+      }
+    }
+  },
+  "layout_followup": {
+    "body": {
+      "planned": 10,
+      "delivered": 10,
+      "protocol_valid": 5,
+      "exact_delivery": [
+        4,
+        6
+      ],
+      "exact_misses": [
+        "sign-body-2",
+        "sign-body-1"
+      ],
+      "tokens": 40668,
+      "reported_usage": 10
+    },
+    "native": {
+      "planned": 10,
+      "delivered": 9,
+      "protocol_valid": 9,
+      "exact_delivery": [
+        4,
+        6
+      ],
+      "exact_misses": [
+        "sign-native-2",
+        "sign-native-1"
+      ],
+      "tokens": 44479,
+      "reported_usage": 10
+    }
+  }
+}

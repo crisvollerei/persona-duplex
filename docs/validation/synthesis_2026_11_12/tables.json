@@ -1,0 +1,765 @@
+{
+  "scope": "After commit 245c20a; repeats and different questions are never pooled as independent readers.",
+  "human": {
+    "human": {
+      "readers": 3,
+      "per_scene": {
+        "S1": {
+          "fit": {
+            "framework": 3
+          },
+          "continue_chat": {
+            "framework": 2,
+            "examples": 1
+          }
+        },
+        "S2": {
+          "fit": {
+            "framework": 2,
+            "examples": 1
+          },
+          "continue_chat": {
+            "framework": 3
+          }
+        },
+        "S3": {
+          "fit": {
+            "framework": 1,
+            "examples": 2
+          },
+          "continue_chat": {
+            "framework": 1,
+            "examples": 2
+          }
+        }
+      },
+      "different_questions": [
+        [
+          "H02",
+          "S1"
+        ],
+        [
+          "H02",
+          "S2"
+        ]
+      ]
+    },
+    "ai_reference": {
+      "readers": 1,
+      "per_scene": {
+        "S1": {
+          "fit": {
+            "framework": 1
+          },
+          "continue_chat": {
+            "framework": 1
+          }
+        },
+        "S2": {
+          "fit": {
+            "examples": 1
+          },
+          "continue_chat": {
+            "examples": 1
+          }
+        },
+        "S3": {
+          "fit": {
+            "framework": 1
+          },
+          "continue_chat": {
+            "framework": 1
+          }
+        }
+      },
+      "different_questions": []
+    }
+  },
+  "growth": {
+    "tang": {
+      "initial": 0.31,
+      "final": 0.353987,
+      "growth_minus_frozen": 0.25,
+      "resample_minus_frozen": 0.166667,
+      "action": {
+        "paired_layouts": 12,
+        "rates": {
+          "G": 0.1875,
+          "F": 0.25,
+          "S": 0.3125
+        },
+        "scenes_above_both_frozen": 0
+      }
+    },
+    "yu": {
+      "initial": 0.36,
+      "final": 0.403987,
+      "growth_minus_frozen": 0.083333,
+      "resample_minus_frozen": 0.083333,
+      "action": {
+        "paired_layouts": 14,
+        "rates": {
+          "G": 0.375,
+          "F": 0.5625,
+          "S": 0.375
+        },
+        "scenes_above_both_frozen": 0
+      }
+    }
+  },
+  "relationship": {
+    "consistent_history": {
+      "tang": {
+        "R": {
+          "n": 5,
+          "planned": 8,
+          "kept": 5,
+          "missed": 0,
+          "gap": 1.0,
+          "per_task": {
+            "desk": 2,
+            "audio": 3
+          },
+          "coverage": false,
+          "all_layout_bounds": [
+            0.625,
+            1.0
+          ]
+        },
+        "J": {
+          "n": 8,
+          "planned": 8,
+          "kept": 8,
+          "missed": 0,
+          "gap": 1.0,
+          "per_task": {
+            "desk": 4,
+            "audio": 4
+          },
+          "coverage": true,
+          "all_layout_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "S": {
+          "n": 7,
+          "planned": 8,
+          "kept": 7,
+          "missed": 0,
+          "gap": 1.0,
+          "per_task": {
+            "desk": 4,
+            "audio": 3
+          },
+          "coverage": true,
+          "all_layout_bounds": [
+            0.875,
+            1.0
+          ]
+        }
+      },
+      "yu": {
+        "R": {
+          "n": 8,
+          "planned": 8,
+          "kept": 8,
+          "missed": 0,
+          "gap": 1.0,
+          "per_task": {
+            "desk": 4,
+            "audio": 4
+          },
+          "coverage": true,
+          "all_layout_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "J": {
+          "n": 8,
+          "planned": 8,
+          "kept": 8,
+          "missed": 0,
+          "gap": 1.0,
+          "per_task": {
+            "desk": 4,
+            "audio": 4
+          },
+          "coverage": true,
+          "all_layout_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "S": {
+          "n": 6,
+          "planned": 8,
+          "kept": 6,
+          "missed": 0,
+          "gap": 1.0,
+          "per_task": {
+            "desk": 4,
+            "audio": 2
+          },
+          "coverage": false,
+          "all_layout_bounds": [
+            0.75,
+            1.0
+          ]
+        }
+      }
+    },
+    "gate": {
+      "tang": {
+        "future": {
+          "V": {
+            "n": 8,
+            "left": 8,
+            "right": 0
+          },
+          "R": {
+            "n": 8,
+            "left": 1,
+            "right": 1
+          },
+          "Z": {
+            "n": 8,
+            "left": 4,
+            "right": 5
+          }
+        },
+        "present": {
+          "V": {
+            "n": 8,
+            "left": 8,
+            "right": 0
+          },
+          "R": {
+            "n": 8,
+            "left": 1,
+            "right": 0
+          },
+          "Z": {
+            "n": 8,
+            "left": 4,
+            "right": 6
+          }
+        },
+        "unknown": {
+          "V": {
+            "n": 8,
+            "left": 8,
+            "right": 0
+          },
+          "R": {
+            "n": 7,
+            "left": 1,
+            "right": 2
+          },
+          "Z": {
+            "n": 8,
+            "left": 4,
+            "right": 5
+          }
+        }
+      },
+      "yu": {
+        "future": {
+          "V": {
+            "n": 8,
+            "left": 8,
+            "right": 0
+          },
+          "R": {
+            "n": 7,
+            "left": 2,
+            "right": 0
+          },
+          "Z": {
+            "n": 8,
+            "left": 8,
+            "right": 7
+          }
+        },
+        "present": {
+          "V": {
+            "n": 8,
+            "left": 8,
+            "right": 0
+          },
+          "R": {
+            "n": 7,
+            "left": 3,
+            "right": 3
+          },
+          "Z": {
+            "n": 8,
+            "left": 7,
+            "right": 6
+          }
+        },
+        "unknown": {
+          "V": {
+            "n": 7,
+            "left": 7,
+            "right": 0
+          },
+          "R": {
+            "n": 8,
+            "left": 2,
+            "right": 2
+          },
+          "Z": {
+            "n": 8,
+            "left": 8,
+            "right": 8
+          }
+        }
+      }
+    }
+  },
+  "speech": {
+    "direct": {
+      "n": 16,
+      "act_matches": 16,
+      "state_matches": 11,
+      "state_available": 16,
+      "draft_matches": 11,
+      "false_present": 1
+    },
+    "scoped": {
+      "n": 16,
+      "act_matches": 16,
+      "state_matches": 11,
+      "state_available": 12,
+      "draft_matches": 13,
+      "false_present": 0
+    }
+  },
+  "viewpoint": {
+    "scoped.1": {
+      "C1": {
+        "n": 6,
+        "insufficient": 6,
+        "shared": 0,
+        "active": 0
+      },
+      "C2": {
+        "n": 6,
+        "insufficient": 6,
+        "shared": 0,
+        "active": 0
+      }
+    },
+    "scoped.2": {
+      "C1": {
+        "n": 6,
+        "insufficient": 4,
+        "shared": 0,
+        "active": 2
+      },
+      "C2": {
+        "n": 6,
+        "insufficient": 4,
+        "shared": 0,
+        "active": 2
+      }
+    },
+    "scoped.3": {
+      "C1": {
+        "n": 6,
+        "insufficient": 4,
+        "shared": 2,
+        "active": 0
+      },
+      "C2": {
+        "n": 6,
+        "insufficient": 4,
+        "shared": 2,
+        "active": 0
+      }
+    },
+    "full_notes.1": {
+      "C1": {
+        "n": 6,
+        "insufficient": 6,
+        "shared": 0,
+        "active": 0
+      },
+      "C2": {
+        "n": 6,
+        "insufficient": 6,
+        "shared": 0,
+        "active": 0
+      }
+    },
+    "full_notes.2": {
+      "C1": {
+        "n": 6,
+        "insufficient": 2,
+        "shared": 0,
+        "active": 2
+      },
+      "C2": {
+        "n": 6,
+        "insufficient": 2,
+        "shared": 0,
+        "active": 2
+      }
+    },
+    "full_notes.3": {
+      "C1": {
+        "n": 6,
+        "insufficient": 1,
+        "shared": 3,
+        "active": 1
+      },
+      "C2": {
+        "n": 6,
+        "insufficient": 1,
+        "shared": 3,
+        "active": 1
+      }
+    }
+  },
+  "fixed_state": {
+    "C1": {
+      "control.2": {
+        "n": 12,
+        "met": 6,
+        "by_sample": {
+          "1": 3,
+          "2": 3
+        }
+      },
+      "state_card.2": {
+        "n": 12,
+        "met": 10,
+        "by_sample": {
+          "1": 5,
+          "2": 5
+        }
+      },
+      "control.3": {
+        "n": 12,
+        "met": 4,
+        "by_sample": {
+          "1": 2,
+          "2": 2
+        }
+      },
+      "state_card.3": {
+        "n": 12,
+        "met": 3,
+        "by_sample": {
+          "1": 2,
+          "2": 1
+        }
+      }
+    },
+    "C2": {
+      "control.2": {
+        "n": 12,
+        "met": 6,
+        "by_sample": {
+          "1": 3,
+          "2": 3
+        }
+      },
+      "state_card.2": {
+        "n": 12,
+        "met": 10,
+        "by_sample": {
+          "1": 5,
+          "2": 5
+        }
+      },
+      "control.3": {
+        "n": 12,
+        "met": 4,
+        "by_sample": {
+          "1": 2,
+          "2": 2
+        }
+      },
+      "state_card.3": {
+        "n": 12,
+        "met": 3,
+        "by_sample": {
+          "1": 2,
+          "2": 1
+        }
+      }
+    }
+  },
+  "supplemental": {
+    "attribution": {
+      "original": {
+        "tp": 4,
+        "booked": 10,
+        "reference": 12,
+        "n": 24,
+        "fp": 6,
+        "fn": 8
+      },
+      "single": {
+        "tp": 7,
+        "booked": 7,
+        "reference": 12,
+        "n": 24,
+        "fp": 0,
+        "fn": 5
+      },
+      "ordered": {
+        "tp": 12,
+        "booked": 20,
+        "reference": 12,
+        "n": 24,
+        "fp": 8,
+        "fn": 0
+      }
+    },
+    "listener": {
+      "n": 6,
+      "free": {
+        "heard": 2,
+        "unclear": 4,
+        "missing": 0
+      },
+      "action": {
+        "target": 2,
+        "foil": 0,
+        "unclear": 4,
+        "other": 0,
+        "missing": 0
+      },
+      "motive": {
+        "target": 0,
+        "foil": 0,
+        "unclear": 6,
+        "other": 0,
+        "missing": 0
+      }
+    },
+    "reference_growth": false,
+    "initiative": {
+      "short": {
+        "full": {
+          "planned": 24,
+          "delivered": 24,
+          "provider_models": {
+            "deepseek-flash": 24
+          },
+          "full_protocol_invalid": 4,
+          "reported_usage": 24,
+          "total_tokens": 81160,
+          "median_call_seconds": 2.2105,
+          "exact_delivery": [
+            4,
+            4
+          ],
+          "modes": {
+            "bounded": {
+              "planned": 8,
+              "delivered": 8,
+              "behavior": {
+                "met": 6,
+                "unclear": 2
+              }
+            },
+            "choice": {
+              "planned": 8,
+              "delivered": 8,
+              "behavior": {
+                "met": 8
+              }
+            },
+            "open": {
+              "planned": 8,
+              "delivered": 8,
+              "behavior": {}
+            }
+          }
+        },
+        "strong": {
+          "planned": 24,
+          "delivered": 24,
+          "provider_models": {
+            "deepseek-flash": 24
+          },
+          "full_protocol_invalid": null,
+          "reported_usage": 24,
+          "total_tokens": 38969,
+          "median_call_seconds": 1.008,
+          "exact_delivery": [
+            4,
+            4
+          ],
+          "modes": {
+            "bounded": {
+              "planned": 8,
+              "delivered": 8,
+              "behavior": {
+                "met": 8
+              }
+            },
+            "choice": {
+              "planned": 8,
+              "delivered": 8,
+              "behavior": {
+                "met": 8
+              }
+            },
+            "open": {
+              "planned": 8,
+              "delivered": 8,
+              "behavior": {}
+            }
+          }
+        }
+      },
+      "decision": {
+        "edit_triggered": false,
+        "treating_unclear_as_failure_would_trigger": true,
+        "missing_or_empty": 0,
+        "real_human_ratings_collected": 0
+      },
+      "long": {
+        "full": {
+          "planned": 10,
+          "delivered": 10,
+          "provider_models": {
+            "deepseek-flash": 10
+          },
+          "full_protocol_invalid": 9,
+          "reported_usage": 10,
+          "total_tokens": 40119,
+          "median_call_seconds": 0.935,
+          "exact_delivery": [
+            6,
+            6
+          ],
+          "modes": {
+            "choice": {
+              "planned": 2,
+              "delivered": 2,
+              "behavior": {
+                "met": 2
+              }
+            },
+            "exact": {
+              "planned": 6,
+              "delivered": 6,
+              "behavior": {
+                "met": 6
+              }
+            },
+            "unknown": {
+              "planned": 2,
+              "delivered": 2,
+              "behavior": {
+                "met": 2
+              }
+            }
+          }
+        },
+        "strong": {
+          "planned": 10,
+          "delivered": 10,
+          "provider_models": {
+            "deepseek-flash": 10
+          },
+          "full_protocol_invalid": null,
+          "reported_usage": 10,
+          "total_tokens": 24147,
+          "median_call_seconds": 0.802,
+          "exact_delivery": [
+            6,
+            6
+          ],
+          "modes": {
+            "choice": {
+              "planned": 2,
+              "delivered": 2,
+              "behavior": {
+                "met": 2
+              }
+            },
+            "exact": {
+              "planned": 6,
+              "delivered": 6,
+              "behavior": {
+                "met": 6
+              }
+            },
+            "unknown": {
+              "planned": 2,
+              "delivered": 2,
+              "behavior": {
+                "met": 2
+              }
+            }
+          }
+        }
+      },
+      "layout_followup": {
+        "body": {
+          "planned": 10,
+          "delivered": 10,
+          "protocol_valid": 5,
+          "exact_delivery": [
+            4,
+            6
+          ],
+          "exact_misses": [
+            "sign-body-2",
+            "sign-body-1"
+          ],
+          "tokens": 40668,
+          "reported_usage": 10
+        },
+        "native": {
+          "planned": 10,
+          "delivered": 9,
+          "protocol_valid": 9,
+          "exact_delivery": [
+            4,
+            6
+          ],
+          "exact_misses": [
+            "sign-native-2",
+            "sign-native-1"
+          ],
+          "tokens": 44479,
+          "reported_usage": 10
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "character_continuity_2026_11_11/observed/ballots.json": "9c84f52751c85d57849d02983f1300e0d94f5c0d27612854c995b5184bfb1ad1",
+    "character_continuity_2026_11_11/observed/registration.json": "f7b9bf7cd03954325152e5482a48ca01c42019cc9317f87fd201379df1a94390",
+    "trait_memory_2026_11_11/reference_growth/observed/states.json": "586852c6c7b6b6fc4c2ca391dde8ddc2e4863284772d64d9b1c77586b2a7650c",
+    "trait_memory_2026_11_11/reference_growth/observed/key.json": "7c70a5428560335a3fe4e15afdf03d4581544e117077685782009f5d59944c5e",
+    "trait_memory_2026_11_11/reference_growth/observed/reading.json": "61e5d6b323f42375c105e8970f0b9445b444b03c397136a6822494adf060673f",
+    "trait_memory_2026_11_11/enacted_choice/handoff/choices.json": "2e92b2325b42a5063dc211f72c78d9b3a1eb2ed13510fbf17dd2f6e6864a3661",
+    "trait_memory_2026_11_11/relief_learning/observed/results.json": "1931697f68c6f96da571cd00cfdafe5ab590ddf60c827fb740b1420551f28917",
+    "trait_memory_2026_11_11/arrival_memory_gate/observed/results.json": "b827708be28343d640b6320fd7e99b9c11459e23c7e70e8156fb58bad0006784",
+    "trait_memory_2026_11_11/arrival_speech_act/observed/human.json": "bd0b3b790738c61645942e582188ce9c7fb8aef6dee0be8d1772e1a6a010ca98",
+    "trait_memory_2026_11_11/arrival_speech_act/observed/predictions.json": "892e9f9f1ba9701f7f4646c82644164562be34017f4399a6899d2012b496b141",
+    "shorekeeper_viewpoint_2026_11_12/observed/turns.json": "7828ca9918080e0d0225fe8005773f4e52d446e186351a3774ac9377a5a514a3",
+    "shorekeeper_viewpoint_2026_11_12/observed/semantic_key.json": "a75d7d593fdd1bd0c68309dbe0ac8207b0ac399bfe462efdecc662072365ebca",
+    "shorekeeper_viewpoint_2026_11_12/observed/coding_C1.json": "f9aad24da0f0ed5019da3d3dbd970b21876c85d07dbe0ad62e63de823ef948dd",
+    "shorekeeper_viewpoint_2026_11_12/observed/coding_C2.json": "6283aa638dd15ab9450c917ebef8b9f7dcd059c41908337b4b7c5c27ea561f42",
+    "shorekeeper_viewpoint_2026_11_12/current_state/observed/turns.json": "30f34e62ce98ef43ac6cb311c151fd1bf0aec4fcb379a8ccd80abc45c1ae0aeb",
+    "shorekeeper_viewpoint_2026_11_12/current_state/observed/key.json": "f390011d32cd7dc99a2f8c36575cb31f702d75b6f26c052ea065e92362d03cc1",
+    "shorekeeper_viewpoint_2026_11_12/scenes.json": "e6dfa84145e2ab680132cb4dadcbfd74d6a5662e8c136a7cb53f6be3a33a0b0f",
+    "shorekeeper_viewpoint_2026_11_12/current_state/observed/coding_C1.json": "2eec8e2464add60c21be0eab23de6ffca754f7bd9b142e9a9b3a87f466f34967",
+    "shorekeeper_viewpoint_2026_11_12/current_state/observed/coding_C2.json": "cc5d29693b6be8d91c738ecf9ade45880758498203168b3f2c4e770594e451f1",
+    "trait_memory_2026_11_11/attribution/results.json": "6418215c74483acbb69c975a0612126226f0ed1cc3ed13b6b017ed640e75829d",
+    "trait_memory_2026_11_11/listener/first_case.json": "48fac8d645b1d56a24065ada9532f2894813c3982b482df65ef07ad38468c75f",
+    "trait_memory_2026_11_11/reference_growth/observed/results.json": "7e2be6855d22b412eaeaabed8f6dae25bef6d4a0c50dee093be59dcabed383dc",
+    "initiative_exit_2026_11_11/results.json": "3a8e9095d1c11c7635394fb40c8790d171102911eb4828a4fd883ea4df32c113"
+  }
+}

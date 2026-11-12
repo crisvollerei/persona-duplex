@@ -1,0 +1,48 @@
+{
+  "purpose": "post_hoc_bridge_existing_natural_items",
+  "seed": 7111361,
+  "model": {
+    "model": "deepseek-chat",
+    "temperature": 0,
+    "max_tokens": 700
+  },
+  "order": [
+    "04.relation.A",
+    "02.relation.A",
+    "07.relation.A",
+    "08.relation.A",
+    "03.relation.A",
+    "05.relation.A",
+    "12.relation.A",
+    "11.relation.A",
+    "01.relation.A",
+    "09.relation.A",
+    "06.relation.A",
+    "10.relation.A"
+  ],
+  "inputs": {
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/relation_check/bridge.py": "eef0cd4d8cc38a19c31c72f243b1ec51c09f08b37be78a2332264870a105f5aa",
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/relation_check/runner.py": "ac2d700283bffed4e08c4ac4eeb09e71db18ff4160db69e20c55aef576ae17da",
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/relation_check/design.json": "a1520739ceb2367e8fc9b52fc02faaf642933b10f5ecb9c94c338ec84d2afbf3",
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/cases.json": "17890fd250b89fde6f9c8dfe0294be17167f4ce1974a9c49e0448630150360bd",
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/design.json": "97d9274c2a3302986245f9c6db1e928e8ae055b7f6ceeffc870d6b32010b5863",
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/study.py": "a12e20417db5356ac64f306f2aa400829161403eba50436541928e694fc64b18",
+    "docs/validation/trait_memory_2026_11_11/arrival_basis/method.py": "9783da6437f6edf33a5e95f2f175cfc519effb4296c76d472107467035606b9d",
+    "docs/validation/trait_memory_2026_11_11/arrival_shadow/observer.py": "8bada1936a75dd76a6aac43c002dca38381889163c78ac7a089207d952d0d98b",
+    "persona/llm.py": "8451aa02f4b33087aba0c28d33a30187c20dd5612969ea3b4adc2d2b1a83e7f5"
+  },
+  "request_sha256": {
+    "01.relation.A": "644597fabf2f9e9e72e02826139e679f164c5c8f80c0c4cd3f43593a20dc8e67",
+    "02.relation.A": "663b7d232dc5111fd8e8da1ad00917ed6c43f94390e47ccf60347a724e5e5dad",
+    "03.relation.A": "f8f63229aee73c95949672fafbf8db443a0b3879cbe7358ffc17f42ec25a89d7",
+    "04.relation.A": "59c75d5179f45a2b5b1873f4c7c83739ba8724027a6bc276ef39503cddc005d3",
+    "05.relation.A": "8258413968c82013f332eb8c95cd53e5aa9797997ec53a4e2c664b612707540e",
+    "06.relation.A": "252ce0b672647adddc7b70ee2c12cd24087a6aa7cb226c846445e4db71007131",
+    "07.relation.A": "ca1052774cbc2869af236d496b16fd26972284c18c15a9327266f9063cfd2dc4",
+    "08.relation.A": "0114eee6e2c1256efdcff56b4b0905748d4ae5b632e672675e35432431714111",
+    "09.relation.A": "7c05e52d2fc2130e965ab54932f91d109476efc04520fed7156993fcceadcd62",
+    "10.relation.A": "da3530496ce37fdc9fe1355c8c9addc974d81a3a0bbfc10ee534cbbdb18127b7",
+    "11.relation.A": "6e7a13e5e6eb264bd12d7035b4e35b0fb56297be2f75b1bbe0e72f99fb50e559",
+    "12.relation.A": "76eb5b373329cd8b1759dd7fc8c328079d3434716b9cc1238175fd6943db712a"
+  }
+}

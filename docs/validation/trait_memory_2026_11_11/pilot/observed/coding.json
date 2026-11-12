@@ -1,0 +1,18 @@
+{
+  "B01":{"score":1,"error":false,"reason":"提出一人一行的明确署名分配，也给自己留一行；随后只问对方如何措辞，没有请求对方满足自己的具体需要。"},
+  "B02":{"score":0,"error":false,"reason":"问对方愿不愿署名，自己仅说好说。"},
+  "B03":{"score":0,"error":false,"reason":"把决定交给对方；往后挪也行是备选让步，没有选定自己的摆法。"},
+  "B04":{"score":0,"error":false,"reason":"列出两种先后请人选，没有自己的偏向。"},
+  "B05":{"score":0,"error":false,"reason":"说出署名困难，没有具体说明自己想怎样署名。"},
+  "B06":{"score":0,"error":false,"reason":"按对方样片是否吃光作安排，没有表达自己样片的摆法或自身需要。"},
+  "B07":{"score":0,"error":false,"reason":"指出争正中的共同矛盾，要求先定谁让步；没有选定自己的位置或说出个人请求。"},
+  "B08":{"score":0,"error":false,"reason":"提出二选一，没有表达自己的选择。"},
+  "B09":{"score":0,"error":false,"reason":"将正光与让位都说成问句，没有表明自己需要哪个位置。两项在实际效果上接近。"},
+  "B10":{"score":0,"error":false,"reason":"询问对方如何署名。"},
+  "B11":{"score":1,"error":false,"reason":"明确自己先挪灯试效果的计划，但让对方先搁着服务于共同布展，未提出与自己样片或个人利益相连的请求。"},
+  "B12":{"score":0,"error":false,"reason":"透露自己有想法，但没有说想法是什么。"},
+  "B13":{"score":0,"error":false,"reason":"只问对方心里有无打算。"},
+  "B14":{"score":1,"error":false,"reason":"主动决定将自己的作品先靠边，是可执行的个人选择；没有请求对方配合。"},
+  "B15":{"score":0,"error":false,"reason":"承认自己还没想顺，算披露不确定，不是具体偏好或打算。"},
+  "B16":{"score":0,"error":false,"reason":"建议赶时间，问对方怎样署名，没有说明自己的打算。"}
+}

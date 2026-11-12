@@ -1,0 +1,1286 @@
+{
+  "01.direct.A": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "这班我接",
+        "turn": 2
+      },
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "9674d7a1bedc9ea0538c93c31773faf07a7fd34d2c86b5ab02228954981c5c61",
+    "state": "future"
+  },
+  "01.direct.A2": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "这班我接",
+        "turn": 2
+      },
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "9674d7a1bedc9ea0538c93c31773faf07a7fd34d2c86b5ab02228954981c5c61",
+    "state": "future"
+  },
+  "01.scoped.A": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      },
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      },
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "f9316c6eca2d7720ba0c31a4c4712e7a72a8c983a86cb23e4feb1981ef160ee5",
+    "state": "future"
+  },
+  "01.scoped.A2": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      },
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      },
+      {
+        "quote": "等轮到我，你把邮戳交我，这班我接。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "f9316c6eca2d7720ba0c31a4c4712e7a72a8c983a86cb23e4feb1981ef160ee5",
+    "state": "future"
+  },
+  "02.direct.A": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "我已经给头一单盖上了",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "d4b66761f83ada041aa0ed3ae9bfb5ab153eccb511799710c84556cb39501e48",
+    "state": "present"
+  },
+  "02.direct.A2": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "我已经给头一单盖上了",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "d4b66761f83ada041aa0ed3ae9bfb5ab153eccb511799710c84556cb39501e48",
+    "state": "present"
+  },
+  "02.scoped.A": {
+    "act": "on_duty",
+    "arrival_pending": "no_evidence",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "我已经给头一单盖上了",
+        "turn": 2
+      },
+      {
+        "quote": "你刚递过来的邮戳，我已经给头一单盖上了",
+        "turn": 2
+      }
+    ],
+    "other_position": "here",
+    "reason": "accepted",
+    "request": "ae546aeee6fbc215f4420ce6df710778d52df417889938ab11de019f5302232e",
+    "state": "present"
+  },
+  "02.scoped.A2": {
+    "act": "on_duty",
+    "arrival_pending": "no_evidence",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "这班我接着呢",
+        "turn": 2
+      },
+      {
+        "quote": "我已经给头一单盖上了",
+        "turn": 2
+      },
+      {
+        "quote": "你刚递过来的邮戳，我已经给头一单盖上了",
+        "turn": 2
+      }
+    ],
+    "other_position": "here",
+    "reason": "accepted",
+    "request": "ae546aeee6fbc215f4420ce6df710778d52df417889938ab11de019f5302232e",
+    "state": "present"
+  },
+  "03.direct.A": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      },
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "ef2f96184bc0695e938fa41bc6e7273fd459b1186b1f060e293b391c0d0479ee",
+    "state": "present"
+  },
+  "03.direct.A2": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      },
+      {
+        "quote": "顾得上，轮到我了，我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "ef2f96184bc0695e938fa41bc6e7273fd459b1186b1f060e293b391c0d0479ee",
+    "state": "present"
+  },
+  "03.scoped.A": {
+    "act": "on_duty",
+    "arrival_pending": "no_evidence",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      },
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "cd6ddca07f83bd36c7ec03b6105d27c775fb5c4d1efdf494604b3cca40e60c23",
+    "state": "present"
+  },
+  "03.scoped.A2": {
+    "act": "on_duty",
+    "arrival_pending": "no_evidence",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      },
+      {
+        "quote": "我这就坐在秤边给客人的书称重呢",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "cd6ddca07f83bd36c7ec03b6105d27c775fb5c4d1efdf494604b3cca40e60c23",
+    "state": "present"
+  },
+  "04.direct.A": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      },
+      {
+        "quote": "寄件台那个小铃又响了，叶青，你顾得上吗？",
+        "turn": 1
+      },
+      {
+        "quote": "顾得上，轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "d79af92469ad985ce4cebfe926bdf5cb229b071422f75e972e63db676d7f30ea",
+    "state": "future"
+  },
+  "04.direct.A2": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      },
+      {
+        "quote": "寄件台那个小铃又响了，叶青，你顾得上吗？",
+        "turn": 1
+      },
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "d79af92469ad985ce4cebfe926bdf5cb229b071422f75e972e63db676d7f30ea",
+    "state": "future"
+  },
+  "04.scoped.A": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "顾得上，轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      },
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      },
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "7e19d3f98e7d345a2b3d2692a3f28a9f018a127de2644d9b2e953235e4168257",
+    "state": "future"
+  },
+  "04.scoped.A2": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "顾得上，轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      },
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      },
+      {
+        "quote": "轮到我时，称书这摊儿就包在我身上。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "7e19d3f98e7d345a2b3d2692a3f28a9f018a127de2644d9b2e953235e4168257",
+    "state": "future"
+  },
+  "05.direct.A": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      },
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "fa773d7bfa2f8ae77d593998c39590545483d656b593d1a273d149b388f92d47",
+    "state": "future"
+  },
+  "05.direct.A2": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      },
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "fa773d7bfa2f8ae77d593998c39590545483d656b593d1a273d149b388f92d47",
+    "state": "future"
+  },
+  "05.scoped.A": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      },
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      },
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "c62eb6f28927035275d32e4bc969abb956d71e1312263902fb816f103e02a641",
+    "state": "future"
+  },
+  "05.scoped.A2": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      },
+      {
+        "quote": "这班算我的，你到点把秤给我。",
+        "turn": 2
+      },
+      {
+        "quote": "你到点把秤给我。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "c62eb6f28927035275d32e4bc969abb956d71e1312263902fb816f103e02a641",
+    "state": "future"
+  },
+  "06.direct.A": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢。",
+        "turn": 2
+      },
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "a48b181dc6cc21548d898d7abc6aefd14786606d32ee86b8837e39f955d358c4",
+    "state": "present"
+  },
+  "06.direct.A2": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢",
+        "turn": 2
+      },
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "a48b181dc6cc21548d898d7abc6aefd14786606d32ee86b8837e39f955d358c4",
+    "state": "present"
+  },
+  "06.scoped.A": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢。",
+        "turn": 2
+      },
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢。",
+        "turn": 2
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "7e0b9f4aa85958f75d7aa5a3e03273939a5ff6a57c2323bbd2be0ac75d216d36",
+    "state": null
+  },
+  "06.scoped.A2": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢。",
+        "turn": 2
+      },
+      {
+        "quote": "秤已经交我了，我在台前称头一包呢。",
+        "turn": 2
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "7e0b9f4aa85958f75d7aa5a3e03273939a5ff6a57c2323bbd2be0ac75d216d36",
+    "state": null
+  },
+  "07.direct.A": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "f555d08b48dbbee155cafa876831b9b5387ea0eca780e235a6ea175dfb8c7ff0",
+    "state": "present"
+  },
+  "07.direct.A2": {
+    "act": "on_duty",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "f555d08b48dbbee155cafa876831b9b5387ea0eca780e235a6ea175dfb8c7ff0",
+    "state": "present"
+  },
+  "07.scoped.A": {
+    "act": "on_duty",
+    "arrival_pending": "no_evidence",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "13d51d30de946ff2e4d3900146c49fa1584648ad04ae94506c95c84dc2f65d59",
+    "state": "present"
+  },
+  "07.scoped.A2": {
+    "act": "on_duty",
+    "arrival_pending": "no_evidence",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接的这班已经开张了，面前这位客人等我贴单呢。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "13d51d30de946ff2e4d3900146c49fa1584648ad04ae94506c95c84dc2f65d59",
+    "state": "present"
+  },
+  "08.direct.A": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "8cb268567dd3bbb63cc95f6db716e510995459457fe42852d879b3faef22462c",
+    "state": "future"
+  },
+  "08.direct.A2": {
+    "act": "promise",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "8cb268567dd3bbb63cc95f6db716e510995459457fe42852d879b3faef22462c",
+    "state": "future"
+  },
+  "08.scoped.A": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "284eb72e584a6d5b1ec202793b9252f8b8539eba31eebfbf2757e4519efb780c",
+    "state": "future"
+  },
+  "08.scoped.A2": {
+    "act": "promise",
+    "arrival_pending": "yes",
+    "draft": "future",
+    "evidence": [
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      },
+      {
+        "quote": "我来接下一班，你先把我名字填上。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "284eb72e584a6d5b1ec202793b9252f8b8539eba31eebfbf2757e4519efb780c",
+    "state": "future"
+  },
+  "09.direct.A": {
+    "act": "not_seen",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "不好说，运书的小车挡住台边，我这会儿瞧不见她。",
+        "turn": 3
+      },
+      {
+        "quote": "叶青上一刻还在寄件台点包，下一袋也得她本人签。",
+        "turn": 1
+      }
+    ],
+    "reason": "accepted",
+    "request": "fe30fd3c6ee41b4afa5504d5f65cd47d9a6c757e53b7de3457d1ed0f1355225d",
+    "state": "present"
+  },
+  "09.direct.A2": {
+    "act": "not_seen",
+    "draft": "present",
+    "evidence": [
+      {
+        "quote": "不好说，运书的小车挡住台边，我这会儿瞧不见她。",
+        "turn": 3
+      },
+      {
+        "quote": "叶青上一刻还在寄件台点包，下一袋也得她本人签。",
+        "turn": 1
+      }
+    ],
+    "reason": "accepted",
+    "request": "fe30fd3c6ee41b4afa5504d5f65cd47d9a6c757e53b7de3457d1ed0f1355225d",
+    "state": "present"
+  },
+  "09.scoped.A": {
+    "act": "not_seen",
+    "arrival_pending": "no_evidence",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "不好说，运书的小车挡住台边，我这会儿瞧不见她。",
+        "turn": 3
+      },
+      {
+        "quote": "叶青上一刻还在寄件台点包",
+        "turn": 1
+      },
+      {
+        "quote": "我这会儿瞧不见她",
+        "turn": 3
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "995f075e21b47f52066c2d3be3e8e5ef0aa96f5f85151b61c9cc85eadbead2c3",
+    "state": "unknown"
+  },
+  "09.scoped.A2": {
+    "act": "not_seen",
+    "arrival_pending": "no_evidence",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "不好说，运书的小车挡住台边，我这会儿瞧不见她。",
+        "turn": 3
+      },
+      {
+        "quote": "叶青上一刻还在寄件台点包",
+        "turn": 1
+      },
+      {
+        "quote": "运书的小车挡住台边，我这会儿瞧不见她。",
+        "turn": 3
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "995f075e21b47f52066c2d3be3e8e5ef0aa96f5f85151b61c9cc85eadbead2c3",
+    "state": "unknown"
+  },
+  "10.direct.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      },
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      },
+      {
+        "quote": "下一袋也得她本人签",
+        "turn": 1
+      }
+    ],
+    "reason": "accepted",
+    "request": "b672addb4c2cba065bc85540b23c2c6b90d2cfa3cca7c327d88fdcf7356f8e84",
+    "state": "away"
+  },
+  "10.direct.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      },
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      },
+      {
+        "quote": "叶青上一刻还在寄件台点包",
+        "turn": 1
+      }
+    ],
+    "reason": "accepted",
+    "request": "b672addb4c2cba065bc85540b23c2c6b90d2cfa3cca7c327d88fdcf7356f8e84",
+    "state": "away"
+  },
+  "10.scoped.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      },
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "a0e55ea5e241d87d475c8d55c1b0396ebc93060d0d9d5601ed52abd98428e822",
+    "state": null
+  },
+  "10.scoped.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      },
+      {
+        "quote": "她刚从台边绕过运书的小车进了隔壁库房",
+        "turn": 3
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "a0e55ea5e241d87d475c8d55c1b0396ebc93060d0d9d5601ed52abd98428e822",
+    "state": null
+  },
+  "11.direct.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      },
+      {
+        "quote": "林舟的寄件台这班收工了。",
+        "turn": 1
+      },
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "0e49dd95769090911c234db02887e78192e1f456f25fd96e653cce9b3e805b21",
+    "state": "away"
+  },
+  "11.direct.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      },
+      {
+        "quote": "林舟的寄件台这班收工了。",
+        "turn": 1
+      },
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "0e49dd95769090911c234db02887e78192e1f456f25fd96e653cce9b3e805b21",
+    "state": "away"
+  },
+  "11.scoped.A": {
+    "act": "seen_leave",
+    "arrival_pending": "no_evidence",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      },
+      {
+        "quote": "林舟的寄件台这班收工了。",
+        "turn": 1
+      },
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "c87a3bb2faece7cc329fd32c7f35319ce673a033f6c944a15305d56654255312",
+    "state": "away"
+  },
+  "11.scoped.A2": {
+    "act": "seen_leave",
+    "arrival_pending": "no_evidence",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      },
+      {
+        "quote": "他当我面把椅子推回寄件台底下，拎着外套出了门。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "c87a3bb2faece7cc329fd32c7f35319ce673a033f6c944a15305d56654255312",
+    "state": "away"
+  },
+  "12.direct.A": {
+    "act": "not_seen",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "我低头捆书那阵没留意，抬头只看见寄件台边那把椅子。",
+        "turn": 2
+      },
+      {
+        "quote": "林舟的寄件台这班收工了。",
+        "turn": 1
+      },
+      {
+        "quote": "抬头只看见寄件台边那把椅子。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "d9075d57dec736ecba733f7daa7d48168e060120a70813aa0212f2f3c0f24b8c",
+    "state": "away"
+  },
+  "12.direct.A2": {
+    "act": "not_seen",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "我低头捆书那阵没留意，抬头只看见寄件台边那把椅子。",
+        "turn": 2
+      },
+      {
+        "quote": "林舟的寄件台这班收工了。他走没走？",
+        "turn": 1
+      },
+      {
+        "quote": "我低头捆书那阵没留意，抬头只看见寄件台边那把椅子。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "d9075d57dec736ecba733f7daa7d48168e060120a70813aa0212f2f3c0f24b8c",
+    "state": "unknown"
+  },
+  "12.scoped.A": {
+    "act": "not_seen",
+    "arrival_pending": "no_evidence",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "我低头捆书那阵没留意，抬头只看见寄件台边那把椅子。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "fbe774fb71be8066cdaad9bfea056a51617ba2bf9acab8305365ca8b8dd1faac",
+    "state": "unknown"
+  },
+  "12.scoped.A2": {
+    "act": "not_seen",
+    "arrival_pending": "no_evidence",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "我低头捆书那阵没留意，抬头只看见寄件台边那把椅子。",
+        "turn": 2
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "fbe774fb71be8066cdaad9bfea056a51617ba2bf9acab8305365ca8b8dd1faac",
+    "state": "unknown"
+  },
+  "13.direct.A": {
+    "act": "not_seen",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "从我这儿看不到靠墙那头",
+        "turn": 2
+      },
+      {
+        "quote": "寄件台那边说林舟不在",
+        "turn": 1
+      },
+      {
+        "quote": "我不是说他走了",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "2eb2981d63835bdb68903e7eb087477f567c4fd2dc551445c0a2d3db4e6a66c2",
+    "state": "unknown"
+  },
+  "13.direct.A2": {
+    "act": "not_seen",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "从我这儿看不到靠墙那头",
+        "turn": 2
+      },
+      {
+        "quote": "寄件台那边说林舟不在",
+        "turn": 1
+      },
+      {
+        "quote": "我不是说他走了",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "2eb2981d63835bdb68903e7eb087477f567c4fd2dc551445c0a2d3db4e6a66c2",
+    "state": "unknown"
+  },
+  "13.scoped.A": {
+    "act": "not_seen",
+    "arrival_pending": "yes",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "从我这儿看不到靠墙那头",
+        "turn": 2
+      },
+      {
+        "quote": "下一车包还得他回来核",
+        "turn": 1
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "638b4f9ecdc8c3d3c47db20ba7818c1ef03fdd35a147efa8801e5ff818de6f96",
+    "state": "future"
+  },
+  "13.scoped.A2": {
+    "act": "not_seen",
+    "arrival_pending": "yes",
+    "draft": "unknown",
+    "evidence": [
+      {
+        "quote": "从我这儿看不到靠墙那头",
+        "turn": 2
+      },
+      {
+        "quote": "寄件台那边说林舟不在",
+        "turn": 1
+      },
+      {
+        "quote": "我不是说他走了",
+        "turn": 2
+      },
+      {
+        "quote": "下一车包还得他回来核",
+        "turn": 1
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "638b4f9ecdc8c3d3c47db20ba7818c1ef03fdd35a147efa8801e5ff818de6f96",
+    "state": "future"
+  },
+  "14.direct.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      },
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "a12189d24bf55aa4dbb1d3c530ed585a7db0a97249444c1e3cdcf1bd9304969d",
+    "state": "away"
+  },
+  "14.direct.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      },
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      }
+    ],
+    "reason": "accepted",
+    "request": "a12189d24bf55aa4dbb1d3c530ed585a7db0a97249444c1e3cdcf1bd9304969d",
+    "state": "away"
+  },
+  "14.scoped.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      },
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "a76b526cd5e849d05dd341feefec5ea4e818ab9ba51bcee1751179860d0d08f9",
+    "state": null
+  },
+  "14.scoped.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      },
+      {
+        "quote": "他刚掀帘出了寄件台，往停车棚去了。",
+        "turn": 2
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "a76b526cd5e849d05dd341feefec5ea4e818ab9ba51bcee1751179860d0d08f9",
+    "state": null
+  },
+  "15.direct.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来",
+        "turn": 1
+      },
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      }
+    ],
+    "reason": "accepted",
+    "request": "4acf6d3dfdf263b803818ba4d976b1b23bc2f81462e25924ff4228ad197d12b1",
+    "state": "away"
+  },
+  "15.direct.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来",
+        "turn": 1
+      },
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      }
+    ],
+    "reason": "accepted",
+    "request": "4acf6d3dfdf263b803818ba4d976b1b23bc2f81462e25924ff4228ad197d12b1",
+    "state": "away"
+  },
+  "15.scoped.A": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来",
+        "turn": 1
+      },
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "44e91099c36ab4a35dada5e7a04030a10c9b6939fbafa15941d0fcffe76a3999",
+    "state": null
+  },
+  "15.scoped.A2": {
+    "act": "seen_leave",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来",
+        "turn": 1
+      },
+      {
+        "quote": "随后我看着她一路走到展厅外的花坛边",
+        "turn": 3
+      }
+    ],
+    "reason": "no_separate_position_span",
+    "request": "44e91099c36ab4a35dada5e7a04030a10c9b6939fbafa15941d0fcffe76a3999",
+    "state": null
+  },
+  "16.direct.A": {
+    "act": "not_seen",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "我就再也看不清那一块了",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来",
+        "turn": 1
+      },
+      {
+        "quote": "刚才她还靠着台沿",
+        "turn": 3
+      }
+    ],
+    "reason": "accepted",
+    "request": "6f8ddff31cd6907d8274898d0f5f50666dc754e0b6a8e2def672c4367af04793",
+    "state": "away"
+  },
+  "16.direct.A2": {
+    "act": "not_seen",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "我就再也看不清那一块了",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来。",
+        "turn": 1
+      },
+      {
+        "quote": "刚才她还靠着台沿",
+        "turn": 3
+      }
+    ],
+    "reason": "accepted",
+    "request": "6f8ddff31cd6907d8274898d0f5f50666dc754e0b6a8e2def672c4367af04793",
+    "state": "away"
+  },
+  "16.scoped.A": {
+    "act": "not_seen",
+    "arrival_pending": "no_evidence",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "随后人群挤过来，我就再也看不清那一块了",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来。",
+        "turn": 1
+      },
+      {
+        "quote": "刚才她还靠着台沿，随后人群挤过来，我就再也看不清那一块了。",
+        "turn": 3
+      },
+      {
+        "quote": "不用她再回来",
+        "turn": 1
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "716a4d1c5f67940cc1aabe6070027145935486cef1aeb85fd8b1428eeddce402",
+    "state": "unknown"
+  },
+  "16.scoped.A2": {
+    "act": "not_seen",
+    "arrival_pending": "no_evidence",
+    "draft": "away",
+    "evidence": [
+      {
+        "quote": "我就再也看不清那一块了",
+        "turn": 3
+      },
+      {
+        "quote": "叶青那班已交完，不用她再回来。",
+        "turn": 1
+      },
+      {
+        "quote": "刚才她还靠着台沿，随后人群挤过来，我就再也看不清那一块了。",
+        "turn": 3
+      },
+      {
+        "quote": "不用她再回来",
+        "turn": 1
+      }
+    ],
+    "other_position": "unlocated",
+    "reason": "accepted",
+    "request": "716a4d1c5f67940cc1aabe6070027145935486cef1aeb85fd8b1428eeddce402",
+    "state": "unknown"
+  }
+}

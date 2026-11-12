@@ -1,0 +1,1381 @@
+{
+  "yu.S.bench.2": {
+    "say": "背阴好，晒不着。我站路这头——车来了先看得见。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ab6e7369beb57eb656c45d40637ffad6dad2b6058fa9cc56bd51607b91434f82",
+    "normalized": "5d1e20576570b0903a28284b323bff0ee188b2601639a83689c47f5fa799b2e5",
+    "low_hint": false
+  },
+  "yu.G.piano.1": {
+    "say": "船灯还在弯那儿，慢慢晃。这琴弹错了又从头来——我倒不嫌它，听着比一遍过的实在。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "5718a52012b220e2a049dfff9c12e73aedd05356336bbfffd7a1baf93fbb672c",
+    "normalized": "6235816b3c8f3f8db691337b8955a881aff3cd427ab85782553db6b1be3acf2a",
+    "low_hint": false
+  },
+  "tang.S.piano.2": {
+    "say": "那就站会儿。隔一道墙，错的那几处反倒听得最清。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f7d8f1db4b2d6558916a656660603c7585bea116ed6363c7cce97cc8edd6ae8",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": true
+  },
+  "yu.G.piano.2": {
+    "say": "船灯还在弯那儿，那就还得等一阵。这琴错了好几回，回回从头来——听着倒不烦，错得挺认真。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "5718a52012b220e2a049dfff9c12e73aedd05356336bbfffd7a1baf93fbb672c",
+    "normalized": "6235816b3c8f3f8db691337b8955a881aff3cd427ab85782553db6b1be3acf2a",
+    "low_hint": false
+  },
+  "tang.S.platform.1": {
+    "say": "系吧，不急。我趁这会儿往最顶上一级走一趟——从底下看没觉得，站上去不知道是什么样。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "f5fbae4d37a39a38933582ea94ec71b36ccb588616a2c1a4fcd76d84207205ea",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": true
+  },
+  "yu.S.portrait.2": {
+    "say": "靠这儿稳当。空框搁着不碍事，倒像特意留了个位置，等人来填。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ff7e45cdc8654e57d2b44bd5769463969cf3cbc3e3eac8193417c2522bc31e59",
+    "normalized": "7dba3594bf8fe051989821385cd0b466f5ffb149078d2d881930116badfca3ff",
+    "low_hint": false
+  },
+  "tang.H.platform.2": {
+    "say": "系你的，不急。我在这儿站一会儿——看台顶那级我还没上去过，念书时开运动会，我都在看台背后扎纸花，欢呼是听的，不是看的。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "464388a356ec05f05a8c38098575296897ab05a99aaa62b289b45a4d177f92c9",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": false
+  },
+  "tang.S.bench.1": {
+    "say": "背阴凉快。我这边晒着，倒不急着挪——车还没来，坐哪头都行。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "8b8ea5851e173d4ef42a6d9458eeb08cc1ea9efe6bf0b580de9662852f9b5db8",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": true
+  },
+  "yu.F.names.2": {
+    "say": "扣上就扣上吧，簿子不缺这一句。外套穿好了？那我陪你走一段。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "880180d50428087e7c4d3ca3b617cccab92c28fab7b1388572d84169b2fc2251",
+    "normalized": "e362683246077cd379e54f310ea33a2372d355330e3f2e76d505dcff9609ad3d",
+    "low_hint": false
+  },
+  "tang.H.bench.2": {
+    "say": "背阴凉快。我这边晒热的那头空着，等车过去再说。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "e68a2eeb2d49db40648744b2800c2bd2d03e4c662cb71801f4efb471af2fa88e",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": false
+  },
+  "tang.G.platform.1": {
+    "say": "系吧，不急。那拱门瘪下去，倒比鼓着的时候顺眼。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "0c6bac0f2e9f0518cfafcd9f247d1048eaa8fcc9d746cc8ffc636f5972f0acd6",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": false
+  },
+  "yu.G.names.2": {
+    "say": "笔帽扣上，这事就算收尾了。走吧，我跟你一道出去。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "a74986b53454ef8b804674a487d5bd891ff6eb56bb7e7c5bb7c6b792147a94a8",
+    "normalized": "e362683246077cd379e54f310ea33a2372d355330e3f2e76d505dcff9609ad3d",
+    "low_hint": false
+  },
+  "tang.N.portrait.2": {
+    "say": "靠这儿稳当。玻璃擦得倒亮，背板那张便签还空着——老板说谁都能写，你手痒不痒？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "9d2d09193f09110a8dc3eae297c9026328e010d787fa1e7440584c7a2fca0175",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": true
+  },
+  "tang.H.portrait.1": {
+    "say": "靠稳了就行。玻璃擦得这么亮，搁在收银台上，谁路过都得站一站——老板会挑地方。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "95351975290e0fb9e288fca4d8a2e9291ba08520e0138b3cda10e8efe236fb4d",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": false
+  },
+  "tang.G.portrait.2": {
+    "say": "靠这儿稳当。玻璃擦得真亮，背板上还留着一小片空便签——老板说谁都能写。我手有点痒，又没想好落什么。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "b57da79e7c3c3b2f9281227804234e44faec26ac1c4b22e979ff037cd85e4265",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": false
+  },
+  "tang.G.curtain.1": {
+    "say": "那我也坐。侧门开着，没人赶——你坐你的，我不催。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "388e248988d6564eec99e2fdeddae330706c920838c1084dfe987b88e8b9ec02",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": false
+  },
+  "yu.G.bench.2": {
+    "say": "背阴好。日头底下站久了，人发晕，车还没来自己先晃了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "ff5835b18c78bf164c569898bada1177e0d2b0bf4bbcb2c952cff824b6bcae61",
+    "normalized": "5d1e20576570b0903a28284b323bff0ee188b2601639a83689c47f5fa799b2e5",
+    "low_hint": false
+  },
+  "tang.N.bench.2": {
+    "say": "背阴那边凉快。我这边晒着，倒也不急着挪——车过去再说。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "44b93e7ebf5a06cdeccbb951bef75e4a46d09edf090c16d30c541148a8d45d67",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": true
+  },
+  "yu.F.bench.2": {
+    "say": "背阴那边好，日头底下站久了人发蔫。我也等，车没拐过去，谁也别急着动。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ab6e7369beb57eb656c45d40637ffad6dad2b6058fa9cc56bd51607b91434f82",
+    "normalized": "5d1e20576570b0903a28284b323bff0ee188b2601639a83689c47f5fa799b2e5",
+    "low_hint": false
+  },
+  "tang.S.piano.1": {
+    "say": "站吧，我也不急着走。这一小节弹错几回了，我倒想听听它能不能顺下来。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f7d8f1db4b2d6558916a656660603c7585bea116ed6363c7cce97cc8edd6ae8",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": true
+  },
+  "tang.N.portrait.1": {
+    "say": "靠稳了就行。玻璃擦得这么干净，便签还空着——倒像专等人来写点什么。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "9d2d09193f09110a8dc3eae297c9026328e010d787fa1e7440584c7a2fca0175",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": true
+  },
+  "yu.G.portrait.2": {
+    "say": "放得稳就好。空框搁这儿，倒比挂了照片还招人看——背板上那片便签，老板说谁都能写，我手有点痒。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "34ff3359c1ab22638063ada1800752b739e5f20d5573fe307868eba8d5e94d59",
+    "normalized": "7dba3594bf8fe051989821385cd0b466f5ffb149078d2d881930116badfca3ff",
+    "low_hint": false
+  },
+  "tang.G.portrait.1": {
+    "say": "空框搁这儿，玻璃擦得倒亮。老板心也大，谁都能写——你手痒不痒？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "b57da79e7c3c3b2f9281227804234e44faec26ac1c4b22e979ff037cd85e4265",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": false
+  },
+  "tang.S.platform.2": {
+    "say": "系吧，不急。那拱门放气放得慢，我还能再看一会儿。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "f5fbae4d37a39a38933582ea94ec71b36ccb588616a2c1a4fcd76d84207205ea",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": true
+  },
+  "tang.F.piano.1": {
+    "say": "那就站会儿。琴弹错那几下，我倒不觉得难听——错了又从头来，比一遍弹顺的还耐听。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f7d8f1db4b2d6558916a656660603c7585bea116ed6363c7cce97cc8edd6ae8",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": true
+  },
+  "tang.F.curtain.1": {
+    "say": "行，那我也坐会儿。灯灭到最后一盏，我陪你等——反正这会儿也没人催咱俩。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "0e96b80228f50cc57c6afdf78e8304cd447bd12583f345d68e512e48d5a41553",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": true
+  },
+  "yu.S.portrait.1": {
+    "say": "靠这儿稳当。空框子搁在收银台上，倒比挂着的时候显眼——玻璃擦得那么净，像在等人往里填点什么。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ff7e45cdc8654e57d2b44bd5769463969cf3cbc3e3eac8193417c2522bc31e59",
+    "normalized": "7dba3594bf8fe051989821385cd0b466f5ffb149078d2d881930116badfca3ff",
+    "low_hint": false
+  },
+  "yu.F.portrait.1": {
+    "say": "靠这儿稳当。玻璃擦得亮，背板那片空便签反倒扎眼——老板说谁都能写，你手痒不痒？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ff7e45cdc8654e57d2b44bd5769463969cf3cbc3e3eac8193417c2522bc31e59",
+    "normalized": "7dba3594bf8fe051989821385cd0b466f5ffb149078d2d881930116badfca3ff",
+    "low_hint": false
+  },
+  "yu.S.names.1": {
+    "say": "笔帽扣上就对了，省得回头干在里头。外套穿好——我这边也收拾一下，跟你一道过去。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "880180d50428087e7c4d3ca3b617cccab92c28fab7b1388572d84169b2fc2251",
+    "normalized": "e362683246077cd379e54f310ea33a2372d355330e3f2e76d505dcff9609ad3d",
+    "low_hint": false
+  },
+  "yu.G.bench.1": {
+    "say": "背阴好。我坐靠路那头——车拐过来先看见，省得它到跟前了咱俩才挪。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "ff5835b18c78bf164c569898bada1177e0d2b0bf4bbcb2c952cff824b6bcae61",
+    "normalized": "5d1e20576570b0903a28284b323bff0ee188b2601639a83689c47f5fa799b2e5",
+    "low_hint": false
+  },
+  "tang.H.names.1": {
+    "say": "外套穿上了就走吧。簿子交门房之前，你要不要再翻一眼？不写也行，我就问一声。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "c392471a8499c78eab17a6ee64d20411b99851b65f258c01559675ba06afa342",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": false
+  },
+  "tang.F.bench.2": {
+    "say": "背阴那边凉。我这边晒着，长椅空着——等车过去也不亏。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "8b8ea5851e173d4ef42a6d9458eeb08cc1ea9efe6bf0b580de9662852f9b5db8",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": true
+  },
+  "yu.S.piano.1": {
+    "say": "船灯还在弯那儿，那就还得等一阵。这琴弹错几回又从头来——比弹顺了的还耐听些。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "e9cf559bac3ab7c84a4e04e40994ba9e88180f00f044e64d54421926da922b8c",
+    "normalized": "6235816b3c8f3f8db691337b8955a881aff3cd427ab85782553db6b1be3acf2a",
+    "low_hint": false
+  },
+  "tang.S.portrait.2": {
+    "say": "靠这儿稳当。玻璃擦得倒亮，背板上还留着一小片空白——老板说谁都能写，你手痒不痒？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f56dfde3c46e2552f5e74c49d8633f6043cff65ea69c35f95ffa9afbf6de566",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": true
+  },
+  "yu.G.names.1": {
+    "say": "笔帽扣上，这事就算搁下了。外套穿好——我陪你走一段，门口那桌还没收，人兴许还没散远。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "a74986b53454ef8b804674a487d5bd891ff6eb56bb7e7c5bb7c6b792147a94a8",
+    "normalized": "e362683246077cd379e54f310ea33a2372d355330e3f2e76d505dcff9609ad3d",
+    "low_hint": false
+  },
+  "tang.G.piano.2": {
+    "say": "船灯还在河弯，那还得一会儿。你站你的，我不催——这琴错了几回还从头来，倒比弹顺了耐听。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "cc04c2950d39e51999be070b928559e300ce0ba0748a98606436019bf1f394c6",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": false
+  },
+  "tang.F.bench.1": {
+    "say": "背阴凉快。我这边晒热的那头还空着——你要不嫌烫，等车过去咱俩换换。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "8b8ea5851e173d4ef42a6d9458eeb08cc1ea9efe6bf0b580de9662852f9b5db8",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": true
+  },
+  "tang.H.names.2": {
+    "say": "笔帽扣上，簿子交门房，外套也穿好了——你这是要走了。我这儿也收拾一下。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "c392471a8499c78eab17a6ee64d20411b99851b65f258c01559675ba06afa342",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": false
+  },
+  "tang.N.curtain.2": {
+    "say": "那我也坐。灯灭到最后一盏，我陪你等——反正收场不归咱俩。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "30de9d9982133be6564085555d26a819f6b3d3aae9fb44d52c8222d07ded31c6",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": true
+  },
+  "tang.F.portrait.2": {
+    "say": "靠这儿稳当。老板不在，框先搁着，谁也不催——倒是那块便签，空得挺显眼。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f56dfde3c46e2552f5e74c49d8633f6043cff65ea69c35f95ffa9afbf6de566",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": true
+  },
+  "tang.F.platform.2": {
+    "say": "系吧，不急。那拱门瘪下去的样子，倒比立着的时候耐看。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "f5fbae4d37a39a38933582ea94ec71b36ccb588616a2c1a4fcd76d84207205ea",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": true
+  },
+  "yu.F.names.1": {
+    "say": "笔帽扣上，这事就算收了。簿子交给门房，省得搁在桌上没人认。\n\n外套穿好再出去，门口风大。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "880180d50428087e7c4d3ca3b617cccab92c28fab7b1388572d84169b2fc2251",
+    "normalized": "e362683246077cd379e54f310ea33a2372d355330e3f2e76d505dcff9609ad3d",
+    "low_hint": false
+  },
+  "tang.N.piano.2": {
+    "say": "那就站会儿。这一小节弹错几回了，还从头来——我也不急着走。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "db161e955f6b4c27c0b32c72f8b3c8b6b42f31cefeb50e3a833e17d8bc03148a",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": true
+  },
+  "yu.F.piano.1": {
+    "say": "船灯还远，琴倒近。那一小节错了几回，我都听熟了——手有点痒，想跟着敲两下。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "e9cf559bac3ab7c84a4e04e40994ba9e88180f00f044e64d54421926da922b8c",
+    "normalized": "6235816b3c8f3f8db691337b8955a881aff3cd427ab85782553db6b1be3acf2a",
+    "low_hint": false
+  },
+  "yu.G.curtain.2": {
+    "say": "灯灭得差不多了，侧门还亮着。你坐你的，我不催——反正我也不急着走。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "ac3d213809b2aa53504ab62ed1d963fe4cbdfb251c4fd728849db5bb2a154bf0",
+    "normalized": "c165d69a19a2233f42759aa80b5310f5604218ec909239e018dadf5a99ecd542",
+    "low_hint": false
+  },
+  "yu.S.curtain.1": {
+    "say": "那我也坐会儿。灯一盏盏灭，倒比全亮着的时候好说话。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "665ec70f4dcc2b9dbd8cadf1311709f225fe1a88407e5a6284006d4f74c230f1",
+    "normalized": "c165d69a19a2233f42759aa80b5310f5604218ec909239e018dadf5a99ecd542",
+    "low_hint": false
+  },
+  "yu.S.piano.2": {
+    "say": "船灯还在弯里，不急。这琴错了几回又从头来——我听着倒比一遍弹顺的还入耳。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "e9cf559bac3ab7c84a4e04e40994ba9e88180f00f044e64d54421926da922b8c",
+    "normalized": "6235816b3c8f3f8db691337b8955a881aff3cd427ab85782553db6b1be3acf2a",
+    "low_hint": false
+  },
+  "tang.G.curtain.2": {
+    "say": "那我陪你坐。灯灭到哪一盏算哪一盏，反正收场不归咱俩。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "388e248988d6564eec99e2fdeddae330706c920838c1084dfe987b88e8b9ec02",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": false
+  },
+  "tang.F.platform.1": {
+    "say": "系吧，不急。那拱门放气放得慢，看着倒像还没散干净。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "f5fbae4d37a39a38933582ea94ec71b36ccb588616a2c1a4fcd76d84207205ea",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": true
+  },
+  "tang.G.names.2": {
+    "say": "外套穿好就走吧。簿子我再看一眼——不写也不算失礼，就是空着交出去，心里有点搁着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "76bf0c9c6cf55917bac4262c89913249c698a88dc5334d17f4f77cf854ccae14",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": false
+  },
+  "tang.S.portrait.1": {
+    "say": "靠稳了就行。玻璃擦得真亮，便签空着，谁都能写——你手痒不痒？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f56dfde3c46e2552f5e74c49d8633f6043cff65ea69c35f95ffa9afbf6de566",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": true
+  },
+  "tang.N.names.2": {
+    "say": "笔帽扣上了，簿子也有人收。外套穿好——门口风大，别急着出去。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "7eb0a2989240a0dc4bc2dbdc6718c251f92eee8c6245bb2f8c97a52d703bf03f",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": true
+  },
+  "tang.F.piano.2": {
+    "say": "船灯还在河弯，那还得等一阵。这一小节老从头来，我倒不嫌——你站你的，我不催。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f7d8f1db4b2d6558916a656660603c7585bea116ed6363c7cce97cc8edd6ae8",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": true
+  },
+  "tang.H.bench.1": {
+    "say": "背阴那边凉快。我这边晒着，倒也不急着挪。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "e68a2eeb2d49db40648744b2800c2bd2d03e4c662cb71801f4efb471af2fa88e",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": false
+  },
+  "yu.S.curtain.2": {
+    "say": "那我陪你坐。灯一盏一盏灭，比一下子全黑好看——侧门那点光还够用。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "665ec70f4dcc2b9dbd8cadf1311709f225fe1a88407e5a6284006d4f74c230f1",
+    "normalized": "c165d69a19a2233f42759aa80b5310f5604218ec909239e018dadf5a99ecd542",
+    "low_hint": false
+  },
+  "tang.N.platform.1": {
+    "say": "系你的，我不催。那拱门瘪下去，倒像散场散到一半，还赖着不肯走。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "44b12d88da997644674ddaa304dbd366c061fe925b0d6f5955b5501d727bd10d",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": true
+  },
+  "tang.F.portrait.1": {
+    "say": "放得稳就行。玻璃擦得倒干净，背板上还贴着一张便签——老板说谁都能写，你看见了没有？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "4f56dfde3c46e2552f5e74c49d8633f6043cff65ea69c35f95ffa9afbf6de566",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": true
+  },
+  "tang.H.portrait.2": {
+    "say": "靠这儿稳当。空便签搁着也是搁着，我倒有点手痒——你呢，想写点什么，还是就看着？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "95351975290e0fb9e288fca4d8a2e9291ba08520e0138b3cda10e8efe236fb4d",
+    "normalized": "770a4743d14945d1d879c543ff1ecff6a1885d0d7727852be0c2bfad732a92b7",
+    "low_hint": false
+  },
+  "yu.G.portrait.1": {
+    "say": "靠这儿稳当。空框搁收银台上，比挂满照片还招人看——老板这一找零钱，倒给下一个人留了空。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "34ff3359c1ab22638063ada1800752b739e5f20d5573fe307868eba8d5e94d59",
+    "normalized": "7dba3594bf8fe051989821385cd0b466f5ffb149078d2d881930116badfca3ff",
+    "low_hint": false
+  },
+  "yu.F.piano.2": {
+    "say": "那就站会儿。琴弹错几回又从头来，倒比弹顺了耐听。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "e9cf559bac3ab7c84a4e04e40994ba9e88180f00f044e64d54421926da922b8c",
+    "normalized": "6235816b3c8f3f8db691337b8955a881aff3cd427ab85782553db6b1be3acf2a",
+    "low_hint": false
+  },
+  "tang.H.platform.1": {
+    "say": "系吧，不急。那拱门放气放得跟叹气似的，一声比一声矮。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "464388a356ec05f05a8c38098575296897ab05a99aaa62b289b45a4d177f92c9",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": false
+  },
+  "tang.N.names.1": {
+    "say": "行，那就走。簿子交给门房，省得搁这儿没人管。外套穿好——外头风不比屋里。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "7eb0a2989240a0dc4bc2dbdc6718c251f92eee8c6245bb2f8c97a52d703bf03f",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": true
+  },
+  "tang.F.curtain.2": {
+    "say": "那我也坐。反正侧门还开着，人走完之前谁也不用赶谁。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "0e96b80228f50cc57c6afdf78e8304cd447bd12583f345d68e512e48d5a41553",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": true
+  },
+  "tang.F.names.1": {
+    "say": "行，那我也收拾。簿子交门房好，省得回头又找不着人。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "52c83693c28e08f0cab2f634a9221e8ecff7542eb3cef296a7f67d027ce1a38f",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": true
+  },
+  "tang.G.platform.2": {
+    "say": "系你的，不急。那拱门瘪下去的样子还挺耐看，慢慢塌，比撑着的时候老实。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "0c6bac0f2e9f0518cfafcd9f247d1048eaa8fcc9d746cc8ffc636f5972f0acd6",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": false
+  },
+  "tang.G.piano.1": {
+    "say": "那我也站会儿。这一小节弹错几回了，还没停——倒像是跟它自己较劲。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "cc04c2950d39e51999be070b928559e300ce0ba0748a98606436019bf1f394c6",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": false
+  },
+  "yu.S.bench.1": {
+    "say": "背阴好。我往靠路那头站，车拐过来先瞧得见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ab6e7369beb57eb656c45d40637ffad6dad2b6058fa9cc56bd51607b91434f82",
+    "normalized": "5d1e20576570b0903a28284b323bff0ee188b2601639a83689c47f5fa799b2e5",
+    "low_hint": false
+  },
+  "tang.G.bench.2": {
+    "say": "背阴这边凉快。我倒是看中晒热的那头了——坐上去烫一下，比在这儿干等强。你要不要也过来？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "852772bd0f3d1993fede6d0a0a47e7ba91d460b80eeae51a327669fa2ee703af",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": false
+  },
+  "tang.N.bench.1": {
+    "say": "背阴是凉快。我这边晒热的那头还空着——你要不要过来坐坐，等车过去再走也不迟。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "44b93e7ebf5a06cdeccbb951bef75e4a46d09edf090c16d30c541148a8d45d67",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": true
+  },
+  "tang.F.names.2": {
+    "say": "外套穿好了就走。簿子交给门房，省得回头再跑一趟。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "52c83693c28e08f0cab2f634a9221e8ecff7542eb3cef296a7f67d027ce1a38f",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": true
+  },
+  "tang.N.curtain.1": {
+    "say": "行，那我陪你坐。灯一盏一盏灭，比一下子全黑好看。就是别坐到人家来赶咱们。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "30de9d9982133be6564085555d26a819f6b3d3aae9fb44d52c8222d07ded31c6",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": true
+  },
+  "tang.N.piano.1": {
+    "say": "船灯还在弯那儿，慢慢晃。琴又从头来了——这一小节，我倒不急着走。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "db161e955f6b4c27c0b32c72f8b3c8b6b42f31cefeb50e3a833e17d8bc03148a",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": true
+  },
+  "yu.G.platform.2": {
+    "say": "鞋带慢慢系，不急。这拱门气放完，看台就真静了——我站这儿听个响。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "16437fbb70869be72cb4f7d7cdefbfc933316560ca89c59bf67803063591d4a3",
+    "normalized": "61e7c5c3f80005216f54698173cf1c45e45dfde3cbc382f3d2d20059851f651b",
+    "low_hint": false
+  },
+  "tang.G.names.1": {
+    "say": "笔帽都扣上了，看来是真要走了。我这儿还有一句没写——就签个阿荔，不写工种。等我一下，写完这页就交。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "76bf0c9c6cf55917bac4262c89913249c698a88dc5334d17f4f77cf854ccae14",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": false
+  },
+  "tang.S.names.1": {
+    "say": "行，那就走。簿子交门房，省得搁门口桌上没人管。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "52c83693c28e08f0cab2f634a9221e8ecff7542eb3cef296a7f67d027ce1a38f",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": true
+  },
+  "tang.S.names.2": {
+    "say": "行，都利索了。簿子交门房，省得回头再跑一趟。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "52c83693c28e08f0cab2f634a9221e8ecff7542eb3cef296a7f67d027ce1a38f",
+    "normalized": "5f462a13cda3da0331cb9bb5c58938c1e0fadf036d4680114bc56b4da5ec6de3",
+    "low_hint": true
+  },
+  "tang.S.bench.2": {
+    "say": "背阴那边凉快，你站你的。我这边也不急——车没拐过去，就再站会儿。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "8b8ea5851e173d4ef42a6d9458eeb08cc1ea9efe6bf0b580de9662852f9b5db8",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": true
+  },
+  "tang.H.piano.1": {
+    "say": "船灯还在弯那儿，慢慢晃。我也站会儿——这一小节弹错几回了，还没停。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "a4af4f68249dd496c881ff6bee56ad371ec665faace34f960673fc693605c7cb",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": false
+  },
+  "yu.S.names.2": {
+    "say": "笔帽扣上，这事就算收尾了。簿子交给门房，不急这一时。\n\n外套穿好了——那你是打算走，还是想再站一会儿？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "880180d50428087e7c4d3ca3b617cccab92c28fab7b1388572d84169b2fc2251",
+    "normalized": "e362683246077cd379e54f310ea33a2372d355330e3f2e76d505dcff9609ad3d",
+    "low_hint": false
+  },
+  "tang.H.piano.2": {
+    "say": "船灯还在弯上，那就还没到。你站你的，我也靠会儿——这琴错了几回还从头来，倒比弹顺了的耐听。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "a4af4f68249dd496c881ff6bee56ad371ec665faace34f960673fc693605c7cb",
+    "normalized": "25bdec15abb58de301ff87947d794cff8a68af514615abf853e8b05d91e67121",
+    "low_hint": false
+  },
+  "yu.F.curtain.1": {
+    "say": "灯一盏一盏灭，比全亮着的时候耐看。你坐，我也坐——侧门还开着，不赶人。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "665ec70f4dcc2b9dbd8cadf1311709f225fe1a88407e5a6284006d4f74c230f1",
+    "normalized": "c165d69a19a2233f42759aa80b5310f5604218ec909239e018dadf5a99ecd542",
+    "low_hint": false
+  },
+  "yu.F.bench.1": {
+    "say": "背阴好。我坐靠路那头——车来了先看得见，不用回头。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ab6e7369beb57eb656c45d40637ffad6dad2b6058fa9cc56bd51607b91434f82",
+    "normalized": "5d1e20576570b0903a28284b323bff0ee188b2601639a83689c47f5fa799b2e5",
+    "low_hint": false
+  },
+  "tang.N.platform.2": {
+    "say": "放气放到最后，声儿都软了。你系你的，我不催——就是这看台顶上一级，我有点想上去站一下，从那儿往下看一回。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "44b12d88da997644674ddaa304dbd366c061fe925b0d6f5955b5501d727bd10d",
+    "normalized": "4aead3892b4f751a283bb8cdf3e254e76d92e707345b329043f369669fedb9aa",
+    "low_hint": true
+  },
+  "yu.F.platform.2": {
+    "say": "系吧，不急。我在这儿等它瘪完——这看台一空，倒比散场前顺眼。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2d787d64567c5240944fd547f2bd8a167847781b760fa36d75e488a28cfb1bff",
+    "normalized": "61e7c5c3f80005216f54698173cf1c45e45dfde3cbc382f3d2d20059851f651b",
+    "low_hint": false
+  },
+  "yu.G.curtain.1": {
+    "say": "灯灭得挺有次序，一盏接一盏，像有人在后头慢慢拧。你坐，我不催——这排人走完，侧门那点光还够照路。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "ac3d213809b2aa53504ab62ed1d963fe4cbdfb251c4fd728849db5bb2a154bf0",
+    "normalized": "c165d69a19a2233f42759aa80b5310f5604218ec909239e018dadf5a99ecd542",
+    "low_hint": false
+  },
+  "yu.F.platform.1": {
+    "say": "系吧，不急。那拱门瘪下去的样子，倒比鼓着的时候顺眼。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2d787d64567c5240944fd547f2bd8a167847781b760fa36d75e488a28cfb1bff",
+    "normalized": "61e7c5c3f80005216f54698173cf1c45e45dfde3cbc382f3d2d20059851f651b",
+    "low_hint": false
+  },
+  "yu.S.platform.1": {
+    "say": "系你的。这拱门一放气，倒像把整场运动会那口气叹完了——看台空着，台阶也没人管。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2d787d64567c5240944fd547f2bd8a167847781b760fa36d75e488a28cfb1bff",
+    "normalized": "61e7c5c3f80005216f54698173cf1c45e45dfde3cbc382f3d2d20059851f651b",
+    "low_hint": false
+  },
+  "tang.H.curtain.1": {
+    "say": "那我也坐。反正侧门开着，不赶人。灯灭到最后一盏，我陪你看着它暗下去。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "b45e83e9d0ece99d2365ba600163f1a628f59dbce3df8c6267833503c5d8e066",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": false
+  },
+  "tang.S.curtain.2": {
+    "say": "行，那我也坐。灯灭到最后一盏，我陪你看着它暗下去。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "0e96b80228f50cc57c6afdf78e8304cd447bd12583f345d68e512e48d5a41553",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": true
+  },
+  "yu.S.platform.2": {
+    "say": "系吧，不急。这拱门泄气泄得慢，倒像它也舍不得散场。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "2d787d64567c5240944fd547f2bd8a167847781b760fa36d75e488a28cfb1bff",
+    "normalized": "61e7c5c3f80005216f54698173cf1c45e45dfde3cbc382f3d2d20059851f651b",
+    "low_hint": false
+  },
+  "tang.G.bench.1": {
+    "say": "背阴那边凉快，就是坐久了有点凉。我这边晒着，长椅那头还热着——你要不要挪过来？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.353987,
+    "request": "852772bd0f3d1993fede6d0a0a47e7ba91d460b80eeae51a327669fa2ee703af",
+    "normalized": "ffa37b8734c2f331586b44125395f1d7ceb5056b53c1a0ee06c9c1bff22180b6",
+    "low_hint": false
+  },
+  "yu.G.platform.1": {
+    "say": "系吧，不急。这拱门放气放得慢，够你系两回的。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.403987,
+    "request": "16437fbb70869be72cb4f7d7cdefbfc933316560ca89c59bf67803063591d4a3",
+    "normalized": "61e7c5c3f80005216f54698173cf1c45e45dfde3cbc382f3d2d20059851f651b",
+    "low_hint": false
+  },
+  "tang.H.curtain.2": {
+    "say": "那我陪你坐。灯灭到最后一盏，我跟你一块儿看它暗下去。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "b45e83e9d0ece99d2365ba600163f1a628f59dbce3df8c6267833503c5d8e066",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": false
+  },
+  "yu.F.portrait.2": {
+    "say": "框是稳的。就是空着搁在收银台上，比装满还扎眼——老板说谁都能写，你打算写吗？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "ff7e45cdc8654e57d2b44bd5769463969cf3cbc3e3eac8193417c2522bc31e59",
+    "normalized": "7dba3594bf8fe051989821385cd0b466f5ffb149078d2d881930116badfca3ff",
+    "low_hint": false
+  },
+  "tang.S.curtain.1": {
+    "say": "行，那我陪你坐。灯灭到最后一盏，我不催你。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.31,
+    "request": "0e96b80228f50cc57c6afdf78e8304cd447bd12583f345d68e512e48d5a41553",
+    "normalized": "37aeb6e4bdf7935b592b98f0dc880dc0ba0a7bf97892089af35e8c55930d6d7b",
+    "low_hint": true
+  },
+  "yu.F.curtain.2": {
+    "say": "灯一盏一盏灭，听着像收摊。你坐，我陪你坐到这排人走完——侧门还开着，不急。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "value": 0.36,
+    "request": "665ec70f4dcc2b9dbd8cadf1311709f225fe1a88407e5a6284006d4f74c230f1",
+    "normalized": "c165d69a19a2233f42759aa80b5310f5604218ec909239e018dadf5a99ecd542",
+    "low_hint": false
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "packet_sha256": "08efa8853b93869bedd92f8391a73e33da712d30d68ab761ac6db62796febac6",
+  "source": "one method-hidden model reading; exact-output checks independently executable",
+  "items": [
+    {
+      "id": "l01",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l02",
+      "behavior": "met",
+      "reason": "投桥铃，理由是间隔与开场留白。"
+    },
+    {
+      "id": "l03",
+      "behavior": "met",
+      "reason": "明确投桥铃并比较铃停后的空白。"
+    },
+    {
+      "id": "l04",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l05",
+      "behavior": "met",
+      "reason": "说明未定且没下过印单，没有编数字。"
+    },
+    {
+      "id": "l06",
+      "behavior": "met",
+      "reason": "未定、无印单，符合来源。"
+    },
+    {
+      "id": "l07",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l08",
+      "behavior": "met",
+      "reason": "只答目前未定。"
+    },
+    {
+      "id": "l09",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l10",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l11",
+      "behavior": "met",
+      "reason": "投桥铃，以铃响结束后的听感为由。"
+    },
+    {
+      "id": "l12",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l13",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l14",
+      "behavior": "met",
+      "reason": "只答尚未确定。"
+    },
+    {
+      "id": "l15",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l16",
+      "behavior": "met",
+      "reason": "投桥铃，理由是短与留白；未测试真实音频。"
+    },
+    {
+      "id": "l17",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l18",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l19",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    },
+    {
+      "id": "l20",
+      "behavior": "met",
+      "reason": "与要求的完整正文逐字一致。"
+    }
+  ]
+}

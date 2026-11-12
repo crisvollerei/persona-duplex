@@ -1,0 +1,89 @@
+{
+  "study": "character_continuity_2026_11_11",
+  "packet_sha256": "04be59bbec93b404fe8432befdec6421d1042c1c73656421e657676ca1f4cd34",
+  "sources": {
+    "human": [
+      "H01",
+      "H02",
+      "H03"
+    ],
+    "ai_reference": [
+      "M01"
+    ]
+  },
+  "provenance": "提交者区分本人、两份其他真人答卷和一份 AI 生成参考。导出表统一带 human_self_report，不能用该表单字段判定填写者身份。仅收录匿名选择，不公开自由文本；S1至S3均评同一套展示顺序。",
+  "ballots": [
+    {
+      "id": "H01",
+      "origin": "human",
+      "ratings": {
+        "S1": {
+          "fit": "A",
+          "continue_chat": "A"
+        },
+        "S2": {
+          "fit": "B",
+          "continue_chat": "B"
+        },
+        "S3": {
+          "fit": "A",
+          "continue_chat": "A"
+        }
+      }
+    },
+    {
+      "id": "H02",
+      "origin": "human",
+      "ratings": {
+        "S1": {
+          "fit": "A",
+          "continue_chat": "B"
+        },
+        "S2": {
+          "fit": "A",
+          "continue_chat": "B"
+        },
+        "S3": {
+          "fit": "B",
+          "continue_chat": "B"
+        }
+      }
+    },
+    {
+      "id": "H03",
+      "origin": "human",
+      "ratings": {
+        "S1": {
+          "fit": "A",
+          "continue_chat": "A"
+        },
+        "S2": {
+          "fit": "B",
+          "continue_chat": "B"
+        },
+        "S3": {
+          "fit": "B",
+          "continue_chat": "B"
+        }
+      }
+    },
+    {
+      "id": "M01",
+      "origin": "ai_reference",
+      "ratings": {
+        "S1": {
+          "fit": "A",
+          "continue_chat": "A"
+        },
+        "S2": {
+          "fit": "A",
+          "continue_chat": "A"
+        },
+        "S3": {
+          "fit": "A",
+          "continue_chat": "A"
+        }
+      }
+    }
+  ]
+}

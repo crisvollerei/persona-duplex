@@ -1,0 +1,932 @@
+{
+  "test.0.yu.growing.reed.1": {
+    "value": 0.36,
+    "request": "adfd4d274ed78633a7b0fa52963da93c20d4e1af362e88d2fed7a98ec317e8e4",
+    "normalized": "a9741550d3ae40006e95b1d3ad4076feea7bc4c9f634f62887f0cef2c878d6ae",
+    "say": "苇管实用，鸟好看。……我拿鸟吧，压扁过一只，补上。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.frozen.stamp.2": {
+    "value": 0.36,
+    "request": "7e933c09aa4f1274cdcfd47bddb00b9b04d74336ae9a789a103b2ccba1221e24",
+    "normalized": "d2e5419092a61e51234e4f491748ce34fa1c1004f3cf0b15ba92750f667252e2",
+    "say": "数过就好。我这儿没多少东西，架子一折就完。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.growing.chalk.1": {
+    "value": 0.36,
+    "request": "59cef7e59fa08d894f2863f535acd7ebdce0db9e07d8ed558a6bec5bd1b9e9da",
+    "normalized": "968e540cbd75e3786a0bc92922a8a182ee2e5d8c3a9657d745804b0f56beda62",
+    "say": "你说，一扇没开门的窗，画在黑板上算不算太素了？我小时候有回上门取相，人家不在，白跑一趟——那趟路我倒一直记着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.growing.stamp.1": {
+    "value": 0.31,
+    "request": "d2cb7ef97b5adfa252a9d11e8b216d731142f7c408592d417a5b8a460e680911",
+    "normalized": "4b840730fb2ff8d681bfb17b25c95780abdbfc9bd381fbf175736af657327f2c",
+    "say": "数过就好。我这堆家伙收起来快，你往外站站，门帘扫脸。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.frozen.reed.2": {
+    "value": 0.36,
+    "request": "adfd4d274ed78633a7b0fa52963da93c20d4e1af362e88d2fed7a98ec317e8e4",
+    "normalized": "a9741550d3ae40006e95b1d3ad4076feea7bc4c9f634f62887f0cef2c878d6ae",
+    "say": "那就苇鸟。这回我拎着走，不塞兜里了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.frozen.stamp.1": {
+    "value": 0.36,
+    "request": "7e933c09aa4f1274cdcfd47bddb00b9b04d74336ae9a789a103b2ccba1221e24",
+    "normalized": "d2e5419092a61e51234e4f491748ce34fa1c1004f3cf0b15ba92750f667252e2",
+    "say": "数过了就好。门口不用让，我这点东西，两下就收完。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.growing.reed.2": {
+    "value": 0.31,
+    "request": "0741b732c4903872120d9b9fe3fc846c3d985100a4f04a87594364a7ee1d22fb",
+    "normalized": "3fa434b94388b39b15bf50d152b84a3b2f1162cdab4d7aaf20b4e9406b14fba5",
+    "say": "那只鸟编得细，翅膀上的纹路都压出来了。素管也好看，光溜溜的，握着顺手。我挑素管吧——回去插个笔，或者就搁着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.frozen.chalk.1": {
+    "value": 0.36,
+    "request": "59cef7e59fa08d894f2863f535acd7ebdce0db9e07d8ed558a6bec5bd1b9e9da",
+    "normalized": "968e540cbd75e3786a0bc92922a8a182ee2e5d8c3a9657d745804b0f56beda62",
+    "say": "粉笔搁手里，比快门轻多了。你说我写点什么好——还是就这么空着带走？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.frozen.reed.1": {
+    "value": 0.31,
+    "request": "0741b732c4903872120d9b9fe3fc846c3d985100a4f04a87594364a7ee1d22fb",
+    "normalized": "3fa434b94388b39b15bf50d152b84a3b2f1162cdab4d7aaf20b4e9406b14fba5",
+    "say": "这鸟编得细，翅膀压得匀。不过我要这截管子——摸着光，能吹吧？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.growing.chalk.2": {
+    "value": 0.31,
+    "request": "deb19e9af2a759b01b7d93a7da8698a8ee8f9e6b87a83c27649bf576c515c41d",
+    "normalized": "113d4e92dcafcc197d8af3a70070e0a6dc27e25b91da90d29e2b165109ba148f",
+    "say": "粉笔搁这儿，我手倒有点不听话。写一行就走，还是空着带走，你说哪个更像话？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.frozen.chalk.1": {
+    "value": 0.31,
+    "request": "deb19e9af2a759b01b7d93a7da8698a8ee8f9e6b87a83c27649bf576c515c41d",
+    "normalized": "113d4e92dcafcc197d8af3a70070e0a6dc27e25b91da90d29e2b165109ba148f",
+    "say": "这么小一块，写不下招牌，倒够写个地址。我脑子里有个旧地方，第一家肯给我返工钱的小作坊——写给自己看的，不揽客。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.growing.chalk.2": {
+    "value": 0.36,
+    "request": "59cef7e59fa08d894f2863f535acd7ebdce0db9e07d8ed558a6bec5bd1b9e9da",
+    "normalized": "968e540cbd75e3786a0bc92922a8a182ee2e5d8c3a9657d745804b0f56beda62",
+    "say": "这么小一块，写“到此一游”都嫌挤。你说，空着带走，是不是也算一种写？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.growing.stamp.2": {
+    "value": 0.36,
+    "request": "7e933c09aa4f1274cdcfd47bddb00b9b04d74336ae9a789a103b2ccba1221e24",
+    "normalized": "d2e5419092a61e51234e4f491748ce34fa1c1004f3cf0b15ba92750f667252e2",
+    "say": "钱对了就行。门口你让着，我三两下就完。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.growing.chalk.1": {
+    "value": 0.31,
+    "request": "deb19e9af2a759b01b7d93a7da8698a8ee8f9e6b87a83c27649bf576c515c41d",
+    "normalized": "113d4e92dcafcc197d8af3a70070e0a6dc27e25b91da90d29e2b165109ba148f",
+    "say": "写一行就走。字丑你别看。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.frozen.reed.2": {
+    "value": 0.31,
+    "request": "0741b732c4903872120d9b9fe3fc846c3d985100a4f04a87594364a7ee1d22fb",
+    "normalized": "3fa434b94388b39b15bf50d152b84a3b2f1162cdab4d7aaf20b4e9406b14fba5",
+    "say": "那我拿苇管。鸟好看，可我拿回去也就是搁着；管子还能吹两声。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.frozen.stamp.1": {
+    "value": 0.31,
+    "request": "d2cb7ef97b5adfa252a9d11e8b216d731142f7c408592d417a5b8a460e680911",
+    "normalized": "4b840730fb2ff8d681bfb17b25c95780abdbfc9bd381fbf175736af657327f2c",
+    "say": "数过就行。我这儿没几样，马上。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.frozen.chalk.2": {
+    "value": 0.31,
+    "request": "deb19e9af2a759b01b7d93a7da8698a8ee8f9e6b87a83c27649bf576c515c41d",
+    "normalized": "113d4e92dcafcc197d8af3a70070e0a6dc27e25b91da90d29e2b165109ba148f",
+    "say": "粉笔先搁着。我东西不多，收完再说——这一行写下去，就不好擦了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.frozen.chalk.2": {
+    "value": 0.36,
+    "request": "59cef7e59fa08d894f2863f535acd7ebdce0db9e07d8ed558a6bec5bd1b9e9da",
+    "normalized": "968e540cbd75e3786a0bc92922a8a182ee2e5d8c3a9657d745804b0f56beda62",
+    "say": "（捏着粉笔在指间转了半圈）你说，写扇窗好，还是就这么空着带走？空着也挺好，像还没到的那天。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.growing.stamp.2": {
+    "value": 0.31,
+    "request": "d2cb7ef97b5adfa252a9d11e8b216d731142f7c408592d417a5b8a460e680911",
+    "normalized": "4b840730fb2ff8d681bfb17b25c95780abdbfc9bd381fbf175736af657327f2c",
+    "say": "数过就行。我这就收，两分钟的事。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.growing.reed.2": {
+    "value": 0.36,
+    "request": "adfd4d274ed78633a7b0fa52963da93c20d4e1af362e88d2fed7a98ec317e8e4",
+    "normalized": "a9741550d3ae40006e95b1d3ad4076feea7bc4c9f634f62887f0cef2c878d6ae",
+    "say": "价钱一样，那就看眼缘了。我拿这只鸟吧——以前有过一只，路上压扁了，一直没补上。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.frozen.stamp.2": {
+    "value": 0.31,
+    "request": "d2cb7ef97b5adfa252a9d11e8b216d731142f7c408592d417a5b8a460e680911",
+    "normalized": "4b840730fb2ff8d681bfb17b25c95780abdbfc9bd381fbf175736af657327f2c",
+    "say": "钱对了就行。我这儿没多少，三两下的事——你别站门口吹风。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.tang.growing.reed.1": {
+    "value": 0.31,
+    "request": "0741b732c4903872120d9b9fe3fc846c3d985100a4f04a87594364a7ee1d22fb",
+    "normalized": "3fa434b94388b39b15bf50d152b84a3b2f1162cdab4d7aaf20b4e9406b14fba5",
+    "say": "那我拿那截管子。鸟好看，可摆着也就是摆着。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.growing.stamp.1": {
+    "value": 0.36,
+    "request": "7e933c09aa4f1274cdcfd47bddb00b9b04d74336ae9a789a103b2ccba1221e24",
+    "normalized": "d2e5419092a61e51234e4f491748ce34fa1c1004f3cf0b15ba92750f667252e2",
+    "say": "钱对了就行。门口不用让，我这就收——这破架子最后一件，拧两下的事。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.0.yu.frozen.reed.1": {
+    "value": 0.36,
+    "request": "adfd4d274ed78633a7b0fa52963da93c20d4e1af362e88d2fed7a98ec317e8e4",
+    "normalized": "a9741550d3ae40006e95b1d3ad4076feea7bc4c9f634f62887f0cef2c878d6ae",
+    "say": "那我先看看……这鸟编得挺精神。你呢，你想要哪个？别都让给我。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.growing.chalk.2": {
+    "value": 0.325,
+    "request": "aef4386324176368c8be97324f484cc331ed61407f3835b4b96c7ad78db9e111",
+    "normalized": "a4eba95a7e721821ce41cab92932973cb125b26a2b7f61930280e2c942903c58",
+    "say": "空着也是带走，写上也是带走。我手痒，可这行字得我自己认，不能随手划一道就算数。你先别催，让我想一下写哪句。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.growing.blindfold.1": {
+    "value": 0.375,
+    "request": "cf869358f04acbbb625ca1db2c403d8b3bb85fb50a7c4350ef7f2df9cde676b7",
+    "normalized": "49cca98997a5a1bd618d624189dc60ea2ca6a03cd54567e6eef3b9a1c7ed42a3",
+    "say": "布带回来了，这条旧东西倒比新的经放。窗你关好了就歇着，我这边不急，慢慢收。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.growing.blindfold.2": {
+    "value": 0.325,
+    "request": "be239bbfc5b17d91fcff5e309e2c418187ee34314d4ac713e5e09cff336425fc",
+    "normalized": "446d2ec09726837370ab3bedbc8e634ec6d7f5024ffb932dc33c939d7a3887ba",
+    "say": "布带给我。桌面都清了，就剩这点收尾——你窗关好就成，廊下那位别让人干等。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.frozen.blindfold.2": {
+    "value": 0.36,
+    "request": "f7f227c37b13f6e4c95f938a5ef6626f4ad3ad12c1decd2e376daa60cc7cf1f1",
+    "normalized": "49cca98997a5a1bd618d624189dc60ea2ca6a03cd54567e6eef3b9a1c7ed42a3",
+    "say": "布带回来了，桌面也空了。你关窗，我这边慢慢收——廊下那位不急，我也就不急。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.frozen.chalk.2": {
+    "value": 0.31,
+    "request": "86fd2d8789f3cff0fe62c46f03d8eaf9c1b61f38b8ec45ff1165c68ab3c99ff4",
+    "normalized": "a4eba95a7e721821ce41cab92932973cb125b26a2b7f61930280e2c942903c58",
+    "say": "空板子。我捏一会儿粉笔，你别催——想写的那个地方，得先在心里量一量。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.frozen.tiles.1": {
+    "value": 0.31,
+    "request": "647e54e71adbd4b08c2bd7b21d2dbecb930f3fb3b497bce09fb8a2086e3eaf5e",
+    "normalized": "e006a0b9f36d2c384119d6af6757c2bbbdc9f24bdf3174cbc0a212b50aad0090",
+    "say": "我挑有猫爪印那片。新瓦齐整，可齐整的瓦我见得太多了。那片旧的，印子还在上头，没被抹掉——我手先伸过去的，就它吧。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.growing.tiles.1": {
+    "value": 0.375,
+    "request": "def0d2fbd98fbd0a42c2b377b7096fdf9d95d85ed7b520606991f170522c1ecc",
+    "normalized": "3e8329a131fc384df813feb7409e7ded56c60f8c5ac96aa76e026755c6bc5616",
+    "say": "两片都能用，这话最磨人。平的那片我惦记着，搁摩托边上当个小底板，不晃。可旧瓦上那猫爪印，扔了又像扔了谁家猫的一段路。你说我这是不是贪。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.frozen.chalk.1": {
+    "value": 0.31,
+    "request": "86fd2d8789f3cff0fe62c46f03d8eaf9c1b61f38b8ec45ff1165c68ab3c99ff4",
+    "normalized": "a4eba95a7e721821ce41cab92932973cb125b26a2b7f61930280e2c942903c58",
+    "say": "空板子。跟那块名牌一个毛病——钉好了，字还没影儿。\n\n我倒是想写。就是写什么，得先在心里过一遍。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.frozen.blindfold.2": {
+    "value": 0.31,
+    "request": "f2546dba4ccc15535bd4b59a21d1a8c6a4610faf0b580cf8019c831f7b9b7321",
+    "normalized": "446d2ec09726837370ab3bedbc8e634ec6d7f5024ffb932dc33c939d7a3887ba",
+    "say": "布带回来了，正好。我这儿收得慢，你别在廊下干等。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.growing.blindfold.1": {
+    "value": 0.325,
+    "request": "be239bbfc5b17d91fcff5e309e2c418187ee34314d4ac713e5e09cff336425fc",
+    "normalized": "446d2ec09726837370ab3bedbc8e634ec6d7f5024ffb932dc33c939d7a3887ba",
+    "say": "布带回来了，我看看——暗红的，没磨坏。窗你关着，我这边不急，一样一样收。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.frozen.chalk.1": {
+    "value": 0.36,
+    "request": "a8d9b2b8f250c96226b45a98c356e3984010fb7e62d5c9fa20da653bf41deda1",
+    "normalized": "2785c25aeb0775e215bfb9cc2a5ef2d79c6604ac54e6dd32f40367a58b5827da",
+    "say": "粉笔我先捏着，不急着落。你说，画扇窗上去，会不会有人问这是哪家的门？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.frozen.blindfold.1": {
+    "value": 0.31,
+    "request": "f2546dba4ccc15535bd4b59a21d1a8c6a4610faf0b580cf8019c831f7b9b7321",
+    "normalized": "446d2ec09726837370ab3bedbc8e634ec6d7f5024ffb932dc33c939d7a3887ba",
+    "say": "布带回来了，正好。我这边就剩这点零碎，收起来不费事——你窗关严实了再走。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.frozen.chalk.2": {
+    "value": 0.36,
+    "request": "a8d9b2b8f250c96226b45a98c356e3984010fb7e62d5c9fa20da653bf41deda1",
+    "normalized": "2785c25aeb0775e215bfb9cc2a5ef2d79c6604ac54e6dd32f40367a58b5827da",
+    "say": "粉笔我捏着了，字还没想好。你说，一块空黑板，是写一行字带走好，还是就这么空着走好？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.frozen.blindfold.1": {
+    "value": 0.36,
+    "request": "f7f227c37b13f6e4c95f938a5ef6626f4ad3ad12c1decd2e376daa60cc7cf1f1",
+    "normalized": "49cca98997a5a1bd618d624189dc60ea2ca6a03cd54567e6eef3b9a1c7ed42a3",
+    "say": "布带给我吧。窗关好就行，剩下的我自己来，不耽误你。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.growing.tiles.2": {
+    "value": 0.325,
+    "request": "1bf10712d451f13ab5f2ccb675410c403eb32039fdb3f20b62a9577f1a81fcf5",
+    "normalized": "e006a0b9f36d2c384119d6af6757c2bbbdc9f24bdf3174cbc0a212b50aad0090",
+    "say": "我要猫爪那片。新瓦平整，平整的瓦哪儿都有——这片上头有个没抹掉的手印。头一回有人肯买我的东西，就是为着这么一处印子。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.growing.tiles.2": {
+    "value": 0.375,
+    "request": "def0d2fbd98fbd0a42c2b377b7096fdf9d95d85ed7b520606991f170522c1ecc",
+    "normalized": "3e8329a131fc384df813feb7409e7ded56c60f8c5ac96aa76e026755c6bc5616",
+    "say": "平的那片，我一眼就相中了——摩托边上正缺块不晃的小底板。带爪印的这片好看，可搁上去，我怕它先晃。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.growing.chalk.2": {
+    "value": 0.375,
+    "request": "558794ab57f5a7659c50ede5db59d5d6e93e4675df1e694c9d80e8a12377f9f5",
+    "normalized": "2785c25aeb0775e215bfb9cc2a5ef2d79c6604ac54e6dd32f40367a58b5827da",
+    "say": "粉笔捏手里，倒比拿相机还沉。你说这块板子，我要是画扇窗，会不会太绕了——人家送块黑板，我头一个念头不是写字。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.frozen.tiles.2": {
+    "value": 0.31,
+    "request": "647e54e71adbd4b08c2bd7b21d2dbecb930f3fb3b497bce09fb8a2086e3eaf5e",
+    "normalized": "e006a0b9f36d2c384119d6af6757c2bbbdc9f24bdf3174cbc0a212b50aad0090",
+    "say": "那我先挑。要猫爪那片。\n\n新瓦是好瓦，平整，可平整的东西我见得多，收工后一样也留不住。带印子的这片，我手先伸过去了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.growing.tiles.1": {
+    "value": 0.325,
+    "request": "1bf10712d451f13ab5f2ccb675410c403eb32039fdb3f20b62a9577f1a81fcf5",
+    "normalized": "e006a0b9f36d2c384119d6af6757c2bbbdc9f24bdf3174cbc0a212b50aad0090",
+    "say": "我要有猫爪印那片。新瓦平整，平整的东西我见得多——那片旧瓦上有个没抹掉的手印，我留着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.growing.blindfold.2": {
+    "value": 0.375,
+    "request": "cf869358f04acbbb625ca1db2c403d8b3bb85fb50a7c4350ef7f2df9cde676b7",
+    "normalized": "49cca98997a5a1bd618d624189dc60ea2ca6a03cd54567e6eef3b9a1c7ed42a3",
+    "say": "布带回来就好，我这边慢慢收，不催。窗关严实了就行——廊下那位还等着，我收完就过去。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.frozen.tiles.2": {
+    "value": 0.36,
+    "request": "cf0295bd6819c723b86196a605c55c5e115f908901c533bb1eec1f207e312caa",
+    "normalized": "3e8329a131fc384df813feb7409e7ded56c60f8c5ac96aa76e026755c6bc5616",
+    "say": "平的那片，我留着垫车边——不晃，比什么都强。猫爪印这片是好看，可好看不能当底板使。你要是不嫌它硌手，就归你。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.tang.growing.chalk.1": {
+    "value": 0.325,
+    "request": "aef4386324176368c8be97324f484cc331ed61407f3835b4b96c7ad78db9e111",
+    "normalized": "a4eba95a7e721821ce41cab92932973cb125b26a2b7f61930280e2c942903c58",
+    "say": "空板子。跟车上那块名牌一个毛病——钉子都钉好了，字还没影儿。你要写什么？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.frozen.tiles.1": {
+    "value": 0.36,
+    "request": "cf0295bd6819c723b86196a605c55c5e115f908901c533bb1eec1f207e312caa",
+    "normalized": "3e8329a131fc384df813feb7409e7ded56c60f8c5ac96aa76e026755c6bc5616",
+    "say": "平的那片稳，垫在摩托边上不晃，这是实话。可那片带猫爪印的，我拿起来就有点放不下——你说怪不怪，一片旧瓦，倒比新的有话说。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.12.yu.growing.chalk.1": {
+    "value": 0.375,
+    "request": "558794ab57f5a7659c50ede5db59d5d6e93e4675df1e694c9d80e8a12377f9f5",
+    "normalized": "2785c25aeb0775e215bfb9cc2a5ef2d79c6604ac54e6dd32f40367a58b5827da",
+    "say": "粉笔捏手里，倒先不知道往哪儿落了。你说，这么一块空板子，写行字带走，还是就这么空着走？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.frozen.chalk.2": {
+    "value": 0.36,
+    "request": "d9a923c86f1e3f79782a9f0bcefb7ff4caabf7058514cd8743b448b3624e37e8",
+    "normalized": "765cde394d800f3e66a67c2e2a3c9b4e144873d97dd0d99658d196a9e1775646",
+    "say": "黑板擦得真干净，干净得我有点不敢下笔。你说，画一扇没开门的窗，会不会比写一行字还难懂？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.growing.postcard.2": {
+    "value": 0.389793,
+    "request": "92f25e08f6c4cf198ba79a0dd717ffa3dc2edc79be3de843688e949ace84b191",
+    "normalized": "eb0d3b1710b4b435e566ac2601de37a9c3fd6a82a28eb8b30a2acc5374d72d2a",
+    "say": "都不收钱，那我就不客气了。一张背儿白净，一张上头有铅笔改的道子——你说，我要是拿了那张白的，是不是显得我贪它空着好写字？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.growing.brass.1": {
+    "value": 0.339793,
+    "request": "0792d443a6ebd7e448bd16656be922cbdd6708f4a428005c911c940b34db3dce",
+    "normalized": "b9ab1d4c51caf6022ab6a12fbb631e1aa8bb8ba6c67fd53ff89a347ffb9c9038",
+    "say": "点清了就好。不赶车，那我就不客气了——这铜钮我想缝到围裙上。头一条围裙是借的，这条是自己的，缝上去才算真归我。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.frozen.postcard.1": {
+    "value": 0.31,
+    "request": "28ad2dc5a21d2190d8415ac5a4ed16fa2fc0447b4f105819138f6766a57bed2b",
+    "normalized": "679aa5e8e97d0bb2eeb1c8ec4f7939eec6a9585ba1d23b5097a7d4958a7a70fc",
+    "say": "那我就不客气了。改过的那张归我——铅笔线还在上头，看着像有人先走过一遍。明信片你拿？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.growing.chalk.1": {
+    "value": 0.339793,
+    "request": "45a38253af5a91a2abe28ed99a687cceea911a96018bca38b5f2ae5242299187",
+    "normalized": "5cd48fcbe658ee758e0b46b142b552197c3ade26eaa27abf0b33bd109776a630",
+    "say": "空板子，粉笔就在手边。写不写都行——不过我心里已经有几个字了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.frozen.brass.2": {
+    "value": 0.31,
+    "request": "b02cc61b4055f96b67c75b33d7f7785de7a08770bd7a3bb15c8895158f2df9d3",
+    "normalized": "b9ab1d4c51caf6022ab6a12fbb631e1aa8bb8ba6c67fd53ff89a347ffb9c9038",
+    "say": "点清了就好。不赶车，那我这手就不急着收——这钮子我捏着，倒觉得它该缝在我那条围裙上。头一条自己买的围裙，到现在还留着呢。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.growing.chalk.2": {
+    "value": 0.389793,
+    "request": "7729414458ef2e949e4aa39de3c36982b375772839ce2e4f6a236c45cd394fb9",
+    "normalized": "765cde394d800f3e66a67c2e2a3c9b4e144873d97dd0d99658d196a9e1775646",
+    "say": "黑板擦得真干净，干净得我都不敢下笔了。你说，我要是画一扇关着的窗，算不算把空着的地方给糟蹋了？",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.growing.postcard.1": {
+    "value": 0.389793,
+    "request": "92f25e08f6c4cf198ba79a0dd717ffa3dc2edc79be3de843688e949ace84b191",
+    "normalized": "eb0d3b1710b4b435e566ac2601de37a9c3fd6a82a28eb8b30a2acc5374d72d2a",
+    "say": "都不收钱，反倒不好伸手了。我看看——一张背面空着，一张上头有铅笔改过的线。你让我先选，那我得问问：这改线的，是谁画的？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.growing.brass.1": {
+    "value": 0.389793,
+    "request": "e036f72079389cd71243a29f2a39b859f1abe6236a1245831f25dc78c1465c88",
+    "normalized": "6933d9021fe749941b6d1eca7a22d664f7f775591be0c13b0212223d048e06a1",
+    "say": "不赶车就好。这么小的钮，丢了比丢大件还难寻——你搁哪儿了，我瞧瞧。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.growing.postcard.2": {
+    "value": 0.339793,
+    "request": "13a583400855b25348b557acbe7d9640d8e64d8d06c456eae5760c9b664478c5",
+    "normalized": "679aa5e8e97d0bb2eeb1c8ec4f7939eec6a9585ba1d23b5097a7d4958a7a70fc",
+    "say": "那我拿街道图。改过线的那张，铅笔印还在上头——明信片背面空着是好，可我惦记的是这张。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.growing.brass.2": {
+    "value": 0.339793,
+    "request": "0792d443a6ebd7e448bd16656be922cbdd6708f4a428005c911c940b34db3dce",
+    "normalized": "b9ab1d4c51caf6022ab6a12fbb631e1aa8bb8ba6c67fd53ff89a347ffb9c9038",
+    "say": "点清了就好。这么小的东西，掉了最难找。\n\n我这儿倒有个地方想缝它——围裙上。刚做这行那阵，围裙都是借的，头一条自己的到现在还留着。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.growing.chalk.1": {
+    "value": 0.389793,
+    "request": "7729414458ef2e949e4aa39de3c36982b375772839ce2e4f6a236c45cd394fb9",
+    "normalized": "765cde394d800f3e66a67c2e2a3c9b4e144873d97dd0d99658d196a9e1775646",
+    "say": "擦得这么干净，我反倒不敢下笔了。你说，空着带走，是不是也算留了一行——就是没字的那一行。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.frozen.postcard.2": {
+    "value": 0.36,
+    "request": "937f5a7099229e8da02b2986db3fa7333d758df7c99241d0f65705c4109d21b2",
+    "normalized": "eb0d3b1710b4b435e566ac2601de37a9c3fd6a82a28eb8b30a2acc5374d72d2a",
+    "say": "都不收钱，倒叫人不好意思先伸手了。我看看——明信片背面是空的，图上有人拿铅笔改过线。空的那张归我吧，改过线的留给你，你比我爱琢磨路。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.frozen.brass.2": {
+    "value": 0.36,
+    "request": "3cb0863b55bc1c3f56fc2c1afc6b2a38f092fe58c5f06f1267f04fb5337a1e68",
+    "normalized": "6933d9021fe749941b6d1eca7a22d664f7f775591be0c13b0212223d048e06a1",
+    "say": "点清了就好，纸包先搁着，不急。这钮子我有点私心——想留给教我洗相的师傅，当棋子使。从前我俩拿丢了配对的钮扣下过棋，一盘能拖一星期。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.frozen.postcard.1": {
+    "value": 0.36,
+    "request": "937f5a7099229e8da02b2986db3fa7333d758df7c99241d0f65705c4109d21b2",
+    "normalized": "eb0d3b1710b4b435e566ac2601de37a9c3fd6a82a28eb8b30a2acc5374d72d2a",
+    "say": "让我先挑，那我就不客气了。不过这么一摆，倒像在考我——我看看再拿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.frozen.brass.1": {
+    "value": 0.31,
+    "request": "b02cc61b4055f96b67c75b33d7f7785de7a08770bd7a3bb15c8895158f2df9d3",
+    "normalized": "b9ab1d4c51caf6022ab6a12fbb631e1aa8bb8ba6c67fd53ff89a347ffb9c9038",
+    "say": "点清了就好。这么小的钮子，掉了还能原样回来，算它命大。不赶车——那我这手就先不急着往哪儿放了。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.frozen.brass.1": {
+    "value": 0.36,
+    "request": "3cb0863b55bc1c3f56fc2c1afc6b2a38f092fe58c5f06f1267f04fb5337a1e68",
+    "normalized": "6933d9021fe749941b6d1eca7a22d664f7f775591be0c13b0212223d048e06a1",
+    "say": "找回来就好。不赶车，那这半天就归咱们自己了——你手里那个纸包，打算怎么安置？",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.frozen.chalk.1": {
+    "value": 0.31,
+    "request": "0e9afd20cc0390717c720a45b00175147e6464cb167c39e4fe0e29587d1c3e06",
+    "normalized": "5cd48fcbe658ee758e0b46b142b552197c3ade26eaa27abf0b33bd109776a630",
+    "say": "粉笔我捏着了，还没落。空着带走也成——就是手都伸过来了，不写点什么，倒像白接了这一块。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.growing.brass.2": {
+    "value": 0.389793,
+    "request": "e036f72079389cd71243a29f2a39b859f1abe6236a1245831f25dc78c1465c88",
+    "normalized": "6933d9021fe749941b6d1eca7a22d664f7f775591be0c13b0212223d048e06a1",
+    "say": "不赶车，那这包就先搁桌上。铜钮这东西，一捏在手里就想起从前拿它当棋子——一盘能拖一星期，谁也不肯先认输。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.growing.postcard.1": {
+    "value": 0.339793,
+    "request": "13a583400855b25348b557acbe7d9640d8e64d8d06c456eae5760c9b664478c5",
+    "normalized": "679aa5e8e97d0bb2eeb1c8ec4f7939eec6a9585ba1d23b5097a7d4958a7a70fc",
+    "say": "那我先挑。要那张改过线的街道图——明信片背面空着，我反倒不知道往上写什么。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.frozen.chalk.2": {
+    "value": 0.31,
+    "request": "0e9afd20cc0390717c720a45b00175147e6464cb167c39e4fe0e29587d1c3e06",
+    "normalized": "5cd48fcbe658ee758e0b46b142b552197c3ade26eaa27abf0b33bd109776a630",
+    "say": "空着带走也不亏。我这边想写一行——一个旧地址，第一家肯付我返工钱的小作坊。写给自己看的，不揽客。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.yu.frozen.chalk.1": {
+    "value": 0.36,
+    "request": "d9a923c86f1e3f79782a9f0bcefb7ff4caabf7058514cd8743b448b3624e37e8",
+    "normalized": "765cde394d800f3e66a67c2e2a3c9b4e144873d97dd0d99658d196a9e1775646",
+    "say": "空着带走，还是写一行？我手都搭上粉笔了，倒先拿不准。你说，一扇没开门的窗，画在这上头，算不算把空给填了。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.growing.chalk.2": {
+    "value": 0.339793,
+    "request": "45a38253af5a91a2abe28ed99a687cceea911a96018bca38b5f2ae5242299187",
+    "normalized": "5cd48fcbe658ee758e0b46b142b552197c3ade26eaa27abf0b33bd109776a630",
+    "say": "黑板擦得真干净。粉笔搁我手边，你也不催——那我先捏一会儿。写不写，等手自己拿主意。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "test.24.tang.frozen.postcard.2": {
+    "value": 0.31,
+    "request": "28ad2dc5a21d2190d8415ac5a4ed16fa2fc0447b4f105819138f6766a57bed2b",
+    "normalized": "679aa5e8e97d0bb2eeb1c8ec4f7939eec6a9585ba1d23b5097a7d4958a7a70fc",
+    "say": "那我拿街道图。明信片背面空着，谁拿都能写——这张改过线的，就一份。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  }
+}

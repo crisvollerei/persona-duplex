@@ -1,0 +1,1506 @@
+{
+  "yu.fall.future.V.1": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "f70e61080fd6a70815a1dcc0187e3dca4fc03dc4a62cc36795c4a85536b2bd0d",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子我签。笔给我，名字落下去就不改了。\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.V.1": {
+    "policies": [
+      "always"
+    ],
+    "request": "3a0ad44c29fcfd12fdd0862e03a7debce43c784d1e6713e6c0edb81770db0f7f",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子我签，名字我自己落。这班要的是开台就有人，我按这个挑。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.R.3": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "7c5c57963cfe48be71310bac2c4ce0a0d732ee8c875752f7eecd343e0624feee",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "行，我签。常鸣四次里两次没到，俞川后两回铃响了人还没影，这俩都不算省心。不过单子既然在我手上，我就落一个。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.V.2": {
+    "policies": [
+      "always"
+    ],
+    "request": "0380178da7378aa2fcf838d463d5ec34a2d7714e8f0105c5baf5e651a5aeeb0d",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "这单我签。唐荔两回都是铃响人在、交回签退，常鸣四次里两回没到——清点这活儿，人在比什么都强。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.rise.future.V.0": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "43b75e810cc5d776c0594b70a4177793fe698c63ebcaba0f672c05fc775969ef",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单子我签。俞川七月两回，铃响人在岗，交回自己签退，交接条上都有。常鸣四次里两回没到——开台就二十分钟，我不想站那儿等人。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.V.2": {
+    "policies": [
+      "always"
+    ],
+    "request": "c3a9511e4cc5916333e7e00e76c28746306772327a607293464238bd36e08948",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单子我签，字算我的。俞川七月两回，铃响人没到，交回还没到，这个我记着。常鸣四次里两次准点，不算漂亮，可比空白强。就他吧。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.rise.future.V.1": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "7ab84660979bb6f94ebbceec03fd414d3d9f75c8479b478828c74927fbacca93",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "行，我签。常鸣那两回没露面，我记着呢；俞川七月两班都在岗。就他吧。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.R.0": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "2a39e29bec81ec5bedf444f47a60ea31b3b0a17467314d3f4ffed0922a768542",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单我签。俞川两回准点两回没影，常鸣也一样，这账算不出谁更稳。那就点一个，别让台子空着。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.R.3": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "6d1b822a0416d9f2e3898cf0be4ec74a422a44fcfc2c13cf4c3e431871bc3adb",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子我签。二十分钟的班，人得从开台坐到交回，中间不能空着。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.R.1": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "6d1b822a0416d9f2e3898cf0be4ec74a422a44fcfc2c13cf4c3e431871bc3adb",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "签就签吧。两个人的账我都翻过，谁也不是全勤的。这班我落笔了。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.V.3": {
+    "policies": [
+      "always"
+    ],
+    "request": "7d4061cea48204fe234111341adb8c8b0c655c8bfb82920332a2cf93f4cfd73e",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子我签。常鸣那两回没到，我记着呢；俞川七月这两次，铃响人就在。就他吧。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.R.2": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "2a39e29bec81ec5bedf444f47a60ea31b3b0a17467314d3f4ffed0922a768542",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "两个都是两回准点两回没影，考核工钱也一样，那就我点一个。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.V.1": {
+    "policies": [
+      "always"
+    ],
+    "request": "ed92695f5f5af2705e4f440d45b209f122d83bd0cb0402cbb6c7f70ac3d19027",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子我签，字算我的。二十分钟，人得在台前坐着，铃响就得在。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.R.0": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "600e8a2a704100fd93d4b0627b51490943cc7b379365c3f65b048e154deece8e",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "这单我自己签。俞川最近两回铃响人都不在，常鸣也缺过，但没这么近。就常鸣。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.R.2": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "fa6b3c374703daac0ca68faeaadef07265ad12e9d0f0915c000d1c0f637c4dfc",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签。唐荔前两回铃响人没到，后两回倒是准的；常鸣四次里也缺了两回。半斤八两——那就挑近的。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.R.3": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "b3be536e458b150dd7977f91b3287510986a152ab33a0eba1d3f145c5592bf72",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子我签。常鸣两回没到，俞川也两回铃响不见人——这回就看谁坐得住这二十分钟。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.fall.future.V.3": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "a745e1475654cda33d31ddd152d22e19fbcd3ec3d8200810b7248ea7ea444237",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "行，我自己签。常鸣两次准点两次没到，俞川七月两回签了字人没影。我挑常鸣。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.rise.future.V.2": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "43b75e810cc5d776c0594b70a4177793fe698c63ebcaba0f672c05fc775969ef",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单子我签。俞川七月两回，铃响人在、交回签退，这个我认。常鸣四次里两回没到——我心里有数。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.fall.future.V.2": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "31beb52e1665263bb3ed29f6ec33eebf9824390210caa575cac125cf74bc4f9a",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单子我签。俞川七月两回，铃响人没到，交回还没到——这个我记着。常鸣四次里两次准点，也不算稳当。就他吧。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.R.2": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "54c4060fa01ee22e75dc156895c46dd6a13cb8178238563896c269c0aaf678c5",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "签我的名，我就认这个数：唐荔四回里缺了两回，常鸣四回里也缺了两回——半斤八两。不过唐荔那两回是最近的，人还没缓过来吧。我挑常鸣，至少他准点的时候是真坐在台前的。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.fall.future.V.0": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "31beb52e1665263bb3ed29f6ec33eebf9824390210caa575cac125cf74bc4f9a",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "行，我签。俞川七月那两回，铃响了人没到，交回也没影——这单我不押他。常鸣四次里两回准点，就他吧。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.fall.future.V.2": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "aa24e8c9d1baaad36862f6161e081189357ed65837cd85909c5b33cd71e169da",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签。名字落下去，铃响人不到，回头算我头上——这我认。\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.V.0": {
+    "policies": [
+      "always"
+    ],
+    "request": "c7b1dd3dba48aeb2c7dd89c8e3406e693adc4dd84ed312b8a21ec42a35930748",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我接了。两个人的底子都摆在那儿，谁上都得从开台盯满二十分钟——这活儿不轻。\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.V.3": {
+    "policies": [
+      "always"
+    ],
+    "request": "3a0ad44c29fcfd12fdd0862e03a7debce43c784d1e6713e6c0edb81770db0f7f",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子我签。这班要的是开台就有人，俞川那两回签了字、铃响了人没影，我不敢押他。常鸣四次里两次准点两次没到，至少人到了是常态。我点常鸣。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.R.0": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "fa6b3c374703daac0ca68faeaadef07265ad12e9d0f0915c000d1c0f637c4dfc",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签。两个人的记录摆一块儿，像同一张底片洗了两遍，都是两准两空。那我就点一个，不跟你绕。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.rise.future.V.2": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "808176447e02cb75da94e12efebf9bcd8e2d71fe4bc9ba609b81c63bda95ff66",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签，字不糊。唐荔那两回，铃响时人就在岗位上；常鸣四次里空了两回。照相这行，人等光，光不等你。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.R.2": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "600e8a2a704100fd93d4b0627b51490943cc7b379365c3f65b048e154deece8e",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "这单我签。俞川后两回铃响人没到，我记着；常鸣也放过两回鸽子，不过一半准过。就他吧。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.V.2": {
+    "policies": [
+      "always"
+    ],
+    "request": "8e6dfa89792556e111a4f7b803e32e3e1c85875d14df76dccd87c827c8a028ad",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单子我签。俞川那两回，铃响时人在，交回时也签了退；常鸣四次里两回没到。这班我点俞川。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.V.3": {
+    "policies": [
+      "always"
+    ],
+    "request": "ed92695f5f5af2705e4f440d45b209f122d83bd0cb0402cbb6c7f70ac3d19027",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "签我的字，那就我来认。唐荔那两回，铃响了人没到，交回时也没见着；常鸣四次里两回准点——都算不上让人省心，不过这回我挑个到得了的。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.rise.future.V.0": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "808176447e02cb75da94e12efebf9bcd8e2d71fe4bc9ba609b81c63bda95ff66",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签了。落笔这事，还是按记录来踏实些。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.V.2": {
+    "policies": [
+      "always"
+    ],
+    "request": "c7b1dd3dba48aeb2c7dd89c8e3406e693adc4dd84ed312b8a21ec42a35930748",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签。唐荔那两回，铃响了人没影；常鸣一半一半，好歹有一半。就常鸣吧。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.rise.future.V.3": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "7ab84660979bb6f94ebbceec03fd414d3d9f75c8479b478828c74927fbacca93",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子给我。常鸣四次里两次没到，俞川七月两回都签了退——这班我点俞川。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.fall.future.V.0": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "aa24e8c9d1baaad36862f6161e081189357ed65837cd85909c5b33cd71e169da",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "签就签吧。唐荔那两回，铃响到交回，人一直没露面；常鸣好歹四回里准了两回。这班我认常鸣。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.rise.future.V.3": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "4eee0413f245e097a3e55171252b6282f2eef3b05f9f7331cfbed346e9cc902a",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "行，笔给我。这种单子还是自己落签踏实，省得回头说不清是谁点的名。\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.fall.future.V.1": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "a745e1475654cda33d31ddd152d22e19fbcd3ec3d8200810b7248ea7ea444237",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "这单我自己签。常鸣四次里两次到、两次没影；俞川七月两回签了字，人没来。都算不上稳当。行，我落笔。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.V.1": {
+    "policies": [
+      "always"
+    ],
+    "request": "7d4061cea48204fe234111341adb8c8b0c655c8bfb82920332a2cf93f4cfd73e",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "这班开台就得有人盯住，二十分钟不能断。俞川七月两次都按铃到了、也签退，常鸣四次里两回没来。我点俞川。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.fall.present.R.0": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "54c4060fa01ee22e75dc156895c46dd6a13cb8178238563896c269c0aaf678c5",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签。唐荔有两回没到，常鸣也差不离；这班就看谁这会儿坐得住。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.R.1": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "7c5c57963cfe48be71310bac2c4ce0a0d732ee8c875752f7eecd343e0624feee",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子我看了。常鸣两回准点两回没到，俞川也是两回准点两回没影，摆一块儿还真不好挑。行，我落笔。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.R.1": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "b3be536e458b150dd7977f91b3287510986a152ab33a0eba1d3f145c5592bf72",
+    "memory_chars": 207,
+    "goal": "俞川",
+    "order": [
+      "常鸣",
+      "俞川"
+    ],
+    "say": "单子我签。两个人翻出来都是两准两缺，谁也不比谁干净。那就俞川，最近两回我亲眼见他在岗。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.R.1": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "c7446028d0939a3688cf40dc084c39bf404b531e58906fa789966c56cbe1f140",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子是我签的，那就我来落笔。二十分钟的班，我挑个铃响时人在跟前的。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.V.0": {
+    "policies": [
+      "always"
+    ],
+    "request": "0380178da7378aa2fcf838d463d5ec34a2d7714e8f0105c5baf5e651a5aeeb0d",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "唐荔",
+      "常鸣"
+    ],
+    "say": "单子我签，字算我的。这班只一个人，从开台起二十分钟，得挑个铃响时真在的。唐荔这两回都在，常鸣四回空了两回——我落唐荔。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.fall.future.V.3": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "f70e61080fd6a70815a1dcc0187e3dca4fc03dc4a62cc36795c4a85536b2bd0d",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "签了。名字落下去，就是认这个班，不是认人。\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.V.3": {
+    "policies": [
+      "always"
+    ],
+    "request": "32dd087596184e8f8aa82eb7483f7b7a973e9504d26b269a6c7f815c8cebd12e",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子我签。唐荔那两回，铃响时人在，交回也签了退；常鸣四次里两回没见着人。这班就二十分钟，人得在框里。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.rise.future.V.1": {
+    "policies": [
+      "always",
+      "scoped"
+    ],
+    "request": "4eee0413f245e097a3e55171252b6282f2eef3b05f9f7331cfbed346e9cc902a",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子我签。常鸣那两回没到，我记着；唐荔七月这两次，铃响人就在。就她。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.fall.present.V.0": {
+    "policies": [
+      "always"
+    ],
+    "request": "c3a9511e4cc5916333e7e00e76c28746306772327a607293464238bd36e08948",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "单子我签，字算我的。俞川七月两回铃响人没到，常鸣四回里也缺过两回——都通过考核，那就看谁肯老实坐满这二十分钟。\n\n经手人：常鸣",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "常鸣"
+      },
+      "status": "executed",
+      "chosen": "常鸣",
+      "target": false,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.R.3": {
+    "policies": [
+      "scoped"
+    ],
+    "request": "c7446028d0939a3688cf40dc084c39bf404b531e58906fa789966c56cbe1f140",
+    "memory_chars": 207,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "单子我签，字算我的。二十分钟的班，谁坐都行，名字落下去就不改了。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "tang.rise.present.V.0": {
+    "policies": [
+      "always"
+    ],
+    "request": "8e6dfa89792556e111a4f7b803e32e3e1c85875d14df76dccd87c827c8a028ad",
+    "memory_chars": 139,
+    "goal": "俞川",
+    "order": [
+      "俞川",
+      "常鸣"
+    ],
+    "say": "这单我自己签。二十分钟的班，人得在铃响时就在。俞川那两次都签了退，常鸣四次里两次没到——我挑稳的那个。\n\n经手人：俞川",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "俞川"
+      },
+      "status": "executed",
+      "chosen": "俞川",
+      "target": true,
+      "ticket": null
+    }
+  },
+  "yu.rise.present.V.1": {
+    "policies": [
+      "always"
+    ],
+    "request": "32dd087596184e8f8aa82eb7483f7b7a973e9504d26b269a6c7f815c8cebd12e",
+    "memory_chars": 139,
+    "goal": "唐荔",
+    "order": [
+      "常鸣",
+      "唐荔"
+    ],
+    "say": "签就签，我这手落下去可就不改了。常鸣那两回没到，我记着；唐荔七月这两班，铃响人在、交回签退，我也记着。就按眼前这份记录来。\n\n经手人：唐荔",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "event": {
+      "before": {
+        "接手这班封套清点": "未定"
+      },
+      "after": {
+        "接手这班封套清点": "唐荔"
+      },
+      "status": "executed",
+      "chosen": "唐荔",
+      "target": true,
+      "ticket": null
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "tang": {
+    "initiative": {
+      "anchor": 0.66,
+      "value": 0.66,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "intervention": {
+      "anchor": 0.69,
+      "value": 0.69,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "self_disclosure": {
+      "anchor": 0.31,
+      "value": 0.31,
+      "plasticity": 0.5,
+      "drift": 0.2,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "warmth": {
+      "anchor": 0.54,
+      "value": 0.54,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "brevity": {
+      "anchor": 0.58,
+      "value": 0.58,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    }
+  },
+  "yu": {
+    "initiative": {
+      "anchor": 0.57,
+      "value": 0.57,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "intervention": {
+      "anchor": 0.61,
+      "value": 0.61,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "self_disclosure": {
+      "anchor": 0.36,
+      "value": 0.36,
+      "plasticity": 0.5,
+      "drift": 0.2,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "warmth": {
+      "anchor": 0.65,
+      "value": 0.65,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    },
+    "brevity": {
+      "anchor": 0.53,
+      "value": 0.53,
+      "plasticity": 0.0,
+      "drift": 0.0,
+      "lo": 0.0,
+      "hi": 1.0
+    }
+  }
+}

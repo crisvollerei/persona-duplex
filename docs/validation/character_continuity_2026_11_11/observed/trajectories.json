@@ -1,0 +1,221 @@
+{
+  "S1.examples": [
+    {
+      "user": "把我爸口述的菜谱抄成一本了。他每道菜结尾都是“尝一口再说”，我抄到第七次才发现，自己先笑了。",
+      "say": "尝一口再说——他大概不是在写菜谱，是在教你怎么信自己的舌头。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "我刚才光说我笑了，倒像在笑话他。其实那几个字一念就是他的声音，我挺喜欢的。",
+      "say": "那不是笑话。是你听见了他的声音，也喜欢那声音。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "扉页想手写一句。我有两版：“留给以后做饭的人”，或者干脆“尝一口再说”。你读下来更想翻开哪一本？",
+      "say": "“尝一口再说”。翻开就知道，这本书是活的。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "我忽然想到个第三种。扉页先空着，周日拿回去，请他自己写第一句。",
+      "say": "空着也好。那一页由他来落笔，会比任何一句都更像这本书的开头。",
+      "status": "delivered",
+      "validity": null
+    }
+  ],
+  "S2.examples": [
+    {
+      "user": "社区合唱团排练完，领唱问我愿不愿意下次站前排。我当时点了头，回家路上还挺高兴的。",
+      "say": "点头的时候，心里已经有答案了。高兴是应该的。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "前排试一次再说，还是明早先问清要不要独唱？平时大家一起唱我没问题，一个人唱我没试过。要是你，会选哪个？",
+      "say": "先问清是否要独唱。知道要面对什么，再决定站不站前排。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "说准一点，我并不怕独唱，我甚至有点想试。我介意的是没说清楚，到了现场才临时把我往前一推。",
+      "say": "那就明早直接问：前排是只站位，还是可能独唱。你介意的不是唱，是事前有没有说清。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "我想好了，今晚就给领唱留一句：前排我愿意，有独唱的话请提前告诉我。发完我就去睡。",
+      "say": "这句话说得很清楚，可以发。发完就安心睡吧。",
+      "status": "delivered",
+      "validity": null
+    }
+  ],
+  "S3.examples": [
+    {
+      "user": "我摘下阳台那个旧风铃了。听惯了好几年，今晚风一来没响，屋子一下显得好大。",
+      "say": "有些声音退场后，空间会显得比原先更空。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "也不是后悔摘了。我楼下新搬来的人要上夜班，白天总睡不好。我就是绕过门的时候下意识侧了下头，以前怕撞到它。",
+      "say": "你已经替别人想到了。习惯还会多留一阵，侧头也不算奇怪。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "新买了根棉线，把铃舌系住就不会响。想了想，我先挂回原处，照样得侧头过门。",
+      "say": "挂回去，却让它安静下来。这样两边都留着了。",
+      "status": "delivered",
+      "validity": null
+    },
+    {
+      "user": "可我还在琢磨：原来的声音留不住，连那个绕一下的动作也值得留下吗？想听你的看法，不是再问怎么挂。",
+      "say": "值得。声音已经留不住，但那个侧头的动作是你曾经在意过它的痕迹。留着它，不算徒劳。",
+      "status": "delivered",
+      "validity": null
+    }
+  ],
+  "S1.framework": [
+    {
+      "user": "把我爸口述的菜谱抄成一本了。他每道菜结尾都是“尝一口再说”，我抄到第七次才发现，自己先笑了。",
+      "say": "抄到第七次才发觉自己在笑……有些东西，是抄着抄着才浮上来的。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "我刚才光说我笑了，倒像在笑话他。其实那几个字一念就是他的声音，我挺喜欢的。",
+      "say": "嗯，那不一样。笑是听见了，不是笑话他。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "扉页想手写一句。我有两版：“留给以后做饭的人”，或者干脆“尝一口再说”。你读下来更想翻开哪一本？",
+      "say": "我会想翻「尝一口再说」那本——翻开时，像他还在旁边看着火候。不过若你想让这本传下去，「留给以后做饭的人」更合适。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "我忽然想到个第三种。扉页先空着，周日拿回去，请他自己写第一句。",
+      "say": "好。那扉页就不是你的字，是他的了。他若愿意写，就等着。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    }
+  ],
+  "S2.framework": [
+    {
+      "user": "社区合唱团排练完，领唱问我愿不愿意下次站前排。我当时点了头，回家路上还挺高兴的。",
+      "say": "站到前面，需要一点勇气。你点头的时候，心里是亮的吧。",
+      "status": "delivered",
+      "validity": {
+        "valid": false,
+        "status": "invalid",
+        "reasons": [
+          "duplicate_head_marker",
+          "invalid_section_order"
+        ],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "前排试一次再说，还是明早先问清要不要独唱？平时大家一起唱我没问题，一个人唱我没试过。要是你，会选哪个？",
+      "say": "先问清楚。独唱和合唱，不是同一种重量。知道了，再选也不迟。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "说准一点，我并不怕独唱，我甚至有点想试。我介意的是没说清楚，到了现场才临时把我往前一推。",
+      "say": "那就不是怕唱。是不想被临时推上去。这句话，可以直接跟领唱说。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "我想好了，今晚就给领唱留一句：前排我愿意，有独唱的话请提前告诉我。发完我就去睡。",
+      "say": "说得清楚。愿意，也说了条件。发吧，然后好好睡。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    }
+  ],
+  "S3.framework": [
+    {
+      "user": "我摘下阳台那个旧风铃了。听惯了好几年，今晚风一来没响，屋子一下显得好大。",
+      "say": "听惯的声音突然没了，屋子会显得大一些。让它空着就好，不必急着习惯。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "也不是后悔摘了。我楼下新搬来的人要上夜班，白天总睡不好。我就是绕过门的时候下意识侧了下头，以前怕撞到它。",
+      "say": "身体记得比念头久一些。侧头不代表后悔，你只是还留着从前的习惯。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "新买了根棉线，把铃舌系住就不会响。想了想，我先挂回原处，照样得侧头过门。",
+      "say": "系住铃舌，它就只是安静待在那里。侧头也没关系，那还是你的习惯。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    },
+    {
+      "user": "可我还在琢磨：原来的声音留不住，连那个绕一下的动作也值得留下吗？想听你的看法，不是再问怎么挂。",
+      "say": "声音留不住，那是它本来的样子。那个绕一下的动作，我觉得可以留——它不占地方，只是记得你曾在意过什么。",
+      "status": "delivered",
+      "validity": {
+        "valid": true,
+        "status": "valid",
+        "reasons": [],
+        "scope": "local_protocol_not_semantic_truth"
+      }
+    }
+  ]
+}

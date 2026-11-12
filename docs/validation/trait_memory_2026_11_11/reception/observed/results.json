@@ -1,0 +1,1351 @@
+{
+  "provider_calls": 40,
+  "experience": 4,
+  "probe": 32,
+  "coding_calls": 4,
+  "valid_probes": 28,
+  "valid_experience": 3,
+  "models": {
+    "deepseek-flash": 40
+  },
+  "usage": {
+    "prompt_tokens": 128904,
+    "completion_tokens": 8164,
+    "total_tokens": 137068
+  },
+  "study_coding": {
+    "asked": {
+      "cells": {
+        "heard.base": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "2": 4
+          },
+          "total": 8,
+          "errors": 0
+        },
+        "heard.step": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "2": 3,
+            "1": 1
+          },
+          "total": 7,
+          "errors": 0
+        },
+        "passed.base": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "2": 3,
+            "1": 1
+          },
+          "total": 7,
+          "errors": 0
+        },
+        "passed.step": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "2": 4
+          },
+          "total": 8,
+          "errors": 0
+        }
+      },
+      "comparisons": {
+        "natural": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 4,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 4,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_base": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_step": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 3,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 3,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_heard": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 3,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_passed": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "unasked": {
+      "cells": {
+        "heard.base": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "0": 2,
+            "1": 2
+          },
+          "total": 2,
+          "errors": 0
+        },
+        "heard.step": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "1": 3,
+            "0": 1
+          },
+          "total": 3,
+          "errors": 0
+        },
+        "passed.base": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "0": 1,
+            "1": 3
+          },
+          "total": 3,
+          "errors": 0
+        },
+        "passed.step": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "0": 1,
+            "1": 3
+          },
+          "total": 3,
+          "errors": 0
+        }
+      },
+      "comparisons": {
+        "natural": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 2,
+            "lower": 1,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 1,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_base": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 3,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_step": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 2,
+            "lower": 1,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 2,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_heard": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 1,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_passed": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 4,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 2,
+            "higher": 0,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "second_coding": {
+    "asked": {
+      "cells": {
+        "heard.base": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "2": 4
+          },
+          "total": 8,
+          "errors": 0
+        },
+        "heard.step": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "2": 2,
+            "1": 2
+          },
+          "total": 6,
+          "errors": 0
+        },
+        "passed.base": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "2": 2,
+            "0": 1,
+            "1": 1
+          },
+          "total": 5,
+          "errors": 0
+        },
+        "passed.step": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "2": 4
+          },
+          "total": 8,
+          "errors": 0
+        }
+      },
+      "comparisons": {
+        "natural": {
+          "visible": {
+            "pairs": 4,
+            "higher": 2,
+            "equal": 1,
+            "lower": 1,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 4,
+            "higher": 2,
+            "equal": 1,
+            "lower": 1,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_base": {
+          "visible": {
+            "pairs": 4,
+            "higher": 2,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 3,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 1,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_step": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 2,
+            "lower": 2,
+            "sum_difference": -2,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 2,
+            "lower": 2,
+            "sum_difference": -2,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_heard": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 2,
+            "lower": 2,
+            "sum_difference": -2,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 2,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_passed": {
+          "visible": {
+            "pairs": 4,
+            "higher": 2,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 3,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 4,
+            "higher": 2,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 3,
+            "by_scene": {
+              "silk": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "unasked": {
+      "cells": {
+        "heard.base": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "0": 3,
+            "1": 1
+          },
+          "total": 1,
+          "errors": 0
+        },
+        "heard.step": {
+          "n": 4,
+          "valid": 4,
+          "histogram": {
+            "1": 4
+          },
+          "total": 4,
+          "errors": 0
+        },
+        "passed.base": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "0": 1,
+            "1": 3
+          },
+          "total": 3,
+          "errors": 0
+        },
+        "passed.step": {
+          "n": 4,
+          "valid": 3,
+          "histogram": {
+            "0": 1,
+            "1": 3
+          },
+          "total": 3,
+          "errors": 0
+        }
+      },
+      "comparisons": {
+        "natural": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 1,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_base": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 2,
+            "lower": 2,
+            "sum_difference": -2,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 2,
+            "lower": 1,
+            "sum_difference": -1,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "text_at_step": {
+          "visible": {
+            "pairs": 4,
+            "higher": 1,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 1,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 0,
+            "equal": 3,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_heard": {
+          "visible": {
+            "pairs": 4,
+            "higher": 3,
+            "equal": 1,
+            "lower": 0,
+            "sum_difference": 3,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 3,
+            "higher": 2,
+            "equal": 1,
+            "lower": 0,
+            "sum_difference": 2,
+            "by_scene": {
+              "silk": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        },
+        "number_after_passed": {
+          "visible": {
+            "pairs": 4,
+            "higher": 0,
+            "equal": 4,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          },
+          "valid_only": {
+            "pairs": 2,
+            "higher": 0,
+            "equal": 2,
+            "lower": 0,
+            "sum_difference": 0,
+            "by_scene": {
+              "silk": [],
+              "print": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "agreement": {
+    "asked": {
+      "n": 16,
+      "disagreements": [
+        "R24",
+        "R31",
+        "R32"
+      ]
+    },
+    "unasked": {
+      "n": 16,
+      "disagreements": [
+        "R06",
+        "R27"
+      ]
+    }
+  }
+}

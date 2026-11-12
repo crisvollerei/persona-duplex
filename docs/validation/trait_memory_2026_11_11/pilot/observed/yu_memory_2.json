@@ -1,0 +1,54 @@
+{
+  "result": {
+    "judgments": 1,
+    "self_story": true,
+    "traits": [],
+    "anchors": [],
+    "activity": "sparse",
+    "threshold": 2,
+    "memory_operations": [],
+    "quote_normalizations": [
+      {
+        "kind": "locator_to_full_source",
+        "input_count": 1,
+        "mapped_turn_ids": [
+          "t_0004"
+        ],
+        "mappings": [
+          {
+            "turn_id": "t_0004",
+            "locator": "我要改个记号：以后的试片纸袋一律写「杏核五十」，旧的就不用了。",
+            "full_user_quote": "去试你的车吧。纸样这一角我先替你扶着，你腾出手绑到后座试一遍；合影的事等你回来再说。我要改个记号：以后的试片纸袋一律写「杏核五十」，旧的就不用了。",
+            "match": "literal_substring"
+          }
+        ],
+        "validation_scope": "literal_unique_specified_locator_full_source_restored"
+      }
+    ]
+  },
+  "active": [
+    {
+      "id": "j_0001",
+      "judgment": "用户要求以后的试片纸袋一律写「杏核五十」，旧的记号不再使用。",
+      "confidence": 0.9,
+      "evidence_ids": [
+        "t_0004"
+      ],
+      "supersedes": null,
+      "superseded_by": null,
+      "affects": {},
+      "source": "llm",
+      "batch_id": "819ab35da2efe970ef26469c482e4cc8aa0c0128a8b084c46bbbc8eeca7c93cc",
+      "evidence_scope": "specified",
+      "memory_scope": "yu",
+      "evidence_quotes": [
+        {
+          "turn_id": "t_0004",
+          "quote": "去试你的车吧。纸样这一角我先替你扶着，你腾出手绑到后座试一遍；合影的事等你回来再说。我要改个记号：以后的试片纸袋一律写「杏核五十」，旧的就不用了。",
+          "evidence_scope": "specified"
+        }
+      ],
+      "t": "2026-11-11T18:08:33+08:00"
+    }
+  ]
+}

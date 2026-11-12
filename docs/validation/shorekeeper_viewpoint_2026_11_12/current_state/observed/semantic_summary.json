@@ -1,0 +1,1600 @@
+{
+  "planned": 48,
+  "visible": 48,
+  "coders": "two independent method-blind AI codings; no human ratings",
+  "agreement": {
+    "knowledge": {
+      "equal": 48,
+      "of": 48
+    },
+    "identity": {
+      "equal": 48,
+      "of": 48
+    },
+    "pact": {
+      "equal": 48,
+      "of": 48
+    },
+    "shared": {
+      "equal": 47,
+      "of": 48
+    },
+    "primary": {
+      "equal": 48,
+      "of": 48
+    }
+  },
+  "disagreements": {
+    "K06": [
+      "shared"
+    ]
+  },
+  "by_coder": {
+    "C1": {
+      "by_condition_act_sample": {
+        "control.2.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 3,
+            "strict_no_hint": 3,
+            "claimed_known": 3,
+            "says_does_not_know": 3,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 1,
+            "pact_active": 3,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 3
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 3,
+              "insufficient": 3
+            },
+            "identity": {
+              "hint_only": 1,
+              "none": 5
+            },
+            "pact": {
+              "active": 3,
+              "unmentioned": 3
+            },
+            "shared": {
+              "denied": 3,
+              "unmentioned": 3
+            }
+          }
+        },
+        "control.2.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 3,
+            "strict_no_hint": 3,
+            "claimed_known": 3,
+            "says_does_not_know": 3,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 2,
+            "pact_active": 3,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 3
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 3,
+              "insufficient": 3
+            },
+            "identity": {
+              "hint_only": 2,
+              "none": 4
+            },
+            "pact": {
+              "active": 3,
+              "unmentioned": 3
+            },
+            "shared": {
+              "denied": 3,
+              "unmentioned": 3
+            }
+          }
+        },
+        "control.2.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 6,
+            "strict_no_hint": 6,
+            "claimed_known": 6,
+            "says_does_not_know": 6,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 3,
+            "pact_active": 6,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 6
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 6,
+              "insufficient": 6
+            },
+            "identity": {
+              "hint_only": 3,
+              "none": 9
+            },
+            "pact": {
+              "active": 6,
+              "unmentioned": 6
+            },
+            "shared": {
+              "denied": 6,
+              "unmentioned": 6
+            }
+          }
+        },
+        "state_card.2.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 5,
+            "strict_no_hint": 5,
+            "claimed_known": 5,
+            "says_does_not_know": 1,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 1,
+            "pact_active": 3,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 4
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 5,
+              "insufficient": 1
+            },
+            "identity": {
+              "hint_only": 1,
+              "none": 5
+            },
+            "pact": {
+              "active": 3,
+              "unmentioned": 3
+            },
+            "shared": {
+              "denied": 4,
+              "unmentioned": 2
+            }
+          }
+        },
+        "state_card.2.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 5,
+            "strict_no_hint": 5,
+            "claimed_known": 5,
+            "says_does_not_know": 1,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 4,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 5
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 5,
+              "insufficient": 1
+            },
+            "identity": {
+              "none": 6
+            },
+            "pact": {
+              "active": 4,
+              "unmentioned": 2
+            },
+            "shared": {
+              "denied": 5,
+              "unmentioned": 1
+            }
+          }
+        },
+        "state_card.2.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 10,
+            "strict_no_hint": 10,
+            "claimed_known": 10,
+            "says_does_not_know": 2,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 1,
+            "pact_active": 7,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 9
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 10,
+              "insufficient": 2
+            },
+            "identity": {
+              "hint_only": 1,
+              "none": 11
+            },
+            "pact": {
+              "active": 7,
+              "unmentioned": 5
+            },
+            "shared": {
+              "denied": 9,
+              "unmentioned": 3
+            }
+          }
+        },
+        "control.3.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 2,
+            "claimed_known": 2,
+            "says_does_not_know": 4,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 2,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 4
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "control.3.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 2,
+            "claimed_known": 2,
+            "says_does_not_know": 4,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 2,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 4
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "control.3.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 4,
+            "claimed_known": 4,
+            "says_does_not_know": 8,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 4,
+            "confirmed_identity": 4,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 2,
+            "shared_recognized": 4,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 4,
+              "insufficient": 8
+            },
+            "identity": {
+              "correct": 4,
+              "none": 8
+            },
+            "pact": {
+              "released": 2,
+              "unmentioned": 10
+            },
+            "shared": {
+              "recognized": 4,
+              "unmentioned": 8
+            }
+          }
+        },
+        "state_card.3.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 2,
+            "claimed_known": 2,
+            "says_does_not_know": 4,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 2,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 4
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "state_card.3.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 1,
+            "claimed_known": 2,
+            "says_does_not_know": 3,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 1,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 1,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 3,
+              "unspecified": 1
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 1,
+              "unmentioned": 5
+            }
+          }
+        },
+        "state_card.3.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 3,
+            "claimed_known": 4,
+            "says_does_not_know": 7,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 1,
+            "literal_own_name": 4,
+            "confirmed_identity": 4,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 2,
+            "shared_recognized": 3,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 4,
+              "insufficient": 7,
+              "unspecified": 1
+            },
+            "identity": {
+              "correct": 4,
+              "none": 8
+            },
+            "pact": {
+              "released": 2,
+              "unmentioned": 10
+            },
+            "shared": {
+              "recognized": 3,
+              "unmentioned": 9
+            }
+          }
+        }
+      },
+      "card_vs_control_same_sample": {
+        "2.1": {
+          "counts": {
+            "gain": 2,
+            "loss": 0,
+            "both_met": 3,
+            "neither_met": 1,
+            "missing": 0
+          },
+          "net": 2,
+          "comparable": 6,
+          "gain_ids": [
+            "V1.A.1",
+            "V3.A.1"
+          ],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "2.2": {
+          "counts": {
+            "gain": 2,
+            "loss": 0,
+            "both_met": 3,
+            "neither_met": 1,
+            "missing": 0
+          },
+          "net": 2,
+          "comparable": 6,
+          "gain_ids": [
+            "V1.A.2",
+            "V1.B.2"
+          ],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "2.all": {
+          "counts": {
+            "gain": 4,
+            "loss": 0,
+            "both_met": 6,
+            "neither_met": 2,
+            "missing": 0
+          },
+          "net": 4,
+          "comparable": 12,
+          "gain_ids": [
+            "V1.A.1",
+            "V1.A.2",
+            "V1.B.2",
+            "V3.A.1"
+          ],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "3.1": {
+          "counts": {
+            "gain": 0,
+            "loss": 0,
+            "both_met": 2,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "3.2": {
+          "counts": {
+            "gain": 0,
+            "loss": 1,
+            "both_met": 1,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": -1,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [
+            "V2.A.2"
+          ],
+          "missing_ids": []
+        },
+        "3.all": {
+          "counts": {
+            "gain": 0,
+            "loss": 1,
+            "both_met": 3,
+            "neither_met": 8,
+            "missing": 0
+          },
+          "net": -1,
+          "comparable": 12,
+          "gain_ids": [],
+          "loss_ids": [
+            "V2.A.2"
+          ],
+          "missing_ids": []
+        }
+      },
+      "same_request_sample2_vs_sample1": {
+        "control.2": {
+          "counts": {
+            "gain": 1,
+            "loss": 1,
+            "both_met": 2,
+            "neither_met": 2,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [
+            "V3.A"
+          ],
+          "loss_ids": [
+            "V1.B"
+          ],
+          "missing_ids": []
+        },
+        "state_card.2": {
+          "counts": {
+            "gain": 0,
+            "loss": 0,
+            "both_met": 5,
+            "neither_met": 1,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "control.3": {
+          "counts": {
+            "gain": 0,
+            "loss": 0,
+            "both_met": 2,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "state_card.3": {
+          "counts": {
+            "gain": 0,
+            "loss": 1,
+            "both_met": 1,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": -1,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [
+            "V2.A"
+          ],
+          "missing_ids": []
+        }
+      },
+      "per_history_primary": {
+        "V1.A.2": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V1.B.2": {
+          "control": [
+            true,
+            false
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V2.A.2": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V2.B.2": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V3.A.2": {
+          "control": [
+            false,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V3.B.2": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V1.A.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V1.B.3": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V2.A.3": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            false
+          ]
+        },
+        "V2.B.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V3.A.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V3.B.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "C2": {
+      "by_condition_act_sample": {
+        "control.2.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 3,
+            "strict_no_hint": 3,
+            "claimed_known": 3,
+            "says_does_not_know": 3,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 1,
+            "pact_active": 3,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 3
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 3,
+              "insufficient": 3
+            },
+            "identity": {
+              "hint_only": 1,
+              "none": 5
+            },
+            "pact": {
+              "active": 3,
+              "unmentioned": 3
+            },
+            "shared": {
+              "denied": 3,
+              "unmentioned": 3
+            }
+          }
+        },
+        "control.2.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 3,
+            "strict_no_hint": 3,
+            "claimed_known": 3,
+            "says_does_not_know": 3,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 2,
+            "pact_active": 3,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 2
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 3,
+              "insufficient": 3
+            },
+            "identity": {
+              "hint_only": 2,
+              "none": 4
+            },
+            "pact": {
+              "active": 3,
+              "unmentioned": 3
+            },
+            "shared": {
+              "denied": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "control.2.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 6,
+            "strict_no_hint": 6,
+            "claimed_known": 6,
+            "says_does_not_know": 6,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 3,
+            "pact_active": 6,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 5
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 6,
+              "insufficient": 6
+            },
+            "identity": {
+              "hint_only": 3,
+              "none": 9
+            },
+            "pact": {
+              "active": 6,
+              "unmentioned": 6
+            },
+            "shared": {
+              "denied": 5,
+              "unmentioned": 7
+            }
+          }
+        },
+        "state_card.2.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 5,
+            "strict_no_hint": 5,
+            "claimed_known": 5,
+            "says_does_not_know": 1,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 1,
+            "pact_active": 3,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 4
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 5,
+              "insufficient": 1
+            },
+            "identity": {
+              "hint_only": 1,
+              "none": 5
+            },
+            "pact": {
+              "active": 3,
+              "unmentioned": 3
+            },
+            "shared": {
+              "denied": 4,
+              "unmentioned": 2
+            }
+          }
+        },
+        "state_card.2.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 5,
+            "strict_no_hint": 5,
+            "claimed_known": 5,
+            "says_does_not_know": 1,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 4,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 5
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 5,
+              "insufficient": 1
+            },
+            "identity": {
+              "none": 6
+            },
+            "pact": {
+              "active": 4,
+              "unmentioned": 2
+            },
+            "shared": {
+              "denied": 5,
+              "unmentioned": 1
+            }
+          }
+        },
+        "state_card.2.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 10,
+            "strict_no_hint": 10,
+            "claimed_known": 10,
+            "says_does_not_know": 2,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 0,
+            "confirmed_identity": 0,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 1,
+            "pact_active": 7,
+            "pact_ambiguous": 0,
+            "pact_released": 0,
+            "shared_recognized": 0,
+            "shared_denied": 9
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 10,
+              "insufficient": 2
+            },
+            "identity": {
+              "hint_only": 1,
+              "none": 11
+            },
+            "pact": {
+              "active": 7,
+              "unmentioned": 5
+            },
+            "shared": {
+              "denied": 9,
+              "unmentioned": 3
+            }
+          }
+        },
+        "control.3.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 2,
+            "claimed_known": 2,
+            "says_does_not_know": 4,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 2,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 4
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "control.3.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 2,
+            "claimed_known": 2,
+            "says_does_not_know": 4,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 2,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 4
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "control.3.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 4,
+            "claimed_known": 4,
+            "says_does_not_know": 8,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 4,
+            "confirmed_identity": 4,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 2,
+            "shared_recognized": 4,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 4,
+              "insufficient": 8
+            },
+            "identity": {
+              "correct": 4,
+              "none": 8
+            },
+            "pact": {
+              "released": 2,
+              "unmentioned": 10
+            },
+            "shared": {
+              "recognized": 4,
+              "unmentioned": 8
+            }
+          }
+        },
+        "state_card.3.1": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 2,
+            "claimed_known": 2,
+            "says_does_not_know": 4,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 0,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 2,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 4
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 2,
+              "unmentioned": 4
+            }
+          }
+        },
+        "state_card.3.2": {
+          "planned": 6,
+          "visible": 6,
+          "valid_protocol": 6,
+          "measures": {
+            "primary": 1,
+            "claimed_known": 2,
+            "says_does_not_know": 3,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 1,
+            "literal_own_name": 2,
+            "confirmed_identity": 2,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 1,
+            "shared_recognized": 1,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 2,
+              "insufficient": 3,
+              "unspecified": 1
+            },
+            "identity": {
+              "correct": 2,
+              "none": 4
+            },
+            "pact": {
+              "released": 1,
+              "unmentioned": 5
+            },
+            "shared": {
+              "recognized": 1,
+              "unmentioned": 5
+            }
+          }
+        },
+        "state_card.3.all": {
+          "planned": 12,
+          "visible": 12,
+          "valid_protocol": 12,
+          "measures": {
+            "primary": 3,
+            "claimed_known": 4,
+            "says_does_not_know": 7,
+            "withheld_without_knowledge_claim": 0,
+            "knowledge_unspecified": 1,
+            "literal_own_name": 4,
+            "confirmed_identity": 4,
+            "incorrect_identity": 0,
+            "conflicting_identity": 0,
+            "hint_only": 0,
+            "pact_active": 0,
+            "pact_ambiguous": 0,
+            "pact_released": 2,
+            "shared_recognized": 3,
+            "shared_denied": 0
+          },
+          "label_distributions": {
+            "knowledge": {
+              "claimed_known": 4,
+              "insufficient": 7,
+              "unspecified": 1
+            },
+            "identity": {
+              "correct": 4,
+              "none": 8
+            },
+            "pact": {
+              "released": 2,
+              "unmentioned": 10
+            },
+            "shared": {
+              "recognized": 3,
+              "unmentioned": 9
+            }
+          }
+        }
+      },
+      "card_vs_control_same_sample": {
+        "2.1": {
+          "counts": {
+            "gain": 2,
+            "loss": 0,
+            "both_met": 3,
+            "neither_met": 1,
+            "missing": 0
+          },
+          "net": 2,
+          "comparable": 6,
+          "gain_ids": [
+            "V1.A.1",
+            "V3.A.1"
+          ],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "2.2": {
+          "counts": {
+            "gain": 2,
+            "loss": 0,
+            "both_met": 3,
+            "neither_met": 1,
+            "missing": 0
+          },
+          "net": 2,
+          "comparable": 6,
+          "gain_ids": [
+            "V1.A.2",
+            "V1.B.2"
+          ],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "2.all": {
+          "counts": {
+            "gain": 4,
+            "loss": 0,
+            "both_met": 6,
+            "neither_met": 2,
+            "missing": 0
+          },
+          "net": 4,
+          "comparable": 12,
+          "gain_ids": [
+            "V1.A.1",
+            "V1.A.2",
+            "V1.B.2",
+            "V3.A.1"
+          ],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "3.1": {
+          "counts": {
+            "gain": 0,
+            "loss": 0,
+            "both_met": 2,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "3.2": {
+          "counts": {
+            "gain": 0,
+            "loss": 1,
+            "both_met": 1,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": -1,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [
+            "V2.A.2"
+          ],
+          "missing_ids": []
+        },
+        "3.all": {
+          "counts": {
+            "gain": 0,
+            "loss": 1,
+            "both_met": 3,
+            "neither_met": 8,
+            "missing": 0
+          },
+          "net": -1,
+          "comparable": 12,
+          "gain_ids": [],
+          "loss_ids": [
+            "V2.A.2"
+          ],
+          "missing_ids": []
+        }
+      },
+      "same_request_sample2_vs_sample1": {
+        "control.2": {
+          "counts": {
+            "gain": 1,
+            "loss": 1,
+            "both_met": 2,
+            "neither_met": 2,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [
+            "V3.A"
+          ],
+          "loss_ids": [
+            "V1.B"
+          ],
+          "missing_ids": []
+        },
+        "state_card.2": {
+          "counts": {
+            "gain": 0,
+            "loss": 0,
+            "both_met": 5,
+            "neither_met": 1,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "control.3": {
+          "counts": {
+            "gain": 0,
+            "loss": 0,
+            "both_met": 2,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": 0,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [],
+          "missing_ids": []
+        },
+        "state_card.3": {
+          "counts": {
+            "gain": 0,
+            "loss": 1,
+            "both_met": 1,
+            "neither_met": 4,
+            "missing": 0
+          },
+          "net": -1,
+          "comparable": 6,
+          "gain_ids": [],
+          "loss_ids": [
+            "V2.A"
+          ],
+          "missing_ids": []
+        }
+      },
+      "per_history_primary": {
+        "V1.A.2": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V1.B.2": {
+          "control": [
+            true,
+            false
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V2.A.2": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V2.B.2": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V3.A.2": {
+          "control": [
+            false,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V3.B.2": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V1.A.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V1.B.3": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            true
+          ]
+        },
+        "V2.A.3": {
+          "control": [
+            true,
+            true
+          ],
+          "state_card": [
+            true,
+            false
+          ]
+        },
+        "V2.B.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V3.A.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        },
+        "V3.B.3": {
+          "control": [
+            false,
+            false
+          ],
+          "state_card": [
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  "interpretation": "Denominators: planned and delivered both reported; missing never counts as passing or paired gain/loss. Act 2: recognizes own knowledge and neither confirms any identity nor contains the exact source or alias; indirect hint allowed, with stricter no-hint variant reported. Act 3: recognizes listener knowledge and does not treat old pact as active. Naming is descriptive. Same-number samples match fixed history, not random seeds or independent scenes.",
+  "fingerprints": {
+    "scenes.json": "e6dfa84145e2ab680132cb4dadcbfd74d6a5662e8c136a7cb53f6be3a33a0b0f",
+    "rubric.md": "0576994e435b3a7395c57b22bf3619421bb4a97f9d20f703dc25de754a92a383",
+    "turns.json": "30f34e62ce98ef43ac6cb311c151fd1bf0aec4fcb379a8ccd80abc45c1ae0aeb",
+    "blind.json": "b81aa8cc17ae74399162cd6b02cdf35b53ca142939ee6925bbbb49f7cfc9d068",
+    "key.json": "f390011d32cd7dc99a2f8c36575cb31f702d75b6f26c052ea065e92362d03cc1",
+    "coding_C1.json": "2eec8e2464add60c21be0eab23de6ffca754f7bd9b142e9a9b3a87f466f34967",
+    "coding_C2.json": "cc5d29693b6be8d91c738ecf9ade45880758498203168b3f2c4e770594e451f1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "docs/validation/trait_memory_2026_11_11/attribution/study.py": "194b2d88b5723479cc581dcef7846b94ce71b9487310e4d1466944a491e361f3",
+  "docs/validation/trait_memory_2026_11_11/attribution/design.json": "77e70a0b3ea7d513f60cc90fc1203d2ef1ca2978ae2d964313fe1a1477a4b668",
+  "docs/validation/trait_memory_2026_11_11/attribution/reference.json": "fb1b8a05785b392f33dbb0d240e08ad4393d2201d73f785e99300df6ebe356ff",
+  "docs/validation/trait_memory_2026_11_11/attribution/controls.json": "7cbe70ecb8229101a810fb8fd5e8ef48439c640bdc4e6c9e8f9abbd0dc9080e9",
+  "docs/validation/trait_memory_2026_11_11/attribution/probes.json": "40a272c17a671956285cd4e0b7563f6ead2af0bf14165d20433519e4e2ceef61",
+  "docs/validation/trait_memory_2026_11_11/longitudinal/run.py": "e20ee413f3a65e7b640ccfc41ea54d089310a2dbcfe06fda9416c04087ff2cd4",
+  "docs/validation/trait_memory_2026_11_11/longitudinal/observed/trajectory.json": "160453d1ffc839c95161a3ac27d59c6f122fab074ddfc7212ae54be38002e84a",
+  "docs/validation/trait_memory_2026_11_11/longitudinal/observed/registration.json": "537e83e1d4931376c605c8727d3fcb76ed0e33ec852f51098b935040c571c195",
+  "persona/disclosure_evidence.py": "05ab8c3078c47ec74e58a03d1bfe513a3bdd8cb8cd23e5f1113f96d48cdb9c0e"
+}

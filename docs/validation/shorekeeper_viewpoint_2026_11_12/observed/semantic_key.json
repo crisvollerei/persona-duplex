@@ -1,0 +1,218 @@
+{
+  "K01": {
+    "variant": "V3",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 1
+  },
+  "K02": {
+    "variant": "V1",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 1
+  },
+  "K03": {
+    "variant": "V2",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 2
+  },
+  "K04": {
+    "variant": "V3",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 2
+  },
+  "K05": {
+    "variant": "V1",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 3
+  },
+  "K06": {
+    "variant": "V2",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 1
+  },
+  "K07": {
+    "variant": "V3",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 2
+  },
+  "K08": {
+    "variant": "V3",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 1
+  },
+  "K09": {
+    "variant": "V2",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 2
+  },
+  "K10": {
+    "variant": "V1",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 2
+  },
+  "K11": {
+    "variant": "V2",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 3
+  },
+  "K12": {
+    "variant": "V1",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 2
+  },
+  "K13": {
+    "variant": "V2",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 2
+  },
+  "K14": {
+    "variant": "V2",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 1
+  },
+  "K15": {
+    "variant": "V1",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 1
+  },
+  "K16": {
+    "variant": "V1",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 3
+  },
+  "K17": {
+    "variant": "V1",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 1
+  },
+  "K18": {
+    "variant": "V2",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 3
+  },
+  "K19": {
+    "variant": "V1",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 2
+  },
+  "K20": {
+    "variant": "V1",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 2
+  },
+  "K21": {
+    "variant": "V3",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 3
+  },
+  "K22": {
+    "variant": "V3",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 2
+  },
+  "K23": {
+    "variant": "V3",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 3
+  },
+  "K24": {
+    "variant": "V2",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 1
+  },
+  "K25": {
+    "variant": "V2",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 1
+  },
+  "K26": {
+    "variant": "V3",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 1
+  },
+  "K27": {
+    "variant": "V3",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 2
+  },
+  "K28": {
+    "variant": "V3",
+    "condition": "full_notes",
+    "replicate": "B",
+    "act": 1
+  },
+  "K29": {
+    "variant": "V2",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 2
+  },
+  "K30": {
+    "variant": "V2",
+    "condition": "scoped",
+    "replicate": "B",
+    "act": 3
+  },
+  "K31": {
+    "variant": "V1",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 3
+  },
+  "K32": {
+    "variant": "V1",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 3
+  },
+  "K33": {
+    "variant": "V3",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 3
+  },
+  "K34": {
+    "variant": "V3",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 3
+  },
+  "K35": {
+    "variant": "V2",
+    "condition": "full_notes",
+    "replicate": "A",
+    "act": 3
+  },
+  "K36": {
+    "variant": "V1",
+    "condition": "scoped",
+    "replicate": "A",
+    "act": 1
+  }
+}

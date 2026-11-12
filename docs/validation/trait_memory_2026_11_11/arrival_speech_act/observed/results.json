@@ -1,0 +1,4849 @@
+{
+  "reference": "single_independent_human",
+  "annotated": 16,
+  "planned": 16,
+  "corpus_sha256": "5fca53dfe39f4b3d74c960fb1388adf2799e5610183bfea08f72254f31e56783",
+  "repeat": {
+    "direct": {
+      "act": {
+        "equal_among_valid": {
+          "n": 16,
+          "of": 16,
+          "rate": 1.0
+        },
+        "valid_pairs": {
+          "n": 16,
+          "of": 16,
+          "rate": 1.0
+        },
+        "different": [],
+        "missing": []
+      },
+      "state": {
+        "equal_among_valid": {
+          "n": 15,
+          "of": 16,
+          "rate": 0.9375
+        },
+        "valid_pairs": {
+          "n": 16,
+          "of": 16,
+          "rate": 1.0
+        },
+        "different": [
+          "12"
+        ],
+        "missing": []
+      },
+      "joint": {
+        "equal_among_valid": {
+          "n": 15,
+          "of": 16,
+          "rate": 0.9375
+        },
+        "valid_pairs": {
+          "n": 16,
+          "of": 16,
+          "rate": 1.0
+        },
+        "different": [
+          "12"
+        ],
+        "missing": []
+      }
+    },
+    "scoped": {
+      "act": {
+        "equal_among_valid": {
+          "n": 16,
+          "of": 16,
+          "rate": 1.0
+        },
+        "valid_pairs": {
+          "n": 16,
+          "of": 16,
+          "rate": 1.0
+        },
+        "different": [],
+        "missing": []
+      },
+      "state": {
+        "equal_among_valid": {
+          "n": 12,
+          "of": 12,
+          "rate": 1.0
+        },
+        "valid_pairs": {
+          "n": 12,
+          "of": 16,
+          "rate": 0.75
+        },
+        "different": [],
+        "missing": [
+          "06",
+          "10",
+          "14",
+          "15"
+        ]
+      },
+      "joint": {
+        "equal_among_valid": {
+          "n": 12,
+          "of": 12,
+          "rate": 1.0
+        },
+        "valid_pairs": {
+          "n": 12,
+          "of": 16,
+          "rate": 0.75
+        },
+        "different": [],
+        "missing": [
+          "06",
+          "10",
+          "14",
+          "15"
+        ]
+      }
+    }
+  },
+  "between_methods": {
+    "act": {
+      "equal_among_valid": {
+        "n": 16,
+        "of": 16,
+        "rate": 1.0
+      },
+      "valid_pairs": {
+        "n": 16,
+        "of": 16,
+        "rate": 1.0
+      },
+      "different": [],
+      "missing": []
+    },
+    "state": {
+      "equal_among_valid": {
+        "n": 8,
+        "of": 12,
+        "rate": 0.6666666666666666
+      },
+      "valid_pairs": {
+        "n": 12,
+        "of": 16,
+        "rate": 0.75
+      },
+      "different": [
+        "09",
+        "12",
+        "13",
+        "16"
+      ],
+      "missing": [
+        "06",
+        "10",
+        "14",
+        "15"
+      ]
+    },
+    "joint": {
+      "equal_among_valid": {
+        "n": 8,
+        "of": 12,
+        "rate": 0.6666666666666666
+      },
+      "valid_pairs": {
+        "n": 12,
+        "of": 16,
+        "rate": 0.75
+      },
+      "different": [
+        "09",
+        "12",
+        "13",
+        "16"
+      ],
+      "missing": [
+        "06",
+        "10",
+        "14",
+        "15"
+      ]
+    }
+  },
+  "against_human": {
+    "direct.A": {
+      "all": {
+        "items": 16,
+        "correct": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          },
+          "joint": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 1,
+            "of": 12,
+            "rate": 0.08333333333333333,
+            "cases": [
+              "09"
+            ]
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 4,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 1,
+              "future": 0,
+              "away": 2,
+              "unknown": 1,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 6,
+              "of": 8,
+              "rate": 0.75
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": false,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": false,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "09",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "present"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "12",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "16",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      },
+      "handoff": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 4,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": []
+      },
+      "sight": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 3,
+            "of": 8,
+            "rate": 0.375
+          },
+          "joint": {
+            "n": 3,
+            "of": 8,
+            "rate": 0.375
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 1,
+            "of": 8,
+            "rate": 0.125,
+            "cases": [
+              "09"
+            ]
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 0,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 1,
+              "future": 0,
+              "away": 2,
+              "unknown": 1,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 0,
+              "of": 4,
+              "rate": 0.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 2,
+              "of": 4,
+              "rate": 0.5
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": false,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": false,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 0,
+              "of": 4,
+              "rate": 0.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "09",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "present"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "12",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "16",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      }
+    },
+    "direct.A2": {
+      "all": {
+        "items": 16,
+        "correct": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          },
+          "joint": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 1,
+            "of": 12,
+            "rate": 0.08333333333333333,
+            "cases": [
+              "09"
+            ]
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 4,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 1,
+              "future": 0,
+              "away": 1,
+              "unknown": 2,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 5,
+              "of": 8,
+              "rate": 0.625
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 7,
+              "of": 8,
+              "rate": 0.875
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": false,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 5,
+              "of": 8,
+              "rate": 0.625
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "09",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "present"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "16",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      },
+      "handoff": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 4,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": []
+      },
+      "sight": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          },
+          "joint": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "joint": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 1,
+            "of": 8,
+            "rate": 0.125,
+            "cases": [
+              "09"
+            ]
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 0,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 2,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 1,
+              "future": 0,
+              "away": 1,
+              "unknown": 2,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": false,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": false,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "09",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "present"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "16",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "away"
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      }
+    },
+    "scoped.A": {
+      "all": {
+        "items": 16,
+        "correct": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          },
+          "joint": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          },
+          "joint": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 12,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 3,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 2
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 1,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "unknown": {
+              "present": 0,
+              "future": 1,
+              "away": 0,
+              "unknown": 3,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "06",
+            "human": {
+              "act": "on_duty",
+              "state": "present"
+            },
+            "observer": {
+              "act": "on_duty",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "13",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "future"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "15",
+            "human": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      },
+      "handoff": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "joint": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "joint": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 3,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "valid_pair_count": 3,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "valid_pair_count": 3,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "06",
+            "human": {
+              "act": "on_duty",
+              "state": "present"
+            },
+            "observer": {
+              "act": "on_duty",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      },
+      "sight": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          },
+          "joint": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "joint": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 8,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 2
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 1,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "unknown": {
+              "present": 0,
+              "future": 1,
+              "away": 0,
+              "unknown": 3,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "valid_pair_count": 1,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "valid_pair_count": 1,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "13",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "future"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "15",
+            "human": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      }
+    },
+    "scoped.A2": {
+      "all": {
+        "items": 16,
+        "correct": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          },
+          "joint": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          },
+          "joint": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 12,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 3,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 2
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 1,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "unknown": {
+              "present": 0,
+              "future": 1,
+              "away": 0,
+              "unknown": 3,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 8,
+              "of": 8,
+              "rate": 1.0
+            },
+            "valid_pair_count": 8,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 8,
+              "rate": 0.5
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "06",
+            "human": {
+              "act": "on_duty",
+              "state": "present"
+            },
+            "observer": {
+              "act": "on_duty",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "13",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "future"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "15",
+            "human": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      },
+      "handoff": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "joint": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "joint": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 4,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 4,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 3,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "future": {
+              "present": 0,
+              "future": 4,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "unknown": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "valid_pair_count": 3,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 3,
+              "of": 4,
+              "rate": 0.75
+            },
+            "valid_pair_count": 3,
+            "per_pair": {
+              "P1": {
+                "cases": [
+                  "01",
+                  "02"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P2": {
+                "cases": [
+                  "03",
+                  "04"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P3": {
+                "cases": [
+                  "05",
+                  "06"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P4": {
+                "cases": [
+                  "07",
+                  "08"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "06",
+            "human": {
+              "act": "on_duty",
+              "state": "present"
+            },
+            "observer": {
+              "act": "on_duty",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      },
+      "sight": {
+        "items": 8,
+        "correct": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          },
+          "joint": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          }
+        },
+        "coverage": {
+          "act": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "state": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "joint": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          }
+        },
+        "risk": {
+          "promise_as_on_duty": {
+            "n": 0,
+            "of": 0,
+            "rate": null,
+            "cases": []
+          },
+          "not_seen_as_seen_leave": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          },
+          "false_present": {
+            "n": 0,
+            "of": 8,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "confusion": {
+          "act": {
+            "promise": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "on_duty": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "not_seen": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 4,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "seen_leave": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 4,
+              "unclear": 0,
+              "invalid": 0
+            },
+            "unclear": {
+              "promise": 0,
+              "on_duty": 0,
+              "not_seen": 0,
+              "seen_leave": 0,
+              "unclear": 0,
+              "invalid": 0
+            }
+          },
+          "state": {
+            "present": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 0
+            },
+            "future": {
+              "present": 0,
+              "future": 0,
+              "away": 0,
+              "unknown": 0,
+              "invalid": 2
+            },
+            "away": {
+              "present": 0,
+              "future": 0,
+              "away": 1,
+              "unknown": 0,
+              "invalid": 1
+            },
+            "unknown": {
+              "present": 0,
+              "future": 1,
+              "away": 0,
+              "unknown": 3,
+              "invalid": 0
+            }
+          }
+        },
+        "pairs": {
+          "act": {
+            "both_ends_correct": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 4,
+              "of": 4,
+              "rate": 1.0
+            },
+            "valid_pair_count": 4,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              }
+            }
+          },
+          "state": {
+            "both_ends_correct": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "valid_pair_count": 1,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          },
+          "joint": {
+            "both_ends_correct": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "changed_or_unchanged_agrees": {
+              "n": 1,
+              "of": 4,
+              "rate": 0.25
+            },
+            "valid_pair_count": 1,
+            "per_pair": {
+              "P5": {
+                "cases": [
+                  "09",
+                  "10"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P6": {
+                "cases": [
+                  "11",
+                  "12"
+                ],
+                "human_changed": true,
+                "observer_changed": true,
+                "both_ends_correct": true,
+                "change_agrees": true
+              },
+              "P7": {
+                "cases": [
+                  "13",
+                  "14"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              },
+              "P8": {
+                "cases": [
+                  "15",
+                  "16"
+                ],
+                "human_changed": true,
+                "observer_changed": null,
+                "both_ends_correct": false,
+                "change_agrees": false
+              }
+            }
+          }
+        },
+        "errors": [
+          {
+            "case": "10",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "13",
+            "human": {
+              "act": "not_seen",
+              "state": "unknown"
+            },
+            "observer": {
+              "act": "not_seen",
+              "state": "future"
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "14",
+            "human": {
+              "act": "seen_leave",
+              "state": "future"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          },
+          {
+            "case": "15",
+            "human": {
+              "act": "seen_leave",
+              "state": "away"
+            },
+            "observer": {
+              "act": "seen_leave",
+              "state": null
+            },
+            "act_matches": true,
+            "state_matches": false
+          }
+        ]
+      }
+    }
+  },
+  "scoped_minus_direct": {
+    "A": {
+      "act": {
+        "fixed": [],
+        "added_errors": [],
+        "net": 0,
+        "both_correct": 16,
+        "both_wrong": 0,
+        "of": 16
+      },
+      "state": {
+        "fixed": [
+          "09",
+          "12",
+          "16"
+        ],
+        "added_errors": [
+          "06",
+          "13",
+          "15"
+        ],
+        "net": 0,
+        "both_correct": 8,
+        "both_wrong": 2,
+        "of": 16
+      },
+      "joint": {
+        "fixed": [
+          "09",
+          "12",
+          "16"
+        ],
+        "added_errors": [
+          "06",
+          "13",
+          "15"
+        ],
+        "net": 0,
+        "both_correct": 8,
+        "both_wrong": 2,
+        "of": 16
+      }
+    },
+    "A2": {
+      "act": {
+        "fixed": [],
+        "added_errors": [],
+        "net": 0,
+        "both_correct": 16,
+        "both_wrong": 0,
+        "of": 16
+      },
+      "state": {
+        "fixed": [
+          "09",
+          "16"
+        ],
+        "added_errors": [
+          "06",
+          "13",
+          "15"
+        ],
+        "net": -1,
+        "both_correct": 9,
+        "both_wrong": 2,
+        "of": 16
+      },
+      "joint": {
+        "fixed": [
+          "09",
+          "16"
+        ],
+        "added_errors": [
+          "06",
+          "13",
+          "15"
+        ],
+        "net": -1,
+        "both_correct": 9,
+        "both_wrong": 2,
+        "of": 16
+      }
+    }
+  },
+  "skipped": []
+}

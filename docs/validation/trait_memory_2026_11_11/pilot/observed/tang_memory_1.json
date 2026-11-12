@@ -1,0 +1,13 @@
+{
+  "result": {
+    "judgments": 0,
+    "self_story": false,
+    "traits": [],
+    "anchors": [],
+    "activity": "sparse",
+    "threshold": 2,
+    "memory_operations": [],
+    "quote_normalizations": []
+  },
+  "active": []
+}

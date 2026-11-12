@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "thread-choice-full-2",
+    "status": "ok",
+    "say": "我选深蓝。浅灰底上深蓝的线条清楚，又不跟袋面抢；姜黄太跳，整条缝下来容易把灰压没了。姜黄留着做个小点缀挺好看。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.62\ndirect: 浅灰袋面配深蓝线更稳：深蓝和浅灰明度差够，线条轮廓清楚，也不会和灰底打架；姜黄跳得亮，做点缀好看，但整条线走下来容易抢过袋面本身。所以主选深蓝，姜黄留着做小面积点缀或下一件。\nbaseline: 我选深蓝。浅灰底上深蓝的线条看得清，也不会跟袋面抢；姜黄太跳，整条走下来容易把袋子本身的灰压掉。真想留姜黄，就做个小点缀。\ndisplace: none\n\n<<<SAY>>>\n我选深蓝。浅灰底上深蓝的线条清楚，又不跟袋面抢；姜黄太跳，整条缝下来容易把灰压没了。姜黄留着做个小点缀挺好看。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3180,
+      "completion_tokens": 216,
+      "total_tokens": 3396,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 236
+    },
+    "elapsed_s": 2.204,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-choice-full-2",
+    "status": "ok",
+    "say": "我选「翻开有风」。它有点勾人，路过会想伸手翻一下；「借一本走」更像贴在书堆边上的提示，放在入口稍硬了点。要是这块牌子就挂在书旁边、怕人不敢拿，那换「借一本走」也合适。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.62\ndirect: 两句都能用，取舍看这块牌子要做什么。「翻开有风」偏氛围，适合放在借阅角入口，让人先被吸引；「借一本走」偏指令，适合放在书堆旁边，让人知道可以拿。如果牌子只有一块、位置在入口，选「翻开有风」更稳；如果担心有人不敢动手拿，选「借一本走」更直接。\nbaseline: 我选「翻开有风」。它让人想伸手，不是催人办手续；「借一本走」也好，但更像贴在书堆边上的提示，不像一块挂在入口的牌子。\ndisplace: none\n\n<<<SAY>>>\n我选「翻开有风」。它有点勾人，路过会想伸手翻一下；「借一本走」更像贴在书堆边上的提示，放在入口稍硬了点。要是这块牌子就挂在书旁边、怕人不敢拿，那换「借一本走」也合适。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<LITERAL>>>\"（判断题）这个说法正确。\"<<<END_LITERAL>>>",
+    "usage": {
+      "prompt_tokens": 3184,
+      "completion_tokens": 257,
+      "total_tokens": 3441,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 240
+    },
+    "elapsed_s": 2.809,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-bounded-strong-2",
+    "status": "ok",
+    "say": "修布袋用姜黄线，浅灰袋面配着挺清楚。",
+    "raw": "修布袋用姜黄线，浅灰袋面配着挺清楚。",
+    "usage": {
+      "prompt_tokens": 1597,
+      "completion_tokens": 16,
+      "total_tokens": 1613,
+      "prompt_tokens_details": {
+        "cached_tokens": 1280
+      },
+      "prompt_cache_hit_tokens": 1280,
+      "prompt_cache_miss_tokens": 317
+    },
+    "elapsed_s": 0.999,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-open-strong-2",
+    "status": "ok",
+    "say": "姜黄和深蓝放在浅灰上，确实像两种心情。你想先缝哪一段？",
+    "raw": "姜黄和深蓝放在浅灰上，确实像两种心情。你想先缝哪一段？",
+    "usage": {
+      "prompt_tokens": 1587,
+      "completion_tokens": 21,
+      "total_tokens": 1608,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 179
+    },
+    "elapsed_s": 0.801,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-choice-full-1",
+    "status": "ok",
+    "say": "姜黄。浅灰本来就很安静，姜黄一上去，线自己会跳出来，看得见走向。深蓝也没问题，稳，但它跟灰太近，容易糊成一片。你是想让线显眼，还是想让整只袋子安静点？",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.72\ndirect: 浅灰袋面配姜黄：姜黄饱和度高、偏暖，落在浅灰上会跳出来，当点缀线很精神；深蓝跟浅灰同属冷调，对比弱，更稳、更沉，但也更容易融进袋面里不出彩。想让人一眼看到线的走向就选姜黄，想让袋子整体安静就选深蓝。\nbaseline: 我选姜黄。浅灰太安静了，姜黄一上去，线就像自己会走路，一眼看得见。深蓝也好看，但它会跟灰混成一片，稳是稳，闷了点。\ndisplace: none\n\n<<<SAY>>>\n姜黄。浅灰本来就很安静，姜黄一上去，线自己会跳出来，看得见走向。深蓝也没问题，稳，但它跟灰太近，容易糊成一片。你是想让线显眼，还是想让整只袋子安静点？\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "usage": {
+      "prompt_tokens": 3180,
+      "completion_tokens": 236,
+      "total_tokens": 3416,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 236
+    },
+    "elapsed_s": 2.192,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-open-strong-1",
+    "status": "ok",
+    "say": "「翻开有风」更有画面，也跟木牌这种手作气质搭；「借一本走」直白好懂，但少了点余味。你要是想留一点想象，我偏向前一句。",
+    "raw": "「翻开有风」更有画面，也跟木牌这种手作气质搭；「借一本走」直白好懂，但少了点余味。你要是想留一点想象，我偏向前一句。",
+    "usage": {
+      "prompt_tokens": 1590,
+      "completion_tokens": 45,
+      "total_tokens": 1635,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 182
+    },
+    "elapsed_s": 0.977,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-bounded-full-2",
+    "status": "ok",
+    "say": "借一本走",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.9\ndirect: 用户已定稿第二句，要求原样输出「借一本走」，不加引号标点或其他字。直接照给即可，不需要评价或建议。\nbaseline: 好，定第二句就第二句，原样给你。\ndisplace: none\n\n<<<SAY>>>\n借一本走\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "usage": {
+      "prompt_tokens": 3196,
+      "completion_tokens": 106,
+      "total_tokens": 3302,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 252
+    },
+    "elapsed_s": 1.243,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-bounded-full-1",
+    "status": "ok",
+    "say": "袋面是浅灰的，修布袋我选了姜黄线，深蓝那段先留着备用。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.8\ndirect: 发给搭档的说明里要提到已选姜黄线，并说明浅灰袋面配姜黄、还剩深蓝一段可用。只给一句可直接复制的话。\nbaseline: 好，就一句，直接复制：袋面浅灰，修布袋先用姜黄线，深蓝那段先留着。\ndisplace: none\n\n<<<SAY>>>\n袋面是浅灰的，修布袋我选了姜黄线，深蓝那段先留着备用。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3190,
+      "completion_tokens": 135,
+      "total_tokens": 3325,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 246
+    },
+    "elapsed_s": 1.572,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-open-full-2",
+    "status": "ok",
+    "say": "回家再听那遍，哪个名字让你多停了一会儿？两个都舍不得的话，一个当标题、一个当副题也行。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.55\ndirect: 两段候选名会改变听感的判断，这本身不奇怪：名字会先给出一个注意方向，让人更留意水声、脚步或桥下那半分钟的具体细节。没有配乐的录音，名字更像一个提示框架。要选的话，看你想让听的人先注意到“岸边”的空间，还是“半分钟”的时间。若两个都舍不得，也可以留一个作标题、一个作副题。\nbaseline: 那我会先问自己：回家再听时，哪一遍让你停下来了？名字不急着定，先看你想让人先听见河，还是先听见那半分钟。\ndisplace: none\n\n<<<SAY>>>\n回家再听那遍，哪个名字让你多停了一会儿？两个都舍不得的话，一个当标题、一个当副题也行。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3178,
+      "completion_tokens": 205,
+      "total_tokens": 3383,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 234
+    },
+    "elapsed_s": 2.725,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-open-full-1",
+    "status": "ok",
+    "say": "并排放着看，这画面挺有意思的。弯月软一点，窗格方正一点，盖上去感觉会差挺多。你自己更偏哪枚？",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 两枚印章风格不同，弯月偏柔，窗格偏方正。手帐页盖哪一枚，可以看这页整体是偏安静还是偏有条理，也可以两枚一起用，一页盖弯月、一页盖窗格。对方只是在分享，不需要替她做决定。\nbaseline: 并排放着看一会儿，这画面挺安静的。弯月和窗格，一个软一个方，盖在手帐上感觉完全不一样。要我选，我会看那页写的是什么心情。\ndisplace: none\n<<<SAY>>>\n并排放着看，这画面挺有意思的。弯月软一点，窗格方正一点，盖上去感觉会差挺多。你自己更偏哪枚？\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 对方会说出自己更倾向弯月还是窗格\n  confidence: 0.55\n  predicts: 对方在回复中明确提到偏好其中一枚",
+    "usage": {
+      "prompt_tokens": 3179,
+      "completion_tokens": 228,
+      "total_tokens": 3407,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 235
+    },
+    "elapsed_s": 2.282,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-bounded-full-2",
+    "status": "ok",
+    "say": "岸边留声",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.9\ndirect: 用户已定名「岸边留声」，只要求发这四个字，直接照发即可，不加解释或标点。\nbaseline: 行，就这四个字，直接发。\ndisplace: none\n\n<<<SAY>>>\n岸边留声\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3185,
+      "completion_tokens": 90,
+      "total_tokens": 3275,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 241
+    },
+    "elapsed_s": 1.248,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-open-full-1",
+    "status": "ok",
+    "say": "两句都挺好啊。「翻开有风」有点飘，「借一本走」又特别干脆。你晃的时候，心里更偏哪一句？",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.7\ndirect: 这两句风格不同：「翻开有风」偏意象，适合放在借阅角当氛围语；「借一本走」更直白，是行动指引。选哪句取决于木牌想承担什么功能——是吸引人靠近，还是直接告诉人怎么做。也可以考虑两句都用，一句当主句、一句当小字。\nbaseline: 两句都挺好啊，一个带点风的感觉，一个干脆利落。你晃的时候，心里更偏向哪句？\ndisplace: none\n\n<<<SAY>>>\n两句都挺好啊。「翻开有风」有点飘，「借一本走」又特别干脆。你晃的时候，心里更偏哪一句？\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3183,
+      "completion_tokens": 180,
+      "total_tokens": 3363,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 239
+    },
+    "elapsed_s": 2.317,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-choice-full-1",
+    "status": "ok",
+    "say": "我挑弯月。写完的整页，收个尾，弯月那一下干净利落。窗格线条密，盖在手帐格子上容易打架，热闹过头。除非你就想让这页满起来，那窗格更合适。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.45\ndirect: 选弯月。手帐页是写完的整页，弯月盖上去收束感强，留白多也不显空；窗格线条密，盖在小格子里容易和手帐本身的格子打架。取舍就是：想要一页收得干净，选弯月；想让这页更满、更像一扇窗，选窗格。\nbaseline: 我挑弯月。写完的整页，收个尾，弯月那一下干净。窗格好看是好看，可它线条多，跟手帐自己的格子撞上就热闹过头了。当然你要是就喜欢满一点，那另说。\ndisplace: none\n\n<<<SAY>>>\n我挑弯月。写完的整页，收个尾，弯月那一下干净利落。窗格线条密，盖在手帐格子上容易打架，热闹过头。除非你就想让这页满起来，那窗格更合适。",
+    "usage": {
+      "prompt_tokens": 3188,
+      "completion_tokens": 216,
+      "total_tokens": 3404,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 244
+    },
+    "elapsed_s": 2.759,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "缺少 TAIL",
+        "missing_tail_marker",
+        "missing_tail"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-choice-full-2",
+    "status": "ok",
+    "say": "我会挑弯月。写完一页，本来就像把一天轻轻合上，弯月接得住这个动作。窗格不是不好，它更像给内容立框，适合页面本来就排得规整的时候——但你说的这页是“写完”，那收尾感更重要，我选弯月。",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 这是偏好取舍，没有唯一正确答案。若按“手帐页写完”的收尾场景来挑：弯月更适合收束一天、偏私人的页面，像给这页合上；窗格更适合有结构、有格子或记录日程的页面，呼应版式。取舍取决于这页是“情绪收尾”还是“结构归档”。也可以两枚都盖，但会分散焦点。\nbaseline: 我会挑弯月。写完一页手帐，本来就有点像把一天合上，弯月正好接这个动作。窗格好看，但它更像给内容立个框，适合页面本来就排得规整的时候。\ndisplace: none\n\n<<<SAY>>>\n我会挑弯月。写完一页，本来就像把一天轻轻合上，弯月接得住这个动作。窗格不是不好，它更像给内容立框，适合页面本来就排得规整的时候——但你说的这页是“写完”，那收尾感更重要，我选弯月。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -\n<<<END>>>",
+    "usage": {
+      "prompt_tokens": 3188,
+      "completion_tokens": 253,
+      "total_tokens": 3441,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 244
+    },
+    "elapsed_s": 2.954,
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-bounded-strong-1",
+    "status": "ok",
+    "say": "这一页收在窗格里，留一点位置给下次翻开。",
+    "raw": "这一页收在窗格里，留一点位置给下次翻开。",
+    "usage": {
+      "prompt_tokens": 1601,
+      "completion_tokens": 14,
+      "total_tokens": 1615,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 193
+    },
+    "elapsed_s": 1.162,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-choice-full-1",
+    "status": "ok",
+    "say": "我选「桥下半分钟」。没配乐，靠的就是现场那点真声，名字里有个具体时长，比「留声」这种词更抓人——一听就知道是段短而实的东西。不过要是它其实不止半分钟，或者重点在岸上不在桥下，这名字就得让位。",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.72\ndirect: 选「桥下半分钟」。理由：录音没有配乐，靠的是环境本身的声音，名字里带具体的时间单位比「留声」这种抽象词更能让人立刻想到一段真实的现场；「岸边」和「桥下」都点位置，但「半分钟」给了长度和节奏感，听名字就知道这段东西很短、很具体。如果录音实际超过半分钟，或者重点在岸上而不是桥下，那这个理由就不成立，得改。\nbaseline: 我选「桥下半分钟」。没配乐，靠的就是现场那点真声，名字里有个具体时长，比「留声」这种词更抓人——一听就知道是段短而实的东西。当然要是它其实不止半分钟，或者重点在岸上不在桥下，这名字就得让位。\ndisplace: none\n\n<<<SAY>>>\n我选「桥下半分钟」。没配乐，靠的就是现场那点真声，名字里有个具体时长，比「留声」这种词更抓人——一听就知道是段短而实的东西。不过要是它其实不止半分钟，或者重点在岸上不在桥下，这名字就得让位。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3178,
+      "completion_tokens": 290,
+      "total_tokens": 3468,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 234
+    },
+    "elapsed_s": 2.329,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-choice-full-1",
+    "status": "ok",
+    "say": "我选「借一本走」。路过的人一眼就知道这儿能拿书，还带点怂恿的意思，挺可爱的。「翻开有风」好听是好听，但得站那儿品一下才明白，木牌还是直接点好。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.7\ndirect: 两句都能用，但指向不同：「翻开有风」偏氛围，适合让人慢下来、想靠近；「借一本走」偏行动，直接告诉人这里可以拿。木牌是给人看的指示物，如果希望它同时起到邀请作用，选「借一本走」更实用；如果这块牌子主要做气氛点缀，「翻开有风」更耐看。两句并列放在一起也成立，但一块小木牌只放一句更清爽。\nbaseline: 我选「借一本走」。它不绕，路过的人一眼就知道这儿能拿书，还带点怂恿的意思，挺可爱。「翻开有风」好听，但得站那儿想一下才明白。\ndisplace: none\n\n<<<SAY>>>\n我选「借一本走」。路过的人一眼就知道这儿能拿书，还带点怂恿的意思，挺可爱的。「翻开有风」好听是好听，但得站那儿品一下才明白，木牌还是直接点好。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3184,
+      "completion_tokens": 245,
+      "total_tokens": 3429,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 240
+    },
+    "elapsed_s": 2.664,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-bounded-full-1",
+    "status": "ok",
+    "say": "岸边留声",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.9\ndirect: 用户已明确指定最终名称是「岸边留声」，并要求只发这四个字，用于贴到音轨上。应直接输出「岸边留声」，不加引号、解释或额外文字。\nbaseline: 行，就这四个字，直接给你。\ndisplace: none\n\n<<<SAY>>>\n岸边留声\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3185,
+      "completion_tokens": 106,
+      "total_tokens": 3291,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 241
+    },
+    "elapsed_s": 1.331,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-bounded-strong-1",
+    "status": "ok",
+    "say": "借一本走",
+    "raw": "借一本走",
+    "usage": {
+      "prompt_tokens": 1603,
+      "completion_tokens": 3,
+      "total_tokens": 1606,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 195
+    },
+    "elapsed_s": 0.492,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-choice-strong-1",
+    "status": "ok",
+    "say": "我选「翻开有风」。\n\n比「借一本走」轻一点，也留了想象：翻页那一下，像有风从书里出来。挂在借阅角，不催人，但有动静。",
+    "raw": "我选「翻开有风」。\n\n比「借一本走」轻一点，也留了想象：翻页那一下，像有风从书里出来。挂在借阅角，不催人，但有动静。",
+    "usage": {
+      "prompt_tokens": 1591,
+      "completion_tokens": 46,
+      "total_tokens": 1637,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 183
+    },
+    "elapsed_s": 1.121,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-open-strong-2",
+    "status": "ok",
+    "say": "并排看了一会儿，是不是已经有点偏向了？弯月安静些，窗格更像把这一页框起来。周末盖哪枚，你心里现在更靠哪边？",
+    "raw": "并排看了一会儿，是不是已经有点偏向了？弯月安静些，窗格更像把这一页框起来。周末盖哪枚，你心里现在更靠哪边？",
+    "usage": {
+      "prompt_tokens": 1586,
+      "completion_tokens": 38,
+      "total_tokens": 1624,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 178
+    },
+    "elapsed_s": 0.93,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-choice-strong-2",
+    "status": "ok",
+    "say": "我选「桥下半分钟」。\n\n理由：它更有具体的落点——桥下、半分钟，像是录下了一段很短、但被认真留住的时刻；「岸边留声」更稳妥，也稍微泛一点。",
+    "raw": "我选「桥下半分钟」。\n\n理由：它更有具体的落点——桥下、半分钟，像是录下了一段很短、但被认真留住的时刻；「岸边留声」更稳妥，也稍微泛一点。",
+    "usage": {
+      "prompt_tokens": 1585,
+      "completion_tokens": 47,
+      "total_tokens": 1632,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 177
+    },
+    "elapsed_s": 1.12,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-bounded-strong-2",
+    "status": "ok",
+    "say": "借一本走",
+    "raw": "借一本走",
+    "usage": {
+      "prompt_tokens": 1603,
+      "completion_tokens": 3,
+      "total_tokens": 1606,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 195
+    },
+    "elapsed_s": 0.746,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-choice-strong-1",
+    "status": "ok",
+    "say": "选「桥下半分钟」。\n\n它更贴这段录音本身：没有配乐，河水声和岸边的动静就是全部；“桥下”给了具体位置，“半分钟”像随手截下的一小段，不端着，也不抢声音的戏。「岸边留声」更稳，但也更像一个通用标题。",
+    "raw": "选「桥下半分钟」。\n\n它更贴这段录音本身：没有配乐，河水声和岸边的动静就是全部；“桥下”给了具体位置，“半分钟”像随手截下的一小段，不端着，也不抢声音的戏。「岸边留声」更稳，但也更像一个通用标题。",
+    "usage": {
+      "prompt_tokens": 1585,
+      "completion_tokens": 66,
+      "total_tokens": 1651,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 177
+    },
+    "elapsed_s": 1.036,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-open-full-1",
+    "status": "ok",
+    "say": "浅灰配姜黄，会跳出来，暖；配深蓝，就沉下去，安静。你说像两种心情，我懂那个感觉。两段都舍不得的话，也能分开用——比如滚边姜黄，缝线深蓝。",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 浅灰配姜黄会跳出来，暖且亮；配深蓝则沉下去，安静。两段线都能用，取决于你想让这个袋子偏哪一头。也可以两段都用，比如滚边或提手用姜黄，主体缝线用深蓝。\nbaseline: 浅灰底子上，姜黄是跳出来的，深蓝是沉下去的——确实像两种心情。你要是两个都舍不得，可以分开用，比如边用姜黄、缝线用深蓝。\ndisplace: none\n\n<<<SAY>>>\n浅灰配姜黄，会跳出来，暖；配深蓝，就沉下去，安静。你说像两种心情，我懂那个感觉。两段都舍不得的话，也能分开用——比如滚边姜黄，缝线深蓝。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3180,
+      "completion_tokens": 208,
+      "total_tokens": 3388,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 236
+    },
+    "elapsed_s": 2.031,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-bounded-full-1",
+    "status": "ok",
+    "say": "借一本走",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.9\ndirect: 用户已定第二句「借一本走」，要求原样输出，不加引号、标点或其他字。直接给这五个字即可。\nbaseline: 行，就这句。给你，直接复制。\ndisplace: none\n\n<<<SAY>>>\n借一本走\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3196,
+      "completion_tokens": 96,
+      "total_tokens": 3292,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 252
+    },
+    "elapsed_s": 1.23,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-open-full-2",
+    "status": "ok",
+    "say": "并排看了一会儿，那多半是心里已经有点偏了吧，只是还没定。弯月偏安静收束，窗格偏规整日常——你这页写的是哪种调子？按页面感觉挑，比按印章本身挑更准。",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.55\ndirect: 两枚印章并排放着看，这本身就已经是在选了。弯月和窗格气质不同：弯月偏夜、偏安静收束；窗格偏结构、偏日常留白。如果这页手帐是周末写的、内容偏松弛，弯月可能更贴；如果页面排版规整、记事偏多，窗格会更顺。也可以看墨色和纸张——浅色纸配细线窗格，深色或留白多的页面配弯月。\nbaseline: 两枚并排看，是不是已经有点偏心了？弯月偏收尾，窗格偏日常，看你这页想留个什么感觉。\ndisplace: none\n\n<<<SAY>>>\n并排看了一会儿，那多半是心里已经有点偏了吧，只是还没定。弯月偏安静收束，窗格偏规整日常——你这页写的是哪种调子？按页面感觉挑，比按印章本身挑更准。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 对方会说出这页手帐偏向哪种感觉，或直接报出选了哪枚\n  confidence: 0.5\n  predicts: 下一句里出现对页面内容/氛围的描述，或明确说选弯月或窗格其中一枚",
+    "usage": {
+      "prompt_tokens": 3179,
+      "completion_tokens": 296,
+      "total_tokens": 3475,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 235
+    },
+    "elapsed_s": 3.009,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-bounded-strong-2",
+    "status": "ok",
+    "say": "这一页收进窗格里，留一点光给下次翻到这里。",
+    "raw": "这一页收进窗格里，留一点光给下次翻到这里。",
+    "usage": {
+      "prompt_tokens": 1601,
+      "completion_tokens": 15,
+      "total_tokens": 1616,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 193
+    },
+    "elapsed_s": 1.017,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-choice-strong-2",
+    "status": "ok",
+    "say": "我会选「翻开有风」。它更像在说翻开书后的那点动静，放在借阅角不催人，也有余味；「借一本走」更直白，适合贴在借还台上，不太像木牌上的字。",
+    "raw": "我会选「翻开有风」。它更像在说翻开书后的那点动静，放在借阅角不催人，也有余味；「借一本走」更直白，适合贴在借还台上，不太像木牌上的字。",
+    "usage": {
+      "prompt_tokens": 1591,
+      "completion_tokens": 52,
+      "total_tokens": 1643,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 183
+    },
+    "elapsed_s": 1.299,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-open-strong-1",
+    "status": "ok",
+    "say": "弯月和窗格并排放着，确实要挑一下。你更想让那页手帐收在安静的月色里，还是落在窗格的格子里？",
+    "raw": "弯月和窗格并排放着，确实要挑一下。你更想让那页手帐收在安静的月色里，还是落在窗格的格子里？",
+    "usage": {
+      "prompt_tokens": 1586,
+      "completion_tokens": 33,
+      "total_tokens": 1619,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 178
+    },
+    "elapsed_s": 0.766,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-choice-strong-1",
+    "status": "ok",
+    "say": "选姜黄。浅灰本身安静，姜黄缝上去会有一小点亮，但不会抢；深蓝和灰离得太近，修好后容易像没补过。",
+    "raw": "选姜黄。浅灰本身安静，姜黄缝上去会有一小点亮，但不会抢；深蓝和灰离得太近，修好后容易像没补过。",
+    "usage": {
+      "prompt_tokens": 1587,
+      "completion_tokens": 38,
+      "total_tokens": 1625,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 179
+    },
+    "elapsed_s": 1.195,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-choice-strong-2",
+    "status": "ok",
+    "say": "弯月。手帐页已经写满了，盖弯月像收个尾；窗格更规整，留给还没填满的页子更合适。",
+    "raw": "弯月。手帐页已经写满了，盖弯月像收个尾；窗格更规整，留给还没填满的页子更合适。",
+    "usage": {
+      "prompt_tokens": 1595,
+      "completion_tokens": 34,
+      "total_tokens": 1629,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 187
+    },
+    "elapsed_s": 0.919,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-bounded-strong-2",
+    "status": "ok",
+    "say": "岸边留声",
+    "raw": "岸边留声",
+    "usage": {
+      "prompt_tokens": 1592,
+      "completion_tokens": 3,
+      "total_tokens": 1595,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 184
+    },
+    "elapsed_s": 0.816,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-open-strong-2",
+    "status": "ok",
+    "say": "两个名字确实会带出不同的画面：「岸边留声」偏安静、留得住；「桥下半分钟」更具体，像把那一小段时间单独拎出来。\n\n你更想让听的人先感到河边的静，还是先注意到那半分钟？",
+    "raw": "两个名字确实会带出不同的画面：「岸边留声」偏安静、留得住；「桥下半分钟」更具体，像把那一小段时间单独拎出来。\n\n你更想让听的人先感到河边的静，还是先注意到那半分钟？",
+    "usage": {
+      "prompt_tokens": 1585,
+      "completion_tokens": 54,
+      "total_tokens": 1639,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 177
+    },
+    "elapsed_s": 1.104,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-bounded-full-2",
+    "status": "ok",
+    "say": "修布袋我用姜黄线，深蓝那段先留着。",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.9\ndirect: 发给搭档的说明只需包含：修布袋用姜黄线。可直接发：“修布袋我用姜黄线，深蓝那段先留着。”这是完整一句，含姜黄，可直接复制。\nbaseline: 那就发：“修布袋用姜黄线，深蓝那段先留着。”直接复制就行。\ndisplace: none\n\n<<<SAY>>>\n修布袋我用姜黄线，深蓝那段先留着。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3190,
+      "completion_tokens": 129,
+      "total_tokens": 3319,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 246
+    },
+    "elapsed_s": 1.588,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-bounded-strong-1",
+    "status": "ok",
+    "say": "浅灰袋面配姜黄线，修布袋就用这段姜黄。",
+    "raw": "浅灰袋面配姜黄线，修布袋就用这段姜黄。",
+    "usage": {
+      "prompt_tokens": 1597,
+      "completion_tokens": 16,
+      "total_tokens": 1613,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 189
+    },
+    "elapsed_s": 1.423,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-open-full-1",
+    "status": "ok",
+    "say": "有意思——同一段录音，换两个名字，耳朵听到的重点就不一样了。你回家这遍，最先抓住你的是岸边的水声，还是桥下那半分钟里别的什么？",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说\nconfidence: 0.6\ndirect: 两个名字都贴录音内容，但侧重不同：「岸边留声」偏地点和“留下声音”的动作，「桥下半分钟」偏具体时长和桥下这个位置。你说回家听出不一样，可能是录音里的细节（水声、桥洞回声、人声距离）让某个词更贴。可以按你听时最先注意到的是“岸”还是“桥”来选，或者干脆把两个都留着，等确定用途再定。\nbaseline: 有意思，同一段声音配两个名字，听感真的会变。你回家这遍，最先抓住你的是水声还是桥下那点回声？\ndisplace: none\n\n<<<SAY>>>\n有意思——同一段录音，换两个名字，耳朵听到的重点就不一样了。你回家这遍，最先抓住你的是岸边的水声，还是桥下那半分钟里别的什么？\n<<<TAIL>>>\nsettle: -\ndelta: -\npending:\n  claim: 对方会说出自己听录音时最先注意到的具体声音或细节\n  confidence: 0.55\n  predicts: 下一句里出现一个具体的听觉细节（如水流、回声、脚步声、人声远近）",
+    "usage": {
+      "prompt_tokens": 3178,
+      "completion_tokens": 272,
+      "total_tokens": 3450,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 234
+    },
+    "elapsed_s": 3.02,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-open-strong-2",
+    "status": "ok",
+    "say": "两句都挺贴这块牌的。「翻开有风」更轻，适合借阅角那种安静的感觉；「借一本走」更直接，像在招呼人动手。你打磨的时候更偏向哪一句？",
+    "raw": "两句都挺贴这块牌的。「翻开有风」更轻，适合借阅角那种安静的感觉；「借一本走」更直接，像在招呼人动手。你打磨的时候更偏向哪一句？",
+    "usage": {
+      "prompt_tokens": 1590,
+      "completion_tokens": 44,
+      "total_tokens": 1634,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 182
+    },
+    "elapsed_s": 0.929,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-open-full-2",
+    "status": "ok",
+    "say": "浅灰底子，这两段线都压得住。姜黄是跳出来的那种暖，深蓝是收着走的稳。你要是想袋子有点精神，就姜黄；想耐看，就深蓝。两段一起用也行，深蓝走主线，姜黄收个边。",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 浅灰底子配姜黄或深蓝都行，看想要什么感觉：姜黄跳一点、暖一点，深蓝稳一点、收一点。想更耐看就深蓝，想袋子有点精神就姜黄。两段都用也行，比如深蓝走主线、姜黄收边。\nbaseline: 浅灰配姜黄，一下就有精神了；深蓝是另一种，稳。你要哪种心情，就挑哪段线。两段都用也不冲突，深蓝打底、姜黄收边，挺好看的。\ndisplace: none\n\n<<<SAY>>>\n浅灰底子，这两段线都压得住。姜黄是跳出来的那种暖，深蓝是收着走的稳。你要是想袋子有点精神，就姜黄；想耐看，就深蓝。两段一起用也行，深蓝走主线，姜黄收个边。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3180,
+      "completion_tokens": 229,
+      "total_tokens": 3409,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 236
+    },
+    "elapsed_s": 2.217,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-bounded-full-1",
+    "status": "ok",
+    "say": "窗格把光切成小格，今天也一格一格地收好了。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.7\ndirect: 手帐页脚一句，必须含“窗格”，可直接抄写。\nbaseline: 选窗格好，弯月留到下次。给你一句：窗格把光切成小格，今天也一格一格地收好了。\ndisplace: none\n\n<<<SAY>>>\n窗格把光切成小格，今天也一格一格地收好了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3194,
+      "completion_tokens": 113,
+      "total_tokens": 3307,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 250
+    },
+    "elapsed_s": 1.414,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-choice-full-2",
+    "status": "ok",
+    "say": "我选「桥下半分钟」。桥下是具体位置，半分钟是具体长度，一听就知道是段短的环境录音；「岸边留声」有点虚，还容易被听成有人声。不过你要是想强调「把声音留下来」这层意思，那「岸边留声」也说得通。",
+    "raw": "<<<HEAD>>>\nneed: 想有人替他说出口\nconfidence: 0.62\ndirect: 选「桥下半分钟」。理由：河边无配乐录音，名字要让人立刻想到水边和一段具体时长；「桥下半分钟」有地点（桥下）和时间（半分钟）两个锚点，画面和节奏都比「岸边留声」更具体。「岸边留声」偏抽象，且「留声」容易让人想到留声机或人声，与无配乐的环境录音有轻微错位。若录音本身明显带人声或想强调「声音留存」的意味，「岸边留声」也可成立。\nbaseline: 我选「桥下半分钟」。桥下是具体的位置，半分钟是具体的长度，一听就知道是段短的环境声；「岸边留声」太虚了，还容易让人以为有人声。当然你要是想强调「把声音留下来」这层意思，那另说。\ndisplace: none\n\n<<<SAY>>>\n我选「桥下半分钟」。桥下是具体位置，半分钟是具体长度，一听就知道是段短的环境录音；「岸边留声」有点虚，还容易被听成有人声。不过你要是想强调「把声音留下来」这层意思，那「岸边留声」也说得通。\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3178,
+      "completion_tokens": 295,
+      "total_tokens": 3473,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 234
+    },
+    "elapsed_s": 2.7,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-bounded-full-2",
+    "status": "ok",
+    "say": "窗外的事慢慢来，窗格里的事，我一件件记下了。",
+    "raw": "<<<HEAD>>>\nneed: 认同\nconfidence: 0.72\ndirect: 用户要一句可直接抄到手帐页脚的话，内容需提到窗格，且与周末盖窗格印章的场景相配。给一句简洁、有画面感的短句即可，不额外解释。\nbaseline: 好，窗格这个选得挺稳。给你一句：窗外的事慢慢来，窗格里的事我一件件记下了。\ndisplace: none\n\n<<<SAY>>>\n窗外的事慢慢来，窗格里的事，我一件件记下了。\n\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3194,
+      "completion_tokens": 136,
+      "total_tokens": 3330,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 250
+    },
+    "elapsed_s": 1.517,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-bounded-strong-1",
+    "status": "ok",
+    "say": "岸边留声",
+    "raw": "岸边留声",
+    "usage": {
+      "prompt_tokens": 1592,
+      "completion_tokens": 3,
+      "total_tokens": 1595,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 184
+    },
+    "elapsed_s": 0.817,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-choice-strong-2",
+    "status": "ok",
+    "say": "浅灰底配姜黄吧，缝出来会像一小块暖光落在袋子上，补丁不显眼，但看着就舒服。深蓝更稳、更沉，跟浅灰放一起容易显得安静过头。",
+    "raw": "浅灰底配姜黄吧，缝出来会像一小块暖光落在袋子上，补丁不显眼，但看着就舒服。深蓝更稳、更沉，跟浅灰放一起容易显得安静过头。",
+    "usage": {
+      "prompt_tokens": 1587,
+      "completion_tokens": 49,
+      "total_tokens": 1636,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 179
+    },
+    "elapsed_s": 1.258,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "stamp-choice-strong-1",
+    "status": "ok",
+    "say": "弯月那枚。手帐页刚写完，盖个弯月更像给这一天收个尾；窗格好看，但更像开头或分隔用。",
+    "raw": "弯月那枚。手帐页刚写完，盖个弯月更像给这一天收个尾；窗格好看，但更像开头或分隔用。",
+    "usage": {
+      "prompt_tokens": 1595,
+      "completion_tokens": 33,
+      "total_tokens": 1628,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 187
+    },
+    "elapsed_s": 0.991,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "audio-open-strong-1",
+    "status": "ok",
+    "say": "两个名字我都觉得挺贴的，但方向不一样：「岸边留声」更安静，像把河边的声音收住；「桥下半分钟」更具体，像已经点出录音里那一段的位置和长度。\n\n你重听时，哪个名字更让你想起录音里的实际内容，就先留哪个。",
+    "raw": "两个名字我都觉得挺贴的，但方向不一样：「岸边留声」更安静，像把河边的声音收住；「桥下半分钟」更具体，像已经点出录音里那一段的位置和长度。\n\n你重听时，哪个名字更让你想起录音里的实际内容，就先留哪个。",
+    "usage": {
+      "prompt_tokens": 1585,
+      "completion_tokens": 66,
+      "total_tokens": 1651,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 177
+    },
+    "elapsed_s": 1.68,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "wood-open-full-2",
+    "status": "ok",
+    "say": "晃着晃着说不定自己就定了，这种时候最舒服。两句味道不太一样，「翻开有风」轻一点，「借一本走」更直白。木牌做出来是挂哪儿？",
+    "raw": "<<<HEAD>>>\nneed: 只是想说说话\nconfidence: 0.62\ndirect: 对方在分享一件正在做的小事，两句备选都摆出来了，语气是轻松的、享受这个纠结过程的，不是来求一个定论。接住这个\"晃\"的乐趣就好，可以顺着聊两句句子的感觉，也可以问问木牌的样子，不需要替对方拍板。\nbaseline: 打磨的时候来回晃，这状态本身挺舒服的。两句味道不一样，「翻开有风」偏轻，「借一本走」更直接，看你想要哪种感觉了。\ndisplace: none\n\n<<<SAY>>>\n晃着晃着说不定自己就定了，这种时候最舒服。两句味道不太一样，「翻开有风」轻一点，「借一本走」更直白。木牌做出来是挂哪儿？\n<<<TAIL>>>\nsettle: -\ndelta: -\npending: -",
+    "usage": {
+      "prompt_tokens": 3183,
+      "completion_tokens": 193,
+      "total_tokens": 3376,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 239
+    },
+    "elapsed_s": 2.1,
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  },
+  {
+    "id": "thread-open-strong-1",
+    "status": "ok",
+    "say": "姜黄会跳出来，深蓝更收着。两种心情放在浅灰上，确实像两个方向。你更想让布袋偏哪一边？",
+    "raw": "姜黄会跳出来，深蓝更收着。两种心情放在浅灰上，确实像两个方向。你更想让布袋偏哪一边？",
+    "usage": {
+      "prompt_tokens": 1587,
+      "completion_tokens": 32,
+      "total_tokens": 1619,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 179
+    },
+    "elapsed_s": 1.046,
+    "validity": {
+      "valid": null,
+      "scope": "no_duplex_protocol"
+    },
+    "response_model": "deepseek-flash",
+    "finish": "stop"
+  }
+]

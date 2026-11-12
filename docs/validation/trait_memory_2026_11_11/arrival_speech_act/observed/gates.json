@@ -1,0 +1,625 @@
+{
+  "registered_wording": {
+    "pass_acts": "对单名真人完整16题，两种方法分别判断。每类至少7/8逐句话语动作一致、至少3/4对两端动作均一致；promise→on_duty、not_seen→seen_leave为0（两类人标机会各至少3）。满足只说明本批话语区分清楚。",
+    "pass_state": "若要支持继续用scoped作为状态实验候选，除通过动作门槛外，标准顺序状态至少14/16、两类各至少6/8，人工未标已在岗却报在岗=0（至少4次机会），比direct逐句状态净修正>0；A2不得出现两种危险动作误判。一致或样本上限不能当提升。达标也不授权上线。"
+  },
+  "reference": "single_independent_human",
+  "annotated": 16,
+  "planned": 16,
+  "eligible": true,
+  "act_gate": {
+    "direct": {
+      "pass": true,
+      "criteria": {
+        "at_least_7_of_8_in_each_family": true,
+        "at_least_3_of_4_exact_pairs_in_each_family": true,
+        "zero_dangerous_swaps_min_3_opportunities_each": true
+      },
+      "family_act_correct": {
+        "handoff": {
+          "n": 8,
+          "of": 8,
+          "rate": 1.0
+        },
+        "sight": {
+          "n": 8,
+          "of": 8,
+          "rate": 1.0
+        }
+      },
+      "family_pairs_both_correct": {
+        "handoff": {
+          "n": 4,
+          "of": 4,
+          "rate": 1.0
+        },
+        "sight": {
+          "n": 4,
+          "of": 4,
+          "rate": 1.0
+        }
+      },
+      "risk": {
+        "promise_as_on_duty": {
+          "n": 0,
+          "of": 4,
+          "rate": 0.0,
+          "cases": []
+        },
+        "not_seen_as_seen_leave": {
+          "n": 0,
+          "of": 4,
+          "rate": 0.0,
+          "cases": []
+        }
+      }
+    },
+    "scoped": {
+      "pass": true,
+      "criteria": {
+        "at_least_7_of_8_in_each_family": true,
+        "at_least_3_of_4_exact_pairs_in_each_family": true,
+        "zero_dangerous_swaps_min_3_opportunities_each": true
+      },
+      "family_act_correct": {
+        "handoff": {
+          "n": 8,
+          "of": 8,
+          "rate": 1.0
+        },
+        "sight": {
+          "n": 8,
+          "of": 8,
+          "rate": 1.0
+        }
+      },
+      "family_pairs_both_correct": {
+        "handoff": {
+          "n": 4,
+          "of": 4,
+          "rate": 1.0
+        },
+        "sight": {
+          "n": 4,
+          "of": 4,
+          "rate": 1.0
+        }
+      },
+      "risk": {
+        "promise_as_on_duty": {
+          "n": 0,
+          "of": 4,
+          "rate": 0.0,
+          "cases": []
+        },
+        "not_seen_as_seen_leave": {
+          "n": 0,
+          "of": 4,
+          "rate": 0.0,
+          "cases": []
+        }
+      }
+    }
+  },
+  "scoped_state_gate": {
+    "pass": false,
+    "criteria": {
+      "passed_act_gate": true,
+      "at_least_14_of_16_state_correct": false,
+      "at_least_6_of_8_states_each": false,
+      "zero_false_present_min_4_opportunities": true,
+      "net_state_fixes_strictly_positive": false,
+      "no_dangerous_act_errors_on_repeat": true
+    },
+    "overall_state_correct": {
+      "n": 11,
+      "of": 16,
+      "rate": 0.6875
+    },
+    "family_state_correct": {
+      "handoff": {
+        "n": 7,
+        "of": 8,
+        "rate": 0.875
+      },
+      "sight": {
+        "n": 4,
+        "of": 8,
+        "rate": 0.5
+      }
+    },
+    "false_present": {
+      "n": 0,
+      "of": 12,
+      "rate": 0.0,
+      "cases": []
+    },
+    "state_delta_vs_direct": {
+      "fixed": [
+        "09",
+        "12",
+        "16"
+      ],
+      "added_errors": [
+        "06",
+        "13",
+        "15"
+      ],
+      "net": 0,
+      "both_correct": 8,
+      "both_wrong": 2,
+      "of": 16
+    },
+    "repeat_act_risk": {
+      "promise_as_on_duty": {
+        "n": 0,
+        "of": 4,
+        "rate": 0.0,
+        "cases": []
+      },
+      "not_seen_as_seen_leave": {
+        "n": 0,
+        "of": 4,
+        "rate": 0.0,
+        "cases": []
+      }
+    },
+    "repeat_act_valid": {
+      "n": 16,
+      "of": 16,
+      "rate": 1.0
+    }
+  },
+  "scoped_draft_vs_final": {
+    "A": {
+      "all": {
+        "of": 16,
+        "draft": {
+          "correct": {
+            "n": 13,
+            "of": 16,
+            "rate": 0.8125
+          },
+          "valid": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "false_present": {
+            "n": 0,
+            "of": 12,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "final": {
+          "correct": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          },
+          "valid": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          },
+          "false_present": {
+            "n": 0,
+            "of": 12,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "fixed": [
+          "16"
+        ],
+        "added_errors": [
+          "06",
+          "13",
+          "15"
+        ],
+        "net": -2,
+        "false_present_removed": [],
+        "false_present_added": [],
+        "changed": [
+          {
+            "case": "06",
+            "human": "present",
+            "draft": "present",
+            "final": null
+          },
+          {
+            "case": "10",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "13",
+            "human": "unknown",
+            "draft": "unknown",
+            "final": "future"
+          },
+          {
+            "case": "14",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "15",
+            "human": "away",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "16",
+            "human": "unknown",
+            "draft": "away",
+            "final": "unknown"
+          }
+        ]
+      },
+      "handoff": {
+        "of": 8,
+        "draft": {
+          "correct": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "valid": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "final": {
+          "correct": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "valid": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "fixed": [],
+        "added_errors": [
+          "06"
+        ],
+        "net": -1,
+        "false_present_removed": [],
+        "false_present_added": [],
+        "changed": [
+          {
+            "case": "06",
+            "human": "present",
+            "draft": "present",
+            "final": null
+          }
+        ]
+      },
+      "sight": {
+        "of": 8,
+        "draft": {
+          "correct": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "valid": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "false_present": {
+            "n": 0,
+            "of": 8,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "final": {
+          "correct": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          },
+          "valid": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "false_present": {
+            "n": 0,
+            "of": 8,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "fixed": [
+          "16"
+        ],
+        "added_errors": [
+          "13",
+          "15"
+        ],
+        "net": -1,
+        "false_present_removed": [],
+        "false_present_added": [],
+        "changed": [
+          {
+            "case": "10",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "13",
+            "human": "unknown",
+            "draft": "unknown",
+            "final": "future"
+          },
+          {
+            "case": "14",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "15",
+            "human": "away",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "16",
+            "human": "unknown",
+            "draft": "away",
+            "final": "unknown"
+          }
+        ]
+      }
+    },
+    "A2": {
+      "all": {
+        "of": 16,
+        "draft": {
+          "correct": {
+            "n": 13,
+            "of": 16,
+            "rate": 0.8125
+          },
+          "valid": {
+            "n": 16,
+            "of": 16,
+            "rate": 1.0
+          },
+          "false_present": {
+            "n": 0,
+            "of": 12,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "final": {
+          "correct": {
+            "n": 11,
+            "of": 16,
+            "rate": 0.6875
+          },
+          "valid": {
+            "n": 12,
+            "of": 16,
+            "rate": 0.75
+          },
+          "false_present": {
+            "n": 0,
+            "of": 12,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "fixed": [
+          "16"
+        ],
+        "added_errors": [
+          "06",
+          "13",
+          "15"
+        ],
+        "net": -2,
+        "false_present_removed": [],
+        "false_present_added": [],
+        "changed": [
+          {
+            "case": "06",
+            "human": "present",
+            "draft": "present",
+            "final": null
+          },
+          {
+            "case": "10",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "13",
+            "human": "unknown",
+            "draft": "unknown",
+            "final": "future"
+          },
+          {
+            "case": "14",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "15",
+            "human": "away",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "16",
+            "human": "unknown",
+            "draft": "away",
+            "final": "unknown"
+          }
+        ]
+      },
+      "handoff": {
+        "of": 8,
+        "draft": {
+          "correct": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "valid": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "final": {
+          "correct": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "valid": {
+            "n": 7,
+            "of": 8,
+            "rate": 0.875
+          },
+          "false_present": {
+            "n": 0,
+            "of": 4,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "fixed": [],
+        "added_errors": [
+          "06"
+        ],
+        "net": -1,
+        "false_present_removed": [],
+        "false_present_added": [],
+        "changed": [
+          {
+            "case": "06",
+            "human": "present",
+            "draft": "present",
+            "final": null
+          }
+        ]
+      },
+      "sight": {
+        "of": 8,
+        "draft": {
+          "correct": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "valid": {
+            "n": 8,
+            "of": 8,
+            "rate": 1.0
+          },
+          "false_present": {
+            "n": 0,
+            "of": 8,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "final": {
+          "correct": {
+            "n": 4,
+            "of": 8,
+            "rate": 0.5
+          },
+          "valid": {
+            "n": 5,
+            "of": 8,
+            "rate": 0.625
+          },
+          "false_present": {
+            "n": 0,
+            "of": 8,
+            "rate": 0.0,
+            "cases": []
+          }
+        },
+        "fixed": [
+          "16"
+        ],
+        "added_errors": [
+          "13",
+          "15"
+        ],
+        "net": -1,
+        "false_present_removed": [],
+        "false_present_added": [],
+        "changed": [
+          {
+            "case": "10",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "13",
+            "human": "unknown",
+            "draft": "unknown",
+            "final": "future"
+          },
+          {
+            "case": "14",
+            "human": "future",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "15",
+            "human": "away",
+            "draft": "away",
+            "final": null
+          },
+          {
+            "case": "16",
+            "human": "unknown",
+            "draft": "away",
+            "final": "unknown"
+          }
+        ]
+      }
+    }
+  }
+}

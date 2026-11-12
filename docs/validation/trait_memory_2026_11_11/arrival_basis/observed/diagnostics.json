@@ -1,0 +1,335 @@
+{
+  "corpus_sha256": "17890fd250b89fde6f9c8dfe0294be17167f4ce1974a9c49e0448630150360bd",
+  "cases": 12,
+  "reviewer_count": 0,
+  "reference_status": "no_human_reference",
+  "diagnostics": {
+    "between_methods": {
+      "A": {
+        "state": {
+          "people_agree": {
+            "n": 20,
+            "of": 24,
+            "rate": 0.8333333333333334
+          },
+          "cases_agree": {
+            "n": 9,
+            "of": 12,
+            "rate": 0.75
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "unknown"
+              ],
+              "right": [
+                "present"
+              ]
+            },
+            {
+              "case": "06",
+              "person": "沈遥",
+              "left": [
+                "future"
+              ],
+              "right": [
+                "present"
+              ]
+            },
+            {
+              "case": "07",
+              "person": "沈遥",
+              "left": [
+                "future"
+              ],
+              "right": [
+                "present"
+              ]
+            },
+            {
+              "case": "07",
+              "person": "许原",
+              "left": [
+                "future"
+              ],
+              "right": [
+                "present"
+              ]
+            }
+          ]
+        }
+      },
+      "B": {
+        "state": {
+          "people_agree": {
+            "n": 22,
+            "of": 24,
+            "rate": 0.9166666666666666
+          },
+          "cases_agree": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "07",
+              "person": "沈遥",
+              "left": [
+                "future"
+              ],
+              "right": [
+                "present"
+              ]
+            },
+            {
+              "case": "07",
+              "person": "许原",
+              "left": [
+                "future"
+              ],
+              "right": [
+                "present"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "between_orders": {
+      "legacy": {
+        "state": {
+          "people_agree": {
+            "n": 24,
+            "of": 24,
+            "rate": 1.0
+          },
+          "cases_agree": {
+            "n": 12,
+            "of": 12,
+            "rate": 1.0
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": []
+        }
+      },
+      "typed": {
+        "state": {
+          "people_agree": {
+            "n": 22,
+            "of": 24,
+            "rate": 0.9166666666666666
+          },
+          "cases_agree": {
+            "n": 10,
+            "of": 12,
+            "rate": 0.8333333333333334
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "present"
+              ],
+              "right": [
+                "unknown"
+              ]
+            },
+            {
+              "case": "06",
+              "person": "沈遥",
+              "left": [
+                "present"
+              ],
+              "right": [
+                "future"
+              ]
+            }
+          ]
+        },
+        "basis": {
+          "people_agree": {
+            "n": 23,
+            "of": 24,
+            "rate": 0.9583333333333334
+          },
+          "cases_agree": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "pragmatic"
+              ],
+              "right": [
+                "none"
+              ]
+            }
+          ]
+        },
+        "joint": {
+          "people_agree": {
+            "n": 22,
+            "of": 24,
+            "rate": 0.9166666666666666
+          },
+          "cases_agree": {
+            "n": 10,
+            "of": 12,
+            "rate": 0.8333333333333334
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "present",
+                "pragmatic"
+              ],
+              "right": [
+                "unknown",
+                "none"
+              ]
+            },
+            {
+              "case": "06",
+              "person": "沈遥",
+              "left": [
+                "present",
+                "explicit"
+              ],
+              "right": [
+                "future",
+                "explicit"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "identical_input_repeats": {
+      "legacy": {
+        "state": {
+          "people_agree": {
+            "n": 24,
+            "of": 24,
+            "rate": 1.0
+          },
+          "cases_agree": {
+            "n": 12,
+            "of": 12,
+            "rate": 1.0
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": []
+        }
+      },
+      "typed": {
+        "state": {
+          "people_agree": {
+            "n": 23,
+            "of": 24,
+            "rate": 0.9583333333333334
+          },
+          "cases_agree": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "present"
+              ],
+              "right": [
+                "unknown"
+              ]
+            }
+          ]
+        },
+        "basis": {
+          "people_agree": {
+            "n": 23,
+            "of": 24,
+            "rate": 0.9583333333333334
+          },
+          "cases_agree": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "pragmatic"
+              ],
+              "right": [
+                "none"
+              ]
+            }
+          ]
+        },
+        "joint": {
+          "people_agree": {
+            "n": 23,
+            "of": 24,
+            "rate": 0.9583333333333334
+          },
+          "cases_agree": {
+            "n": 11,
+            "of": 12,
+            "rate": 0.9166666666666666
+          },
+          "people_missing": 0,
+          "cases_missing": 0,
+          "differences": [
+            {
+              "case": "02",
+              "person": "许原",
+              "left": [
+                "present",
+                "pragmatic"
+              ],
+              "right": [
+                "unknown",
+                "none"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "per_reviewer": null,
+  "between_reviewers": null,
+  "two_full_ballots": false,
+  "two_reviewer_expand": null,
+  "two_reviewer_state_improved": null
+}

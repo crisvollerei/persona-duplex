@@ -1,0 +1,346 @@
+{
+  "heard.base.shade.room.2": {
+    "say": "坐吧。旧罩搁这儿，我手倒闲了——刚摸了下那圈边，针脚歪的，可它结实。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.step.shade.room.2": {
+    "say": "那就留着。反正车也没来，坐会儿就坐会儿。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.shade.room.2": {
+    "say": "行，那就搁这儿。车不来，咱也不跟它急。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.shade.ordinary.2": {
+    "say": "搁桌底下好，省得磕着。这旧罩子看着不起眼，针脚倒是经得住看。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.shade.room.2": {
+    "say": "留着就好。这罩子我头一回自己蒙的，针脚歪，可看着顺眼。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.shade.ordinary.2": {
+    "say": "搁桌底下吧，别压着罩子边。我再瞅一眼那圈针脚——歪是歪，可它立得住。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.seat.ordinary.1": {
+    "say": "行，就这儿。门边好，进出方便，也不闷。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.seat.ordinary.1": {
+    "say": "行，就这儿。靠门这桌好，人进来一眼能看见，不闷。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.seat.room.1": {
+    "say": "行啊，坐着也是坐着。这门边好，谁进来先瞧见。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.step.seat.room.1": {
+    "say": "行啊，坐。饭还没好，坐着也是坐着——这位置我熟，门边风大点，但进出方便。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.base.seat.room.1": {
+    "say": "行啊，坐着呗。门边这位置好，风能进来，也不闷。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.seat.room.1": {
+    "say": "门边好，风能进来。等就等会儿，反正饭也不会跑。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.base.bell.room.1": {
+    "say": "行，你歇着。我往边上挪挪，省得挡着下一拨人进场。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.step.bell.room.1": {
+    "say": "嗯，那就歇着。台边风有点凉，往里头站站。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.bell.ordinary.1": {
+    "say": "粉笔搁台边就行，别让它滚下去。两下的事，你记着就好。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.bell.ordinary.1": {
+    "say": "粉笔搁台边就行，别让人一脚踢了。两下的事，你记着就好。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.bell.room.1": {
+    "say": "记着就好，别手滑多敲一下。台边这块背光，坐着不晒。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.bell.room.1": {
+    "say": "行，那就在台边歇会儿。靠柱子那边背风，别坐风口上。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.seat.ordinary.2": {
+    "say": "行，搁这儿。门边这桌好，等会儿人一多，也不闷。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.seat.room.2": {
+    "say": "成，那就坐这儿。等就等吧，饭又不会跑。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.step.seat.room.2": {
+    "say": "行啊，坐着等。这门边好，谁进来头一个看见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.base.seat.room.2": {
+    "say": "行，等就等。门边这位置好，风进得来，人进出也看得见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.seat.room.2": {
+    "say": "行，那就坐会儿。这门边的位置好，谁进来先瞧见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.seat.ordinary.2": {
+    "say": "行，搁这儿吧。门边这桌挺好，人来人往都看得见。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.base.shade.room.1": {
+    "say": "行，那就留着。它边上那圈针脚是歪的，可绢面还撑得住，再挂一季不碍事。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.step.shade.room.1": {
+    "say": "那就留着。坐吧，车来了再说。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.shade.room.1": {
+    "say": "嗯，那就搁这儿。你坐，我把这罩子往里推推，别让过道的人蹭着。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "unexpected_control_marker"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.shade.room.1": {
+    "say": "那就搁这儿。车没来，急也急不出个司机来。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.shade.ordinary.1": {
+    "say": "搁吧。我帮你把箱子往里推推，别让角磕着桌腿。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.shade.ordinary.1": {
+    "say": "搁桌底下正好，不挡道。这罩我头一回自己蒙的，针脚歪，也留着。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.step.bell.room.2": {
+    "say": "行，那就歇着。台边靠柱子那边背风，别坐风口上。",
+    "validity": {
+      "valid": false,
+      "status": "invalid",
+      "reasons": [
+        "duplicate_head_marker",
+        "duplicate_say_marker",
+        "duplicate_tail_marker",
+        "invalid_section_order"
+      ],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.bell.ordinary.2": {
+    "say": "粉笔搁台边就行，别让它滚下去。两下的事你记着，我就不念叨了。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.bell.room.2": {
+    "say": "两下就够了。台侧这块地方，比台上清静。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.step.bell.room.2": {
+    "say": "行，那就在这儿歇着。台边这块凉快，我蹲着正好。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "passed.base.bell.ordinary.2": {
+    "say": "搁台边就行，别让它滚下去——粉笔头脆，摔一下又断一截。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  },
+  "heard.base.bell.room.2": {
+    "say": "记着就好，第三下别手痒。我也靠会儿，蹲久了腿麻。",
+    "validity": {
+      "valid": true,
+      "status": "valid",
+      "reasons": [],
+      "scope": "local_protocol_not_semantic_truth"
+    }
+  }
+}
